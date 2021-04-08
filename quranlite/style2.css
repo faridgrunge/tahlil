@@ -1,0 +1,219 @@
+@charset "utf-8";
+/* CSS Document */
+h1,h2,h3,body,ul, ol { margin: 0px; padding: 0px;}
+ul, ol{	list-style-type: none;}
+body,html {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #010101;
+	background-color: #CFCCCE;
+}
+.arab{font-size:30px;margin:7px;line-height: 2}
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color: #48454B;
+	font-weight: bold;
+}
+#isi ul, #isi ol {
+	margin-left: 20px;
+	list-style-type: square;
+	margin-bottom: 10px;
+}
+#isi li {
+	margin-left: 20px;
+	list-style-type: square;
+}
+
+h3 a:link, h3 a:active, h3 a:visited,h3 a {
+	color: #010101;
+	display: block;
+}
+#header h2 a:link, #header h2 a:active, #header h2 a:visited, #header h2 a {
+	display:block;
+	color: #fff;
+}
+
+h1 { margin-bottom: 15px; }
+img {max-width: 100%}
+#header {
+	width: 100%;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: #c5cae9;
+	background-color: #05e00a;
+	height: 45px;
+	margin: 0px;
+	padding: 0px;
+}
+#headbox {
+	margin: 0px;
+	padding-top: 8px;
+	padding-left: 8px;
+	height: 40px;
+	text-align: center;
+}
+#headbox h2 {
+	color: #fff;
+
+}
+#footer {
+
+	height: 40px;
+
+}
+#footerbox {
+	margin: 0px;
+	padding-top: 8px;
+	padding-left: 8px;
+	text-align: center;
+}
+#footerbox p {
+	color: #D9C191;
+	text-align: center;
+
+}
+#gohome{
+	float: left;
+	padding: 0px;
+	width: 32px;
+	height: 32px;
+	margin-top: 7px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 7px;
+}
+.imgfloat { float: left; margin-right: 10px; }
+
+@media only screen and (min-width: 500px) {
+  #homemenu li { float: left; width: 50%; }
+}
+#homemenu li{
+margin: 0px;
+padding: 0px;
+display:block;
+
+}
+.kotakmenu {
+	padding: 5px;
+	height: 45px;
+	border-left-width: 5px;
+	border-left-style: solid;
+	background-color: #ffffff;
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #BFBCC1;
+	border-left-color: #ABA3A1;
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-image: url(images/arrowli.png);
+	margin-bottom: 3px;
+}
+.imgthumb {
+	margin-bottom: 6px;
+	border: 1px solid #CFCCCE;
+	height: 44px;
+	width: 44px;
+}
+#home {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+
+}
+#home h3{
+	padding-top: 5px;
+
+}
+
+#single {
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+
+#isi {
+	padding:5px;
+	background-color: #FFF;
+	border: 1px solid #BFBCC1;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	text-align:right;
+}
+#isi h2{
+	padding: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.kosong{
+	clear: both;
+	margin: 0px;
+	padding: 0px;
+}
+.alignimg{
+	display: block;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+}
+
+.kardus{
+	text-align:center;
+	width:100%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	clear: both;
+}
+.navigasi img{height:35px;}
+.navigasi{
+	text-align:center;
+	width: 100%;
+	background: -moz-linear-gradient(top,#e8eaf6,#e8eaf6);background:linear-gradient(top,#e8eaf6,#e8eaf6);background: -o-linear-gradient(top,#e8eaf6,#e8eaf6);background: -webkit-gradient(linear, left top, left bottom, from(#e8eaf6), to(#e8eaf6));
+	
+	position: fixed;
+	bottom:0px;
+	padding:0px;
+}
+p{
+	text-align:justify;
+	margin:0;
+	padding-top: 10;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+.kanan{text-align:right;margin-left:50px}
+.kiri{text-align:left;margin-right:50px}	
+.desc{	font-size: 12px;}
+.meta {
+	padding: 2px;
+	text-align:center;
+	margin-top: 4px;
+	color: #999;
+	font-size: 10px;
+} 
+<style>blockquote {line-height:1.7;
+background: #FFFFFF;
+border: #ccc solid 2px;
+margin: 0 0px;
+padding: 10px 10px 10px 10px; font-size: 0.9em;
+}
+blockquote h2{font-size:30px;}
+blockquote p {
+margin: 0; padding-top: 10px;
+}
+#arab{font-size:24px;line-height: 2;text-align:justify;direction:rtl;padding:10px}
+
+#n{margin-right:4px;font-size:11px;padding:10px;color:#fff;text-align:left;padding-right:10px;position:left;float:left;-moz-border-radius:15px;-webkit-border-radius:15px;-khtml-border-radius:15px;border-radius: 15px;background:#22CEE7 -moz-linear-gradient(top,#22CEE7,#16A5BA);background:-webkit-gradient(linear, left top, left bottom, from(#22CEE7), to(#16A5BA));}
+#tj{text-align:left}
+#b{padding:10px;white-space: nowrap;font-size:15px}
+#sp{border-top: 4px double rgb(204, 204, 204); margin-top: 10px; padding-top: 10px;}
+</style>
