@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Maulid Dhiyaul Lami' - Bagian 7 (Mahalul Qiyam)</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">صَلَّى اللّٰهُ عَلَ مُحَمَّدْ ۞ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمْ 
+(3x)<br><br>
+
+يَا نَبِي  سَلاَ مٌ عَلَيْكَ ۞  يَا رَسُوْلُ سَلاَ مٌ عَلَيْكَ<br><br>
+
+يَا  حَبِيْب  سَلاَ مٌ عَلَيْكَ ۞ صَلَواتُ اللّٰهِ عَلَيْكَ<br><br>
+
+أَبْرَ زَ اللّٰهُ الْمُشَفَّعْ ۞ صَاحِبَ الْقَدْ رِالْمُرَ فَّعْ<br><br>
+
+فَمَلَاَ النُّو رُ النَّوَ احِيْ ۞ عَمَّ كُلَّ الْكَوْنِ أَجْمَعْ<br><br>
+
+نُكِّسَتْ أَصْنَامُ شِرْكٍ ۞ وَ بِنَا الشِّرْكِ تَصَدَّعْ<br><br>
+
+وَدَ نَا وَقْتُ الْهِدَ ايَةْ ۞  وَحِمَى الْكُفْرِ تَزَعْزَعْ<br><br>
+
+مَرْ حَبًا  أَهْلاً وَ سَهْلاً ۞ بِكَ يَا ذَا الْقَدْرِاْلأَ رْفَعْ<br><br>
+
+يَا إِمَامَ اهْلِ الرِّ سَالَةْ ۞ مَنْ بِهِ اْلآ فَاتِ  تُدْ فَعْ<br><br>
+
+أَنْتَ فِي الْحَشْرِ مَلاَ ذٌ ۞ لَكَ كُلُّ الْخَلْقِ تَفْزَعْ<br><br>
+
+وَ يُنَادُ وْنَ تَرَى مَا ۞ قَدْدَهَى مِنْ هَوْلٍ أَفْظَعْ<br><br>
+
+مَرْحَبًا يَا نُـوْرَ عَيْنِ مَرْحَبًا ۞ مَرْحَبًا جَـدَّ الْحُـسَيـْنِ مَرْحَبًا<br><br>
+
+فَلَهَا  أَنْتَ  فَتَسْجُدْ ۞ وَ تُنَادَ ى اشْفَعْ تُشَفَّعْ<br><br>
+
+فَعَلَيْكَ اللّٰهُ صَلَّى ۞ مَا بَدَا النُّو رُ وَ شَعْشَعْ<br><br>
+
+وَ بِكَ الرَّحْمنَ نَسْأَلْ ۞ وَ أِلَهُ الْعَرْشِ يَسْمَعْ<br><br>
+
+رَبِّ فَا غْفِرْ لِي ذُ نُو بِـي   يَا اللّٰه ۞ بِبَرْكَةِ الْهَادِي الْمُشَفَّعْ يَا اللّٰه<br><br>
+
+يَا عَظِيمَ الْمَنِّ يَا رَبْ ۞ شَمْلَنَا بِالْمُصْطَفَى اجْمَعْ<br><br>
+
+وَ بِهِ فَا نْظُرْ إِلَيْنَا ۞ وَاعْطِنَا بِهْ كُلَّ مَطْمَعْ<br><br>
+
+وَاكْفِنَا كُلَّ الْبَلاَ يَا ۞ وَادْ فَعِ اْلآ فَاتِ وَارْفَعْ<br><br>
+
+صَلَّى اللّٰهُ عَلَ مُحَمَّدْ ۞ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمْ<br><br>
+
+وَ اسْقِنَا يَا رَبّ أَغِثْنَا ۞ بِحَيًا هَطَّالْ يَهْمَعْ<br><br>
+
+وَ اخْتِمِ الْعُمْرَ بِحُسْنَى ۞ وَاحْسِنِ الْعُقْبَى وَمَرْجَعْ<br><br>
+
+وَ صَلاَ ةُ اللّٰهِ تَغْشَى ۞  مَنْ لَهُ الْحُسْنُ تَجَمَّعْ<br><br>
+
+أَ حْمَدَ الطُّهْرَ وَآلِهِ ۞ وَ الصَّحَابَةْ مَالسَّنَا شَعْ<br><br>
+
+اَلَّلهُـمَّ صَـلِّ وَسَـلِّمْ وَبَارِكْ عَلَـيْهِ وَعَلَـى آلِـهِ</p><br><br><p><i>Shallallahu ‘ala Muhammad, ۞ shallalahu ‘alayhi wa sallam.<br>
+Ya nabi salam ‘alayka, ۞ ya rasul salam ‘alayka.<br>
+Ya habib salam ‘alayka, ۞ shalawatullahi ‘alayka.<br>
+Abrazallahul musyaffa’, ۞ shahibal qadril muraffa’.<br>
+Famalannurun nawahi, ۞ ‘amma kullil kawni ajma’.<br>
+Nukisat ashnamu syirkin, ۞ wa binasy-syirku tashadda’. <br>
+Wadanal waqtul hidayah, ۞ wahimal kufri taza’za’.<br>
+Marhaban ahlan wa sahlan, ۞ bika ya dzal qadril arfa’.<br>
+Ya imamahlir risalah, ۞ man bihi afatu tudfa’.<br>
+Anta fil hasyri miladun, ۞ laka kullul khalqi tafza’.<br>
+Wayunaduna tara ma, ۞ qad daha min hawlin aqtha’.<br>
+Falaha anta fatasjud, ۞ watunada asyfa’ tusyaffa’.<br>
+Fa’alaykallahu shalla, ۞ ma badan nuru wa sya’sya’.<br>
+Wa bikarrahmanu nas-al, ۞ wa ilahul ‘arsyi yasma’.<br>
+Rabbi fahgfir li dzunubi, ۞ bibarkatil hadil musyaffa’.<br>
+Yaa ‘azhimal manni yaa rab ۞ Syamlanaa bil mushthafajma’<br>
+Wa bihi fanzhuur ilainaa ۞ Wa;thinaa bihi kulla mathma’<br>
+Wakfina kullal balayaa ۞ Wadfa’il aafaati warfa’<br>
+Wasyqina ya rabb aghitsna. ۞ Bihaya hath-thali yahma’.<br>
+Wakhtimil ‘umra bihusna, ۞ wa ahsinil’uqba wa marja’.<br>
+Wa shalatullahi taghsya, ۞ man lahul husnu tajamma’.<br>
+Ahmadath-thuhri wa alih, ۞ wash-shahabah mas-sanasya’.<br><br>
+
+Allahumma shalli wa sallim wa barik ‘alayhi wa ‘ala alihi.</i></p><br><br><p>Allah Bershalawat kepada (Nabi) Muhammad. ۞ Allah Bershalawat kepada beliau dan memberi salam sejahtera.<br>
+Wahai Nabi salam sejahtera bagimu, ۞ Wahai Rasul salam sejahtera bagimu.<br>
+Wahai Kekasih salam sejahtera bagimu, ۞ Shalawat Allah bagimu.<br>
+Telah tiba dengan kehendak Allah sang penberi syafa’at, ۞ Pemilik derajat yang dimuliakan.<br>
+Maka limpahan cahaya memenuhi segala penjuru, ۞ Meliputi seluruh alam semesta.<br>
+Maka patung-patung berhala di ka’bah berjatuhanlah, ۞ Dan sendi-sendi kemusyrikan tumbang.<br>
+Maka dekatlah saat-saat petunjuk, ۞ Dan benteng kekafiranpun berguncang.<br>
+Salam sejahteralah atas kedatanganmu, ۞ Wahai sang pemilik derajat yang mulia.<br>
+Wahai Imam dan pemimpin para Rasul, ۞ Yang dengannya bencana-bencana terhapuskan.<br>
+Engkaulah satu-satunya harapan di hari kiamat, ۞ Kepadamulah seluruh ciptaan berlindung dari kemurkaan Allah.<br>
+Kemudian mereka datang memanggil-manggilmu dengan penuh harapan, ۞ Ketika menyaksikan dahsyatnya kesulitan dan rintangan.<br>
+Maka karena itulah engkau (SAW) bersujud kehadirat Tuhanmu, ۞ Maka diserukan kepadamu berikanlah syafa’at, karena engkau diizinkan memberi syafa’at.<br>
+Maka atasmu limpahan shalawat dari Allah, ۞ Selama cahaya masih bersinar terang benderang.<br>
+Dan denganmu (SAW) kami memohon kepada Ar Rahmaan, ۞ Maka pencipta Arsy mendengar do’a kami.<br>
+Wahai Tuhanku, ampunilah segala dosaku ۞ Dengan berkah Al-Hadi Musyaffa’.<br>
+Wahai pemberi anugerah yang mulia, Wahai Tuhan, ۞ Kumpulkanlah kami dengan Al-Musthafa (SAW).<br>
+Dan demi beliau, maka pandanglah kami dengan kasih sayangmu, ۞ Dan berilah kami segala yang kami inginkan.<br>
+Dan hindarkanlah kami dari segala bencana, ۞ Dan jauhkanlah segala kesulitan, dan angkatlah sejauh-jauhnya.<br>
+Dan siramilah Wahai Tuhanku serta tolonglah kami, ۞ Dengan lebatnya curahan rahmat- Mu.<br>
+Dan akhirilah usia kami dengan husnul khatimah, ۞ Dan terimalah kami dengan baik saat kembali kepada-Mu.<br>
+Dan terlimpahlah shalawat dari Allah, ۞ Baginya (SAW) yang kepadanya terkumpul segala kebaikan.<br>
+Ahmad yang tersuci serta keluarganya, Dan sahabatnya sebanyak pijaran cahaya. <br><br>
+
+Ya Allah Limpahkanlah Shalawat dan Salam serta Keberkahan Padanya dan Pada Keluarganya.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

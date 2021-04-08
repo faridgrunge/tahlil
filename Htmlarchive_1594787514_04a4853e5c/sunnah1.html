@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Sholat Tahajud</h1><br>
+
+<p>Shalat Tahajud  adalah shalat sunat yang dikerjakan pada waktu malam, dimulai selepas isya sampai menjelang subuh. Jumlah rakaat pada shalat ini tidak terbatas, mulai dari 2 rakaat, 4, dan seterusnya.</p>
+        <p>Sholat tahajud adalah salah satu amalan sunnah yang paling digalakkan   oleh Rasulullah SAW. Bisa dikatakan tidak ada malam yang beliau lewati   tanpa sholat tahajud di dalamnya. Sebagai umatnya, sudah sepatutnya kita   mengikuti kebiasaan Rasul ini.</p>
+        <p>Hukum melaksanakan sholat tahajud adalah sunnah. Tapi ke-sunnah-an   melaksanakan sholat tahajud bukan seperti sunnah biasa. Sholat tahajud   hukumnya <em>sunnah muakkad</em> (sangat disunnahkan atau sangat dianjurkan).</p>
+        <p>Pengertian lain dari <em>sunnah muakkad</em> adalah sunnah yang   selalu dikerjakan oleh Rasulullah SAW, atau, sunnah yang jarang sekali   ditinggalkan oleh Rasulullah SAW. Contoh sholat <em>sunnah muakkad</em> yang lain adalah sholat dhuha dan sholat tarawih.</p>
+        <p>Mengenai sholat tahajud, Allah berfirman:</p>
+        <div class="style2">
+          <div align="right" class="arab">وَمِنَ الَّيْلِ فَتَهَجَّدَبِهِ نَا فِلَةً لَكَ عَسَى اَنْ يَبْعَسَكَ رَبُّكَ مَقَامًا مَحْمُوْدًا</div>
+        </div>
+        <p>Artinya : “Dan pada sebagian malam, maka kerjakanlah shalat tahajud   sebagai suatu ibadah tambahan bagimu, mudah- mudahan Tuhanmu   mengangkatmu ke tempat yang terpuji” (QS. Al Isra 79)</p>
+        <p>Ayat di atas jelas sekali berisi perintah untuk mengerjakan sholat   tahajud di malam hari. Sholat tahajud dalam ayat tersebut dimaksudkan   sebagai ibadah tambahan buat kita. Namun perintah di sini bukan berarti   wajib, hukum mengerjakan sholat tahajud tetap sunnah.</p>
+        <p>Dalam ayat yang lain, Allah SWT juga berfirman:</p>
+       
+          <div class="arab">كَانُوا قَلِيلًا مِنَ اللَّيْلِ مَا يَهْجَعُونَ () وَبِالْأَسْحَارِ هُمْ يَسْتَغْفِرُونَ</div>
+        
+        <p>Artinya:<br>
+          17. di dunia mereka sedikit sekali tidur di waktu malam. 18. dan selalu   memohonkan ampunan di waktu pagi sebelum fajar. (QS. Az-Zariya: 17-18.)</p>
+        <p>Dalam ayat ini Allah SWT memberikan isyarat mengenai orang yang   melaksanakan sholat tahajud. Untuk mengetahui tafsir dari masing-masing   ayat, sebaiknya kita menggunakan tafsir yang sudah populer seperti   Tafsir Jalalain, Tafsir Ibnu Katsir atau lainnya. Hal ini untuk   menghindari diri kita dari pemahaman yang salah.</p>
+        <p>Rasulullah SAW bersabda:</p>
+        <p>“Hendaklah kalian sholat malam, karena sholat malam adalah kebiasaan   yang dikerjakan orang-orang sholeh sebelum kalian, ia adalah ibadah yang   mendekatkan diri kepada Rabb kalian, penghapus berbagai kesalahan dan   pencegah perbuatan dosa.” (HR. Tirmidzi)</p>
+        <p>Yang dimaksud dengan sholat malam antara lain sholat tahajud, shalat witir sholat tarawih.</p>
+        <p>Dalam hadits yang lain, juga terdapat keterangan seperti ini:</p>
+        <p>Dari Amr bin Abasah r.a. berkata: Aku berkata, Wahai Rasulullah,   (bagian) dari malam manakah yang paling didengar (oleh Allah)? beliau   bersabda : “Pertengahan malam yang terakhir, maka sholatlah sesukamu,   karena sholat tersebut disaksikan dan dicatat hingga kamu sholat subuh.”   (HR. Abu Dawud).</p>
+        <p>Hadits ke-3 yang akan saya cantumkan berbunyi:</p>
+        <p>“Allah merahmati seorang suami yang bangun dimalam hari lalu dia   sholat dan membangunkan isterinya, jika sang istri enggan, ia percikkan   air ke wajahnya dan Allah merahmati seorang istri yang bangun di malam   hari lalu dia sholat dan membangunkan suaminya jika suaminya enggan, dia   percikkan air pada wajahnya.” (HR. Abu Dawud).</p>
+        <p>&nbsp;</p>
+        <h3>Pembagian Keutamaan Waktu Shalat Tahajud</h3>
+        <p>Sepertiga malam, kira-kira mulai dari jam 19.00 samapai jam 22.00</p>
+        <p>Sepertiga kedua, kira-kira mulai dari jam 22.00 sampai dengan jam 01.00</p>
+        <p>Sepertiga ketiga, kira-kira dari jam 01.00 sampai dengan masuknya waktu subuh.</p>
+        <p>&nbsp;</p>
+        <h3>Tata Cara Sholat Tahajud</h3>
+        <ol><li>Niat</li>
+        <p>&nbsp;</p>
+        <p>Hal yang juga perlu diperhatikan dalam tata cara melaksanakan sholat tahajud adalah mengenai niatnya.</p>
+        <p>Ada dua hal yang perlu diperhatikan soal niat: <em>lafadh</em> atau bacaan niat dan <em>qashad</em> niat. <em>Lafadh</em> niat adalah bacaan yang kita ucapkan dengan lidah sebelum melaksanakan suatu ibadah, dalam hal ini berarti sebelum <em>takbiratul ihram</em>. Sementara <em>qashad</em> niat adalah niat di dalam hati ketika melakukan suatu ibadah, dalam hal ini adalah ketika melakukan <em>takbiratul ihram</em>. Membaca <em>lafadh</em> niat hukumnya sunnah, sementara <em>qashad</em> niat hukumnya wajib.</p>
+        <p>Jadi yang dinamakan dengan niat adalah qashad yang muncul di dalam   hati ketika melakukan suatu amalan, bukan yang kita ucapkan dengan   lidah.</p>
+        <p><strong> Lafadh niat</strong></p>
+        <p>Note: niat dibaca berbarengan saat takbiratul ihram. Niat dibaca atau   diqashad di dalam hati, bukan diucapkan dengan lidah. </p>
+        <p>Lafadh niat sholat tahajud adalah sebagai berikut:</p>
+        <div class="style2">
+          <div class="arab">اُصَلِّى سُنَّةً التَّهَجُّدِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ ِللهِ تَعَالَى</div>
+        </div>
+        <p dir="ltr">&nbsp;</p>
+        <p dir="ltr">Tulisan latin: <em>USHOLLI SUNNATAT TAHAJUDI ROK’ATAAINI MUSTAQBILAL QIBLATI LILLAAHI TAA’ALA</em></p>
+        <p dir="ltr">Artinya: Aku salat sunah tahajud 2 rakaat menghadap kiblat karena Allah Ta’aala</p>
+        <p>Bacaan niat ini dibaca ketika hendak melakukan <em>takbiratul ihram</em>.   Hukum membacanya adalah sunnah, bukan wajib. Maka jika sebelum takbir   kita tidak membaca bacaan niat tersebut, hukumnya tetap sah.</p>
+        <p><strong>Qashad niat</strong></p>
+        <p><em>Qashad</em> niat adalah ungkapan di dalam hati. Biasanya<em> qashad</em> niat dilakukan dalam bahasa daerah masing-masing agar mudah. Saat kita mengucapkan <em>takbiratul ihram</em>, saat itu pula kita meng-<em>qashad</em> untuk melaksanakan sholat.</p>
+        <p>Saat kita <em>takbiratul ihram</em> dan membaca اَللهُ اَكْبَرُ, saat itu juga di dalam hati kita berniat “aku niat sholat tahajud 2 rakaat karena Allah ta’ala”.</p>
+        <p>Bacaan <em>qashad</em> niat bisa berbeda-beda dan disesuaikan, yang penting jelas nama ibadahnya dan dikerjakan untuk Allah SWT.</p>
+        <p>Gerakan sholat tahajud tidak berbeda dengan gerakan sholat pada umumnya.   Sholat tahajud juga diawali dengan takbiratul ihram dan diakhiri dengan   salam.</p>
+        <p>&nbsp;</p>
+        <li>Takbiratul Ihram</li>
+        <p>Note: disertai dengan niat di dalam hati.</p>
+        <li>Berdiri bagi yang mampu (khusus shalat fardlu).</li>
+        <p>Sholat sunat boleh duduk walaupun mampu</p>
+        <li>Membaca Alfatihah (lebih baik lagi jika membaca doa iftitah   terlebih dahulu sebelum membaca surat Alfatihah). </li>Setelah membaca doa   iftitah dan alfatihah, bacalah surat atau ayat tertentu. Perlu diketahui   juga bahwa membaca ayat atau surat tertentu hukumnya sunnah, bukan   wajib.</p>
+        <li>Ruku dengan thumaninah</li>
+        <li>I’tidal dengan thumaninah</li>
+        <li>Sujud dua kali dengan thumaninah</li>
+        <li>Duduk diantara dua sujud dengan Thumaninah</li>
+        <li>Duduk akhir</li>
+        <li>Membaca Tasyahud atau Tahiyyaat akhir pada duduk akhir</li>
+        <li>Shalawat atas Nabi saw pada duduk akhir</li>
+        <li>Salam yang pertama</li>
+        <li>Tertib</li>
+        <p>Yang perlu diperhatikan adalah shalat tahajud harus dikerjakan dua   rakaat sekali salam. Tidak boleh (misalnya) 4 rakaat sekaligus baru   salam.</p>
+        <p>Kemudian, jangan terlalu tergesa-gesa di dalam shalat. Banyak orang   yang mengejar target rakaat shalat (harus 8 atau 12 rakaat misalnya),   akhirnya dia shalat dengan tergesa-gesa dan tidak sempurna. Ingat tujuan   dari shalat adalah mengingat Allah SWT. Oleh karena itu, sudah   seharusnya dikerjakan sebaik dan sesempurna mungkin.</p>
+        <br>
+          <h3>Doa Sholat Tahajut </h3>
+        
+        <p align="justify">Doa setelah shalat tahajud tidak kalah pentingnya dari shalat tahajud   itu sendiri. Karena doa shalat tahajud itu selalu menyertai shalat   tahajud Rasulullah SAW. Doa tahajud Rasulullah SAW ini berisi pujian,   pengakuan, dan sekaligus permohonan ampunan. Berikut ini doanya.<br>
+          <br>
+        </p>
+      
+          <div class="arab">اَللهُمَّ   رَبَّنَا لَكَ الْحَمْدُ اَنْتَ قَيِّمُ السَّمَوَاتِ وَاْلاَرْضِ وَمَنْ   فِيْهِنَّ. وَلَكَ الْحَمْدُ اَنْتَ مَلِكُ السَّمَوَاتِ واْلاَرْضِ وَمَنْ   فِيْهِنَّ. وَلَكَ الْحَمْدُ اَنْتَ نُوْرُ السَّمَوَاتِ وَاْلاَرْضِ   وَمَنْ فِيْهِنَّ. وَلَكَ الْحَمْدُ اَنْتَ الْحَقُّ وَوَعْدُكَ الْحَقُّ   وَلِقَاءُكَ حَقٌّ وَقَوْلُكَ حَقٌّ وَالْجَنَّةُ حَقٌّ وَالنَّارُ حَقٌّ   وَالنَّبِيُّوْنَ حَقٌّ وَمُحَمَّدٌ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ حَقٌّ   وَالسَّاعَةُ حَقٌّ. اَللهُمَّ لَكَ اَسْلَمْتُ وَبِكَ اَمَنْتُ   وَعَلَيْكَ تَوَكَّلْتُ وَاِلَيْكَ اَنَبْتُ وَبِكَ خَاصَمْتُ وَاِلَيْكَ   حَاكَمْتُ فَاغْفِرْلِيْ مَاقَدَّمْتُ وَمَا اَخَّرْتُ وَمَا اَسْرَرْتُ   وَمَا اَعْلَنْتُ وَمَا اَنْتَ اَعْلَمُ بِهِ مِنِّيْ. اَنْتَ الْمُقَدِّمُ   وَاَنْتَ الْمُؤَخِّرُ لاَاِلَهَ اِلاَّ اَنْتَ. وَلاَ حَوْلَ وَلاَ   قُوَّةَ اِلاَّ بِاللهِ <br>
+          
+        </div>
+        <div align="left"><br>
+        Allâhumma   rabbana lakal hamdu. Anta qayyimus samâwâti wal ardhi wa man fî hinna.   Wa lakal hamdu anta malikus samâwâti wal ardhi wa man fî hinna. Wa lakal   hamdu anta nûrus samâwâti wal ardhi wa man fî hinna. Wa lakal hamdu   antal haq. Wa wa‘dukal haq. Wa liqâ’uka haq. Wa qauluka haq. Wal jannatu   haq. Wan nâru haq. Wan nabiyyûna haq. Wa Muhammadun shallallâhu alaihi   wasallama haq. Was sâ‘atu haq.<br>
+        <br>
+        Allâhumma laka aslamtu. Wa bika   âmantu. Wa alaika tawakkaltu. Wa ilaika anabtu. Wa bika khâshamtu. Wa   ilaika hâkamtu. Fagfirlî mâ qaddamtu, wa mâ akhkhartu, wa mâ asrartu, wa   mâ a‘lantu, wa mâ anta a‘lamu bihi minnî. Antal muqaddimu wa antal   mu’akhkhiru. Lâ ilâha illâ anta. Wa lâ haula, wa lâ quwwata illâ billâh.<br>
+        <br>
+        Artinya,   “Ya Allah, Tuhan kami, segala puji bagi-Mu, Engkau penegak langit,   bumi, dan makhluk di dalamnya. Segala puji bagi-Mu, Engkau penguasa   langit, bumi, dan makhluk di dalamnya. Segala puji bagi-Mu, Engkau   cahaya langit, bumi, dan makhluk di dalamnya. Segala puji bagi-Mu,   Engkau Maha Benar. Janji-Mu benar. Pertemuan dengan-Mu kelak itu benar.   Firman-Mu benar adanya. Surga itu nyata. Neraka pun demikian. Para nabi   itu benar. Demikian pula Nabi Muhammad SAW itu benar. Hari Kiamat itu   benar.<br>
+        <br>
+        Ya Tuhanku, hanya kepada-Mu aku berserah. Hanya kepada-Mu   juga aku beriman. Kepada-Mu aku pasrah. Hanya kepada-Mu aku kembali.   Karena-Mu aku rela bertikai. Hanya pada-Mu dasar putusanku. Karenanya   ampuni dosaku yang telah lalu dan yang terkemudian, dosa yang   kusembunyikan dan yang kunyatakan, dan dosa lain yang lebih Kau ketahui   ketimbang aku. Engkau Yang Maha Terdahulu dan Engkau Yang Maha   Terkemudian. Tiada Tuhan selain Engkau. Tiada daya upaya dan kekuatan   selain pertolongan Allah.”<br>
+        <br>
+        Doa ini dianjurkan dibaca seusai   shalat tahajud. Doa Rasulullah SAW ini diriwayatkan Bukhari dan Muslim.   Doa ini juga dicantumkan Imam An-Nawawi dalam karyanya Al-Adzkar.
+        </div>
+        <p align="justify">&nbsp;</p>
+        <h3>Keutamaan dan Manfaat Sholat Tahajud</h3>
+<ol><li>		Tiket masuk surga
+        <p>Rasulullah SAW bersabda:</p>
+        <p>“Hai sekalian manusia, sebarkanlah salam, bagikanlah makanan,   sambunglah silaturahmi, tegakkan lah shalat malam saat manusia lainnya   sedang tidur, niscaya kalian masuk surga dengan selamat.” (HR. Ibnu   Majah).</p>
+        <p>Hadits di atas menjelaskan kepada kita bahwa ada beberapa ibadah yang   bisa menjadi wasilah masuknya kita ke dalam surga. Salah satunya adalah   dengan sholat tahajud.</p>
+        <li> Sarana mendekatkan diri kepada Allah SWT dan penyembuh penyakit (hati dan fisik)</strong></p>
+        <p>Rasulullah SAW bersabda:</p>
+        <p>“Dirikanlah shalat malam, karena sesungguhnya shalat malam itu adalah   kebiasaan orang-orang shaleh sebelum kamu, (shalat malam dapat)   mendekatkan kamu kepada Tuhanmu, (shalat malam adalah) sebagai penebus   perbuatan buruk, mencegah berbuat dosa, dan menghindarkan diri dari   penyakit yang menyerang tubuh.” (HR. Ahmad)</p>
+        <p>Hadits dari Imam Ahmad ini menjelaskan banyak sekali keutamaan,   manfaat, dan hikmah dari melaksanakan sholat tahajud. Kalau dirinci dari   hadits ini saja, keutamaan sholat tahajud antara lain:</p>
+        <ul>
+          <li>
+            <div align="left">Kebiasaan orang-orang shaleh</div>
+          </li>
+          <li>
+            <div align="left">Dapat mendekatkan kepada Allah SWT</div>
+          </li>
+          <li>
+            <div align="left">Sebagai penebus perbuatan buruk</div>
+          </li>
+          <li>
+            <div align="left">Mencegah berbuat doa</div>
+          </li>
+          <li>
+            <div align="left">Bisa terhindar dari berbagai penyakit yang menyerang tubuh</div>
+          </li>
+        </ul>
+		<br>
+        <li>Sebagai sarana mendapatkan kemuliaan</strong></p>
+        <p>Rasulullah SAW bersabda:</p>
+        <p>“Jibril mendatangiku dan berkata, “Wahai Muhammad, hiduplah sesukamu,   karena engkau akan mati, cintailah orang yang engkau suka, karena   engkau akan berpisah dengannya, lakukanlah apa keinginanmu, engkau akan   mendapatkan balasannya, ketahuilah bahwa sesungguhnya kemuliaan seorang   muslim adalah shalat waktu malam dan ketidakbutuhannya dimuliakan orang   lain.” (HR. Al Baihaqi)</p>
+        <p>Hadits riwayat Imam Baihaqi ini jelas sekali menerangkan bahwa untuk   memperoleh kemuliaan, salah satu caranya adalah dengan melaksanakan   shalat malam.</p>
+        <li>Dirahmati oleh Allah SWT</strong></p>
+        <p>Rasulullah SAW bersabda:</p>
+        <p>“Semoga Allah merahmati laki-laki yang bangun malam, lalu   melaksanakan shalat dan membangunkan istrinya. Jika sang istri menolak,   ia memercikkan air di wajahnya. Juga, merahmati perempuan yang bangun   malam, lalu shalat dan membangunkan suaminya. Jika sang suami menolak,   ia memercikkan air di wajahnya.” (HR. Abu Daud)</p>
+        <li>Kemungkinan dikabulkan doa oleh Allah SAW semakin besar</strong></p>
+        <p>Di malam hari, ada suatu waktu di mana Allah SWT akan mengabulkan doa hamba-hambaNya. Rasulullah SAW bersabda:</p>
+        <p>“Dari Jabir berkata, bahwa Rasulullah Shallallahu SAW bersabda,   “Sesungguhnya di malam hari ada satu saat yang ketika seorang muslim   meminta kebaikan dunia dan akhirat, pasti Allah memberinya, Itu   berlangsung setiap malam.” (HR. Muslim)</p>
+        <p>Dalam hadits lain Rasulullah SAW juga bersabda:</p>
+        <p>“Tengah malam terakhir, maka shalat-lah sebanyak yang engkau inginkan, sesungguhnya shalat waktu tersebut adalah <em>maktubah masyudah</em> (waktu yang apabila bermunajat maka Allah menyaksikannya dan apabila berdoa maka didengar doanya)” (HR. Abu Daud)</p>
+        <p>Benar, malam <em>lailatul qadar</em> adalah salah satu malam yang   mulia, lebih baik dari 1000 bulan. Namun ternyata, Allah mengistimewakan   suatu waktu di setiap malam untuk mengabulkan doa-doa hambaNya yang   meminta kebaikan dunia dan akhirat.</p>
+        <li>Penghapus dosa dan penghalang berbuat salah</strong></p>
+        <p>Rasulullah SAW bersabda:</p>
+        <p>“Lakukanlah <em>Qiyamul Lail</em>, karena itu kebiasaan orang saleh sebelum kalian, bentuk <em>taqarub</em>, penghapus dosa, dan penghalang berbuat salah.” (HR. At-Tirmidzi)</p>
+        <li>Kesempatan menghirup udara yang bersih</strong></p>
+        <p>Waktu sepertiga malam adalah waktu di mana udara dalam kondisi yang   sangat bersih dan jernih. Saat seseorang bangun untuk melaksanakan   sholat tahajud dan menghirup udara malam yang sejuk, hal ini sangat baik   untuk kesehatan. Udara yang bersih membuat kerja paru-paru semakin   mudah. Udara yang bersih juga mampu memperlancar aliran darah di dalam   tubuh kita.</p>
+        <li>Memberikan ketenangan</strong></p>
+        <p>Orang yang bangun malam hari untuk sholat tahajud akan mendapatkan   suasana yang tenang dan damai. Kondisi seperti ini sangat baik bagi   kejiwaan seseorang, apalagi yang mempunyai permasalahan psikis maupun   fisik.</p>
+        <p>Nah, jika saat ini Anda sedang mengalami banyak sekali permasalahan   dalam hidup, coba nanti malam niatkan untuk sholat tahajud. Pilih waktu   yang paling baik lalu sholat sesempurna mungkin. Mohon ampunan, petunjuk   dan berdoa agar Allah menyelesaikan permasalahan-permasalahan kita.</p>
+        <li>Menyembuhkan berbagai penyakit</strong></p>
+        <p>Sebagian kalangan juga berpendapat bahwa sholat tahajud bisa   mengobati dan mengurangi stress hingga kanker. Ada juga yang berpendapat   gerakan-gerakan sholat tahajud akan menghindarkan, mengurangi bahkan   menyembuhkan seseorang dari sakit punggung di usia tua. Salah satu   alasan logisnya adalah karena sholat tahajud ini dikerjakan pada waktu   malam setelah bangun tidur di mana waktu yang cukup baik untuk   meningkatkan kesehatan.</p>
+        <li>Allah membanggakan orang yang shalat malam</strong></p>
+        <p>Rasulullah SAW berasabda:</p>
+        <p>“Tuhan kita merasa kagum terhadap dua macam orang.</p>
+        <p>Pertama, orang yang bangun dari tikar (yang dibentangkan) dari   selimut di antara keluarga dan kekasihnya untuk mengerjakan shalat,   kemudian Allah ‘azza wajalla berfirman “ Wahai Malaikatku, lihatlah pada   hambaKu yang bangun dari tempat tidur dan tikarnya di antara kekasih   dan keluarganya untuk shalatnya, untuk mengharapkan sesuatu (pahala)   dari sisiKu dan belas kasihanKu”</p>
+        <p>Kedua, orang yang berperang dijalan Allah, para sahabatnya   terkalahkan dan ia mengetahui apa yang harus dilakukan dengan kekalahan   tersebut (yaitu harus maju) dan tidak akan mendapat pahala jika pulang,   kemudian ia kembali sampai darahnya ditumpahkan (terbunuh), kemudian   Allah berfirman kepada Malaikat-Nya “Lihatlah pada hambaKu yang kembali   unutk mengharapkan sesuatu dari sisiKu dan belas kasihan dariKu sampai   darahnya tertumpah (terbunuh) “</p>
+        <p>(Diriwayatkan oleh ahmad, abu Ya’la, ath Thabrani dan Ibn Hiban)</p>
+        <div align="justify"></div>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

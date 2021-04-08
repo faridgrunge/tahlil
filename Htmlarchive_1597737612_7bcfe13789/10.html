@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Berhaji dengan harta yang halal</h1>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;" class="arab"></p>
+<p>Bertaubat adalah ibadah yang sangat diperlukan oleh setiap mukmin, mengingat begitu lemahnya seorang mukmin hingga selalu saja terjerumus dalam berbagai macam dosa.</p>
+<p>Namun Rabb kita Allah adalah maha kasih sayang kepada hambaNya dan maha menerima taubat hambaNya.</p>
+<p>Diantara nama-nama Allah yang terindah adalah Ar-Rohiim..Yang Maha Penyayang&hellip;begitu banyak lembaran-lembaran al-Qur&rsquo;an yang menyebutkan nama ini Ar-Rohiim. Allah selalu mengingatkan hambaNya bahwa Dia maha pengasih.</p>
+<p>Sesungguhnya kasih sayang Allah begitu luas dan lebih besar dari pada kasih sayang seorang ibu terhadap anaknya.</p>
+<p style="text-align: right;" class="arab">عَنْ عُمَرَ بْنِ الْخَطَّابِ، أَنَّهُ قَالَ: قَدِمَ عَلَى رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بِسَبْيٍ فَإِذَا امْرَأَةٌ مِنَ السَّبْيِ، تَبْتَغِي، إِذَا وَجَدَتْ صَبِيًّا فِي السَّبْيِ، أَخَذَتْهُ فَأَلْصَقَتْهُ بِبَطْنِهَا وَأَرْضَعَتْهُ، فَقَالَ لَنَا رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: &laquo;أَتَرَوْنَ هَذِهِ الْمَرْأَةَ طَارِحَةً وَلَدَهَا فِي النَّارِ؟&raquo; قُلْنَا: لَا، وَاللهِ وَهِيَ تَقْدِرُ عَلَى أَنْ لَا تَطْرَحَهُ، فَقَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: &laquo;لَلَّهُ أَرْحَمُ بِعِبَادِهِ مِنْ هَذِهِ بِوَلَدِهَا&raquo;</p>
+<p>Dari &lsquo;Umar bin Al-Khottob ia berkata, &ldquo;Tawanan perang didatangkan kepada Nabi shallallahu &lsquo;alaihi wasallam, tiba-tiba ada seorang wanita dari tawanan perang yang sedang mencari. Tatkala ia mendapatkan seorang anak di kalangan para tawanan maka iapun mengambil anak kecil tersebut lalu ia peluk dan menyusuinya. Maka Rasulullah shallallahu &lsquo;alaihi wasallam kepada kami, &ldquo;Apakah menurut kalian wanita ini akan melemparkan anaknya di api?&rdquo;. Maka kami berkata, &ldquo;Demi Allah, tentu tidak, sementara ia mampu untuk tidak melemparnya&rdquo;. Maka Rasulullah shallallahu &lsquo;alaihi wasallam berkata, &ldquo;Sungguh Allah lebih sayang kepada hamba-hambaNya daripada wanita ini terhadap anaknya&rdquo; (HR Al-Bukhari 5999 dan Muslim no 2754)</p>
+<p>Kasih sayang terbesar di alam semesta adalah kasih sayang seorang ibu terhadap anaknya. Terlebih lagi sebagaimana kondisi wanita yang disebutkan dalam hadits, dimana ia baru saja kehilangan anaknya lantas iapun mencari-cari sang anak. Akhirnya iapun bertemu dengan anaknya yang hilang tersebut, lalu iapun mendekapnya dan menyusuinya. Inilah kondisi kasih sayang terbesar dari seorang ibu terhadap anaknya.</p>
+<p>Tatkala Nabi melihat pemandangan ini, maka Nabi ingin agar para sahabat lebih mengerti tentang kasih sayang Rabb mereka. Maka Nabi bertanya kepada mereka, &ldquo;Apakah ada seorang ibu -terlebih lagi dalam kondisi demikian- yang akan melemparkan anaknya ke api?&rdquo;. Tentu tidak&hellip;demi Allah&hellip;., mana mungkin&hellip;!!!. Ternyata Allah lebih sayang kepada hambaNya dari pada kasih sayang seorang ibu terhadap anaknya.</p>
+<p>Sungguh kasih sayang Allah meliputi segala sesuatu&hellip;</p>
+<p>Para malaikat mengakui luasnya rahmat Allah seraya berkata</p>
+<p style="text-align: right;" class="arab">رَبَّنَا وَسِعْتَ كُلَّ شَيْءٍ رَحْمَةً وَعِلْمًا</p>
+<p>&ldquo;Ya Tuhan kami, rahmat dan ilmu Engkau meliputi segala sesuatu&rdquo; (QS Ghofir : 7)</p>
+<p>Allah menggandengkan antara ilmu Allah dan rahmatNya, sebagaimana ilmu Allah meliputi segala sesuatu maka demikian pula rahmatNya meliputi segala sesuatu.</p>
+<p>Allah telah menegaskan luasnya rahmat dan kasih sayangNya&hellip;</p>
+<p style="text-align: right;" class="arab">وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ</p>
+<p>&ldquo;Dan Rahmat (kasih sayang)Ku meliputi segala sesuatu&rdquo; (QS Al-A&rsquo;roof : 156)</p>
+<p>As-Sa&rsquo;di -rahimahullah- dalam tafsirnya berkata</p>
+<p style="text-align: right;" class="arab">{وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ} مِنَ الْعَالَمِ الْعُلْوِي وَالسُّفْلِي، الْبَرِّ وَالْفَاجِرِ، الْمُؤْمِنِ وَالْكَافِرِ، فَلاَ مَخْلُوْقَ إِلاَّ وَقَدْ وَصَلَتْ إِلَيْهِ رَحْمَةُ اللهِ، وَغَمَرَهُ فَضْلُهُ وَإِحْسَانُهُ</p>
+<p>&ldquo;Dan rahamatKu meliputi segala sesuatu&rdquo; yaitu meliputi seluruh makhluk yang di atas dan yang dibawah, meliputi orang baik dan orang fajir, orang mukmin dan orang kafir. Tidak ada satu makhlukpun kecuali rahmat Allah telah sampai kepadanya, Allah mencurahkan karunia dan anugrahnya kepadanya&rdquo; (Tafsir As-Sa&rsquo;di hal 305)</p>
+<p>Kita tidak sedang membahas tentang orang-orang yang beriman yang mendapatkan rahmat Allah, karena mereka memang telah melakukan sebab-sebab yang mendatangkan kasih sayang Allah kepada mereka.</p>
+<p>Akan tetapi kita membahas tentang orang-orang yang melakukan sebab-sebab yang mendatangkan murka Allah&hellip; mereka yang membangkang perintah Allah&hellip;mereka yang menerjang larangan-larangan Allah&hellip;.</p>
+<p>Mereka yang seharusnya dimurkai oleh Allah, seharusnya dicabut nyawanya oleh Allah, lalu diadzabnya ternyata masih diberi kesempatan hidup&hellip;.masih diberi kesempatan untuk berlebaran dan hari raya&hellip;masih diberi kesempatan untuk bisa melaksanakan ibadah haji yang sangat agung.</p>
+<p>Mereka masih diberi kasih sayangNya&hellip;.</p>
+<p>Sungguh kasih sayang Allah masih terus tercurahkan bahkan kepada para pendosa. Diantara kasih sayang Allah kepada mereka :</p>
+<ol><p><li><strong><em>Pertama</em></strong>&nbsp;: Allah tutup aib mereka.</li> Dintara nama-nama Allah adalah السِّتِّيْرُ As-Sittiir (Yang Maha menutupi)</p>
+<p>Yaitu Allah menutupi aib-aib para hamba dan tidak membongkarnya. Sesungguhnya diantara rahmat Allah adalah Allah menutupi aib-aib dan dosa-dosa kita. Apabila kita dimuliakan orang lain, kita dihormati orang lain, semua itu bukan karena kemuliaan dan bukan pula karena amal kebajikan kita, tetapi karena aib kita yang tidak dibuka oleh Allah. Seandainya satu saja aib kita dibuka oleh Allah niscaya tidak akan ada yang mau dekat dengan kita. Sebagaimana perkataan Muhammad bin Wasi&rsquo; rahimahullah:</p>
+<p style="text-align: right;" class="arab">لَوْ كَانَ لِلذُّنُوْبِ رِيْحٌ مَا جَلَسَ إِلَيَّ أَحَدٌ</p>
+<p>&ldquo;Kalau seandainya dosa-dosa itu ada baunya, niscaya tidak seorangpun yang akan duduk dekat denganku.&rdquo; (Siyar A&rsquo;lamin Nubala, 6/120)</p>
+<p>Berkata pula salah seorang penyair:</p>
+<p style="text-align: right;" class="arab">وَاللهِ لَوْ عَلِمُوْا قَبِيْحَ سَرِيْرَتِيْ لَأَبَى السَلَامَ عَلَيَّ مَنْ يَلْقَانِي</p>
+<p>&ldquo;Demi Allah seandainya mereka mengetahui hakekat rahasiaku tatkala aku bersendirian, maka setiap orang yang bertemu denganku tidak akan mau memberi salam kepadaku.&rdquo; (Nuniyah Al-Qahthany)</p>
+<p>Oleh karena itu kita bersyukur kepada Allah Al-Ghafur yang telah menutupi aib-aib kita, keburukan-keburukan dan maksiat-maksiat yang pernah kita lakukan. Kalau saja Allah membuka aib kita, maka binasalah kita.</p>
+<p>Para ulama mengatakan bahwa suatu saat aib seorang hamba dibuka biasanya itu adalah pertanda bahwa ia terlalu sering melakukan aib tersebut. Karena ketika seorang hamba melakukan keburukan pertama kali, maka biasanya dosanya akan ditutupi oleh Allah terlebih dahulu, biasanya tidak ada yang langsung dibuka. Namun jika dia terus-menerus dan tidak berhenti melakukan kemaksiatan tersebut maka suatu saat aibnya tersebut akan dibuka oleh Allah.</p>
+<p><li><strong><em>Kedua</em></strong>&nbsp;: Allah tidak mengadzab mereka dan mematikan mereka tatkala mereka sedang bermaksiat.</li> Akan tetapi Allahlah al-Haliim, yang terus memberikan kesempatkan kepada pelaku dosa untuk kembali kepadaNya. Bahkan pelaku dosa tatkala membangkang perintah Allah ia sedang menggunakan nikmat-nikmat yang Allah berikan kepadanya.</p>
+<p>Allah berfirman :</p>
+<p style="text-align: right;" class="arab">وَرَبُّكَ الْغَفُورُ ذُو الرَّحْمَةِ لَوْ يُؤَاخِذُهُمْ بِمَا كَسَبُوا لَعَجَّلَ لَهُمُ الْعَذَابَ بَلْ لَهُمْ مَوْعِدٌ لَنْ يَجِدُوا مِنْ دُونِهِ مَوْئِلًا</p>
+<p>Dan Tuhanmulah yang Maha Pengampun, lagi mempunyai rahmat. Jika Dia mengazab mereka karena perbuatan mereka, tentu Dia akan menyegerakan azab bagi mereka. Tetapi bagi mereka ada waktu yang tertentu (untuk mendapat azab) yang mereka sekali-kali tidak akan menemukan tempat berlindung dari padanya (QS Al-Kahfi : 58)</p>
+<p style="text-align: right;" class="arab">وَلَوْ يُؤَاخِذُ اللَّهُ النَّاسَ بِظُلْمِهِمْ مَا تَرَكَ عَلَيْهَا مِنْ دَابَّةٍ وَلَكِنْ يُؤَخِّرُهُمْ إِلَى أَجَلٍ مُسَمًّى فَإِذَا جَاءَ أَجَلُهُمْ لَا يَسْتَأْخِرُونَ سَاعَةً وَلَا يَسْتَقْدِمُونَ</p>
+<p>Jikalau Allah menghukum manusia karena kezalimannya, niscaya tidak akan ditinggalkan-Nya di muka bumi sesuatupun dari makhluk yang melata, tetapi Allah menangguhkan mereka sampai kepada waktu yang ditentukan. Maka apabila telah tiba waktunya (yang ditentukan) bagi mereka, tidaklah mereka dapat mengundurkannya barang sesaatpun dan tidak (pula) mendahulukannya (QS An-Nahl : 61)</p>
+<p style="text-align: right;" class="arab">وَلَوْ يُؤَاخِذُ اللَّهُ النَّاسَ بِمَا كَسَبُوا مَا تَرَكَ عَلَى ظَهْرِهَا مِنْ دَابَّةٍ وَلَكِنْ يُؤَخِّرُهُمْ إِلَى أَجَلٍ مُسَمًّى فَإِذَا جَاءَ أَجَلُهُمْ فَإِنَّ اللَّهَ كَانَ بِعِبَادِهِ بَصِيرًا</p>
+<p>Dan kalau sekiranya Allah menyiksa manusia disebabkan usahanya, niscaya Dia tidak akan meninggalkan di atas permukaan bumi suatu mahluk yang melatapun akan tetapi Allah menangguhkan (penyiksaan) mereka, sampai waktu yang tertentu; maka apabila datang ajal mereka, maka sesungguhnya Allah adalah Maha Melihat (keadaan) hamba-hamba-Nya (QS Fathir : 45)</p>
+<p>Sungguh betapa banyak orang yang sudah melampaui batas hingga Allah menjadikan mereka mati dalam kondisi suul khotimah. Allah mencabut nyawa mereka tatkala sedang bermaksiat. Sementara sebagian kita sudah berulang-ulang bermaksiat namun Allah masih memberikan kita nafas untuk bisa kembali dan bertaubat kepadaNya.</p>
+<p><li><strong><em>Ketiga</em></strong>&nbsp;: Jika Allah memberi siksaan atau musibah itupun tujuannya agar sang pendosa ingat dan sadar serta segera kembali kepadaNya</p></li>
+<p>Allah berfirman :</p>
+<p style="text-align: right;" class="arab">ظَهَرَ الْفَسَادُ فِي الْبَرِّ وَالْبَحْرِ بِمَا كَسَبَتْ أَيْدِي النَّاسِ لِيُذِيقَهُمْ بَعْضَ الَّذِي عَمِلُوا لَعَلَّهُمْ يَرْجِعُونَ</p>
+<p>Telah nampak kerusakan di darat dan di laut disebabkan karena perbuatan tangan manusi, supay Allah merasakan kepada mereka sebahagian dari (akibat) perbuatan mereka, agar mereka kembali (ke jalan yang benar) (QS Ar-Ruum : 41)</p>
+<p style="text-align: right;" class="arab">وَمَا أَصَابَكُمْ مِنْ مُصِيبَةٍ فَبِمَا كَسَبَتْ أَيْدِيكُمْ وَيَعْفُو عَنْ كَثِيرٍ</p>
+<p>Dan apa saja musibah yang menimpa kamu maka adalah disebabkan oleh perbuatan tanganmu sendiri, dan Allah memaafkan sebagian besar (dari kesalahan-kesalahanmu) (QS Asy-Syuroo : 30)</p>
+<p><li><strong><em>Keempat</em></strong>&nbsp;: Bahkan musibah yang Allah timpakan juga ternyata menggugurkan dosa-dosa yang ia lakukan.</p></li>
+<p>Nabi bersabda :</p>
+<p style="text-align: right;" class="arab">مَا يُصِيبُ المُسْلِمَ، مِنْ نَصَبٍ وَلاَ وَصَبٍ، وَلاَ هَمٍّ وَلاَ حُزْنٍ وَلاَ أَذًى وَلاَ غَمٍّ، حَتَّى الشَّوْكَةِ يُشَاكُهَا، إِلَّا كَفَّرَ اللَّهُ بِهَا مِنْ خَطَايَاهُ</p>
+<p>&ldquo;Tidak ada apapun yang menimpa seorang muslim baik berupa keletihan, sakit, kekhawatiran, kesedihan, gangguan orang lain, kegelisahan/galau, bahkan duri yang menimpanya kecuali Allah akan menggugurkan dosa-dosanya dengan itu semua&rdquo; (HR Al-Bukhari no 5641)</p>
+<p>Bahkan diantara rahmat Allah terkadang Allah menjadikan kegelisahan dan kesedihan kepada seseorang yang berdosa. Dia sendiri pun tidak tahu kenapa ia selalu bersedih. Ternyata Allah tidak menimpakan kepadanya musibah yang besar, Allah tidak menimpakan musibah pada hartanya, atau pada anaknya, atau pada tubuhnya, Allah hanya menjadikannya sedih dan gelisah untuk menggugurkan dosa-dosanya yang banyak.</p>
+<p><li><strong><em>Kelima</em></strong>&nbsp;: Allah buka pintu taubat sebesar-besarnya, betapapun banyaknya dan besarnya dosa sang hamba.</li> Allah berfirman :</p>
+<p style="text-align: right;" class="arab">قُلْ يَا عِبَادِيَ الَّذِينَ أَسْرَفُوا عَلَى أَنْفُسِهِمْ لَا تَقْنَطُوا مِنْ رَحْمَةِ اللَّهِ إِنَّ اللَّهَ يَغْفِرُ الذُّنُوبَ جَمِيعًا إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ</p>
+<p>Katakanlah: &ldquo;Hai hamba-hamba-Ku yang malampaui batas terhadap diri mereka sendiri, janganlah kamu berputus asa dari rahmat Allah. Sesungguhnya Allah mengampuni dosa-dosa semuanya. Sesungguhnya Dialah Yang Maha Pengampun lagi Maha Penyayang (QS Az-Zumar : 53)</p>
+<p>Lihatlah Fir&rsquo;aun yang mengaku sebagai Tuhan, Allah tidak langsung mengirim halilintar untuk membakarnya, akan justru Allah mengirim dua orang Rasul, Musa dan Harun untuk menasehatinya dengan selembut-lembutnya. Jika Fir&rsquo;aun yang mengaku sebagai tuhan taubat tentu dosanya akan diampuni oleh Allah.</p>
+<p><li><strong><em>Keenam</em></strong>&nbsp;: Allah memberi bonus kepada pendosa yang bertaubat kepada Allah.</p></li>
+<p>Bonus dunia ; Ditambahkan rizkinya, ditambahkan kekuatan baginya</p>
+<p>Allah berfirman</p>
+<p style="text-align: right;" class="arab">فَقُلْتُ اسْتَغْفِرُوا رَبَّكُمْ إِنَّهُ كَانَ غَفَّارًا يُرْسِلِ السَّمَاءَ عَلَيْكُمْ مِدْرَارًا وَيُمْدِدْكُمْ بِأَمْوَالٍ وَبَنِينَ وَيَجْعَلْ لَكُمْ جَنَّاتٍ وَيَجْعَلْ لَكُمْ أَنْهَارًا</p>
+<p>Maka aku katakan kepada mereka: &acute;Mohonlah ampun kepada Tuhanmu, -sesungguhnya Dia adalah Maha Pengampun-, niscaya Dia akan mengirimkan hujan kepadamu dengan lebat, dan membanyakkan harta dan anak-anakmu, dan mengadakan untukmu kebun-kebun dan mengadakan (pula di dalamnya) untukmu sungai-sungai (QS Nuuh : 10-12)</p>
+<p style="text-align: right;" class="arab">وَيَا قَوْمِ اسْتَغْفِرُوا رَبَّكُمْ ثُمَّ تُوبُوا إِلَيْهِ يُرْسِلِ السَّمَاءَ عَلَيْكُمْ مِدْرَارًا وَيَزِدْكُمْ قُوَّةً إِلَى قُوَّتِكُمْ وَلَا تَتَوَلَّوْا مُجْرِمِينَ</p>
+<p>Dan (dia berkata): &ldquo;Hai kaumku, mohonlah ampun kepada Tuhanmu lalu bertobatlah kepada-Nya, niscaya Dia menurunkan hujan yang sangat deras atasmu, dan Dia akan menambahkan kekuatan kepada kekuatanmu, dan janganlah kamu berpaling dengan berbuat dosa&rdquo; (QS Huud : 52)</p>
+<p>Bonus akhirat : Dimasukan ke dalam surga</p>
+<p style="text-align: right;" class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا تُوبُوا إِلَى اللَّهِ تَوْبَةً نَصُوحًا عَسَى رَبُّكُمْ أَنْ يُكَفِّرَ عَنْكُمْ سَيِّئَاتِكُمْ وَيُدْخِلَكُمْ جَنَّاتٍ تَجْرِي مِنْ تَحْتِهَا الْأَنْهَارُ</p>
+<p>Hai orang-orang yang beriman, bertaubatlah kepada Allah dengan taubatan nasuhaa (taubat yang semurni-murninya). Mudah-mudahan Rabbmu akan menutupi kesalahan-kesalahanmu dan memasukkanmu ke dalam jannah yang mengalir di bawahnya sungai-sungai&rdquo; (QS At-Tahriim : 9)</p>
+<p>Apakah ada manusia yang seperti ini&hellip;?, kita telah bersalah kepadanya lantas ia malah memberikan hadiah kepada kita?.</p>
+<p><li><strong><em>Ketujuh</em></strong>&nbsp;: Para pelaku dosa diantara hikmah terjerumusnya mereka dalam dosa adalah menjadikan mereka jauh dari &lsquo;ujub yang bisa menggugurkan amal sholih.</li> Hal ini karena orang yang terjerumus dalam dosa dia tidak mengganggap dirinya hebat, karena dia tahu dirinya lemah pernah terperangkap dalam jebakan syaitan, dia pernah terhina dalam kubangan kemaksiatan.</p>
+<p>Dengan berdosa maka dia akan lebih mengerti tentang nama-nama Allah Al-Ghofuur (Yang Maha Pengampun), At-Tawwaab (Yang Maha Menerima Taubat), Al-&lsquo;Afuww (Yang Maha Pemaaf dan Mencintai untuk memaafkan), As-Sittiir (Yang Maha Menutup aib para hamba), Al-Haliim (Yang Maha menunda memberi hukuman, sementara mudah baginya untuk menghukum).</p>
+<p>Maka tampaklah rahasia sabda Nabi shallallahu &lsquo;alaihi wasallam :</p>
+<p style="text-align: right;" class="arab">وَالَّذِي نَفْسِي بِيَدِهِ لَوْ لَمْ تُذْنِبُوا لَذَهَبَ اللهُ بِكُمْ، وَلَجَاءَ بِقَوْمٍ يُذْنِبُونَ، فَيَسْتَغْفِرُونَ اللهَ فَيَغْفِرُ لَهُمْ</p>
+<p>&ldquo;Demi yang jiwaku berada di tanganNya, seandainya kalian tidak berdosa, maka Allah akan sirnakan kalian, dan sungguh Allah akan mendatangkan suatu kaum yang mereka berdosa, lalu mereka beristighfar kepada Allah maka Allahpun mengampuni mereka&rdquo; (HR Muslim no 2749)</p>
+<p>Sebagian orang menyangka bahwa siapa yang pernah terjerumus dalam kubangan kenistaan kemaksiatan maka ia susah meraih kembali kecintaan Allah kepadanya. Ini semua adalah bentuk berburuk sangka kepada Tuhan Yang Maha pengasih lagi Maha Penyayang.</p>
+<p>Jika seorang anak yang bandel, yang selalu menjadikan ibunya menangis, menjadikan ibunya marah&hellip;.lantas sang anak lari dari rumah&hellip;, tentu sang ibu akan bersedih lagi dengan kepergian sang anak. Apalagi setelah berminggu-minggu sang anak tidak pulang. Bagaimanapun sang ibu marah, ia pasti masih sayang kepada sang anak, yang merupakan buah hatinya&hellip;yang pernah dikandungnya.</p>
+<p>Ternyata setelah sekian lama akhirnya sang anak pulang kembali kepada ibunya, dengan penuh air mata penyesalan, bagaimana kira-kira hati sang ibu? Tentu sang ibu akan sayang kembali kepada sang anak, bahkan bisa jadi lebih sayang kepada sang anak.</p>
+<p>Dan bagi Allah perumpamaan yang lebih tinggi.</p>
+<p>Maka jika ada seorang pendosa yang kembali kepada Allah maka Allah akan sayang kepadanya, lebih cinta kepadanya.</p>
+<p>Ibnu Rojab berkata :</p>
+<p style="text-align: right;" class="arab">كَانَ بَعْضُ أَصْحَابِ ذِي النُّونِ يَطُوفُ وَيُنَادِي: آهْ أَيْنَ قَلْبِي، مَنْ وَجَدَ قَلْبِي؟ فَدَخَلَ يَوْمًا بَعْضَ السِّكَكِ، فَوَجَدَ صَبِيًّا يَبْكِي وَأُمُّهُ تَضْرِبُهُ، ثُمَّ أَخْرَجَتْهُ مِنَ الدَّارِ، وَأَغْلَقَتِ الْبَابَ دُونَهُ، فَجَعَلَ الصَّبِيَّ يَلْتَفِتُ يَمِينًا وَشِمَالًا لَا يَدْرِي أَيْنَ يَذْهَبُ وَلَا أَيْنَ يَقْصِدُ، فَرَجَعَ إِلَى بَابِ الدَّارِ، فَجَعَلَ يَبْكِي وَيَقُولُ: يَا أُمَّاهُ مَنْ يَفْتَحُ لِيَ الْبَابَ إِذَا أَغْلَقْتِ عَنِّي بَابَكِ؟ وَمَنْ يُدْنِينِي إِذَا طَرَدْتِينِي؟ وَمَنِ الَّذِي يُدْنِينِي إِذَا غَضِبْتِ عَلَيَّ؟ فَرَحِمَتْهُ أُمُّهُ، فَنَظَرَتْ مِنْ خَلَلِ الْبَابِ، فَوَجَدَتْ وَلَدَهَا تَجْرِي الدُّمُوعُ عَلَى خَدَّيْهِ مُتَمَعِّكًا فِي التُّرَابِ، فَفَتَحَتِ الْبَابَ، وَأَخَذَتْهُ حَتَّى وَضَعَتْهُ فِي حِجْرِهَا وَجَعَلَتْ تُقَبِّلُهُ، وَتَقُولُ: يَا قُرَّةَ عَيْنِي، وَيَا عَزِيزَ نَفْسِي، أَنْتَ الَّذِي حَمَلْتَنِي عَلَى نَفْسِكَ، وَأَنْتَ الَّذِي تَعَرَّضْتَ لِمَا حَلَّ بِكَ، لَوْ كُنْتَ أَطَعْتَنِي لَمْ تَلْقَ مِنِّي مَكْرُوهًا، فَتَوَاجَدَ الْفَتَى، ثُمَّ قَامَ فَصَاحَ، وَقَالَ: قَدْ وَجَدْتُ قَلْبِي، قَدْ وَجَدْتُ قَلْبِي</p>
+<p>Ada seorang pemuda sahabat Dzun Nuun yang berkeliling dan menyeru, &ldquo;Aduuuh&hellip;dimana hatiku?, siapakah yang menemukan hatiku?</p>
+<p>Maka suatu hari ia melewati sebuah lorong lalu ia mendapati seorang anak kecil yang sedang menangis sementara ibunya memukulinya. Lalu ibunya mengeluarkan anak tersebut dari rumah dan mengunci pintu rumah. Jadilah sang anak melihat ke kanan dan ke kiri, ia tidak tahu harus kemana pergi, kemana ia harus menuju. Lalu iapun kembali ke pintu rumah, lalu ia menangis seraya berkata, &ldquo;Wahai ibu, siapakah yang akan membukakan pintu jika engkau telah menguncinya? Siapa yang mendekatiku jika engkau telah mengusirku?, siapakah yang mendekatiku jika engkau telah marah kepadaku?. Maka ibunyapun menjadi iba kepadanya. Lalu sang ibu melihat dari celah-celah pintu, makai a mendapati anaknya sedang mengalirkan derasnya air mata hingga membasahi pipinya sambil menghamparkannya ke tanah. Maka sang ibupun membukakan pintu lalu mengambil sang anak dan meletakannya di pangkuannya lalu menciumnya dan berkata, &ldquo;Wahai buah hatiku, wahai sayangku, engkaulah yang menjadikan ibu melakukan ini semua, engkau yang menyebabkan ini menimpamu. Kalau engkau taat kepadaku tentu engkau tidak mendapati dariku apa yang kau benci.&rdquo;</p>
+<p>Maka pemuda ini pun seperti mendapatkan sesuatu, lalu ia berdiri dan berteriak, &ldquo;Sungguh aku telah menemukan hatiku, sungguh aku telah menemukan hatiku&rdquo; (Jami&rsquo;ul &lsquo;Uluum wal Hikam 2/44-45)</p>
+<p>Syaikh Abdurrahman bin Nashir As-Sa&rsquo;di menjelaskan bahwasanya firman Allah وَهُوَ الْغَفُورُ الْوَدُودُ &ldquo;Dan Dialah Yang Maha Pengampun lagi Maha Pengasih&rdquo; (QS Al-Buruuj : 14) adalah bantahan kepada orang-orang yang menganggap kalau seorang hamba yang bermaksiat kemudian bertaubat maka dia tidak akan dicintai oleh Allah. Tetapi barang siapa yang berdosa kemudian bertaubat kepada Allah maka taubatnya akan diterima oleh Allah lalu Allah akan kembali mencintainya. Itulah rahasia digandengkannya antara الْغَفُورُ &lsquo;&rsquo;Yang Maha Pengampun&rsquo;&rsquo; dan الْوَدُودُ &lsquo;&rsquo;Yang Maha Mencintai&rsquo;&rsquo; (Lihat Taisiir Al-Kariim Ar-Rahmaan hal 918)</p>
+<p>Oleh karena itu, Rasulullah shalallahu &lsquo;alayhi wa sallam bersabda:</p>
+<p style="text-align: right;" class="arab">لَلَّهُ أَشَدُّ فَرَحًا بِتَوْبَةِ عَبْدِهِ حِينَ يَتُوبُ إِلَيْهِ مِنْ أَحَدِكُمْ كَانَ عَلَى رَاحِلَتِهِ بِأَرْضِ فَلاَةٍ فَانْفَلَتَتْ مِنْهُ وَعَلَيْهَا طَعَامُهُ وَشَرَابُهُ فَأَيِسَ مِنْهَا فَأَتَى شَجَرَةً فَاضْطَجَعَ فِى ظِلِّهَا قَدْ أَيِسَ مِنْ رَاحِلَتِهِ فَبَيْنَا هُوَ كَذَلِكَ إِذَا هُوَ بِهَا قَائِمَةً عِنْدَهُ فَأَخَذَ بِخِطَامِهَا ثُمَّ قَالَ مِنْ شِدَّةِ الْفَرَحِ اللَّهُمَّ أَنْتَ عَبْدِى وَأَنَا رَبُّكَ.أَخْطَأَ مِنْ شِدَّةِ الْفَرَحِ</p>
+<p>&ldquo;<em>Sesungguhnya Allah sangat gembira dengan taubat hamba-Nya ketika ia bertaubat pada-Nya melebihi kegembiraan seseorang di antara kalian yang berada di atas kendaraannya dan berada di suatu tanah yang luas (padang pasir), kemudian hewan yang ditungganginya lari meninggalkannya. Padahal pada hewan tunggangannya itu ada perbekalan makan dan minumnya. Sehingga ia pun menjadi putus asa. Kemudian ia mendatangi sebuah pohon dan tidur berbaring di bawah naungannya dalam keadaan hati yang telah berputus asa. Tiba-tiba ketika ia dalam keadaan seperti itu, kendaraannya tampak berdiri di sisinya, lalu ia mengambil ikatnya. Karena sangat gembiranya, maka ia berkata, &lsquo;Ya Allah, Engkau adalah hambaku dan aku adalah Rabb-Mu.&rsquo; Ia telah salah mengucapkan karena sangat gembiranya.</em>&rdquo; (HR. Muslim no. 2747).</p>
+<p>Orang ini sangat gembira karena dia menyangka bahwasanya dirinya akan meninggal tetapi ternyata selamat. Namun Allah lebih gembira dengan taubatnya seorang hamba daripada gembiranya orang ini. Oleh karena itu, jika seseorang berdosa maka hendaknya segera bertaubat kepada Allah. Bahkan ketika dia kembali melakukan dosa yang dahulu juga pernah dilakukannya. Hendaknya dia tidak suudzan kepada Allah, ketika dia mulai ragu dan suudzan kepada Allah maka dia telah dimasuki oleh syaithan. Syaithan ingin agar dia meninggal dalam keadaan tidak bertaubat kepada Allah.</p>
+<p>Jika hamba mengetahui bahwa Allah lebih sayang kepadanya dari segala sesuatu, bahkan lebih daripada ibunya maka hendaknya sang hamba hanya menggantungkan harapannya kepada Allah</p>
+<p>Ibnu Hajar berkata :</p>
+<p style="text-align: right;" class="arab">وَفِيهِ إِشَارَةٌ إِلَى أَنَّهُ يَنْبَغِي لِلْمَرْءِ أَنْ يَجْعَلَ تَعَلُّقَهُ فِي جَمِيعِ أُمُورِهِ بِاللَّهِ وَحْدَهُ وَأَنَّ كُلَّ مَنْ فُرِضَ أَنَّ فِيهِ رَحْمَةً مَا حَتَّى يُقْصَدَ لِأَجْلِهَا فَاللَّهُ سُبْحَانَهُ وَتَعَالَى أَرْحَمُ مِنْهُ فَلْيَقْصِدِ الْعَاقِلُ لِحَاجَتِهِ مَنْ هُوَ أَشَدُّ لَهُ رَحْمَةً</p>
+<p>&ldquo;Dan pada hadits ((Allah lebih sayang kepada hamba-hambaNya daripada ibu kepada anaknya)) ada isyarat hendaknya seseorang menjadikan ketergantungannya dalam segala urusannya hanya kepada Allah. Kalau seandainya ada siapapun yang memiliki rahmat tertentu yang dicari dan dituju maka Allah tentu lebih rahmat daripadanya. Maka seorang yang berakal hendaknya mencari hajatnya kepada Dzat yang paling sayang kepadanya&rdquo; (Fathul Baari 10/431)</p>
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

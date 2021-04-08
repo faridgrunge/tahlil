@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<data>
+
+	 <li class= 'playlistItem' data-type='local' data-mp3='../media/audio/2/Soundroll_-_A_Way_To_The_Top.mp3' data-ogg='../media/audio/2/Soundroll_-_A_Way_To_The_Top.ogg'><a class='playlistNonSelected' href='#'>Soundroll - A Way To The Top</a><a class='plink' href='http://codecanyon.net/user/Tean/portfolio' target='_blank'><img src='media/data/url.png' alt = 'purchase'/></a></li>
+	 <li class= 'playlistItem' data-type='local' data-mp3='../media/audio/2/Soundroll_-_Feel_Good_Journey.mp3' data-ogg='../media/audio/2/Soundroll_-_Feel_Good_Journey.ogg'><a class='playlistNonSelected' href='#'>Soundroll - Feel Good Journey</a></li>
+	 <li class= 'playlistItem' data-type='local' data-mp3='../media/audio/2/Soundroll_-_Fight_No_More.mp3' data-ogg='../media/audio/2/Soundroll_-_Fight_No_More.ogg'><a class='playlistNonSelected' href='#'>Soundroll - Fight No More</a><a class='plink' href='http://www.google.com' target='_blank'><img src='media/data/url.png' alt = 'purchase'/></a></li>
+	 <li class= 'playlistItem' data-type='local' data-mp3='../media/audio/2/Soundroll_-_Funky_Boom.mp3' data-ogg='../media/audio/2/Soundroll_-_Funky_Boom.ogg'><a class='playlistNonSelected' href='#'>Soundroll - Funky Boom</a><a class='plink' href='http://codecanyon.net/user/Tean/portfolio' target='_blank'><img src='media/data/url.png' alt = 'purchase'/></a></li>
+	 <li class= 'playlistItem' data-type='local' data-mp3='../media/audio/2/Soundroll_-_Pump_The_Club.mp3' data-ogg='../media/audio/2/Soundroll_-_Pump_The_Club.ogg'><a class='playlistNonSelected' href='#'>Soundroll - Pump The Club</a></li>
+	 <li class= 'playlistItem' data-type='local' data-mp3='../media/audio/2/Soundroll_-_Rush.mp3' data-ogg='../media/audio/2/Soundroll_-_Rush.ogg'><a class='playlistNonSelected' href='#'>Soundroll - Rush</a></li>
+	 <li class= 'playlistItem' data-type='local' data-mp3='../media/audio/2/Soundroll_-_Sun_Is_So_Bright.mp3' data-ogg='../media/audio/2/Soundroll_-_Sun_Is_So_Bright.ogg'><a class='playlistNonSelected' href='#'>Soundroll - Sun Is So Bright</a></li>
+	 
+</data>
+
+
+

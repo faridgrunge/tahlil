@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Basyairul Khairat - Selawat Basyairul-Khayrat
+</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِ الْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُؤْمِـنِــيْنَ. بِمَا قَالَ اللّٰهُ الْعَظِـيْمِ : وَبَـشِّرِ الْمُـؤْمِنِـيْنَ. ۞ وَاَنَّ اللّٰهَ لَا يُضِيْعُ اَجْرَ الْمُؤْمِنِيْنَ. ۞ <br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِ الْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلذَّاكِرِ يْنَ. بِمَا قَالَ اللّٰهُ الْعَظِـيْمِ : فَاذْكُرُوْنِيْٓ اَذْكُرْكُمْ. ۞ أُذْكُرُوْا اللّٰـهَ ذِكْرًا كَـــثِــيْرًا. وَسَبِّحُوْهُ بُكْرَةً وَّأَصِيْلًا. هُوَ الَّذِيْ يُصَلِّيْ عَلَيْكُمْ وَمَلٰۤىِٕكَتُهٗ لِيُخْرِجَكُمْ مِّنَ الظُّلُمٰتِ اِلَى النُّوْرِۗ وَكَانَ بِالْمُؤْمِنِيْنَ رَحِيْمًا. تَحِيَّتُهُمْ يَوْمَ يَلْقَوْنَهٗ سَلٰمٌ ۚوَاَعَدَّ لَهُمْ اَجْرًا كَرِيْمًا. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِ الْبَـــشِــيْرِ الْمُــبَشِّرِ لِلْعَالَمِـيْنَ. بِمَا قَالَ اللّٰهُ الْعَظِيْمِ : اَنِّيْ لَآ اُضِيْعُ عَمَلَ عَامِلٍ مِّنْكُمْ مِّنْ ذَكَرٍ اَوْ اُنْثٰى ۚ بَعْضُكُمْ مِّنْۢ بَعْضٍ. ۞ وَمَنْ عَمِلَ صَالِحًا مِّنْ ذَكَرٍ اَوْ اُنْثٰى وَهُوَ مُؤْمِنٌ فَاُولٰۤىِٕكَ يَدْخُلُوْنَ الْجَنَّةَ يُرْزَقُوْنَ فِيْهَا بِغَيْرِ حِسَابٍ. ۞ <br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْأَوَّابِـيْنَ. بِمَا قَالَ اللّٰهُ الْعَظِيْمِ : فَاِنَّهٗ كَانَ لِلْاَوَّابِيْنَ غَفُوْرًا. ۞ لَهُمْ مَّا يَشَاۤءُوْنَ عِنْدَ رَبِّهِمْ ۗ ذٰلِكَ جَزٰۤؤُا الْمُحْسِنِيْنَۚ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِ الْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلتَّــوَّابِــــيْنَ. بِمَا قَالَ اللّٰهُ الْعَظِيْمِ : اِنَّ اللّٰهَ يُحِبُّ التَّوَّابِيْنَ وَيُحِبُّ الْمُتَطَهِّرِيْنَ. ۞ وَهُوَ الَّذِيْ يَقْبَلُ التَّوْبَةَ عَنْ عِبَادِهٖ وَيَعْفُوْا عَنِ السَّيِّاٰتِ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِ الْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُخْلِصِيْنَ. بِمَا قَالَ اللّٰهُ الْعَظِيْمِ : فَمَنْ كَانَ يَرْجُوْا لِقَاۤءَ رَبِّهٖ فَلْيَعْمَلْ عَمَلًا صَالِحًا وَّلَا يُشْرِكْ بِعِبَادَةِ رَبِّهٖٓ اَحَدًا. ۞ مُخْلِصِيْنَ لَهُ الدِّيْنَ ەۗ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُصَلِيْنَ. بِمَا قَالَ اللّٰهُ الْعَظِيْمِ : وَاَقِمِ الصَّلٰوةَۗ اِنَّ الصَّلٰوةَ تَنْهٰى عَنِ الْفَحْشَاۤءِ وَالْمُنْكَرِ ۗ. ۞ يٰبُنَيَّ اَقِمِ الصَّلٰوةَ وَأْمُرْ بِالْمَعْرُوْفِ وَانْهَ عَنِ الْمُنْكَرِ وَاصْبِرْ عَلٰى مَآ اَصَابَكَۗ اِنَّ ذٰلِكَ مِنْ عَزْمِ الْاُمُوْرِ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْخَاشِعِـــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَاسْتَعِيْنُوْا بِالصَّبْرِ وَالصَّلٰوةِ ۗ وَاِنَّهَا لَكَبِيْرَةٌ اِلَّا عَلَى الْخٰشِعِيْنَۙ. الَّذِيْنَ يَظُنُّوْنَ اَنَّهُمْ مُّلٰقُوْا رَبِّهِمْ وَاَنَّهُمْ اِلَيْهِ رٰجِعُوْنَ. ۞ الَّذِيْنَ يَذْكُرُوْنَ اللّٰهَ قِيَامًا وَّقُعُوْدًا وَّعَلٰى جُنُوْبِهِمْ وَيَتَفَكَّرُوْنَ فِيْ خَلْقِ السَّمٰوٰتِ وَالْاَرْضِۚ رَبَّنَا مَا خَلَقْتَ هٰذَا بَاطِلًاۚ سُبْحٰنَكَ فَقِنَا عَذَابَ النَّارِ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلصَّابِريْنَ. بِمَا قَالَ اللّهُ الْعَظِيْمِ : اِنَّمَا يُوَفَّى الصّٰبِرُوْنَ اَجْرَهُمْ بِغَيْرِ حِسَابٍ. ۞ اُولٰۤىِٕكَ الَّذِيْنَ هَدٰىهُمُ اللّٰهُ وَاُولٰۤىِٕكَ هُمْ اُولُوا الْاَلْبَابِ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْخَائِــفِــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَلِمَنْ خَافَ مَقَامَ رَبِّهٖ جَنَّتٰنِۚ. ۞ وَاَمَّا مَنْ خَافَ مَقَامَ رَبِّهٖ وَنَهَى النَّفْسَ عَنِ الْهَوٰىۙ. فَاِنَّ الْجَنَّةَ هِيَ الْمَأْوٰىۗ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُــتَّـــقِـــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَرَحْمَتِيْ وَسِعَتْ كُلَّ شَيْءٍۗ فَسَاَكْتُبُهَا لِلَّذِيْنَ يَتَّقُوْنَ وَيُؤْتُوْنَ الزَّكٰوةَ وَالَّذِيْنَ هُمْ بِاٰيٰتِنَا يُؤْمِنُوْنَۚ. اَلَّذِيْنَ يَتَّبِعُوْنَ الرَّسُوْلَ النَّبِيَّ الْاُمِّيَّ الَّذِيْ يَجِدُوْنَهٗ مَكْتُوْبًا عِنْدَهُمْ فِى التَّوْرٰىةِ وَالْاِنْجِيْلِ. ۞ لَهُمْ جَزَاۤءُ الضِّعْفِ بِمَا عَمِلُوْا وَهُمْ فِى الْغُرُفٰتِ اٰمِنُوْنَ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُخْبِتِـــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَبَشِّرِ الْمُخْبِتِيْنَ ۙ. الَّذِيْنَ اِذَا ذُكِرَ اللّٰهُ وَجِلَتْ قُلُوْبُهُمْ. ۞ وَالَّذِيْنَ يُؤْتُوْنَ مَآ اٰتَوْا وَّقُلُوْبُهُمْ وَجِلَةٌ اَنَّهُمْ اِلٰى رَبِّهِمْ رٰجِعُوْنَ ۙ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلصَّابِــرِيْنَ. بِمَا قَالَ اللهُ اْلعَظِيْمِ : وَبَشِّرِ الصّٰبِرِيْنَ. اَلَّذِيْنَ اِذَآ اَصَابَتْهُمْ مُّصِيْبَةٌ ۗ قَالُوْٓا اِنَّا لِلّٰهِ وَاِنَّآ اِلَيْهِ رٰجِعُوْنَۗ. اُولٰۤىِٕكَ عَلَيْهِمْ صَلَوٰتٌ مِّنْ رَّبِّهِمْ وَرَحْمَةٌ ۗوَاُولٰۤىِٕكَ هُمُ الْمُهْتَدُوْنَ. ۞ اِنِّيْ جَزَيْتُهُمُ الْيَوْمَ بِمَا صَبَرُوْٓاۙ اَنَّهُمْ هُمُ الْفَاۤىِٕزُوْنَ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْكَاظِمِــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَالْكَاظِمِيْنَ الْغَيْظَ وَالْعَافِيْنَ عَنِ النَّاسِۗ وَاللّٰهُ يُحِبُّ الْمُحْسِنِيْنَۚ . ۞ فَمَنْ عَفَا وَاَصْلَحَ فَاَجْرُهٗ عَلَى اللّٰهِ ۗ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُحْسِنِـــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَاَحْسِنُوْا ۛ اِنَّ اللّٰهَ يُحِبُّ الْمُحْسِنِيْنَ. ۞ مَنْ جَاۤءَ بِالْحَسَنَةِ فَلَهٗ عَشْرُ اَمْثَالِهَا ۚوَمَنْ جَاۤءَ بِالسَّيِّئَةِ فَلَا يُجْزٰٓى اِلَّا مِثْلَهَا وَهُمْ لَا يُظْلَمُوْنَ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُتَصَّدِقِـــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَاَنْ تَصَدَّقُوْا خَيْرٌ لَّكُمْ اِنْ كُنْتُمْ تَعْلَمُوْنَ. ۞ اِنَّ اللّٰهَ يَجْزِى الْمُتَصَدِّقِيْنَ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُنْفِقِــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَمِمَّا رَزَقْنٰهُمْ يُنْفِقُوْنَ ۙ. ۞ وَمَآ اَنْفَقْتُمْ مِّنْ شَيْءٍ فَهُوَ يُخْلِفُهٗ ۚ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلشَّاكِرِيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَاشْكُرُوْا لِلّٰهِ اِنْ كُنْتُمْ اِيَّاهُ تَعْبُدُوْنَ. ۞ لَىِٕنْ شَكَرْتُمْ لَاَزِيْدَنَّكُمْ وَلَىِٕنْ كَفَرْتُمْ اِنَّ عَذَابِيْ لَشَدِيْدٌ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلسَّآئِــلِــيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : فَاِنِّيْ قَرِيْبٌ ۗ اُجِيْبُ دَعْوَةَ الدَّاعِ اِذَا دَعَانِۙ. ۞ أُدْعُوْنِيْٓ اَسْتَجِبْ لَكُمْ ۗ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلصَّالِحِيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : اَنَّ الْاَرْضَ يَرِثُهَا عِبَادِيَ الصّٰلِحُوْنَ. ۞ اُولٰۤىِٕكَ هُمُ الْوَارِثُوْنَ ۙ. الَّذِيْنَ يَرِثُوْنَ الْفِرْدَوْسَۗ هُمْ فِيْهَا خٰلِدُوْنَ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُصَلِّــيْنَ عَلَيْهِ. بِمَا قَالَ اللهُ الْعَظِيْمِ : اِنَّ اللّٰهَ وَمَلٰۤىِٕكَتَهٗ يُصَلُّوْنَ عَلَى النَّبِيِّۗ يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْا صَلُّوْا عَلَيْهِ وَسَلِّمُوْا تَسْلِيْمًا. ۞ يُؤْتِكُمْ كِفْلَيْنِ مِنْ رَّحْمَتِهٖ وَيَجْعَلْ لَّكُمْ نُوْرًا تَمْشُوْنَ بِهٖ وَيَغْفِرْ لَكُمْۗ وَاللّٰهُ غَفُوْرٌ رَّحِيْمٌۙ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُبَشِّرِيْنَ. بِمَا قَالَ اللهُ اْلعَظِيْمِ : لَهُمُ الْبُشْرٰى فِى الْحَيٰوةِ الدُّنْيَا وَفِى الْاٰخِرَةِۗ لَا تَبْدِيْلَ لِكَلِمٰتِ اللّٰهِ ۗذٰلِكَ هُوَ الْفَوْزُ الْعَظِيْمُۗ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْفَآئِزِيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : وَمَنْ يُّطِعِ اللّٰهَ وَرَسُوْلَهٗ فَقَدْ فَازَ فَوْزًا عَظِيْمًا. ۞ <br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلزَّاهِدِيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : اَلْمَالُ وَالْبَنُوْنَ زِيْنَةُ الْحَيٰوةِ الدُّنْيَاۚ وَالْبٰقِيٰتُ الصّٰلِحٰتُ خَيْرٌ عِنْدَ رَبِّكَ ثَوَابًا وَّخَيْرٌ اَمَلًا. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْأُمِّيِّيْنَ. بِمَا قَالَ اللهُ الْعَظِيْمِ : كُنْتُمْ خَيْرَ اُمَّةٍ اُخْرِجَتْ لِلنَّاسِ تَأْمُرُوْنَ بِالْمَعْرُوْفِ وَتَنْهَوْنَ عَنِ الْمُنْكَرِ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُصْطَفَيْنَ بِمَا قَالَ اللهُ الْعَظِيْمِ : ثُمَّ اَوْرَثْنَا الْكِتٰبَ الَّذِيْنَ اصْطَفَيْنَا مِنْ عِبَادِنَاۚ فَمِنْهُمْ ظَالِمٌ لِّنَفْسِهٖ ۚوَمِنْهُمْ مُّقْتَصِدٌ ۚوَمِنْهُمْ سَابِقٌۢ بِالْخَيْرٰتِ بِاِذْنِ اللّٰهِ ۗذٰلِكَ هُوَ الْفَضْلُ الْكَبِيْرُۗ. ۞<br>
+للّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُذْنِــبِــيْنَ بِمَا قَالَ اللهُ الْعَظِيْمِ : قُلْ يٰعِبَادِيَ الَّذِيْنَ اَسْرَفُوْا عَلٰٓى اَنْفُسِهِمْ لَا تَقْنَطُوْا مِنْ رَّحْمَةِ اللّٰهِ ۗاِنَّ اللّٰهَ يَغْفِرُ الذُّنُوْبَ جَمِيْعًا ۗاِنَّهٗ هُوَ الْغَفُوْرُ الرَّحِيْمُ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُسْتَغْفِرِيْنَ بِمَا قَالَ اللهُ الْعَظِيْمِ : وَمَنْ يَّعْمَلْ سُوْۤءًا اَوْ يَظْلِمْ نَفْسَهٗ ثُمَّ يَسْتَغْفِرِ اللّٰهَ يَجِدِ اللّٰهَ غَفُوْرًا رَّحِيْمًا. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُقَرِّبِــيْنَ بِمَا قَالَ اللهُ الْعَظِيْمِ : اِنَّ الَّذِيْنَ سَبَقَتْ لَهُمْ مِّنَّا الْحُسْنٰىٓۙ اُولٰۤىِٕكَ عَنْهَا مُبْعَدُوْنَ ۙ. لَا يَسْمَعُوْنَ حَسِيْسَهَاۚ وَهُمْ فِيْ مَا اشْتَهَتْ اَنْفُسُهُمْ خٰلِدُوْنَ ۚ. لَا يَحْزُنُهُمُ الْفَزَعُ الْاَكْبَرُ وَتَتَلَقّٰىهُمُ الْمَلٰۤىِٕكَةُۗ هٰذَا يَوْمُكُمُ الَّذِيْ كُنْتُمْ تُوْعَدُوْنَ. ۞<br>
+اَللّٰــهُمَّ صَلِّ وَسَلِّمْ عَلٰـى سَــيِّـدِنَا مُحَمَّدِ نِالْبَـــشِــيْرِ الْمُـــبَشِّرِ لِلْمُسْلِمِيْنَ بِمَا قَالَ اللهُ الْعَظِيْمِ : اِنَّ الْمُسْلِمِيْنَ وَالْمُسْلِمٰتِ وَالْمُؤْمِنِيْنَ وَالْمُؤْمِنٰتِ وَالْقٰنِتِيْنَ وَالْقٰنِتٰتِ وَالصّٰدِقِيْنَ وَالصّٰدِقٰتِ وَالصّٰبِرِيْنَ وَالصّٰبِرٰتِ وَالْخٰشِعِيْنَ وَالْخٰشِعٰتِ وَالْمُتَصَدِّقِيْنَ وَالْمُتَصَدِّقٰتِ وَالصَّاۤىِٕمِيْنَ وَالصّٰۤىِٕمٰتِ وَالْحٰفِظِيْنَ فُرُوْجَهُمْ وَالْحٰفِظٰتِ وَالذَّاكِرِيْنَ اللّٰهَ كَثِيْرًا وَّالذَّاكِرٰتِ اَعَدَّ اللّٰهُ لَهُمْ مَّغْفِرَةً وَّاَجْرًا عَظِيْمًا . ۞ وَاَنْ لَّيْسَ لِلْاِنْسَانِ اِلَّا مَا سَعٰىۙ. وَاَنَّ سَعْيَهٗ سَوْفَ يُرٰىۖ. ثُمَّ يُجْزٰىهُ الْجَزَاۤءَ الْاَوْفٰىۙ. ۞<br>
+اَللّٰــهُمَّ صَلِّ عَلَيْهِ صَلَاةً تُشْرَحُ بِهَا الصُّدُوْرُ وَتَهُوْنُ بِهَا الْأُمُوْرُ وَتَنْكَشِفُ بِهَا السُّتُوْرُ وَتَسْلِيْمًا كَثِيْرًا دَائِمًا اِلَي يَوْمِدِّيْنَ. دَعْوٰىهُمْ فِيْهَا سُبْحٰنَكَ اللّٰــهُمَّ وَتَحِيَّتُهُمْ فِيْهَا سَلٰمٌۚ وَاٰخِرُ دَعْوٰىهُمْ اَنِ الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ. ۞</p><br><p><i>Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mu'minīn. Bimā qālallāhul-'azhīm: Wa basy-syiril-mu'minīn. ۞ Wa annallāha lā yudhī'u ajral-mu'minīn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lidz-dzākirīn. Bimā qālallāhul-'azhīm: Fadzkurūnī adzkurkum. ۞ Udzkurullāha dzikran katsīrā. Wa sabbiḥūhu bukrataw-wa ashīlā. Huwalladzī yushallī 'alaykum wa malā-ikatuhū li-yukhrijakum minazh-zhulumāti ilan-nūr, wa kāna bil-mu'minīna raḥīmā. Taḥiyyatuhum yawma yalqawnahū salām, wa a-'adda lahum ajran karīmā. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-'ālamīn. Bimā qālallāhul-'azhīm: Annī lā udhī'u 'amala 'āmilim-minkum-min dzakarin aw untsā, ba'dhukum-mim ba'dh. ۞ Wa man 'amila shāliḥam-min dzakarin aw untsā wa huwa mu'minun fa ulā-ika yadkhulūnal-jannata yurzaqūna fīhā bi-ghayri ḥisāb. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-awwabīn. Bimā qālallāhul-'azhīm: Fa innahū kāna lil-awwābīna ghafūrā. ۞ Lahum-mā yasyā-ūna 'inda rabbihim, dzālika jazā-ul-muḥsinīn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lit-tawwābīn. Bimā qālallāhul-'azhīm: Innallāha yuḥibbut-tawwābīna wa yuḥibbul-mutathahhirīn. ۞ Wa huwal-ladzī yaqbalut-tawbata 'an 'ibādihī wa ya'fū 'anis-sayyi-āt. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mukhlisīn. Bimā qālallāhul-'azhīm: Fa man kāna yarjū li-qā-a rabbihī falya'mal 'amalan shāliḥaw-wa lā yusyrik bi-'ibādati rabbihī aḥadā. ۞ Mukhlishīna lahud-dīn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mushalīn. Bimā qālallāhul-'azhīm: Wa aqimish-shalāh, innash-shalāta tan-hā 'anil-faḥsyā-i wal-munkar. ۞ Yā bunayya aqimish-shalāta wa'mur bil-ma'rūfi wan-ha 'anil-munkari washbir 'alā mā ashābak, inna dzālika min 'azmil-umūr. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-khāsyi-'īn. Bimā qālallāhul-'azhīm: Wasta'īnū bish-shabri wash-shalāh, wa innahā lakabīratun illā 'alal-khāsyi'īn. Alladzīna yazhunnūna annahum mulāqū rabbihim wa annahum ilayihi rāji-'ūn. ۞ Al-ladzīna yadzkurūnallāha qiyāmaw-wa qu-'ūdaw-wa 'alā junūbihim wa yatafakkarūna fī khalqis-samāwāti wal-ardh, rabbanā mā khalaqta hāzhā bāthilā, sub-ḥānaka fa qinā 'adzāban-nār. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lish-shābirīn. Bimā qālallāhul-'azhīm: Innamā yuwaffash-shābirūna ajrahum bi-ghayri ḥisāb. ۞ Ulā-ikalladzīna hadāhumullāhu wa ulā-ika hum ulul-albāb. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-khā-i-fīn. Bimā qālallāhul-'azhīm: Wa liman khāfa maqāma rabbihī jannatān. ۞ Wa ammā man khāfa maqāma rabbihī wa nahan-nafsa 'anil-hawā. Fa innal-jannata hiyal-ma'wā. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-muttaqīn. Bimā qālallāhul-'azhīm: Wa raḥmatī wasi'at kulla syaī', fa sa-aktubuhā lil-ladzīna yattaqūna wa yu'tūnaz-zakāta wal-ladzīna hum bi-āyātinā yu'minūn. Al-ladzīna yattabi'ūnar-rasūlan-nabiyyal ummiyyal-ladzī yajidūnahū maktūban 'indahum fit-tawrāti wal-injīli. ۞ Lahum jazā-'udh-dhi'fi bimā 'amilū wa hum fil-gurufāti āminūn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mukhbitīn. Bimā qālallāhul-'azhīm: wa basysyiril-mukhbitīn. allażīna iżā żukirallāhu wajilat qulụbuhum. ۞ wallażīna yu`tụna mā ātaw wa qulụbuhum wajilatun annahum ilā rabbihim rāji'ụn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lish-shābirīn. Bimā qālallāhul-'azhīm: Wa basysyirish-shābirīn. Al-ladzīna idzā ashābat-hum-mushībah, qālū innā lillāhi wa innā ilayhi rāji'ūn. Ulā-ika 'alayhim shalawātum mir-rabbihim wa raḥmah, wa ulā-ika humul-muhtadūn. ۞ Innī jazaytuhumul-yawma bimā shabarū annahum humul-fā-izūn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-kāzhimīn. Bimā qālallāhul-'azhīm: Wal-kāzhimīnal-ghaydza wal-'āfīna 'anin-nās, wallāhu yuḥibbul-muḥsinīn. ۞ Fa man 'afā wa ashlaḥa fa ajruhū 'alallāh. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-muḥsinīn. Bimā qālallāhul-'azhīm: Wa aḥsinụ, innallāha yuḥibbul-muḥsinīn. ۞ Man jā-a bil-ḥasanati fa lahū 'asyru amtsālihā, wa man jā-a bis-sayyi-ati fa lā yujzā illā mitslahā wa hum lā yuzhlamụn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mutash-shadiqīn. Bimā qālallāhul-'azhīm: Wa an tashaddaqū khayrul-lakum in-kuntum ta'lamūn. ۞ Innallāha yajzil-mutashaddiqīn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-munfiqīn. Bimā qālallāhul-'azhīm: Wa mimmā razaqnāhum yunfiqūn. ۞ Wa mā anfaqtum-min syay-in fa huwa yukhlifuh. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lisy-syākirīn. Bimā qālallāhul-'azhīm: Wasykurū lillāhi in-kuntum iyyāhu ta'budūn. ۞ La-in-syakartum la-azīdannakum wa la-in-kafartum inna 'adzābī lasyadīd. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lis-sā-ilīn. Bimā qālallāhul-'azhīm: Fa innī qarīb, ujību da'watad-dā-'i idzā da-'ān. ۞ Ud-'ūnī astajib lakum. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lish-shāliḥīn. Bimā qālallāhul-'azhīm: Annal-ardha yarishuhā 'ibādiyash-shāliḥūn. ۞ Ulā-ika humul-wāritsūn. Al-ladzīna yari-tsūnal-firdaūs, hum fīhā khālidūn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mushallīn. Bimā qālallāhul-'azhīm: Innallāha wa malā-ikatahū yushallūna 'alan-nabiyy, yā ayyuhalladzīna āmanū shallū 'alayhi wa sallimū taslīmā. ۞ Yu'tikum kiflayni mir-raḥmatihī wa yaj'al-lakum nūran tamsyūna bihī wa yaghfir lakum, wallāhu ghafūrur-raḥīm. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mubasy-syirīn. Bimā qālallāhul-'azhīm: Lahumul-busyrā fil-ḥayātid-dun-yā wa fil-ākhirah, lā tabdīla li-kalimātillāh, dzālika huwal-fawzul-'azhīm. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-fā-izīn. Bimā qālallāhul-'azhīm: Wa may-yuthi-'illāha wa rasūlahū fa qad fāza fawzan 'azhīmā. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri liz-zāhidīn. Bimā qālallāhul-'azhīm: Al-mālu wal-banūna zīnatul-ḥayātid-dun-yā, wal-bāqiyātush-shāliḥātu khayrun 'inda rabbika tsawābaw-wa khayrun amalā. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-ummiyyīn. Bimā qālallāhul-'azhīm: Kuntum khayra ummatin ukhrijat lin-nāsi ta'murūna bil-ma'rūfi wa tan-hawna 'anil-munkar. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-musthafa-īn. Bimā qālallāhul-'azhīm: Tsumma awratsnal-kitābal-ladzīnash-thafaynā min 'ibādinā, fa min-hum zhālimul-linafsih, wa min-hum muqtashid, wa min-hum sābiqumm-bil-khayrāti bi-idznillāh, dzālika huwal-fadhlul-kabīr. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mudznibīn. Bimā qālallāhul-'azhīm: Qul yā 'ibādiyal-ladzīna asrafū 'alā anfusihim lā taqnathū mir-raḥmatillāh, innallāha yaghfirudz-dzunūba jamī-'ā, innahū huwal-ghafūrur-raḥīm. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-mustaghfirīn. Bimā qālallāhul-'azhīm: Wa may-ya'mal sū-an aw yazhlim nafsahū tsumma yastaghfirillāha yajidillāha ghafūrar-raḥīmā. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-muqarrabīn. Bimā qālallāhul-'azhīm: Innal-ladzīna sabaqat lahum-minnal-ḥusnā ulā-ika 'an-hā mub'adūn. Lā yasma-'ūna ḥasīsahā, wa hum fī masytahat anfusuhum khālidūn. Lā yaḥzunuhumul-faza-'ul-akbaru wa tatalaqqāhumul-malā-ikah, hādzā yawmukumul-ladzī kuntum tū-'adūn. ۞<br>
+Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadinil basyīril-mubasy-syiri lil-muslimīn. Bimā qālallāhul-'azhīm: Innal-muslimīna wal-muslimāti wal-mu'minīna wal-mu'mināti wal-qānitīna wal-qānitāti wash-shādiqīna wash-shādiqāti wash-shābirīna wash-shābirāti wal-khāsyi-'īna wal-khāsyi-'āti wal-mutashaddiqīna wal-mutashaddiqāti wash-shā-imīna wash-shā-imāti wal-ḥāfidzīna furūjahum wal-ḥāfidzāti wadz-dzākirīnallāha katsīraw-wadz-dzākirāti a-'addallāhu lahum maghfirataw-wa ajran 'azhīmā. ۞ Wa anna sa'yahū sawfa yurā. Tsumma yujzāhul-jazā-al-awfā. ۞<br>
+Allāhumma shalli 'alayhi shalātan-tusyraḥu bihash-shudūru wa tahūnu bihal-umūru wa tan-kasyifu bihas-sutūru wa sallim taslīman katsīran dā-iman ilā yawmid-dīn. Da'waahum fīhā subḥānakallāhumma wa taḥiyyatuhum fīhā salamu. Wa ākhiru da'wāhum anil-ḥamdulillāhi rabbil-'ālamīn. ۞</i></p><br><p>
+
+"Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada kaum mukminin, sebagaimana firman Allah: "Dan berikanlah kabar gembira bagi orang-orang yang beriman." ( QS. 2 : 223 ) ۞ "Dan bahwa Allah tidak mengabaikan pahala orang-orang beriman." ( QS. 3 : 171 ) ۞
+
+<br>"
+Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang berzikir, sebagaimana firman Allah: "Ingatlah Aku, maka Aku akan mengingatmu." ( QS. 2 : 152 ) ۞ "Ingatlah Allah dengan zikir yang banyak, dan sucikanlah Dia di pagi dan petang hari. Dialah yang memberikan rahmat kepada kalian, untuk mengeluarkan kalian dari kegelapan menuju cahaya, dan Dia amat sayang kepada kaum yang beriman. Penghormatan mereka di hari saat bertemu dengan-Nya adalah 'Salam!' dan Dia menyediakan bagi mereka pahala yang baik." ( QS. 33 : 41-44 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang beramal, sebagaimana firman Allah: "Aku tidak mengabaikan amal setiap orang yang beramal, baik laki-laki maupun wanita." ( QS. 3 : 195 ) ۞ "Dan barang siapa melakukan amal shaleh, baik laki-laki ataupun wanita, dan dia seorang yang beriman, maka orang itu akan memasuki surga, dan di sana mereka akan di beri rezeki tanpa batas." ( QS. 40 : 40 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada mereka yang kembali kepada Tuhannya, sebagaimana firman Allah: "Sesungguhnya Dia selalu mengampuni orang-orang yang mau kembali kepada-Nya." ( QS. 17 : 25 ) ۞ "Mereka akan memperoleh apa yang mereka inginkan di sisi Tuhan mereka, dan itulah balasan bagi orang-orang yang berbuat kebaikan." ( QS. 39 : 34 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang bertobat, sebagaimana firman Allah: "Sesungguhnya Allah mencintai orang-orang yang bertobat dan menjaga kebersihan dirinya." ( QS. 2 : 222 ) ۞ "Dia lah yang menerima tobat dari hamba-hamba Nya dan memaafkan keburukan-keburukan." ( QS. 42 : 25 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang ikhlas, sebagaimana firman Allah: "Barangsiapa berharap bertemu dengan Tuhannya, hendaklah dia melakukan amal shaleh dan tidak menyekutukan Tuhannya dengan sesuatupun dalam beribadah kepada-Nya." ( QS. 18 : 110 ) ۞ "Ikhlas dan mempersembahkan agama hanya kepada-Nya." ( QS. 7 : 29 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang  melakukan salat, sebagaimana firman Allah: "Dan dirikanlah salat, sesungguhnya salat membantu mencegah perbuatan keji dan tercela." ( QS. 31 : 17 ) ۞ "Wahai anakku, dirikanlah salat, anjurkanlah perbuatan baik, cegahlah perbuatan tercela, dan bersabarlah atas apa yang menimpamu, yang demikian itu termasuk perkara yang penting." ( QS. 31 : 17 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang khusyuk, sebagaimana firman Allah: "Mohonlah pertolongan dengan sabar dan salat, meski hal itu di rasa amat berat, kecuali bagi orang-orang yang khusyuk. Yaitu orang-orang yang yakin bahwa mereka akan bertemu dengan Tuhannya dan bahwa kepada-Nya mereka akan kembali." ( QS. 2 : 45-46 ) ۞ "Yaitu mereka yang selalu mengingat Allah, baik dalam keadaan duduk, berdiri, atau berbaring, dan mereka merenungkan penciptaan langit dan bumi seraya berkata, 'Tuhan kami, tidaklah Kau ciptakan semua ini sia-sia. Mahasuci Engkau! Maka hindarkanlah kami dari siksa neraka'.” ( QS. 3 : 191 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang sabar, sebagaimana firman Allah: "Sungguh, orang-orang yang sabar akan di penuhi pahalanya tanpa perhitungan." ( QS. 39 : 10 ) ۞ "Mereka itulah orang-orang yang di beri petunjuk oleh Allah, dan mereka itulah yang memiliki akal yang jernih." ( QS. 39 : 18 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang takut (kepada Allah), sebagaimana firman Allah: "Dan bagi orang-orang yang takut kepada Tuhannya, (mendapatkan) dua surga." ( QS. 55 : 46 ) ۞ "Adapun orang-orang yang takut menghadap Tuhannya dan menahan dirinya dari mengikuti hawa nafsu, maka sesungguhnya surgalah tempat kembalinya." ( QS. 79 : 40-41 ) ۞
+<br>"Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang bertakwa, sebagaimana firman Allah: "Aku tetapkan rahmat-Ku bagi orang-orang yang bertakwa, yang menunaikan zakat dan orang-orang yang beriman kepada ayat-ayat Kami. (Yaitu) orang-orang yang mengikuti Rasul, Nabi yang ummi (tidak bisa baca tulis) yang (namanya) mereka dapati tertulis di dalam Taurat dan Injil yang ada pada mereka." ( QS. 7 : 156-157 ) ۞ "Mereka itulah yang memperoleh balasan yang berlipat ganda atas apa yang telah mereka kerjakan, dan mereka aman sentosa di tempat-tempat yang tinggi (dalam surga)." ( QS. 34 : 37 ) ۞
+<br>"
+Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang bersahaja, sebagaimana firman Allah: "Dan sampaikanlah (wahai Muhammad) kabar gembira kepada orang-orang yang tunduk patuh (kepada Allah). (Yaitu) orang-orang yang apabila disebut nama Allah hati mereka bergetar." ( QS. 22 : 34-35 ) ۞ "Dan mereka yang memberikan apa yang mereka berikan (sedekah) dengan hati penuh rasa takut (karena mereka tahu) bahwa sesungguhnya mereka akan kembali kepada Tuhannya." ( QS. 23 : 60 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang sabar (dalam menghadapi musibah), sebagaimana firman Allah: "Dan sampaikanlah kabar gembira kepada orang-orang yang sabar. (Yaitu) orang-orang yang apabila ditimpa musibah, mereka berkata 'Sesungguhnya kami milik Allah dan kepada-Nyalah kami kembali'. Mereka itulah yang memperoleh ampunan dan rahmat dari Tuhannya, dan mereka itulah orang-orang yang mendapat petunjuk.” ( QS. 2 : 155-157 ) ۞ "Sesungguhnya pada hari ini Aku memberi balasan kepada mereka, karena kesabaran mereka; sesungguhnya mereka itulah orang-orang yang memperoleh kemenangan." ( QS. 23 : 111 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang menahan )amarahnya), sebagaimana firman Allah: "(Yaitu) orang yang berinfak, baik di waktu lapang maupun sempit, dan orang-orang yang menahan amarahnya dan memaafkan (kesalahan) orang lain. Dan Allah mencintai orang yang berbuat kebaikan." ( QS. 3 : 134 ) ۞ "Tetapi barangsiapa memaafkan dan berbuat baik (kepada orang yang berbuat jahat) maka (dilimpahkan) pahala dari Allah" ( QS. 42 : 40 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang aktif dalam kebaikan, sebagaimana firman Allah: "Dan berbuatbaiklah. Sungguh, Allah menyukai orang-orang yang berbuat baik." ( QS. 2 : 195 ) ۞ "Barangsiapa berbuat kebaikan mendapat balasan sepuluh kali lipat amalnya. Dan barangsiapa berbuat kejahatan dibalas seimbang dengan kejahatannya. Mereka sedikit pun tidak dirugikan (dizalimi)."  ( QS. 6 : 160 ) ۞
+<br>"Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang bersedekah, sebagaimana firman Allah: "Dan jika kamu menyedekahkan, itu lebih baik bagimu, jika kamu mengetahui." ( QS. 2 : 280 ) ۞ "Sesungguhnya Allah memberi balasan kepada orang yang bersedekah." ( QS. 12 : 88 ) ۞
+<br>"
+Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang menafkahkan hartanya, sebagaimana firman Allah: "Dan menginfakkan sebagian rezeki yang Kami berikan kepada mereka." ( QS. 2 : 3 ) ۞ "Dan apa saja yang kamu infakkan, Allah akan menggantinya." ( QS. 34 : 39 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang bersyukur, sebagaimana firman Allah: "Dan bersyukurlah kepada Allah, jika kamu hanya menyembah kepada-Nya." ( QS. 2 : 172 ) ۞ "Sesungguhnya jika kamu bersyukur, niscaya Aku akan menambah (nikmat) kepadamu, tetapi jika kamu mengingkari (nikmat-Ku), maka pasti azab-Ku sangat pedih." ( QS. 14 : 7 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang meminta (kepada Allah), sebagaimana firman Allah: "Maka sesungguhnya Aku dekat. Aku Kabulkan permohonan orang yang berdoa apabila dia berdoa kepada-Ku." ( QS. 2 : 186 ) ۞ "Berdoalah kepada-Ku, niscaya akan Aku perkenankan bagimu." ( QS. 40 : 60 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang saleh, sebagaimana firman Allah: "Bahwa bumi ini akan di warisi oleh hamba-hamba-Ku yang saleh." ( QS. 21 : 105 ) ۞ "Mereka itulah orang yang akan mewarisi. (Yakni) yang akan mewarisi (surga) Firdaus. Mereka kekal di dalamnya." ( QS. 23 : 10-11 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang senantiasa  berselawat untuknya (Rasulullah ﷺ), sebagaimana firman Allah: "Sesungguhnya Allah dan para malaikat-Nya bersalawat untuk Nabi. Wahai orang-orang yang beriman! Berselawatlah kamu untuk Nabi dan ucapkanlah salam dengan penuh penghormatan kepadanya." ( QS. 33 : 56 ) ۞ "Niscaya Allah memberikan rahmat-Nya kepadamu dua bagian, dan menjadikan cahaya untukmu yang dengan cahaya itu kamu dapat berjalan serta Dia mengampuni kamu. Dan Allah Maha Pengampun lagi Maha Penyayang." ( QS. 57 : 28 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang diberi kabar gembira, sebagaimana firman Allah: "Bagi mereka berita gembira di dalam kehidupan di dunia dan di akhirat. Tidak ada perubahan bagi janji-janji Allah. Demikian itulah kemenangan yang agung." ( QS. 10 : 64 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang beroleh kemenangan, sebagaimana firman Allah: "Dan barangsiapa menaati Allah dan Rasul-Nya, maka sungguh, dia menang dengan kemenangan yang agung." ( QS. 33 : 71 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang zuhud, sebagaimana firman Allah: "Harta dan anak-anak adalah perhiasan kehidupan dunia tetapi amal kebajikan yang terus-menerus adalah lebih baik pahalanya di sisi Tuhanmu serta lebih baik untuk menjadi harapan." ( QS. 18 : 46 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang pengikut Nabi yang ummiy, sebagaimana firman Allah: "Kamu (umat Islam) adalah umat terbaik yang dilahirkan untuk manusia, (karena kamu) menyuruh (berbuat) yang makruf, dan mencegah dari yang mungkar." ( QS. 3 : 110 )
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang terpilih, sebagaimana firman Allah: "emudian Kitab itu Kami wariskan kepada orang-orang yang Kami pilih di antara hamba-hamba Kami, lalu di antara mereka ada yang menzalimi diri sendiri, ada yang pertengahan, dan ada (pula) yang lebih dahulu berbuat kebaikan dengan izin Allah. Yang demikian itu adalah karunia yang besar." ( QS. 35 : 32 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang berdosa, sebagaimana firman Allah: "Katakanlah, Wahai hamba-hamba-Ku yang melampaui batas terhadap diri mereka sendiri! Janganlah kamu berputus asa dari rahmat Allah. Sesungguhnya Allah mengampuni dosa-dosa semuanya. Sungguh, Dialah Yang Maha Pengampun lagi Maha Penyayang." ( QS. 39 : 53 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang beristighfar (memohon ampunan), sebagaimana firman Allah: "Dan barangsiapa berbuat kejahatan dan menganiaya dirinya, kemudian dia memohon ampunan kepada Allah, niscaya dia akan mendapatkan Allah Maha Pengampun lagi Maha Penyayang." ( QS. 4 : 110 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang yang di dekatkan (kepada Allah), sebagaimana firman Allah: "Sungguh, sejak dahulu bagi orang-orang yang telah ada (ketetapan) yang baik dari Kami, mereka itu akan dijauhkan (dari neraka). Mereka tidak mendengar bunyi desis (api neraka), dan mereka kekal dalam (menikmati) semua yang mereka ingini. Kejutan yang dahsyat tidak membuat mereka merasa sedih, dan para malaikat akan menyambut mereka (dengan ucapan), 'Inilah harimu yang telah dijanjikan kepadamu'.” ( QS. 21 : 101-103 ) ۞
+<br>Ya Allah, limpahkanlah kesejahteraan dan kedamaian kepada junjungan kami, Muhammad ﷺ, sang pembawa dan penyampai kabar gembira kepada orang-orang yang berserah diri (kepada Allah), sebagaimana firman Allah: "Sungguh, laki-laki dan perempuan muslim, laki-laki dan perempuan mukmin, laki-laki dan perempuan yang tetap dalam ketaatannya, laki-laki dan perempuan yang benar, laki-laki dan perempuan yang sabar, laki-laki dan perempuan yang khusyuk, laki-laki dan perempuan yang bersedekah, laki-laki dan perempuan yang berpuasa, laki-laki dan perempuan yang memelihara kehormatannya, laki-laki dan perempuan yang banyak menyebut (nama) Allah, Allah telah menyediakan untuk mereka ampunan dan pahala yang besar." ( QS. 33 : 35 ) ۞ "Dan sesungguhnya usahanya itu kelak akan diperlihatkan (kepadanya). Kemudian akan diberi balasan kepadanya dengan balasan yang paling sempurna. Dan sesungguhnya kepada-Nya (Tuhanmu) lah kesudahan (segala sesuatu)." ( QS. 53 : 39-41 ) ۞
+<br>Ya Allah, limpahkanlah selawat kepadanya (Rasulullah ﷺ) dengan selawat yang membuat dada menjadi lapang, berbagai urusan menjadi mudah, berbagai penghalang menjadi terbuka, dan sampaikan kepadanya salam yang banyak, berkesinambungan hingga Hari Kiamat. Seruan mereka di sana adalah “Mahasuci Engkau, Ya Allah”. Penghormatan mereka di sini adalah “Salam.” Dan akhir ucapan mereka adalah “Segala puji bagi Allah, Tuhan semesta alam.” ( QS. 10 : 10 ) ۞
+
+</p>
+<p>Shalawat ini adalah karya Syaikh Abdul Qadir Jaelani.
+</p>
+
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Larangan-Larangan Ihrom</h1>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;" class="arab"></p>
+<p>Ihram secara bahasa (etimologi) artinya &ldquo;Pengharaman&rdquo; yang pengharaman ini berakhir dengan proses yang namanya tahallul yang artinya &ldquo;Penghalalan&rdquo;. Logikanya mirip dengan sholat. Nabi bersabda tentang sholat :</p>
+<p style="text-align: right;" class="arab">مِفْتَاحُ الصَّلَاةِ الطُّهُورُ وَتَحْرِيمُهَا التَّكْبِيرُ وَتَحْلِيلُهَا التَّسْلِيمُ</p>
+<p>&ldquo;Kunci sholat adalah bersuci (wudhu) dan pengharamannya adalah takbir dan penghalalannya adalah salam&rdquo; (HR Abu Dawud no 61 dan At-Tirmidzi no 3, dan dihasankan oleh Al-Albani)</p>
+<p>Sebelum kita sholat maka kita boleh berbicara dengan orang lain, boleh bergerak kesana dan kemari, boleh tidak menghadap kiblat, boleh makan dan boleh minum. Namun tatkala kita bertakbir -yang disebut takbiratul ihram- maka semua itu menjadi haram tidak boleh dilakukan. Dan hanya boleh kembali kita lakukan jika telah melakukan tahallul dalam sholat yaitu dengan mengucapkan salam.</p>
+<p>Maka demikian pula dengan ihram dan tahallul dalam umroh dan haji. Sebelum ihram maka kita masih boleh memakai pakaian biasa, boleh memakai topi, songkok, dan sorban, masih boleh memakai minyak wangi, dan boleh mencumbui istri. Namun tatkala kita sudah berniat masuk dalam ihram tatkala di miqot maka semua perkara tersebut menjadi haram dan terlarang. Hanya boleh dilakukan lagi (dihalalkan kembali) jika kita telah melakukan tahallul.</p>
+<p>Berikut ini perkara-perkara yang dilarang untuk dilakukan ketika seseorang sedang berihram.</p><em>(klik untuk detail)</em>
+
+<ol><li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>Memotong/mencukur/mencabuti rambut atau bulu badan</strong>&nbsp;(baik rambut kepala, bulu ketiak, bulu kemaluan, bulu di badan, bulu hidung, kumis, dan jenggot)</summary>
+<p align="left"<p>Allah berfirman :</p>
+<p style="text-align: right;" class="arab">وَلَا تَحْلِقُوا رُءُوسَكُمْ حَتَّى يَبْلُغَ الْهَدْيُ مَحِلَّهُ فَمَنْ كَانَ مِنْكُمْ مَرِيضًا أَوْ بِهِ أَذًى مِنْ رَأْسِهِ فَفِدْيَةٌ مِنْ صِيَامٍ أَوْ صَدَقَةٍ أَوْ نُسُكٍ</p>
+<p>&ldquo;Janganlah kalian mencukur rambut-rambut kalian sampai hewan hadyu tiba pada tempatnya, barang siapa diantara kalian ada yang sakit atau gangguan dikepalanya (lalu dia bercukur) maka wajib baginya membayar fidyah, yaitu puasa 3 (tiga) hari atau sedekah (memberi makan kepada 6 orang fakir miskin) atau nusuk (menyembelih kambing).&rdquo; (QS Al-Baqoroh : 196)</p>
+<p>Catatan :</p>
+<ul>
+<li>Jika kepala gatal atau tubuh gatal maka seorang yang sedang ihram dibolehkan untuk menggaruk, meskipun garukannya menyebabkan sebagian rambut atau buluh tercabut.</li>
+</ul>
+<p>Al-Imam Malik meriwayatkan dari ibunya &lsquo;Alqomah ia berkata :</p>
+<p style="text-align: right;" class="arab">سَمِعْتُ عَائِشَةَ زَوْجَ النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ تُسْأَلُ عَنِ الْمُحْرِمِ. أَيَحُكُّ جَسَدَهُ؟ فَقَالَتْ: نَعَمْ. &laquo;فَلْيَحْكُكْهُ وَلْيَشْدُدْ، وَلَوْ رُبِطَتْ يَدَايَ، وَلَمْ أَجِدْ إِلَّا رِجْلَيَّ لَحَكَكْتُ&raquo;</p>
+<p>&ldquo;Aku mendengar Aisyah -istri Nabi shallallahu &lsquo;alaihi wasallam- ditanya tentang seorang yang ihram apakah boleh menggaruk badannya?&rdquo;. Maka Aisyah berkata, &ldquo;Iya, maka hendaknya ia garuk, dan keras garuknya. Seandainya kedua tanganku diikat dan aku tidak bisa kecuali dengan kedua kakiku maka aku akan menggaruk dengan kedua kakiku&rdquo; (Muwatto&rsquo; Malik no 93)</p>
+<p>Ibnu Taimiyyah berkata :</p>
+<p style="text-align: right;" class="arab">وَكَذَلِكَ إذَا اغْتَسَلَ وَسَقَطَ شَيْءٌ مِنْ شَعْرِهِ بِذَلِكَ لَمْ يَضُرَّهُ</p>
+<p>&ldquo;Dan demikian pula jika ia mandi lalu tercabut/gugur sebagian rambut/bulu nya maka tidak mengapa&rdquo; (Majmuu&rsquo; Al-Fataawa 26/116)</p>
+<ul>
+<li>Jika yang dipotong adalah seluruh rambut maka para ulama telah sepakat bahwa ia harus membayar fidyah.</li>
+<li>Namun jika yang sengaja dicabut satu helai atau dua atau tiga, maka itu adalah dosa namun ada khilaf di kalangan para ulama tentang kaffarohnya. (lihat al-Mughni, Ibnu Qudamah 3/433)</li>
+<li>Dari sini tidak benar persangkaan sebagian Jamaah haji bahwa barang siapa yang mencabut sehelai rambutnya maka harus membayar seekor kambing, jika dua helai maka dua ekor kambing dst. Bahkan banyak dari Jamaah haji yang takut menggaruk dikarenakan keyakinan tersebut.</li>
+</ul></details></li>
+
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>Memotong kuku</strong></summary>
+<p>Larangan ini adalah hal yang telah disepakati oleh para ulama -kecuali Ibnu Hazm-. Ibnul Mundzir berkata:</p>
+<p style="text-align: right;" class="arab">وَأَجْمَعُوْا عَلَى أَنَّ الْمُحْرِمَ مَمْنُوْعٌ مِنْ أَخْذِ أَظْفَارِهِ</p>
+<p>&ldquo;Para ulama sepakat, bahwasanya orang yang sedang ihram, dilarang untuk memotong kukunya.&rdquo; (Al-Ijmaa&rsquo; hal 52)</p>
+<p>Diantara dalil yang menunjukan akan larangan ini adalah firman Allāh Subhānahu wa Ta&rsquo;āla berfirman:</p>
+<p style="text-align: right;" class="arab">ثُمَّ لْيَقْضُوا تَفَثَهُمْ</p>
+<p>&ldquo;Hendaklah mereka (para jama&rsquo;ah haji) membersihkan kotoran dari tubuh mereka.&rdquo; (QS. Al-Hajj : 29)</p>
+<p>Sebagian salaf (diantaranya Ibnu Abbas, &lsquo;Ikrimah, dan Mujahid) menafsirkan firman Allah تَفَثَهُمْ (kotoran mereka) yaitu hendaknya pada tanggal 10 Dzulhijjah para Jamaah haji membersihkan kotoran dari tubuh mereka, diantaranya mencukur rambut, kumis, mencabut bulu ketiak, dan&nbsp;<em>memotong kuku</em>. (lihat Tafsir At-Thobari 16/526-527)</p>
+<p>Dipahami dari tafsiran tersebut bahwa sebelumnya bahwa para Jamaah haji -tatkala masih ihrom- dilarang untuk memotong kuku mereka.</p>
+<p>Larangan ini juga dikuatkan dengan sabda Nabi shallallahu &lsquo;alaihi wasallam:</p>
+<p style="text-align: right;" class="arab">إِذَا رَأَيْتُمْ هِلاَلَ ذِى الْحِجَّةِ وَأَرَادَ أَحَدُكُمْ أَنْ يُضَحِّىَ فَلْيُمْسِكْ عَنْ شَعْرِهِ وَأَظْفَارِهِ</p>
+<p>&ldquo;Jika kalian melihat hilal bulan Dzulhijjah dan seorang diantara kalian hendak berkurban, maka hendaknya dia tidak mencukur rambutnya dan tidak memotong kukunya.&rdquo; (HR Msulim no 1977)</p>
+<p>Sabda Nabi ini berlaku bagi orang yang hendak berkurban, dan para ulama menyebutkan bahwa orang yang berkurban dilarang untuk memotong rambut dan kuku adalah untuk meniru orang yang ihram dari sebagian sisi. Jika orang yang berkurban dilarang untuk memotong kuku, tentunya yang sedang ihram lebih utama untuk dilarang</p>
+<p>Catatan :</p>
+<ul>
+<li>Kuku disini mencakup kuku kedua tangan dan kuku kedua kaki</li>
+<li>Para ulama sepakat bahwa jika kuku yang pecah maka boleh dipotong karena mengganggu tanpa harus membayar fidyah sama sekali</li>
+</ul>
+<p>Ibnul Mundzir berkata :</p>
+<p style="text-align: right;" class="arab">وَأَجْمَعُوا عَلَى أَنَّ لَهُ أَنْ يُزِيْلَ عَنْ نَفْسِهِ مَا كَانَ مُنْكَسِرًا مِنْهُ</p>
+<p>&ldquo;Para ulama telah ijmak bahwa ia (seorang yang ihram) boleh memotong kukunya yang pecah&rdquo; (Al-Ijmaak hal 52)</p>
+<ul>
+<li>Jika seorang yang sedang ihram sengaja memotong seluruh kuku kedua tangannya maka para ulama telah sepakat bahwa ia wajib membayar fidyah. Akan tetapi jika yang sengaja ia potong adalah satu atau dua atau tiga kuku maka ada perselisihan di kalangan para ulama. Sebagian ulama (yaitu madzhab Hanafiyah) berpendapat bahwa tidak wajib fidyah kecuali semua kuku kedua tangannya ia potong, karena tidak ada dalil yang menyuruh membayar fidyah. Sementara mayoritas ulama (yaitu Al-Malikiyah, As-Syafi&rsquo;iyyah, dan Al-Hanabilah) berpendapat bahwa harus memberi makan. Hanya saja mereka berbeda pendapat tentang kadar makanan tersebut untuk setiap kuku. Ada yang mengatakan setiap kuku segenggam makanan, ada yang mengatakan satu mud (yaitu sekitar &frac14; zakat fitrah, sekitar 0,65 kg beras). Khilaf ini persis seperti khilaf mencabut sehelai atau dua helai rambut -sebagaimana telah lalu penjelasannya-. Ini tentunya ijtihad dari sebagian para ulama, karena memang tidak ada nash yang tegas dari Rasūlullāh shallallāhu &lsquo;alayhi wa sallam tentang kaffaroh karena memotong kuku.</li>
+</ul></details></li>
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>Memakai minyak wangi.</strong></summary>
+<p>Rasūlullāh shallallāhu &lsquo;alaihi wa sallam bersabda:</p>
+<p style="text-align: right;" class="arab">وَلاَ تَلْبَسُوا مِنَ الثِّيَابِ شَيْئًا مَسَّهُ زَعْفَرَانٌ وَلاَ الْوَرْسُ</p>
+<p>&ldquo;Janganlah kalian memakai baju atau kain yang terkena za&rsquo;farān atau wars.&rdquo; (HR Bukhari no 5803)</p>
+<p>Za&rsquo;farān dan wars adalah nama-nama minyak wangi.</p>
+<p>Demikian pula dalam hadīts, Rasūlullāh shallallāhu &lsquo;alaihi wa sallam menyebutkan, dari Ibnu Abbās radhiyallāhu Ta&rsquo;āla &lsquo;anhumma dia berkata:</p>
+<p style="text-align: right;" class="arab">أَنَّ رَجُلاً، كَانَ مَعَ النَّبِيِّ صلى الله عليه وسلم فَوَقَصَتْهُ نَاقَتُهُ، وَهُوَ مُحْرِمٌ، فَمَاتَ، فَقَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم &rdquo; اغْسِلُوهُ بِمَاءٍ وَسِدْرٍ، وَكَفِّنُوهُ فِي ثَوْبَيْهِ، وَلاَ تَمَسُّوهُ بِطِيبٍ، وَلاَ تُخَمِّرُوا رَأْسَهُ، فَإِنَّهُ يُبْعَثُ يَوْمَ الْقِيَامَةِ مُلَبِّيًا &ldquo;.</p>
+<p>Ada seorang lelaki bersama Nabi shallallāhu &lsquo;alayhi wa sallam berhaji namun dia terlempar (terjatuh) dari untanya (terinjak untanya) kemudian dia meninggal dan dia dalam keadaan ihram, maka Rasūlullāh shallallāhu &lsquo;alayhi wa sallam berkata, &ldquo;Mandikanlah mayatnya dengan air dan daun bidara dan kafankanlah dia dengan dua bilah bajunya,&nbsp;<u>jangan kalian sentuhkan dia dengan minyak wangi</u>, dan jangan kalian menutup kepalanya (tatkala dikafankan) karena dia akan dibangkitkan pada hari kiamat kelak dalam kondisi bertalbiah&rdquo; (HR Bukhāri no 1851 dan Muslim no 1206)</p>
+<p>Kondisi orang berkaitan dengan ihram ada dua :</p>
+<p><em>Pertama</em>&nbsp;: Sebelum berihram:</p>
+<p>Sebelum ihram -yaitu tatkala persiapan untuk berihram- maka seorang boleh bahkan disunnahkan memakai minyak wangi dibadan atau dikepala atau dirambutnya -namun tidak boleh di kain ihromnya-</p>
+<p>Asiyah berkata</p>
+<p style="text-align: right;" class="arab">كُنْتُ أُطَيِّبُ رَسُولَ اللَّهِ صلى الله عليه وسلم لإِحْرَامِهِ حِينَ يُحْرِمُ، وَلِحِلِّهِ قَبْلَ أَنْ يَطُوفَ بِالْبَيْتِ.</p>
+<p>&ldquo;Aku memakaikan minyak wangi kepada Rasūlullāh shallallāhu &lsquo;alaihi wa sallam tatkala beliau hendak berihram, aku juga memakaikan minyak wangi setelah Nabi bertahallul (yaitu tahallul awal setelah beliau melempar jamroh dan mencukur rambut-pen) sebelum beliau berthawāf di Ka&rsquo;bah.&rdquo; (HR Bukhāri no 1539 dan Muslim no 2040)</p>
+<p>Disini jelas bahwa &lsquo;Āisyah radhiyallāhu Ta&rsquo;āla &lsquo;anhā memberikan minyak wangi kepada Nabi sebelum berihram.</p>
+<p>Aisyah juga berkata</p>
+<p style="text-align: right;" class="arab">كَأَنِّيْ أَنْظُرُ إِلَى وَبِيْصَ اْلمِسْكِ فِيْ مَفْرَقِ رَسُوْلِ اللهِ وَهُوَ مُحْرِمٌ</p>
+<p>&ldquo;Seakan-akan aku melihat ada kilatan bekas minyak rambut di bagian belahan rambut kepala Nabi shallallāhu &lsquo;alayhi wa sallam tatkala beliau sedang ihram.&rdquo; (HR Muslim no 1190)</p>
+<p>Ini adalah dalīl bahwasanya minyak wangi yang dipakai sebelum ihram tidak mengapa tersisa meskipun telah berihram (Lihat Maalim As-Sunan 2/150). Yang penting memakainya sebelum berihrom. Apabila setelah dia menggunakan kain lalu kainnya kena minyak wangi yang ada dibadannya maka ini tidak masalah, yang dilarang adalah jika dia menumpahkan minyak wangi di kain ihram secara langung.</p>
+<p><em>Kedua</em>&nbsp;: Sesudah berihram:</p>
+<p>Bila seseorang sudah berihram, sudah masuk niat ihram dengan siarnya mengatakan, &ldquo;Labaik Allāhumma umrah,&rdquo; atau, &ldquo;Labaik Allāhumma hajjan,&rdquo; maka tidak boleh lagi menggunakan minyak wangi, baik di baju maupun di badan.</p>
+<p>Mengapa setelah seseorang berihram tidak boleh menggunakan minyak wangi? Kata para ulamā:</p>
+<p>⑴ Orang yang berihram tidak dituntut untuk bergaya, berhias.</p>
+<p>⑵ Minyak wangi merupakan perkara yang sangat mudah menggerakan syahwat ke arah jima&rsquo;. Dan diantara larangan yang sangat keras dalam berihram adalah jimak (sebagaimana akan datang penjelasannya). Oleh karenanya Rasūlullāh melarang wanita keluar dengan memakai minyak wangi, kenapa? Karena itu bisa menjadi perkara yang bisa memotivasi seseorang untuk bisa tergugah syahwatnya. Oleh karenanya seorang yang sedang ihram tidak boleh pakai minyak wangi.</p>
+<p><strong>Catatan</strong>&nbsp;:</p>
+<p><em>Pertama</em>&nbsp;: Seorang yang sedang berihram juga dilarang untuk sengaja mencium bau minyak wangi (lihat Majmuu&rsquo; Fataawa, Ibnu Taimiyyah 26/116), adapun jika tercium maka tidak mengapa.</p>
+<p><em>Kedua</em>&nbsp;: Sebagian Jamaah haji ketika kain ihramnya dicuci diberi pewangi (molto atau yang lainnya) ini tidak boleh. Maka hendaknya kain ihram tersebut dibilas kembali agar sisa pengharum pakaian tersebut hilang.</p>
+<p><em>Ketiga</em>&nbsp;: Yang dilarang adalah minyak wangi -sebagaimana yang ditunjukan oleh lafal hadits- adapun selain minyak wangi maka tidak mengapa, meskipun memiliki bau yang enak dicium atau misalnya memiliki bau yang menyengat.</p>
+<p>Contohnya seperti:</p>
+<ul>
+<li>Jeruk kalau kita makan tidak masalah karena jeruk itu sesuatu yang alami bukan minyak wangi. Kecuali kalua sudah diproses dan diubah menjadi minyak wangi beraroma jeruk, maka tidak boleh.</li>
+<li>Ada odol yang sekedar rasa menthol dan aroma mentol bukanlah minyak wangi. Jadi tidak mengapa menggunakan odol tatkala menyikat gigi, selama tersebut tidak beraroma minyak wangi. Bahkan sebagian ulama memandang tidak mengapa odol yang harum, karena odol bukanlah dimaksudkan untuk menjadi minyak wangi. Akan tetapi untuk lebih hati-hati adalah tidak menggunakan odol yang beraroma pewangi. Wallahu a&rsquo;lam.</li>
+<li>Balsam dan minyak angin dan yang semisalnya. Tidak mengapa seseorang menggunakan balsam, minyak angin, minyak kayu putih, meskipun baunya tajam namun itu semua bukanlah minyak wangi. Kecuali minyak angin yang ada aroma terapi, aroma parfumnya, maka ini tidak boleh karena minyak angin tersebut dicampur dengan minyak wangi sehingga memiliki bau wangi parfume.</li>
+<li>Seseorang yang menggunakan sabun yang bukan bau minyak wangi, tapi hanya aroma sabun. Seperti sabun umrah, sabun cuci piring, sabun cuci baju, Sabun umrah ini tidak menjadi masalah karena dia tidak berparfume, maka tidak mengapa dipakai oleh seorang tatkala dia sedang ihram.</li>
+</ul>
+<p>Jadi tidak semua bau yang enak adalah minyak wangi.</p></details></li>
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>Menutup kepala bagi laki-laki</strong><strong>, adapun menutup wajah tidak mengapa bagi laki-laki</strong>.</summary>
+<p>Larangan ihram berikutnya adalah larangan untuk menutup kepala, dan ini khusus untuk para lelaki. Bagi wanita tentunya tidak mengapa menutup kepala mereka karena mereka berjilbab,&nbsp;<strong>yang dilarang bagi wanita adalah memakai cadar dan kaos tangan.</strong></p>
+<p>Nabi shallallāhu &lsquo;alayhi wa sallam bersabda:</p>
+<p style="text-align: right;" class="arab">. لَا يَلْبَسُ الْقُمُصَ، وَلَا الْعَمَائِمَ</p>
+<p>&ldquo;Seseorang yang sedang ihram tidak boleh memakai gamis dan jubah dan tidak boleh memakai imamah (surban) &rdquo; (HR Bukhāri no1842 dan Muslim no 1177)</p>
+<p>Demikian juga hadīts Ibnu Abbās yang telah kita sebutkan tentang kisah seorang yang terjatuh dari untanya kemudian terinjak dan meninggal dunia, Rasūlullāh shallallāhu &lsquo;alayhi wa sallam mengatakan dalam hadīts tersebut tentang jasad mayatnya tatkala dikafankan, kata Rasūlullāh shallallāhu &lsquo;alayhi wa sallam:</p>
+<p style="text-align: right;" class="arab">وَلاَ تُخَمِّرُوا رَأْسَهُ</p>
+<p>&ldquo;Janganlah kalian menutup kepalanya&rdquo; (HR Bukhāri no 1851 dan Muslim no 1206)</p>
+<p>Ini dalīl bahwasanya seseorang tatkala sedang ihram tidak boleh menempel kepalanya dengan sesuatu yang menempel. Seperti bila ia menutup kepalanya dengan kain ihramnya.</p>
+<p>Adapun jika menutup kepalanya (berteduh), tidak menempel, seperti pakai payung atau kain kemah, maka ini tidak menjadi masalah.</p>
+<p>Bahkan Rasūlullāh shallallāhu &lsquo;alayhi wa sallam tatkala melempar jamrah &lsquo;Aqabah -dan beliau masih dalam keadaan ihram- beliau ditutupi dengan kain/baju.</p>
+<p>Ummul Hushoin beliau berkata :</p>
+<p style="text-align: right;" class="arab">&laquo;حَجَجْتُ مَعَ رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ حَجَّةَ الْوَدَاعِ، فَرَأَيْتُ أُسَامَةَ وَبِلَالًا، وَأَحَدُهُمَا آخِذٌ بِخِطَامِ نَاقَةِ النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَالْآخَرُ رَافِعٌ ثَوْبَهُ يَسْتُرُهُ مِنَ الْحَرِّ (وفي رواية: مِنَ الشَّمْسِ) حَتَّى رَمَى جَمْرَةَ الْعَقَبَةِ&raquo;</p>
+<p>&ldquo;Aku berhaji bersama Rasulullah shallallahu &lsquo;alaihi wa sallam yaitu haji wada&rsquo; maka aku melihat Usamah dan Bilal, salah satu dari mereka berdua memegang kendali unta Nabi shallallahu &lsquo;alaihi wa sallam dan&nbsp;<u>yang lainnya mengangkat bajunya menutupi Rasulullah</u>&nbsp;shallallahu &lsquo;alaihi wa sallam karena panas (dalam riwayat yang lain : karena matahari) hingga Nabi selesai melempar jumroh Aqobah<em>&rdquo;&nbsp;</em>(HR Muslim no 1298)</p>
+<p>Jabir berkata -tatkala menjelaskan perjalanan haji Nabi-:</p>
+<p style="text-align: right;" class="arab">وَأَمَرَ بِقُبَّةٍ مِنْ شَعَرٍ تُضْرَبُ لَهُ بِنَمِرَةَ&hellip;. فَوَجَدَ الْقُبَّةَ قَدْ ضُرِبَتْ لَهُ بِنَمِرَةَ، فَنَزَلَ بِهَا، حَتَّى إِذَا زَاغَتِ الشَّمْسُ أَمَرَ بِالْقَصْوَاءِ</p>
+<p>&ldquo;Dan Nabi memerintahkan untuk ditegakan kemah baginya di Namiroh (di Arofah)&hellip;.lalu Nabi mendapati kemah telah ditegakkan untuk beliau di Namiroh maka Nabipun singgah di kemah tersebut hingga tiba waktu dzuhur lalu beliau memerintahkan untuk mempersiapkan onta beliau Al-Qoswaa&rdquo; (HR Muslim no 1218)</p>
+<p>Adapun menutup wajah, maka ada khilaf dikalangan para ulamā. Dalam Shahīh Muslim tatkala Rasūlullāh shallallāhu &lsquo;alaهhi wa sallam memerintahkan para shahābat untuk mengkafankan shahābat yang terjatuh dari untanya di padang Arafāh, kata Rasūlullāh shallallāhu &lsquo;alayhi wa sallam:</p>
+<p style="text-align: right;" class="arab">وَلاَ تُخَمِّرُوا رَأْسَهُ ولا وجههُ</p>
+<p>&ldquo;Jangan kalian tutup kepalanya dan&nbsp;<u>jangan kalian tutup wajahnya</u>.&rdquo; (HR Muslim no 1206, sementara Al-Bukhari meriwayatkan tanpa tanbahan &ldquo;wajahnya&rdquo;)</p>
+<p>Ada tambahan dalam hadīts tersebut, &ldquo;Janganlah menutup wajahnya.&rdquo; Ada khilaf di kalangan para ulamā tentang keshahīhan tambahan lafazh ini. Sebagian ulamā memandang lafazh ini shahīh (<em>diantaranya adalah Az-Zaila&rsquo;i di Nashbur Rooyah 3/28 dan Al-Albani di Ahkaamul Janaaiz hal 13</em>) maka tidak boleh seorang lelaki menutup wajahnya. Konsekwensinya, seorang tidak boleh memakai masker yang terbuat dari kain untuk menutup wajahnya.</p>
+<p>Namun sebagian ulamā mengatakan bahwa tambahan lafazh hadīts ini adalah tambahan yang riwayatnya tidak shahīh (<em>diantaranya adalah al-Imam Al-Bukhari sebagaimana dinukil Ibnul Mudzoffar Al-Bazzaar di Hadits Syu&rsquo;bah hal 124 no 176 dan juga Abu Abdillah al-Hakim di Ma&rsquo;rifat &lsquo;Ulumil Hadits hal 148</em>), sehingga dengan demikian tidak mengapa lelaki untuk menutup wajahnya.</p>
+<p>Dan penulis lebih condong kepada pendapat kedua bahwasanya tidak ada larangan untuk menutup wajah yang ada di dalam hadīts-hadīts yang berkaitan dengan kepala. Karena larangan Nabi terhadap orang yang ihram adalah berkaitan dengan pakaian (sorban yaitu pakaian di kepala, jubah yaitu pakaian di badan, burnus yaitu pakaian yang dipasang di bahu, dan celana yaitu pakaian untuk kaki). Dan kaum pria tidak ada pakaian khusus yang dipakai di wajah.</p>
+<p>Adapun penutup wajah maka berkaitan dengan pakaian perempuan.</p>
+<p>Karenanya Rasūlullāh shallallāhu &lsquo;alaihi wa sallam berkata:</p>
+<p style="text-align: right;" class="arab">وَلاَ تَنْتَقِبُ الْمَرْأَةُ</p>
+<p>&ldquo;Jangan seorang wanita memakai cadar.&rdquo; (HR An Nasā&rsquo;i no 2673)</p>
+<p>Dengan demikian lelaki boleh menutup wajahnya dan boleh memakai masker meskipun terbuat dari kain.</p></details></li>
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>M</strong><strong>emakai pakaian yang&nbsp;</strong><strong>berjahit</strong></summary>
+<p>Lelaki yang sedang ihram tidak boleh memakai pakaian yang dijahit yang membentuk potongan tubuh manusia seperti qomis (jubah), sirwal (celana), khuf (sepatu), kaos kaki, kaos dalam, celana dalam dan yang lainnya.</p>
+<p>Ibnu &lsquo;Umar berkata :</p>
+<p style="text-align: right;" class="arab">أَنَّ رَجُلاً، سَأَلَ رَسُولَ اللَّهِ صلى الله عليه وسلم مَا يَلْبَسُ الْمُحْرِمُ مِنَ الثِّيَابِ فَقَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم : لاَ تَلْبَسُوا الْقُمُصَ وَلاَ الْعَمَائِمَ وَلاَ السَّرَاوِيلاَتِ وَلاَ الْبَرَانِسَ وَلاَ الْخِفَافَ إِلاَّ أَحَدٌ لاَ يَجِدُ النَّعْلَيْنِ فَلْيَلْبَسِ الْخُفَّيْنِ وَلْيَقْطَعْهُمَا أَسْفَلَ مِنَ الْكَعْبَيْنِ وَلاَ تَلْبَسُوا مِنَ الثِّيَابِ شَيْئًا مَسَّهُ الزَّعْفَرَانُ وَلاَ الْوَرْسُ</p>
+<p>Ada seorang bertanya kepada Rasūlullāh, &ldquo;Wahai Rasūlullāh, pakaian apa yang boleh dipakai oleh seorang yang sedang ihram?&rdquo;. Rasūlullāh shallallāhu &lsquo;alaihi wa sallam bersabda, &ldquo;Orang uyang ihram tidak boleh memakai baju Jubah, surban, celana panjang, baranis (pakaian yang diletakan dibagian pundak dan ada tutup kepalanya) dan tidak boleh pakai khuf (sepatu) kecuali seseorang yang tidak mempunyai sandal, kalau tidak punya sandal maka dia boleh memakai sepatu dengan syarat sepatu tersebut dipotong sampai di bawah mata kaki. Tidak boleh memakai baju yang tercampur dengan minyak wangi za&rsquo;faran dan wars.&rdquo; (HR Bukhāri no 1842 dan Muslim no 1177)</p>
+<p>Di sini Rasūlullāh shallallāhu &lsquo;alayhi wa sallam melarang memakai baju yang di jahit membentuk anggota tubuh. Para ulamā menggunakan istilah tidak boleh memakai الْمَخِيْطُ (<em>al-Makhiith</em>). Dalam bahasa Indonesia al-Makhiith artinya &ldquo;<em>Yang dijahit</em>&rdquo;. Istilah al-Makhiith ini menimbulkan banyak kesalahpahaman dari jamaah haji/umrah.</p>
+<p>Sehingga mereka menyangka sesuatu yang ada jahitannya dilarang (sedangkan yang tidak dijahit diperbolehkan). Padahal yang dimaksud dengan al-makhiith oleh para ulamā adalah pakaian yang di jahit sehingga membentuk anggota tubuh.</p>
+<p>Rasūlullāh shallallāhu &lsquo;alaihi wa sallam tidak pernah berbicara tentang masalah jahitan tapi Rasūlullāh shallallāhu &lsquo;alaihi wa sallam mengatakan tidak boleh pakai jubah, celana panjang, surban burnus, beliau tidak pernah membicarkan tentang masalah jahitan. Jadi yang dimaksud pakaian yang dijahit adalah yang membentuk anggota tubuh seperti baju, jubah, celana panjang dan yang lainnya, itu yang dilarang.</p>
+<p>Artinya, seandainya ada seseorang yang menenun kaos dalam atau jubah tanpa ada jahitan tapi membentuk jubah, tetap saja dilarang, karena yang dilarang bukan masalah jahitannya tetapi apakah kain tersebut berbentuk jubah (membentuk potongan-potongan tubuh)? itulah yang dilarang.</p>
+<p>Seandainya ada seorang menenun celana dalam sehingga terbentuk celana dalam tanpa ada jahitannya, semuanya tenunan, maka inipun tidak boleh.</p>
+<p>Jadi yang dilarang bukanlah &ldquo;yang ada jahitannya&rdquo;, tetapi yang berbentuk pakaian. Maka dengan demikian bisa jadi satu perkara ada jahitannya namun tidak dilarang.</p>
+<p>Contohnya, seperti:</p>
+<ul>
+<li>Seseorang memakai kain ihram atas dan bawah, kemudian kain atasnya di jahit ditulis nama travel Fulāni misalnya, maka ini tidak jadi masalah, ini tidak dilarang. Adapun memasang kancing pada kain ihrom, maka jika kancingnya hanya satu, atau dua kancing namun berjauhan maka semoga tidak mengapa. Akan tetapi jika kancing-kancing tersebut berdekatan maka tidak boleh karena seperti menjahit kain ihrom untuk dijadikan pakaian.</li>
+<li>Seseorang memakai ikat pinggang yang ada jahitannya ini juga tidak dilarang.</li>
+<li>Seseorang memakai sandal, sandal ada jahitannya, tetapi ini tidak dilarang.</li>
+<li>Seseorang membawa tas yang penuh dengan jahitan, maka tidak dilarang karena tas bukanlah pakaian</li>
+<li>Seseorang membawa dompet yang dompetnya berjahit. Ini juga tidak mengapa karena dompet bukanlah pakain</li>
+<li>Maka lebih boleh lagi memakai jam tangan dan kacamata.</li>
+</ul>
+<p>Kemudian, Rasūlullāh shallallāhu &lsquo;alaihi wa sallam berbicara tentang &ldquo;larangan memakai khuf/sepatu&rdquo;. Tapi kalau tidak ada sandal diberi keringanan boleh memakai sepatu, namun Rasūlullāh shallallāhu &lsquo;alayhi wa sallam menyuruh untuk memotong sepatu tersebut jangan sampai menutup mata kaki, tetapi dipotong dibawah mata kaki.</p>
+<p>Namun banyak ulamā yang mengatakan larangan ini mansukh (tidak berlaku lagi), karena waktu Rasūlullāh shallallāhu &lsquo;alaihi wa sallam di padang Arafāh, Ibnu Abbās berkata:</p>
+<p style="text-align: right;" class="arab">سَمِعْتُ النَّبِيَّ صلى الله عليه وسلم يَخْطُبُ بِعَرَفَاتٍ&rdquo; مَنْ لَمْ يَجِدِ النَّعْلَيْنِ فَلْيَلْبَسِ الْخُفَّيْنِ، وَمَنْ لَمْ يَجِدْ إِزَارًا فَلْيَلْبَسْ سَرَاوِيلَ &ldquo;لِلْمُحْرِمِ.</p>
+<p>&ldquo;Aku mendengar Rasūlullāh shallallāhu &lsquo;alayhi wa sallam berkutbah di padang Arafāh, kata Nabi Shallallāhu &lsquo;alayhi wa sallam, &ldquo;Barang siapa yang tidak mendapati dua sandal, silahkan pakai khuf, barang siapa yang tidak punya izar/sarung silahkan pakai shirwal/celana, bagi orang yang ihram.&rdquo; (HR al-Bukhāri no 184)</p>
+<p>Padahal yang mendengarkan kutbah Nabi ini adalah orang banyak, banyak sekali yang berkumpul di padang Arafāh. Dan Rasūlullāh shallallāhu &lsquo;alayhi wa sallam hanya mengatakan, &ldquo;<em>Barangsiapa yang tidak menemukan sandal maka silahkan memakai khuf</em>.&rdquo;, beliau tidak berkata, &ldquo;Dan potonglah khuf tersebut di bawah mata kakimu,&rdquo;</p>
+<p>Kata para ulamā ini dalīl bahwasanya berita untuk memotong khuf di bawah mata kaki ini sudah mansukh, sehingga khuf tidak perlu dipotong.</p>
+<p>Yang tidak mempunyai sandal silahkan memakai sepatu, ini merupakan keringanan. Yang tidak punya sarung silahkan pakai celana panjang, karena zaman dahulu tidak semua orang punya pakaian yang lengkap. Tidak mesti orang yang punya celana juga punya sarung. Tidak mesti orang punya sandal pasti punya khuf, tidak mesti orang punya khuf pasti punya sandal, maka datanglah keringanan ini.</p>
+<p><strong>Peringatan</strong>&nbsp;: Adapun bagi wanita, maka yang dilarang adalah memakai cadar dan dua kaos tangan. Nabi Shallallāhu &lsquo;alayhi wa sallam berkata:</p>
+<p style="text-align: right;" class="arab">وَلاَ تَنْتَقِبِ الْمَرْأَةُ الْمُحْرِمَةُ وَلاَ تَلْبَسِ الْقُفَّازَيْنِ</p>
+<p>&ldquo;Tidak boleh seorang wanita yang sedang ihram memakai cadar dan tidak boleh juga memakai dua kaos tangan.&rdquo; (HR al-Bukhāri no 1838)</p>
+<p>Dan jika ternyata ada seorang wanita dihadapan lelaki&nbsp;<em>ajnabi</em>&nbsp;(yang bukan mahramnya) maka dia boleh menjulurkan khimarnya namun tidak boleh pakai cadar. Cadar adalah pakaian yang ditempelkan diwajah kemudian di ikat dibelakang. Adapun seseorang menjulurkan khimarnya, yaitu kain yang dari atas kepala menjulur kebawah tanpa menempel dan tanpa diikat maka ini boleh.</p>
+<p>&lsquo;Āisyah radhiyallāhu ta&rsquo;āla &lsquo;anhā berkata:</p>
+<p style="text-align: right;" class="arab">كَانَ الرُّكْبَانُ يَمُرُّونَ بِنَا وَنَحْنُ مَعَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مُحْرِمَاتٌ ، فَإِذَا حَاذَوْا بِنَا سَدَلَتْ إِحْدَانَا جِلْبَابَهَا مِنْ رَأْسِهَا عَلَى وَجْهِهَا ، فَإِذَا جَاوَزُونَا كَشَفْنَاهُ</p>
+<p>&ldquo;Dahulu, ketika orang-orang sedang naik kendaraan, mereka melewati kami (para wanita) dan kami sedang bersama Rasūlullāh shallallāhu &lsquo;alayhi wa sallam, kami sedang ihram. Tatkala para rombongan tersebut (para lelaki) yang naik kendaraan sejajar dengan kami maka salah seorang dari kami menurunkan jilbabnya dari atas kepalanya sambil menutup wajahnya, dan jika mereka telah berlalu kamipun membuka lagi wajah kami.&rdquo; (HR Ahmad 23501, Abū Dāūd nomor 1833, dinyatakan hasan oleh Al-Albany dan yang lainnya tapi sanadnya agak lemah, meskipun lemah tapi ada syahidnya yang shahīh dalam riwayat Imām Mālik dari Fathimah bintul Mundzir dia berkata:</p>
+<p style="text-align: right;" class="arab">كُنَّا نُخَمِّرُ وُجُوهَنَا وَنَحْنُ مُحْرِمَاتٌ وَنَحْنُ مَعَ أَسْمَاءَ بِنْتِ أَبِي بَكْرٍ الصِّدِّيقِ .</p>
+<p>&ldquo;Kami dahulu menutup wajah-wajah kami tatkala kami sedang ihram bersama Asma binti Abū Bakr Ash Shiddīq.&rdquo; (Al-Muwattho&rsquo; 1/328 no 16)</p>
+<p>Ini dalīl bahwasanya bagi wanita yang dilarang adalah memakai pakaian yang digunakan di wajahnya seperti niqab, burqu&rsquo; dan semisalnya.</p>
+<p>Adapun melepaskan kain dari atas kepala dengan kain tersebut tetap tergantung tanpa dilekatkan di wajah maka ini tidak mengapa berdasarkan riwayat dari &lsquo;Āisyah dan juga dari Fathimah bintil Mundzir radhiyallāhu Ta&rsquo;āla &lsquo;anhuma &lsquo;ajmain.</p>
+<p>Catatan :</p>
+<p><em>Pertama</em>&nbsp;: Jika wanita menutup wajahnya dengan cara apapun selain cadar dan burqu&rsquo; maka tidak mengapa. Ibnu Taimiyyah berkata :</p>
+<p style="text-align: right;" class="arab">تَخْصِيْصُ النَّهْيِ بِالنِّقَابِ، وَقَرْنُهُ بِالقُفَّازِ : دَلِيْلٌ عَلَى أَنَّهُ إِنَّمَا نَهَاهَا عَمَّا صُنِعَ لِسَتْرِ الْوَجْهِ ، كَالْقُفَّازِ الْمَصْنُوْعِ لِسَتْرِ الْيَدِ، وَالْقَمِيْصُ الْمَصْنُوْعُ لِسَتْرِ الْبَدْنِ؛ فَعَلَى هَذَا : يَجُوْزُ أَنْ تُخَمِّرَهُ بِالثَّوْبِ مِنْ أَسْفَلَ وَمِنْ فَوْقَ مَا لَمْ يَكُنْ مَصْنُوْعًا عَلَى وَجْهٍ يَثْبُتُ عَلَى الْوَجْهِ، وَأَنْ تُخَمِّرَهُ بالْمِلْحَفَةِ وَقْتَ النَّوْمِ</p>
+<p>&ldquo;Pengkhususan larangan (bagi wanita) untuk menggunakan cadar dan digandengkan dengan kaos tangan merupakan dalil bahwasanya Nabi hanya melarang sang wanita dari memakai seusatu yang dibuat untuk menutup wajah, sebagaiaman kaos tangan yang dibuat untuk menutup tangan, dan jubah yang dibuat untuk menutup badan. Dengan demikian maka boleh seorang wanita menutup wajahnya dengan bajunya dari bawah maupun dari atas selama penutup tersebut tidak dibuat menjadi suatu pakaian yang menempel di wajah. Dan ia boleh menutup wajahnya dengan selimut tatkala tidur&rdquo; (Syarh al-&lsquo;Umdah 3/270)</p>
+<p><em>Kedua</em>&nbsp;: Wanita yang sedang ihram dilarang menggunakan masker karena sangat mirip dengan cadar. Barangsiapa yang memakai masker yang menutup wajah -karena ada keperluan, seperti banyaknya debu atau asap atau penyakit menular- maka ia tidak berdosa akan tetapi harus membayar fidyah.</p></details></li>
+
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>B</strong><strong>erburu hewan buruan darat.</strong></summary>
+<p>Yang dimaksud dengan hewan buruan darat adalah hewan yang sering diburu di darat (liar). Adapun ayam, kambing, sapi, dan onta, maka itu bukanlah hewan buruan.</p>
+<p>Adapun hewan laut maka tidak mengapa diburu, seperti ikan. Seseorang tatkala sedang ihram kemudian menangkap ikan maka tidak menjadi masalah.</p>
+<p>Allah berfirman :</p>
+<p style="text-align: right;" class="arab">أُحِلَّ لَكُمْ صَيْدُ الْبَحْرِ وَطَعَامُهُ مَتَاعًا لَكُمْ وَلِلسَّيَّارَةِ وَحُرِّمَ عَلَيْكُمْ صَيْدُ الْبَرِّ مَا دُمْتُمْ حُرُمًا وَاتَّقُوا اللَّهَ الَّذِي إِلَيْهِ تُحْشَرُونَ</p>
+<p>Dihalalkan bagimu binatang buruan laut dan makanan (yang berasal) dari laut sebagai makanan yang lezat bagimu, dan bagi orang-orang yang dalam perjalanan; dan diharamkan atasmu (menangkap) binatang buruan darat, selama kamu dalam ihram. Dan bertakwalah kepada Allah Yang kepada-Nya-lah kamu akan dikumpulkan (QS Al-Maidah : 96)</p>
+<p style="text-align: right;" class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقْتُلُوا الصَّيْدَ وَأَنْتُمْ حُرُمٌ</p>
+<p>&ldquo;Wahai orang yang beriman, janganlah kalian berburu hewan buruan darat sementara kalian dalam kondisi ihram.&rdquo; (QS Al Māidah: 95)</p>
+<p>Adapun setelah selesai bertahallul dari ihram maka diperbolehkan untuk berburu. Allāh berfirman :</p>
+<p style="text-align: right;" class="arab">وَإِذَا حَلَلْتُمْ فَاصْطَادُوْا</p>
+<p>&ldquo;Jika kalian telah bertahalul maka silahkan kalian berburu.&rdquo; (QS Al Maidah: 2)</p>
+<p>Pembahasan ini tidak begitu penting di zaman kita sekarang karena kemudahan yang Allāh berikan kepada jama&rsquo;ah haji maupun umrah dengan menaiki kendaraan yang Alhamdulillāh enak, mudah, ber AC. Kemudian perjalanannya juga ditempuh dalam waktu yang singkat sehingga para jama&rsquo;ah tidak perlu untuk berburu. Makanan juga siap. (walau berburu sudah jarang dilakukan oleh orang yang berihram, atau bahkan tidak pernah, namun hewan buruan yang ada, semisal burung dara tidak boleh diusik, belalang -menurut sebagian ulama- yang sering betebaran di halaman masjid Nabawi juga tidak boleh dibunuh atau diganggu, karena semua itu termasuk hewan buruan)</p>
+<p>Tapi pembahasan ini sangat penting dauhulu menginggat zaman dahulu ketika begitu sulitnya orang-orang untuk melaksanakan ibadah haji dan umrah.</p>
+<p>Bayangkan, tatkala seseorang hendak berihram untuk umrah dari Madīnah menuju Mekkah dia harus menempuh jarak sekitar 450 Km sampai 500 Km dan perjalanan tersebut ditempuh selama 1 minggu atau lebih.</p>
+<p>Ini menunjukan terkadang seseorang di tengah jalan mendapat ujian misalnya makanannya habis, sehingga dia harus mencari makanan. Allāh melarang orang yang sedang berihram untuk berburu (mencari hewan buruan) bahkan Allāh melarang orang yang tidak sedang berihram untuk membantu orang yang sedang berihram mencari hewan buruan.</p>
+<p>Contohnya,</p>
+<ul>
+<li>ada orang yang sedang tidak berihram, kasihan sama orang yang berihram (karena kelaparan), kemudian dia menunjukan (misalnya), &ldquo;Tuh, di sana ada hewan buruan,&rdquo; ini tidak boleh.</li>
+<li>Orang yang sedang tidak ihram berburu dalam rangka memberikan makanan untuk orang yang sedang ihram, ini pun tidak boleh. Adapun jika tatkala berburu niatnya bukan untuk orang ihram, lalu setelah itu ia masak dan memberikan makanan kepada orang ihram maka tidak mengapa.</li>
+</ul>
+<p>Barangsiapa yang sengaja berburu maka dia harus membayar denda.</p>
+<p><u>Pilihan&nbsp;</u><u>Denda&nbsp;</u><u>Pertama</u><strong>&nbsp;:</strong>&nbsp;Membayar dengan hewan ternak&nbsp;</p>
+<p>Allāh Subhānahu wa Ta&rsquo;āla berfirman</p>
+<p style="text-align: right;" class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا لَا تَقْتُلُوا الصَّيْدَ وَأَنْتُمْ حُرُمٌ ۚ وَمَنْ قَتَلَهُ مِنْكُمْ&nbsp;<u>مُتَعَمِّدًا</u>&nbsp;فَجَزَاءٌ مِثْلُ مَا قَتَلَ مِنَ النَّعَمِ يَحْكُمُ بِهِ ذَوَا عَدْلٍ مِنْكُمْ هَدْيًا بَالِغَ الْكَعْبَةِ أَوْ كَفَّارَةٌ طَعَامُ مَسَاكِينَ أَوْ عَدْلُ ذَٰلِكَ صِيَامًا لِيَذُوقَ وَبَالَ أَمْرِهِ</p>
+<p>&ldquo;Wahai orang-orang yang beriman, janganlah kalian berburu hewan buruan darat sementara kalian dalam kondisi ihram. Barangsiapa&nbsp;<u>yang sengaja</u>&nbsp;berburu hewan buruan diantara kalian. Maka dendanya adalah hewan dari binatang ternak yang mirip (seimbang) dengan hewan buruan tersebut. Yang memutuskan haruslah dua orang yang adil diantara kalian, denda tersebut harus di bagi di Ka&rsquo;bah. Atau memberi makan kepada fakir miskin. Atau berpuasa yang seimbang dengan makanan yang dikeluarkan itu.&rdquo; (QS Al-Maidah : 95)</p>
+<p>Aturannya sebagai berikut :</p>
+<p><em>Pertama</em>&nbsp;: Berburu tersebut dilakukan dengan sengaja. Karena Allah berfirman مُتَعَمِّدًا (<em>sengaja</em>), maka jika seseorang berburu tidak sengaja atau lupa maka dia tidak harus membayar denda, yang membayar denda adalah yang berburu dengan sengaja.</p>
+<p><em>Kedua</em>&nbsp;: Dendanya dibayar dengan binatang ternak yang mirip dengan yang ia buru, bukan hewan yang diburu itu sendiri. Misalnya seorang yang berburu merpati, maka dendanya bukan membayar merpati tetapi dendanya adalah binatang ternak yang mirip (seimbang) dengan merpati, dalam hal ini adalah kambing. Barang siapa yang berburu burung onta maka dendanya adalah onta, barangsiapa yang berburu khimar wahsy (keledai liar yang boleh dimakan) maka dendanya adalah sapi. Ini adalah fatwa sebagian shahābat dan tabi&rsquo;in.</p>
+<p><em>Ketiga</em>&nbsp;: Hewan dendanya tersebut harus disembelih di Mekah. Misalnya masih 200 Km dari kota Mekkah dia berburu merpati, maka dia harus bayar denda yaitu kambing. Dan kambing tersebut harus di sembelih di Mekkah. Karena firman Allāh: هَدْيًا بَالِغَ الْكَعْبَةِ (<em>Denda tersebut harus di bagi di Ka&rsquo;bah</em>). Disembelih di Mekkah dan dibagikan kepada orang-orang fakir di kota Mekkah.</p>
+<p><u>Pilihan Denda Kedua</u>&nbsp;: Memberi makan kepada fakir miskin</p>
+<p>Ada khilaf diantara para ulamā tentang fakir miskin ini.</p>
+<p>Ibnu Hazm mengatakan bahwa 3 orang fakir miskin sudah cukup, karena Allāh hanya menggunakan kalimat jamak: مَسَاكِينَ طَعَامُ (memberi makan pada fakir miskin).</p>
+<p>Sebagian ulamā yang lain mengatakan bahwa caranya yaitu dengan menilai (menaksir). Misalnya dia berburu merpati. Merpati itu bayarannya (dendanya) kambing maka kambing itu di nilai (ditaksir), yaitu kira-kira kambing tersebut harganya berapa. Misalnya harga kambing itu 300 relah, maka 300 real tersebut tidak harus dibelikan kambing tetapi dibelikan misalnya beras, lalu beras tersebut dibagikan kepada fakir miskin, masing-masing fakir miskin mendapat 1/2 shaa&rsquo; (yaitu sekitar 1,3 kg beras) sehingga banyak fakir miskin yang bisa dibagi atau yang harus dia bagikan.</p>
+<p>Banyak ulamā berpendapat seperti ini dan ini lebih berhati-hati yaitu dengan menyeimbangkan dengan harga kambing tersebut..</p>
+<p><u>Pilihan Denda Ketiga</u>&nbsp;: Dengan berpuasa.</p>
+<p>Kata para ulamā yaitu dengan melihat ada berapa orang miskin yang bisa dibagi dengan nilai kambing tersebut. Kemudian tiap 1 orang miskin diganti dengan 1 hari puasa, tentunya ini lebih berat lagi.</p>
+<p>Misalkan kita ada seseorang berburu merpati kemudian harus dibayar dengan kambing. Lalu dia tidak mau membayar dengan kambing misalnya, tetapi membayar dengan memberi makan fakir miskin.</p>
+<p>Bila harga kambing itu ditaksir 300 Riyal misalnya, lalu 300 Riyal itu dibelikan beras, kemudian beras tersebut dibagikan kepada fakir miskin masing-masing orang mendapat 1,3 kg. Maka berapakah kira-kira jumlah orang miskin yang menerima 1,3 kg beras tersebut?. Maka orang tersebut harus berpuasa sesuai dengan perkiraan jumlah fakir miskin yang berhak menerima beras tersebut. Ini tentunya sangat berat.</p></details></li>
+
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>M</strong><strong>elakukan akad nikah</strong><strong>, menikahkan, dan melamar</strong></summary>
+<p>Larangan ini berlaku bagi pria maupun wanita yang sedang ihram. Rasūlullāh shallallāhu &lsquo;alayhi wa sallam bersabda:</p>
+<p style="text-align: right;" class="arab">لاَ يَنْكِحُ الْمُحْرِمُ وَلاَ يُنْكَحُ وَلاَ يَخْطُبُ</p>
+<p>&ldquo;Tidak boleh seseorang yang sedang ihram menikah, tidak boleh juga menikahkan dan tidak boleh juga melamar.&rdquo; (HR Muslim no 1409)</p>
+<p>Maka, tidak boleh dia melaksanakan akad nikah meskipun calon wanitanya tidak sedang ihram. Demikian juga, dia tidak boleh menikahkan orang lain, tidak boleh jadi wali, atau menjadi perwakilan dari wali untuk melangsungkan akad nikah, ini juga tidak boleh. Demikian juga tidak boleh dia melamar seorang wanita tatkala dia sedang dalam kondisi ihram.</p>
+<p>Karena Allāh Subhānahu wa Ta&rsquo;āla telah melarang seseorang yang sedang berihram, kata Allāh Subhānahu wa Ta&rsquo;āla:</p>
+<p style="text-align: right;" class="arab">فَلَا رَفَثَ</p>
+<p>&ldquo;Tidak boleh berbuat rafats.&rdquo; (QS Al-Baqarah: 197)</p>
+<p>Kita tahu bahwasanya rafats adalah jima&rsquo; dan perkara-perkara yang mengarah mengantarkan kepada jima&rsquo;. Demikian juga dengan hal-hal yang bisa membawa (mengantarkan) kepada syahwat, semuanya dilarang tatkala ihram.</p>
+<p>Oleh karenanya, para ulamā mengatakan bahwa minyak wangi dilarang bagi yang sedang ihram baik laki-laki maupun wanita, karena minyak wangi merupakan salah satu perkara-perkara yang bisa mengantarkan kepada jima&rsquo;.</p>
+<p>Demikian juga dengan pernikahan dan melamar adalah perkara-perkara yang bisa mengantarkan menjurus kearah sana.</p>
+<p>Ada beberapa perkara yang harus kita perhatikan dalam masalah ini.</p>
+<p>⑴ Jika ternyata terjadi akad nikah dari salah seorang calon mempelai yang sedang ihram, entah laki-lakinya atau wanitanya atau walinya, maka akadnya fasid (tidak sah).</p>
+<p>Misalnya : Calon suami istri sama-sama tidak ihram, lalu menikah akan tetapi wali dari wanita tersebut sedang ihram dan menikahkan putrinya, maka ini tidak sah. Dan untuk membatalkan pernikahan tersebut tidak perlu dengan cerai karena asalnya pernikahan tersebut tidak sah.</p>
+<p>⑵ Jika seseorang akan menikah dan dia dalam kondisi sedang ihram dan dia tidak tahu bahwa menikah dalam kondisi ihram itu tidak boleh, apakah dia berdosa? Jawaban nya tidak berdosa. Akan tetapi akadnya tidak sah.</p>
+<p>Saya ingatkan kembali bahwasanya seorang yang melakukan akad nikah dalam kondisi ihram dan dia sengaja melakukan akad nikah maka dia berdosa karena dia tahu itu larangan.</p>
+<p>Ini diantaranya larangan ihram yang jika dilanggar tidak perlu membayar fidyah, denda tetapi cukup beristighfār kepada Allāh Subhānahu wa Ta&rsquo;āla.</p>
+<p>⑶ Jika seandainya dia menikah dalam kondisi ihram kemudian dari pernikahan tersebut melahirkan anak-anak, bagaimana hukum anak-anak tersebut? Apakah disebut anak zina atau tidak ?</p>
+<p>Jawabannya ini bukan anak-anak zina karena nikah dalam kondisi ihram disebutkan oleh para ulamā dengan nikah subhat. Dalam kaidah, seluruh pernikahan yang disebutkan dengan nikah subhat maka anak-anaknya adalah anak-anak yang syar&rsquo;i, tetap dinisbatkan kepada ayahnya. Tetapi nikah tersebut harus terus diulangi lagi (akad nikahnya).</p>
+<p>⑷ Apakah seorang yang sedang ihram boleh menjadi saksi atas adanya pernikahan? Dzahir dari hadīts tersebut tidak melarang, karena Rasūlullāh shallallāhu &lsquo;alayhi wa sallam hanya mengatakan:</p>
+<p style="text-align: right;" class="arab">لاَ يَنْكِحُ الْمُحْرِمُ وَلاَ يُنْكَحُ وَلاَ يَخْطُبُ</p>
+<p>&ldquo;Tidak boleh seorang muhrim menikah atau menikahkan dan tidak boleh melamar.&rdquo;</p>
+<p>Sehingga bila menjadi saksi, dzahirnya tidak mengapa.</p>
+<p>⑸ Seandainya ada seorang yang sedang ihram, sebelum hajian orang tersebut menceraikan istrinya, ternyata masa iddah istrinya sudah mau habis.</p>
+<p>Sebagaimana diketahui bahwa:</p>
+<ul>
+<li>Kalau masa iddahnya sudah habis, bila dia ingin kembali kepada istrinya dia harus menikah lagi/akad baru.</li>
+<li>Kalau dia kembali kepada istrinya di masa iddahnya maka tidak perlu akad nikah.</li>
+</ul>
+<p>Sementara dia dalam kondisi ihram, apakah dia boleh kembali kepada istrinya/rujuk kepada istrinya? Jawabannya, Boleh!</p>
+<p>Karena yang dilarang adalah menikah atau menikahkan atau melamar, adapun kalau kembali kepada istrinya meskipun dalam kondisi ihram maka tidak mengapa.</p>
+<p>Dia tinggal telepon istrinya, atau dia angkat (menunjuk) saksi kemudian mengatakan, &ldquo;Saya telah rujuk kepada istri saya,&rdquo; sehingga kembali lagi pernikahan mereka berdua.</p></details></li>
+
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>M</strong><strong>elakukan hubungan suami istri.</strong></summary>
+<p>Dalīlnya Allāh Subhānahu wa Ta&rsquo;āla berfirman:</p>
+<p style="text-align: right;" class="arab">الْحَجُّ أَشْهُرٌ مَعْلُومَاتٌ فَمَنْ فَرَضَ فِيهِنَّ الْحَجَّ فَلَا رَفَثَ</p>
+<p>&ldquo;Sesungguhnya haji itu ada bulan-bulan yang telah diketahui, barangsiapa yang menetapkan hatinya untuk berhaji pada bulan-bulan tersebut maka tidak boleh melakukan&nbsp;<strong>rafats</strong>.&rdquo; (QS al Baqarah 197)</p>
+<p>Rafats ini mencakup:</p>
+<ul>
+<li>Jima&rsquo; (berhubungan suami istri).</li>
+<li>Al-Mubāsyarah (bercumbu, menikmati tubuh istri tapi tidak sampai pada hubungan badan).</li>
+<li>Perkataan-perkataan yang menimbulkan rangsangan seperti rayuan, demikian perkataan seorang lelaki yang sedang berihram kepada istrinya &ldquo;kalau sudah bertahallul nanti kita akan begini dan begitu&rdquo;,</li>
+<li>Perbuatan-perbuatan yang bisa mengantarkan pada jima&rsquo; seperti sentuhan-sentuhan yang menimbulkan rangsangan. (lihat Adhwaaul Bayaan 5/13)</li>
+</ul>
+<p>Ini semua dilarang tatkala sedang berihram ibadah haji.</p>
+<p>Jika seseorang melakukan pelanggaran dengan berhubungan dengan istrinya tatkala sedang haji, maka ada beberapa perkara yang menimpanya, diantaranya:</p>
+<p>⑴ Hajinya rusak/hajinya batal, jika seseorang tersebut berhubungan dengan istrinya sebelum wuqūf di padang Arafāh.</p>
+<p>Ini menurut 4 mahzhab yaitu Hanafi, Māliki, Hambali dan Syāfi&rsquo;ī.</p>
+<p>Demikian juga jika dia berhubungan dengan istrinya setelah wuqūf di padang Arafāh namun sebelum tahallul awal (belum lempar jamarat, belum mencukur rambut), maka hajinya batal menurut 3 mahzhab yaitu Māliki, Syāfi&rsquo;ī dan Hambali adapun menurut mahzhab Hanafi maka tidak rusak. Namun pendapat yang kuat adalah ibadah hajinya rusak.</p>
+<p>Adapun jika dia berhubungan dengan istrinya setelah tahallul awal sebelun tahallul tsani (misalnya dia sudah lempar jamarat, mencukur rambut, sudah pakai baju biasa dan minyak wangi namun belum thowaf ifadhoh) dan dia melakukan hubungan dengan istrinya maka hajinya tidak batal.</p>
+<p>Ini menurut 4 mahzhab tapi dia harus menyembelih kambing dan dibagikan ke kaum fuqoro di Mekah, dan ia hendaknya kembali berihram, yaitu ia pergi ke tanah halal ia berihram dari sana lalu ia thowaf Ifadhoh dalam kondisi berihram (lihat Liqoo al-Baab al-Maftuuh, al-&Uacute;tsaimin 17/90).</p>
+<p>⑵ Harus tetap melanjutkan ibadah hajinya.</p>
+<p>Dia harus melanjutkan ibadah hajinya, bersama dengan jama&rsquo;ah haji yang lain seperti melempar jamarah, thawāf Ifadhah sampai thawāf wada (sampai selesai).</p>
+<p>⑶ Harus membayar fidyah</p>
+<p>Maksudnya fidyah disini adalah fidyah mughaladhah (fidyah yang berat).</p>
+<p>Menurut jumhūr ulamā dia harus membayar unta. Berbeda bila dia berhubungan dengan istrinya setelah tahallul awwal, telah kita sebutkan tadi hajinya tidak rusak dan dia cukup membayar kambing.</p>
+<p>Dan ini berlaku untuk laki-laki dan wanita, bila ternyata istrinya dirayu dan mau melakukan hubungan suami istri maka istrinya juga harus membayar unta jadi harus membayar dua unta (untuk suami istri).</p>
+<p>Tetapi bila istrinya dipaksa oleh suaminya untuk berhubungan, sehingga istrinya terpaksa maka istrinya tidak harus membayar unta. Ini pendapat jumhūr ulamā.</p>
+<p>Hal ini berdasarkan fatwa dari para shahābat seperti Ibnu &lsquo;Umar dan Ibnu Abbās radhiyallāhu &lsquo;anhuma.</p>
+<p>Al-Hakim meriwayatkan:</p>
+<p style="text-align: right;" class="arab">عَنْ عَمْرِو بْنِ شُعَيْبٍ، عَنْ أَبِيهِ أَنَّ رَجُلًا أَتَى عَبْدَ اللهِ بْنَ عَمْرٍو يَسْأَلُهُ عَنْ مُحْرِمٍ وَقَعَ بِامْرَأَةٍ فَأَشَارَ إِلَى عَبْدِ اللهِ بْنِ عُمَرَ , فَقَالَ: &rdquo; اذْهَبْ إِلَى ذَلِكَ فَسَلْهُ &rdquo; قَالَ شُعَيْبٌ: فَلَمْ يَعْرِفْهُ الرَّجُلُ فَذَهَبْتُ مَعَهُ فَسَأَلَ ابْنَ عُمَرَ , فَقَالَ: &rdquo; بَطُلَ حَجُّكَ &rdquo; , فَقَالَ الرَّجُلُ: فَمَا أَصْنَعُ؟ , قَالَ: &rdquo; اخْرُجْ مَعَ النَّاسِ وَاصْنَعْ مَا يَصْنَعُونَ , فَإِذَا أَدْرَكْتَ قَابِلًا فَحُجَّ وَأَهْدِ &rdquo; , فَرَجَعَ إِلَى عَبْدِ اللهِ بْنِ عَمْرٍو وَأَنَا مَعَهُ فَأَخْبَرَهُ , فَقَالَ: اذْهَبْ إِلَى ابْنِ عَبَّاسٍ فَسَلْهُ , قَالَ شُعَيْبٌ: فَذَهَبْتُ مَعَهُ إِلَى ابْنِ عَبَّاسٍ فَسَأَلَهُ , فَقَالَ لَهُ كَمَا قَالَ ابْنُ عُمَرَ , فَرَجَعَ إِلَى عَبْدِ اللهِ بْنِ عَمْرٍو وَأَنَا مَعَهُ فَأَخْبَرَهُ بِمَا قَالَ ابْنُ عَبَّاسٍ ثُمَّ قَالَ: مَا تَقُولُ أَنْتَ؟ فَقَالَ: &rdquo; قَوْلِي مِثْلُ مَا قَالَا</p>
+<p>Dari Ammar bin Suaib, dari ayahnya (Syu&rsquo;aib) ia berkata : Ada seorang datang menemui Abdullāh bin Amr (bin Ash) radhiyallāhu Ta&rsquo;āla &lsquo;anhum, dia bertanya tentang seorang muhrim (tatkala sedang berihram) yang berhubungan dengan istrinya. Maka kata Abdullāh bin Amr berkata, &ldquo;Pergilah engkau kepada Abdullāh bin Ummar (dan tanyakanlah)&rdquo;. Kata Syu&rsquo;aib, ternyata orang tersebut tidak nengenal Ibnu Umar, maka akupun pergi bersamanya (pergi menuju Ibnu Ummar). Kemudian dia bertanya kepada Ibnu Umar tentang permasalahan dia, Ibnu Umar berkata, &ldquo;Hajimu telah batal&rdquo;. Sang lelaki berkata, &ldquo;Apa yang harus aku lakukan?&rdquo;. Ibnu Ummar berkata, &ldquo;Keluarlah bersama orang-orang (yang sedang berhaji) dan lakukanlah seperti yang mereka lakukan&rdquo;. Kemudian kata Ibnu Umar, &ldquo;Kalau ternyata engkau masih bisa tahun depan berhaji maka berhajilah lagi kemudian menyembelih unta&rdquo;.</p>
+<p>Orang inipun setelah bertanya kepada Ibnu Umar dia balik lagi kepada Abdullāh bin Amr (aku bersama dia) lalu dia kabarkan tentang jawaban Ibnu Umar maka Abdullāh bin Amr berkata, &ldquo;Sekarang pergi lagi kepada Ibnu Abbās, tanyakanlah kepada Ibnu Abbās&rdquo;. Kata Syu&rsquo;aib: Aku pun menemani dia menuju Ibnu Abbās, kemudian diapun bertanya kepada Ibnu Abbās, ternyata Ibnu Abbās berfatwa sama seperti Ibnu Umar maka diapun kembali kepada Abdullāh bin Amr lalu dia kabarkan kepada Abdullāh bin Amr perkataan Ibnu Abbās kemudian dia berkata, &ldquo;Bagaimana menurut pendapat anda wahai Abdullāh bin Amr?&rdquo;. Maka Abdullāh bin Amr berkata, &ldquo;Pendapatku sama seperti pendapat Ibnu Umar dan pendapat Ibnu Abbās.&rdquo;</p>
+<p>(HR Al-Hakim no 2375 dan Al-Baihaqi dalam As-Sunan al-Kubro no 9783, melalui jalur al-Imam al-Hakim. Dan dishahihkan oleh al-Hakim beliau berkata, &ldquo;Ini adalah hadīts orang-orang yang tsiqah dan perawinya adalah para hafizh&rdquo;. Dan disepakai oleh Adz-Dzahabi, dan juga dishahihkan oleh al-Baihaqi)</p>
+<p>Di sini telah sepakat pendapat Abdullāh bin Ammr bin Ash, pendapat Abdullāh bin Umar dengan pendapat Abdullāh bin Abbās radhiyallāhu Ta&rsquo;āla &lsquo;anhum &lsquo;ajmain.</p>
+<p>Adapun jika terjadi jima&rsquo; tatkala sedang umrah, jika hubungan tersebut sebelum thawāf atau sa&rsquo;i, maka umrahnya batal.</p>
+<p>Tapi dia tetap&nbsp;<strong>wajib</strong><strong>&nbsp;melanjutkan umrahnya</strong>&nbsp;sampai selesai kemudian melakukan umrah yang lain sebagai gantinya. Dan dia harus membayar fidyah yaitu kambing dibagikan kepada fakir miskin di Harām.</p>
+<p>Tetapi jika dia melakukan hubungan suami istri setelah thawāf dan sa&rsquo;i namun sebelum mencukur rambut maka umrahnya tidak rusak, karena kita tahu bahwasanya mencukur rambut bukan rukun umrah. Kita tahu yang rukun adalah: ihram, thawāf dan sa&rsquo;i.</p></details></li>
+
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>Bercumbu</strong><strong>&nbsp;(tidak sampai jimak)</strong><strong>.</strong></summary>
+<p>Sebagaimana jimak dilarang maka sekedar bercumbu juga dilarang karena termasuk dalam makan rafats -sebagaimana telah lalu penjelasannya-. Hanya saja jika seseorang mencumbui (menyentuh) atau mencium istrinya (yaitu berlezat-lezat dengan istrinya) namun tidak sampai pada perbuatan jimak maka harus membayar fidyah (Yaitu memilih antara berpuasa tiga hari atau memberi makan enam faqir miskin atau menyembelih kambing). Sama saja apakah cumbuan tersebut hingga mengeluarkan air mani atau tidak (yang penting tidak sampai jimak), dan sama saja apakah sebelum tahallul awaal atau setelah tahallul awwal (sebelum tahallul tsani). (lihat Majmu&rsquo; Fataawa wa Rasaail as-Syaikh al-&lsquo;Utsaimin 22/179-180), dan sebagian ulama berpendapat bahwa semua cumbuan dengan sentuhan maka harus memotong kambing (tidak ada pilihan puasa dan memberi makan enam orang miskin), adapun kalau tanpa sentuhan hanya perkataan atau melihat saja maka tidak ada fidyah (Lihat al-Mughni, Ibnu Qudamah 3/311-312)</p></details></li>
+
+<li><details align="left"><summary class="w3-text-blue">
+<strong></strong>&nbsp;<strong>Peringatan : Tidak semua pelanggaran harus bayar denda</strong></summary>
+<p>Banyak jamaah haji yang menyangka bahwa setiap melakukan pelanggaran harus membayar denda, bahkan setiap pelanggaran harus menyembelih kambing. Ini adalah persangkaan yang salah.</p>
+<p>Berikut ini tiga keadaan seseorang yang melakukan larangan ihram :</p>
+<p><strong>Pertama</strong>&nbsp;: Dalam keadaan lupa, tidak tahu, atau dipaksa, maka tidak ada dosa dan tidak ada fidyah.</p>
+<p>Dari Ya&rsquo;la bin Umayyah ia berkata :</p>
+<p style="text-align: right;" class="arab">أَنَّ رَجُلًا أَتَى النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَهُوَ بِالْجِعْرَانَةِ، وَعَلَيْهِ جُبَّةٌ وَعَلَيْهِ أَثَرُ الخَلُوقِ &ndash; أَوْ قَالَ: صُفْرَةٌ -، فَقَالَ: كَيْفَ تَأْمُرُنِي أَنْ أَصْنَعَ فِي عُمْرَتِي؟</p>
+<p>&ldquo;Ada seseorang mendatangi Nabi shallallahu &lsquo;alaihi wasallam tatkala Nabi di al-Ji&rsquo;ronah, dan lelaki tersebut memakai baju dan ada bekas minyak wangi -atau warna kuning minyak wangi-. Lalu lelaki itu berkata, &ldquo;Apa perintahmu terhadapku, apa yang harus aku lakukan perihal umrohku ini?&rdquo;&hellip;</p>
+<p>Nabi berkata :</p>
+<p style="text-align: right;" class="arab">اخْلَعْ عَنْكَ الجُبَّةَ، وَاغْسِلْ أَثَرَ الخَلُوقِ عَنْكَ، وَأَنْقِ الصُّفْرَةَ، وَاصْنَعْ فِي عُمْرَتِكَ كَمَا تَصْنَعُ فِي حَجِّكَ</p>
+<p>&ldquo;Bukalah bajumu, dan cucilah bekas minyak wangi darimu, dan bersihkan warna kuning, dan lakukanlah umrohmu sebagaiman yang kau lakukan pada hajimu&rdquo;.</p>
+<p>Dalam riwayat yang lain Nabi berkata :</p>
+<p style="text-align: right;" class="arab">اِغْسِلِ الطِّيبَ الَّذِي بِكَ ثَلاَثَ مَرَّاتٍ، وَانْزِعْ عَنْكَ الجُبَّةَ</p>
+<p>&ldquo;Cucilah minyak wangi yang ada padamu tiga kali, dan lepaskanlah bajumu&rdquo; (HR Al-Bukhari no 1536, 1789 dan Muslim no 1180)</p>
+<p>Orang ini dalam kondisi ihrom dan melakukan dua pelanggaran yaitu memakai minyak wangi dan memakai jubah/baju. Namun ia melakukannya dalam kondisi jahil/tidak tahu. Karenanya Nabi shallallahu &lsquo;alaihi wa sallam menyuruhnya untuk menghilangkan kedua pelanggaran tersebut yaitu dengan mencuci minyak wangi darinya dan melepas jubahnya, akan tetapi Nabi tidak menyuruhnya untuk membayar fidyah.</p>
+<p>Ibnu Hajar berkata :</p>
+<p style="text-align: right;" class="arab">وَاسْتُدِلَّ بِهِ عَلَى أَنَّ مَنْ أَصَابَهُ طِيبٌ فِي إِحْرَامِهِ نَاسِيًا أَوْ جَاهِلًا ثُمَّ عَلِمَ فَبَادَرَ إِلَى إِزَالَتِهِ فَلَا كَفَّارَةَ عَلَيْهِ</p>
+<p>&ldquo;Hadits ini dijadikan argument bahwa barang siapa yang terkena minyak wangi tatkala ihram karena lupa atau karena tidak tahu lalu ia tahu dan segera menghilangkannya maka tidak ada kaffaroh/fidyah baginya&rdquo; (Fathul Baari 3/395)</p>
+<p>Karenanya :</p>
+<ul>
+<li>Jika ada seseorang di dalam bis karena kedinginan lantas dia mengambil kain ihramnya untuk menutup kepalanya (dia tidak mengerti atau lupa) maka dia tidak perlu bayar fidyah.</li>
+<li>Seseorang dalam kondisi tidur (sedang berihram) kemudian tanpa sadar dia menutup kepalanya dengan memakai selimut, ini pun tidak boleh. Namun karena dia tidak tahu (sedang tidur) maka kalau dia sadar dia segera membuka lagi kepalanya dengan selimut tersebut.</li>
+<li>Seseorang lupa sehingga tanpa sadar mencabuti buku ketiaknya, maka tidak mengapa</li>
+</ul>
+<p><strong>Kedua</strong>&nbsp;: Jika melakukannya dengan sengaja, namun karena ada uzur dan kebutuhan mendesak, maka ia tidak berdosa sama sekali hanya saja ia terkena fidyah.</p>
+<p style="text-align: right;" class="arab">عَنْ كَعْبِ بْنِ عُجْرَةَ رَضِيَ اللَّهُ عَنْهُ، قَالَ: أَتَى عَلَيَّ النَّبِيُّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ زَمَنَ الحُدَيْبِيَةِ، وَالقَمْلُ يَتَنَاثَرُ عَلَى وَجْهِي، فَقَالَ: &laquo;أَيُؤْذِيكَ هَوَامُّ رَأْسِكَ؟&raquo; قُلْتُ: نَعَمْ، قَالَ: &laquo;فَاحْلِقْ، وَصُمْ ثَلاَثَةَ أَيَّامٍ، أَوْ أَطْعِمْ سِتَّةَ مَسَاكِينَ، أَوْ انْسُكْ نَسِيكَةً&raquo;</p>
+<p>Dari Ka&rsquo;ab bin &lsquo;Ujroh radhiallahu &lsquo;anhu ia berkata, &ldquo;Nabi shallallahu &lsquo;alaihi wasallam mendatangiku tatkala umroh al-Hudaibiyah, sementara kutu tersebar di wajahku. Beliau berkata, &ldquo;Apakah kutu-kutu kepalamu mengganggumu?&rdquo;. Aku berkata, &ldquo;Iya&rdquo;. Beliau berkata, &ldquo;Kalau begitu cukurlah kepalamu, dan puasalah tiga hari atau berilah makan kepada enam orang miskin, atau sembelihlah sembelihan&rdquo; (HR Al-Bukhari no 4190 dan Muslim no 1201)</p>
+<p>Dalam riwayat yang lain (HR Al-Bukhari no 4991) Ka&rsquo;ab bin &lsquo;Ujroh berkata :</p>
+<p style="text-align: right;" class="arab">وَأُنْزِلَتْ هَذِهِ الآيَةُ: {فَمَنْ كَانَ مِنْكُمْ مَرِيضًا أَوْ بِهِ أَذًى مِنْ رَأْسِهِ فَفِدْيَةٌ مِنْ صِيَامٍ أَوْ صَدَقَةٍ أَوْ نُسُكٍ}</p>
+<p>&ldquo;Dan turunlah firman Allah : &ldquo;Jika ada di antaramu yang sakit atau ada gangguan di kepalanya (lalu ia bercukur), maka wajiblah atasnya berfid-yah, yaitu: berpuasa atau bersedekah atau menyembelih sembelihan (QS Al-Baqoroh : 196).</p>
+<p>Oleh karenanya jika ada orang yang melanggar larangan ihram karena ada kebutuhan maka dia tidak berdosa. Contohnya seperti:</p>
+<ul>
+<li>Polisi : Sebagian petugas polisi yang berhaji, mereka harus menggunakan seragam polisi tatkala sedang berhaji. Seandainya mereka tidak menggunakan seragam polisi (seragam lengkap) tentunya mereka tidak akan ditaati oleh para jama&rsquo;ah haji yang lainnya sehingga mereka menggunakan seragam polisi lengkap dengan perlengkapannya (topi, pistol dan yang lainnya). Mereka melanggar aturan ihram, tapi karena mereka ada kebutuhan maka mereka tidak berdosa. Dan keperluan tersebut diizinkan oleh syari&rsquo;at akan tetapi mereka harus membayar fidyah.</li>
+<li>Orang yang terkena sakit Hernia. Bila ada seseorang terkena penyakit hernia dan dia butuh menggunakan celana dalam (misalnya), maka tidak mengapa dia menggunakan celana dalam, akan tetapi dia harus membayar fidyah. Demikian juga seseorang yang terkena penyakit yang lainnya yang mengharuskan untuk memakai pakaian maka ia tidak berdosa dan boleh melanggar, hanya saja ia harus bayar fidyah.</li>
+</ul>
+<p><strong>Ketiga</strong>&nbsp;: Jika melakukannya dengan sengaja dan tanpa adanya uzur atau tidak ada kebutuhan mendesak, maka ia telah berdosa karena sengaja melanggar pelanggaran, dan tentu dikenakan fidyah dan harus bertaubat kepada Allah.</p></details></li>
+
+<p><strong>Pembagian larangan ihram berdasarkan hukum fidyah yang dikenakan</strong></p>
+<ol>
+<li>Pelanggaran yang tidak ada fidyahnya akan tetapi harus bertaubat kepada Allah : Melamar, menikah, dan menikahkan, serta mencumbui istri dengan perkataan atau penglihatan tanpa ada sentuhan.</li>
+<li>Fidyah dengan seekor unta, yaitu jima&rsquo; (hubungan intim) sebelum tahallul awwal</li>
+<li>Fidyah harus dengan menyembelih kambing (minimal) yaitu berhubungan intim setelah tahallul awwal dan sebelum tahallul tsani.</li>
+<li>Fidyah berburu hewan buruan darat (sebagaimana telah lalu perinciannya)</li>
+<li>Memilih salah satu dari tiga pilihan :</li>
+</ol>
+<p><em>Pertama</em>&nbsp;: berpuasa tiga hari (puasa tersebut tidak harus berturut-turut, dan boleh dikerjakan sebelum atau setelah selesai haji di manapun dia berada)</p>
+<p><em>Kedua</em>&nbsp;: memberi makan kepada 6 orang miskin, setiap orang miskin diberi &frac12; shoo&rsquo; yaitu sekitar 1,3 kg beras. (pemberian makanan ini tidak harus di tanah haram, boleh ia bagi di lokasi dimana ia melanggar)</p>
+<p><em>Ketiga</em>&nbsp;: menyembelih seekor kambing. (Kambingnya boleh jantan atau betina, boleh kambing jawa atau kambing domba dan tidak harus memotong di tanah harām. Tetapi boleh juga jika seseorang melanggar maka membayarnyapun di tempat dia melanggar, karena seorang bisa jadi melanggar sebelum sampai tanah harām. Dan Ka&rsquo;ab bin Ujrah radhiyallāhu Ta&rsquo;āla &lsquo;anhu tatkala melanggar dia belum sampai ke tanah harām dan Nabi menyuruh dia membayar fidyah. Oleh karenanya pembayaran fidyah pelanggaran tidak harus di bagi di tanah harām akan tetapi boleh membagi ditempat dimana dia melanggar.</p>
+<p>Kemudian, kalau dia memotong kambing, karena ini adalah kambing pelanggaran, maka dia tidak boleh memakannya, melainkan harus diberikan kepada fakir miskin, baik ditanah harām maupun di tempat dia melanggar)</p>
+<p>Pelanggaran-pelanggaran tersebut :</p>
+<p><em>Pertama</em>&nbsp;: Untuk lelaki : Mencukur rambut atau bulu rambut, memotong kuku, memakai minyak wangi, memakai pakaian yang dijahit, memakai tutup kepala, dan bercumbu sebelum tahallul tsani dengan cumbuan yang disertai sentuhan, baik hingga keluar mania tau tidak selama tidak sampai kepada jimak</p>
+<p><em>Kedua&nbsp;</em>: Untuk wanita : Memakai cadar, memakai kaus tangan, mencukur rambut dan bulu badan, memotong kuku, dan memakai minyak wangi, dan bercumbu sebelum tahallul tsani dengan cumbuan yang disertai sentuhan, baik hingga keluar mani atau tidak selama tidak sampai kepada jimak</p></summary>
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

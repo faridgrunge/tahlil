@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Doa taubat Nabi Yunus</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">لَّآ اِلٰهَ اِلَّآ اَنْتَ سُبْحٰنَكَ اِنِّيْ كُنْتُ مِنَ الظّٰلِمِيْنَ</p><p><i>Lā ilāha illā anta subḥānaka innī kuntu minaẓ-ẓālimīn(a).</i></p><p>Tidak ada tuhan selain Engkau, Mahasuci Engkau. Sungguh, aku termasuk orang-orang yang zalim.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Doa ini diucapkan oleh Nabi Yunus as. di dalam perut ikan. Bagaimana bisa seorang Nabi sampai tertelan ikan besar dan mengucapkan doa ini? Simak selengkapnya. \r\n\r\nDalam Tafsir Al-Misbah, M. Quraish Shihab menjelaskan bahwa Nabi Yunus as. lahir di Gats Aifar Palestina. Beliau diutus Allah untuk berdakwah kepada penduduk Nainawi sekitar awal abad kedelapan SM. \r\n\r\nWalaupun sudah sekian lama Nabi Yunus as. berdakwah, para penduduk Nainawi enggan beriman kepada Allah. Nabi Yunus as. merasa kesal oleh penduduk Nainawi yang terus membangkang, ia pun memutuskan untuk meninggalkan mereka dalam keadaan marah. \r\n\r\nNabi Yunus as. sepertinya sudah tidak ingin ada urusan lagi dengan kaum Nainawi. Beliau pun bertolak ke sebuah pelabuhan di Palestina kemudian melaut menuju kota Tasyisy, di sebelah barat Palestina. \r\n\r\nTafsir Al-Jalalain menjelaskan bahwa Nabi Yunus as. meninggalkan kaumnya itu tanpa seizin Allah sehingga ada konsekuensi yang harus beliau tanggung. Hal ini tertuang dalam Al-Qur'an: \r\n\r\nوَذَا النُّوْنِ اِذْ ذَّهَبَ مُغَاضِبًا فَظَنَّ اَنْ لَّنْ نَّقْدِرَ عَلَيْهِ\r\n\r\nDan (ingatlah kisah) Zun Nun (Yunus), ketika dia pergi dalam keadaan marah, lalu dia menyangka bahwa Kami tidak akan menyulitkannya (QS. Al-Anbiya’ [21]: 87). \r\n\r\nYang dimaksud dengan “menyulitkannya” di sini adalah kapal yang ditumpangi oleh Nabi Yunus as. diterpa badai hingga para penumpang kapal mengundi siapa “orang pembawa sial” yang harus keluar dari kapal tersebut. \r\n\r\nTafsir Ibnu Katsir mengatakan bahwa tiga kali diundi, tiga kali pula nama Nabi Yunus as. muncul. Beliau pun akhirnya lompat ke laut. Tak lama berselang, sekor ikan besar menelan sang Nabi bulat-bulat. \r\n\r\nIbnu Mas’ud ra. menjelaskan bahwa Allah memerintahkan ikan itu untuk tidak mencabik atau mematahkan tulang-tulang sang Nabi, tetapi hanya memenjarakannya. \r\n\r\nDi dalam perut ikan itu, Nabi Yunus as. menyadari betul kelancangannya. Beliau menyesal telah meninggalkan kaumnya tanpa seizin Allah. \r\n\r\nKisah Nabi Yunus as. dari Sudut Sains\r\n\r\nNah, sebelum kita lanjutkan kisah ini, mari kita bahas dulu secara sains kemungkinan seseorang ditelan oleh ikan besar. \r\n\r\nTidak sedikit orang yang gemar meledek kisah Nabi Yunus as. sebagai khayalan belaka. Mereka mengatakan dengan begitu yakin bahwa tidak mungkin seseorang bisa ditelan oleh ikan besar dan selamat. Mereka umumnya mempertanyakan dua hal. \r\n\r\nPertama, ikan apa yang bisa menelan manusia dewasa hidup-hidup?\r\n\r\nKedua, kalau pun bisa ditelan, bagaimana ia dapat keluar dengan selamat? \r\n\r\nMari kita bahas yang kedua dulu. Ternyata di dunia modern ini ada seseorang yang pernah sebentar ditelan oleh ikan paus hingga selamat. Ia bernama Rainer Schimpf, seorang videografer asal Afrika Selatan. \r\n\r\nSingkatnya begini: Rainer sedang asyik mengambil video hewan laut yang sedang lahap memakan kawanan sarden saat tiba-tiba seekor paus jenis Bryde menelan sebagian besar badannya. Rupanya paus itu keliru, dan Rainer pun berada di mulut paus itu beberapa saat.\r\n\r\nSi paus akhirnya sadar bahwa Rainer bukanlah sarden, dan ia pun memuntahkan “makanan asing” itu. \r\n\r\nRainer, yang uniknya memiliki putra bernama Jonah (Yunus dalam bahasa Arab), mengatakan bahwa ia tidak terluka apa pun. Ia pun melanjutkannya tugasnya sebagai videografer di hari itu. \r\n\r\nHal ini mirip dengan yang diceritakan oleh Ibnu Mas’ud ra. bahwa Allah memerintahkan ikan besar untuk sebentar saja “memenjarakan” Nabi Yunus as. tanpa melukainya. \r\n\r\nNah, sekarang kita beralih ke pertanyaan pertama. Selain ikan Paus Bryde, ikan apa lagi yang bisa menelan manusia bulat-bulat? \r\n\r\nJawabannya—secara sains—yang paling mungkin adalah Paus Sperma. Namun, jika Paus Sperma menelan seseorang, kemungkinan besar ia akan (atau dipastikan) mati karena ketiadaan oksigen di dalam perut ikan tersebut. (Walaupun memang belum 100% pasti, karena tidak pernah ada satu orang pun yang mau menguji coba hal ini barang sejenak, dan sulit juga mensimulasi hal ini di lautan luas.)  \r\n\r\nMungkin itulah mengapa kisah Nabi Yunus as. adalah suatu mukjizat. Seseorang yang bisa selamat berkat pertolongan Allah setelah ditelan oleh ikan besar—entah itu Paus Bryde, Paus Sperma, atau makhluk besar lainnya yang tidak kita ketahui.\r\n\r\nAlquran dan hadis—berbeda dengan Injil—tidak pernah merinci berapa lama Nabi Yunus as. berada dalam perut ikan. Sebab poinnya bukan tentang ikan apa atau berapa lama Nabi Yunus as. di dalam tubuhnya, tetapi tentang pertaubatan dan pertolongan Allah. \r\n\r\nTaubat di Kedalaman \r\n\r\nNah, lanjut ke kisah Nabi Yunus as. Di dalam mulut atau perut ikan itu, Nabi Yunus as. betul-betul merasa menyesal dan bertaubat. Al-Qur'an menjelaskan bahwa di dalam kegelapan yang pekat itu, sang Nabi berucap: \r\n\r\n لَّآ اِلٰهَ اِلَّآ اَنْتَ سُبْحٰنَكَ اِنِّيْ كُنْتُ مِنَ الظّٰلِمِيْنَ\r\n\r\nTidak ada tuhan selain Engkau, Mahasuci Engkau. Sungguh, aku termasuk orang-orang yang zalim (QS. Al-Anbiya’ [21]: 87)\r\n\r\nDalam suatu riwayat dari Awf Al-A`rabi dikatakan bahwa Nabi Yunus as. sempat menyangka dirinya sudah meninggal. Lalu beliau menggerakkan kakinya dan sadar bahwa beliau masih hidup. \r\n\r\nBeliau pun langsung sekuat tenaga bersujud kepada Allah dan berkata, “Wahai Tuhanku, aku telah beribadah kepada-Mu di tempat yang belum pernah dicapai oleh orang lain.”\r\n\r\nAllah pun menerima taubat dan menjawab doa Nabi-Nya di tempat yang “unik” tersebut. Allah berfirman:\r\n\r\nفَلَوْلَآ اَنَّهٗ كَانَ مِنَ الْمُسَبِّحِيْنَ ۙ لَلَبِثَ فِيْ بَطْنِهٖٓ اِلٰى يَوْمِ يُبْعَثُوْنَۚ\r\n\r\nMaka sekiranya dia (Nabi Yunus) tidak termasuk orang yang banyak bertasbih (berdoa menyucikan Allah), niscaya dia akan tetap tinggal di perut ikan itu sampai hari Kebangkitan (QS. As-Saffat [37]: 143-144). \r\n\r\nNabi Muhammad ﷺ mengatakan begitu ampuhnya doa Nabi Yunus as. itu dan menganjurkan kita untuk berdoa dengannya:\r\n\r\nفَإِنَّهُ لَمْ يَدْعُ بِهَا رَجُلٌ مُسْلِمٌ فِي شَيْءٍ قَطُّ إِلاَّ اسْتَجَابَ اللَّهُ لَهُ\r\n\r\nTidaklah seorang muslim berdoa dengannya dalam suatu hal, melainkan Allah kabulkan baginya (HR. Tirmidzi no. 3505) \r\n\r\nMengapa doa ini begitu dahsyatnya? \r\n\r\nPara ulama mengatakan bahwa doa ini mengandung tiga hal penting: tauhid, tasbih, dan taubat (pengakuan akan kesalahan diri sendiri). \r\n\r\nOleh sebab itu, para Sahabat KESAN, mari kita hafalkan dan amalkan (jika belum) doa singkat ini secara rutin. Jangan menunggu sampai masalah datang kemudian kita meminta jalan keluar dari Allah. Namun, lebih baik bila kita amalkan doa ini di setiap kali kita meminta kepada Yang Maha Kuasa. \r\n\r\nReferensi: Tafsir Al-Misbah karya M. Quraish Shihab, Tafsir Al-Jalalain, Tafsir Ibnu Katsir, Qisas Al-Anbiya</p><p><strong>QS. Al-Anbiya' [21]: 87
+</strong></p>
+
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

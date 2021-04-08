@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>TAFSIR SURAH YASIN AYAT 63 - 67</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+
+<p class="arab">{هَذِهِ جَهَنَّمُ الَّتِي كُنْتُمْ تُوعَدُونَ (63) اصْلَوْهَا الْيَوْمَ بِمَا كُنْتُمْ تَكْفُرُونَ (64) الْيَوْمَ نَخْتِمُ عَلَى أَفْوَاهِهِمْ وَتُكَلِّمُنَا أَيْدِيهِمْ وَتَشْهَدُ أَرْجُلُهُمْ بِمَا كَانُوا يَكْسِبُونَ (65) وَلَوْ نَشَاءُ لَطَمَسْنَا عَلَى أَعْيُنِهِمْ فَاسْتَبَقُوا الصِّرَاطَ فَأَنَّى يُبْصِرُونَ (66) وَلَوْ نَشَاءُ لَمَسَخْنَاهُمْ عَلَى مَكَانَتِهِمْ فَمَا اسْتَطَاعُوا مُضِيًّا وَلا يَرْجِعُونَ (67) }</p>
+<p><em>Inilah Jahanam yang dahulu kamu diancam </em>(dengannya). <em>Masuklah ke dalamnya pada hari ini disebabkan kamu dahulu mengingkarinya. Pada hari ini Kami tutup mulut mereka; dan berkatalah kepada Kami tangan mereka dan memberi kesaksianlah kaki mereka terhadap apa yang dahulu mereka usahakan. Dan jikalau Kami menghendaki, pastilah Kami hapuskan penglihatan mata mereka; lalu mereka berlomba-lomba </em>(mencari) <em>jalan. Maka betapakah mereka dapat melihat(nya). Dan jikalau Kami menghendaki, pastilah Kami ubah mereka di tempat mereka berada; maka mereka tidak sanggup berjalan lagi dan tidak </em>(pula) <em>sanggup kembali.</em></p>
+<p>Dikatakan kepada Bani Adam yang kafir-kafir kelak pada hari kiamat saat neraka Jahanam telah dimunculkan di hadapan mereka dengan nada kecaman dan cemoohan:</p>
+<p class="arab">{هَذِهِ جَهَنَّمُ الَّتِي كُنْتُمْ تُوعَدُونَ}</p>
+<p><em>Inilah Jahanam yang dahulu kamu diancam </em>(dengannya). (Yasin: 63)</p>
+<p>Maksudnya, inilah azab yang pernah diperingatkan oleh para rasul kepada kalian, namun kalian mendustakannya.</p>
+<p class="arab">{اصْلَوْهَا الْيَوْمَ بِمَا كُنْتُمْ تَكْفُرُونَ}</p>
+<p><em>Masuklah ke dalamnya pada hari ini disebabkan kamu dahulu mengingkarinya. </em>(Yasin: 64)</p>
+<p>Semakna dengan apa yang disebutkan dalam ayat lain melalui firman-Nya:</p>
+<p class="arab">{يَوْمَ يُدَعُّونَ إِلَى نَارِ جَهَنَّمَ دَعًّا * هَذِهِ النَّارُ الَّتِي كُنْتُمْ بِهَا تُكَذِّبُونَ * أَفَسِحْرٌ هَذَا أَمْ أَنْتُمْ لَا تُبْصِرُونَ}</p>
+<p><em>pada hari mereka didorong ke neraka Jahanam dengan sekuat-kuatnya. </em>(Dikatakan kepada mereka), <em>"Inilah neraka yang dahulu kamu selalu mendustakannya.&rdquo; Maka apakah ini sihir? Ataukah kamu tidak melihat? </em>(At-Tur: 13-15)</p>
+<p>**************</p>
+<p>Adapun firman Allah Swt.:</p>
+<p class="arab">{الْيَوْمَ نَخْتِمُ عَلَى أَفْوَاهِهِمْ وَتُكَلِّمُنَا أَيْدِيهِمْ وَتَشْهَدُ أَرْجُلُهُمْ بِمَا كَانُوا يَكْسِبُونَ}</p>
+<p><em>Pada hari ini Kami tutup mulut mereka; dan berkatalah kepada kami tangan mereka dan memberi kesaksianlah kaki mereka terhadap apa yang dahulu mereka usahakan. </em>(Yasin: 65)</p>
+<p>Ayat ini menceritakan keadaan orang-orang kafir dan orang-orang munafik kelak di hari kiamat ketika mereka mengingkari perbuatan jahat mereka di dunia dan mengucapkan sumpah untuk itu. Maka Allah mengunci mulut mereka dan dibiarkanlah oleh-Nya semua anggota tubuh lainnya berbicara menjadi saksi atas apa yang telah mereka perbuat.</p>
+<p class="arab">قَالَ ابْنُ أَبِي حَاتِمٍ: حَدَّثَنَا أَبُو شَيْبَةَ إِبْرَاهِيمُ بْنُ عَبْدِ اللَّهِ بْنِ أَبِي شَيْبَةَ، حَدَّثَنَا مِنْجَاب بْنُ الْحَارِثِ التَّمِيمِيُّ، حَدَّثَنَا أَبُو عَامِرٍ الْأَسَدِيُّ، حَدَّثَنَا سُفْيَانُ، عَنْ عُبَيْدٍ المُكتب، عَنِ الفُضَيْل بْنِ عَمْرٍو، عَنِ الشَّعْبِيِّ، عَنْ أَنَسِ بْنِ مَالِكٍ قَالَ: كُنَّا عِنْدَ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، فَضْحِكَ حَتَّى بَدَتْ نَوَاجِذُهُ، ثُمَّ قَالَ: " أَتُدْرُونَ مِمَّ أَضْحَكُ؟ " قُلْنَا: اللَّهُ وَرَسُولُهُ أَعْلَمُ. قَالَ: "مِنْ مُجَادَلَةِ الْعَبْدِ رَبَّهُ يَوْمَ الْقِيَامَةِ، يَقُولُ: رَبِّ أَلَمْ تُجِرْنِي مِنَ الظُّلْمِ؟ فَيَقُولُ: بَلَى. فَيَقُولُ: لَا أُجِيزُ عَلَيَّ إِلَّا شاهدًا من نفسي فَيَقُولُ كَفَى بِنَفْسِكَ الْيَوْمَ عَلَيْكَ حَسيبًا، وَبِالْكِرَامِ الْكَاتِبِينَ شُهُودًا. فَيُخْتَمُ عَلَى فِيهِ، ويُقال لِأَرْكَانِهِ: انْطِقِي. فَتَنْطِقُ بِعَمَلِهِ، ثُمَّ يُخَلِّي بَيْنَهُ وَبَيْنَ الْكَلَامِ، فَيَقُولُ: بُعدًا لَكُنَّ وسُحقًا، فعنكنَّ كنتُ أُنَاضِلُ".</p>
+<p>Ibnu Abu Hatim mengatakan, telah menceritakan kepada kami Abu Syaibah Ibrahim ibnu Abdullah ibnu Abu Syaibah, telah menceritakan kepada kami Minjab ibnul Haris At-Tamimi, telah menceritakan kepada kami Abu Amir Al-Azdi, telah menceritakan kepada kami Sufyan, dari Ubaid Al-Maktab, dari Al-Fadl ibnu Amr, dari Asy-Sya'bi, dari Anas ibnu Malik r.a. yang mengatakan bahwa ketika kami bersama Nabi Saw., tiba-tiba beliau tersenyum sehingga gigi serinya kelihatan. Kemudian beliau Saw. bersabda, "<em>Tahukah kalian, mengapa aku tertawa</em>?" Kami menjawab, "Allah dan Rasul-Nya lebih mengetahui." Nabi Saw. bersabda: <em>Karena bantahan seorang hamba kepada Tuhannya pada hari kiamat. Si hamba berkata, "Ya Tuhanku, bukankah Engkau melindungiku dari kezaliman?" Tuhan berfirman, "Benar.&rdquo; Si hamba berkata, "Saya tidak memperkenankan ada yang bersaksi terhadapku kecuali hanya diriku sendiri.&rdquo; Tuhan berfirman, "Cukuplah dirimu sendiri pada waktu ini sebagai penghitung terhadapmu, juga malaikat pencatat amal perbuatanmu sebagai saksinya.&rdquo; Maka dikuncilah mulutnya, lalu dikatakan kepada anggota-anggota tubuhnya, "Berbicaralah kamu, maka semua anggota tubuhnya berbicara tentang amal perbuatannya. Kemudian dibiarkan antara dia dan anggota tubuhnya untuk berbicara. Maka ia berkata </em>(kepada anggota tubuhnya), <em>"Celaka dan siallah kalian, dahulu aku berjuang membelamu </em>(dan sekarang kamu mencelakakan diriku)."</p>
+<p>Imam Muslim dan Imam Nasai meriwayatkannya. Mereka berdua menerima hadis ini dari Abu Bakar ibnu Abun Nadr, dari Abun Nadr, dari Ubaidillah ibnu Abdur Rahman Al-Asyja'i, dari Sufyan As-Sauri dengan sanad yang sama. Kemudian Imam Nasai mengatakan bahwa ia tidak mengetahui seseorang meriwayatkan hadis ini dari Sufyan selain Al-Asyja'i. Hadis ini berpredikat <em>garib, </em>hanya Allah-lah Yang Maha Mengetahui. Demikianlah menurut Imam Nasai.</p>
+<p>Dan dalam pembahasan terdahulu telah disebutkan hal yang semisal melalui riwayat Abu Amir, dari Abdul Malik ibnu Amr Al-Asadi Al-Aqdi, dari Sufyan.</p>
+<p class="arab">قَالَ عَبْدُ الرَّزَّاقِ: أَخْبَرَنَا مَعْمَر، عَنْ بَهز بْنِ حَكِيمٍ، عَنْ أَبِيهِ، عَنْ جَدِّهِ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: "إِنَّكُمْ تُدْعَون مُفَدَّمة أَفْوَاهُكُمْ بالفِدَام، فَأَوَّلُ مَا يُسْأَلُ عَنْ أَحَدِكُمْ فَخِذُهُ وَكَتِفُهُ".</p>
+<p>Abdur Razzaq mengatakan, telah menceritakan kepada kami Ma'mar, dari Bahz ibnu Hakim, dari ayahnya, dari kakeknya, dari Nabi Saw. yang telah bersabda: <em>Sesungguhnya kalian kelak akan dipanggil dalam keadaan mulut kalian ditutup dengan penyumbat. Maka anggota tubuh seseorang dari kalian yang mula-mula ditanyai adalah paha dan bahunya.</em></p>
+<p>Imam Nasai meriwayatkannya dari Muhammad ibnu Rafi', dari Abdur Razzaq dengan sanad yang sama.</p>
+<p>Sufyan ibnu Uyaynah telah menceritakan dari Suhail, dari ayahnya, dari Abu Hurairah r.a., dari Rasulullah Saw. tentang hadis hari kiamat yang cukup panjang, di dalamnya disebutkan bahwa:</p>
+<p class="arab">"ثُمَّ يَلْقَى الثَّالِثَ فَيَقُولُ: مَا أَنْتَ؟ فَيَقُولُ: أَنَا عَبْدُكَ، آمَنْتُ بِكَ وَبِنَبِيِّكَ وَبِكِتَابِكَ، وَصُمْتُ وَصَلَّيْتُ وَتَصَدَّقْتُ -وَيَثْنِي بِخَيْرٍ مَا اسْتَطَاعَ-قَالَ: فَيُقَالُ لَهُ: أَلَا نَبْعَثُ عَلَيْكَ شَاهِدَنَا ؟ قَالَ: فَيُفَكِّرُ فِي نَفْسِهِ، مِنَ الَّذِي يَشْهَدُ عَلَيْهِ، فيُختَم عَلَى فِيهِ، وَيُقَالُ لِفَخِذِهِ: انْطِقِي. فَتَنْطِقُ فَخِذُهُ وَلَحْمُهُ وَعِظَامُهُ بِمَا كَانَ يَعْمَلُ، وَذَلِكَ الْمُنَافِقُ، وَذَلِكَ لِيُعْذَرَ مِنْ نَفْسِهِ. وَذَلِكَ الَّذِي سَخِطَ اللَّهُ عَلَيْهِ".</p>
+<p><em>kemudian orang yang ketiga dihadapkan, lalu ditanya, "Amal apakah yang kamu bawa?" Ia menjawab, "Aku adalah hamba&shy;Mu, beriman kepada-Mu dan kepada Nabi-Mu serta Kitab-Mu. Dan aku mengerjakan puasa, salat, dan berzakat," lalu ia mengucapkan pujian yang baik sebatas kemampuannya. Lalu dikatakan kepadanya, "Ingatlah, Aku akan membangkitkan saksi dari Kami terhadapmu." Lalu ia berpikir untuk mencari siapa yang akan menjadi saksi terhadap dirinya. Maka Allah membungkam mulutnya dan dikatakan kepada pahanya, "Berbicaralah!" Maka pahanya, dagingnya, dan tulangnya berbicara, menceritakan semua amal perbuatan yang pernah dilakukannya. Demikianlah nasib yang dialami oleh orang munafik, hal itu dilakukan terhadapnya agar alasan Allah kuat, dan itulah yang membuat Allah murka terhadapnya.</em></p>
+<p>Imam Muslim dan Imam Abu Daud meriwayatkannya melalui hadis Sufyan ibnu Uyaynah secara panjang lebar.</p>
+<p class="arab">قَالَ ابْنُ أَبِي حَاتِمٍ، رَحِمَهُ اللَّهُ: حَدَّثَنَا أَبِي، حَدَّثَنَا هِشَامُ بْنُ عَمَّارٍ، حَدَّثَنَا إِسْمَاعِيلُ بْنُ عَيَّاشٍ، حَدَّثَنَا ضَمْضَم بْنُ زُرْعَة عَنْ شُرَيْح بْنِ عُبَيْدٍ، عَنْ عُقْبَةَ بْنِ عَامِرٍ؛ أَنَّهُ سَمِعَ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: "إِنَّ أَوَّلَ عَظْمٍ مِنَ الْإِنْسَانِ يَتَكَلَّمُ يَوْمَ يُختَم عَلَى الْأَفْوَاهِ، فَخذُه مِنَ الرِّجل الْيُسْرَى".</p>
+<p>Ibnu Abu Hatim mengatakan, telah menceritakan kepada kami ayahku, telah menceritakan kepada kami Hisyam ibnu Ammar, telah menceritakan kepada kami Ismail ibnu Iyasy, telah menceritakan kepada kami Damdam ibnu Zur'ah, dari Syuraih ibnu Ubaid, dari Uqbah ibnu Amir r.a., bahwa ia pernah mendengar Rasulullah Saw. bersabda: <em>Sesungguhnya anggota tubuh manusia yang mula-mula ber&shy;bicara di hari semua mulut dibungkam adalah paha kaki kirinya.</em></p>
+<p>Ibnu Jarir meriwayatkannya dari Muhammad ibnu Auf dari Abdullah ibnul Mubarak dari Ismail ibnu Iyasy dengan sanad dan lafaz yang semisal.</p>
+<p>Imam Ahmad menilai <em>jayyid </em>sanad hadis ini. Untuk itu dia mengatakan:</p>
+<p class="arab">حَدَّثَنَا الْحَكَمُ بْنُ نَافِعٍ، حَدَّثَنَا إِسْمَاعِيلُ بْنُ عَيَّاشٍ، عَنْ ضَمْضَم بْنِ زُرْعَة، عَنْ شُرَيْح بْنِ عُبَيد الْحَضْرَمِيِّ، عَمَّنْ حَدَّثه عَنْ عُقْبَةَ بن عامر؛ أنه سَمِعَ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ: "إِنَّ أَوَّلَ عَظْمٍ مِنَ الْإِنْسَانِ يَتَكَلَّمُ يَوْمَ يُختَم عَلَى الْأَفْوَاهِ، فَخذه مِنَ الرِّجْلِ الشِّمَالِ".</p>
+<p>telah menceritakan kepada kami Al-Hakam ibnu Nafi', telah menceritakan kepada kami Ismail ibnu Iyasy, dan Damdam ibnu Zur'ah dari Syuraih ibnu Ubaid Al-Hadrami dari seseorang yang menceritakan hadis ini kepadanya, dari Uqbah ibnu Amir r.a. bahwa ia pernah mendengar Rasulullah Saw. bersabda: <em>Sesungguhnya anggota tubuh manusia yang mula-mula berbicara di hari semua mulut dikunci ialah paha kaki kirinya.</em></p>
+<p>Ibnu Jarir mengatakan, telah menceritakan kepada kami Ya'qub ibnu Ibrahim, telah menceritakan kepada kami Ibnu Aliyyah, telah menceritakan kepada kami Yunus ibnu Ubaid, dari Humaid ibnu Hilal yang mengatakan bahwa Abu Burdah pernah mengatakan bahwa Abu Musa Al-Asy'ari r.a. telah berkata bahwa kelak di hari kiamat orang mukmin dipanggil untuk menjalani perhitungan amal perbuatan. Lalu Tuhannya menampakkan kepadanya semua amal perbuatannya antara Dia dan orang mukmin itu. Maka orang mukmin itu mengakuinya dan mengatakan, "Benar, ya Tuhanku, aku telah melakukan anu dan anu dan anu." Maka Allah Swt. mengampuni semua dosanya dan menutupi sebagian darinya. Tiada seorang makhluk pun yang melihat dosa-dosa tersebut barang sedikit pun, dan yang tampak hanyalah kebaikan-kebaikannya saja, sehingga orang mukmin itu menginginkan andaikata semua manusia melihatnya. Dan orang kafir serta orang munafik dipanggil untuk menjalani hisab amal perbuatannya, maka Tuhannya membeberkan kepadanya semua amal perbuatannya. Tetapi ia mengingkarinya dan berkata, "Ya Tuhanku, demi Keagungan-Mu, sesungguhnya malaikat ini telah mencatat pada buku amalku hal-hal yang tidak aku kerjakan." Maka malaikat pencatat amal perbuatan berkata kepadanya, "Bukankah kamu telah melakukan anu di hari anu di tempat anu?" Ia menjawab, "Tidak, demi keagungan-Mu, ya Tuhanku, aku tidak melakukannya." Apabila ia mengingkari semuanya itu, maka Allah Swt. membungkam mulutnya. Abu Musa Al-Asy'ari r.a. melanjutkan, bahwa sesungguhnya ia menduga anggota tubuhnya yang mula-mula berbicara ialah paha kanannya. Kemudian Abu Musa Al-Asy'ari membaca firman-Nya: <em>Pada hari ini Kami tutup mulut mereka; dan berkatalah kepada Kami tangan mereka dan memberi kesaksianlah kaki mereka terhadap apa yang dahulu mereka usahakan. </em>(Yasin: 65)</p>
+<p>************</p>
+<p>Adapun firman Allah <em>Swt.:</em></p>
+<p class="arab">{وَلَوْ نَشَاءُ لَطَمَسْنَا عَلَى أَعْيُنِهِمْ فَاسْتَبَقُوا الصِّرَاطَ فَأَنَّى يُبْصِرُونَ}</p>
+<p><em>Dan jikalau Kami menghendaki, pastilah Kami hapuskan penglihatan mata mereka; lalu mereka berlomba-lomba </em>(mencari) <em>jalan. Maka betapakah mereka dapat melihatnya). </em>(Yasin: 66)</p>
+<p>Ali ibnu Abu Talhah telah meriwayatkan dari Ibnu Abbas sehubungan dengan tafsir ayat ini. Ibnu Abbas mengatakan bahwa seandainya Kami menghendaki, pastilah Kami sesatkan mereka dari jalan petunjuk, maka betapakah mereka dapat melihatnya. Di lain kesempatan Ibnu Abbas mengartikan <em>tamasna </em>dengan pengertian 'Kami butakan'.</p>
+<p>Al-Hasan Al-Basri mengatakan, "Jikalau Allah menghendaki, tentulah mata mereka dibutakan-Nya sehingga mereka menjadi buta dan tidak dapat melihat jalan yang ditempuhnya."</p>
+<p>As-Saddi mengatakan bahwa seandainya Kami menghendaki, tentulah Kami butakan penglihatan mereka.</p>
+<p>Mujahid, Abu Saleh, Qatadah, dan As-Saddi mengatakan bahwa lalu mereka berlomba-lomba menuju <em>sirat </em>yakni jalan.</p>
+<p>Ibnu Zaid mengatakan, yang dimaksud dengan <em>sirat </em>dalam ayat ini ialah kebenaran, maka betapakah mereka dapat melihatnya karena Kami telah membutakan penglihatan mereka.</p>
+<p>Al-Aufi telah meriwayatkan dari Ibnu Abbas r.a. bahwa makna <em>fa-anna yubsirun </em>ialah mereka tidak dapat melihat perkara hak.</p>
+<p>*********</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{وَلَوْ نَشَاءُ لَمَسَخْنَاهُمْ عَلَى مَكَانَتِهِم}</p>
+<p><em>Dan jikalau Kami menghendaki, pastilah Kami ubah mereka di tempat mereka berada. </em>(Yasin: 67)</p>
+<p>Al-Aufi telah meriwayatkan dari Ibnu Abbas r.a. bahwa makna <em>masakhnahum </em>ialah Kami binasakan mereka.</p>
+<p>As-Saddi mengatakan bahwa makna yang dimaksud ialah Kamu ubah bentuk mereka.</p>
+<p>Abu Saleh mengatakan, maksudnya Kami jadikan mereka batu-batuan.</p>
+<p>Al-Hasan Al-Basri dan Qatadah mengatakan bahwa tentulah Allah menjadikan mereka terduduk di atas kaki mereka.</p>
+<p>Karena itulah disebutkan dalam firman berikutnya:</p>
+<p class="arab">{فَمَا اسْتَطَاعُوا مُضِيًّا}</p>
+<p><em>maka mereka tidak sanggup berjalan lagi. </em>(Yasin: 67)</p>
+<p>Yakni melangkah ke arah depan.</p>
+<p class="arab">{وَلا يَرْجِعُونَ}</p>
+<p><em>dan tidak </em>(pula) <em>sanggup kembali. </em>(Yasin: 67)</p>
+<p>Yaitu ke arah belakang, bahkan mereka tetap berada di tempatnya, tidak dapat maju dan tidak dapat mundur.</p>
+
+
+
+
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

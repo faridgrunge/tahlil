@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Dalail Khairat (Sabtu)</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">إبْتِدَاءُ الْوِرْدِ يَوْمَ السَّبْتِ <br><br>
+
+اللّٰهُـمَّ صَلِّ عَلىَ مُحَمَّدٍوَعَلىَ أَلِ مُحَمَّدٍ ۩ وَأَعْطِهِ الْوَسِيْلَةِ وَالْفَضِيْلَةِ وَالدَّرَجَةَ الرَّفِيْعَةَ ۩ وَابْعَثْهُ مَقَامًا مَحْمُوْدًا الَّذِيْ وَعَدْتَهُ إِنَّكَ لاَتُخْلِفُ الْمِيْعَادَ ۩ اللّٰهُـمَّ عَظِّمْ شَأْنَهُ ۩ وَبَيِّنْ بُرْهَانَهُ ۩ وَأبْلِجْ حُجَّتَهُ ۩ وبَيِّنْ فَضِيْلَتَهُ ۩ وَتَقَبَّلْ شَفَاعَتَهُ ۩ فِيْ أُمَّتِهِ ۩ وَاسْتَعْمِلْنَا بِسُنَّتِهِ ۩ يَارَبَّ الْعَالَمِيْنَ ۩ وَيَا رَبَّ الْعَرْشِ الْعَظِيْمِ ۩ اللّٰهُـمَّ يَارَبَّ احْشُرْنَا فِيْ زُمْرَتِهِ ۩ وَتَحْتَ لِوَائِهِ ۩ وَأَسْقِنَا بِكَأْسِهِ ۩ وَانْفَعْنَا بِمَحَبَّتِهِ آَمِـيْنَ ۩ يَارَبَّ الْعَالَمِيْنَ ۩ اللّٰهُـمَّ يَارَبَّ بَلِّغْهُ عَنَّا أَفْضَلَ السَّلاَمِ ۩ وَاجْزِهِ عَنَّا أَفْضَلَ مَاجَازَيْتَ بِهِ النَّبِيَّ عَنْ أُمَّتِهِ يَارَبَّ الْعَالَمِيْنَ ۩ اللّٰهُـمَّ يَارَبِّ إِنِّيْ أَسْئَلُكَ أَنْ تَغْفِرَلِيْ وَتَرْحَمَنِيْ وَتَتُوْبَ عَلَيَّ وَتُعَافِيَنِيْ مِنْ جَمِيْعِ الْبَلاَءِ ۩ وَالْبَلْوَى اَلْخَارِجِ مِنَ الْأرْضِ وَالنَّازِلِ مِنَ السَّمَاءِ إنَّكَ عَلىَ كُلِّ شَيْئٍ قَدِيْرٌ ۩ بِرَحْمَتِكَ وَأَنْ تَغْفِرَ لِلْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ اَلْأحْيَاءِ مِنْهُمْ وَالْأمْوَاتِ وَرَضِيَ اللّٰهُ  عَنْ أَزْوَاجِهِ الطَّاهِرَاتِ أُمَّهَاتِ الْمُؤْمِنِيْنَ وَرَضِيَ اللّٰهُ  عَنْ أَصْحَابِهِ الْأَعْلاَمِ أَئِمَّةِ الْهُدَى وَمَصَابِيْحِ الدُّنْيَا وَعَنِ التَّابِعِيْنَ وَتَابِعِ التَّابِعِيْنَ لَهُمْ بِإحْسَانٍ إِلىَ يَوْمِ الدِّيْنِ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَـالَمِيْنَ<br><br>
+
+ ( إنْتِهــَاءُ الْوِرْدِ يَوْمَ الْجُمْعَةِ )<br><br>
+
+اللّٰهُـمَّ رَبَّ الْأَرْوَاحِ ۩ وَالْأجْسَادِ الْبَالِيَةِ أَسْئَلُكَ بِطَاعَةِ الْأَرْوَاحِ الرَّاجِعَةِ إِلىَ أَجْسَادِهَا ۩ وَبِطَاعَةِ الْأَجْسَادِ الْمُلْتَئِمَةِ بِعُرُوْقِهَا ۩ وَبِكَلِمَاتِكَ النَّافِذَةِ فِيْهِمْ وَأَخْذِكَ الْحَقَّ مِنْهُمْ وَالْخَلاَئِقُ بَيْنَ يَدَيْكَ يَنْتَظِرُوْنَ فَصْلَ قَضَائِكَ وَيَرْجُوْنَ رَحْمَتَكَ وَيَخَافُوْنَ عِقَابَكَ ۩ أنْ تَجْعَلَ النُّوْرَ فِى بَصَرِيْ وَذِكْرَكَ بِالّلَيْلِ وَالنَّهَارِ عَلىَ لِسَانِيْ ۩ وَعَمَلاً صَالِحًا فَارْزُقْنِيْ ۩ اللّٰهُـمَّ صَلِّ عَلىَ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلىَ إبْرَاهِيْمَ وَبَارِكْ عَلىَ مُحَمَّدٍ كَمَا بَارَكْتَ عَلىَ إبْرَاهِيْمَ ۩ اللّٰهُـمَّ اجْعَلْ صَلَوَاتِكَ وَبَرَكَاتِكَ عَلىَ مُحَمَّدٍ وَعَلىَ آَلِ مُحَمَّدٍ كَمَا جَعَلْتَهَا عَلىَ إبْرَاهِيْمَ وَعَلىَ آَلِ إبْرَاهِيْمَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ ۩ وَبَارِكْ عَلىَ مُحَمَّدٍ وَعَلىَ أَلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلىَ إبْرَاهِيْمَ وَعَلىَ آَلِ إبْرَاهِيْمَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ ۩ اللّٰهُـمَّ صَلِّ عَلىَ مُحَمَّدٍ عَبْدِكَ وَرَسُوْلِكَ وَصَلِّ عَلىَ الْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ ۩ اللّٰهُـمَّ صَلِّ عَلىَ سَيِّدِنَا مُحَمَّدٍ وَعَلىَ أَلِهِ عَدَدَمَا أحَاطَ بِهِ عِلْمُكَ وَأَحْصَاهُ كِتَابُكَ وَشَهِدَتْ بِهِ مَلاِئِكَتُكَ صَلَوةً دَائِمَةً تَدُوْمُ بِدَوَامِ مُلْكِ اللّٰهِ ۩ اللّٰهُـمَّ إِنِّيْ  أَسْئَلُكَ بِأَسْمَائِكَ الْعِظَامِ مَا عَلِمْتُ مِنْهَا وَمَالَمْ أَعْلَمْ ۩ وَبِالْأسْمَاءِ الَّتيْ سَمَّيْتَ بِهَا نَفْسَكَ مَا عَلِمْتُ مِنْهَا وَمَا لَمْ أَعْلَمْ ۩ أَنْ تُصَلِّيَ عَلىَ سَيِّدِنَا مُحَمَّدٍ عَبْدِكَ وَنَبِيِّكَ وَرَسُوْلِكَ عَدَدَمَا خَلَقْتَ مِنْ قَبْلِ أَنْ تَكُوْنَ السَّمَاءُ مَبْنِيَّةً ۩ وَالْأرْضُ مَدْحِيَّةً ۩ وَالْجِبَالُ مُرْسِيَّةً ۩ وَالْعُيُوْنُ مُنْفَجِرَةً ۩ وَالأَنْهَارُ مُنْهَمِرَةً ۩ وَالشَّمْسُ مُشْرِقَةً ۩ وَالْقَمَرُ مُضِيْئًا ۩ وَالْكَوَاكِبُ مُسْتَنِيْرَةً ۩ وَالْبِحَارُ مُجْرِيَةً ۩ وَالْأَشْجَارُ مُثْمِرَةً ۩ اللّٰهُـمَّ صَلِّ عَلىَ مُحَمَّدٍ عَدَدَعِلْمِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَحِلْمِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَ كَلِمَتِكَ وصَلِّ عَلىَ مُحَمَّدٍ عَدَدَ نِعْمَتِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَ فَضْلِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَ جُوْدِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَ سَمَوَاتِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَأَرْضِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا خَلَقْتَ فِيْ سِبْعِ سَمَوَاتِكَ مِنْ مَلَآئِكَتِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا خَلَقْتَ فِيْ أَرْضِكَ مِنَ الْجِنِّ وَالْإنْسِ وَغَيْرِهِمَا مِنَ الْوَحْشِ وَالطَّيْرِ وَغَيْرِهِمَا ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا جَرَى بِهِ الْقَلَمُ فِيْ عِلْمِ غَيْبِكَ وَمَا يَجْرِىْ بِهِ إِلَى يَوْمِ الْقِيَامَةِ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَالْقَطْرِ وَالْمَطَرِ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَنْ يَحْمَدُكَ وَيَشْكُرُكَ وَيُهَلِّلُكَ وَيُمَجِّدُكَ وَيَشْهَدُأَنَّكَ أَنْتَ اللّٰهُ  ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا صَلَّيْتَ عَلَيْهِ أَنْتَ وَمَلَآئِكَتُكَ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَنْ صَلَّ عَلَيْهِ مِنْ خَلْقِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَنْ لَمْ يُصَلِّ عَلَيْهِ مِنْ خَلْقِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَالْجِبَالِ وَالرِّمَالِ وَالْحَصَى وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَالشَّجَرِ وَأَوْرَاقِهَا ۩ وَالْمَدَرِوَأَثْقَالِهَا ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَكُلِّ سَنَةٍ وَمَا تَخْلُقُ فِيْهَا وَمَا يَمُوْتُ فِيْهَا ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا تَخْلُقُ كُلَّ يَوْمٍ وَمَا يَمُوْتُ فِيْهِ إِلَى يَوْمِ الْقِيَامَةِ ۩ اللّٰهُـمَّ صَلِّ عَلىَ مُحَمَّدٍ عَدَدَ السَّحَابِ الْجَارِيَّةِ مَا بَيْنَ السَّمَاءِ وَالْأَرْضِ وَمَا تَمْطُرُ مِنَ المِيَاهِ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَالرِّيَاحِ الْمُسَخَّرَاتِ فِيْ مَشَارِقِ الْأَرْضِ وَمَغَارِبِهِا وَجَوْفِهَا وَقِبْلَتِهَا وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَ نُجُوْمِ السَّمَاءِ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا خَلَقْتَ فِيْ بِحَارِكَ مِنَ الْحِيْتَانِ وَالدَّوَآبِّ وَالْمِيَاهِ وَالرِّمَالِ وَغَيْرِ ذَالِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَالنّبَاتِ وَالْحَصَى ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَالنَمْلِ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَالْمِيَاهِ الْعَذْبَةِ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَ الْمِيَاهِ الْمِلْحَةِ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَنِعْمَتِكَ عَلَى جَمِيْعِ خَلْقِكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَ نِقْمَتِكَ وَعَذَابِكَ عَلَى مَنْ كَفَرَ بِمُحَمَّدٍ صَلَّى اللّٰهُ  عَلَيْهِ وَسَلَّمَ {دِي ِﭼيُوْمْ 3 x } وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا دَامَتِ الدُّنْيَا وَالْأَخِرَةُ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا دَامَتِ الْخَلَآئِقُ فِيْ الْجَنَّةِ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَدَدَمَا دَامَتِ الْخَلَآئِقُ فِيْ النَّارِ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَلَى قَدْرِمَا تُحِبُّهُ وَتَرْضَاهُ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ عَلَى قَدْرِمَا يُحِبُّكَ وَيَرْضَاكَ ۩ وَصَلِّ عَلىَ مُحَمَّدٍ أَبَدَالْأَبِدِيْنَ ۩ وَأَنْزِلْهُ الْمُنْزَلَ الْمُقَرَّبَ عِنْدَكَ وَأَعِطِهِ الْوَسِيْلَةَ وَالْفَضِيْلَةَ وَالشَّفَاعَةَ وَالدَّرَجَةَ الرَّفِيْعَةَ ۩ وَابْعَثْهُ الْمَقَامَ الْمَحْمُوْدَ الَّذِيْ وَعَدْتَهُ إِنَّكَ لاَتُخْلِفُ الْمِيْعَادَ ۩ اللّٰهُـمَّ إِنِّيْ  أَسْئَلُكَ بِأَنَّكَ مَالِكِيْ وَسَيِّدِيْ وَمَوْلَايَ وَثِقَتِيْ وَرَجَاءِيْ أَسْئَلُكَ بِحُرْمَةِ الشَّهْرِ الْحَرَامِ ۩ وَالْبَلَدِ الَحَرَامِ وَالْمَشْعَرِالْحَرَامِ ۩ وَقَبْرِ نَبِيِّكَ عَلَيْهِ السَّلاَمُ أَنْ تَهَبَ لِيْ مِنَ الخَيْرِ مَالاَيَعْلَمُ عِلْمَهُ إِلاَّ أَنْتَ ۩ وَتَصْرِفَ عَنِّيَ مِنَ السُّوْءِ مَا لاَيَعْلَمُ عِلْمَهُ إِلاَّ أَنْتَ ۩ اللّٰهُـمَّ يَا مَنْ وَهَبَ لِآَدَمَ شِيْثًا وَلِآِبْرَاهِيْمَ إِسْمَاعِيْلَ وَإِسْحَاقَ وَرَدَّ يُوْسُفَ عَلَى يَعْقُوْبَ وَيَامَنْ كَشَفَ الْبَلَاءَ عَنْ أَيُّوْبَ وَيَامَنْ رَدَّ مُوْسَى إِلَى أُمِّهِ وَيَا زَائِدَ الخَضِرِ فِيْ عِلْمِهِ وَيَامَنْ وَهَبَ لِدَاوُدَ سُلَيْمَانَ وَلِزَكَرِيَّا يَحْيَ ۩ وَلِمَرْيَمَ عِيْسَى وَيَاحَافِظَ ابْنَةِ شُعَيْبٍ ۩ أَسْئَلُكَ أَنْ تُصَلِّيَ عَلَى مُحَمَّدٍ وَعَلَى جَمِيْعِ النَّبِيِّيْنَ وَالْمُرْسَلِيْنَ وَيَامَنْ وَهَبَ لِمُحَمَّدٍ صَلَّى اللّٰه  عَلَيْهِ وَسَلَّمَ الشَّفَاعَةَ وَالدَّرَجَةَ الرَّفِيْعَةَ أَنْ تَغْفِرَلِيْ ذُنُوْبِيْ ۩ وَتَسْتُرَ لِىْ عُيُوْبِيْ كُلَّهَا وَتُجِيْرَنِيْ مِنَ النَّارِ ۩ وَتُوْجِبَ لِيْ رِضْوَانَكَ وَأَمَانَكَ وَغُفْرَانَكَ وَإِحْسَانَكَ وَتُمَتِّعَنِيْ فِيْ جَنَّتِكَ مَعَ الَّذِيْنَ أَنْعَمْتَ عَلَيْهِمْ مِنَ النَّبِيِّيْنَ وَالصِّدِّقِيْنَ وَالشُّهَدَاءِ وَالصَّالِحِيْنَ إَنَّكَ عَلَى كُلِّ شَيْئٍ قَدِيْرٌ ۩ وَصَلَّى اللّٰهُ  عَلىَ مُحَمَّدٍ وَعَلَى آَلِهِ مَاأَزْعَجَتِ الرِّيَاحُ سَحَابًا رُكَمًا ۩ وَذَاقَ كُلُّ ذِيْ رُوْحٍ حِمَامًا ۩ وَأَوْصَلِ السَّلاَمَ لِأَهْلِ السَّلاَمِ فِيْ دَارِالسَّلاَمِ تَحِيَّةً وَسَلاَمًا <br><br>
+
+</p><p>Dibaca 3X:</p><p style="text-align: right;" class="arab">
+  اللّٰهُـمَّ أَفْرِدْنِيْ لِمَا خَلَقْتَنِيْ لَهُ وَلاَتَشْغَلْنِيْ بِمَا تَكَفَّلْتَ لِيْ بِهِ وَلَاتَحْرِمْنِيْ وَأَنَا أَسْئَلُكَ وَلاَتُعَذِّبْنِيْ وَأَنَا أَسْتَغْفِرُكَ  <br><br>
+
+ اللّٰهُـمَّ صَلِّ عَلىَ سَيِّدِنَا مُحَمَّدٍ وَعَلَى آَلِهِ وَسَلِّمْ ۩ اللّٰهُـمَّ اِنِّيْ أَسْئَلُكَ وَاَتَوَجَّهُ إِلَيْكَ بِحَبِيْبِكَ الْمُصْطَفَى عِنْدَكَ يَاحَبِيْبِنَا يَامُحَمَّدُ إِنَّا نَتَوَسَّلُ بِكَ إِلَى رَبِّكَ ۩ فَاشْفَعْ لَنَا عِنْدَالْمَوْلَى الْعَظِيْمِ ۩ يَانِعْمَ الرَّسُوْلُ الطَّاهِرُ <br><br>
+
+</p><p>Dibaca 3X:</p><p style="text-align: right;" class="arab">
+  اللّٰهُـمَّ شَفِّعْهُ فِيْنَا بِجَاهِهِ عِنْدَكَ  <br><br>
+
+ وَاجْعَلْنَا مِنْ خَيْرِالْمُصَلِّيْنَ وَالْمُسَلِّمِيْنَ عَلَيْهِ وَمِنْ خَيْرِ الْمُقَرَّبِيْنَ مِنْهُ وَالْوَارِدِيْنَ عَلَيْهِ ۩ وَمِنْ أَخْيَارِالْمُحِبِّيْنَ فِيْهِ وَالْمَحْبُوْبِيْنَ لَدَيْهِ وَفَرِحْنَابِهِ فِيْ عَرَصَاتِ الْقِيَامَةِ ۩ وَاجْعَلْهُ لَنَا دَلِيْلاً إِلَى جَنَّةِالنَّعِيْمِ بِلاَمَؤُنَةٍ وَلاَمَشَقَّةٍ وَلاَمُنَاقَشَةِ الْحِسَابِ ۩ وَاجْعَلْهُ مُقْبِلاً عَلَيْنَا وَلَاتجْعَلْهُ غَاضِبًا عَلَيْنَا وَاغْفِرْلَنَاوَلِجَمِيْعِ الْمُسْلِمِيْنَ ۩ أَلأَحْيَاءِمِنْهُمْ وَالْمَيِّتِيْنَ وَأَخِرُدَعْوَانَا اَنِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِيْنَ ۩ فَأَسْئَلُكَ يَا اللّٰهْ  يَا اللّٰهْ  يَا اللّٰهْ  يَاحَيُّ يَا قَيُّوْمُ يَاذَاالْجَلاَلِ والْإِكْرَامِ ۩ لاَإلَهَ لاَإلَهَ إِلاَّ أَنْتَ سُبْحَانَكَ إِنِّيْ كُنْتُ مِنَ الظَّالِمِيْنَ ۩ { أُدْعُ مَا شِئْتَ مَقَامْ مُسْتَجَابَةْ } أَسْئَلُكَ بِمَا حَمَلَ كُرْسِيُّكَ مِنْ عَظَمَتِكَ وَجَلَالِكَ وَبَهَائِكَ وَقُدْرَتِكَ  وَسُلْطَانِكَ ۩ وَبِحَقِّ أَسْمَائِكَ الْمَحْزُوْنَةِ الْمَكْنُوْنَةِ الْمُطَهَّرَةِ الَّتِيْ لَمْ يَطَّلِعْ عَلَيْهَاأَحَدٌ مِنْ خَلْقِكَ ۩ وَبِحَقِّ الْإِسْمِ الَّذِيْ وَضَعْتَهُ علَى اللَّيْلِ فَأَظْلَمَ ۩ وَعَلَى النَّهَارِفَاسْتَنَارَ ۩ وَعَلَى السَّمَاوَاتِ فَاسْتَقَلَّتْ ۩ وَعَلَى الْبِحَارِفَانْفَجَرَتْ ۩ وَعَلَى الْأرْضِ فَاسْتَقَرَّتْ ۩ وَعَلَى الْعُيُوْنِ فَنَبَعَتْ ۩ وَعَلَى السَّحَابِ فَأَمْطَرَتْ ۩ وَأَسْئَلُكَ بِالْأَسْمَاءِ المَكْتُوْبَةِ فِيْ جَبْهَةِ جِبْرِيْلَ عَلَيْهِ السَّلَامُ ۩ وَأَسْئَلُكَ بِالْأَسْمَاءِ المَكْتُوْبَةِ فِيْ جَبْهَةِ إِسْرَافِيْلَ عَلَيْهِ السَّلَامُ ۩ وَعَلَى جَمِيْعِ الْمَلَآئِكَةِ وَأَسْئَلُكَ بِالْأسْمَاءِ المَكْتوْبَةِ حَوْلَ الْعَرْشِ ۩ وَبِالْأسْمَاءِ المَكْتُوْبَةِ حَوْلَ الْكُرْسِيِّ ۩ وَأَسْئَلُكَ بِاسْمِكَ الْعَظِيْمِ الْأَعْظَمِ الَّذِيْ سَمَّيْتَ بِهِ نَفْسَكَ وَأَسْئَلُكَ بِحَقِّ أَسْمَائِكَ كُلِّهَا مَا عَلِمْتُ مِنْهَا وَمَالَمْ أَعْلَمْ ۩ وَأَسْئَلُكَ بِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا آَدَمُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأسْمَاءِ الَّتِيْ دَعَاكَ بِهَا نُوْحٌ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَاصَالِحٌ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا يَعْقُوْبُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا يُوْسُفُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا يُوْنُسُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا مُوْسَى عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا هَارُوْنُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا شُعَيْبٌ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا إِبْرَاهِيْمُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا إِسْمَاعِيْلُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا دَاوُدُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا سُلَيْمَانُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا زَكَرِيَّاءُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا يَحْيَى عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا يُوْشَعُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَاالْخَضِرُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا إِلْيَاسُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا الْيَسَعُ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا ذُوالْكِفْلِ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا عِيْسَى بِنْ مَرْيَمَ عَلَيْهِ السَّلَامُ ۩ وَبِالْأَسْمَاءِ الَّتِيْ دَعَاكَ بِهَا مُحَمَّدٌ صَلَّى اللّٰهُ  عَلَيْهِ وَسَلَّمَ نَبِيُّكَ وَرَسُوْلُكَ وَحَبِيْبُكَ وَصَفِيُّكَ ۩ يَامَنْ قَالَ وَقَوْلُهُ الْحَقُّ ۩ وَاللّٰهُ  خَلَقَكُمْ وَمَاتَعْمَلُوْنَ ۩ وَلَايَصْدُرُ عَنْ أحَدٍ مِنْ عَبِيْدِهِ قَوْلٌ وَلَافِعْلٌ وَلَاحَرَكَةٌ وَلَاسُكُوْنٌ إلَّاوَقَدْسَبَقَ فِيْ عِلْمِهِ وَقَضَاءِهِ وَقَدَرِهِ كَيْفَ يَكُوْنُ كَمَا أَلْهَمْتَنِيْ وَقَضَيْتَ لِيْ بِجَمْعِ هَذَا الْكِتَابِ ۩ وَيَسَّرْتَ عَلَيَّ فِيْهِ الطَّرِيْقَ وَالْأَسْبَابَ ۩ وَنَفَيْتَ عَنْ قَلْبِيْ فِيْ هَذَا النَّبِيِّ الْكَرِيْمِ الشَّكَّ وَالْإِرْتِيَابِ وَغَلَّبْتَ حُبَّهُ عِنْدِيْ عَلَى حُبِّ جَمِيْعِ الْأَقْرِبَاءِ أَسْئَلُكَ يَااللّٰهْ  يَااللّٰهْ  يَااللّٰهْ  أَنْ تَرْزُقَنِيْ وَكُلَّ مَنْ أَحَبَّهُ وَاتَّبَعَهُ شَفَاعَتَهُ وَمُرَافَقَتَهُ يَوْمَ الْحِسَابِ مِنْ غيْرِ مُنَاقَشَةٍ وَلاَعَذاَبٍ وَلاَتَوْبِيْخٍ وَلاَعِتَابٍ ۩ وَأَنْ تَغْفِرَ لِيْ ذُنُوْبِيْ وَتَسْتُرَ عُيُوْبِيْ يَاوَهَّابُ يَاغَفَّارُ وَأَنْ تُنَعِّمَنِيْ بِالنَّظَرْ إِلَى وَجْهِكَ الْكَرِيْمِ ۩ فِيْ جُمْلَةِ الْآَحْبَابِ ۩ يَوْمَ الْمَزِيْدِ وَالثَّوابِ ۩ وَأنْ تَتَقَبَّلَ مِنِّيْ عَمَلِيْ وَأَنْ تَعْفُوَ عَمَّا أحَاطَ عِلْمُكَ بِهِ مِنْ خَطِيْئَتِيْ وَنِسْيَانِيْ وَزَلَلِيْ وَأَنْ تُبَلِّغَنِيْ مِنْ زِيَارَةِ قِبْرِهِ وَالتَّسْلِيْمِ عَليْهِ وَعَلَى صَاحِبَيْهِ غَايَةَ أَمَلِيْ بِمَنِّكَ وَفَضْلِكَ وَجُوْدِكَ وَكَرَمِكَ يَارَءُوْفُ يَا رَحِيْمُ يَاوَلِيُّ وَأنْ تُجَازِيَهُ عَنِّيْ ۩ وَعَنْ كُلَّ مَنْ آَمَنَ بِهِ وَاتَّبَعَهُ مِنَ الْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ اَلْأَحْيَاءِمِنْهُمْ وَالأَمْوَاتِ أَفْضَلَ وَأَتَمَّ وَأَعَمَّ مَاجَازَيْتَ بِهِ أَحَدًا مِنْ خَلْقِكَ يَاقَوِيُّ يَا عَزِيْزُ يَا عَلِيُّ<br><br>
+
+إبْتِدَاءُ الْوِرْدِ يَوْمَ الْأَحَدِ <br><br>
+
+وَأَسْئَلُكَ اللّٰهُـمَّ بَحَقِّ مَا أَقْسَمْتُ بِهِ عَلَيْكَ أنْ تُصَلِّيَ عَلىَ مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ عَدَدَمَا خَلَقْتَ مِنْ قَبْلِ أَنْ تَكُوْنَ السَّمَاءُ مَبْنِيَّةً ۩ وَالْأرْضُ مَدْحِيَّةً  ۩  وَالْجِبَالُ عُلْوِيَّةً ۩ وَالْعُيُوْنُ مُنْفَجِرَةً ۩  وَالْبِحَارُ مُسَخَّرَةً ۩ وَالأَنْهَارُ مُنْهَمِرَةً ۩ وَالشَّمْسُ مُضْحِيَةً ۩ وَالْقَمَرُ مُضِيئًا ۩ وَالنَجْمُ مُنِيْرًا ۩ وَلاَ يَعْلَمُ أَحَدٌ حَيْثُ تَكُوْنَ إِلاَّ أَنْتَ ۩ وَأَنْ تُصَلِّيَ وَعَلَى أَلِهِ عَدَدَكَلاَمِكَ وَأَنْ تُصَلِّيَ عَلَيْهِ وَعَلَى أَلِهِ عَدَدَآَيَاتِ الْقُرْآنِ وَحُرُوْفِهِ ۩ وَأَنْ تُصَلِّيَ عَلَيْهِ وَعَلَى أَلِهِ عَدَدَمَنْ يُصَلِّى عَلَيْهِ  ۩  وَأَنْ تُصَلِّيَ عَلَيْهِ وَعَلَى أَلِهِ عَدَدَمَنْ لَمْ يُصَلِّ عَلَيْهِ ۩ وَأَنْ تُصَلِّيَ عَلَيْهِ وَعَلَى أَلِهِ مِلْءَ أَرْضِكَ  ۩ وَأَنْ تُصَلِّيَ عَلَيْهِ وَعَلَى أَلِهِ عَدَدَمَا جَرَى بِهِ الْقَلَمُ فِيْ أُمِّ الْكِتَابِ ۩  وَأَنْ تُصَلِّيَ عَلَيْهِ وَعَلَى أَلِهِ عَدَدَمَا خَلَقْتَ فِيْ سَبْعِ سَمَوَاتِكَ وَأَنْ تُصَلِّيَ عَلَيْهِ وَعَلَى أَلِهِ عَدَدَمَا أَنْتَ خَالِقُهُ فِيْهِنَّ إِلَى يَوْمِ الْقِيَامَةِ فِيْ كُلَّ يَوْمٍ أَلْفَ مَرَّةٍ ۩ وَأَنْ تُصَلِّيَ عَلَيْهِ وَعَلَى أَلِهِ عَدَدَ قَطْرِالْمَطَرِ ۩ وَكُلِّ قَطْرَةٍ قَطَرَتْ مِنْ سَمَائِكَ إِلَى أَرْضِكَ مِنْ يَوْمِ خَلَقْتَ الدُّنْيَا إِلَى يَوْمِ الْقِيَامَةِ فِيْ كُلَّ يَوْمٍ أَلْفَ مَرَّةٍ   <br><br>
+
+{ إنْتِهَاءُ الْوِرْدِ يَوْمَ السَّبْتِ }</p><br><br><p><i></i></p><p>WIRID HARI SABTU<br><br>
+
+Ya Allah, limpahkanlah rahmat kepada baginda kami Muhammad beserta keluarganya, Berikanlah wasilah, fadhilah dan derajat luhur. Kirimkanlah kepadanya maqam yang terpuji yang Engkau janjikan kepadanya. Sungguh Engkau adalah Tuhan Yang Tak Pernah Melanggar janji. Ya Allah, muliakanlah urusanya, jelaskanlah bukti kebenaranya, terangkanlah hujjahnya, jelaskanlah keutamaannya, terimalah syafaatnya kepada umatnya, berilah kami kemampuan melaksanakan sunnahnya, wahai Than Seluruh Alam, wahai Tuhan Pemilih Arasy nan agung.
+<br><br>
+Ya Allah, kumpulkanlah kami bersama kelompoknya serta dibawah panjinya. Tuangilah kami dengan gelasnya, berilah kami manafaat dengan mencintainya. Kabulkanlah wahai Tuhan Semesta Alam. Ya Allah sampaikanlah kepadanya salam yang terbaik, sampaikanlah balasan amal kami dengan balasan terbaik yang Engkau berikan kepadanya sebagai seorang nabi dari umatnya, wahai Tuhan Semesta Alam.
+<br><br>
+Ya Allah, aku memohon agar Engkau mengampuni kami, menyayangi kami, memaafkan kami, menyelamatkan kami dari segala bala dan bencana yang keluar dari bumi dan turun dari langit, sesungguhnya Engkau adalah Tuhan Yang Maha Kuasa dengan segala rahmat-Mu. Ampunilah kaum mukminin dan mukminat, kaum muslimin dan muslimat baik yang masih hidup maupun sudah Wafat.
+<br><br>
+Semoga Allah meridhai istri-istrinya yang suci, ibunya kaum mukminin. Semoga Allah meridhai para sahabatnya yang berilmu, imannya petunjuk, pelita dunia, menjadi petunjuk bagi pengikutnya dan pengikut dari para pengikutnya. Semoga kebaikan tetap terlimpahkan kepada mereka hingga hari kiamat. Segala puji bagi Allah, Tuhan Semesta Alam.
+<br><br>
+Ya Allah, Tuhan para ruh dan jasad yang hancur, aku memohon kepada-Mu dengan ketaatan ruh pada jasadnya, dengan ketaatan jasad yang bertemu dengan syarafnya dengan kalimat-kalimat-Mu yang berguna bagi mereka, dengan mengambil hak-Mu dari mereka, dengan para makhluk-Mu yang menanti keputusan qadha-Mu, dengan mengharap rahmat-Mu dengan menakuti siksa-Mu, hendaklah Engaku menjadikan cahaya pada sanubariku, sehingga bisa mengingat-Mu baik siang dan malam hari dengan lisanku, dan bisa beramal shaleh, lalu limpahkan rezeki kapadaku. Ya Allah, limpahkanlah rahmat kepada baginda kami Muhammad sebagaimana Engkau merahmati b agenda kami Ibrahim. Berikanlah keberkahan kepada baginda kami Muhammad sebagaimana Engkau memberi keberkahan kepada baginda kami Ibrahim. Ya Allah jadikanlah shalawat dan keberkahan-Mu untuk baginda kami Muhammad beserta keluarganya sebagaimana Engkau melimpahkannya kepada baginda kami Ibrahim beserta keluarganya. Sungguh Engkaulah Tuhan Yang Maha Terpuji dan Maha Luhur. Dan llimpahkanlah keberkahan kepada baginda kami Muhammad beserta keluarganya, sebagaimana Engkau melimpahkannya kepada baginda kami Ibrahim beserta keluarganya. Sungguh, Engkaulah Tuhan Yang Maha Terpuji dan Maha Luhur.
+<br><br>
+Ya Allah, limpahkanlah rahmat kepada baginda kami Muhammad, hamba-Mu, rasul-Mu, dan limpahkan pula kepada kaum mukminin dan mukminat, kaum muslimin dan muslimat, Ya Allah, limpahkanlah rahmat kepada baginda kami Muhammad beserta keluarganya, sebanyak yang diketahui oleh pengetahuan-Mu, yang dicatat oleh kitab-Mu, yang disaksikan oleh malaikat-Mu, dengan shalawat yang kekal sekekal kerajaan Allah.
+<br><br>
+Ya Allah, aku memohon dengan nama-nama-Mu yang agung, baik yang aku ketahui ataupun tidak, dengan nama-nama yang Engkau pakai menamai-Mu, baik yang aku ketahui ataupun tidak, sudilah Engkau bershalawat kepada baginda kami Muhammad, hamba-Mu, nabi-Mu, rasul-Mu, sebanyak segala hal yang Engkau ciptakan dari sebelum langit didirikan, bumi dibentangkan, gunung dipancangkan, mata air dipancarkan, matahari disinar,  bulan diberi cahaya, bintang berkelip-kelip, laut dialirkan dan pepohonan dibuahi.
+<br><br>
+Ya Allah, limpahkanlah rahmat kepada baginda kami Muhammad sebanyak pengetahuan-Mu. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak kesabaran-Mu. Limpahkanlah rahmat kepada  baginda kami Muhammad sebanyak kalam-Mu. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak nikmat-Mu. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak karunia-Mu. Li mpahkanlah rahmat kepada baginda kami Muhamad  sebanyak kemurahan-Mu. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak langit-Mu. Limpahkanlah rahmat kepada baginda kami Muahmmad sebanyak bumi-Mu.
+<br><br>
+Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak yang Engkau ciptakan di tujuh lapis langit-Mu dari para malaikat-Mu. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak yang Engkau ciptakan dibumi-Mu dari para jin manusia dan selainnya, dari hewan liar, burung dan lainnya.
+<br><br>
+Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak yang ditulis dengan qalam dalam pengetahuan ghaib-Mu dan apapun yang ditulis dengannya hingga hari kiamat. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak etsan air dan hujan. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak yang bertahmid, bersyukur, bertahlil, mengagungkan-Mu, dan menyaksikan bahwa Engkau adalah Allah. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak shalawat-Mu dan para malaikat-Mu yang tercurah kepadanya. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak makhluk-Mu yang bersholawat kepadanya. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak makhluk-Mu yang tidak bersholawat kepadanya. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak gunung, pasir dan kerikil. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak pepohonan dan dedaunannya, serta sebanyak tanah dan bebannya.
+<br>Limpahkanlah rahmat kepada baginda kami Muhammad sepanjang tahun, sebanyak yang Engkau ciptakan di dalamnya dan sebanyak yang meninggal di dalamnya. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak yang Engkau ciptakan tiap harinya dan sebanyak yang meninggal di dalamnya sampai hari kiamat.
+<br><br>
+Ya Allah, limpahkanlah rahmat kepada baginda kami Muhammad sebanyak awan yang bergerak antara langit dan bumi dan sebanyak tetsan air yang turun. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak angin yang di tundukkan di belahan bumi bagian timur dan barat, maupun di perut dan kiblat bumi. Limpahkan rahmat kepada baginda kami Muhammad sebanyak  bintang-bintang di langit. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak apa yang Engkau ciptakan di lautan-Mu, berupa ikan-ikan, binatang melata, air, pasir, dan lain sebagainya. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak tumbuh-tumbuhan dan kerikil. Limpahkanlah rahmat kepada bagina kami Muhammad sebanyak semut. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak air tawar. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak air asin. Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak nikmat yang Engkau berikan kepada seluruh makhluk-Mu.
+<br><br>
+Limpahkanlah rahmat kepada baginda kami Muhammad sebanyak hukuman dan azab kepada orang yang mengingkari baginda kami Muhammad SAW. Limpahkanlah rahmat kepada baginda kami  Muhammad sepanjang dunia dan akhirat ada. Limpahkanlah rahmat kepada baginda kami Muhammad sepanjang para makhluk berada dalam surga. Limpahkanlah rahmat kepada baginda kami Muhammad sepanjang para makhluk berada dalam neraka.
+<br><br>
+Limpahkanlah rahmat kepada baginda kami Muhammad sesuai dengan cinta dan ridho-Mu kepadanya. Limpahkanlah rahmat kepada baginda kami Muhammad selama-lamanya, berikanlah kedudukan yang dekat di sisi-Mu. berikanlah dia wasilah, keutamaan, syafaat, derajat yang luhur, maqam terpuji yang telah Engkau janjikan kepadanya. Engkau adalah Tuhan Yang Tidak Pernah Ingkar Janji.
+<br><br>
+Ya Allah, aku memohon kepada-Mu karena Engkau adalah rajaku, bagindaku, pemimpinku, keyakinanku, dan harapanku. Aku memohon kepada-Mu dengan kehormatan bulan haram, negeri haram, masy’aril haram, kuburan nabi-Mu a.s. Aku memohon Engkau melimpahkan kebaikan kepadaku yang tidak diketahui selain Engkau.
+<br>Palingkanlah aku dari keburukan yang tidak diketahui selain Engkau. Ya Allah, wahai Tuhan yang memberikan Nabi Syits kepada Nabi Adam, memberikan Nabi Ismail dan Nabi Ishaq kepada Nabi Ibrahim, mengembalikan Nabi Yusuf kepada Nabi Ya’qub, menghilangkan ujian Nabi Ayyub, mengembalikan Musa kepada ibunya, menambah ilmu pengetahuan kepada Nabi Khidir, memberikan Nabi Sulaiman kepada Nabi Dawud, memberikan Nabi Yahya kepada Nabi Zakariya, Memberikan Nabi Isa kepada Maryam, memelihara putra Nabi Syu’aib, aku memohon agar Engkau melimpahkan rahmat kepada baginda kami Muhammad dan kepada seluruh nabi dan rosul.
+<br><br>
+Wahai Tuhan yang memberikan syafaat, derajat yang luhur, kepada baginda kami Muhammad SAW. Ampunilah seluruh dosa-dosaku. Tutupilah seluruh aib-aibku. Selamatkanlah aku dari neraka. Berikanlah kepadaku keridhoan, kepercayaan, ampunan, dan kebaikan-Mu.
+<br><br>
+Limpahkanlah kepadaku kenikmatan di surga-Mu bersama para nabi, kaum yang jujur, kaum syuhada, kaum sholihin. Sungguh, Engkau adalah Tuhan Yang Maha Kuasa Atas Segala Sesuatu.
+<br><br>
+Limpahkanlah rahmat kepada baginda kami Muhammad beserta keluarganya selama angina memecahkan awan yang kerkumpul dan setiap ruh merasakan kematian. Sampaikanlah salam kepada ahli salam, sebagai salam dan penghormatan. Ya Allah, istimewakanlah aku dengan apa yang Engkau ciptakan. Jangan Engkau sibukkan aku dengan apa yang Engkau bebankan kepadaku. Janganlah halangi aku memohon kepada-Mu. janganlah siksa aku sedang aku memohon ampun kepada-Mu. (3x).
+<br><br>
+Ya Allah, limpahkanlah rahmat kepada baginda kami Muhammad beserta keluarganya. Ya Allah, aku memohon dan menghadap kepada-Mu dengan kekasih-Mu yang terpilih di sisi-Mu, wahai kekasih kami, wahai baginda kami Muhammad, kami bertawasul denganmu kepada Tuhanmu, berikanlah kami syafaat di di hadapan Tuhan Yang Maha Agung, wahai sebaik-baik utusan yang bersih. Ya Allah berikanlah syafaat kepada kami berkat penghargaan di sisi-Mu. (3x). Jadikanlah kami sebaik-baik orang yang bersholawat dan menyampaikan salam kepadanya, jadikanlah sebaik-baik orang yang dekat kepadanya, yang datang kepadanya, yang mencintai dan dicintainya. Bahagiakanlah kami bersamanya pada hari Kiamat.
+<br><br>
+Dan jadikanlah ia sebagai petunjuk kami ke jalan surga kenikmatan tanpa ada halangan dan kesulitan apa pun dan tanpa siding hisab apapun. Jadikanlah ia menerima kami , janganlah jadikan beliau membenci kami. Ampunilah kami , kedua orang tua kami, dan kaum muslimin, baik yang masih hidup ataupun yang sudah wafat. Dan akhir doa kami adalah Alhamdulillah Rabbil ‘Alamin ( segala puji hamya milik Allah Tuhan Seluruh Alam ).
+<br><br>
+Aku memohon kepada-Mu Ya Allah, Ya Allah, Wahai Tuhan Yang Maha Hidup, Wahai Tuhan Yang Berdiri Sendiri. Wahai Tuhan yang memiliki keagungan dan kemuliaan, tiada Tuhan selain Engkau, sesungguhnya aku termasuk orang-orang yang zalim, Aku memohon dengan apa yang dibawa kursi-Mu, yakin keagungan-Mu, kehebatan-Mu, kekuatan-Mu,dan kekuasaan-Mu. Dengan nama-nama-Mu yang terjaga, terpelihara, tersucikan, dan tiada yang mengetahuinya seorang pun.
+<br><br>
+Dengan nama yang Engkau letakkan pada malam lalu menjadi gelap, pada siang lalu menjadi terang, pada langit lalu menjadi tegak, pada bumi lalu menjadi kukuh, pada lautan lalu berombak, pada mata air lalu mengalir, pada awan lalu menjadi hujan. Aku memohon kepada-Mu dengan nama-nama yang tertulis pada kening malaikat jibril a.s.,dengan nama-nama yang tertulis pada kening malaikat israfil a.s., dan pada seruluh malaikat. Aku memohon kepada-Mu dengan nama-nama tertulis di sekitar arasy, dengan nama-nama yang tertulis di sekitar kursi-Mu.
+<br>Aku memohon dengan nama-nama-Mu yang teramat agung yang Engkau gunakan menamai diri-Mu. Aku memohon dengan seluruh namam-Mu, aik yang aku ketahui maupun tidak. Aku memohon kepada-Mu dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Adam a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa nabi Nuh a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Sholeh a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Ya’qub a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Yusuf a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa  Nabi Yunus a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Musa a.s. dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Harun a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Syu’aib a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Ibrahim a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Ismail a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Dawud a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Sulaiman a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Zakaria a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Yahya a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Hud a.s, dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Luth a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Armiya a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Dzul Qarnain a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Yusya’ a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Khidir a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Ilyas a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Ilyasa’ a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Dzulkifli a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Isa a.s., dengan nama-nama yang dipanjatkan kepada-Mu dalam doa Nabi Muhammad a.s., nabi-Mu, rasul-Mu,  kekasih-Mu, teman baik-Mu, wahai Tuhan Yang Berfirman, “ Sesungguhnya Allah  telah menciptakan kalian dan apa yang kalian lakukan.”
+<br><br>
+Tidaklah lahir dari seorang hamba-Nya suatu perkataan, perbuatan, gerakan adau keadaan diam, kecuali itu semua bagaimana pun bentuknya, sudah ditetapkan dengan pengetahuan, qadha dan qadar Allah. Sebagamana Engkau mengilhami dan menetapkanku membaca kitab ini serta memudahkan jalan dan pintunya. Engkau menghapus keraguan dan kebimbangan dari sanubariku dalam perkaran nabi yang mulia. Engkau membuat rasa cintaku padanya mengalahkan rassa cinta kepada kerabat dan kekasih. Aku memohon kepada-Mu Ya Allah, Ya Allah, Ya Allah, berkailah aku dan setiap yang mencintai dan mengikutinya dengan syafaatnya dan kesempatan menemaninya pada hari perhitungan hisab, tanpa melalui siding, siksa, teguran dan peringatan. Aku memohon Engkau mengampuni dosa-dosaku, menutupi aib-aibku, wahai Tuhan Yang Maha Pemberi dan Maha Pengampun.
+<br><br>
+Aku memohon Engkau memberikaku kenikmatan menatap wajah-Mu yang mulia dikalangan para pencinta pada hari tambahan pahala. Aku memohon Engkau menerima amal ibadahku. Aku memohon Engkau mengampuni kesalahan, kekeliruan,dan kekhilafan yang diketahui pengetahuan-Mu. 
+<br><br>
+Aku memohon Engkau menyampaikanku pada kuburnya dan mendapat kesempatan menyampaikan salam padanya dan sahabatnya. Itulah puncak harapanku dengan kasih saying, karunia dan kemurahan-Mu. Wahai Tuhan Yang Maha Penyantun, Yang Maha Pengasih, Yang Maha Pelindung. Aku memohon Engkau membalasnya dari amalku dan amal semua yang beriman dan mengikutinya dari kaum muslimin dan muslimat baik yang hidup ataupun sudah wafat, dengan balasan yang paling utama, balasan yang paling sempurna, balasan yang paling menyeluruh, yang layak Engkau berikan kepada hamba-Mu, wahai  Tuhan Yang Maha Kuat, Yang Maha Mulia, Yang Maha Tinggi.
+<br><br>
+Aku memohon kepada-Mu, Ya Allah dengan hak kebenaran sumpahku pada-Mu untuk bershalawat kepada baginda kami Muhammad beserta keluarganya sebanyak yang Engkau ciptakan, laut ditundukkan, sungai dialirkan, matahari yang dinyatakan, bulan yang diberi cahaya dan bintang berkelipan. Tidak ada yang mengetahui keadaan-Mu selain Engkau. Sudilah Engkau melimpahkan rahmat kepada beliau beserta keluarganya sebanyak kalam-Mu. Sudilah Engkau melimpahkan rahmat kepada beliau beserta keluarganya sebanyak ayat dan huruf Al-Qur’an. 
+<br><br>
+Sudilah Engkau melimpahkan rahmat kepada beliau beserta keluarganya sebanyak yang tidak bershalawat kepadanya. Sudilah Engkau melimpahkan rahmat kepada beliau beserta keluarganya sepenuh bumi-Mu.
+<br><br>
+Sudilah Engkau melimpahkan rahmat kepada beliau beserta keluarganya sebanyak yang tertulis qalam dalam ummul kitab. Sudilah Engkau melimpahkan rahmat kepada beliau beserta keluarganya sebanyak apa yang Engkau ciptakan di langit lapis tujuh. Sudilah Engkau melimpahkan rahmat kepada beliau beserta keluarganya sebanyak apa yang Engkau adalah penciptanya di dalamnya hingga hari kiamat, yang tiap harinya seribu kelipatan. Sudilah Engkau melimpahkan rahmat kepada beliau beserta keluarganya sebanyak tetesan air hujan dan tiap tetesan yang turun dari langit ke bumi-Mu, sejak awal penciptaan dunia hingga hari kiamat, yang tiap harinya seribu kelipatan.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

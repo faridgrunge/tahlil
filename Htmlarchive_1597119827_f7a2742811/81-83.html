@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>TAFSIR SURAH YASIN AYAT 81 - 83</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+
+<p class="arab">{أَوَلَيْسَ الَّذِي خَلَقَ السَّمَوَاتِ وَالأرْضَ بِقَادِرٍ عَلَى أَنْ يَخْلُقَ مِثْلَهُمْ بَلَى وَهُوَ الْخَلاقُ الْعَلِيمُ (81) إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَنْ يَقُولَ لَهُ كُنْ فَيَكُونُ (82) فَسُبْحَانَ الَّذِي بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ وَإِلَيْهِ تُرْجَعُونَ (83) }</p>
+<p><em>Dan tidakkah Tuhan Yang menciptakan langit dan bumi itu berkuasa menciptakan yang serupa dengan itu? Benar Dia berkuasa. Dan Dialah Maha Pencipta lagr Maha Mengetahui. Sesungguhnya keadaan-Nya apabila Dia menghendaki sesuatu hanyalah berkata kepadanya, "Jadilah!" Maka terjadilah ia. Maka Mahasuci </em>(Allah) <em>yang di tangan-Nya kekuasaan atas segala sesuatu dan kepada-Nyalah kamu dikembalikan. </em></p>
+<p>Allah Swt. berfirman seraya memberitakan dan mengingatkan (manusia) akan kekuasaan-Nya Yang Mahabesar di langit yang tujuh lapis; berikut semua bintang yang ada padanya, baik yang tetap maupun yang beredar, Yang Mahabesar di bumi lapis tujuh berikut semua gunung, padang pasir, laut, dan hutan belantara serta apa yang ada di antaranya. Dia memberikan petunjuk melalui hal tersebut yang menunjukkan akan kekuasaan-Nya, bahwa Tuhan Yang Menciptakan segala sesuatu yang besar-besar itu mampu menghidupkan kembali, jasad-jasad yang telah mati.</p>
+<p>Allah Swt. telah berfirman:</p>
+<p class="arab">{لَخَلْقُ السَّمَوَاتِ وَالأرْضِ أَكْبَرُ مِنْ خَلْقِ النَّاسِ}</p>
+<p><em>Sesungguhnya penciptaan langit dan bumi lebih besar daripada penciptaan manusia. </em>(Al-Mu-min: 57)</p>
+<p>**********</p>
+<p>Adapun firman Allah Swt.:</p>
+<p class="arab">{أَوَلَيْسَ الَّذِي خَلَقَ السَّمَوَاتِ وَالأرْضَ بِقَادِرٍ عَلَى أَنْ يَخْلُقَ مِثْلَهُمْ}</p>
+<p><em>Dan tidakkah Tuhan yang menciptakan langit dan bumi itu berkuasa menciptakan yang serupa dengan itu? </em>(Yasin: 81)</p>
+<p>Yakni serupa dengan manusia, maka Dia mengembalikan mereka menjadi hidup kembali sebagaimana Dia memulai penciptaan mereka. Demikianlah menurut pendapat Ibnu Jarir.</p>
+<p>Dan ayat ini semakna dengan apa yang disebutkan oleh Allah Swt. dalam ayat lain melalui firman-Nya:</p>
+<p class="arab">{أَوَلَمْ يَرَوْا أَنَّ اللَّهَ الَّذِي خَلَقَ السَّمَوَاتِ وَالأرْضَ وَلَمْ يَعْيَ بِخَلْقِهِنَّ بِقَادِرٍ عَلَى أَنْ يُحْيِيَ الْمَوْتَى بَلَى إِنَّهُ عَلَى كُلِّ شَيْءٍ قَدِيرٌ}</p>
+<p><em>Dan apakah mereka tidak memperhatikan, bahwa sesungguhnya Allah yang menciptakan langit dan bumi dan Dia tidak merasa payah karena menciptakannya, kuasa menghidupkan orang-orang mati? Ya </em>(bahkan) <em>sesungguhnya Dia Mahakuasa atas segala sesuatu. </em>(Al-Ahqaf: 33)</p>
+<p>Dan dalam surat ini disebutkan oleh firman-Nya:</p>
+<p class="arab">{بَلَى وَهُوَ الْخَلاقُ الْعَلِيمُ إِنَّمَا أَمْرُهُ إِذَا أَرَادَ شَيْئًا أَنْ يَقُولَ لَهُ كُنْ فَيَكُونُ}</p>
+<p><em>Benar, Dia berkuasa. Dan Dialah Maha Pencipta lagi Maha Mengetahui. Sesungguhnya keadaan-Nya apabila Dia menghendaki sesuatu hanyalah berkata kepadanya, "Jadilah!" Maka terjadilah ia. </em>(Yasin: 81-82)</p>
+<p>Yakni sesungguhnya Dia hanya memerintahkan kepada sesuatu sekali perintah, tidak perlu diulangi atau ditegaskan: <em>Apabila Allah menghendaki suatu urusan, maka Dia hanya berfirman kepadanya, "Jadilah," sekali ucap, maka jadilah ia.</em></p>
+<p class="arab">قَالَ الْإِمَامُ أَحْمَدُ: حَدَّثَنَا ابْنُ نُمَيْر، حَدَّثَنَا مُوسَى بْنُ المسَيَّب، عَنْ شَهْر، عَنْ عَبْدِ الرَّحْمَنِ بْنِ غَنْم، عَنْ أَبِي ذَر، رَضِيَ اللَّهُ عَنْهُ، أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: "إِنَّ اللَّهَ يَقُولُ: يَا عِبَادِي، كُلُّكُمْ مُذْنِبٌ إِلَّا مِنْ عَافَيْتُ، فَاسْتَغْفِرُونِي أَغْفِرْ لَكُمْ. وَكُلُّكُمْ فَقِيرٌ إِلَّا مَنْ أَغْنَيْتُ، إِنِّي جَوَادٌ مَاجِدٌ وَاجِدٌ أَفْعَلُ مَا أَشَاءُ، عَطَائِي كَلَامٌ، وَعَذَابِي كَلَامٌ، إِذَا أَرَدْتُ شَيْئًا فَإِنَّمَا أَقُولُ لَهُ كُنْ فَيَكُونُ".</p>
+<p>Imam Ahmad mengatakan, telah menceritakan kepada kami Muhammad ibnu Namir, telah menceritakan kepada kami Musa ibnul Musayyab, dari Syahr, dari Abdur Rahman ibnu Ganam, dari Abu Zar r.a. yang mengatakan bahwa sesungguhnya Rasulullah Saw. pernah bersabda: <em>Sesungguhnya Allah Swt. berfirman, "Hai hamba-hamba-Ku, kalian semua berdosa terkecuali orang yang Aku maafkan. Maka mohonlah ampunan kepada-Ku, tentu Aku mengampuni kalian. Dan kalian semua miskin, kecuali orang yang Aku beri kecukupan; sesungguhnya Aku Maha Pemurah, Mahaagung, Mahakaya, Aku melakukan apa saja yang Kukehendaki. Pemberian-Ku hanya satu kata, dan azab-Ku hanya satu kata; apabila Aku menghendaki sesuatu, sesungguhnya Aku hanya mengatakan kepadanya, 'Jadilah!' Maka jadilah ia.&rdquo;</em></p>
+<p>********</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{فَسُبْحَانَ الَّذِي بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ وَإِلَيْهِ تُرْجَعُونَ}</p>
+<p><em>Maka Mahasuci </em>(Allah) <em>yang ditangan-Nya kekuasaan atas segala sesuatu dan kepada-Nyalah kamu dikembalikan. </em>(Yasin: 83)</p>
+<p>Yakni Mahasuci dan Mahabersih Allah, sebagai ungkapan memahasucikan dan memahabersihkan Tuhan Yang Hidup, Yang terus menerus mengatur makhluk-Nya dari semua keburukan. Di tangan kekuasaan-Nyalah terletak semua kendali kekuasaan di langit dan di bumi, dan hanya kepada-Nyalah dikembalikan semua utusan. Dialah Yang Menciptakan dan Yang Memerintah, dan kepada-Nyalah dikembalikan semua hamba pada hari mereka dibangkitkan, lalu Dia membalas setiap orang sesuai dengan amal perbuatannya. Dia Mahaadil, Pemberi Nikmat dan Pemberi Karunia. Maka firman Allah Swt.: <em>Maka Mahasuci </em>(Allah) <em>yang di tangan-Nya kekuasaan atas segala sesuatu. </em>(Yasin: 83)</p>
+<p>Semakna dengan firman Allah Swt.:</p>
+<p class="arab">{قُلْ مَنْ بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ}</p>
+<p><em>Katakanlah, "Siapakah yang di tangan-Nya berada kekuasaan atas segala sesuatu ?&rdquo; </em>(Al-Mu-minun: 88)</p>
+<p>Dan firman Allah Swt.:</p>
+<p class="arab">{تَبَارَكَ الَّذِي بِيَدِهِ الْمُلْكُ}</p>
+<p><em>Maha suci Allah yang di tangan-Nyalah segala kerajaan</em>. (Al-Mulk: 1)</p>
+<p>Lafaz <em>al-mulk </em>dan <em>al-malakut </em>sama, seperti halnya lafaz <em>rahmah </em>dan <em>rahmut, rahbah, </em>dan <em>rahbut, </em>dan <em>jabar </em>dan <em>jabarut. </em></p>
+<p>Di antara ulama ada yang menduga bahwa <em>al-mulk </em>adalah alam jasad, sedangkan <em>al-malakut </em>alam roh. Pendapat yang benar adalah yang pertama, pendapat itulah yang dipegang oleh kebanyakan ulama tafsir dan lain-lainnya.</p>
+<p class="arab">قَالَ الْإِمَامُ أَحْمَدُ: حَدَّثَنَا حَمَّادٌ، عَنْ عَبْدِ الْمَلِكِ بْنِ عُمَيْرٍ، حَدَّثَنِي ابْنُ عَمٍّ لِحُذَيْفَةَ، عَنْ حُذَيْفَةَ -وَهُوَ ابْنُ الْيَمَانِ-رَضِيَ اللَّهُ عَنْهُ، قَالَ: قُمْتُ مَعَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ ذَاتَ لَيْلَةٍ، فَقَرَأَ السَّبْعَ الطُّوَل فِي سَبْعِ رَكَعَاتٍ، وَكَانَ إِذَا رَفَعَ رَأْسَهُ مِنَ الرُّكُوعِ قَالَ: "سَمِعَ اللَّهُ لِمَنْ حَمِدَهُ". ثُمَّ قَالَ: "الْحَمْدُ لِذِي ذِي الْمَلَكُوتِ وَالْجَبَرُوتِ وَالْكِبْرِيَاءِ وَالْعَظَمَةِ" وَكَانَ رُكُوعُهُ مِثْلَ قِيَامِهِ، وَسُجُودُهُ مِثْلَ رُكُوعِهِ، فَأَنْصَرِفُ وَقَدْ كَادَتْ تَنْكَسِرُ رِجْلَايَ.</p>
+<p>Imam Ahmad mengatakan, telah menceritakan kepada kami Hammad dari Abdul Malik ibnu Umair, telah menceritakan kepadaku saudara sepupu Huzaifah, dari Huzaifah ibnul Yaman r.a. yang menceritakan bahwa ia salat bersama Rasulullah Saw. di suatu malam. Maka beliau Saw. membaca tujuh surat yang panjang-panjang dalam beberapa rakaat. Dan beliau bila mengangkat kepalanya dari rukuk mengucapkan: <em>Allah mendengar orang yang memuji-Nya. </em>Kemudian dilanjutkan: <em>Segala puji bagi Allah Yang mempunyai segala kerajaan, keperkasaan, kebesaran, dan keagungan. </em>Dan lama rukuknya sama dengan lama berdirinya, dan lama sujudnya sama dengan lama rukuknya. Ketika beliau bersalam, kedua kakiku terasa hampir patah (karena lamanya salat).</p>
+<p>Imam Abu Daud dan Imam Turmuzi di dalam kitab <em>Asy-Syama'il </em>serta Imam Nasai telah meriwayatkan melalui hadis Syu'bah ibnu Amr ibnu Murrah:</p>
+<p class="arab">عَنْ عَمْرِو بْنِ مُرة، عَنْ أَبِي حَمْزة -مَوْلَى الْأَنْصَارِ-عَنْ رَجُلٍ مِنْ بَنِي عَبْس، عَنْ حُذَيْفَةَ؛ أَنَّهُ رَأَى رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مِنَ اللَّيْلِ، وَكَانَ يَقُولُ: "اللَّهُ أَكْبَرُ -ثَلَاثًا -ذُو الْمَلَكُوتِ وَالْجَبَرُوتِ وَالْكِبْرِيَاءِ وَالْعَظَمَةِ". ثُمَّ اسْتَفْتَحَ فَقَرَأَ الْبَقَرَةَ، ثُمَّ رَكَعَ فَكَانَ رُكُوعُهُ نَحْوًا مِنْ قِيَامِهِ، وَكَانَ يَقُولُ فِي رُكُوعِهِ: "سُبْحَانَ رَبِّيَ الْعَظِيمِ". ثُمَّ رَفَعَ رَأْسَهُ مِنَ الرُّكُوعِ، فَكَانَ قِيَامُهُ نَحْوًا مِنْ] رُكُوعِهِ، يَقُولُ: " لِرَبِّي الْحَمْدُ". ثُمَّ سَجَدَ، فَكَانَ سُجُودُهُ نَحْوًا مِنْ] قِيَامِهِ، وَكَانَ يَقُولُ فِي سجوده: "سبحان ربي الأعلى". ثم رفع رَأْسَهُ مِنَ السُّجُودِ، وَكَانَ يَقْعُدُ فِيمَا بَيْنُ السَّجْدَتَيْنِ نَحْوًا مِنْ سُجُودِهِ، وَكَانَ يَقُولُ: "رَبِّ، اغْفِرْ لِي، رَبِّ اغْفِرْ لِي". فَصَلَّى أَرْبَعَ رَكَعَاتٍ، فَقَرَأَ فِيهِنَّ الْبَقَرَةَ، وَآلَ عِمْرَانَ، وَالنِّسَاءَ، وَالْمَائِدَةَ -أَوِ الْأَنْعَامَ --شَكَّ شُعْبَةُ-هَذَا لَفْظُ أَبِي دَاوُدَ.</p>
+<p>dari Abu Hamzah maula Al-Ansar, dari seorang lelaki dari Bani Abs, dari Huzaifah r.a., bahwa ia pernah melihat Rasulullah Saw. sedang salat di malam hari, dan beliau Saw. mengucapkan: <em>Allahu Akbar &mdash;tiga kali&mdash; Yang memiliki semua kerajaan, kebesaran dan keagungan. </em>Setelah itu beliau membuka salatnya (membaca Al-Fatihah), dan membaca surat Al-Baqarah, lalu rukuk, dan lama rukuknya sama dengan lamanya berdiri. Dalam rukuknya itu beliau membaca: <em>Mahasuci Tuhanku Yang Mahabesar. </em>Beliau mengangkat kepalanya dari rukuk, dan i'tidal yang dilakukannya hampir sama dengan rukuknya. Dalam i'tidalnya beliau membaca: <em>Bagi Tuhanku segala puji. </em>Kemudian sujud, dan lama sujudnya itu sama dengan lama berdirinya. Dalam sujudnya beliau membaca: <em>Mahasuci Tuhanku Yang Mahatinggi. </em>Kemudian beliau mengangkat kepalanya dari sujud, lalu melakukan duduk di antara dua sujud dalam waktu yang lamanya sama dengan sujudnya. Dalam duduknya itu beliau mengucapkan: <em>Tuhanku, berilah ampunan bagiku. Tuhanku, berilah ampunan bagiku. </em>Rasulullah Saw. melakukan salatnya itu empat rakaat, yang padanya beliau membaca surat Al-Baqarah, Ali Imran, An-Nisa, Al-Maidah <em>atau </em>Al-An'am &mdash;di sini Syu'bah ragu&mdash;. Demikianlah menurut lafaz yang ada pada Imam Abu Daud.</p>
+<p>Imam Nasai mengatakan bahwa Abu Hamzah menurut kami adalah Talhah ibnu Yazid, dan lelaki ini diduga kuat adalah Silah, demikianlah menurut Imam Nasai. Tetapi yang lebih kuat lagi diduga dia adalah saudara sepupu Huzaifah, seperti yang telah disebutkan di dalam riwayat Imam Ahmad; hanya Allah-lah Yang Maha Mengetahui.</p>
+<p>Adapun riwayat Silah ibnu Zufar, dari Huzaifah r.a., maka sesungguhnya riwayat ini berada di dalam kitab <em>Sahih Muslim, </em>tetapi di dalam teksnya tidak disebutkan penuturan kata <em>al-malakut, wal jabarut, wal kibriya wal 'azamah.</em></p>
+<p class="arab">قَالَ أَبُو دَاوُدَ: حَدَّثَنَا أَحْمَدُ بْنُ صَالِحٍ، حَدَّثَنَا ابْنُ وَهْبٍ، حَدَّثَنِي مُعَاوِيَةُ بْنُ صَالِحٍ، عَنْ عَمْرِو بْنِ قَيْسٍ، عَنْ عَاصِمِ بْنِ حُمَيْد، عَنْ عَوْفِ بْنِ مَالِكٍ الْأَشْجَعِيِّ قَالَ: قمتُ مَعَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لَيْلَةً فَقَامَ فَقَرَأَ سُورَةَ الْبَقَرَةِ، لَا يَمُرُّ بِآيَةِ رَحْمَةٍ إِلَّا وَقَفَ فَسَأَلَ، وَلَا يَمُرُّ بِآيَةِ عَذَابٍ إِلَّا وَقَفَ فَتَعَوَّذَ. قَالَ: ثُمَّ رَكَعَ بِقَدْرِ قِيَامِهِ، يَقُولُ فِي رُكُوعِهِ: "سُبْحَانَ ذِي الْجَبَرُوتِ وَالْمَلَكُوتِ وَالْكِبْرِيَاءِ وَالْعَظَمَةِ". ثُمَّ سَجَدَ بِقَدْرِ قِيَامِهِ، ثُمَّ قَالَ فِي سُجُودِهِ مِثْلَ ذَلِكَ، ثُمَّ قَامَ فَقَرَأَ بِآلِ عِمْرَانَ، ثُمَّ قَرَأَ سُورَةً سُورَةً.</p>
+<p>Imam Abu Daud mengatakan, telah menceritakan kepada kami Ahmad ibnu Saleh, telah menceritakan kepada kami Ibnu Wahb, telah menceritakan kepadaku Mu'awiyah ibnu Saleh, dari Amr ibnu Qais, dari Asim ibnu Humaid, dari Auf ibnu Malik Al-Asyja'i r.a. yang mengatakan bahwa ia ikut salat bersama Rasulullah Saw. di suatu malam, maka Rasulullah Saw. berdiri dan membaca surat Al-Baqarah. Dan tidak sekali-kali beliau melalui ayat rahmat, melainkan berhenti dan meminta; dan tidak sekali-kali bacaannya melewati ayat azab, melainkan beliau berhenti, lalu memohon perlindungan. Kemudian beliau rukuk dengan lama yang hampir sama dengan berdirinya. Dalam rukuknya itu beliau mengucapkan: <em>Mahasuci Tuhan Yang mempunyai keperkasaan, kerajaan, kebesaran, dan keagungan. </em>Kemudian sujud dengan lama yang sama dengan lama berdirinya, dan dalam sujudnya beliau mengucapkan doa yang semisal. Lalu berdiri (setelah membaca Al-Fatihah) membaca surat Ali Imran, lalu Al-Baqarah.</p>
+<p>Imam Turmuzi meriwayatkannya di dalam kitab <em>Asy-Syama&rsquo;il </em>&mdash;juga Imam Nasai&mdash; melalui hadis Mu'awiyah ibnu Saleh dengan sanad yang sama.</p>
+<p>Demikianlah akhir tafsir surat Yasin, segala puji dan karunia adalah milik Allah belaka.</p>
+
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

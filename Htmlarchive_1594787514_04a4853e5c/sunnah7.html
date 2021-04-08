@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="t" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content">
+		
+		
+<header>
+
+<h1>Sholat Idul Adha</h1><br>
+
+ <h3>Pengertian</h3><hr>
+ <p align="justify">Idul ِAdha adalah hari raya kedua dalam Islam yang jatuh pada tanggal 10 Dzulhijjah setiap tahunnya. Idul Adha terjadi 2 bulan setelah lebaran Idul Fitri yang jatuh tepat pada 1 Syawal. Hari Raya Idul Adha dikenal juga dengan Idul Qurban karena pada lebaran ini umat Islam yang mampu disunnahkan untuk ber-kurban. Ia juga dikenal dengan Lebaran Haji karena bertepatan dengan bulan haji. </p>
+	 Rasulullah bersabda: <blockquote>“Siapa yang mendapati dirinya dalam keadaan lapang, lalu dia tidak berkurban, maka janganlah ia mendekati tempat sholat kami.” (HR. Ahmad dan Ibn Majah)</blockquote>
+     
+     <br>
+	 <h3>Lafadz atau Bacaan Niat Shalat Sunnah Idul Adha </h3><hr>
+	  <p><b>sebagai Imam</b></p>
+      <center>
+        
+          <div align="right" class="arab">أصلي سنة عيد الأضحي ركعتين إماما للة تعالي</div>
+      </center>
+
+      <p><b><I>Latin</I></b><br>
+        <br>
+	    Ushalli sunnata 'idil adha rok'ataini imaman lillahi ta'ala<br>
+	    <br>
+        
+	    <b><I>Artinya : </I></b><br>
+	    <Br>
+	    Saya Niat shalat sunnah Idul Adha  dua rakaat sebagai imam karena Allah</p>
+      <p><br>
+      </p>
+      <p><b>sebagai Ma'mum</b></p>
+      <center>
+        
+          <div align="right" class="arab">أصلي سنة عيد الأضحي ركعتين مأموما للة تعاليَى</div>
+      </center>
+      <br>
+<b><I>Latin ;</I></b><br><Br>
+	    Ushalli sunnata ’idil adha rok'ataini makmuman lillahi ta'ala<br>
+        <br>
+	    <b><I>Artinya : </I></b><br><Br>
+        Saya Niat shalat sunnah Idul Fitri dua rakaat sebagai makmum karena Allah<br><Br>
+        
+        <br>
+	 <h3>Tata Cara Shalat Idul Adha :</h3><hr>
+	    Shalat sunnah idul adha / Idul Fitri terdiri dari 2 (dua) rokaat. Rokaat pertama diawali dengan takbirotul ihrom ditambah 7x takbir. Sedangkan rakaat kedua 5 (lima) kali takbir. Lebih detailnya sbb:      </p>
+	  <p align="justify"><strong>Bacaan Rakaat pertama: ( Setelah niat )</strong>
+      <ol>
+	    <li>Baca takbirotul ihram (takbir permulaan shalat) dengan niat shalat idul adha.</li>
+	    <li>Membaca doa iftitah</li>
+	    <li>Membaca takbir 7 (tujuh) kali (selain takbirotul ihram)</li>
+	    <li>Membaca Al-Fatihah</li>
+	    <li>Membaca surat Al-Quran</li></ol>
+        
+	  <p align="justify"><br>
+	    <strong>Bacaan Rakaat kedua:</strong>
+        <ol>
+	    <li>Membaca takbir 5 (lima) kali.</li>
+        <li>Membaca Al-Fatihah</li>
+	    <li>Membaca surat Al-Quran.</li>
+	    <li>Setelah sujud rakaat kedua, diikuti dengan tahiyat (tasyahud) akhir dan diakhiri dengan salam.</li></ol>
+        <br>
+	    Prosesi berikutnya adalah khutbah Idul Adha ( bagian ini khusus untuk para khatib ).<br>
+	    Bacaan Tiap Takbir Pada Shalat Idul Adha  :	    </p>
+	  <p align="justify">Setiap takbir saat shalat Idul Adha baik rakaat pertama atau kedua disunnahkan membaca tasbih yaitu:</p>
+      <center>
+        
+          <div align="right" class="arab">سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إلَهَ إلَّا اللَّهُ وَاَللَّهُ أَكْبَرُ</div>
+      </center>
+      <br>
+
+<b><I>Latin ;</I></b><br><br>
+	    SubhanAllah walhamdulillah walailaha illAllah wAllahu Akbar<br>
+        
+	    <b><I>Artinya: </I></b>
+        <blockquote>Mahasuci Allah dan segala puji bagi Allah dan tiada Tuhan selain Allah dan Allah Mahabesar.</blockquote><br>
+	  <h3>Takbir yang lebih lengkap / sempurna</h3><hr>
+	  <center>
+	    
+	      <div align="right" class="arab">اَللَّهُ اَكْبَرْ اَللَّهُ اَكْبَر اَللَّهُ اَكْبَرْ ـ لآاِلَهَ اِلاَّ اللَّهُ ـ اَللَّهُ اَكْبَرْ اَللَّهُ اَكْبَرْ وَلِلَهِ الْحَمْدُ<br>
+	        اَللَّهُ اَكْبَرْ كَبِيْرًا وَالْحَمْدُ لِلَّهِ كَثِيْرًا وَسُبْحَانَ اللَّهِ بُكْرَةً وَاَصِيْلاً ـ لآ اِلَهَ اِلاَّ اللَّهُ وَلاَنَعْبُدُ اَلاَّ اِيَّاهُ مُخْلِصِيْنَ لَهُ الدِّيْنَ وَلَوْكَرِهَ الْكَافِرُوْنَ لآاِلَهَ اِلاَّ اللَّهُ وَحْدَهُ صَدَقَ وَعْـدَهُ وَنَصَرَعَبِدَهُ وَاَعَزَّ جُنْدَهُ وَهَزَمَ الْأَحْزَابَ وَحْدَهُ لآ اِلَهَ اِلاَّ اللَّهُ . اَللَّهُ اَكْبَرْ اَللَّهُ اَكْبَرْ وَلِلَهِ الْحَمْدُ</div>
+	    </center>
+	  <p align="center"><i>	    Allahu akbar.. Allahu akbar.. Allahu akbar.....
+	    Laa - ilaaha - illallaahu wallaahu akbar.<br>
+	    Allaahu akbar walillaahil - hamd.
+	    Allahu akbar.. Allahu akbar.. Allahu akbar.....<br>
+	    Allaahu akbar kabiiraa walhamdulillaahi katsiiraa,...
+	    wasubhaanallaahi bukrataw - wa ashillaa.<br>
+	    Laa - ilaaha illallallahu walaa na'budu illaa iyyaahu mukhlishiina lahuddiin walau karihal - kaafiruun, walau karihal munafiqun, walau karihal musyrikun.<br>
+	    Laa - ilaaha - illallaahu wahdah, shadaqa wa'dah, wanashara 'abdah, - wa - a'azza - jundah, wahazamal - ahzaaba wahdah.<br>
+	    Laa - ilaaha illallaahu wallaahu akbar.
+	    Allaahu akbar walillaahil - hamd.</i></p>
+	  <p align="center">	    Artinya:
+	    Allah Mahabesar, Allah Mahabesar, Allah Mahabesar.<br>
+	    Tiada Tuhan (yang berhak disembah) melainkan Allah dan Allah Mahabesar.<br>
+	    Allah Mahabesar dan segala puji hanya bagi Allah
+	    Allah Mahabesar, Allah Mahabesar, Allah Mahabesar<br>
+	    Allah maha besar dengan segala kebesaran,
+	    Segala puji bagi Allah sebanyak-banyaknya,<br>
+	    Dan maha suci Allah sepanjang pagi dan sore.
+	    Tiada Tuhan selain Allah dan kami tidak menyembah selain kepada-Nya dengan memurnikan agama Islam meskipun orang kafir, munafiq dan musyrik membencinya.<br>
+	    Tiada Tuhan selain Allah dengan ke Esaan-Nya. Dia menepati janji, menolong hamba dan memuliakan bala tentara-Nya serta melarikan musuh dengan ke Esaan-Nya.
+	    Tiada Tuhan selain Allah, Allah maha besar. Allah maha besar dan segala puji bagi Allah.<br>
+	    <br><p align="justify">Bacaan takbir diatas hendaknya dibaca dengan hati yang khusyuk dalam rangka membesarkan dan memuji Allah Swt. Takbir yang disunnahkan pada setiap selesai shalat disebut takbir muqayyad, sedangkan takbir yang disunnahkan tidak pada setiap selesai shalat disebut takbir mursal.</p>
+	  <p align="justify">Di dalam syariat yang dibawa oleh Rasulullah Saw, perintah dan larangan selalu ada dan terus berjalan kepada setiap hamba selama ruh masih bersama jasadnya. Dan selama itu pula manusia dapat menambah kedekatannya kepada Allah swt dengan melakukan perintah-perintah syariat yang mulia. Baik yang berupa kewajiban maupun yang sunnah.</p>
+	  <p align="justify">Dan kesunnahan yang dilakukan si hamba inilah yang menjadi bukti keberhasilannya dan keuntungannya dalam kehidupan dunia. Sebab ibadah wajib ibarat modal seseorang, mau tidak mau, suka tidak suka dia harus menjalankannya, sedang amal sunnah itulah keuntungannya. Alangkah ruginya manusia jika di dunia hanya beribadah yang wajib saja atau dengan kata lain setelah bermuamalah dia kembali modal, tidak mendapat keuntungan sedikitpun. Maka ibadah sunnah ini hendaknya kita kejar, kita amalkan, sebab itulah bukti kesetiaan kita dalam mengikuti dan mencintai Rasulullah Saw, beliau saw bersabda (yang artinya):</p>
+	  <p align="justify">“ Barang siapa menghidupkan sunnahku, maka dia telah mencintaiku, dan siapa yang mencintaiku, maka kelak akan berkumpul bersamaku di surga “. (HR. As Sijizi dari Anas bin Malik, lihat Al Jami’ush Shoghir)</p>
+	  <p align="justify">Bahkan dalam hadits qudsi Allah menyatakan bahwa Dia sangat cinta kepada hamba yang suka menjalankan amal-amal sunnah, sehingga manakala Dia telah mencintai hamba tersebut, Dia akan menjaga matanya, pendengarannya, tangan dan kakinya. Semua anggota tubuhnya akan terjaga dari maksiat dan pelanggaran. Sebagaimana diriwayatkan oleh Imam Al Bukhori dari Abu Hurairah RA.</p>
+	  <p align="justify">Dari sekian banyak sunnah yang telah diajarkan oleh Rasulullah SAW adalah melakukan qurban, yaitu menyembelih binatang ternak, berupa onta, atau sapi(lembu) atau kambing dengan syarat dan waktu yang tertentu. Bahkan kesunnahan berqurban ini adalah sunnah muakkadah, artinya kesunnahan yang sangat ditekankan dan dianjurkan.</p>
+	  <p align="justify">Sebagaimana diriwayatkan oleh imam Muslim dalam Shohihnya dari Anas bin Malik, beliau berkata :
+	    “Rasulullah saw berudhiyah (berkurban) dengan dua kambing putih dan bertanduk, beliau menyembelih dengan tangan beliau sendiri yang mulia, beliau mengawali (penyembelihan itu) dengan basmalah kemudian bertakbir …”</p>
+	  <p align="justify">Tapi hendaknya kita mengetahui bahwa kesunnahan kurban adalah untuk umat Nabi Muhammad saw, sedang bagi beliau justru adalah sebagai kewajiban, ini termasuk sekian banyak kekhususan yang diberikan oleh Allah kepada Rasulullah saw.</p>
+	  <p align="justify">Pengertian qurban secara terminologi syara’ tidak ada perbedaan, yaitu hewan yang khusus disembelih pada saat Hari Raya Qurban (’Idul Al-Adha 10 Dzul Hijjah) dan hari-hari tasyriq (11,12, dan 13 Dzul Hijjah) sebagai upaya untuk mendekatkan diri (taqarrub) kepada Allah SWT. Dalam Islam qurban disyariatkan pada tahun kedua Hijriah. Saat itu Rasulullah keluar menuju masjid untuk melaksanakan shalat ‘Idul Adha dan membaca khutbah `Id. Setelah itu beliau berqurban dua ekor kambing yang bertanduk dan berbulu putih.</p>
+	  <p align="justify">Tradisi qurban sebetulnya telah menjadi kebiasaan umat-umat terdahulu, hanya saja prosesi dan ketentuannya tidak sama persis dengan yang ada dalam syariat Rasulullah. Allah SWT befirman, “Bagi tiap-tiap umat telah Kami tetapkan syariat tertentu yang mereka lakukan, maka janganlah sekali-kali mereka membantah kamu (Muhammad) dalam urusan syariat ini. Dan serulah kepada agama Tuhanmu, sesungguhnya kamu benar-benar berada pada jalan yang lurus” (QS AI-Haj: 67).</p>
+	  <p align="justify">Bahkan qurban telah menjadi salah satu ritus dalam sejarah pertama manusia. Seperti dikisahkan dengan jelas dalam AI-Quran surah Al-Maidah ayat 27 mengenai prosesi qurban yang dilakukan oleh kedua putra Nabi Adam AS, qurban diselenggarakan tiada lain sebagai refleksi syukur hamba atas segala nikmat yang dianugerahkan Tuhannya, di samping sebagai upaya taqarrub ke hadirat-Nya.</p>
+	 <h3>Hikmah yang bisa kita ambil dari qurban adalah:</h3><hr>
+	  <div align="justify">
+	    <ol>
+	      <li> untuk mengenang nikmat-nikmat yang diberikan Allah kepada Nabi Ibrahim dengan digagalkannya penyembelihan putranya, Ismail AS, yang ditebus dengan seekor kambing dari surga.</li>
+	      <li>untuk membagi-bagikan rizqi yang diberikan oleh Allah SWT kepada umat manusia saat Hari Raya ‘Idul Adha, yang memang menjadi hari membahagiakan bagi umat Islam, agar yang miskin juga merasakan kegembiraan seperti yang lainnya. Sebagaimana telah disabdakan oleh Nabi Muhammad Saw (artinya): “Hari Raya Qurban adalah hari untuk makan, minum dan dzikir kepada Allah” (HR. Muslim)</li>
+	      <li>untuk memperbanyak rizqi bagi orang yang berqurban, karena setiap hamba yang menafkahkan hartanya di jalan Allah akan mendapatkan balasan berlipat ganda.</li>
+        </ol>
+      </div>
+	  </div>
+	</ol>
+
+</div>      
+
+	</div> 
+	</div>
+	</div><!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

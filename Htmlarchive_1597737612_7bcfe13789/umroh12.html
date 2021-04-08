@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Sunnah-sunnah thowaf</h1>
+
+
+<p style="text-align: right;" class="arab"></p>
+<ol>
+<li><p><u>Pertama</u>&nbsp;: Disunnahkan &ndash;<strong>tatkala thowaf qudum atau thowaf &uacute;mroh</strong>&ndash; untuk melakukan الاِضْطِبَاعُ idthibaa&rsquo;<sup>(</sup><sup>[7]</sup><sup>)</sup>&nbsp;yaitu menampakan bahu kanan dan lengan kanan dan menutup bahu kiri dan lengan kiri dengan kain ihrom</p></li>
+<br><li><p><u>Kedua</u>&nbsp;: Disunnahkan &ndash;<strong>tatkala thowaf qudum atau thowaf &uacute;mroh</strong>&ndash; untuk melakukan ar-Romal, yaitu berjalan dengan cepat dengan langkah kaki yang pendek disertai dengan menggoyangkan kedua pundak<sup>(</sup><sup>[8]</sup><sup>)</sup>.</li> Dengan demikian diantara kekeliruan yang sering terjadi adalah mereka yang thowaf melakukan lari-lari dengan lompatan-lompatan kecil, bahkan diantara mereka ada yang berlari dengan cepat. Padahal ar-Romal itu hanya berjalan dengan cepat disertai langkah kaki yang pendek dan menggoyang-goyangkan kedua bahu</p>
+<ul>
+<li>Sebab ar-Romal dan al-Idhtibaa&rsquo;</li>
+</ul>
+<p>Ibnu &Aacute;bbas berkata</p>
+<p style="text-align: right;" class="arab">&rdquo; قَدِمَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَأَصْحَابُهُ مَكَّةَ، وَقَدْ وَهَنَتْهُمْ حُمَّى يَثْرِبَ، قَالَ الْمُشْرِكُونَ: إِنَّهُ يَقْدَمُ عَلَيْكُمْ غَدًا قَوْمٌ قَدْ وَهَنَتْهُمُ الْحُمَّى، وَلَقُوا مِنْهَا شِدَّةً، فَجَلَسُوا مِمَّا يَلِي الْحِجْرَ، وَأَمَرَهُمُ النَّبِيُّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ أَنْ يَرْمُلُوا ثَلَاثَةَ أَشْوَاطٍ، وَيَمْشُوا مَا بَيْنَ الرُّكْنَيْنِ، لِيَرَى الْمُشْرِكُونَ جَلَدَهُمْ، فَقَالَ الْمُشْرِكُونَ: هَؤُلَاءِ الَّذِينَ زَعَمْتُمْ أَنَّ الْحُمَّى قَدْ وَهَنَتْهُمْ، هَؤُلَاءِ أَجْلَدُ مِنْ كَذَا وَكَذَا &rdquo; قَالَ ابْنُ عَبَّاسٍ: &laquo;وَلَمْ يَمْنَعْهُ أَنْ يَأْمُرَهُمْ أَنْ يَرْمُلُوا الْأَشْوَاطَ كُلَّهَا، إِلَّا الْإِبْقَاءُ عَلَيْهِمْ&raquo;</p>
+<p>&ldquo;Rasulullah shallallahu &aacute;liahi wasallam bersama para sahabat datang ke Mekah<sup>(</sup><sup>[9]</sup><sup>)</sup>, dan mereka telah menjadi lemah karena demam kota Madinah. Kaum musyrikin berkata, &ldquo;Sesungguhnya telah datang kepada kalian besok suatu kaum yang telah dilemahkan oleh demam, dan mereka telah kesulitan menghadapi demam tersebut&rdquo;. Maka kaum musyrikin duduk di daerah sisi yang ada al-Hijr. Dan Nabi shallallahu &aacute;laihi wasallam memerintahkan para sahabat untuk melakukan ar-Romal sebanyak tiga putaran, dan mereka berjalan di antara rukun yamani dan hajar aswad, agra kaum musyrikin melihat kekuatan mereka. Maka kaum musyrikin berkata, &ldquo;Mereka yang kalian sangka telah dilemeskan oleh demam, ternyata mereka lebih kuat daripada ini dan itu&rdquo;. Nabi mereka tidak memerintahkan mereka untuk melakukan ar-Romal seluruh putaran kecuali agar menjadikan para sahabat tetap kuat/semangat&rdquo; (HR Al-Bukhari no 1602 dan Muslim no 1266)</p>
+<p>Pada riwayat yang lain :</p>
+<p style="text-align: right;" class="arab">أَنَّ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ &rdquo; اضْطَبَعَ فَاسْتَلَمَ وَكَبَّرَ، ثُمَّ رَمَلَ ثَلَاثَةَ أَطْوَافٍ وَكَانُوا، إِذَا بَلَغُوا الرُّكْنَ الْيَمَانِيَ وَتَغَيَّبُوا مِنْ قُرَيْشٍ مَشَوْا، ثُمَّ يَطْلُعُونَ عَلَيْهِمْ يَرْمُلُونَ، تَقُولُ قُرَيْشٌ: كَأَنَّهُمُ الْغِزْلَانُ &ldquo;، قَالَ ابْنُ عَبَّاسٍ: فَكَانَتْ سُنَّةً</p>
+<p>&ldquo;Sesungguhnya Nabi melakukan&nbsp;<strong>idhtibaa&rsquo;</strong>&nbsp;lalu menyentuh hajar aswad dan bertakbir, setelah itu melakukan ar-Romal tiga putaran. Dan para sahabat jika sampai pada rukun yamani dan tidak kelihatan dari Quraisy maka mereka berjalan, setelah mereka nampak melakukan ar-Romal di hadapan mereka. Quraisy berkata, &ldquo;Seakan-akan mereka (kaum muslimin) rusa-rusa. Maka jadilah ini adalah sunnah&rdquo; (HR Abu Dawud no 1889 dishahihkan oleh Al-Albani)</p>
+<ul>
+<li>Meskipun sebabnya sudah tidak ada namun Nabi tetap melakukan idthiba&rsquo;dan ar-Romal. Karenanya tatkala umroh Ju&rsquo;ronah setelah itu Nabi langsung melakukan ar-Romal dan idtthiba&rsquo;:</li>
+</ul>
+<p>Ibnu &Aacute;bbas berkata :</p>
+<p style="text-align: right;" class="arab">أَنَّ رَسُولَ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَأَصْحَابَهُ &laquo;اعْتَمَرُوا مِنَ الْجِعْرَانَةِ فَرَمَلُوا بِالْبَيْتِ وَجَعَلُوا أَرْدِيَتَهُمْ تَحْتَ آبَاطِهِمْ قَدْ قَذَفُوهَا عَلَى عَوَاتِقِهِمُ الْيُسْرَى&raquo;</p>
+<p>&ldquo;Sesungguhnya Rasulullah shallallahu &aacute;laihi wasallam dan para sahabatnya mengerjakan umroh dari al-Ji&rsquo;ronah. Maka mereka melakukan ar-Romal di ka&rsquo;bah dan mereka menjadikan rida&rsquo; (kain atas ihram) di bawah ketiak mereka dan mereka melmparkan rida&rsquo; mereka di atas pundak kiri mereka&rdquo; (HR Abu Dawud no 1884 dan Ahmad no 2792, dan dishahihkan oleh Al-Albani dan al-Arnauuth)</p>
+<p>Umar bin al-Khottob berkata :</p>
+<p style="text-align: right;" class="arab">فِيمَ الرَّمَلَانُ الْآنَ؟ وَقَدْ أَطَّأَ اللَّهُ الْإِسْلَامَ، وَنَفَى الْكُفْرَ وَأَهْلَهُ، وَايْمُ اللَّهِ، مَا نَدَعُ شَيْئًا، كُنَّا نَفْعَلُهُ عَلَى عَهْدِ رَسُولِ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</p>
+<p>&ldquo;Buat apa ar-Romal sekarang?, padahal Allah telah menjadikan Islam kokoh dan mengusir kekufuran dan pelaku kekfuran?. Demi Allah kami tidak akan meninggalkan sesuatupun yang kami lakukan di masa Rasulullah shallallahu &aacute;laihi wasallam&rdquo; (HR Ahmad no 317, Abu Dawud no 1887, Ibnu Majah no 2952, dan dishahihkan oleh Al-Albani dan al-Arnauth)&nbsp;<sup>(</sup><sup>[10]</sup><sup>)</sup></p>
+<ul>
+<li>Ar-Romal dari hajar aswad ke hajar aswad</li>
+</ul>
+<p>Meskipun sebabnya Nabi dan para sahabat hanya melakukan Ar-Romal dari hajar aswad hingga rukun yamani -tatkala umrotul qodoo&rsquo;-, akan tetapi setelah itu Nabi melakukan ar-Romal dari hajar aswad hingga ke hajar aswad (yaitu putaran penuh).</p>
+<p>Tatkala haji wada&rsquo;, Jabir bin Abdillah berkata :</p>
+<p style="text-align: right;" class="arab">رَأَيْتُ رَسُولَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ رَمَلَ مِنَ الْحَجَرِ الْأَسْوَدِ، حَتَّى انْتَهَى إِلَيْهِ، ثَلَاثَةَ أَطْوَافٍ</p>
+<p>&ldquo;Aku melihat Rasulullah shallallahu &aacute;laihi wasallam melakukan ar-Romal dari hajar aswad hingga ke hajar aswad lagi, tiga kali putaran&rdquo;(HR Muslim no 1263)</p>
+<p style="text-align: right;" class="arab">عَنْ نَافِعٍ أَنَّ ابْنَ عُمَرَ، رَمَلَ مِنَ الْحَجَرِ إِلَى الْحَجَرِ، وَذَكَرَ أَنَّ رَسُولَ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ فَعَلَهُ</p>
+<p>Dari Nafi&rsquo; bahwasanya Ibnu Umar melakukan Ar-Romal dari hajar aswad ke hajar aswad, dan Ibnu Umar menyebutkan bahwa Rasulullah shallallahu &aacute;laih wasallam melakukannya (HR Muslim no 1262)</p>
+<ul>
+<li>Ar-Romal hanya di tiga putaran pertama, setelah itu berjalan biasa.</li>
+</ul>
+<p style="text-align: right;" class="arab">عَنِ ابْنِ عُمَرَ رَضِيَ اللَّهُ عَنْهُمَا: &laquo;أَنَّ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ كَانَ إِذَا طَافَ بِالْبَيْتِ الطَّوَافَ الأَوَّلَ، يَخُبُّ ثَلاَثَةَ أَطْوَافٍ، وَيَمْشِي أَرْبَعَةً، وَأَنَّهُ كَانَ يَسْعَى بَطْنَ المَسِيلِ، إِذَا طَافَ بَيْنَ الصَّفَا وَالمَرْوَةِ&raquo;</p>
+<p>(HR Al-Bukhari no 1617)</p>
+<p>Hadits Jabir, dimana beliau berkata, فرمل ثلاثاً ومشى أربعاً &ldquo;Nabi melakukan ar-Romal 3 putaran, dan berjalan 4 putaran&rdquo; (HR Muslim no 1218) ini Ar-Romal tatkala thowaf qudum ketika haji wada&rsquo;. Dan hadits tentang sebab awal Nabi melakukan ar-Romal adalah tatkala thowaf &uacute;mroh.</p>
+<ul>
+<li>Adapun idhtibaa&rsquo; maka dilakukan selama 7 putaran. Inilah satu-satunya perbedaan antara ar-Romal (yang dilakukan hanya 3 putaran) dengan al-idhtibaa&rsquo; (yang dilakukan seluruh 7 putaran)</li>
+<li>Ar-Romal tidak disunnahkan bagi wanita<sup>(</sup><sup>[11]</sup><sup>)</sup></li>
+</ul>
+<br><li><p><u>Ketiga</u>&nbsp;: Memulai thawaf dengan mengusap/menyentuh hajar aswad.</p></li>
+<p style="text-align: right;" class="arab">أنَّ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ &rdquo; اضْطَبَعَ فَاسْتَلَمَ وَكَبَّرَ</p>
+<p>&ldquo;Sesungguhnya Nabi melakukan idhtibaa&rsquo; lalu&nbsp;<strong>menyentuh</strong>&nbsp;hajar aswad dan bertakbir&rdquo; (HR Abu Dawud no 1889)</p>
+<br><li><p><u>Keempat</u>: Setelah thowaf, disunnahkan untuk mendirikan sholat dua raka&aacute;t di belakang maqom Ibrahim.</p></li>
+<p>Jabir berkata :</p>
+<p style="text-align: right;" class="arab">حَتَّى إِذَا أَتَيْنَا الْبَيْتَ مَعَهُ، اسْتَلَمَ الرُّكْنَ فَرَمَلَ ثَلَاثًا وَمَشَى أَرْبَعًا، ثُمَّ نَفَذَ إِلَى مَقَامِ إِبْرَاهِيمَ عَلَيْهِ السَّلَام، فَقَرَأَ: {وَاتَّخِذُوا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى} فَجَعَلَ الْمَقَامَ بَيْنَهُ وَبَيْنَ الْبَيْتِ، &hellip;كَانَ يَقْرَأُ فِي الرَّكْعَتَيْنِ قُلْ هُوَ اللهُ أَحَدٌ وَقُلْ يَا أَيُّهَا الْكَافِرُونَ، ثُمَّ رَجَعَ إِلَى الرُّكْنِ فَاسْتَلَمَهُ</p>
+<p>&ldquo;Hingga tatkala kami tiba di ka&rsquo;bah maka Nabi melakukan ar-Romal 3 putaran dan beliau berjalan 4 putaran. Lalu beliau menuju ke maqom Ibrahim &aacute;laihis salam maka beliau membaca firman Allah</p>
+<p style="text-align: right;" class="arab">وَاتَّخِذُوا مِنْ مَقَامِ إِبْرَاهِيمَ مُصَلًّى</p>
+<p>&ldquo;Dan jadikanlah sebahagian maqam Ibrahim tempat shalat&rdquo; (QS Al-Baqoroh : 125)</p>
+<p>Lalu beliau menjadikan maqom Ibrahim antara beliau dan ka&rsquo;bah&hellip;.beliau membaca pada dua raka&aacute;t tersebut <span style="text-align: right;" class="arab"> قُلْ هُوَ اللهُ أَحَدٌ </span>dan <span style="text-align: right;" class="arab"> قُلْ يَا أَيُّهَا الْكَافِرُونَ, </span>lalu beliau kembali lagi ke hajar aswad maka beliaupun mengusap hajar aswad&rdquo; (HR Muslim no 1218)</p>
+<ul>
+<li>Seusai thowaf, maka posisi kain ihram dikembalikan seperti sedia kala, yaitu menutupi kedua bahunya.</li>
+<li>Sholat dua raka&aacute;t setelah thowaf disunnahkan untuk seluruh jenis thowaf, termasuk thowaf ifadhoh dan thowaf sunnah. Ibnu &Aacute;bbas berkata عَلَى كُلِّ سُبُعٍ رَكْعَتَانِ &ldquo;Setiap 7 putaran thowaf hendaknya melaksanakan sholat 2 raka&aacute;t&rdquo;<sup>&nbsp;(</sup><sup>[12]</sup><sup>)</sup></li>
+<li>Boleh mengerjakan sholat sunnah ini meskipun di waktu terlarang<sup>(</sup><sup>[13]</sup><sup>)</sup>.</li>
+<li>Jika tidak memungkinkan sholat di belakang maqom Ibrahim karena begitu padatnya manusia di al-Masjid al-Haroom maka ia boleh sholat dimanapun dari bagian Masjid Al Haram<sup>(</sup><sup>[14]</sup><sup>)</sup>.</li>
+<li>Bahkan jika lupa maka boleh diqhodo meskipun di luar al-masjid al-haram<sup>(</sup><sup>[15]</sup><sup>)</sup></li>
+<li>Setelah sholat dua raka&aacute;t di belakang maqom maka disunnahkan untuk kembali ke hajar aswad untuk mengusapnya kembali -sebagaimana ditunjukan oleh hadits Jabir di atas-</li>
+</ul>
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

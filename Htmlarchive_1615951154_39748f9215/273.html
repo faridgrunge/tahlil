@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Zikir & Doa Setelah Shalat (Lengkap)</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">1. Membaca istighfar di bawah ini sebanyak tiga kali:<br><br> أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ الْحَىَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ ×٣<br><br>2. Memuji Allah dengan kalimat:<br><br>  اللَّهُـمَّ أَنْتَ السَّلاَمُ، وَمِنْكَ السَّلَامُ، تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالإِكْرَامِ<br><br>Ini berdasarkan hadis riwayat Imam Muslim no. 591. Dalam riwayat lain sebagaimana dikutip Bidayatul Hidayah:<br> <br>اَللَّهُـمَّ أَنْتَ السَّلاَمُ، وَمِنْكَ السَّلَامُ، وَإِلَيْكَ يَعُوْدُ السَّلَامُ فَحَيِّنَارَبَّنَا بِالسَّلَامِ وَاَدْخِلْنَا الْـجَنَّةَ دَارَ السَّلَامِ تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ يَا ذَاالْـجَلَالِ وَاْلإِكْرَام<br><br>3. Lalu membaca:<br><br> اللَّهُـمَّ لاَ مَانِعَ لِمَا أَعْطَيْتَ، وَلاَ مُعْطِيَ لِمَا مَنَعْتَ، وَلاَ يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ<br><br>Bacaan ini bisa kita temukan dalam hadis riwayat Imam Bukhari no. 6330 dan Imam Muslim no. 593. Dalam Bidayatul Hidayah disebutkan:<br> <br>اَللَّهُـمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ، وَلاَ مُعْطِيَ لِمَا مَنَعْتَ، وَلَا رَآدَّ لِمَا قَضَيْتَ وَلَا يَنْفَعُ ذَاالْجَدِّ مِنْكَ الْجَدُّ <br><br>4. Berdoa agar diberi kemampuan untuk mengingat (zikir), bersyukur, dan beribadah secara baik kepada Allah berdasarkan hadis riwayat Abu Dawud no. 1522:<br><br>اللَّهـُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ<br><br>5. Dilanjutkan dengan membaca bacaan sesuai hadis riwayat Tirmidzi no. 3474 dan 3534:<br><br>لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ<br> (dibaca tiga kali tiap selesai salat fardhu, khusus setelah maghrib dan subuh sepuluh kali)<br><br>Bisa juga membaca ini berdasarkan hadis riwayat Muslim no. 594:<br><br> لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَلاَ نَعْبُدُ إِلاَّ إِيَّاهُ لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ لاَ إِلَهَ إِلاَّ اللَّهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الْكَافِرُونَ <br><br>6. Memohon perlindungan dari ganasnya neraka berdasarkan hadis riwayat Imam Ahmad no. 17362:<br><br>اللَّهـُمَّ أَجِرْنِي مِنَ النَّارِ<br><br>atau yang lebih lengkap redaksinya:<br><br>اللَّهُـمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ اللَّهـُمَّ أَجِرْنِي مِنْ النَّارِ<br><br>(tujuh kali ba’da maghrib dan subuh)<br><br>7. Membaca Ayat Kursi:<br><br>اَللّٰهُ لَآ اِلٰهَ اِلَّا هُوَۚ اَلْحَيُّ الْقَيُّوْمُ ەۚ لَا تَأْخُذُهٗ سِنَةٌ وَّلَا نَوْمٌۗ لَهٗ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۗ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهٗٓ اِلَّا بِاِذْنِهٖۗ يَعْلَمُ مَا بَيْنَ اَيْدِيْهِمْ وَمَا خَلْفَهُمْۚ وَلَا يُحِيْطُوْنَ بِشَيْءٍ مِّنْ عِلْمِهٖٓ اِلَّا بِمَا شَاۤءَۚ وَسِعَ كُرْسِيُّهُ السَّمٰوٰتِ وَالْاَرْضَۚ وَلَا يَـُٔوْدُهٗ حِفْظُهُمَاۚ وَهُوَ الْعَلِيُّ الْعَظِيْمُ<br><br>8. Membaca Surat Al-Baqarah ayat 285-286: <br><br> اٰمَنَ الرَّسُوْلُ بِمَآ اُنْزِلَ اِلَيْهِ مِنْ رَّبِّهٖ وَالْمُؤْمِنُوْنَۗ كُلٌّ اٰمَنَ بِاللّٰهِ وَمَلٰۤىِٕكَتِهٖ وَكُتُبِهٖ وَرُسُلِهٖۗ لَا نُفَرِّقُ بَيْنَ اَحَدٍ مِّنْ رُّسُلِهٖ ۗ وَقَالُوْا سَمِعْنَا وَاَطَعْنَا غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَصِيْرُ - ٢٨٥<br><br>لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَا ۗ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ اِنْ نَّسِيْنَآ اَوْ اَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ اِصْرًا كَمَا حَمَلْتَهٗ عَلَى الَّذِيْنَ مِنْ قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهٖۚ وَاعْفُ عَنَّاۗ وَاغْفِرْ لَنَاۗ وَارْحَمْنَا ۗ اَنْتَ مَوْلٰىنَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكٰفِرِيْنَ ࣖ - ٢٨٦<br><br>9. Disambung dengan beberapa ayat dari Surat Ali ‘Imran: <br><br> شَهِدَ اللّٰهُ اَنَّهٗ لَآ اِلٰهَ اِلَّا هُوَۙ وَالْمَلٰۤىِٕكَةُ وَاُولُوا الْعِلْمِ قَاۤىِٕمًاۢ بِالْقِسْطِۗ لَآ اِلٰهَ اِلَّا هُوَ الْعَزِيْزُ الْحَكِيْمُ - ١٨<br><br>اِنَّ الدِّيْنَ عِنْدَ اللّٰهِ الْاِسْلَامُ ۗ وَمَا اخْتَلَفَ الَّذِيْنَ اُوْتُوا الْكِتٰبَ اِلَّا مِنْۢ بَعْدِ مَا جَاۤءَهُمُ الْعِلْمُ بَغْيًاۢ بَيْنَهُمْ ۗوَمَنْ يَّكْفُرْ بِاٰيٰتِ اللّٰهِ فَاِنَّ اللّٰهَ سَرِيْعُ الْحِسَابِ - ١٩<br><br>قُلِ اللهم مٰلِكَ الْمُلْكِ تُؤْتِى الْمُلْكَ مَنْ تَشَاۤءُ وَتَنْزِعُ الْمُلْكَ مِمَّنْ تَشَاۤءُۖ وَتُعِزُّ مَنْ تَشَاۤءُ وَتُذِلُّ مَنْ تَشَاۤءُ ۗ بِيَدِكَ الْخَيْرُ ۗ اِنَّكَ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ - ٢٦<br><br>تُوْلِجُ الَّيْلَ فِى النَّهَارِ وَتُوْلِجُ النَّهَارَ فِى الَّيْلِ وَتُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَتُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَتَرْزُقُ مَنْ تَشَاۤءُ بِغَيْرِ حِسَابٍ - ٢٧<br><br>10. Membaca Surat Al-Ikhlas, Surat Al-Falaq, Surat An-Nas, lalu Surat Al-Fatihah<br><br>11. Membaca tasbih, hamdala, dan takbir masing-masing sebanyak 33 kali:<br><br> سُبْحَانَ اللَّهِ ×٣٣<br><br>اَلْحَمْدُ لِلّٰهِ ×٣٣<br><br>اللَّهُ أَكْبَرُ ×٣٣<br><br>12. Kemudian dilanjutkan dengan:<br><br>اللَّهُ أَكْبَرُ كَبِيرًا وَالْحَمْدُ لِلَّهِ كَثِيرًا وَسُبْحَانَ اللَّهِ بُكْرَةً وَأَصِيلاً<br><br>لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ<br><br> وَلَاحَوْلَ وَلَاقُوَّةَ إِلَّابِا للَّهِ الْعَلِـىِّ الْعَظِيْمِ. أَفْضَلُ ذِكْرِ فَاعْلَمْ أَنَّهُ<br><br>لاَ إِلَهَ إِلاَّ اللَّهُ<br>(Dibaca 300 kali ba’da subuh, 100 kali ba’da isya, 50 kali ba’da zuhur, 50 kali ba’da asar, dan 100 kali ba’da maghrib)<br><br> صَلَّى اللَّهُ عَلَى مُحَمَّدٍ<br>(dibaca ba’da subuh 300 atau 100 kali)<br><br>لاَ إِلَهَ إِلاَّ اللَّهُ مُحَمَّدٌ رَسُوْلُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ<br><br>13. Baik juga membaca doa ini (terutama ba’da subuh) berdasarkan hadis riwayat Ibnu Majah no. 925:<br><br>اللَّهُـمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا طَيِّبًا وَعَمَلاً مُتَقَبَّلاً<br><br>14. Boleh juga membaca doa ini berdasarkan hadis riwayat Muslim no. 709: <br><br> رَبِّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ - أَوْ تَجْمَعُ - عِبَادَكَ<br><br>15. Wirid kemudian ditutup dengan doa sesuai dengan harapan masing-masing.<br><br>###<br><br>Tambahan:<br><br>1. Jika setelah berdoa lalu masih tetap berada di tempat ibadah (atau masjid) atau mungkin sedang i'tikaf bisa juga membaca zikir ini yang bersumber dari hadis riwayat An-Nasa'i no. 1352:<br><br> سُبْحَانَ اللَّهِ عَدَدَ خَلْقِهِ سُبْحَانَ اللَّهِ عَدَدَ خَلْقِهِ سُبْحَانَ اللَّهِ عَدَدَ خَلْقِهِ سُبْحَانَ اللَّهِ رِضَا نَفْسِهِ سُبْحَانَ اللَّهِ رِضَا نَفْسِهِ سُبْحَانَ اللَّهِ رِضَا نَفْسِهِ سُبْحَانَ اللَّهِ زِنَةَ عَرْشِهِ سُبْحَانَ اللَّهِ زِنَةَ عَرْشِهِ سُبْحَانَ اللَّهِ زِنَةَ عَرْشِهِ سُبْحَانَ اللَّهِ مِدَادَ كَلِمَاتِهِ سُبْحَانَ اللَّهِ مِدَادَ كَلِمَاتِهِ سُبْحَانَ اللَّهِ مِدَادَ كَلِمَاتِهِ<br><br>2.  Ingin terhindar dari terlalu cinta dunia? Habib Umar bin Hafidz merekomendasikan doa yang sering dibaca oleh Imam Al-Hadad ini untuk dibaca setelah salat:<br><br><br>اللَّهُـمَّ أَخْرِجْ مِنْ قَلْبِي كُلَّ قَدْرٍ لِلدُّنْيَا، وَكُلَّ مَحَلٍّ لِلْخَلْقِ؛ يَمِيْلُ بِي إِلَى مَعْصِيَتِك، أَوْ يُشْغِلُنِي عَنْ طَاعَتِك، أَوْ يَحُولُ بَيْنِي وَبَيْنَ التَّحَقُّقِ بِمَعْرِفَتِكَ الْخَاصَّة، وَمَحَبَّتِكَ الْخَالِصَة</p><p><i>1. Astaghfirullaahal ‘adziim alladzii laaailaaha illaa huwal hayyul qoyyuum wa atuubu ilaih.<br><br>2. Allahumma antassalam waminkassalam tabarakta ya dzaljalali wal ikram. <br><br>Atau: <br><br>Allahumma antassalaam waminkassalaam wa ilaika ya’uudus salaam fakhayyinaa robbanaa bis salaam wa adkhilnal jannata daaros salaam tabaarakta robbanaa wa ta’aalaita yaa dzaljalaali wal ikram.<br><br>3. Allahumma laa mani’a limaa a’thaita wa laa mu’thiya limaa mana’ta wa laa yanfa’u dzal jaddi minkal jadd.<br><br>Atau: <br><br>Allahumma laa mani’a limaa a’thaita wa laa mu’thiya limaa mana’ta, wa laa roadda limaa qodhoyta,  wa laa yanfa’u dzal jaddi minkal jadd.<br><br>4. Allahumma a’inni ‘ala dzikrika wa syukrika wa husni ‘ibadatik.<br><br>5. La ilaha illallah wahdahu la syarika lahu lahul mulku wa lahul hamdu yuhyi wa yumit, wa huwa ‘ala syai’in qadir.<br><br>6. Allahumma ajirni minannar.<br><br>Atau:<br><br>Allahumma inni asalukal jannata. Allahumma ajirni minannar.<br><br>7. Allāhu lā ilāha illā huw, al-ḥayyul-qayyụm, lā ta`khużuhụ sinatuw wa lā na`ụm, lahụ mā fis-samāwāti wa mā fil-arḍ, man żallażī yasyfa'u 'indahū illā bi`iżnih, ya'lamu mā baina aidīhim wa mā khalfahum, wa lā yuḥīṭụna bisyai`im min 'ilmihī illā bimā syā`, wasi'a kursiyyuhus-samāwāti wal-arḍ, wa lā ya`ụduhụ ḥifẓuhumā, wa huwal-'aliyyul-'aẓīm.<br><br>8. Amanar-rasụlu bimā unzila ilaihi mir rabbihī wal-mu`minụn, kullun āmana billāhi wa malā`ikatihī wa kutubihī wa rusulih, lā nufarriqu baina aḥadim mir rusulih, wa qālụ sami'nā wa aṭa'nā gufrānaka rabbanā wa ilaikal-maṣīr.<br><br>Lā yukallifullāhu nafsan illā wus'ahā, lahā mā kasabat wa 'alaihā maktasabat, rabbanā lā tu`ākhiżnā in nasīnā au akhṭa`nā, rabbanā wa lā taḥmil 'alainā iṣrang kamā ḥamaltahụ 'alallażīna ming qablinā, rabbanā wa lā tuḥammilnā mā lā ṭāqata lanā bih, wa'fu 'annā, wagfir lanā, war-ḥamnā, anta maulānā fanṣurnā 'alal-qaumil-kāfirīn.<br><br>9. Syahidallāhu annahụ lā ilāha illā huwa wal-malā`ikatu wa ulul-'ilmi qā`imam bil-qisṭ, lā ilāha illā huwal-'azīzul-ḥakīm. <br><br>Innad-dīna 'indallāhil-islām, wa makhtalafallażīna ụtul-kitāba illā mim ba'di mā jā`ahumul-'ilmu bagyam bainahum, wa may yakfur bi`āyātillāhi fa innallāha sarī'ul-ḥisāb.<br><br>Qulillāhumma mālikal-mulki tu`til-mulka man tasyā`u wa tanzi'ul-mulka mim man tasyā`u wa tu'izzu man tasyā`u wa tużillu man tasyā`, biyadikal-khaīr, innaka 'alā kulli syai`ing qadīr.<br><br>Tụlijul-laila fin-nahāri wa tụlijun-nahāra fil-laili wa tukhrijul-ḥayya minal-mayyiti wa tukhrijul-mayyita minal-ḥayyi wa tarzuqu man tasyā`u bigairi ḥisāb.<br><br>10. Membaca Surat Al-Ikhlas, Surat Al-Falaq, Surat An-Nas, lalu Surat Al-Fatihah.<br><br>11. Subhanallah 33 x, Alhamdulillah 33 x, Allahu akbar 33x.<br><br>12. Allāhu akbar kabīraw-wal-ḥamdu lillāhi katsīraw-wa subḥānallāhi bukrataw-wa ashīlā.<br><br>La ilaha illallah wahdahu la syarika lahu lahul mulku wa lahul hamdu yuhyi wa yumit, wa huwa ‘ala syai’in qadir.<br><br>Wa laa haula walaa quwwata Illaa billaahil ‘aliyyil ‘zdziim(i). Afdhalu zikri fa’lam annahu la ila ha illallah. <br><br>Shallallahu ‘ala Muhammad.<br><br>La ilaha illallah muhammadur rasulullah sallallahu alaihi wa sallam.<br><br>13. Allahumma inni as-aluka 'ilman naafi'a wa rizqon thoyyibaa wa 'amalan mutaqobbalaa.<br><br>14. Robbi qinii 'adzaabaka yauma tab'atsu au tajma'u 'ibaadaka.<br><br>15. Wirid kemudian ditutup dengan doa sesuai dengan harapan masing-masing.<br><br>###<br><br>Tambahan:<br><br>1. Subhan Allah adada khalqihi, subhan Allah adada khalqihi, subhan Allah adada khalqihi; subhan Allah rida nafsihi, subhan Allah rida nafsihi, subhan Allah rida nafsihi; Subhan Allah zinata 'arshihi, Subhan Allah zinata 'arshihi, Subhan Allah zinata 'arshihi; Subhan Allah midada Kalamatihi, Subhan Allah midada Kalamatihi, Subhan Allah midada Kalamatihi.<br><br>2. Allahumma akhrij min qalbi kulla qadrin liddunya wa kulla mahallin lilkhalq yamilu bi ila ma`siyatik aw yushghiluni `an ta`atik aw yahulu bayni wa bayna’ttahaqquq bi ma`rifatika al-khassah wa mahabbitaka’l-khalisah.</i></p><p>1. Aku memohon ampunan kepada Allah yang Maha Agung, yang tiada Tuhan selain Dia, Maha Hidup, Maha Kuasa, dan kepada-Nya aku bertaubat.<br><br>2. Ya Allah, Engkau pemberi keselamatan, dan dari-Mu keselamatan, Mahasuci Engkau, wahai Tuhan pemilik seluruh keagungan dan kemuliaan.<br><br>	Atau: <br><br>Ya Allah, Engkau sumber keselamatan dan dari pada-Mulah datangnya keselamatan dan kepada-Mu kembalinya keselamatan. Maka hidupkanlah kami wahai Tuhan, dengan selamat sejahtera dan masukkanlah kami ke dalam surga negeri keselamatan. Maha banyak anugerahMu dan Maha Tinggi Engkau Wahai Tuhan yang memiliki keagungan dan kehormatan.<br><br>3. Ya Allah, tidak ada yang mencegah apa yang Engkau berikan dan tidak ada yang memberi apa yang Engkau cegah. Tidak berguna kekayaan dan kemuliaan itu bagi pemiliknya (selain iman dan amal shalihnya yang menyelamatkan dari siksaan). Hanya dari-Mu kekayaan dan kemuliaan.<br><br>4. Ya Allah, bantulah aku untuk senantiasa berzikir dan bersyukur kepada-Mu, serta selalu beribadah dengan baik kepadamu.<br><br>5. Tiada tuhan selain Allah sendiri, tiada sekutu baginya. Milik-Nya kekuasaan (bumi dan langit), bagi-Nya segala puji. Dia berkuasa atas segala sesuatu. <br><br>6. Ya Allah, jauhkan aku dari api neraka.<br><br>Atau:<br><br>Ya Allah, masukanlah aku ke surga. Ya Allah, jauhkan aku dari api neraka.<br><br>7. Allah, tidak ada tuhan selain Dia. Yang Mahahidup, Yang terus menerus mengurus (makhluk-Nya), tidak mengantuk dan tidak tidur. Milik-Nya apa yang ada di langit dan apa yang ada di bumi. Tidak ada yang dapat memberi syafaat di sisi-Nya tanpa izin-Nya. Dia mengetahui apa yang di hadapan mereka dan apa yang di belakang mereka, dan mereka tidak mengetahui sesuatu apa pun tentang ilmu-Nya melainkan apa yang Dia kehendaki. Kursi-Nya meliputi langit dan bumi. Dan Dia tidak merasa berat memelihara keduanya, dan Dia Mahatinggi, Mahabesar.<br><br>8. Rasul (Muhammad) beriman kepada apa yang diturunkan kepadanya (Al-Qur'an) dari Tuhannya, demikian pula orang-orang yang beriman. Semua beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya dan rasul-rasul-Nya. (Mereka berkata), “Kami tidak membeda-bedakan seorang pun dari rasul-rasul-Nya.” Dan mereka berkata, “Kami dengar dan kami taat. Ampunilah kami Ya Tuhan kami, dan kepada-Mu tempat (kami) kembali.”<br><br>Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya. Dia mendapat (pahala) dari (kebajikan) yang dikerjakannya dan dia mendapat (siksa) dari (kejahatan) yang diperbuatnya. (Mereka berdoa), “Ya Tuhan kami, janganlah Engkau hukum kami jika kami lupa atau kami melakukan kesalahan. Ya Tuhan kami, janganlah Engkau bebani kami dengan beban yang berat sebagaimana Engkau bebankan kepada orang-orang sebelum kami. Ya Tuhan kami, janganlah Engkau pikulkan kepada kami apa yang tidak sanggup kami memikulnya. Maafkanlah kami, ampunilah kami, dan rahmatilah kami. Engkaulah pelindung kami, maka tolonglah kami menghadapi orang-orang kafir.”<br><br>9. Allah menyatakan bahwa tidak ada tuhan selain Dia; (demikian pula) para malaikat dan orang berilmu yang menegakkan keadilan, tidak ada tuhan selain Dia, Yang Mahaperkasa, Maha-bijaksana.<br><br>Sesungguhnya agama di sisi Allah ialah Islam. Tidaklah berselisih orang-orang yang telah diberi Kitab kecuali setelah mereka memperoleh ilmu, karena kedengkian di antara mereka. Barangsiapa ingkar terhadap ayat-ayat Allah, maka sungguh, Allah sangat cepat perhitungan-Nya.<br><br>Katakanlah (Muhammad), “Wahai Tuhan pemilik kekuasaan, Engkau berikan kekuasaan kepada siapa pun yang Engkau kehendaki, dan Engkau cabut kekuasaan dari siapa pun yang Engkau kehendaki. Engkau muliakan siapa pun yang Engkau kehendaki dan Engkau hinakan siapa pun yang Engkau kehendaki. Di tangan Engkaulah segala kebajikan. Sungguh, Engkau Mahakuasa atas segala sesuatu.<br><br>Engkau masukkan malam ke dalam siang dan Engkau masukkan siang ke dalam malam. Dan Engkau keluarkan yang hidup dari yang mati, dan Engkau keluarkan yang mati dari yang hidup. Dan Engkau berikan rezeki kepada siapa yang Engkau kehendaki tanpa perhitungan.”<br><br>10. Membaca Surat Al-Ikhlas, Surat Al-Falaq, Surat An-Nas, lalu Surat Al-Fatihah.<br><br>11. Subhanallah (Maha Suci Allah) 33 x, Alhamdulillah (Segala puji bagi Allah) 33 x, Allahu akbar (Allah Maha Besar) 33x.<br><br>12. Allah Maha Besar dengan sebesar-besarnya, segala puji bagi Allah dengan pujian yang banyak. Mahasuci Allah pada waktu pagi dan petang.<br><br>Tidak ada Tuhan selain Allah, tidak ada sekutu bagi-Nya, milik-Nya segala kekuasaan dan bagi-Nya segala pujian. Dia Mahakuasa atas segala sesuatu. <br><br>Dan tiada daya dan upaya kecuali dengan kekuatan Allah yang Maha Tinggi lagi Maha Agung. <br><br>Zikir yang terbaik adalah kalimat: Tidak ada Tuhan selain Allah.<br><br>Semoga Allah memberikan rahmat-Nya kepada Muhammad. <br><br>Tidak ada Tuhan selain Allah dan Muhammad adalah Rasulullah. <br><br>13. Ya Allah, aku memohon pada-Mu ilmu yang bermanfaat, rizki yang baik, dan amalan yang diterima.<br><br>14. Ya Allah, lindungilah aku dari azab-Mu pada hari Engkau bangkitkan atau Engkau kumpulkan hamba-hamba-Mu.<br><br>15. Wirid kemudian ditutup dengan doa sesuai dengan harapan masing-masing.<br><br>###<br><br>Tambahan:<br><br>1. Maha suci Allah sejumlah bilangan makhluk-Nya, Maha suci Allah sejumlah bilangan makhluk-Nya, Maha suci Allah sejumlah bilangan makhluk-Nya, Maha suci Allah dengan keridhaan diri-Nya, Maha suci Allah dengan keridhaan diri-Nya, Maha suci Allah dengan keridhaan diri-Nya, Maha suci Allah (seberat) timbangan 'Arsy-Nya', Maha suci Allah (seberat) timbangan 'Arsy-Nya', Maha suci Allah (seberat) timbangan 'Arsy-Nya', Maha suci Allah sebanyak kalimat-Nya, Maha suci Allah sebanyak kalimat-Nya, Maha suci Allah sebanyak kalimat-Nya.<br><br>2. Ya Allah, singkirkan dari hatiku kecenderungan untuk cinta dunia dan kedudukan sehingga menyebabkanku tidak mentaati-Mu atau mengalihkan perhatianku dari beribadah kepada-Mu, atau menghalangiku dari mendapatkan pengetahuan tentang-Mu atau mencintai-Mu setulusnya.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Ini adalah kumpulan doa-doa setelah salat yang diambil dari berbagai sumber terpercaya. Sehingga dapat dikatakan cukup lengkap. <br><br>Jika ingin membaca yang lebih ringkas, bisa mengecek "Zikir & Doa Singkat Setelah Salat" di KESAN.</p><p><strong>Berbagai hadis dan sumber
+</strong></p>
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Sholatnya orang yang sakit </h1><br>
+
+<h3>1. Wudhu Untuk Pasien</h3>
+    	 Tidak seperti orang yang sehat, para pasien sering mengalami berbagai   kesulitan ketika hendak berwudhu. Kesulitan itu bisa berupa ketersediaan   air, atau beberapa kesulitan teknis yang menyangkut tempat atau   kesehatan pasien.<span id="more-1865"> </span> Dalam hal ini, Islam memberikan keringanan kepada pasien untuk berwudhu dengan cara-cara sebagai berikut:</p>
+      <ul><li>Apabila pasien masih mampu bergerak dan menurut dokter, air tidak   berdampak negatif untuk proses penyembuhan, maka ia wajib berwudhu   sendiri.<br>
+        <li>Jika pasien sudah tidak mampu bergerak, maka seseorang bisa membantunya untuk berwudhu.<br>
+        <li>Jika menurut dokter, air membahayakan atau memperlambat proses penyembuhan pasien, maka dia bertayamum sebagai ganti wudhu.<br>
+        <li>Jika pada bagian anggota badan yang wajib dibasuh atau diusap dalam   wudhu terdapat luka, tapi masih memungkinkan dibasuh, maka dia tetap   wajib membasuhnya. Jika beresiko, hendaknya dia mengusapnya sekali   usapan dengan air. Jika mengusapnya beresiko pula, dia bisa membalutnya   dengan gips atau plester dan mengusap balutannya. Jika masih tidak   memungkinkan, maka dia boleh bertayamum. Untuk poin yang keempat ini   bisa dilakukan setelah anggota badan telah suci baik dari hadats maupun   najis. Cara bertayamum bagi anggota badan yang dibalut atau digips cukup   mengusap bagian luarnya saja dengan debu.<br>
+        <li>Pasien yang tidak bisa menahan kencing, buang angin, keluar darah dan   sebagainya secara terus-menerus, dia wajib berwudhu atau tayamum   setelah masuk waktu shalat dan segera melakukan shalat. Ia wajib   membersihkan pakaian dan tempat yang terkena najis setiap akan shalat   berikutnya. Adapun najis yang tidak dapat dihindari selama   berlangsungnya shalat, tidak menghalangi sahnya shalat karena keadaan   yang amat darurat.<br>
+        <li>Jika pasien tidak bisa membersihkan badan, pakaian dan tempat serta   tidak ada orang lain yang membantunya, menurut para ulama Hanafiyah dan   Syafi’iyah, ia tetap mengerjakan shalat dengan keadaan darurat serba   najis karena ia telah terbebas dari tanggungjawab bersuci (shalat   lihurmatil waqti). Akan tetapi ia wajib mengulanginya (i’adah) jika   sudah sehat.</p>
+      </ul>
+	  <h3>2. Mandi Untuk Pasien</h3>
+      <ul><li>Pasien yang berstatus junub artinya memiliki tanggungan hadats   besar karena haid, nifas dan sebagainya, ia wajib mandi. Selama belum   mandi, ia tidak boleh menjalankan shalat, menyentuh atau membaca   al-Qur’an atau tinggal di masjid. Hal ini perlu menjadi catatan sebab   banyak pasien yang ingin tetap memperbanyak ibadah untuk memohon   kesembuhan dari Allah dengan membaca ayat-ayat al-Qur’an. Karena bacaan   al-Qur’an itu telah menjadi kebiasaan yang bersangkutan sehari-hari. Ia   tidak sadar atau tidak tahu bahwa bacaan itu diharamkan baginya selama   ia belum suci dari hadats besar. Sebagai gantinya ia bisa berdzikir   dengan bacaan apapun selain al-Qur’an atau diperbolehkan juga berdoa   walaupun doa-doa itu terambil dari al-Qur’an. Misalnya bacaan salawat   nabi, asmaul husna, tahlil (la ilaha illallah), tasbih (subahanallah),   istighfar (astaghfirullah) atau doa para Nabi yang termaktub dalam   al-Qur’an dan sebagainya.<br>
+        <li>Bagaimana pasien yang terkena kewajiban mandi namun menurut dokter   tidak boleh terkena air atau tidak tersedia air, pasien yang demikian   diperbolehkan tayamum sebagai pengganti mandi. Ia mendapatkan sejumlah   keringanan sebagaimana keringanan tayamum sebagai pengganti wudhu   seperti telah dijelaskan sebelumnya.<br>
+        <li>Masih banyak orang Islam yang salah paham dan menganggap tayamum   hanya sebagai pengganti wudhu. Kesalahpahaman tersebut juga pernah   terjadi pada zaman Nabi Saw, ketika ada orang yang lagi junub dan tidak   tersedia air, maka shahabat itu menggelindingkan badannya di atas pasir.   Sekali lagi perlu ditegaskan bahwa tayamum bisa menjadi pengganti mandi   dengan tata cara pelaksanaan yang sama dengan tayamum pengganti wudhu.   Ketika tayamum, ia harus berniat untuk membersihkan hadats besar.</p>
+      </ul>
+	  <h3>3. Tayamum Bagi Pasien</h3>
+      <p>Pasien diizinkan tayamum jika mengalami hal-hal sebagai berikut:<br>
+        <ul><li>Dinyatakan oleh dokter atau menurut keyakinan pasien sendiri bahwa   sentuhan air berbahaya bagi kesehatannya atau memperlambat proses   penyembuhan.<br>
+        <li>Tidak kuat secara fisik pergi ke tempat berwudhu atau adanya kesulitan lainnya.<br>
+        <li>Sebagian atau keseluruhan anggota badan yang wajib dibasuh untuk   wudhu tidak boleh terkena air seperti ada balutan atau gips, luka dan   lain-lain.<br>
+        <li>Kesulitan mendapat air. Misalnya air di Rumah Sakit sangat terbatas   atau bahkan kehabisan karena macetnya saluran air, atau antrian panjang   di tempat berwudhu sedangkan waktu shalat sudah hampir habis.</p>
+      </ul><p>Tayamum dilakukan setelah masuknya waktu shalat dan menggunakan debu   yang kering dan suci. Semua najis yang ada pada tubuhnya wajib   dibersihkan terlebih dahulu sebelum tayamum. Bagaimana cara mendapatkan   debu tersebut? Cukup mengusap tangan ke tembok atau benda di sekitarnya   yang dianggap kering dan berdebu meskipun sedikit.</p>
+      <p>Bagi pasien yang berpendirian tayamum harus dengan debu yang   benar-benar terlihat mata, maka keluarga pasien bisa menyediakan debu   suci dari rumah. Jika cara ini yang dilakukan maka pasien dan keluarga   harus memperhatikan kebersihan rumah sakit. Harus diusahakan agar debu   yang dibawa dari luar rumah sakit benar-benar suci dan diupayakan tidak   mengotori rumah sakit karena hal ini bisa juga beresiko terhadap   kesehatan para pasien dan orang-orang yang tinggal di ruangan itu.<br>
+        Tata cara tayamum adalah sebagai berikut:<br>
+        <ul><li>Mengusapkan tangan ke tembok ataupun benda di sekitar pasien yang   dianggap bersih dan suci serta tidak basah, atau pada debu yang   disiapkan secara khusus dari rumah oleh pasien atau keluarganya.<br>
+        <li>Mengusapkan kedua telapak tangan tersebut pada muka dengan terlebih   dahulu mengibaskan tangan atau meniupnya agar debu tidak membekas pada   wajah.<br>
+        <li>Mengusapkan kedua tangan ke tembok atau debu sekali lagi.<br>
+        <li>Mengusap tangan kanan dan kemudian tangan kiri sampai ke siku. Jika   ada kesulitan melepas lengan baju, atau alasan lain, maka boleh mengusap   tangan sampai ke pergelangan saja.<br>
+        <li>Pasien yang tidak dapat melakukan wudhu dan tayamum sendiri, dapat   dibantu oleh orang lain sesama jenis atau lain jenis yang mahram,   misalnya anak, saudara kandung dan sebagainya.</p>
+      </ul>
+	  
+	  <p>Orang yang tidak bisa melakukan wudhu, mandi, maupun tayamum karena   berbagai kesulitan, maka para ulama berbeda pendapat tentang kewajiban   shalatnya.<br>
+        <ul><li>Menurut ulama Malikiyah, dia tidak lagi terkena kewajiban shalat.<br>
+        <li>Menurut ulama Hanafiyah dan Syafi’iyah, dia tetap shalat tanpa   bersuci namun wajib mengulanginya jika sudah sehat. Shalat ini disebut   shalat lihurmatil waqti yaitu shalat yang dilakukan semata-mata untuk   menghormati kemuliaan waktu shalat.<br>
+        <li>Menurut ulama Hanabilah, dia shalat seperti biasa sekalipun tanpa bersuci dan tidak wajib mengulanginya.</p></ul>
+      <h3>4. Shalat Pasien</h3>
+        Islam adalah agama kemudahan. Orang yang mengalami kesulitan menjalankan   ibadah karena kondisi tertentu, selalu diberi jalan kemudahan oleh   agama. Demikian juga shalat bagi pasien baik di rumah sakit atau di   rumah sendiri. Ia bisa menjalankan shalat dengan berdiri, duduk,   terlentang dan dengan cara lain yang tidak menyulitkan baginya.</p>
+      <blockquote>
+        <ol>
+		<li>Shalat Berdiri</li>
+          Pasien yang masih mampu berdiri dan tidak mengkhawatirkan sakitnya   bertambah parah, wajib melaksanakan shalat dengan cara berdiri</p>
+        <p>Menurut Imam Hanafi dan Imam Hanbali, jika pasien masih kuat berdiri   dengan bantuan tongkat atau bersandar pada tembok atau orang lain dan   tidak mempengaruhi proses kesembuhan, ia masih tetap wajib berdiri.</p>
+        <p>Adapun shalat sunnah seperti shalat sebelum dan sesudah shalat wajib   (shalat sunnah rawatib), shalat tahajud dan sebagainya boleh dikerjakan   dengan duduk sekalipun ia sehat dan kuat berdiri. Sekalipun diizinkan,   namun shalat sunnah sebaiknya dikerjakan dengan berdiri bagi orang yang   masih sehat karena shalat dengan berdiri lebih utama daripada dengan   duduk. Nabi Saw bersabda,”Jika seseorang melakukan shalat (sunnah)   sambil berdiri, maka hal itu lebih baik, dan barang siapa shalat sambil   duduk maka ia mendapat separo pahala shalat dengan berdiri, dan barang   siapa yang shalat sambil terlentang maka ia mendapatkan separo pahala   shalat dengan duduk.” (HR. Al-Bukhari)</p>
+        <li>Shalat Duduk</li>
+        Dalam kondisi pasien tidak mampu melaksanakan shalat dengan berdiri,   maka ia bisa shalat dengan duduk. Nabi Saw bersabda, ”Shalatlah dengan   berdiri, jika engkau tidak mampu (dengan berdiri), maka shalatlah dengan   duduk, jika engkau tidak mampu shalat (dengan duduk), maka shalatlah   dengan berbaring.” (HR. Al-Bukhari)</p>
+        <p>Shalat fardhu (wajib) boleh dikerjakan dengan duduk jika:<br>
+        <ul><li>aPasien tidak kuat berdiri, atau kuat namun tidak diizinkan menurut petunjuk dokter.<br>
+        <li>Tidak ada tempat lain selain tempat tidur pasien dan tidak   memungkinkan berdiri di atasnya karena tempat tidur memantul, rapuh dan   sebagainya. Kondisi inilah yang paling sering dialami oleh banyak   pasien.<br>
+        <li>Pasien bertinggi badan yang tidak memungkinkan dia berdiri di tempat itu.<br></ul>
+        <br>Adapun tata-caranya shalat duduk adalah:<br>
+        <ul><li>Duduk menghadap kiblat dengan posisi iftirasy (duduk di atas mata   kaki kiri, telapak kaki kanan ditegakkan, ujung jari kaki kanan ditekuk   menghadap kiblat). Adapun cara duduknya bisa dengan bersila, iftirasy,   atau menyelonjorkan kaki ke arah kiblat. Menurut kebanyakan ulama, duduk   iftirasy lebih baik. Imam As-Subki dan Al-Adzra’i berpendapat lain,   bahwa bersila lebih utama karena untuk membedakan antara duduk karena   darurat lantaran tidak bisa berdiri dengan duduk iftirasy secara normal   pada posisi tasyahud (duduk pada tasyahud awal atau duduk di antara dua   sujud). Bagi perempuan lebih baik duduk bersila, agar auratnya lebih   tertutup.</p>
+        <p><img src="pic/1s.png" width="400" height="506"></p>
+        <p><br>
+          <li>Berniat shalat dan kemudian menjalankan semua rukun (aturan wajib) shalat.<br>
+          <li>Ketika ruku’, badan dibungkukkan sedikit dan tangan diletakkan di atas paha.<br><img src="pic/2s.png" width="400" height="505">
+          <li>Untuk posisi sujud, bisa dengan sujud sempurna jika kesehatan   memungkinkan dan bisa dengan membungkukkan badan dengan posisi sedikit   lebih rendah daripada posisi ruku’.<br>
+          <li>Untuk duduk tasyahud (duduk terakhir sebelum salam penutup shalat)   bisa dengan tawarruk (seperti duduk iftirasy hanya saja telapak kaki   kiri dikeluarkan ke kanan sehingga pantat duduk di atas alas shalat)   atau dengan duduk istirasy jika fisik tidak memungkinkan.</p></ul>
+        <li>Shalat Berbaring</li>
+        Shalat dengan berbaring dilakukan bagi pasien yang tidak mampu shalat   dengan berdiri ataupun duduk. Adapun tata caranya adalah sebagai   berikut:<br>
+        a. Berbaring (miring) dengan bertumpu pada lambung kanan, kepala di sebelah utara, dada dan wajah menghadap kiblat.<br>
+        <img src="pic/4s.png" width="400" height="495">
+        b. Berniat shalat dan kemudian menjalankan semua rukun (aturan wajib) shalat.<br>
+        c. Ketika ruku’ sedikit menundukkan kepala ke arah dada.<br>
+        d. Ketika sujud, menundukkan kepala lebih menunduk daripada ketika ruku’.<br>
+        e. Selanjutnya meneruskan rukun shalat sampai salam dalam posisi berbaring.</p>
+        <li>Shalat Terlentang</li>
+        Apabila pasien tidak mampu melakukan shalat dengan duduk ataupun   berbaring, maka ia bisa melakukan shalat dengan terlentang. Adapun tata   caranya, ialah:<br>
+        a. Pasien tidur terlentang dengan kaki membujur ke arah kiblat, kepala   diangkat sedikit tinggi dengan bantal atau lainnya dan wajah menghadap   kiblat. Jika karena sesuatu hal sehingga tidak memungkinkan menghadapkan   wajah ke arah kiblat, misalnya karena posisi tempat tidur, atau karena   kepala tidak bisa diangkat lebih tinggi maka cukup dengan menghadapkan   kedua telapak kaki saja kearah kiblat.<br><img src="pic/3s.png" width="400" height="486">
+        b. Ketika ruku’ sedikit menundukkan kepala ke arah dada.<br>
+        c. Ketika sujud, menundukkan kepala sedikit lebih menunduk daripada ketika ruku’.<br>
+        d. Selanjutnya meneruskan rukun sampai salam dalam keadaan terlentang.</p>
+        <li>Shalat Isyarat</li>
+        Jika pasien tetap tidak bisa melakukan shalat dengan semua keringanan di   atas, maka cara yang terakhir adalah shalat dengan isyarat. Adapun tata   caranya ialah:<br>
+        a. Posisi badan bebas. Jika masih mungkin, tetap menghadap kiblat.<br>
+        b. Semua gerakan shalat dilakukan hanya dengan isyarat anggota badan misalnya jari telunjuk tangan, kedipan mata atau lainnya.<br>
+        c. Jika isyarat dengan anggota tubuh tidak mampu, maka cukup isyarat   dengan hati demikian juga bacaan-bacaan shalat. Hanya pasien dan Allah   yang dapat mengetahui shalat dengan cara ini. Inilah ikhtiar terakhir   yang dilakukan oleh pasien dalam memenuhi kewajibannya sebagai hamba   Allah.<br>
+        d. Jika dengan isyarat hati tidak bisa, maka berarti pasien sudah tidak terbebani kewajiban apapun.<br>
+        e. Untuk kemudahan dan konsentrasi shalat pasien, ia boleh dipandu   gerakannya oleh orang lain, seperti perawat, anggota keluarga dan lain   sebagainya. ,</p>
+        <li>Shalat Wanita Hamil</li>
+        Sebagaimana diuraikan sebelumnya, bahwa shalat tidak bisa ditinggalkan   oleh siapapun dan dengan alasan apapun. Oleh sebab itu, orang yang   sedang hamil tetap berkewajiban shalat. Bagi wanita hamil yang tidak   mengalami kesulitan, ia wajib menjalankan shalat dengan tata cara yang   baku sebagaimana biasa. Namun bagi yang mengalami kesulitan, maka bisa   melakukan shalat dengan beberapa keringanan seperti telah diuraikan   sebelumnya, yaitu dengan duduk, berbaring, terlentang dan sebagainya.</p>
+      </blockquote>
+      <h3>5. Puasa Bagi Wanita Hamil</h3>
+        Puasa Ramadhan merupakan kewajiban bagi setiap muslim yang sehat dan   tidak mengalami kesulitan menjalankannya. Bagi yang mengalami kesulitan   termasuk wanita hamil, boleh tidak berpuasa. Apalagi menurut petunjuk   dokter puasa membahayakan diri sang ibu atau bayi dalam kandungan. Bagi   wanita hamil yang demikian, semua ulama sepakat diperbolehkan   meninggalkan puasa. Namun, para ulama masih berbeda pendapat tentang   qadha’ atau fidyah yang bersangkutan.</p>
+      <h3>6. Puasa Bagi Ibu Menyusui</h3>
+        Madzhab Syafi’i menambahkan, bahwa jika ia tidak berpuasa hanya karena   pertimbangan kesehatan si bayi, maka ia wajib mengganti puasa dan   membayar fidyah. Mengenai fidyah dan qadha’ puasa, berikut pendapat   beberapa ulama terkait wanita hamil atau menyusui:<br>
+        <ul><li>Jika ia khawatir puasa dapat membahayakan kesehatannya atau kesehatan   anaknya, maka boleh tidak berpuasa tetapi wajib mengqada’ di luar   Ramadhan dan tanpa membayar fidyah.<br>
+        <li>Menurut Imam Syafi’i, jika ia khawatir puasa bisa membahayakan   kesehatan anaknya saja dan tidak membahayakan kesehatannya sendiri, maka   boleh tidak berpuasa, tetapi wajib mengqadha’ dan membayar fidyah.<br>
+        <li>Sementara, dalam kasus di atas, Imam Hanafi berpendapat harus qadha’   dan tidak perlu membayar fidyah. Dalil yang memperbolehkan meninggalkan   puasa bagi wanita hamil atau menyusui diqiyaskan dengan orang yang   sedang sakit dan musafir (orang yang dalam perjalanan). Juga berdasarkan   sabda Rasul Saw yang menyatakan bahwa Allah Swt memperbolehkan seorang   musafir untuk tidak berpuasa, boleh qashar dan jama’ shalat.</p></ul>
+      <h3>7. Tindakan Untuk Orang Menjelang Mati</h3>
+        <ul><li>Menurut Abdurrahman Al-Juzairi, ada beberapa hal yang harus dilakukan   ketika membimbing orang yang mendekati kematian, antara lain; jika   keadaan memungkinkan, sebaiknya pasien yang mendekati kematian   dihadapkan wajahnya ke kiblat dengan posisi badan miring pada lambung   kanan. Jika sulit, maka posisi terlentang, kedua kakinya saja yang   dihadapkan ke kiblat dan kepala diangkat agak ke atas.<br>
+        <li>Talqin, yaitu membimbing pasien membaca kalimat syahadat. Jika   keadaan sudah berat, tidak diharuskan pasien menirukan bacaan syahadat.   Anggukan kepala atau isyarat lain sudah cukup. Dalam al-Fatawa Imam   Nawawi menuturkan, bahwa mentalqin (membimbing membaca kalimat tauhid)   orang yang akan meninggal dunia sebelum nafasnya sampai di tenggorokan   itu disunnahkan. Berdasarkan hadis shahih riwayat Muslim, kalimat talqin   adalah laa ilaaha illallah (tiada tuhan selain Allah) dan beberapa   ulama madzhab Syafi’i menambahkan kalimat muhammadur rasulullah   (Muhammad adalah utusan Allah). Namun, mayoritas ulama menyatakan, tidak   perlu ditambah dengan bacaan itu. Rasulullah Saw bersabda,”Orang yang   akhir ucapannya adalah laa ilaaha illallah, maka ia pasti masuk surga   (bersama orang-orang yang beruntung).” (HR. Abu Dawud, Ahmad dan   Al-Hakim)<br>
+        <li>Hendaknya anggota keluarga dan sahabatnya berada di samping pasien   seraya berdoa untuknya. Dimaksudkan juga memberi kesempatan kepada   pasien untuk menyampaikan wasiat, hibah dan lain-lain. Pasien dijauhkan   dari benda-benda yang tidak disukai oleh para malaikat seperti binatang   anjing dan sebagainya. Hal ini dimaksudkan agar para malaikat ikut   memohonkan rahmat bagi pasien.<br>
+        <li>Membacakan surat Yasin kepada pasien dengan suara yang lembut agar   tidak mengganggu pasien di sekitarnya. Doa yang paling baik bagi pasien   saat menghadapi kematian adalah dengan membacakan surat Yasin,   berdasarkan sabda Nabi Saw, ”Bacakanlah surat Yasin untuk orang-orang   yang akan meninggal kalian.” (HR. Abu Dawud)<br>
+        <li>Pasien sebaiknya dibimbing dan diingatkan untuk berprasangka baik   kepada Allah. Jika telah wafat, maka dipejamkan kedua matanya dan   dibacakan doa untuknya. Tulang rahang ditarik ke atas dengan kain halus,   semua persendian diluruskan bila perlu dengan minyak, mengganti pakaian   yang menempel pada jenazah dengan pakaian atau kain yang ringan, diberi   wangi-wangian serta segera dimandikan.<br>
+        <li>Mendoakan jenazah adalah hal yang sangat dianjurkan dalam agama Islam   lebih-lebih bagi ahli waris; anak, suami, istri, saudara, orang tua,   dan keluarga lainnya. Nabi Saw bersabda ”Apabila manusia mati, putuslah   amalnya kecuali tiga macam; shadaqah jariyah, ilmu yang bermanfaat, atau   anak shaleh yang mendoakannya.” (HR. Muslim)</p></ul>
+      <p><strong><em>Ditulis oleh: KH. Abd. Nashir Abd. Fattah (Rais Syuriah PCNU Jombang)</em></strong></p>
+    	</div>      
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

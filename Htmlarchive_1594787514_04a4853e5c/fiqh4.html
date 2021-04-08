@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+ <h1><center> 
+    	  <span class="style1">Hukum Islam </span>
+    	</center></h1><hr><br>
+<p class="style1" style="text-align:justify">
+  <!--** isi content ** -->
+  <strong>Hukum Islam</strong> adalah suatu aturan yang ditetapkan dan berkaitan dengan amal perbuatan seorang mukallaf, baik perintah itu mengandung sebuah tuntutan, larangan, ataupun perbolehan terhadap suatu hal. Hukum Islam ini berlaku untuk seorang yang telah baligh.
+<p class="style1" style="text-align:justify"><strong>Ukuran baligh</strong> bagi seorang perempuan adalah berumur 9 tahun, sudah menstruasi <em>(haid)</em>, mulai muncul tanda pubertas seperti membesarnya payudara dll. Bila bagi seorang laki-laki adalah berumur 15 tahun dan dia sudah mulai bisa mengeluarkan sperma, mimpi basah, keluar tanda kedewasaan seperti tumbuhnya rambut pada ketiak, alat kelamin dll.
+<blockquote>
+  <p class="style3">Tiga Tanda Seorang Anak Dikatakan Baligh</p>
+  <p class="style1">	Syaikh Salim bin Sumair Al-Hadlrami dalam kitabnya Safinatun Najah menyebutkan ada 3 (tiga) hal yang menandai bahwa seorang anak telah menginjak akil baligh.</p>
+</blockquote>
+<div>
+  <div align="right" class="arab">تمام خمس عشرة سنة في الذكر والأنثى والاحتلام في الذكر والأنثى لتسع سنين والحيض في الأنثى لتسع سنين</div>
+</div>
+<p class="style1">&nbsp;</p>
+<blockquote>
+  <p class="style1">“Ketiga tanda baligh tersebut adalah sempurnanya umur lima belas tahun bagi anak laki-laki dan perempuan, keluarnya sperma setelah berumur sembilan tahun bagi anak laki-laki dan perempuan, dan menstruasi atau haid setelah berumur sembilan tahun bagi anak perempuan”.(lihat Salim bin Sumair Al-Hadlrami, Safiinatun Najah, (Beirut: Darul Minhaj: 2009), hal. 17).</p>
+  <p class="style1">Dalam kitab Kasyifatus Saja, Syaikh Nawawi Al-Bantani secara singkat padat memaparkan penjelasan ketiga tanda tersebut sebagai berikut:</p>
+  <ol>
+  <li></li>
+  <p style="padding-left: 40px;">Sempurnanya umur lima belas tahun berlaku bagi anak laki-laki dan perempuan dengan menggunakan perhitungan kalender hijriah atau qamariyah. Seorang anak—baik laki-laki maupun perempuan—yang telah mencapai umur lima belas tahun ia telah dianggap baligh meskipun sebelumnya tidak mengalami tanda-tanda baligh yang lain.</p>
+  <li></li>
+  <p style="padding-left: 40px;">Tanda baligh kedua adalah keluarnya sperma (ihtilaam) setelah usia sembilan tahun secara pasti menurut kalender hijriyah meskipun tidak benar-benar mengeluarkan sperma, seperti merasa akan keluar sperma namun kemudian ia tahan sehingga tidak jadi keluar. Keluarnya sperma ini menjadi tanda baligh baik bagi seorang anak laki-laki maupun perempuan, baik keluar pada waktu tidur ataupun terjaga, keluar dengan cara bersetubuh (jima’) atau lainnya, melalui jalannya yang biasa ataupun jalan lainnya karena tersumbatnya jalan yang biasa.</p>
+  <li></li>
+  <p style="padding-left: 40px;">Adapun haid atau menstruasi menjadi tanda baligh hanya bagi seorang perempuan, tidak bagi seorang laki-laki. Ini terjadi bila umur anak perempuan tersebut telah mencapai usia sembilan tahun secara perkiraan, bukan secara pasti, dimana kekurangan umur sembilan tahunnya <span class="style1">kurang dari enam belas hari menurut kalender hijriyah. Bila ada seorang anak yang hamil pada usia tersebut, maka tanda balighnya bukan dari kehamilannya tetapi dari keluarnya sperma sebelum hamil (lihat Muhammad Nawawi Al-Jawi, Kaasyifatus Sajaa, (Jakarta: Darul Kutub Islamiyah, 2008), hal. 31).</span></p>
+  <p style="padding-left: 40px;">Artinya, anak laki-laki maupun perempuan secara otomatis dikatakan baligh tanpa syarat setelah memasuki umur 15 tahun.</p>
+  </ol>
+</blockquote>
+<p class="style1" style="text-align:justify"><strong>Sedangkan yang disebut mukallaf </strong>adalah orang muslim yang sudah dewasa dan sehat, tidak gangguan jiwa atau akal (akal sehat) yang mana diberi sebuah kewajiban atau perintah dan sebuah larangan oleh Agama Islam, serta mendapat seruan agama.
+<p class="style1">Pengertian Mumayyiz,Sebenarnya, selain akil baligh dan mukallaf, ada istilah lain yang biasa digunakan dalam pembahasan fiqih, yaitu tamyiz atau mumayyiz..</p>
+<p class="style1"><strong>Mumayyiz</strong> adalah istilah yang digunakan untuk seorang anak yang telah mampu membedakan antara yang baik dan buruk. Dalam artian membedakan sesuatu yang bermanfaat untuk dirinya dan sesuatu yang membahayakan untuk dirinya. Dengan kata lain, mumayyiz artinya seorang anak yang telah mampu melakukan beberapa hal secara mandiri seperti makan, minum, mandi atau yang lainnya.</p>
+<p class="style1">Fase mumayyiz ini dimulai pada usia kra-kira tujuh tahun sampai memasuki masa baligh. Pada fase mumayyiz ini seorang anak diperbolehkan melakukan suatu tindakan yang berhubungan dengan orang lain, misalnya jual beli.</p>
+<p class="style1">Meskipun begitu, segala tindakan yang dilakukannya masih tetap membutuhkan pengawasan dari orang tua. Sebab yang dilakukan anak usia mumayyiz ini adalah masih dalam masa perkembangan, yang mana perkembangan fisik dan otaknya belum sempurna.</p>
+<blockquote>
+  <p class="style3">Dari keterangan diatas, arti mumayyiz dapat disimpulkan sebagai berikut:</p>
+  <p class="style1">Mumayyiz adalah seorang anak yang telah memasuki perkembangan otak dan fisik dalam tahap sempurna, namun belum dalam keadaan yang benar-benar sempurna.<br>
+    Seoarang anak yang telah mumayyiz belum mengalami perubahan fisik seperti halnya ihtilam (mimpi basah) atau haid.<br>
+    Batas perkiraan usia mumayyiz adalah tujuh tahun hingga menjelang baligh.<br>
+    Segala tindakan yang menyangkut dengan orang lain masih tetap dalam pengawasan orang tua.<br>
+    Seorang anak yang telah memasuki usia mumayyiz belum dibebani dengan hukum syariat, namun orang tua berkewajiban mulai mengajarkan dan menganjurkannya.</p>
+  </blockquote>
+<br>
+  <h3 align="center" class="style3">Hukum-Hukum Islam </h3><HR>
+
+<ol>
+<li>
+<strong>Wajib</strong></li>kadang disebut Fardlu. Keduanya sinonim. Yakni sebuah tuntutan yang pasti (thalab jazm) untuk mengerjakan perbutan, apabila dikerjakan mendapatkan pahala, sedangkan bila ditinggalkan maka berdosa (mendapatkan siksa). Contohnya, shalat fardlu, bila mengerjakannya maka mendapatkan pahala, bila ditinggalkan akan diadzab di neraka, demikian juga dengan kewajiban-kewajiban yang lainnya. <br>
+    <br>
+  Wajib terbagi menjadi dua yakni : 
+<blockquote>
+  <p class="style1" style="text-align:justify"><strong>Pertama, wajib ‘Ainiy</strong> : kewajiban bagi setiap individu. </p>
+  <p class="style1" style="text-align:justify"><strong>Kedua, wajib Kifayah</strong> : kewajiban yang apabila sudah ada yang mengerjakannya maka yang lainnya gugur (tidak mendapatkan dosa), contohnya seperti shalat jenazah, tajhiz jenazah (mengurus jenazah), menjawab salam dan sebagainya.<br>
+    <br>
+    Istilah Wajib juga ada yang mensinonimkan dengan Lazim. Sebagian ulama ada yang membedakan antara Fardlu dan Wajib hanya pada beberapa permasalahan di Bab Haji.<br>
+    <br>
+    <span class="style1">Ada juga yang membedakan antara Fardlu dan Wajib, seperti Hanafiyah. Menurut mereka, Fardlu adalah sesuatu yang telah ditetapkan dengan dalil syar’i (maqthu’ bih) dan tidak ada keraguan didalamnya, seperti shalat 5 waktu, zakat, puasa, haji, iman kepada Allah. Hukum Fardlu adalah lazim (wajib) baik secara keyakinan maupun perbuatan sehingga apabila mengingkari (secara keyakinan) pada salah satu kefardluan itu maka kafir, namun bila meninggalkan saja (tidak mengerjakannya, seperti shalat 5 waktu dan semacamnya) maka fasiq. Sedangkan Wajib adalah kewajiban yang ghairul fardl (selain fardlu), sesuatu yang ditetapkan dengan dalil namun masih ada kemungkinan ketidak pastian (hasil ijtihad), hukumnya lazim secara perbuatan saja, tidak secara keyakinan. Apabila mengingkarinya, tidak sampai kafir namun terjatuh dalam syubhat. Sedangkan bila meninggalkannya maka berdosa dengan dosa yang kadarnya lebih sedikit daripada meninggalkan perbuatan yang sifatnya Fardlu, sebab kalau meninggalkan yang bersifat Fardlu maka disiksa dineraka, sedangkan meninggalkan yang sifatnya Wajib, tidak disiksa di neraka, namun ia terhalang dari syafa’at Nabi Muhammad Shallallahu ‘Alayhi wa Sallam.<br>
+    <br>
+    Jumhur ulama tidak membedakan antara Fardlu dan Wajib, bahkan ada yang menyatakan bahwa pembedaan seperti itu tidak tepat dan tidak berarti apa-apa. <br>
+    </span></p>
+</blockquote>
+<li><strong>Sunnah</strong></li>disebut juga Mandub, Mustahabb, Tathawwu, Al-Nafl, Hasan dan Muragghab fih. Semuanya bersinonim. Yakni sebuah anjuran mengerjakan yang sifatnya tidak jazm (pasti), apabila dikerjakan mendapat pahala, namun apabila ditinggalkan tidak berdosa.</p>
+<blockquote>
+  <p class="style1">Sunnah dari sisi tuntutannya, terbagi menjadi 2 yakni : </p>
+  <p class="style1"><strong>sunnah Muakkad</strong> (sunnah yang sangat ditekankan) dan, </p>
+  <p class="style1"><strong>sunnah ghairu Muakkad</strong> (anjuran tidak terlalu ditekankan).</p>
+  <p class="style1">Sedangkan menurut Hanafiyah, ada perbedaan terkait sunnah Muakkad. Menurut mereka, sunnah Muakkad, bentuknya kewajiban yang sempurna, jika meninggalkannya maka tetap berdosa, namun dosanya lebih sedikit daripada meninggalkan Fardlu (dibawah tingkatan Fardlu). Sedangkan sunnah ghairu Muakkad, menurut mereka adalah sejajar dengan Mandub dan Mustahab. </p>
+  <p class="style1">Sunnah juga terbagi menjadi 2, yaitu : Pertama, sunnah ‘Ain : sesuatu yang disunnahkan pada setiap orang (individu) yang mukallaf, seperti shalat-shalat sunnah ratibah dan lainnya. Kedua, sunnah Kifayah : sesuatu yang disunnahkan, apabila ada sebagian yang telah mengerjakannya, maka yang lain gugur, seperti seseorang memulai salam ketika bersama jama’ah (memulai bukan menjawab, penj), dan lain sebagainya. Sehingga bila sudah ada yang mengerjakannya, maka hilang (gugur) tuntutan terhadap yang lainnya, namun pahalanya bagi yang mengerjakan saja.</p>
+  <p class="style1">Sebagian ulama seperti Malikiyah membedakan antara istilah sunnah dan mandub. Sunnah menurut mereka adalah sebuah tuntutan syara’, bentuk perintahnya sangat ditekankan, namun tidak ada dalil yang mewajibkannya, apabila dikerjakan mendapat pahala, namun apabila ditinggalkan tidak disiksa, seperti shalat witir dan shalat hari raya. Sedangkan mandub adalah sebuah tuntutan syara’ yang tidak jazm (tidak pasti), bentuk perintahnya tidak terlalu ditekankan, apabila dikerjakan mendapat pahala, namun bila tidak dikerjakan tidak disiksa, contohnya didalam Malikiyah adalah shalat sunnah 4 raka’at sebelum dzuhur.</p>
+</blockquote>
+<li><strong>Mubah</strong></li> bila dikerjakan atau ditinggalkan tidak apa-apa, tidak mendapatkan pahala atau pun disiksa (sebuah pilihan antara mengerjakan atau tidak). <span class="style1">Misalnya, memilih menu makanan dan sebagainya.</span></p>
+<li><strong>Makruh</strong></li> yakni sebuah tuntutan yang tidak pasti (tidak jazm) untuk meninggalkan perbuatan tertentu (larangan mengerjakan yang sifatnya tidak pasti), apabila dikerjakan tidak apa-apa, namun bila ditinggalkan akan mendapatkan pahala dan dipuji.	</p>
+<blockquote class="style1">
+  <p>	Menurut sebagian ulama, istilah Makruh ini ada yang menyatakan dengan Khilaful Aula (menyelisihi yang lebih utama). </p>
+</blockquote>
+<li><strong>Haram</strong></li> yakni tututan yang pasti untuk meninggalkan sesuatu, apabila dikerjakan oleh seorang mukallaf maka mendapatkan dosa, namun bila ditinggalkan mendapatkan pahala. Contohnya seperti minum khamr, berzina dan lain sebagainya. Istilah haram juga kadang menggunakan istilah Mahdzur (terlarang), Maksiat dan al-danb (berdosa).</p>
+<p class="style1">Menurut Hanafiyah, istilah Haram adalah antonim dari Fardlu (mereka membedakan antara Fardlu dan Wajib). Ada juga istilah makruh Tahrim dan makruh Tanzih. Makruh Tahrim adalah sebuah istilah yang lebih dekat dengan Haram, serta merupakan kebalikan dari Wajib dan Sunnah Mu’akkad. Sedangkan istilah makruh Tanzih, tidak disiksa bila mengerjakannya dan mendapatkan pahala bila meninggalkannya. Istilah makruh Tanzih menurut Hanafiyah adalah kebalikan dari sunnah ghairu Muakkad.</p>
+<p class="style1">Ulama juga ada yang kadang menyatakan dengan istilah Halal, itu adalah kebalikan dari Haram, namun masih ambigu, yaitu bisa hukum wajib, hukum mandub dan makruh. Bila meninggalkan perbuatan yang hukum wajib, maka berdosa. Adapun yang lainnya (mandub dan makruh) bila ditinggalkan ataupun dikerjakan tidaklah berdosa.</p>
+<p class="style1">&nbsp;</p>
+<br>
+<h3 align="center" class="style1">Pengertian Syarat, Rukun, Sah dan Batal </h3><HR>
+
+
+<p class="style1">Dalam mengerjakan suatu amal ibadah yang baik dan benar, tentunya dibutuhkan aturan yang mengatur bagaimana amalan tersebut dilakukan sehingga didapatkan ibadah yang baik dan benar. Dalam Islam terdapat beberapa istilah dalam meberikan aturan yang jelas tentang bagaimana amal ibadah seseorang dikatakan baik dan benar.</p>
+<p class="style1"><strong>Syarat</strong><br>
+  Adalah ketentuan atau perbuatan yang harus dipenuhi sebelum melakukan suatu pekerjaan atau ibadah. Tanpa memenuhi ketentuan/perbuatan tersebut, suatu pekerjaan dianggap tidak sah. Misal menutup aurat sebelum dan selama mengerjakan shalat, dsb.</p>
+<p class="style1"><strong>Rukun</strong><br>
+  Adalah ketentuan yang harus dipenuhi, dalam melakukan suatu pekerjaan/ibadah. Bila tidak terpenuhi maka ibadah/pekerjaan tersebut tidak sah. Misalkan membaca surah Al-Fatihah dalam shalat, dsb.</p>
+<p class="style1"><strong>Sah</strong><br>
+  Sah artinya syarat dan rukunnya telah terpenuhi secara benar dalam melakukan suatu ibadah/pekerjaan.</p>
+<p class="style1"><strong>Batal</strong><br>
+  Artinya syarat dan rukunnya belum terpenuhi seluruhnya, atau terpenuhi namun tidak dilakukan secara benar.</p>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Doa Usia Kandungan (Hamil) Empat (4) Bulan (Ngupati)</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">أَعُوْذُ بِا للّٰهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ , بِسْمِ ا للّٰهِ وَبِا للّٰهِ وَمِنَ ا للّٰهِ وَإِلَى اللّٰهِ وَلَا غَالِبَ إِلَّا اللّٰهُ وَلَا يُفَوِّتُهُ هَارِبٌ مِنَ اللّٰهِ وَهُوَ الْحَيُّ الْقَيُّوْمُ, نُعِيْذُ هَذَا الْحَمْلَ الْبَالِغَ أَرْبَعَةَ أَشْهُرٍ بِاللّٰهِ اللَّطِيْفِ الْحَفِيْظِ الَّذِى لَآ إِلَهَ  إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَنُ الرَّحِيْمُ وَنُعِيْذُهُ بِكَلِمَاتِ اللّٰهِ التَّآمَّةِ وَبِأَسْمَآئِكَ الْعَظِيْمَةِ وَآيَاتِهِ الْكَرِيْمَةِ وَحُرُوْفِهَا أَلْمُبَارَكَةِ مِنْ شَرِّ الْإِنْسِ وَالْجَآنِّ وَمِنْ مَكْرِ اللَّيْلِ وَالنَّهَارِ وَالْآوَانِ وَمِنْ جَمِيْعِ الْفِتَنِ وَالْبَلَايَا وَالْعِصْيَانِ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ\r\n\r\n اللَّهُـمَّ اجْعَلْهُ وَلَدًا صَالِحًا كَرِيْمًا كَامِلًا عَاقِلًا عَلِيْمًا نَافِعًا مُبَارَكًا حَلِيْمًا\r\n\r\nاللَّهُـمَّ زَيِّنْهُ بِزِيْنَةِ الْأَخْلَاقِ الْكَرِيْمَةِ وَالصُّوْرَةِ الْجَمِيْلَةِ ذِي الْهَيْبَةِ وَالْهَيْئَةِ الْمَلِيْحَةِ وَالرُّوْحِ عَلَى الْفِطْرَةِ الْجَزِيْلَةِ\r\n\r\n اللَّهُـمَّ اكْتُبْهُ فِي زُمْرَةِ الْعُلَمَآءِ الصَّالِحِيْنَ وَحَمَلَةِ الْقُرْآنِ الْعَامِلِيْنَ وَارْزُقْهُ عَمَلاً يُقَرِّبُهُ إِلَى الْجَنَّةِ مَعَ النَّبِيِّيْنَ يَآ أَكْرَمَ الْأَكْرَمِيْنَ وَيَا خَيْرَ الرَّازِقِيْنَ\r\n\r\nاللَّهُـمَّ ارْزُقْهُ وُأُمَّهُ فِي طَاعَتِكَ الْمَقْبُوْلَةِ وَذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ الْمُرْضِيَّةِ وَاحْفَظْهُ مِنَ السَّقْطِ وَالنَّقْصِ وَالْعِلَّةِ وَالْكَسَلِ وَالْخِلْقَةِ الْمَذْمُوْمَةِ حَتَّى وَضَعَتْهُ أُمُّهُ عَلَى صِحَّةٍ وَعَافِيَةٍ وَسُهُوْلَةٍ وَيُسْرَةٍ مِنْ غَيْرِ مَرَضٍ وَتَعَبٍ وَعُسْرَةٍ بِشَفَاعَةِ سَيِّدِنَا مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ</p><p><i>A’udzu billahi minasysyaithanir rajimi. Bismillahirrahmanirrahim. Wa minallahi wa ilallahi wa la ghaliba illallahu wa la yufawwituhu haribun minallahi wa huwal Hayyul Qayyumu, nu'idzu hadzal hamla al balighi arba'ata asyhui billahil lathifil hafidzil ladzi la ilaha illa huwa 'alimul ghaibi wasysyahadati huwa ar rahmanu ar rahimu wa nu’idzuhu bikalimatillâhi at tammati wa bi asmaika al 'adzimati wa ayatihi al karimati wa hurufiha al mubarakati min syarril insi wal janni wamin makril laili wan nahari wal awani wamin jami'il fitani wal bala'i wal 'ishyani wa min syarrin naffatsati fil 'uqudi wamin syarri hasidin idza hasad. Allahumma ij'alhu waladan shalihan kariman kamilan 'aqilan 'aliman nafi'an mubarakan haliman. Allahumma zayyinhu bizinatil akhlaqi al karimati washshurati al jamilati dzil haibati wa haiati al malihati warruhi 'alal fithrati al jazilati. Allahumma uktubhu fi zumratil ulama'ish shalihîn wa hamalatil qur'anil 'amilina warzuqhu 'amalan yuqarribuhu ilal jannati ma'an nabiyyina ya akramal akramin wa ya khairar raziqin. Allahummarzuqhu wa ummuhu fî tha'atika almaqbulata wa dzikrika wa syukrika wa husni 'ibadatika al mardliyyati wahfadzhu minassaqti wannaqshi wal 'illati walkasali walkhilqati al-madzmumati hatta wadla'athu ummuhu 'ala shihhatin wa 'afiyatin wa suhulatin wa yusratin min ghari maradlin wa ta'abin wa 'usratin bi syafa'ati sayyidina muhammadin shallallahu 'alaihi wa sallam.</i></p><p>Aku berlindung kepada Allah dari godaan setan yang terkutuk, dengan menyebut asma Allah yang Maha Pengasih lagi Maha penyayang. Dari Allah, kepada Allah, tidak ada yang menang kecuali Allah, tiada yang bisa berlari dari Allah, Dia Maha Hidup dan Maha Berdiri Sendiri. Kami memohon perlindungan bagi janin yang berumur 4 bulan ini pada Allah Yang Maha Lembut, Yang Maha Menjaga, tiada tuhan selain Dia Yang Maha Mengetahui hal-hal gaib dan terlihat. Dia Maha Pengasih lagi Penyayang.  Kami memohon perlindungan bagi janin ini pada kalimat-kalimat Allah yang sempurna, asma-asma-Nya yang agung, ayat-ayat-Nya yang mulia, huruf-huruf-Nya yang diberkati dari kejelekan manusia dan jin, dari godaan malam, siang, dan waktu, dan dari segala fitnah, bala dan maksiat, dan dari kejahatan wanita-wanita tukang sihir yang meniup buhul, dan dari kejahatan orang yang dengki saat mereka mendengki. Ya Allah jadikanlah dia (janin) ini sebagai anak yang saleh, mulia, sempurna, berakal, alim, bermanfaat, terberkati, dan bijaksana. Ya Allah, hiasi dia dengan hiasan akhlak yang mulia dan rupa dan indah, memiliki wibawa dan tingkah yang manis, dan ruh yang suci lagi agung. Ya Allah, tulis takdirnya sebagai bagian dari para ulama yang saleh, penghafal dan pengamal Al-Qur’an yang bisa mendekatkannya pada surga beserta para Nabi, wahai Dzat paling mulia diantara mereka yang mulia dan Dzat Pemberi rizqi Terbaik. Ya Allah berikan rizqi pada dia dan ibunya untuk taat yang diterima, untuk mengingat Engkau, bersyukur pada-Mu, dan beribadah yang baik pada-Mu. Jaga dia dari keguguran, kekurangan, cacat, malas, dan bentuk yang tercela hingga ibunya melahirkannya dalam kondisi sehat wal afiat, secara mudah, gampang, tanpa sakit, susah, dan penat. Dengan syafaat Nabi Muhammad SAW.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Dalil yang dijadikan pijakan dalam mendoakan kandungan di usia ke empat bulan adalah sebuah hadis riwayat Imam Bukhari no. 3208 yang mengatakan bahwa "Sesungguhnya setiap orang di antaramu dikumpulkan penciptaannya di dalam perut ibunya empat puluh hari berupa nutfah, kemudian menjadi segumpal darah, (empat puluh hari kemudian), kemudian menjadi segumpal daging selama itu pula (40 hari berikutnya). Kemudian diutuslah kepadanya malaikat, lalu meniupkan ruh kepadanya dan diperintahkan atasnya menuliskan empat hal; ketentuan rejekinya, ketentuan ajalnya, ketentuan amalnya, dan ketentuan celaka atau bahagianya …”\r\n\r\nProses di atas apabila dihitung berdasarkan bulan sama dengan 4 bulan atau 120 hari. Dan pada bulan ke-4 seperti itu Allah subhanahu wata‘ala mengutus malaikat guna meniupkan ruh ke dalam janin yang terdapat di rahim ibunya. Momen inilah yang lazim diperingati oleh umat Indonesia dengan mengadakan syukuran sambil bersedekah, dengan harapan janin tersebut terbebas dari marabahaya dan diselamatkan oleh Allah SWT.\r\n\r\nAdapun doa apa yang dipanjatkan dalam walimatul haml, bisa kita kutip dari karya Lajnah Ta’lif Pustaka Gerbang Lama, Pondok Pesantren Lirboyo) dalam buku Menembus Gerbang Langit; Kumpulan Doa Salafus Shalih (Kediri: Pustaka Gerbang Lama, 2010), hal. 119.</p><p><strong>NU online
+</strong></p>
+
+
+
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

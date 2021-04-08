@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+
+<h1>Wirid Sebelum Membaca Dalail | Dibaca Setiap Hari
+</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللّٰهِ الرَّحْمنِ الرَّحِيْم
+</p>
+Dibaca 3X: <p style="text-align: right;" class="arab">
+اَسْتَغْفِرُ اللّٰهَ الْعَظِيْمَ     
+
+اَلَّذِيْ لَا اِلَهَ اِلَّا هُوَ الْحَيُّ الْقَيُّوْمُ وَأَتُوْبُ إِلَيْهِ
+</p>
+Dibaca 3X: <p style="text-align: right;" class="arab">
+اللّٰهُـمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدْ  
+
+حَضَـــرَةْ<br>
+
+۩ لِرِضَاءِ اللّٰهِ تَعَالَى تَقَرُّبًا اِلَى اللّٰهِ وَلِإِجَابَةِ الْمَسْئُوْلِ وَلِتَحْصِيْلِ الْعِلْمِ النَّافِعْ وَلِجَلْبِ الْأَرْزَاقِ وَالْأَمْوَالِ وَلِمَحَبَّةِ الْعَآمَّةِ وَلِسَلَامَةِ الْبَدَانِيَّةِ فِي الدِّيْنِ وَالدُّنْيَا وَالْأَخِرَةِ بِرِضَاكَ يَااللّٰهْ وَبِشَفَاعَةِ نَبِيِّكَ مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَبِكَرَامَةِ سُلْطَانِ الْأَوْلِيَاءِ اَلشّيْخْ  عَبْدِالْقَادِرْ اَلْجَيْلَانِيِّ رَضِيَ اللّٰهُ عَنْهُ شَيْئٌ لِّلّٰهِ لَهُمُ الْفَاتِحَةْ<br>
+
+۩ اِلَى حَضْرَةِ النَّبِيِّ الْمُصْطَفَى سَيِّدِنَا مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَعَلَى آَلِهِ وَأَصْحَابِهِ وَأَزْوَاجِهِ وَذُرِّيَّتِهِ اَجْمَعِيْنَ شَيْئٌ لِّلّٰهِ لَهُمُ الْفَاتِحَةْ<br>
+
+۩ ثُمَّ اِلَى حَضْرَةِ سَيِّدِ أَبِيْ عَبْدِ اللّٰهْ مُحَمَّدْ بِنْ سُلَيْمَانْ اَلْجَزُوْلِيْ رَحْمَةُ اللّٰهِ عَلَيْهِ وَسَيِّدِ الشَّيْخِ عَبْدِالْقَادِرْ اَلْجَيْلَانِيِّ رَضِيَ اللّٰهُ عَنْهُ شَيْئٌ لِّلّٰهِ لَهُمُ الْفَاتِحَةْ<br>
+
+۩ ثُمَّ اِلَى حَضْرَةِ الشَّيْخِ حُضَارِيْ تَيْكَالْ رَيْجَا مَاكَيْلَاعْ شَيْئٌ لِلّٰهِ لَهُمُ الْفَاتِحَةْ<br>
+
+۩ ثُمَّ اِلَى حَضْرَةِ شَيْخِيْ أبَاه كِيَاهِيْ سُيُوْطِيْ مُرْتَضَى اَلْحَاجّ كَالِيْوُوْغُوْ كنْدَالْ شَيْئٌ لِّلّٰهِ لَهُمُ الْفَاتِحَةْ<br>
+
+۩ ثُمَّ اِلَى حَضْرَةِ أَبِيْ..... وَاُمِّيْ..... شَيْئٌ لِّلّٰهِ لَهُمُ الْفَاتِحَةْ<br>
+
+ثُمَّ تَقْرَاءُ أَيَةَ الْكُرْسِيْ<br>
+
+فَاللّٰهُ خَيْرٌ حَافِظًا وَهُوَ أَرْحَمُ الرَّاحِمِيْنَ .... اللّٰهُ جَلَّ جَلَالُهُ<br>
+
+الرَّحْمنُ  جلّ جلاله الرَّحِيْمُ  جلّ جلاله الْمَلِكُ جلّ جلاله الْقُدُّوْسُ جلّ جلاله  السَّلَامُ جلّ جلاله الْمُؤْمِنُ جلّ جلاله الْمُهَيْمِنُ جلّ جلاله الْعَزِيْزُ جلّ جلاله الْجَبَّارُ جلّ جلاله الْمُتَكَبِّرُ جلّ جلاله الْخَالِقُ جلّ جلاله الْبَارِئُ جلّ جلاله الْمُصَوِّرُ جلّ جلاله الْغَفَّارُ جلّ جلاله الْقَهَّارُ جلّ جلاله الْوَهَّابُ جلّ جلاله الرَّزَّاقُ جلّ جلاله الْفَتَّاحُ جلّ جلاله الْعَلِيْمُ جلّ جلاله الْقَابِضُ جلّ جلاله الْبَاسِطُ جلّ جلاله الْخَافِضُ   جلّ جلاله الرَّافِعُ جلّ جلاله الْمُعِزُّ جلّ جلاله الْمُذِلُّ جلّ جلاله السَّمِيْعُ جلّ جلاله الْبَصِيْرُ جلّ جلاله الْحَكَمُ جلّ جلاله الْعَدْلُ    جلّ جلاله اللَّطِيْفُ جلّ جلاله الْخَبِيْرُ جلّ جلاله الْحَلِيْمُ جلّ جلاله الْعَظِيْمُ جلّ جلاله الْغَفُوْرُ جلّ جلاله الشَّكُوْرُ جلّ جلاله الْعَلِيُّ جلّ جلاله الْكَبِيْرُ جلّ جلاله الْحَفِيظُ جلّ جلاله الْمُقِيْتُ جلّ جلاله الْحَسِيْبُ جلّ جلاله الْجَلِيْلُ جلّ جلاله الْكَرِيْمُ جلّ جلاله الرَّقِيْبُ جلّ جلاله الْمُجِيْبُ جلّ جلاله الْوَاسِعُ جلّ جلاله الْحَكِيْمُ جلّ جلاله الْوَدُوْدُ جلّ جلاله الْمَجِيْدُ جلّ جلاله الْبَاعِثُ جلّ جلاله الشَّهِيْدُ جلّ جلاله الْحَقُّ جلّ جلاله الْوَكِيْلُ جلّ جلاله الْقَوِيُّ جلّ جلاله الْمَتِيْنُ جلّ جلاله الْوَلِيُّ جلّ جلاله  الْحَمِيْدُ جلّ جلاله الْمُحْصِيْ جلّ جلاله الْمُبْدِئُ جلّ جلاله الْمُعِيْدُ جلّ جلاله الْمُحْيِي جلّ جلاله الْمُمِيْتُ جلّ جلاله الْحَيُّ جلّ جلاله الْقَيُّوَمُ جلّ جلاله الْوَاجِدُ جلّ جلاله الْمَاجِدُ جلّ جلاله الْوَاحِدُ جلّ جلاله الْأَحَدُ جلّ جلاله الصَّمَدُ جلّ جلاله الْقَادِرُ جلّ جلاله الْمُقْتَدِرُ جلّ جلاله الْمُقَدِّمُ جلّ جلاله الْمُؤَخِّرُ جلّ جلاله الْأَوَّلُ جلّ جلاله الْأخِرُ جلّ جلاله الظَّاهِرُ جلّ جلاله الْبَاطِنُ جلّ جلاله الْوَالِيْ جلّ جلاله الْمُتَعَالِيْ جلّ جلاله الْـبَرُّ جلّ جلاله التَّـوَّابُ جلّ جلاله الْمُنْعِمُ جلّ جلاله الْعَفُوُّ جلّ جلاله الرَّءُوْفُ جلّ جلاله الْرَّبُّ جلّ جلاله ذُوالْجَلَالِ وَالْإِكْرَامِ جلّ جلاله الْمُقْسِطُ جلّ جلاله الْجَامِعُ جلّ جلاله  الْـغَنِيُّ جلّ جلاله الْمُعْطِيْ جلّ جلاله الْمَانِعُ جلّ جلاله الضَّارُّ جلّ جلاله النَّافِعُ جلّ جلاله النُّوْرُ جلّ جلاله الْهَادِيْ جلّ جلاله الْبَدِيْعُ جلّ جلاله الْبَاقِي  جلّ جلاله الْوَارِثُ جلّ جلاله الرَّشِيْدُ جلّ جلاله الصَّـبُّوْرُ جلّ جلاله اَلصَّدِيْقُ جلّ جلاله اَلْأَسْتَارُ جلّ جلاله ْ
+اَلَّذِيْ لَمْ يَلِدُ وَلَمْ يُوْلَدُ وَلَمْ يَكُنْ لَهُ كُفُوًااَحَدٌ ۞ لَيْسَ كَمِثْلِهِ شَيْءٌ وَهُوَالسَّمِيْعُ الْبَصِيْرُ ۞</p><p><i></i></p><p>ASMA’UL KHUSNA
+
+Maha Pengasih, Maha Penyayang, Maha Raja, Maha Suci, Maha Sejahtera, MahaTerpercaya, Maha Memelihara, Maha Perkasa, Maha Berkehendak, Maha Memiliki Kebesaran, Maha Menciptakan, Maha Mengadakan, Maha Memberi Bentuk, Maha Pengampun, Maha Perkasa, Maha Pemberi, Maha Pemberi Rizqi, Maha Pembuka, Maha Mengetahui, Maha Menyempitkan, Maha Melapangkan, Maha Merendahkan, Maha Meninggikan, Maha Memuliakan, Maha Menghinakan, Maha Mendengar, Maha Melihat, Maha Memutuskan Hukum, Maha Adil, Maha Lembut, Maha Waspada, Maha Penyantun, Maha Agung, Maha Pengampun, Maha Penerima Syukur, Maha Tinggi, Maha Besar, Maha Memelihara, Maha Pengawal, Maha Pembuat Perhitungan, Maha Luhur, Maha Mulia, Maha Mengawasi, Maha Mengabulkan, Maha Luas, Maha Bijaksana, Maha Mencintai, Maha Mulia, Maha Membangkitkan, Maha Menyaksikan, Maha Benar, Maha Mengurusi, Maha Maha Kuat, Maha Kokoh, Maha Melindungi, Maha Terpuji, Maha Menghitung, Maha Memulai, Maha Mengembalikan, Maha Menghidupkan, Maha mematikan, Maha Hidup, Maha Berdiri Sendiri, Maha Menemukan, Maha Mulia, Maha Esa, Maha Tunggal, Maha Dibutuhkan, Maha Kuasa, Maha Berkehendak, Maha Mendahulukan, Maha Mengakhirkan, Maha pertama, Maha Akhir, Maha Nyata, Maha Tersembunyi, Maha Menguasai, Maha Tinggi, Maha Dermawan, Maha Penerima Taubat, Maha Pengancam, Maha pemaaf, Maha Belas Kasih, Maha Pemilik Segala Kerajaan, Maha Pemilik Keluhuran Dan Kemurahan, Maha Adil, Maha Penghimpun, Maha Kaya, Maha Pemberi Kekayaan, Maha Pencegah, Maha Pemberi Derita, Maha Pemberi Manfaat, Pemilik Cahaya, Maha Pemberi Petunjuk, Maha Pencipta Pertama, Maha Kekal, Maha Mewarisi, Maha Cendekiawan, Maha Penyabar,
+Dia tidak beranak dan tidak pula diperanakkan  dan tidak ada seorang pun yang setara dengan-Nya.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Dalail Khairat merupakan kitab (buku) berisi shalawat kepada Nabi Muhammad ﷺ yang ditulis oleh Imam Abi Abdullah Muhammad bin Sulaiman Al-Jazuli. Keutamaan membaca Dalail Khairat di antaranya adalah untuk menghasilkan ilmu manfaat, diberikan kesehatan lahir bathin, diberikan kemudahan mendaptkan rezeki, hidup penuh berkah, dll.
+
+Dalail Khairat yang ada di KESAN diambil dari Kitab Dalail Khairat yang wajib dibaca tiap hari di Pondok Pesantren Manbaul Hikmah Kaliwungu Kendal,  yang diasuh oleh Dr. KH Suyuthi Murtadho (ayahanda Gus Rifqil Muslim Suyuthi).</p><p><strong>
+</strong></p>
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Wirid Ketenangan & Keselamatan - Wirid Syekh Abdullah bin Bayyah
+</h1>
+
+<p>&nbsp;</p><p>1. Meminta ampunan Allah (100X):</p><p style="text-align: right;" class="arab">
+
+أَسْتَغْفِرُ اللَّهَ العَظِيمَ وَأَتُوبُ إِلَيْهِ
+
+</p><p>2. Mengakui keterbatasan diri dan bergantung pada Allah (100X):</p><p style="text-align: right;" class="arab">
+
+حَسْبُنَا اللّٰهُ وَنِعْمَ الْوَكِيْلُ
+
+</p><p>3. Membaca ayat-ayat ketenangan:</p><p style="text-align: right;" class="arab">
+
+وَقَالَ لَهُمْ نَبِيُّهُمْ اِنَّ اٰيَةَ مُلْكِهٖٓ اَنْ يَّأْتِيَكُمُ التَّابُوْتُ فِيْهِ سَكِيْنَةٌ مِّنْ رَّبِّكُمْ
+
+ثُمَّ اَنْزَلَ اللّٰهُ سَكِيْنَتَهٗ عَلٰى رَسُوْلِهٖ وَعَلَى الْمُؤْمِنِيْنَ
+
+فَاَنْزَلَ اللّٰهُ سَكِيْنَتَهٗ عَلَيْهِ وَاَيَّدَهٗ بِجُنُوْدٍ لَّمْ تَرَوْهَا
+
+هُوَ الَّذِيْٓ اَنْزَلَ السَّكِيْنَةَ فِيْ قُلُوْبِ الْمُؤْمِنِيْنَ لِيَزْدَادُوْٓا اِيْمَانًا مَّعَ اِيْمَانِهِمْ
+
+فَاَنْزَلَ السَّكِيْنَةَ عَلَيْهِمْ وَاَثَابَهُمْ فَتْحًا قَرِيْبًاۙ
+
+فَاَنْزَلَ اللّٰهُ سَكِيْنَتَهٗ عَلٰى رَسُوْلِهٖ وَعَلَى الْمُؤْمِنِيْنَ
+
+</p><p>4. Membaca ayat-ayat perlindungan:</p><p style="text-align: right;" class="arab">
+
+اِذْ يُوْحِيْ رَبُّكَ اِلَى الْمَلٰۤىِٕكَةِ اَنِّيْ مَعَكُمْ فَثَبِّتُوا الَّذِيْنَ اٰمَنُوْاۗ
+
+يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اِذَا لَقِيْتُمْ فِئَةً فَاثْبُتُوْا وَاذْكُرُوا اللّٰهَ كَثِيْرًا لَّعَلَّكُمْ تُفْلِحُوْنَۚ
+
+الَّذِيْنَ اٰمَنُوْا وَتَطْمَىِٕنُّ قُلُوْبُهُمْ بِذِكْرِ اللّٰهِ ۗ اَلَا بِذِكْرِ اللّٰهِ تَطْمَىِٕنُّ الْقُلُوْبُ
+
+يَمْحُوا اللّٰهُ مَا يَشَاۤءُ وَيُثْبِتُ ۚوَعِنْدَهٗٓ اُمُّ الْكِتٰبِ
+
+يُثَبِّتُ اللّٰهُ الَّذِيْنَ اٰمَنُوْا بِالْقَوْلِ الثَّابِتِ فِى الْحَيٰوةِ الدُّنْيَا وَفِى الْاٰخِرَةِۚ
+
+وَلَوْلَآ اَنْ ثَبَّتْنٰكَ لَقَدْ كِدْتَّ تَرْكَنُ اِلَيْهِمْ شَيْـًٔا قَلِيْلًا
+
+كَذٰلِكَ ۛ لِنُثَبِّتَ بِهٖ فُؤَادَكَ وَرَتَّلْنٰهُ تَرْتِيْلًا
+
+</p><p>5. Membaca Surah Al-Insyirah (Asy-Syarh):</p><p style="text-align: right;" class="arab">
+
+اَلَمْ نَشْرَحْ لَكَ صَدْرَكَۙ - ١ وَوَضَعْنَا عَنْكَ وِزْرَكَۙ - ٢ الَّذِيْٓ اَنْقَضَ ظَهْرَكَۙ - ٣ وَرَفَعْنَا لَكَ ذِكْرَكَۗ - ٤ فَاِنَّ مَعَ الْعُسْرِ يُسْرًاۙ - ٥ اِنَّ مَعَ الْعُسْرِ يُسْرًاۗ - ٦ فَاِذَا فَرَغْتَ فَانْصَبْۙ - ٧ وَاِلٰى رَبِّكَ فَارْغَبْ ࣖ - ٨
+
+</p><p>6. Membaca dua ayat dari Surah At- Tur:</p><p style="text-align: right;" class="arab">
+
+فَمَنَّ اللّٰهُ عَلَيْنَا وَوَقٰىنَا عَذَابَ السَّمُوْمِ - ٢٧ اِنَّا كُنَّا مِنْ قَبْلُ نَدْعُوْهُۗ اِنَّهٗ هُوَ الْبَرُّ الرَّحِيْمُ - ٢٨
+
+</p><p>7. Membaca doa ini 7X:  </p><p style="text-align: right;" class="arab">
+
+يَا بَـرُّ يَارَحِيْـمُ
+
+</p><p>8. Membaca doa dan shalawat penutup: </p><p style="text-align: right;" class="arab">
+
+مُنَّ عَلَيْنَا وَقِنَا عَذَابَ السَّمُوْمِ وَقِنَا الوَبَاءَ وَالبَلَاءَ وَنَسْأَلُكَ الْعَفْوَ والْعَافِيَةَ وَصَلَّى اللّٰهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى اَلِهِ وَصَحْبِهِ وَسَلَّمَ</p><br><p><i>1.	Astagh-firullah wa atuubu ilaih.<br><br>
+
+2.	Hasbunallah wanikmal wakil.<br><br>
+
+3.	wa qāla lahum nabiyyuhum inna āyata mulkihī ay ya`tiyakumut-tābụtu fīhi sakīnatum mir rabbikum<br><br>
+
+ṡumma anzalallāhu sakīnatahụ 'alā rasụlihī wa 'alal-mu`minīna<br><br>
+
+fa anzalallāhu sakīnatahụ 'alaihi wa ayyadahụ bijunụdil lam tarauhā <br><br>
+
+huwallażī anzalas-sakīnata fī qulụbil-mu`minīna liyazdādū īmānam ma'a īmānihim<br><br>
+
+fa anzalas-sakīnata 'alaihim wa aṡābahum fat-ḥang qarībā<br><br>
+
+fa anzalallāhu sakīnatahụ 'alā rasụlihī wa 'alal-mu`minīna <br><br>
+
+4.	iż yụḥī rabbuka ilal-malā`ikati annī ma'akum fa ṡabbitullażīna āmanụ<br><br>
+
+yā ayyuhallażīna āmanū iżā laqītum fi`atan faṡbutụ ważkurullāha kaṡīral la'allakum tufliḥụn<br><br>
+
+allażīna āmanụ wa taṭma`innu qulụbuhum biżikrillāh, alā biżikrillāhi taṭma`innul-qulụb<br><br>
+
+yam-ḥullāhu mā yasyā`u wa yuṡbit, wa 'indahū ummul-kitāb<br><br>
+
+yuṡabbitullāhullażīna āmanụ bil-qauliṡ-ṡābiti fil-ḥayātid-dun-yā wa fil-ākhirah<br><br>
+
+walau lā an ṡabbatnāka laqad kitta tarkanu ilaihim syai`ang qalīlā<br><br>
+
+każālika linuṡabbita bihī fu`ādaka wa rattalnāhu tartīlā<br><br>
+
+5.	a lam nasyraḥ laka ṣadrak. wa waḍa'nā 'angka wizrak. allażī angqaḍa ẓahrak. wa rafa'nā laka żikrak. fa inna ma'al-'usri yusrā. inna ma'al-'usri yusrā. fa iżā faragta fanṣab. wa ilā rabbika fargab.<br><br> 
+
+6.	fa mannallāhu 'alainā wa waqānā 'ażābas-samụm. innā kunnā ming qablu nad'ụh, innahụ huwal-barrur-raḥīm.<br><br>
+
+7.	Ya Barru, Ya Rahiim. <br><br>
+
+8.	Munna ‘alaina waqinaa ‘azaa bas syamumi  waqinal-wabaa’a wal-balaa’a wa nas’alukal-ʻafwa walʻaafiyata wa sholollahu ʻala sayyidinaa Muhammad wa ʻala aalihi wa sahbihi wa sallama.</i></p><br><br><p>1.	Aku memohon ampun kepada Allah dan bertobat kepada-Nya. <br><br>
+
+2.	Cukuplah Allah (menjadi penolong) bagi kami dan Dia sebaik-baik pelindung.<br><br>
+
+3.	Dan nabi mereka berkata kepada mereka, “Sesungguhnya tanda kerajaannya ialah datangnya Tabut kepadamu, yang di dalamnya terdapat ketenangan dari Tuhanmu” (QS. Al-Baqarah [2]: 248). <br><br>
+
+Kemudian Allah menurunkan ketenangan kepada Rasul-Nya dan kepada orang-orang yang beriman (QS. Al-Taubah [9]: 26).<br><br>
+
+Maka Allah menurunkan ketenangan kepadanya (Muhammad) dan membantu dengan bala tentara (malaikat-malaikat) yang tidak terlihat olehmu (QS. Al-Taubah [9]: 40).<br><br>
+
+Dialah yang telah menurunkan ketenangan ke dalam hati orang-orang mukmin untuk menambah keimanan atas keimanan mereka (yang telah ada) (QS. Al-Fath [48]: 4).<br><br>
+
+Dia memberikan ketenangan atas mereka dan memberi balasan dengan kemenangan yang dekat (QS. Al-Fath [48]: 18).<br><br>
+
+lalu Allah menurunkan ketenangan kepada Rasul-Nya, dan kepada orang-orang mukmin (QS. Al-Fath [48]: 26).<br><br>
+
+4.	(Ingatlah), ketika Tuhanmu mewahyukan kepada para malaikat, “Sesungguhnya Aku bersama kamu, maka teguhkanlah (pendirian) orang-orang yang telah beriman”(QS. Al-Anfal [8]: 12).<br><br>
+
+Wahai orang-orang yang beriman! Apabila kamu bertemu pasukan (musuh), maka berteguh hatilah dan sebutlah (nama) Allah banyak-banyak (berzikir dan berdoa) agar kamu beruntung (QS. Al-Anfal [8]: 45).<br><br>
+
+(yaitu) orang-orang yang beriman dan hati mereka menjadi tenteram dengan mengingat Allah. Ingatlah, hanya dengan mengingat Allah hati menjadi tenteram (QS. Ar-Ra’d [13]: 28).<br><br>
+
+Allah menghapus dan menetapkan apa yang Dia kehendaki. Dan di sisi-Nya terdapat Ummul-Kitab (Lauh Mahfuzh) (QS. Ar-Ra’d [13]: 39).<br><br>
+
+Allah meneguhkan (iman) orang-orang yang beriman dengan ucapan yang teguh (dalam kehidupan) di dunia dan di akhirat (QS. Ibrahim [14]: 27).<br><br>
+
+Dan sekiranya Kami tidak memperteguh (hati)mu, niscaya engkau hampir saja condong sedikit kepada mereka (QS. Al-Isra’[17]: 74).<br><br>
+
+Demikianlah, agar Kami memperteguh hatimu (Muhammad) dengannya dan Kami membacakannya secara tartil (berangsur-angsur, perlahan dan benar) (QS. Al-Furqan [25]: 32).<br><br>
+
+5.	Bukankah Kami telah melapangkan dadamu (Muhammad)? dan Kami pun telah menurunkan bebanmu darimu, yang memberatkan punggungmu, dan Kami tinggikan sebutan (nama)mu bagimu. Maka sesungguhnya beserta kesulitan ada kemudahan,sesungguhnya beserta kesulitan itu ada kemudahan. Maka apabila engkau telah selesai (dari sesuatu urusan), tetaplah bekerja keras (untuk urusan yang lain), dan hanya kepada Tuhanmulah engkau berharap (QS. Asy-Syarh [94]: 1-8).<br><br>
+
+6.	Maka Allah memberikan karunia kepada kami dan memelihara kami dari azab neraka. Sesungguhnya kami menyembah-Nya sejak dahulu. Dialah Yang Maha Melimpahkan Kebaikan, Maha Penyayang (QS. At-Tur [52]: 27-28).<br><br>
+
+7.	Wahai yang Maha Baik, Wahai yang Maha Penyayang. <br><br>
+
+8.	Tunjukkanlah kami bantuan-Mu dan selamatkan kami dari siksaan angin kencang, dan lindungi kami dari wabah dan bencana. Kami memohon ampunan-Mu dan kesehatan (keselamatan) dari-Mu. Dan semoga shalawat serta salam senantias tercurah untuk Nabi Muhammad ﷺ, keluarga, dan sahabat-sahabatnya.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Syekh Abdallah Bin Bayyah, salah satu ulama ahlussunnah paling berpengaruh di dunia, merekomendasikan wirid ini yang bersumber dari Al-Qur’an untuk ketenangan rohani (terlindung dari was-was dan psikosomatis) dan perlindungan jasmani di kala wabah. Salah satu guru dari Habib Ali Al-Jifri ini menjelaskan bahwa wirid berikut dapat dibaca setelah shalat atau kapan saja jika memungkinkan.</p><p><strong>
+</strong></p>
+
+
+
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

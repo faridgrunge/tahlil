@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Ratib Al-Haddad | Bagian IV - Doa Penutup
+</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ <br><br>
+
+اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ<br><br>
+
+حَمْدًا يُوَافِى نِعَمَهُ وَيُكَافِىءُ مَزِيْدَهُ, يَا رَبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِىْ لِجَلاَلِ وَجْهِكَ وَعَظِيْمِ سُلْطَا نِكْ<br><br>
+
+سُبْحَا نَكَ لاَ نُحْصِيْ ثَنَا ءً عَلَيْكَ اَنْتَ كَمَا اَثْنَيْتَ عَلَى نَفْسِكَ, فَلَكَ الْحَمْدُ حَتىَّ تَرْضَى, وَلَكَ الْحَمْدُ اِذَارَضِيْتَ, وَلَكَ الْحَمْدُ بَعْدَ الرِّضَى<br><br>
+
+اَللَّهُـمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِى اْلاَوَّلِيْنَ<br>
+وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنّا مُحَمَّدٍ فِى اْلآ خِرِيْنَ<br>
+وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِى الْمَلَإِ اْلاَ عْلَى اِلَى يَوْمِ الدِّيْنِ<br>
+وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِى كُلِّ وَقْتٍ وَحِيْنٍ<br>
+وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ حَتىَّ تَرِثَ اْلاَرْضَ وَمَنْ عَلَيْهَا وَاَنْتَ خَيْرُ الْوَارِثِيْنَ<br><br>
+
+اَللّٰهُـمَّ إِنَّا نَسْتَحْفِظُكَ وَنَسْتَوْدِعُكَ أَدْيَانَنَا وَأَبْدَانَنَا وَأَنْفُسَنَا وَأَهْلَنَا وَأَوْلَادَنَا وَأَمْوَالَنَا وَكُلَّ شَيْءٍ أَعْطَيْتَنَا<br><br>
+
+اَللّٰهُـمَّ اجْعَلْنَا وَإِيَّاهُمْ فِيْ كَنَفِكَ وَأَمَانِكَ وَجِوَارِكَ وَعِيَاذِكَ مِنْ كُلِّ شَيْطَانٍ مَرِيْدٍ وَجَبَّارٍ عَنِيْدٍ وَذِيْ عَيْنٍ وَذِيْ بَغْيٍ وَمِنْ شَرِّ كُلِّ ذِيْ شَرٍّ إِنَّكَ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ<br><br>
+
+اَللّٰهُـمَّ اجْعَلْنَا بِالْعَافِيَةِ وَالسَّلَامَةِ وَحَقِّقْنَا بِالتُّقٰى وَالْإِسْتِقَامَةِ  وَأَعِذْنَا مِنْ مُوْجِبَاتِ النَّدَامَةِ فِي الْحَالِ وَالْمَأٰلِ إِنَّكَ سَمِيْعُ الدُّعَاءِ<br><br>
+
+اَللّٰهُـمَّ اغْفِرْ لَنَا وَلِوَالِدِيْنَا وَلِأَوْلَادِنَا وَلِمَشَايِخِنَا فِي الدِّيْنِ وَلِمُعَلِّمِيْنَ وَأَصْحَابِنَا وَمَنْ أَحَبَّنَا فِيْكَ وَلِجَمِيْعِ الْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ<br><br>
+
+وَصَلَّى اللّٰهُـمَّ بِجَمَالِكَ وَجَلَالِكَ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَعَلٰى اٰلِهِ وَصَحْبِهِ أَجْمَعِيْنَ<br><br>
+
+اَللّٰهُـمَّ ارْزُقْنَا كَمَالَ الْمُتَابَعَةِ لَهُ ظَاهِرًا وَبَاطِنًا يَاأَرْحَمَ الرَّاحِمِيْنَ. بِفَضْلِ سُبْحٰنَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَۚ وَسَلٰمٌ عَلَى الْمُرْسَلِيْنَۚ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ<br><br>
+
+اَللّٰهُـمَّ إِنَّا نَسْأَلُكَ رِضَاكَ وَالْجَنَّةَ وَنَعُوْذُبِكَ مِنْ سَخَطِكَ وَالنَّارِ
+ (3x)<br><br>
+
+يَاعَالِمَ السِّرِّ مِنَّا لَا تَهْتِكِ السِّتْرَ عَنَّا وَعَافِنَا وَاعْفُ عَنَّا وَكُنْ لَنَا حَيْثُ كُنَّا
+ (3x)<br><br>
+
+يَااَللّٰهُ بِهَا.يَااَللّٰهُ بِهَا يَااَللّٰهُ بِحُسْنِ اْلخَاتِمَةِ
+(3x)<br><br>
+
+يَا لَطِيْفُ
+ (129x)<br><br>
+
+يَا لَطِيْفٌ لَمْ يَزَلْ اُلْطُفْ بِنَا فِيْمَا نَزَلْ إِنَّكَ لَطِيْفٌ لَمْ تَزَلْ اُلْطُفْ بِنَا وَالْمُسْلِمِيْنَ 
+(3x)<br><br>
+
+يَا لَطِيْفاً بِخَلْقِهِ يَاعَلِيْمًا بِخَلْقِهِ يَاخَبِيْرًا بِخَلْقِهِ اُلْطُفْ بِنَا يَالَطِيْفُ يَا عَلِيْمُ يَاخَبِيْرُ 
+(3x)<br><br>
+
+يَا أَمَانَ الْخَائِفِيْنَ , أَمِنَّا مِمَّا نَخَافُ<br>
+يَا أَمَانَ الْخَائِفِيْنَ , سَلِّمْنَا مِمَّا نَخَافُ<br>
+ياَ أَمَانَ الْخَائِفِيْنَ , نَجِّنَا مِمَّا نَخَافُ
+(3x)<br><br>
+
+اَلْفَاتِحَةُ بِالْقَبُوْلِ وَإِلَى حَضْرَةِ سَيِّدِنَا وَشَفِيعِنَا وَنَبِيِّنَا وَمَوْلانَا مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ - اَلْفَاتِحَةُ <br><br>
+
+بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ – ١<br>
+اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ - ٢<br>
+الرَّحْمٰنِ الرَّحِيْمِۙ – ٣<br>
+مٰلِكِ يَوْمِ الدِّيْنِۗ – ٤<br>
+اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُۗ – ٥<br>
+اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ ۙ – ٦<br>
+صِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ ەۙ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّاۤلِّيْنَ ࣖ - ٧</p><br><br><p><i>Bismillahirrahmanirrahim. - Alhamdulillāhi Rabbil ‘ālamīn. Hamdan yu-wāfī ni'amahu wa yukāfī mazīdahu. Yā rabbanā lakal hamdu kamā yanbaghī lijalāli wajhika wa azhīmi sulthānik, subhānaka lā nuhshī tsanān 'alayka kamā atsnayta 'alā nafsika falakal hamdu hattā tardhā walakal hamdu idzā radhīyta walakal hamdu ba'dar ridhā.<br>
+Wa shalli ‘alā Sayyidina Muḥammadin fil-awwalīn.<br>
+Wa shalli ‘alā Sayyidina Muḥammadin fil-ākhirīn.<br>
+Wa shalli ‘alā Sayyidina Muḥammadin fil malā-il-a'la ilā yawmid-dīn.<br>
+Wa shalli ‘alā Sayyidina Muḥammadin fī kulli waqtin wahīn.<br>
+Wa shalli ‘alā Sayyidina Muḥammadin ḥatta taritsal-ardha waman ‘alayhā wa anta khayrul-wāritsīna.<br>
+Allāhumma innā nastaḥfizhuka wa nastawdi-’uka adyānanā wa abdānanā wa anfusanā wa ahlanā wa awlādanā wa amwālanā wa kulla syay-in a`thaytanā.<br>
+Allāhummaj-’alnā wa iyyāhum fī kanafika wa amānika wa jiwārika wa iyādzika min kulli syaythānin marīd, wa jabbārin 'anīd, wa dzī 'aynin wa dzī baghyin wa min syarri kulli dzī syarrin, innaka ‘alā kulli syay-in-qadīr.<br>
+Allāhummaj-'alnā bil ‘āfiyati was-salāmah wa ḥaqqiqnā bit-taqwā wal-istiqāmah wa a-'idznā min mūjibātin-nadāmah fil-ḥāli wal ma-āli, innaka samī-'uddu-'ā'.<br>
+Allāhummaghfir lanā wa liwālidīnā wa awlādinā wa li-masyāyi-khinā fid-dīni wa li-mu-`allimīna wa ash-ḥābinā wa man a-ḥabbanā fīka wa li-jamī-’il muslimīna wal-muslimāt wal-mu'minīna wal-mu'mināt.<br>
+Washallallāhumma bi-jamālika wa jalālika ‘alā sayyidinā Muḥammadin wa ‘alā ālihi wa shaḥbihi ajma’īn.<br>
+Allāhummarzuqnā kamālal-mutāba-’ati lahu zhāhiran wa bāthinan yā arḥamar-rāḥimīn bi-fadhli subḥāna Rabbika Rabbil-‘izzati 'ammā yashifūn, wa salāmun ‘alal-mursalīn wal-ḥamdulillāhi Rabbil-‘ālamīn.<br>
+Allāhumma innā nas-aluka ridhāka wal-jannah, wa na-’ūdzubika min-sakhatika wan-nār. (3x)<br>
+Yā ‘ālimas-sirri minnā, lā tahtikissit-ra ’annā, wa ‘āfinā wa’fu ‘annā, wa kul-lanā haytsu kunnā. (3x)<br>
+Ya Allāh bihā, Ya Allāh bihā, Ya Allāhu bi-ḥusnil-khātimah. (3x)<br>
+Yā Lathīfu. (129x)<br>
+Yā Lathīfun lam yazal, ul-thuf binā fīmā nazal, innaka lathīfun lam tazal ul-thuf binā wal-muslimīn. (3x)<br>
+Yā Lathīfan bi-khalqih, Yā ‘āliman bi-khalqih, Yā Khabīran bi-khalqih, ul-thuf binā yā Lathīfu, yā ‘Alīmu, ya Khabīr. (3x)<br>
+Yā amānal-khā-ifīn, ā-minnā mimmā nakhaaf.  Yaa amanal khaifin, sallimnaa mimma nakhaf. Yaa amanal khaifin, najjinaa mimma nakhaf  (3x)<br>
+Al-Fātiḥah bil-Qabūli, wa ilā ḥadhrati Sayyidina wa Syafī-’ina wa Nabiyyina wa Mawlanā Muḥammad shallallāhu 'alayhi wa ālihi wa sallam. Al-Fātiḥah.<br>
+Bismillāhir-raḥmānir-raḥīm. ۞ Al-ḥamdu lillāhi Rabbil-'ālamīn. ۞ Ar-raḥmānir-raḥīm. ۞ Māliki yaumid-dīn. ۞ Iyyāka na'budu wa iyyāka nasta'īn. ۞ Ihdinash-shirāthal-mustaqīm. ۞ Shirāthalladzīna an-'amta 'alayhim ghayril-magdhūbi 'alayhim wa ladh-dhāllīn. ۞</i></p><br><br><p>Dengan nama Allah, yang Maha Pengasih lagi Maha Penyayang. - Segala puji bagi Allah, Tuhan sekalian alam, pujian yang sesuai dengan nikmat-nikmat yang diberikan-Nya serta setara dengan tambahan nikmat-Nya. Ya Allah, milik-Mu pujian yang layak bagi keagungan diri-Mu, keagungan kerajaan­-Mu. Mahasuci Engkau, yang tak bisa dihitung pujian atas-Mu, seperti Engkau pujikan diri-Mu sendiri. Bagi-Mu pujian hingga Engkau ridha dan bagi-Mu pujian jika Engkau meridhainya. Dan bagi-Mu pujian setelah ridha.<br>
+Ya Allah limpahkanlah rahmat kepada penghulu kami Muhammad, di kalangan orang-orang permulaan.<br>
+Dan limpahkanlah rahmat kepada penghulu kami Muhammad di kalangan orang-orang kemudian.<br>
+Dan limpahkanlah rahmat kepada penghulu kami Muhammad di kalangan malaikat hingga hari kiamat.<br>
+Dan limpahkanlah rahmat kepada penghulu kami Muhammad di setiap waktu dan saat.<br>
+Dan limpahkanlah rahmat kepada penghulu kami Muhammad hingga Engkau warisi bumi dan siapa-siapa yang ada di atasnya, sedang Engkau adalah sebaik-baik pemberi warisan.<br>
+Ya Allah, kami memohon perlindungan dan memasrahkan diri kepada-Mu agar terjaga aga­ma, badan, keluarga, anak-anak, harta, serta segala hal yang Engkau berikan kepada kami.<br>
+Ya Allah, jadikan kami dan mereka dalam lindungan-Mu, keamanan-Mu, lingkungan-Mu, pengawasan-Mu, dari setan dan orang-orang yang suka memaksa dan durhaka, dan dari mereka yang memiliki pandangan yang jahat, zalim, dan dari kejahatan orang-orang keji. Sesungguhnya Engkau sangat berkuasa atas segala sesuatu.<br>
+Ya Allah, tetapkanlah diri kami dalam kesehatan dan keselamatan, buat kami yakin, kuatkanlah diri kami dengan takwa dan istiqamah, dan hindarkanlah kami dari sebab-sebab penyesalan dalam urusan dunia dan harta, sesungguhnya Engkau Maha Mendengar Segala doa.<br>
+Ya Allah, ampunilah kami, kedua orangtua kami, anak-anak kami, guru-guru kami dalam agama, pengajar kami, teman-teman kami, serta orang-orang yang mencintai kami karena Eng­kau, serta semua kaum muslimin, muslimat, muk­minin, dan mukminat.<br>
+Berikan shalawat-Mu, ya Allah, dengan ke­indahan dan kemuliaan-Mu, kepada Penghulu kami Mu­hammad, serta kepada keluarga dan sahabatnya semua.<br>
+Ya Allah, berilah kami kemampuan untuk mengikutinya lahir dan batin, wahai Allah, yang Paling Pengasih di antara semua yang pengasih, dengan keutamaan kalimat "Subhana rabbika rabbil-‘izzati ‘amma yashifun wa salamun ‘alalmursalina wal-hamdu lillahi rabbil-‘alamin" (Mahasuci Tuhanmu, pemilik kemuliaan dari segala hal yang disifatkan kepada-Nya. Semoga keselamatan Allah dilimpahkan kepada para rasul. Dan segala puji bagi Allah, Tuhan seru sekalian alam).<br>
+Wahai Tuhan kami, sesungguhnya kami mohon keridhaan dan syurga-Mu dan kami berlindung dari api neraka. (3x)<br>
+Ya Tuhan Yang Maha Mengetahui segala rahasia kami, janganlah kiranya Engkau singkap tirai rahasia kami (aib), berilah kami ‘afiat (kesejahteraan) dan maafkanlah kami dan lindungilah kami, tolonglah kami dimanapun kami berada. (3x)<br>
+Ya Allah dengan kalimat-Mu Ya Allah dengan kalimat-Mu, Ya Allah karuniailah kami husnul-khatimah (akhir hayat yang baik). (3x)<br>
+Wahai Yang Mahalembut. (129x)<br>
+Wahai Yang Mahalembut, janganlah Engkau  menurunkan (bencana) kepada kami berlemah-lembutlah kepada kami dengan apa yang Engkau turunkan itu (bencana), karena sesungguhnya Engkau senantiasa Mahalembut (untuk tidak menurunkan bencana itu), berlemah-lembutlah kepada kami dan juga kaum muslimin. (3x)<br>
+Yang Mahalembut terhadap makhluk-Nya, Yang Maha Mengetahui terhadap makhluk-Nya, Yang Maha Mengamati terhadap makhluk-Nya, berlemah lembutlah kepada kami Yang Mahalembut, Yang Maha Mengetahui, Yang Maha Mengamati. (3x)<br><br>
+
+Yang mengamankan orang yang takut, karunialah kami rasa aman dari rasa takut. Yang mengamankan orang yang takut, selamatkanlah kami dari segala yang kami takuti. Yang mengamankan orang yang takut, hindarkanlah kami dari segala yang kami takuti. (3x)<br><br>
+
+Bacaan Al-Fatihah semoga terkabul dan sampai serta terpenuhi (hajat dan dzikir kami) serta sampaikanlah keberkahannya kepada penghulu kami, pemberi syafaat kami, Nabi kami, baginda kami, Muhammad, yang rahmat Allah senantiasa tercurah kepadanya, keluarganya, serta keselamatan baginya. Al-Fatihah...<br>
+Dengan nama Allah Yang Maha Pengasih, Maha Penyayang. ۞ Segala puji bagi Allah, Tuhan seluruh alam. ۞ Yang Maha Pengasih, Maha Penyayang. ۞ Pemilik hari pembalasan. ۞ Hanya kepada Engkaulah kami menyembah dan hanya kepada Engkaulah kami mohon pertolongan. ۞ Tunjukilah kami jalan yang lurus. ۞ (Yaitu) jalan orang-orang yang telah Engkau beri nikmat kepadanya; bukan (jalan) mereka yang dimurkai, dan bukan (pula jalan) mereka yang sesat. ۞</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+ <h1><center> 
+    	  <span class="style1"> Toharoh </span>
+    	</center></h1><hr><br>
+<h3>Pengertian Thoharoh </h3>
+<p class="style1" style="text-align:justify"><strong>Thoharoh</strong> dengan harokat fathah pada huruf tho’ menurut bahasa  adalah bersih. Sedangkan  menurut syara’,  maka didalamnya terdapat banyak penafsiran. Diantaranya adalah ungkapan ulama’  “<em>Melakukan sesuatu yang dengannya sholat diperbolehkan”</em> yaitu berupa  wudlu, mandi, tayamum dan menghilangkan najis. Sedangkan “thuharoh” dengan  harokat dlomah (pada huruf tho’) adalah sebutan bagi sisa air. 
+<p class="style1" style="text-align:justify">
+<h3>Macam Macam Air </h3>
+<div class="style1"> 
+  <div align="left">Air-air  yang boleh, maksudnya sah digunakan bersuci dengannya ada tujuh macam air. </div>
+</div>
+<div class="style1"> 
+  <div align="left">1. Air langit maksudnya yang turun dari langit, yaitu hujan, </div>
+</div>
+<div class="style1"> 
+  <div align="left">2. Air laut maksudnya air asin </div>
+</div>
+<div class="style1"> 
+  <div align="left">3. Air sungai yaitu air tawar </div>
+</div>
+<div class="style1"> 
+  <div align="left">4.  Air sumur, </div>
+</div>
+<div class="style1"> 
+  <div align="left">5. Air sumber air, </div>
+</div>
+<div class="style1"> 
+  <div align="left">6. Air tsalju dan </div>
+</div>
+<div class="style1"> 
+  <div align="left">7. Air dingin (air embun). </div>
+</div>
+<p align="left" class="style1" style="text-align:justify">
+<h3>Pembagian Air </h3>
+<p class="style1">Air dibagi menjadi 4 bagian, yaitu :</p>
+<ol>
+<li>
+<strong>Pertama</strong></li>air suci dan mensucikan atau air mutlaq,  Air yang suci dzatnya menyucikan terhadap selainnya dan tidak makruh  digunakan. Yaitu Air yang terbebas dari <em>identitas</em> yang mengikat. Maka  keberadaan <em>identitas</em> yang tidak mengikat itu tidak membahayakan terhadap  kemutlakan air. </p>
+<li><strong>Kedua</strong></li> adalah air suci menyucikan namun <em>makruh</em>  digunakan pada tubuh, tidak makruh pada  pakaian, yaitu air Musyammas. Ialah air yang dipanaskan dengan mengandalkan  pengaruh sengatan matahari padanya. Air tersebut secara  syara’ dimakruhkan penggunaanya hanya di  daerah yang bercuaca panas dan air berada di wadah yang terbuat dari logam  selain wadah dari dua logam mulia /emas dan perak,  sebab kejernihan elemen keduanya. Jika air  tersebut telah dingin maka hilanglah hukum makruh menggunakannya. Tetapi imam  An-Nawawi memilih pendapat yang menyatakan tidak makruh secara mutlak. (Selain  makuh menggunakan air musyammas) dimakruhkan juga menggunakan air yang sangat  panas dan sangat dingin.</p>
+<p class="style1"> Syarat dimakruhkannya air musyammas sebagai berikut:<br>
+  1.Berada di daerah bercuaca panas seperti Mekah dsb. Sehingga tidak makruh jika digunakan dalam daerah yang bercuaca sedang seperti negara Mesir atau daerah Jawa dan daerah dingin seperti Syiria dsb.<br>
+  2.Sengatan matahari merubah kondisi air sekira pada air muncul zat yang berasal dari karat logam.<br>
+  3.Air berada pada wadah yang terbuat dari logam selain emas perak. Seperti wadah yang terbuat dari logam besi, tembaga dsb.<br>
+  4.Digunakan saat suhu air sedang panas.<br>
+  5.Digunakan pada kulit badan. Meskipun pada badan orang yang terkena penyakit kusta, orang mati dan hewan.<br>
+  6.Dipanaskan saat cuaca panas.<br>
+  7.Masih ada air selain musyammas yang dapat dipergunakan.<br>
+  8.Waktu sholat masih longgar sehingga masih ada waktu untuk mencari air yang lain.<br>
+  9.Tidak mendapat bahaya secara nyata atau dalam dugaan kuatnya. Jika meyakini atau menduga akan muncul bahaya maka haram hukumnya.<br>
+  Bila tidak memenuhi sembilan syarat ini maka hukum menggunakannya tidak lagi makruh. Nihayat az-Zain, Darul Kutub Al-Ilmiyah, hal. 17</p>
+<li><strong>Ketiga</strong></li>adalah:<br>
+  1. Air suci dalam dzatnya tidak menyucikan terhadap selainnya. Ialah air musta’mal / yang telah digunakan untuk menghilangkan hadats atau najis. (Dihukumi musta’mal dengan syarat)  air tidak berubah dan setelah terpisah (dari benda yang dibasuh) volume air tidak bertambah dari semula dengan mengira-ngirakan bagian air yang terserap oleh benda yang dibasuh. </p>
+<p class="style1"> 2. Air yang berubah. Maksudnya yang termasuk dalam bagian ketiga ini adalah air yang berubah salah satu sifat-sifatnya disebabkan oleh sesuatu; yaitu salah satu dari benda-benda suci yang bercampur dengan air, dengan taraf perubahan yang dapat menghalangi sebutan nama air (murni) padanya*. Maka air yang seperti ini hukumnya adalah suci dalam dirinya namun tidak menyucikan. Baik perubahan itu nampak oleh panca indra atau hanya dalam perkiraan, seperti ketika air tercampur oleh benda yang sesuai (dengan air) dalam sifat-sifatnya, misal air bunga mawar yang telah hilang baunya (dicampur dengan air mutlak) dan seperti air musta’mal (dicampur dengan air mutlak<strong>). </strong></p>
+<p align="left" class="style1" style="text-align:justify">Sehingga bila saja perubahan itu tidak mencegah penisbatan nama air mutlak padanya, dengan sekira perubahan air yang disebabkan oleh benda suci itu hanya sedikit, atau dengan sesuatu yang cocok terhadap air dalam sifatnya dan dianggap berbeda dengan air namun tidak sampai membuatnya berubah (dari kemurnian air) maka perubahan itu tidak menghilangkan sifat suci mensucikannya air. Sehingga air (yang dijelaskan terakhir ini) masih dapat mensucikan terhadap selainnya.
+<p align="left" class="style1" style="text-align:justify">Al-Syaikh Al-Imam Al-’Alim Al-’Allamah Syams  Ad-Din Abu ‘Abdillah Muhammad Ibn Qosim As-Syafi’I dalam kitab fathul qorib mengungkapkan mushonif kitab Taqrib mengecualikan dengan ungkapannya “خَالَطَهُ” dari benda yang suci yang hanya mukholith/ tidak larut pada air maka air tersebut masih berada pada status suci mensucikan meskipun perubahan air sangat nampak. Begitu pula (seperti air yang bersinggungan dengan benda suci yang dihukumi masih mensucikan) air yang berubah sebab tercampur dengan benda yang larut namun air tidak terlepas dari persinggungan dengannya. Seperti lumpur, lumut, benda-benda yang berada di tempat berdiamnya air atau di tempat mengalirnya air, dan air yang berubah disebabkan lamanya diam (tanpa gerak). Maka air-air ini (secara hukum) adalah suci mensucikan.
+<li><strong>Keempat </strong></li>adalah air najis, maksudnya mutanajis. Air ini ada dua bagian:<br>
+  Yang pertama adalah yang volumenya sedikit; yaitu air yang didalamnya terdapat najis baik air mengalami perubahan atau tidak dan air tersebut; maksudnya kondisi air tersebut adalah air yang kurang dari dua qullah. </p>
+<p class="style1">Dari bagian ini dikecualikan (air  kemasukan) bangkai binatang yang tidak memiliki darah yang dapat mengalir saat dibunuh atau dirobek bagian tubuhnya - seperti lalat- jika (masuknya bangkai tersebut ke dalam air itu ) tidak (ada kesengajaan) memasukkannya. Begitu juga najis yang tidak terlihat oleh mata. Maka kedua najis tersebut tidak menajiskan benda cair. Juga dikecualikan beberapa kasus yang disebutkan dalam kitab-kitab besar.</p>
+<p class="style1"> Kedua : air yang mencapai 2 Qullah atau lebih. Air ini tidak najis bila terkena sesuatu yang najis, selama ia tidak berubah warna, rasa, dan bau air tersebut. Apabila ia berubah, maka air tersebut berubah menjadi najis. Adapun dalilnya adalah ijma’ ulama atas hal ini.  Imam an-Nawawi dalam kitab al-Majmu’ berkata : Ibn Mundzir berkata : para ulama bersepakat bahwa air sedikit atau pun air banyak bila terkena najis kemudian berubah warna, bau dan rasanya maka air tersebut najis.</p>
+<p class="style1"><br>
+  Dua qullah adalah takaran 500 Rithl Baghdad dengan mengira-ngirakannya menurut pendapat Ashah (pendapat yang lebih shohih/benar dibanding pendapat yang lain) dalam dua kriteria tersebut; (yakni takaran 500 rithl dan dengan mengira-ngirakannya). Rithl Baghdad menurut An-Nawawy adalah 128 4/7 dirham. </p>
+<p class="style1"><strong>Namun ada lagi bagian ke lima</strong> yaitu air yang menyucikan namun haram  menggunakannya. Seperti wudlu menggunakan air ghosob atau menggunakaan air yang  disediakan untuk minum</p>
+<p class="style1">&nbsp;</p>
+<p class="style1">Kitab Rujukan Fathul Qorib Karya Al-Syaikh Al-Imam Al-’Alim Al-’Allamah Syams Ad-Din Abu ‘Abdillah Muhammad Ibn Qosim As-Syafi’I</p>
+
+<center><p class="arab">كِتَابُ أَحْكَامِ الطَّهَارَةِ</p></center>
+<p class="arab">وَالْكِتَابُ لُغَةً مَصْدَرٌ بِمَعْنَى الضَّمِّ وَالجَمْعِ. وَاصْطِلَاحاً اسْمٌ لِجِنْسٍ مِنَ الأَحْكَامِ. أَمَّا الْبَابُ فَاسْمٌ لِنَوْعٍ مِمَّا دَخَلَ تَحْتَ ذَلِكَ الْجِنْسِ.<br>
+  وَالطَّهَارَةُ بِفَتْحِ الظَّاءِ لُغَةً النَّظَافَةُ. وَأَمَّا شَرْعاً فَفِيْهَا تَفَاسِيْرُ كَثِيْرَةٌ. مِنْهَا قَوْلُهُمْ فِعْلُ مَا تُسْتَبَاحُ بِهِ الصَّلَاة  أَيْ مِنْ وُضُوْءٍ وَغَسْلٍ وَتَيَمُّمٍ وَإِزَالَةِ نَجَاسَةٍ. أَمَّا الطُّهَارَةُ بِالضَّمِّ فَاسْمٌ لِبَقِيَّةِ المَاءِ.<br>
+  وَلَمَّا كَانَ المَاءُ آلَةً لِلطَّهَارَةِ  اسْتَطْرَدَ المُصَنِّفُ لِأَنْوَاعِ المِيَاهِ فَقَالَ:(المِيَاهُ الَّتِيْ يَجُوْزُ) أَيْ يَصِحُّ (التَّطْهِيْرُ بِهَا سَبْعُ مِيَاهٍ مَاءُ السَّمَاءِ) أي النَّازِلُ مِنْهَا وَهُوَ المَطَرُ (وَمَاءُ البَحْرِ) أيْ المِلْحِ (وَمَاءُ النَّهَرِ) أي الحُلْوِ (وَمَاءُ البِئْرِ وَمَاءُ العَيْنِ وَمَاء الثَّلْجِ وَمَاء البَرَدِ) وَيَجْمَعُ هَذِهِ السَّبْعَةِ قَوْلُكَ: مَا نَزَلَ مِنَ السَّمَاءِ أَوْ نَبَعَ مِنَ الأَرْضِ عَلَى أَيِّ صِفَةٍ كَانَ مِنْ أَصْلِ الخِلْقَةِ(ثُمَّ المِيَاهُ) تَنْقَسِمُ (عَلَى أَرْبَعَةِ أَقْسَامٍ) أَحَدُهَا (طَاهِرٌ) فِيْ نَفْسِهِ (مُطَهِّرٌ) لِغَيْرِهِ (غَيْرُ مَكْرُوْهٍ اسْتِعْمَالُهُ. وَهُوَ المَاءُ المُطْلَقُ) عَنْ قَيِّدٍ لَازِمٍ فَلَا يَضُرُّ القَيِّدُ المُنْفَكُّ كَمَاءِ البِئْرِ فِي كَوْنِهِ مُطْلَقاً (وَ) الثَّانِي (طَاهِرٌ مُطَهِّرٌ مَكْرُوْهٌ اسْتِعْمَالُهُ) فِي البَدَنِ لَا فِي الثَّوْبِ (وَهُوَ المَاءُ المُشَمَّسُ) أي المُسَخَّنُ بِتَأْثِيْرِ الشَّمْسِ فِيْهِ. وَإِنَّمَا يُكْرَهُ شَرْعاً بِقَطْرٍ حَارٍ فِي إِنَاءٍ مُنْطَبَعٍ  إِلَّا إِنَاءَ النَّقْدَيْنِ لِصَفَاءِ جَوْهَرِهِمَا. وَإِذَا بَرَدَ زَالَتْ الكَرَاهَةُ. وَاخْتَارَ النَّوَوِيُّ عَدَمَ الْكَرَاهَةِ مُطْلَقاً. وَيُكْرَهُ أَيْضاً شَدِيْدُ السُّخُوْنَةِ وَالبُرُوْدَةِ (وَ) القِسْمُ الثَّالِثُ (طَاهِرٌ) فِي نَفْسِهِ (غَيْرُ مُطَهِّرٍ) لِغَيْرِهِ (وَهُوَ المَاءُ المُسْتَعْمَلُ) فِي رَفْعِ حَدَثٍ أَوْ إِزَالَة نَجْسٍ إِنْ لَمْ يَتَغَيَّرْ وَلَمْ يَزِدْ وَزْنُهُ بَعْدَ انْفِصَالِهِ عَمَّا كَانَ بَعْدَ اعْتِبَارِ مَا يَتَشَرَّبُهُ المَغْسُوْلُ مِنَ المَاءِ. (وَالمُتَغَيِّرُ) أَيْ وَمِنْ هَذَا القِسْمِ المَاءُ المُتَغَيِّرُ أَحَدُ أَوْصَافِهِ (بِمَا) أَيْ بِشَيْءٍ (خَالَطَهُ مِنَ الطَّاهِرَاتِ) تَغَيُّراً يَمْنَعُ إِطْلَاقَ اسْمِ المَاءِ عَلَيْهِ. فَإِنَّهُ طَاهِرٌ غَيْرُ طَهُوْرٍ حِسِّيًّا كَانَ التَّغَيُّرُ أَوْ تَقْدِيْرِيًّا. كَأَنْ اخْتَلَطَ بِالمَاءِ مَا يُوَافِقُهُ فِي صِفَاتِهِ كَمَاءِ الوَرْدِ المُنْقَطِعِ الرَّائِحَةِ  وَالمَاءِ المُسْتَعْمَلِ فَإِنْ لَمْ يَمْنَعْ إِطْلَاقَ اسْمِ المَاءِ عَلَيْهِ بِأَنْ كَانَ تَغَيُّرُهُ بِالطَّاهِرِ يَسِيْراً  أَوْ بِمَا يُوَافِقِ المَاءَ فِي صِفَاتِهِ وَقُدِّرَ مُخَالِفاً  وَلَمْ يُغَيِّرْهُ فَلَا يَسْلُبُ طَهُوْرِيَّتَهُ. فَهُوَ مُطَهِّرٌ لِغَيْرِهِ.وَاحْتَرَزَ بِقَوْلِهِ خَالَطَهُ عَنِ الطَّاهِرِ المُجَاوِرِ لَهُ. فَإِنَّهُ بَاقٍ عَلَى طَهُوْرِيَّتِهِ. وَلَوْ كَانَ التَّغَيُّرُ كَثِيْراً وَكَذَا المُتَغَيِّرُ بِمُخَالِطٍ. لَا يَسْتَغْنِي المَاءُ عَنْهُ كَطِيْنٍ وَطُحْلَبٍ. وَمَا فِي مَقَرِّهِ وَمَمَرِّهِ. وَالمُتَغَيِّرُ بِطُوْلِ المُكْثِ فَإِنَّهُ طَهُوْرٌ. (و) القِسْمُ الرَّابِعُ (مَاءُ نَجْسٍ) أي مُتَنَجِّسٌ وَهُوَ قِسْمَانِ أَحَدُهُمَا قَلِيْلٌ (وَهُوَ الَّذِيْ حَلَّتْ فِيْهِ نَجَاسَةٌ) تَغَيَّرَ أَمْ لَا (وَهُوَ) أَيْ وَالحَالُ أَنَّهُ مَاءٌ (دُوْنَ القُلَّتَيْنِ) وَيُسْتَثْنَى مِنْ هَذَا القِسْمُ المَيْتَةُ الَّتِيْ لَا دَمَ لَهَا سَائِلٌ عِنْدَ قَتْلِهَا أَوْ شَقِّ عُضْوٍ مِنْهَا كَالذُّبَابِ إِنْ لَمْ تُطْرَحْ فِيْهِ وَلَمْ تُغَيِّرْهُ. وَكَذَا النَّجَاسَةُ الَّتِيْ لَا يُدْرِكُهَا الطَّرْفُ. فَكُلٌّ مِنْهُمَا لَا يُنْجِسُ المَائِعَ وَيُسْتَثْنَى أَيْضاً صُوَرٌ مَذْكُوْرَةٌ فِي المَبْسُوْطَاتِ. وَأَشَارَ لِلْقِسْمِ الثَّانِي مِنَ القِسْمِ الرَّابِعِ بِقَوْلِهِ (أَوْ كَانَ) كَثِيْراً (قُلَّتَيْنِ) فَأَكْثَرَ (فَتَغَيَّرَ) يَسِيْراً أَوْ كَثِيْراً. (وَالْقُلَّتَانِ خَمْسُمِائَةِ رِطْلٍ بَغْدَادِيٍّ تَقْرِيْباً فِي الأَصَحِّ) فِيْهِمَا وَالرِّطْلُ البَغْدَادِيُّ عِنْدَ النَّوَوِيِّ مِائْةٌ وَثَمَانِيَةٌ وَعِشْرُوْنَ دِرْهَماً وَأَرْبَعَةُ أَسْبَاعِ دِرْهَمٍ. وَتَرَكَ المُصَ<br>
+  نِّفُ قِسْماً خَامِساً وَهُوَ المَاءُ المُطَهِّرُ الحَرَامُ كَالوُضُوْءِ بِمَاءٍ مَغْصُوْبٍ أَوْ مُسَبَّلٍ لِلشُّرْبِ<br>
+</p>
+<p class="style1">Wallohu A'lam </p>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

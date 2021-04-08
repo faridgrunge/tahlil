@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Thowaf wada’ (perpisahan)</h1>
+
+
+<p style="text-align: right;" class="arab"></p>
+
+<p>Setelah meninggalkan Mina maka jama&aacute;h haji kembali ke Mekah untuk melakukan thowaf wada&rsquo; sebelum meninggalkan kota Mekah.</p>
+<p>Ibnu &Aacute;bbas berkata :</p>
+<p style="text-align: right;" class="arab">أُمِرَ النَّاسُ أَنْ يَكُونَ آخِرُ عَهْدِهِمْ بِالْبَيْتِ، إِلَّا أَنَّهُ خُفِّفَ عَنِ الحَائِضِ</p>
+<p>&ldquo;Orang-orang diperintahkan agar kagiatan terakhir yang mereka lakukan sebelum meninggalkan kota Mekah adalah thowaf di k&aacute;bah, hanya saja diberi keringanan kepada wanita yang haid&rdquo; (HR Al-Bukhari no 1755 dan Muslim no 1328)</p>
+<p>Ibnu &Aacute;bbas juga berkata :</p>
+<p style="text-align: right;" class="arab">كَانَ النَّاسُ يَنْصَرِفُونَ فِي كُلِّ وَجْهٍ، فَقَالَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ: &laquo;لَا يَنْفِرَنَّ أَحَدٌ حَتَّى يَكُونَ آخِرُ عَهْدِهِ بِالْبَيْتِ&raquo;</p>
+<p>&ldquo;Orang-orang pergi (setelah dari Mina) ke segala arah, maka Rasulullah shallallahu &aacute;laihi wasallam berkata, &ldquo;Janganlah seorangpun pergi (meninggalkan Mekah untuk pulang) hingga kegiatannya yang terakhir adalah ia thowaf di ka&rsquo;bah&rdquo; (HR Muslim no 1327)</p>
+<p>Hukum-hukum yang berkaitan dengan thowaf wada&rsquo;</p>
+<ol>
+<li>Thowaf wada&rsquo; hukumnya wajib bagi orang yang haji, karena hadits-hadits di atas menyebutkan &ldquo;perintah&rdquo;, dan hukum asal perintah adalah untuk wajib. Namun thowaf wada&rsquo; tidak wajib bagi orang yang umroh<sup>([53])</sup>.</li>
+<br><li>Thowaf wada&rsquo; hanya disyari&aacute;tkan bagi jama&aacute;h haji yang datang dari luar Mekah, sehingga butuh untuk thowaf perpisahan, adapun penduduk kota Mekah yang haji maka tidak perlu untuk thowaf perpisahan karena ia tinggal di Mekah. Demikian pula tidak wajib bagi jam&aacute;ah haji yang datang dari luar Mekah lalu setelah haji ia berniat untuk bermuqim/menetap di kota Mekah.</li>
+<br><li>Disyaratkan bagi wanita harus suci dari haid dan nifas. Karenanya wanita yang haid dan nifas gugur kewajiban thowaf wada&rsquo; atas mereka.</li>
+
+<p>Aisyah berkata :</p>
+<p style="text-align: right;" class="arab">أَنَّ صَفِيَّةَ بِنْتَ حُيَيٍّ &ndash; زَوْجَ النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ &ndash; حَاضَتْ، فَذَكَرْتُ ذَلِكَ لِرَسُولِ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، فَقَالَ: &laquo;أَحَابِسَتُنَا هِيَ&raquo; قَالُوا: إِنَّهَا قَدْ أَفَاضَتْ قَالَ: &laquo;فَلاَ إِذًا&raquo;</p>
+<p>&ldquo;Bahwasanya Shofiyyah bintu Huyay -istri Nabi shallallahu &aacute;laihi wasallam- haid, maka akupun menyebutkan hal itu kepada Rasulullah shallallahu &aacute;laihi wasallam. Maka Nabi berkata, &ldquo;Apakah Shofiyyah akan menahan kita (sehingga tidak bisa pulang ke Madinah)?&rdquo;. Mereka berkata, &ldquo;Shofiyyah telah melakukan thowaf ifadhoh&rdquo;. Nabi berkata, &ldquo;Kalau begitu ia tidak menahan kita untuk pulang&rdquo; (HR Al-Bukhari 1757 dan 4410 dan Muslim no 1211)</p>
+<p>Hukum wanita nifas sama dengan wanita haid, sehingga gugur juga kewajiban thowaf wada&rsquo;. Jika seorang wanita sebelum meninggalkan bangunan kota mekah ternyata haidnya berhenti atau nifasnya berhenti maka wajib baginya untuk kembali untuk thowaf wada&rsquo;. Namun jika ia suci setelah melewati jarak safar (80 km) maka tidak perlu kembali untuk thowaf wada&rsquo;<sup>(</sup>[54]<sup>)</sup></p>
+
+<li>Waktu pelaksanaan thowaf wada&rsquo; adalah setelah semua kegiatan selesai tinggal hanya pulang. </li>Sebagaimana sabda Nabi di atas &ldquo;Janganlah seorangpun pergi (meninggalkan Mekah untuk pulang) hingga kegiatannya yang terakhir adalah ia thowaf di ka&rsquo;bah&rdquo; (HR Muslim no 1327)</li>
+
+<p>Akan tetapi tidak mengapa jika setelah thowaf wada&rsquo; ia melakukan kegiatan yang merupakan persiapan safar seperti membeli perbekalan safar, menunggu bis, mengangkat barang ke bis, dan menunggu rombongan safar. Karena kegiatan-kegiatan ini tidak merubah statusnya menjadi muqim<sup>([55])</sup></p>
+
+<li>Setelah thowaf wadaa&rsquo; tidak boleh melakukan kegiatan yang menunjukan seakan-akan kegiatan seorang yang hendak muqim (tinggal), seperti tidur, dll.<sup>&nbsp;([56])</sup></li>
+<br><li>Bagi orang yang telah melakukan thowaf wadaa&rsquo; lalu berjalan menuju keluar Mekah (menuju ke hotel/penginapan) menunggu bis jemputan, ternyata bisnya datang terlambat hingga harus bermalam, atau ia ternyata tersibukkan memperbaiki mobilnya yang rusak, atau ia mencari keluarganya yang hilang, dengan niat kapan ia ketemu keluarganya tersebut ia langsung meninggalkan Mekah, maka ia tidak perlu mengulangi thowaf wadaa&rsquo;nya karena ia telah berniat keluar dari Mekah, hanya saja ada halangan udzur</li>
+<br><li>Setelah thowaf wadaa&rsquo; disunnahkan sholat dua raka&rsquo;at.</li>
+<br><li>Boleh menggabungkan thowaf wada&rsquo; dengan thowaf ifadhoh<sup>(</sup>[57]<sup>)</sup>&nbsp;dengan syarat :</li>
+
+<ul>
+<li>Niatnyabukan niat thowaf wada&rsquo;, akan tetapi niatnya adalah niat thowaf ifadhoh, atau meniatkan keduanya (menurut sebagian ulama). Jika dia thowaf dengan niat thowaf wada&rsquo; saja maka ia harus thowaf ifadhoh lagi.</li>
+<li>Agar thowaf ifadhohnya sudah mencukupkan dari thowaf wada&rsquo; maka harus thowaf ifadhohnya dikerjakan yang paling terakhir sebelum meninggalkan kota Mekah. Dan bagi yang belum sa&rsquo;i haji maka boleh melakukan sa&rsquo;i haji setelah thowaf ifadhoh, karena sa&iacute; mengikuti thowaf&nbsp;<sup>(</sup>[58]<sup>)</sup></li>
+</ul>
+<br><li>Sebagian orang menyangka bahwa jika setelah thowaf wadaa&rsquo; tidak boleh lagi sholat di masjidil haram.</li> Ini adalah persangkaan yang keliru, karena Nabi setelah thowaf wadaa&rsquo; beliau masih mengimami sholat subuh. Karenanya jika setelah thowaf wadaa&rsquo; ternyata sebentar lagi tiba waktu sholat maka tidak mengapa ia menunggu waktu sholat di masjidil haram. Demikian juga jika ternyata setelah thowaf wada&rsquo; bertepatan dengan waktu sholat jumat lalu iapun menunggu untuk sholat jumat<sup>(</sup>[59]<sup>)</sup></li><br>
+<br><li>Barang siapa yang sakit dan masih mampu untuk thowaf dalam keadaan diangkat atau di dorong pakai kursi roda maka kewajiban thowaf wadaa&rsquo;nya tidaklah gugur.</li> Berbeda jika ia sakit parah dan tidak bisa thowaf meskipun diangkat atau didorong dengan kursi roda, maka gugurlah kewajiban thowaf wadaa&rsquo;nya. Namun jika dia diberi kelapangan maka lebih baik ia membayar dam dengan memotong seekor kambing untuk dibagikan kepada kaum fuqoro di Mekah<sup>(</sup>[60]<sup>)</sup></li><br>
+<br><li>Barang siapa yang keluar dari Mekah dengan jarak safar (sekitar 80 km) maka hendaknya ia thowaf ifadhoh sebelum keluar, meskipun ia akan kembali lagi ke Mekah. </li>Sebagai contoh adalah jama&rsquo;ah haji yang setelah selesai seluruh amalan hajinya lalu hendak jalan-jalan ke Madinah atau ke Jeddah, meskipun ia akan kembali lagi ke Mekah, maka ia hendaknya thowaf wadaa&rsquo; sebelum keluar ke Madinah atau Jeddah, dan ini pendapat kebanyakan ulama dan merupakan pendapat yang lebih hati-hati. Jika setelah kembali ke Mekah lalu ia hendak pulang ke tanah air maka lebih hati-hati ia thowaf wada&rsquo; lagi<sup>([61])</sup>. Meskipun ada sebagian ulama yang menyatakan kemanapun ia pergi meskipun melewati jarak safar, akan tetapi ia niat untuk kembali ke Mekah, maka ia tidak perlu thowaf wadaa&rsquo;. Ia hanya thowaf wadaa&rsquo; jika hendak kembali ke kampung halamannya<sup>(</sup>[62]<sup>)</sup></li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

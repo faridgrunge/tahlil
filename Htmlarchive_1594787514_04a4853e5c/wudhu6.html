@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Fadilah/keutamaan wudhu</h1><br>
+
+<p style="text-align:justify">Setiap hari, kesibukan kita sangat menyita pikiran. Berbagai masalah, konflik, perseteruan baik dalam diri sendiri ataupun dengan orang lain akan menjadikan diri terasa susah dan resah.<br>
+          <br>
+    Untuk menghilangkan kesusahan, ulama mengajarkan kepada umat Muslim untuk tetap berusaha, disertai semakin menyadari akan besarnya kuasa Allah. Ulama, melalui amalan yang disarikan dari Al-Quran dan Hadits serta para ulama pendahulu menyampaikan bahwa ada perbuatan-perbuatan sederhana yang bisa menjadi salah satu cara untuk mengurangi perasaan susah.<br>
+    <br>
+    Salah satu metode yang disebutkan ulama terdahulu untuk mengurangi intensitas amarah serta keresahan adalah anjuran untuk bersuci, dalam hal ini bisa dengan mensucikan diri, baik dengan berwudhu atau dengan membersihkan badan lewat mandi.<br>
+    <br>
+    Dalam Abwabul Faraj karya Syekh Muhammad bin Alwi Al-Maliki disebutkan bahwa membersihkan diri bisa menjadi satu metode untuk mengurangi dan mencegah kesusahan dan rasa letih sehari-hari. Dikutip dari Imam Umar bin Saqqaf As-Saqqaf bahwa hal yang dapat melapangkan batin, menolak rasa susah, dan juga menyehatkan badan, adalah memerhatikan kebersihan diri.<br>
+    <br>
+    Selain itu, dianjurkan pula untuk menunaikan sunah-sunah Rasul karena itu dapat mencegah keraguan dan rasa waswas buruk yang bisa jadi berasal dari setan, dan melakukan shalat untuk mencegah hal-hal yang menyibukkan hati dengan perkara yang tidak perlu.<br>
+    <br>
+    Dalam sebuah hadits, ketika Nabi sedang susah, beliau segera berwudhu dan mendirikan shalat. “Aku beristirahat (dari kesusahan) dengan shalat, wahai Bilal,” terang Rasulullah dalam salah satu riwayat. Hendaknya saat berwudhu, dihilangkan segala perasaan ragu dan was-was yang tidak beralasan.<br>
+    <br>
+    Imam As-Sya’rani menyebutkan bahwa rasa hadirnya hati dalam shalat dan ibadah, itu juga bisa dilihat bagaimana keadaan hadirnya hati saat melakukan wudhu. Menurutnya, melanggengkan wudhu bisa menyebabkan lapangnya hati, mudahnya rezeki, serta menjaga diri dari keburukan yang bisa meresahkan hati. Dalam keterangan lain, disebutkan pula memperbarui wudhu setelah shalat bisa menjadi wasilah cerahnya hati.<br>
+    <br>
+    Dari banyak keterangan di atas, dapat kita ketahui bahwa badan yang bersih, salah satunya lewat wudhu itu memiliki keutamaan yang bisa membantu untuk mengurangi beban kesusahan. Ditambah dengan shalat, banyak keterangan yang menyebutkan bahwa melalui ajaran agama dan ritual disertai berdoa, bisa menenangkan batin dan menambah optimisme. Terlebih badan yang segar dan bersih seusai wudhu bisa menjadi nilai tambah tersendiri. Semoga kita dijadikan hamba yang senantiasa menyucikan diri, lahir dan batin, sebagaimana dalam Al-Quran, “Sesungguhnya Allah mencintai hamba yang senantiasa bertobat dan mencintai pula orang-orang yang mensucikan diri.”  
+  
+  <p style="text-align:justify">Diantara keutamaan-keutamaan wudhu’ yang terdapat dalam Kitabullah dan Sunnah shohihah dari Nabi –Shallallahu alaihi wa sallam– :
+  <ol>
+    <li>
+      <div align="left"><b><I>Mengangkat derajat di surga dan pancaran cahaya di padang mahsyar</I></b></div>
+    </li>
+    <div align="left"><br>
+    </div>
+    <p align="right" style="text-align:justify"> Wudhu adalah amalan ringan, tapi pengaruhnya ajaib dan luar biasa. Selain menghapuskan dosa kecil, wudhu’ juga mengangkat derajat dan kedudukan seseorang dalam surga. Rasulullah -Shallallahu alaihi wa sallam- bersabda, <br>
+        <Br>
+        <div align="right" class="arab"> عَنْ أَبِي هُرَيْرَةَ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ أَلَا أَدُلُّكُمْ عَلَى مَا يَمْحُو اللَّهُ بِهِ الْخَطَايَا وَيَرْفَعُ بِهِ الدَّرَجَاتِ قَالُوا بَلَى يَا رَسُولَ اللَّهِ قَالَ إِسْبَاغُ الْوُضُوءِ عَلَى الْمَكَارِهِ وَكَثْرَةُ الْخُطَا إِلَى الْمَسَاجِدِ وَانْتِظَارُ الصَّلَاةِ بَعْدَ الصَّلَاةِ فَذَلِكُمْ الرِّبَاطُ</div>
+        <br>
+      <br>
+        <b><I>Artinya ;</I></b><blockquote
+
+    
+    <p style="text-align:justify"> “Maukah kalian aku tunjukkan tentang sesuatu (amalan) yang dengannya Allah menghapuskan dosa-dosa, dan mengangkat derajat-derajat?” Mereka berkata, “Mau, wahai Rasulullah!!” Beliau bersabda, “(Amalan itu) adalah menyempurnakan wudhu’ di waktu yang tak menyenangkan, banyaknya langkah menuju masjid, dan menunggu sholat setelah menunaikan sholat. Itulah pos penjagaan”. [HR. Muslim (586)]
+        </blockquote>
+    </p>
+    <br>
+    <Br>
+    <p style="text-align:justify"> Nabi -Shallallahu alaihi wa sallam- telah mengabarkan kepada kita bahwa beliau akan mengenali ummatnya di Padang Mahsyar dengan adanya cahaya pada anggota tubuh mereka, karena pengaruh wudhu’ mereka ketika di dunia. <br>
+        <Br>
+        <div align="right" class="arab"> تَبْلُغُ الْحِلْيَةُ مِنْ الْمُؤْمِنِ حَيْثُ يَبْلُغُ الْوَضُوءُ</div> <br>
+      <Br>
+        <b><I>Artinya ;</I></b>
+    <blockquote>
+      <p style="text-align:justify"> “Perhiasan (cahaya) seorang mukmin akan mencapai tempat yang dicapai oleh wudhu’nya”. [Muslim dalam Ath-Thoharoh, bab: Tablugh Al-Hilyah haits Yablugh Al-Wudhu' (585)]</p>
+    </blockquote>
+    <div align="left"><br>
+    </div>
+    <li>
+      <div align="left"><b><i>Syarat Memasuki Sholat</b></i></div>
+    </li>
+    <div align="left"><br>
+    </div>
+    <p align="right" style="text-align:justify"> Seorang ketika hendak memasuki sebuah rumah atau gedung, maka ia akan melewati pintu-pintu yang ada padanya. Pintu ini biasanya tak bisa dilewati, kecuali seseorang memiliki kunci untuk membuka pintu-pintu itu. Sebelum seseorang masuk ke dalam rumah tersebut, maka ada syarat yang harus dipenuhi. Demikianlah perumpamaan wudhu’ bagi sholat; seorang tak mungkin akan masuk dalam sebuah sholat, kecuali ia memenuhi syarat-syarat sholat, seperti wudhu’. <br />
+        <br />
+      Oleh karena itu, Allah –Azza wa Jalla– berfirman,
+      Hai orang-orang yang beriman, apabila kamu hendak mengerjakan shalat, maka basuhlah mukamu dan tanganmu sampai dengan siku, dan sapulah kepalamu dan (basuh) kakimu sampai dengan kedua mata kaki, dan jika kamu junub maka mandilah, dan jika kamu sakit atau dalam perjalanan atau kembali dari tempat buang air (kakus) atau menyentuh perempuan, lalu kamu tidak memperoleh air, maka bertayammumlah dengan tanah yang baik (bersih); sapulah mukamu dan tanganmu dengan tanah itu. Allah tidak hendak menyulitkan kamu, tetapi Dia hendak membersihkan kamu dan menyempurnakan nikmat-Nya bagimu, supaya kamu bersyukur. <br />
+      <Br />
+      Jadi, jika seseorang hendak sholat, maka syaratnya harus berwudhu’ sebagaimana yang dijelaskan oleh Allah -Azza wa Jalla– dalam ayat ini dan diterangkan oleh Nabi -Shallallahu alaihi wa sallam- dalam sunnahnya. <br />
+      <br />
+      Bila seorang yang masuk dalam sholat, tanpa wudhu’, maka sholatnya tak akan diterima, bahkan tak sah, sebab wudhu’ adalah syarat sahnya wudhu’, dan tercapainya pahala sholat. Nabi –Shallallahu alaihi wa sallam– bersabda, <br>
+      <br>
+      <div align="right" class="arab"> لاَ تُقْبَلُ صَلاَةُ مَنْ أَحْدَثَ حَتَّى يَتَوَضَّأَ</div> <br>
+      <Br>
+      <b><I>Artinya ;</I></b>
+    <blockquote>
+      <div align="left">“Tak akan diterima sholatnya orang yang ber-hadats sampai ia berwudhu’” . [HR. Al-Bukhoriy dalam Shohih-nya (135 & 6954), dan Muslim dalam Shohih-nya (536)]</div>
+    </blockquote>
+    <br />
+    <br />
+    <p style="text-align:justify"> Al-Hafizh Ibnu Hajar Al-Asqolaniy –rahimahullah– berkata saat menjelaskan beberapa faedah dari hadits ini, “Hadits ini dijadikan dalil tentang batalnya sholat disebabkan oleh hadats (seperti, kentut, buang air, junub dan lainnya), baik hadats itu keluar karena pilihan (sadar), maupun terpaksa”. [Lihat Fathul Bari Syarh Shohih Al-Bukhoriy (1/309), tahqiq Ali Asy-Syibl, cet. Darus Salam, 1421 H] <br>
+        <br>
+    <li>
+      <div align="left"><b><i> Penghapus Dosa Kecil & Pengangkat Derajat</b></i></div>
+    </li>
+    <div align="left"><Br>
+    </div>
+    <p style="text-align:justify"> Wudhu adalah amalan ringan, tapi pengaruhnya ajaib dan luar biasa. Selain menghapuskan dosa kecil, wudhu’ juga mengangkat derajat dan kedudukan seseorang dalam surga. Rasulullah –Shallallahu alaihi wa sallam– bersabda,<br>
+        <Br>
+      <div align="right" class="arab"> عَنْ أَبِي هُرَيْرَةَ أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ أَلَا أَدُلُّكُمْ عَلَى مَا يَمْحُو اللَّهُ بِهِ الْخَطَايَا وَيَرْفَعُ بِهِ الدَّرَجَاتِ قَالُوا بَلَى يَا رَسُولَ اللَّهِ قَالَ إِسْبَاغُ الْوُضُوءِ عَلَى الْمَكَارِهِ وَكَثْرَةُ الْخُطَا إِلَى الْمَسَاجِدِ وَانْتِظَارُ الصَّلَاةِ بَعْدَ الصَّلَاةِ فَذَلِكُمْ الرِّبَاطُ</div> <br>
+      <br>
+        <b><I>Artinya ;</I></b>
+    <blockquote>
+      <p style="text-align:justify"> “Maukah kalian aku tunjukkan tentang sesuatu (amalan) yang dengannya Allah menghapuskan dosa-dosa, dan mengangkat derajat-derajat?” Mereka berkata, “Mau, wahai Rasulullah!!” Beliau bersabda, “(Amalan itu) adalah menyempurnakan wudhu’ di waktu yang tak menyenangkan, banyaknya langkah menuju masjid, dan menunggu sholat setelah menunaikan sholat. Itulah pos penjagaan”. [HR. Muslim (586)]</p>
+    </blockquote>
+    <br>
+    <Br>
+    <p style="text-align:justify"> Abul Hasan As-Sindiy –rahimahullah– berkata saat menjelaskan amalan-amalan yang terdapat dalam hadits ini, “Amalan-amalan ini akan menutup pintu-pintu setan dari dirinya, menahan jiwanya dari nafsu syahwatnya, permusuhan jiwa, dan setan sebagaimana hal ini tak lagi samar. Inilah jihad akbar (besar) yang terdapat pada dirinya. Jadi, setan adalah musuh yang paling berat baginya”. [Lihat Hasyiyah As-Sindiy ala Sunan An-Nasa’iy (1/114)] <Br>
+        <Br>
+      Jadi, seorang yang melazimi amalan-amalan tersebut dianggap telah melakukan pertahanan untuk menutup pintu-pintu setan. Barangsiapa yang ingin dijauhkan dari setan, maka hendaknya ia melazimi wudhu’, menghadiri sholat jama’ah, dan bersabar menunggu sholat jama’ah lainnya. <Br>
+      <Br>
+    <li>
+      <div align="left"><b><i> Tanda Pengikut Nabi -Shallallahu alaihi wa sallam-.</b></i></div>
+    </li>
+    <div align="left"><Br>
+    </div>
+    <p style="text-align:justify"> Nabi -Shallallahu alaihi wa sallam- telah mengabarkan kepada kita bahwa beliau akan mengenali ummatnya di Padang Mahsyar dengan adanya cahaya pada anggota tubuh mereka, karena pengaruh wudhu’ mereka ketika di dunia. <br>
+        <Br>
+        <div align="right" class="arab">تَبْلُغُ الْحِلْيَةُ مِنْ الْمُؤْمِنِ حَيْثُ يَبْلُغُ الْوَضُوءُ</div> <br>
+      <Br>
+        <b><I>Artinya ;</I></b>
+    <blockquote>
+      <p style="text-align:justify"> “Perhiasan (cahaya) seorang mukmin akan mencapai tempat yang dicapai oleh wudhu’nya”. [Muslim dalam Ath-Thoharoh, bab: Tablugh Al-Hilyah haits Yablugh Al-Wudhu’ (585)] </p>
+    </blockquote>
+    <Br>Dari Abu Hurairah –radhiyallahu anhu– berkata, <br>
+        <Br>
+        <div align="right" class="arab"> أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَتَى الْمَقْبُرَةَ فَقَالَ السَّلَامُ عَلَيْكُمْ دَارَ قَوْمٍ مُؤْمِنِينَ وَإِنَّا إِنْ شَاءَ اللَّهُ بِكُمْ لَاحِقُونَ وَدِدْتُ أَنَّا قَدْ رَأَيْنَا إِخْوَانَنَا قَالُوا أَوَلَسْنَا إِخْوَانَكَ يَا رَسُولَ اللَّهِ قَالَ أَنْتُمْ أَصْحَابِي وَإِخْوَانُنَا الَّذِينَ لَمْ يَأْتُوا بَعْدُ فَقَالُوا كَيْفَ تَعْرِفُ مَنْ لَمْ يَأْتِ بَعْدُ مِنْ أُمَّتِكَ يَا رَسُولَ اللَّهِ فَقَالَ أَرَأَيْتَ لَوْ أَنَّ رَجُلًا لَهُ خَيْلٌ غُرٌّ مُحَجَّلَةٌ بَيْنَ ظَهْرَيْ خَيْلٍ دُهْمٍ بُهْمٍ أَلَا يَعْرِفُ خَيْلَهُ قَالُوا بَلَى يَا رَسُولَ اللَّهِ قَالَ فَإِنَّهُمْ يَأْتُونَ غُرًّا مُحَجَّلِينَ مِنْ الْوُضُوءِ وَأَنَا فَرَطُهُمْ عَلَى الْحَوْضِ أَلَا لَيُذَادَنَّ رِجَالٌ عَنْ حَوْضِي كَمَا يُذَادُ الْبَعِيرُ الضَّالُّ أُنَادِيهِمْ أَلَا هَلُمَّ فَيُقَالُ إِنَّهُمْ قَدْ بَدَّلُوا بَعْدَكَ فَأَقُولُ سُحْقًا سُحْقًا <br>
+        </div>
+    <blockquote>
+      <p style="text-align:justify">Artinya: </p>
+      <p style="text-align:justify">“Rasulullah -Shallallahu alaihi wa sallam- pernah mendatangi pekuburan seraya bersabda, “Semoga keselamatan bagi kalian wahai rumah kaum mukminin. Aku sangat ingin melihat saudara-saudara kami”. Mereka (para sahabat) berkata, “Bukankah kami adalah saudara-saudaramu wahai Rasulullah?” Beliau bersabda, “Kalian adalah para sahabatku. Sedang saudara kami adalah orang-orang yang belum datang berikutnya”. Mereka berkata, “Bagaimana anda mengenal orang-orang yang belum datang berikutnya dari kalangan umatmu wahai Rasulullah?” Beliau bersabda, “Bagaimana pandanganmu jika seseorang memiliki seekor kuda yang putih wajah, dan kakinya diantara kuda yang hitam pekat. Bukankah ia bisa mengenal kudanya”. Mereka berkata, “Betul, wahai Rasulullah”. Beliau bersabda, “Sesungguhnya mereka (umat beliau) akan datang dalam keadaan putih wajah dan kakinya karena wudhu’. Sedang aku akan mendahului mereka menuju telaga. Ingatlah, sungguh akan terusir beberapa orang dari telagaku sebagaimana onta tersesat terusir. Aku memanggil mereka, “Ingat, kemarilah!!” Lalu dikatakan (kepadaku), “Sesungguhnya mereka melakukan perubahan setelahmu”. Lalu aku katakan, “Semoga Allah menjauhkan mereka”. [HR. Muslim dalam Ath-Thoharoh, bab: Istihbab Itholah Al-Ghurroh (583)]</p>
+    </blockquote>
+    <br>
+    <Br>
+    <p style="text-align:justify"> Seorang muslim akan dikenali oleh Nabi –Shallallahu alaihi wa sallam– dengan cahaya pada wajah dan tangannya. Maka hendaknya setiap orang diantara kita menjaga cahaya ini dengan menjaga wudhu, dan sholat. Abdur Ra’uf Al-Munawiy –rahimahullah– berkata, “Barangsiapa yang lebih banyak sujudnya atau wudhu’nya di dunia, maka wajahnya nanti akan lebih bercahaya dan lebih berseri dibandingkan selain dirinya. Maka mereka (kaum mukminin) nanti disana akan bertingkat-tingkat sesuai besarnya cahaya”. [Lihat Faidhul Qodir (2/232)] <Br>
+        <Br>
+    <li>
+      <div align="left"><b><i> Separuh Iman</b></i></div>
+    </li>
+    <div align="left"><br>
+    </div>
+    <p style="text-align:justify"> Seorang tak akan meraih pahala sholat, selain ia melakukan wudhu’, lalu mengerjakan sholat. Jadi, wudhu’ ibaratnya separuh dari iman (yakni, sholat). Ini menunjukkan kepada kita tentang ketinggian nilai dan manzilah wudhu’ di sisi Allah -Azza wa Jalla-. Rasulullah -Shallallahu alaihi wa sallam– bersabda, <br>
+        <Br>
+     <div align="right" class="arab"> الطُّهُورُ شَطْرُ الْإِيمَانِ وَالْحَمْدُ لِلَّهِ تَمْلَأُ الْمِيزَانَ وَسُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ تَمْلَآَنِ أَوْ تَمْلَأُ مَا بَيْنَ السَّمَاوَاتِ وَالْأَرْضِ وَالصَّلَاةُ نُورٌ وَالصَّدَقَةُ بُرْهَانٌ وَالصَّبْرُ ضِيَاءٌ وَالْقُرْآنُ حُجَّةٌ لَكَ أَوْ عَلَيْكَ كُلُّ النَّاسِ يَغْدُو فَبَايِعٌ نَفْسَهُ فَمُعْتِقُهَا أَوْ مُوبِقُهَا</div> <br>
+      <Br>
+        <b><I>Artinya ;</I></b>
+    <blockquote>
+      <p style="text-align:justify"> “Bersuci (wudhu’) adalah separuh iman. Alhamdulillah akan memenuhi mizan (timbangan). Subhanallah wal hamdulillah akan memenuhi antara langit dan bumi. Sholat adalah cahaya. Shodaqoh adalah tanda. Kesabaran adalah sinar. Al-Qur’an adalah hujjah (pembela) bagimu atau hujatan atasmu. Setiap orang keluar di waktu pagi; maka ada yang menjual dirinya, lalu membebaskannya atau membinasakannya”. [Muslim dalam Ath-Thoharoh, bab: Fadhl Ath-Thoharoh (533)]</p>
+    </blockquote>
+    <Br>
+    <Br>
+    <p style="text-align:justify"> Al-Hafizh Ibnu Rojab –rahimahullah– berkata, “Jika wudhu’ bersama dua kalimat syahadat mengharuskan terbukanya pintu surga, maka wudhu menjadi separuh iman kepada Allah dan Rasul-Nya menurut tinjauan ini. Juga wudhu’ termasuk cabang-cabang keimanan yang tersembunyi yang tak akan dilazimi, kecuali seorang mukmin”. [Lihat Iqozhul Himam (hal. 329)] <Br>
+        <Br>
+    <li>
+      <div align="left"><b><i> Jalan Menuju Surga</b></i></div>
+    </li>
+    <div align="left"><Br>
+    </div>
+    <p style="text-align:justify"> Keutamaan orang yang selalu menjaga wudhu disebutkan dalam hadits berikut tentang Bilal yang disebutkan bahwa suara sandal beliau sudah terdengar di surga. <br>
+        <Br>
+      Dari Abu Buraidah, Rasulullah shallallahu ‘alaihi wa salam di pagi hari memanggil Bilal lalu berkata, <br>
+      <Br>
+      <div align="right" class="arab">يَا بِلاَلُ بِمَ سَبَقْتَنِى إِلَى الْجَنَّةِ مَا دَخَلْتُ الْجَنَّةَ قَطُّ إِلاَّ سَمِعْتُ خَشْخَشَتَكَ أَمَامِى دَخَلْتُ الْبَارِحَةَ الْجَنَّةَ فَسَمِعْتُ خَشْخَشَتَكَ أَمَامِى</div> <br>
+      <Br>
+      <b><I>Artinya ;</I></b>
+    <blockquote>
+      <p style="text-align:justify"> “Wahai Bilal, kenapa engkau mendahuluiku masuk surga? Aku tidaklah masuk surga sama sekali melainkan aku mendengar suara sendalmu di hadapanku. Aku memasuki surga di malam hari dan aku dengar suara sendalmu di hadapanku.”</p>
+    </blockquote>
+    <br>
+    <Br>
+    Bilal menjawab, <br>
+  <Br>
+  <div align="right" class="arab"> يَا رَسُولَ اللَّهِ مَا أَذَّنْتُ قَطُّ إِلاَّ صَلَّيْتُ رَكْعَتَيْنِ وَمَا أَصَابَنِى حَدَثٌ قَطُّ إِلاَّ تَوَضَّأْتُ عِنْدَهَا وَرَأَيْتُ أَنَّ لِلَّهِ عَلَىَّ رَكْعَتَيْنِ</div> <br>
+  <Br>
+  <b><I>Artinya ;</I></b>
+  <blockquote>
+    <p style="text-align:justify"> “Wahai Rasulullah, aku biasa tidak meninggalkan shalat dua raka’at sedikit pun. Setiap kali aku berhadats, aku lantas berwudhu dan aku membebani diriku dengan shalat dua raka’at setelah itu.” (HR. Tirmidzi no. 3689 dan Ahmad 5: 354. Al Hafizh Abu Thohir mengatakan bahwa sanad hadits tersebut hasan)</p>
+  </blockquote>
+  <br>
+  <Br>
+  <p style="text-align:justify"> Syaikh Abu Malik dalam Fiqhus Sunnah lin Nisaa’ (hal. 49) menyatakan bahwa disunnahkan berwudhu setiap kali wudhu tersebut batal karena adanya hadats. <Br>
+      <Br>
+    Imam Nawawi rahimahullah menyatakan, “Disunnahkan menjaga wudhu atau diri dalam keadaan suci. Termasuk juga kala tidur dalam keadaan suci.” (Kitab Matan Al Idhoh, hal. 20). <Br>
+    <Br>
+    Semoga dimudahkan dalam menjaga wudhu. Hanya Allah yang memberi taufik. <br>
+    <Br>
+    <Br>
+  <p style="text-align:justify"> Jalan-jalan surga telah dimudahkan oleh Allah –Azza wa Jalla– bagi orang yang Allah berikan taufiq dan hidayah. Perhatikan Bilal bin Robah -radhiyallahu anhu-, beliau mendapatkan kabar gembira bahwa ia termasuk penduduk surga, sebab ia telah berusaha menapaki sebuah jalan diantara jalan-jalan surga. Dengarkan kisahnya dari Abu Hurairah –radhiyallahu anhu-, ia berkata, <Br>
+      <Br>
+    <div align="right" class="arab"> أَنَّ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ لِبِلَالٍ عِنْدَ صَلَاةِ الْفَجْرِ يَا بِلَالُ حَدِّثْنِي بِأَرْجَى عَمَلٍ عَمِلْتَهُ فِي الْإِسْلَامِ فَإِنِّي سَمِعْتُ دَفَّ نَعْلَيْكَ بَيْنَ يَدَيَّ فِي الْجَنَّةِ قَالَ مَا عَمِلْتُ عَمَلًا أَرْجَى عِنْدِي أَنِّي لَمْ أَتَطَهَّرْ طَهُورًا فِي سَاعَةِ لَيْلٍ أَوْ نَهَارٍ إِلَّا صَلَّيْتُ بِذَلِكَ الطُّهُورِ مَا كُتِبَ لِي أَنْ أُصَلِّيَ</div><br>
+    <Br>
+      <b><I>Artinya ;</I></b>
+  <blockquote>
+    <p style="text-align:justify">“Nabi -Shallallahu alaihi wa sallam- pernah bersabda kepada Bilal ketika sholat Fajar, “Wahai Bilal, ceritakan kepadaku tentang amalan yang paling engkau harapkan yang pernah engkau amalkan dalam Islam, karena sungguh aku telah mendengarkan detak kedua sandalmu di depanku dalam surga”. Bila berkata, “Aku tidaklah mengamalkan amalan yang paling aku harapkan di sisiku. Cuma saya tidaklah bersuci di waktu malam atau siang, kecuali aku sholat bersama wudhu’ itu sebagaimana yang telah ditetapkan bagiku”. [HR. Al-Bukhoriy dalam Al-Jum’ah, Bab: Fadhl Ath-Thoharoh fil Lail wan Nahar (1149), dan Muslim (6274)]</p>
+  </blockquote>
+  <br>
+  <Br>
+  <p style="text-align:justify"> Hadits ini menunjukkan kepada kita bahwa berwudhu’ lalu sholat sunnah setelahnya merupakan amalan yang berpahala besar. Ibnul Jauziy –rahimahullah– berkata, “Di dalam hadits ini terdapat anjuran untuk melakukan sholat usai berwudhu’ agar wudhu tidak kosong (terlepas) dari maksudnya”. [Lihat Fathul Bari (4/45)] <Br>
+      <Br>
+  <li>
+    <div align="left"><b><i> Pelepas Ikatan Setan</b></i></div>
+  </li>
+  <div align="left"><br>
+  </div>
+  <p style="text-align:justify"> Setan senantiasa mengintai dan mengawasi kita. Bahkan ia selalu mencari jalan untuk menjauhkan kita dari kebaikan yang telah digariskan oleh Allah dan rasul-Nya. Diantara makar setan, ia membuat buhul pada seorang diantara kita saat kita tidur agar kita berat bangun beribadah. Rasulullah –Shallallahu alaihi wa sallam– bersabda, <br>
+      <br>
+      <div align="right" class="arab"> يَعْقِدُ الشَّيْطَانُ عَلَى قَافِيَةِ رَأْسِ أَحَدِكُمْ إِذَا هُوَ نَامَ ثَلاَثَ عُقَدٍ يَضْرِبُ كُلَّ عُقْدَةٍ عَلَيْكَ لَيْلٌ طَوِيلٌ فَارْقُدْ فَإِنْ اسْتَيْقَظَ فَذَكَرَ اللَّهَ انْحَلَّتْ عُقْدَةٌ فَإِنْ تَوَضَّأَ انْحَلَّتْ عُقْدَةٌ فَإِنْ صَلَّى انْحَلَّتْ عُقْدَةٌ فَأَصْبَحَ نَشِيطًا طَيِّبَ النَّفْسِ وَإِلَّا أَصْبَحَ خَبِيثَ النَّفْسِ كَسْلَانَ</div><Br>
+    <Br>
+      <b><I>Artinya ;</I></b>
+  <blockquote>
+    <p style="text-align:justify"> “Setan membuat tiga ikatan pada tengkuk seorang diantara kalian jika ia tidur. Setan akan memukul setiap ikatan itu (seraya membisikkan), “Bagimu malam yang panjang, maka tidurlah”. Jika ia bangun seraya menyebut Allah (berdzikir), maka terlepaslah sebuah ikatan. Jika ia berwudhu’, maka sebuah ikatan yang lain terlepas. Jika ia sholat, maka sebuah ikatan akan terlepas lagi. Lantaran itu, ia akan menjadi bersemangat lagi baik jiwanya. Jika tidak demikian, maka ia akan jelek jiwanya lagi malas”. [HR. Al-Bukhoriy (1142 & 3269) dan Muslim (1816)]</p>
+  </blockquote>
+  <p style="text-align:justify"> Al-Qodhi Abul Walid Sulaiman bin Kholaf Al-Bajiy –rahimahullah– berkata, “Nabi -Shallallahu alaihi wa sallam- memaksudkan dengan hadits ini bahwa dengan dzikrullah, wudhu’, dan sholat, maka semua ikatan (buhul) setan akan terlepas, dan seorang muslim akan selamat dari makar setan, dan keburukan buhul-buhulnya. Lantaran itu, ia akan bersemangat di waktu pagi, (sedang ia telah terlepas darinya buhul-buhul yang telah membuat dirinya malas), dan jiwanya menjadi baik dengan sebab amalan kebajikan yang ia lakukan semalam”. [Lihat Al-Muntaqo (1/434) karya Al-Bajiy]   
+  </ol>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Sunnah-sunnah sebelum ihram</h1>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;" class="arab"></p>
+<ol>
+<li>Mandi sebelum ihram</li>
+<p>Ibnu Umar berkata :</p>
+<p style="text-align: right;" class="arab">مِنَ السُّنَّةِ أَنْ يَغْتَسِلَ الرَّجُلُ إِذَا أَرَادَ أَنْ يُحْرِمَ</p>
+<p>&ldquo;Termasuk sunnah adalah seseorang mandi jika hendak berihram&rdquo;<sup>([1])</sup></p>
+<p>Demikian juga Nabi memerintahkan Asmaa&rsquo; binti &Uacute;mais yang nifas untuk mandi sebelum ihram<sup>(</sup>[2]<sup>)</sup>, padahal wanita nifas mandinya tidak menjadikannya suci maka begitu pula dengan orang yang suci lebih utama untuk mandi karena mandinya bermanfaat baginya untuk lebih suci dalam beribadah.</p>
+<p><em>Catatan</em>&nbsp;:</p>
+<ul>
+<li>Sunnahnya adalah mandi di miqoot, namun melihat kondisi kepadatan jama&aacute;h haji yang luar biasa maka para ulama membolehkan mandi di rumah atau di hotel menjelang keberangkatan. Demikian juga yang ihromnya di pesawat, jika tidak memungkinkan mandi di pesawat maka boleh mandi sebelum berangkat naik pesawat. (Lihat Fataawa Bin Baaz 16/172 dan 17/38)</li>
+<li>Adapun mencukur bulu kemaluan, memotong kuku, mencabut bulu ketiak, dan bersih-bersih yang lainnya, maka ini bukan sunnah ihram secara khusus. Namun kalau memang diperlukan maka silahkan dilakukan untuk menyempurnakan kebersihan. Namun jika tidak perlu maka tidak dikatakan bahwa perkara-perkara ini merupakan sunnah sebelum ihram. Yang merupakan sunnah sebelum ihram adalah mandinya.</li>
+</ul>
+<p>Ibnu Taimiyyah berkata :</p>
+<p style="text-align: right;" class="arab">وَإِنْ احْتَاجَ إلَى التَّنْظِيفِ: كَتَقْلِيمِ الْأَظْفَارِ وَنَتْفِ الْإِبِطِ وَحَلْقِ الْعَانَةِ وَنَحْوِ ذَلِكَ فَعَلَ ذَلِكَ. وَهَذَا لَيْسَ مِنْ خَصَائِصِ الْإِحْرَامِ</p>
+<p>&ldquo;Jika ia perlu untuk bersih-berish seperti memotong kuku, mencabut bulu ketiak, mencukur bulu kemaluan dan yang semisalnya, maka hendaknya ia melakukannya. Akan tetapi hal ini bukan perkara-perkara khusus yang berkaitan dengan ihram&rdquo; (Majmuu&rsquo;Al-Fataawaa 26/109)</p>
+<li>Memakai minyak wangi di badan sebelum berihram</li>
+<p>Asiyah berkata</p>
+<p style="text-align: right;" class="arab">كُنْتُ أُطَيِّبُ رَسُولَ اللَّهِ صلى الله عليه وسلم لإِحْرَامِهِ حِينَ يُحْرِمُ، وَلِحِلِّهِ قَبْلَ أَنْ يَطُوفَ بِالْبَيْتِ.</p>
+<p>&ldquo;Aku memakaikan minyak wangi kepada Rasūlullāh shallallāhu &lsquo;alaihi wa sallam tatkala beliau hendak berihram, aku juga memakaikan minyak wangi setelah Nabi bertahallul (yaitu tahallul awal setelah beliau melempar jamroh dan mencukur rambut-pen) sebelum beliau berthawāf di Ka&rsquo;bah.&rdquo; (HR Bukhāri no 1539 dan Muslim no 2040)</p>
+<p>Disini jelas bahwa &lsquo;Āisyah radhiyallāhu Ta&rsquo;āla &lsquo;anhā mengenakan minyak wangi pada badan Rasulullah sebelum Rasulullah berihram.</p>
+<p>Aisyah juga berkata</p>
+<p style="text-align: right;" class="arab">كَأَنِّيْ أَنْظُرُ إِلَى وَبِيْصَ اْلمِسْكِ فِيْ مَفْرَقِ رَسُوْلِ اللهِ وَهُوَ مُحْرِمٌ</p>
+<p>&ldquo;Seakan-akan aku melihat ada kilatan bekas minyak rambut di bagian belahan rambut kepala Nabi shallallāhu &lsquo;alayhi wa sallam tatkala beliau sedang ihram.&rdquo; (HR Muslim no 1190)</p>
+<p>Aisyah juga berkata :</p>
+<p style="text-align: right;" class="arab">كُنَّا نَخْرُجُ مَعَ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِلَى مَكَّةَ، فنُضَمِّدُ جِبَاهَنَا بِالسُّكِّ المُطَيَّبِ عِنْدَ الإحْرَامِ، فَإِذَا عَرِقتْ إِحْدَانَا؛ سَالَ عَلَى وَجْهِهَا، فَيَرَاهُ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ؛ فَلاَ يَنْهَانَا</p>
+<p>&ldquo;Kami keluar bersama Nabi shallallahu &aacute;laihi wasallam ke Mekah, maka kamipun mengoles dahi kami dengan as-Sukk (sejenis minyak wangi) tatkala hendak ihram. Maka jika salah seorang dari kami (para istri Nabi) berkeringat maka minyak wangi tersebut mengalir ke wajahnya. Lalu Nabi shallallahu &aacute;laihi wasallam melihatnya namun Nabi tidak melarng kami&rdquo; (HR Abu Dawud no 1606, Ahmad no 24502, dan dishahihkan oleh Al-lbani)</p>
+<p>Ibnu Hajar berkata, &ldquo;Sangat jelas sekali bahwasanya dzat minyak wangi tersebut masih tersisa&rdquo; (Fathul Baari 3/399)</p>
+<li>Berihram setelah sholat</li>
+<p>Ada dua pendapat ulama dalam hal ini:</p>
+<p><u>Pertama</u>&nbsp;: Disunnahkan sholat sunnah dua raka&aacute;t sebelum berihram. Dan ini adalah pendapat 4 madzhab, bahkan An-Nawawi menyatakan hal ini adalah ijma&rsquo;&nbsp;<sup>(</sup>[3]<sup>)</sup></p>
+<p><u>Kedua</u>&nbsp;: Disunnahkan berihram setelah sholat fardu, dan jika tidak bertepatan dengan selesai sholat fardu maka tidak disunnahkan sholat khusus 2 raka&aacute;t sebelum berihram. Memang benar Nabi shallallahu berihram setelah sholat, akan tetapi sholat tersebut adalah sholat fardu, bukan sholat khusus ihram<sup>([4])</sup>, dan ini adalah pendapat salah satu riwayat dari al-Imam Ahmad (lihat al-Inshoof, Al-Maawardi 8/143) dan dipilih oleh Ibnu Taimiyyah (lihat Majmuu&rsquo; Al-Fatawa 26/108-109)</p>
+<p>Sebagian ulama mengambil jalan tengah, yaitu jika seseorang orang berihram setelah sholat fardu maka itu yang terbaik, akan tetapi jika waktunya tidak pas dengan selesai sholat fardu maka hendaknya ia melakukan sholat sunnah yang disunnahkan seperti sholat sunnah wudhu, atau ketika di masjid miqot ia melakukan sholat tahiyyatul masjid baru kemudian ia berihram. (Lihat Fatawa Nuur &aacute;la ad-Darb, Bin Baaz 17/240-242)</p>
+<li>Ber-ihlaal (bertalbiyah) tatkala sudah berada di atas tunggangan (kendaraan), dengan menyebutkan tujuan nusuknya. </li>Misalnya berkata,<span style="text-align: right;" class="arab"> لَبَّيْكَ عُمْرَةً </span> &ldquo;Labbaik &Uacute;mroh&rdquo; atau <span style="text-align: right;" class="arab"> اللَّهُمَّ لَبَّيْكَ عُمْرَةً </span>&ldquo;Allahumma Labbaik &Uacute;mroh&rdquo; (artinya : Ya Allah aku memenuhi panggilanmu untuk menjalankan umroh)</p>
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

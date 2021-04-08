@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Keutamaan Haji</h1>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;" class="arab"></p>
+
+<p><em>
+</em></p>
+
+<p><p>Tidak ada yang ragu bahwasanya haji merupakan ibadah yang dirindukan oleh setiap muslim di atas muka bumi ini, yang kalau kita mendengar cerita tentang bagaimana kerinduan kaum muslimin terhadap ibadah haji sungguh &nbsp;sangat luar biasa.</p>
+<p>Mulai orang-orang yang mengumpulkan uang bertahun-tahun bahkan puluhan tahun agar bisa berangkat ke tanah suci untuk melaksanakan ibadah.</p>
+<p>Kita dengar juga cerita ada sebagian wanita Indonesia yang tatkala sampai di Saudi mereka langsung sujud syukur, begitu luar biasa bahkan banyak yang bercita-cita ingin meninggal tatkala haji, ingin meninggal di tanah suci dan terlalu banyak cerita yang menjelaskan tentang bagaimana luar biasanya kerinduan kaum Muslimin terhadap ibadah haji.</p>
+<p>Dan pantas bagi mereka untuk merindukan ibadah yang satu ini (ibadah yang sangat luar biasa) terlalu banyak keutamaan yang Rasūlullāh shallallāhu &lsquo;alayhi wa sallam dan Allāh janjikan bagi orang-orang yang berhaji dengan haji yang mabrūr.</p>
+<p>Pada kesempatan yang berbahagia ini kita akan menyebutkan sebagian hadīts (dalīl-dalīl) yang menyebutkan akan keutamaan berhaji diantaranya :</p>
+</p>
+
+<p><strong></strong></p>
+
+<ol>
+<li>Pertama : Haji merupakan rukun Islam yang kelima.</li>
+<p style="padding-left: 30px;">Allah berfirman</p>
+<p style="text-align: right;" class="arab">وَلِلَّهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ إِلَيْهِ سَبِيلًا</p>
+<p style="padding-left: 30px;">&ldquo;Mengerjakan haji adalah kewajiban manusia terhadap Allah, yaitu bagi yang sanggup mengadakan perjalanan ke baitullah&rdquo; (QS Ali-&Iacute;mron 97)</p>
+<p style="padding-left: 30px;">Nabi shallallahu &aacute;laihi wasallam bersabda :</p>
+<p style="text-align: right;" class="arab">>بُنِيَ الإِسْلاَمُ عَلَى خَمْسٍ: شَهَادَةِ أَنْ لاَ إِلَهَ إِلَّا اللَّهُ وَأَنَّ مُحَمَّدًا رَسُولُ اللَّهِ، وَإِقَامِ الصَّلاَةِ، وَإِيتَاءِ الزَّكَاةِ، وَالحَجِّ، وَصَوْمِ رَمَضَانَ</p>
+<p style="padding-left: 30px;">&ldquo;Islam dibangun di atas 5 rukun, syahadatain, menegakan sholat, menunaikan zakat, berhaji, dan berpuasa di bulan Ramadhan&rdquo; (HR Al-Bukhari no 8 dan Muslim no 16)</p>
+<p style="padding-left: 30px;">Tentunya 5 perkara ini adalah pondasi utama Islam, maka seseorang orang berusaha membangun bangunan Islamnya dengan sesempurna mungkin. Semakin sempurna bangunan Islamnya maka semakin sempurna keimanannya dan semakin baik surganya di akhirat.</p>
+
+
+<li>Kedua : Haji balasannya adalah surga. </li>
+<p style="padding-left: 30px;">Rasūlullāh shallallāhu &lsquo;alayhi wa sallam bersabda :</p>
+<p style="text-align: right;" class="arab">الْعُمْرَةُ إِلَى الْعُمْرَةِ كَفَّارَةٌ لِمَا بَيْنَهُمَا، وَالْحَجُّ الْمَبْرُورُ لَيْسَ لَهُ جَزَاءٌ إِلاَّ الْجَنَّةُ</p>
+<p style="padding-left: 30px;">&ldquo;<strong>Sesungguhnya umrah yang satu hingga umrah yang berikutnya merupakan penebus dosa-dosa yang ada diantara kedua umrah tersebut, dan haji yang mabrūr tidak ada balasan baginya yang setimpal kecuali surga</strong>.&rdquo; (Hadīts riwayat Imām Al Bukhāri nomor 1773 dan Imām muslim nomor 1349 dari hadīts Abū Hurairah Radhiyallāhu &lsquo;anhu)</p>
+<p style="padding-left: 30px;">Ini dalīl bahwasanya haji yang mabrūr (orang yang melakukan haji mabrūr) maka dia tidak ada balasan yang setimpal kecuali surga. Tidak ada balasan yang pas bagi dia yang setimpal kecuali surga.</p>
+<p style="padding-left: 30px;">Berbeda dengan umrah, disini Rasūlullāh shallallāhu &lsquo;alayhi wa sallam membedakan antara umrah dengan haji, kalau umrah yang satu dengan umrah yang lainnya maka menghapuskan dosa-dosa diantara kedua umrah tersebut. Rasūlullāh shallallāhu &lsquo;alayhi wa sallam menyebutkan adapun haji yang mabrūr (ini berarti beda antara pahala haji dengan pahala umrah) karena haji yang mabrūr tidak ada balasan yang setimpal kecuali surga.</p>
+ 
+<li> Ketiga : Haji menghilangkan dosa dan kemiskinan. </li>
+<p style="padding-left: 30px;">Rasūlullāh shallallāhu &lsquo;alayhi wa sallam bersabda :</p>
+<p style="text-align: right;" class="arab">تَابِعُوا بَيْنَ الْحَجِّ وَالْعُمْرَةِ فَإِنَّهُمَا يَنْفِيَانِ الْفَقْرَ وَالذُّنُوبَ كَمَا يَنْفِي الْكِيرُ خَبَثَ الْحَدِيدِ وَالذَّهَبِ وَالْفِضَّةِ وَلَيْسَ لِلْحَجَّةِ الْمَبْرُورَةِ ثَوَابٌ إِلَّا الْجَنَّةَ</p>
+<p style="padding-left: 30px;">&ldquo;<strong>Tunaikanlah&nbsp;haji dan umrah&nbsp;secara&nbsp;silih berganti, karena haji dan umrah itu bisa menghilangkan kefakiran dan juga bisa menghilangkan dosa-dosa sebagaimana alat tiup pandai besi untuk menghilangkan kotoran besi/karat besi, emas, dan perak</strong>&rdquo; (Hadīts diriwayat oleh Tirmidzi dan An Nasāi, dan dishahihkan oleh Al-Albani dalam As-Shahihah No. 1200)</p>
+<p style="padding-left: 30px;">Kata Nabi Shallallāhu &lsquo;alayhi wa sallam, <span style="text-align: right;" class="arab"> تَابِعُوا بَيْنَ الْحَجِّ وَالْعُمْرَةِ &ldquo;</span><strong>&nbsp;Tunaikanlah haji dan umrah secara&nbsp;silih berganti</strong>&nbsp;&rdquo; yaitu jadikanlah salah satunya mengikuti yang lainnya, yaitu jika kalian mengerjakan salah satunya maka kerjakanlah yang lainnya. Jika kalian sudah berhaji maka umrohlah, dan jika kalian sudah berumroh maka hajilah. Dalam hadīts ini jelas Rasūlullāh shallallāhu &lsquo;alayhi wa sallam menyuruh kita untuk menyertakan haji dan umrah bagi orang yang mampu tentunya.</p>
+<p style="padding-left: 30px;">Kenapa? &hellip;</p>
+<p style="text-align: right;" class="arab">فَإِنَّهُمَا يَنْفِيَانِ الْفَقْرَ وَالذُّنُوبَ</p>
+<p style="padding-left: 30px;">Kata Rasūlullāh shallallāhu &lsquo;alayhi wa sallam, &ldquo;Karena haji dan umrah itu bisa menghilangkan kefakiran dan juga bisa menghilangkan dosa-dosa&rdquo;.</p>
+<p style="padding-left: 30px;">Disini Rasūlullāh shallallāhu &lsquo;alayhi wa sallam menyebutkan keutamaan haji dan umrah&nbsp;<em>bukan&nbsp;hanya&nbsp;berkaitan dengan masalah ākhirat, bukan&nbsp;sekedar&nbsp;menghilangkan dosa-dosa bahkan juga menghilangkan kefakiran</em>.</p>
+<p style="padding-left: 30px;">Jadi kalau orang ingin agar kesejahteraan ekonominya bertahan maka hendaknya dia berhaji dan umrah, karena itu akan menghilangkan (menafikan) menghilangkan kefakiran dari dirinya.</p>
+<p style="text-align: right;" class="arab">كَمَا يَنْفِى الْكِيرُ خَبَثَ الْحَدِيدِ وَالذَّهَبِ وَالْفِضَّةِ</p>
+<p style="padding-left: 30px;">&ldquo;Sebagaimana alat yang digunakan oleh pandai besi untuk meniup (bisa digunakan untuk) menghilangkan kotoran besi/karat besi demikian juga untuk menghilangkan kotoran emas dan perak.&rdquo;</p>
+<p style="padding-left: 30px;">Kemudian kata Nabi Shallallāhu &lsquo;alayhi wa sallam:</p>
+<p style="text-align: right;" class="arab">وَلَيْسَ لِلْحَجَّةِ الْمَبْرُورَةِ ثَوَابٌ إِلاَّ الْجَنَّةُ</p>
+<p style="padding-left: 30px;">&ldquo;Dan tidak ada balasan yang setimpal bagi haji yang mabrūr kecuali surga.&rdquo;</p>
+<p style="padding-left: 30px;">Dalil-dalil ini menunjukan bahwasanya Nabi menganjurkan untuk mengulang-ulang haji dan umrah dan ini ada faedahnya diantaranya menghilangkan dosa-dosa dan untuk menghilangkan kefakiran. Oleh karenanya para ulama sepakat tentang disunnahkannya mengulang-ngulang umroh, hanya saja mereka berselisih berapa kadar jarak waktu minimal antara umroh yang satu dengan yang lainnya. Ada yang mengatakan setahun, ada yang mengatakan sebulan, dan ada yang mengatakan setiap saat bisa mengulangi umroh. (Misbaah Az-Zujaajah syarh Sunan Ibni Maajah hal 207)</p>
+<p style="padding-left: 30px;">Dan ini membantah pendapat sebagian orang yang memberi kesan seakan-akan kalau orang mengulang-ulangi haji atau umrah disebut dengan&nbsp;<em>haji syaithān</em>,&nbsp;<em>umrah syaithān</em>, tentu hal ini tidak benar karena menyelisihi hadits-hadits Nabi shallallahu &lsquo;alaihi wasallam.</p>
+<p style="padding-left: 30px;">Kita amati bagaimana para sahabat dan para salaf dari dahulu sehingga para ulamā zaman sekarang mereka senantiasa semangat untuk mengulang-ulangi umrah dan haji.</p>
+<p style="padding-left: 30px;">Kalau seseorang mampu, memiliki kelebihan harta, dia sudah bersedekah, dia sudah berinfaq, dia sudah bayar zakat, dia juga memberikan bantuan kepada fakir miskin, memberi bantuan kepada anak yatim, kepada masjid, kemudian dia berhaji dan umrah kenapa kita larang?</p>
+<p style="padding-left: 30px;">Justru dia dengan berhaji dan berumrah tersebut Allāh akan memberikan rejeki kepada dia, dan masalah rejeki adalah masalah Allāh Subhānahu wa Ta&rsquo;āla dan kita dapati banyak orang seperti itu, saya memiliki banyak teman yang Alhamdulillāh bersedekah lancar, membayar zakat juga lancar, umrah dan haji juga lancar.</p>
+<p style="padding-left: 30px;">Maka jangan kita menuduh mereka-mereka ini -yang berulang melakukan haji dan umroh- seakan-akan melakukan kesalahan, setiap orang rindu ingin haji, rindu ingin thowaf dan berdoa di ka&rsquo;bah, rindu ingin berdo&rsquo;a di padang Arafah, rindu ingin dosa-dosanya dihapuskan, maka masa kita larang orang seperti ini, ingin datang ke tanah suci?. Kecuali kalau orang tersebut dia haji, dia umrah tapi pelit sama tetangga, zakat tidak bayar, tidak sedekah, tidak memperhatikan fakir miskin, mungkin ini lain ceritanya.</p>
+<p style="padding-left: 30px;">Tapi kita berbicara tentang orang yang menunaikan kewajibannya dan dia masih memiliki kelebihan harta maka kenapa kita larang dia untuk berhaji dan berumrah sementara banyak orang mereka yang tatkala banyak kelebihan harta mereka berfoya-foya kemudian mereka berlibur ke luar negeri, bersenang-senang.</p>
+<p style="padding-left: 30px;">Alhamdulillāh bila ada orang yang meluangkan hartanya untuk haji lagi, umrah lagi maka silahkan saja. Oleh karenanya merupakan sunnah seseorang mengulang-ulang haji dan mengulang-ulang umrah jika tentunya dia telah menjalankan kewajibannya.</p>
+ 
+ 
+<li>Keempat : Haji merupakan jihad bagi kaum wanita. </li>
+<p style="padding-left: 30px;">&lsquo;Āisyah radhiyallāhu Ta&rsquo;āla &lsquo;anhā (ummul mukminin/ibunda kita semua) berkata:</p>
+<p style="text-align: right;" class="arab">يَا رَسُولَ اللَّهِ، نَرَى الجِهَادَ أَفْضَلَ العَمَلِ، أَفَلاَ نُجَاهِدُ؟ قَالَ: &laquo;لاَ، لَكُنَّ أَفْضَلُ الجِهَادِ حَجٌّ مَبْرُورٌ&raquo;</p>
+<p style="padding-left: 30px;">&ldquo;Wahai Rasūlullāh, kami (para wanita) melihat bahwasanya jihād merupakan amal yang terbaik, apakah kita (kami para wanita) tidak berjihād?&rdquo;. Jawab Nabi shallallāhu &lsquo;alayhi wa sallam: &ldquo;Laa (tidak),&nbsp;<strong>bagi kalian (para wanita) ada jihād yang terbaik yaitu haji mabrūr.</strong>&rdquo; (HR Al-Bukhari No. 1520, sebagian ulama memberi harokat sbb :&nbsp;<u>لَكِنَّ</u>&nbsp;أَفْضَلَ الجِهَادِ حَجٌّ مَبْرُورٌ sehingga artinya ; &ldquo;Akan tetapi jihad yang paling afdol adalah haji mabrur&rdquo;, dan ini semakin menunjukkan keutamaan haji mabrur sehingga mencakup wanita dan lelaki)</p>
+<p style="padding-left: 30px;">Dalam riwayat yang lain yang diriwayatkan oleh Ibnu Mājah dan Ibnu Khuzaimah dalam Shahīhnya dari &lsquo;Āisyah radhiyallāhu Ta&rsquo;āla &lsquo;anhā juga beliau berkata:</p>
+<p style="text-align: right;" class="arab">قُلْتُ: يَا رَسُولَ اللَّهِ عَلَى النِّسَاءِ جِهَادٌ؟ قَالَ: &rdquo; نَعَمْ عَلَيْهِنَّ جِهَادٌ لَا قِتَالَ فِيهِ: الْحَجُّ وَالْعُمْرَةُ</p>
+<p style="padding-left: 30px;">&ldquo;Aku bertanya wahai Rasūlullāh, apakah wajib bagi para wanita untuk berjihād?&rdquo;, Kata Rasūlullāh shallallāhu &lsquo;alayhi wa sallam: &ldquo;<strong>Iya, wajib bagi kalian untuk berjihād yang tidak ada peperangan di dalamnya (yaitu) haji dan umrah</strong>.&rdquo; (HR Ibnu Maajah No. 2901 dan dishahihkan oleh Al-Albani dalam Al-Irwaa&rsquo; No. 981)</p>
+<p style="padding-left: 30px;">Ini dalīl bahwasanya haji dan umrah, terutama haji, merupakan jihād bagi para wanita.</p>
+<p style="padding-left: 30px;">Dan ini sungguh benar, mengingat betapa beratnya para wanita dalam melaksanakan ibadah haji. Terlebih lagi dengan melihat kondisi di zaman sekarang, perlu perjuangan. Kalau dahulu yang memberatkan para wanita adalah safar yang begitu berat -menempuh medan yang berat disertai jarak yang jauh- untuk bisa melaksanakan haji, maka di zaman modern sekarang ini yang memberatkan terutama adalah kepadatan jamaah haji, berdesak-desakan, berdorong-dorongan, disertai kemacetan kendaraan yang luar biasa. Bukan hanya haji reguler yang mengalami kseulitan, bahkan haji yang plus yang membayar dengan lebih mahal itupun tetap merasakan kesulitan. Apalagi bagi para wanita. Karenanya haji dan umrah dianggap jihād oleh Rasūlullāh shallallāhu &lsquo;alayhi wa sallam bagi para wanita.</p>
+<p style="padding-left: 30px;">Dan tatkala haji merupakan jihād bagi para wanita -sebagaimana pernyataan Nabi- maka ini menunjukkan bahwasanya amalan haji merupakan amalan yang luar biasa.</p>
+ 
+<li>Kelima: Bagi lelaki haji mabrur merupakan amalan terbaik setelah jihad.</li>
+<p style="padding-left: 30px;">Dari Abū Hurairah radhiyallāhu Ta&rsquo;āla &lsquo;anhu :</p>
+<p style="text-align: right;" class="arab">أَنَّ رَسُولَ اللَّهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ سُئِلَ: أَيُّ العَمَلِ أَفْضَلُ؟ فَقَالَ: &laquo;إِيمَانٌ بِاللَّهِ وَرَسُولِهِ&raquo;. قِيلَ: ثُمَّ مَاذَا؟ قَالَ: &laquo;الجِهَادُ فِي سَبِيلِ اللَّهِ&raquo; قِيلَ: ثُمَّ مَاذَا؟ قَالَ: &laquo;حَجٌّ مَبْرُورٌ&raquo;</p>
+<p style="padding-left: 30px;">Bahwasanya Rasūlullāh shallallāhu &lsquo;alayhi wa sallam pernah ditanya tentang amal apa yang paling afdal. Kata Rasūlullāh shallallāhu &lsquo;alayhi wa sallam, &ldquo;Imān kepada Allāh dan Rasūl-Nya.&rdquo;. Kemudian beliau ditanyakan lagi, &ldquo;Kemudian amal apalagi yang afdal setelah itu?&rdquo;. Beliau menjawab, &ldquo;(Yaitu) jihād di jalan Allāh Subhānahu wa Ta&rsquo;āla.&rdquo;, Kemudian ditanyakan lagi, &ldquo;Lalu amalan apa lagi yang paling afdal setelah itu?&rdquo;, Rasūlullāh shallallāhu &lsquo;alayhi wa sallam berkata, &ldquo;<strong>Haji yang mabrūr</strong>.&rdquo; (HR Al-Bukhari No. 26 dan Muslim No. 135)</p>
+<p style="padding-left: 30px;">Ini menunjukan bahwasanya haji merupakan ibadah (amalan) yang sangat afdal dan kedudukannya adalah setelah jihād di jalan Allāh Subhānahu wa Ta&rsquo;āla.</p>
+
+<li>Keenam</strong>&nbsp;: Haji mabrur menghapuskan seluruh dosa.</li>
+<p style="padding-left: 30px;">Dari Abū Hurairah Radhiyallāhu Ta&rsquo;āla &lsquo;anhu, dia berkata: Aku mendengar Rasūlullāh shallallāhu &lsquo;alayhi wa sallam bersabda:</p>
+<p style="text-align: right;" class="arab">&laquo;مَنْ حَجَّ لِلَّهِ فَلَمْ يَرْفُثْ، وَلَمْ يَفْسُقْ، رَجَعَ كَيَوْمِ وَلَدَتْهُ أُمُّهُ&raquo;</p>
+<p style="padding-left: 30px;">&ldquo;Barangsiapa yang berhaji karena Allāh dan dia tidak melakukan rafats dan tidak melakukan kemaksiatan maka&nbsp;<strong>dia akan kembali sebagaimana hari dia dilahirkan dari perut ibunya</strong>.&rdquo; (HR Al-Bukhari No. 1521 dan Muslim No. 1350)</p>
+<p style="padding-left: 30px;">Rafats adalah mengucapkan kata-kata keji atau tatkala ihrom melakukan jimak atau perkataan dan perbuatan yang bisa mengantarkan kepada jima&rsquo; kepada istri, karena seorang yang berhaji dilarang melakukan perkara-perkara yang bisa menjadikan syahwat bergejolak.</p>
+<p style="padding-left: 30px;">Adapun tentang haji mabrur maka Ibnu Hajar berkata :</p>
+<p style="text-align: right;" class="arab">أَنَّهُ يَظْهَرُ بِآخِرِهِ، فَإْنْ رَجَعَ خَيْرًا مِمَّا كَانَ عُرِفَ أَنَّهُ مَبْرُوْرٌ</p>
+<p style="padding-left: 30px;">&ldquo;Sesungguhnya haji mabrur nampak di akhir haji, jika ia kembali setelah haji dalam kondisi lebih baik dari sebelumnya maka diketahui bahwasanya hajinya mabrur&rdquo; (Fathul Baari 3/382)</p>
+<p style="padding-left: 30px;">Hadīts ini merupakan dalīl yang sangat kuat, yang menunjukan bahwasanya seorang yang melakukan haji, jika hajinya mabrūr (memenuhi persyaratan) ikhlās kepada Allāh Subhānahu wa Ta&rsquo;āla (berhaji karena Allāh) kemudian dia tidak melakukan rafats dan tidak berbuat kemaksiatan maka akan diampuni seluruh dosanya termasuk dosa-dosa besar. Ibnu Hajar berkata :</p>
+<p style="text-align: right;" class="arab">وَظَاهِرُهُ غُفْرَانُ الصَّغَائِرِ وَالْكَبَائِرِ وَالتَّبِعَاتِ</p>
+<p style="padding-left: 30px;">&ldquo;Dan dzhohir hadits ini adalah diampunkannya dosa-dosa kecil dan dosa-dosa besar bahkan dihapuskan dampak-dampak dari dosa-dosa tersebut (di akhirat)&rdquo; (Fathul Baari 3/383)<sup>&nbsp;(<a name="_ftnref1"></a><a href="https://bekalislam.com/3015-persiapan-sebelum-haji.html#_ftn1">[1]</a>)</sup></p>
+<p style="padding-left: 30px;">Meskipun memang ada perselisihan dikalangan para ulamā, apakah haji yang mabrūr hanya menghapuskan dosa-dosa kecil atau juga menghapuskan dosa-dosa besar.</p>
+<p style="padding-left: 30px;">Adapun jumhūr ulamā (mayoritas ulama) berpendapat bahwasanya yang dihapuskan oleh ibadah haji adalah hanya dosa-dosa kecil saja, adapun dosa-dosa besar harus disertai dengan taubat kepada Allāh Subhānahu wa Ta&rsquo;āla, tidak cukup hanya berhaji.</p>
+<p style="padding-left: 30px;">Mereka berdalīl diantaranya dengan sabda Nabi shallallāhu &lsquo;alayhi wa sallam :</p>
+<p style="text-align: right;" class="arab">الصَّلَوَاتُ الْخَمْسُ، وَالْجُمْعَةُ إِلَى الْجُمْعَةِ، وَرَمَضَانُ إِلَى رَمَضَانَ، مُكَفِّرَاتٌ مَا بَيْنَهُنَّ إِذَا اجْتَنَبَ الْكَبَائِرَ</p>
+<p style="padding-left: 30px;">&ldquo;Shalāt lima waktu, Jum&rsquo;at yang satu dengan Jum&rsquo;at berikutnya, Ramadhān yang satu hingga Ramadhān berikutnya maka akan menghapuskan dosa-dosa diantara keduanya jika dijauhi dosa-dosanya besar.&rdquo; (HR Muslim No. 233)</p>
+<p style="padding-left: 30px;">Ini dalīl bahwasanya yang dihapuskan adalah dosa-dosa kecil karena persyaratan untuk dihapuskan dosa-dosa kecil harus dijauhi dosa-dosa besar.</p>
+<p style="padding-left: 30px;">Dan ini selaras dengan firman Allāh Subhānahu wa Ta&rsquo;āla :</p>
+<p style="text-align: right;" class="arab">إِنْ تَجْتَنِبُوا كَبَائِرَ مَا تُنْهَوْنَ عَنْهُ نُكَفِّرْ عَنْكُمْ سَيِّئَاتِكُمْ</p>
+<p style="padding-left: 30px;">&ldquo;Jika kalian menjauhi dosa-dosa besar yang kalian dilarang melakukannya maka kami akan menghapuskan keburukan-keburukan kalian.&rdquo; (Qs. An Nisā&rsquo; : 31)</p>
+<p style="padding-left: 30px;">(yaitu) Allāh akan menghapuskan dosa seluruhnya dengan syarat kalian menjauhi dosa-dosa besar.</p>
+<p style="padding-left: 30px;">Ini dalīl bahwasanya amalan-amalan shālih hanya menghapuskan dosa-dosa kecil, ini pendapat jumhūr ulamā.</p>
+<p style="padding-left: 30px;">Mereka mengatakan bahwa shalāt yang luar biasa, puasa Ramadhān yang luar biasa itu hanya menghapuskan dosa-dosa kecil, demikian juga ibadah haji.</p>
+<p style="padding-left: 30px;">Namun Wallāhu A&rsquo;lam bi shawab, pendapat yang lebih kuat adalah pendapat yang menyatakan bahwa haji mabrur juga menghapuskan dosa besar.</p>
+<p style="padding-left: 30px;">Pendapat ini yang dipilih oleh Ibnu Hajar -sebagaimana telah lalu-, dan juga Syaikh Muhammad bin Shalih Utsaimin rahimahumallāh</p>
+<p style="padding-left: 30px;">Karena zhahir dari hadīts ini kata Nabi shallallāhu &lsquo;alayhi wa sallam, &ldquo;<em>Dia akan kembali&nbsp;<strong>sebagaimana hari dimana dia dilahirkan oleh ibunya</strong></em>.&rdquo;. Dan kita tahu seorang bayi tatkala dilahirkan oleh ibunya maka tidak ada dosa sama sekali (bersih tanpa dosa). Kita tidak seperti orang-orang Nashara yang menyatakan jika seorang baru dilahirkan dari perut ibunya maka dia telah berlumuran dosa, dosa warisan dari nenek moyang kita Nabi Ādam &lsquo;alayhissalām. Islām tidak demikian. Islām meyakini jika seorang anak baru lahir dari perut ibunya maka dia bersih dosa-dosanya. Dan zhahir hadīts ini bahwasanya orang yang berhaji kalau hajinya mabrūr maka bersih dosa-dosanya termasuk dosa-dosa besar.</p>
+<p style="padding-left: 30px;">Ini dalīl yang lebih kuat dan ini tidak bisa dianalogikan dengan ibadah yang lain (seperti) shalāt, kemudian puasa (seperti telah kita sebutkan tadi, barang siapa yang shalāt lima waktu, shalāt Jum&rsquo;at, Ramadhān, puasa maka akan dihapuskan dosa-dosa kecil saja). Masalah pengampunan murni karunia dan kabaikan Allah sehingga tidak bisa ada pengqiyasan. Bukankah Nabi pernah menjelaskan bahwa ada seorang wanita pezina dari bani Israil yang diampuni oleh Allah karena memberikan minum kepada seekor anjing?, Allah memberi ampunan kepada seorang lelaki hanya karena memindahkan ranting yang mengganggu jalan?.</p>
+<p style="padding-left: 30px;">Allāh bisa saja membedakan kalau shalāt lima waktu maka yang dihapuskan dosa-dosa kecil adapun haji Allāh menghapuskan dosa-dosa besar juga. Karena dalam hadīts ini Rasūlullāh shallallāhu &lsquo;alayhi wa sallam mengatakan kembali bersih sebagaimana waktu dilahirkan oleh ibunya.</p>
+<p style="padding-left: 30px;">Jadi orang yang berhaji kalau hajinya mabrūr maka dihapuskan seluruh dosanya.</p>
+<p style="padding-left: 30px;">Diantara dalīl yang menguatkan bahwasanya yang dihapuskan adalah dosa-dosa besar termasuk di dalamnya yaitu perkataan Nabi shallallāhu &lsquo;alayhi wa sallam kepada Amr bin Ash Radhiyallāhu Ta&rsquo;āla &lsquo;anhu.</p>
+<p style="padding-left: 30px;">&lsquo;Amr bin al-&lsquo;Aaash bertutur -tatkala beliau akan meninggal dunia-:</p>
+<p style="text-align: right;" class="arab">لَقَدْ رَأَيْتُنِي وَمَا أَحَدٌ أَشَدَّ بُغْضًا لِرَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ مِنِّي، وَلَا أَحَبَّ إِلَيَّ أَنْ أَكُونَ قَدِ اسْتَمْكَنْتُ مِنْهُ، فَقَتَلْتُهُ، فَلَوْ مُتُّ عَلَى تِلْكَ الْحَالِ لَكُنْتُ مِنْ أَهْلِ النَّارِ، فَلَمَّا جَعَلَ اللهُ الْإِسْلَامَ فِي قَلْبِي أَتَيْتُ النَّبِيَّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، فَقُلْتُ: ابْسُطْ يَمِينَكَ فَلْأُبَايِعْكَ، فَبَسَطَ يَمِينَهُ، قَالَ: فَقَبَضْتُ يَدِي، قَالَ: &laquo;مَا لَكَ يَا عَمْرُو؟&raquo; قَالَ: قُلْتُ: أَرَدْتُ أَنْ أَشْتَرِطَ، قَالَ: &laquo;تَشْتَرِطُ بِمَاذَا؟&raquo; قُلْتُ: أَنْ يُغْفَرَ لِي، قَالَ:&nbsp;<strong>&laquo;</strong><strong>أَمَا</strong> <strong>عَلِمْتَ</strong> <strong>أَنَّ</strong> <strong>الْإِسْلَامَ</strong> <strong>يَهْدِمُ</strong> <strong>مَا</strong> <strong>كَانَ</strong> <strong>قَبْلَهُ؟</strong> <strong>وَأَنَّ</strong> <strong>الْهِجْرَةَ</strong> <strong>تَهْدِمُ</strong> <strong>مَا</strong> <strong>كَانَ</strong> <strong>قَبْلَهَا؟</strong> <strong>وَأَنَّ</strong> <strong>الْحَجَّ</strong> <strong>يَهْدِمُ</strong> <strong>مَا</strong> <strong>كَانَ</strong> <strong>قَبْلَهُ؟</strong><strong>&raquo;</strong>&nbsp;وَمَا كَانَ أَحَدٌ أَحَبَّ إِلَيَّ مِنْ رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَلَا أَجَلَّ فِي عَيْنِي مِنْهُ، وَمَا كُنْتُ أُطِيقُ أَنْ أَمْلَأَ عَيْنَيَّ مِنْهُ إِجْلَالًا لَهُ، وَلَوْ سُئِلْتُ أَنْ أَصِفَهُ مَا أَطَقْتُ؛ لِأَنِّي لَمْ أَكُنْ أَمْلَأُ عَيْنَيَّ مِنْهُ، وَلَوْ مُتُّ عَلَى تِلْكَ الْحَالِ لَرَجَوْتُ أَنْ أَكُونَ مِنْ أَهْلِ الْجَنَّةِ</p>
+<p style="padding-left: 30px;">&ldquo;Sungguh aku mendapati diriku bahwasanya (dahulu) tidak ada orang yang paling benci kepada Rasulullah melebihi aku, dan perkara yang paling aku inginkan adalah aku bisa berkesempatan untuk menguasainya lalu aku membunuhnya. Seandainya aku mati dalam kondisi demikian tentu aku termasuk penghuni neraka. Tatkala Allah memasukan Islam dalam hatiku maka aku mendatangi Nabi shallallahu &lsquo;alaihi wasallam lalu aku berkata, &ldquo;Bentangkan tangan kananmu untuk aku bai&rsquo;at&rdquo;. Lalu beliau membentangkan tangan kanan beliau. Akupun menggenggam tanganku. Beliau berkata, &ldquo;Ada apa denganmu wahai &lsquo;Amr (kenapa tidak segera membaiat-pen)&rdquo;?. Aku berkata, &ldquo;Aku punya syarat&rdquo;. Beliau berkata, &ldquo;Engkau mempersyaratkan apa?&rdquo;. Aku berkata, &ldquo;Agar aku diampuni&rdquo;. Beliau berkata,&nbsp;<strong>&ldquo;Tidakah engkau tahu bahwasanya Islam menggugurkan dosa yang sebelumnya, bahwasanya hijrah menggugurkan dosa yang sebelumnya, dan haji menggugurkan dosa yang sebelumnya?&rdquo;.</strong></p>
+<p style="padding-left: 30px;">Maka tidak ada seorangpun yang paling aku cintai dari Rasulullah shallallahu &lsquo;alaihi wasallam, tidak ada seorangpun yang lebih agung di mataku daripada beliau, dan aku tidak mampu untuk memenuhi kedua mataku untuk melihat beliau karena menghormati beliau. Kalau aku ditanya untuk menceritakan sifat beliau maka aku tidak mampu, karena aku tidak pernah bisa mememuhi pandanganku untuk memandang beliau. Kalau aku meninggal dalam kondisi demikian aku berharap termasuk penghuni surga&rdquo; (HR Muslim No. 121)</p>
+<p style="padding-left: 30px;">(Kita tahu bahwasanya sahabat Amr bin Ash Radhiyallāhu Ta&rsquo;āla &lsquo;anhu adalah salah seorang pembesar orang-orang Quraish yang dahulu sangat memusuhi Islām kemudian dia masuk Islam belakangan sekitar tahun 7 Hijriyyah keatas atau 8 Hijriyyah dia baru masuk Islām.)</p>
+<p style="padding-left: 30px;">Perhatikan di sini!, Rasulullah menggandengkan antara Islam, hijroh, dan haji sebagai penggugur dosa-dosa sebelumnya, dan konteks pembicaraan Nabi ditujukan kepada &lsquo;Amr bin al-&lsquo;Aash yang dahulunya adalah musyrik bahkan termasuk tokoh pembesar kaum musyrikin.</p>
+<p style="padding-left: 30px;">Kita tahu bahwa sebagian (kita) bergelimangan dengan dosa. Dosa-dosa kita banyak sekali maka kesempatan bagi kita agar diampuni dosa-dosa kita, yaitu kita berhaji dengan syarat haji kita mabrūr.</p>
+<p style="padding-left: 30px;">Demikian pula seandainya toh kita memilih pendapat jumhūr ulamā yang menyatakan bahwasanya haji hanya menghapuskan dosa-dosa kecil dan tidak menghapuskan dosa-dosa besar, maka kita sampaikan kepada para jama&rsquo;ah haji, agar sebelum berhaji bertaubat kepada Allāh Subhānahu wa Ta&rsquo;āla, bertaubat dari dosa-dosa besar. Sehingga setelah berhaji maka akan diampuni seluruh dosa. Karena sudah bertaubat dari dosa besar sebelum berhaji dan saat berhaji diampuni dosa-dosa kecil, maka setelah berhaji seluruh dosa akan diampuni.</p>
+<p style="padding-left: 30px;">Namun kita katakan pendapat yang lebih kuat adalah pendapat sebagian ulamā yang menyatakan haji kalau mabrūr akan menghapuskan seluruh dosa termasuk dosa-dosa besar.<sup>&nbsp;(<a name="_ftnref2"></a><a href="https://bekalislam.com/3015-persiapan-sebelum-haji.html#_ftn2">[2]</a>)</sup></p>
+
+<li>Ketujuh</strong>&nbsp;: Pahala yang berlimpah ruah bagi orang yang berhaji.</li>
+<p style="padding-left: 30px;">Nabi shallallahu &lsquo;alaihi wa sallam bersabda tentang seorang yang sedang berhaji</p>
+<p style="text-align: right;" class="arab">فَإِنَّ لَهُ حِينَ يَخْرُجُ مِنْ بَيْتِهِ أَنَّ رَاحِلَتَهُ لَا تَخْطُو خُطْوَةً إِلَّا كُتِبَ لَهُ بِهَا حَسَنَةٌ أَوْ حُطَّت عَنْهُ بِهَا خَطِيئَةٌ فَإِذَا وَقَفَ بِعَرَفَةَ فَإِنَّ اللَّهَ عَزَّ وَجَلَّ يَنْزِلُ إِلَى السَّمَاءِ الدُّنْيَا فَيَقُولُ: انْظُرُوا إِلَى عِبَادِي شُعثاً غُبراً اشْهَدُوا أَنِّي قَدْ غَفَرْتُ لَهُمْ ذُنُوبَهُمْ وَإِنْ كَانَ عَدَدَ قَطْرِ السَّمَاءِ وَرَمْلِ عالجٍ وَإِذَا رَمَى الْجِمَارَ لَا يَدْرِي أَحَدٌ مَا لَهُ حَتَّى يُوَفَّاهُ يَوْمَ الْقِيَامَةِ وَإِذَا حَلَقَ رَأْسَهُ فَلَهُ بِكُلِّ شَعْرَةٍ سَقَطَتْ مِنْ رَأْسِهِ نُورٌ يَوْمَ الْقِيَامَةِ وَإِذَا قَضَى آخِرَ طَوَافِهِ بِالْبَيْتِ خَرَجَ مِنْ ذُنُوبِهِ كَيَوْمِ وَلَدَتْهُ أمه</p>
+<p style="padding-left: 30px;">&ldquo;Sesungguhnya baginya semenjak ia (seorang yg berhaji) keluar dari rumahnya, bahwasanya tidaklah hewan tunggangannya melangkahkan kakinya selangkah kecuali dicatat baginya sebuah kebaikan atau dihapuskan baginya satu keburukan.</p>
+<p style="padding-left: 30px;">Jika ia wuquf di Arofah maka Allah turun ke langit dunia lalu Allah berkata : Lihatlah hamba-hambaKu datang memenuhi panggilanKu dalam kondisi rambut semerawut dan penuh dengan debu, maka saksikanlah (wahai para malaikat) sesungguhnya aku telah mengampuni dosa-dosa mereka meskipun sebanyak butiran-butiran air hujan, meskipun sebanyak butiran-butiran pasir yang menjulang.</p>
+<p style="padding-left: 30px;">Jika ia melempar jamarot maka ia tidak tahu apa ganjaran yang akan ia peroleh hingga Allah akan memenuhi ganjarannya pada hari kiamat.</p>
+<p style="padding-left: 30px;">Jika ia menggundul kepalanya maka setiap helai rambut yang jatuh dari kepalanya akan menjadi cahaya baginya pada hari kiamat.</p>
+<p style="padding-left: 30px;">Jika ia telah selesai dari putaran towafnya yang terakhir maka ia keluar dari dosa-dosanya sebagaimana hari ia dilahirkan oleh ibunya&rdquo; (Shahih Ibni Khuzaimah no 1984, dinyatakan oleh Syaikh Al-Albani : Hasan ligoirihi)</p>
+<br><p><strong>Faedah hadits :</strong></p>
+<ol>
+<li>Tingginya derajat orang yang melaksanakan haji, karena setiap langkahnya akan meninggikan derajatnya dan menggugurkan dosanya</li>
+<li>Banyaknya sebab ampunan dosa bagi seorang haji, langkah kakinya, wuqufnya, gundulnya, dan juga thowafnya</li>
+<li>Keutamaan mencukur gundul kepala, berbeda dengan yang hanya mencukur pendek meskipun merata di seluruh kepala, apalagi yang hanya mencukur sedikit helai rambut</li>
+<li>Seorang yang haji dengan naik kendaraan tidak mengurangi pahala sang haji, langkah kaki hewan tunggangannya seperti langkah kakinya. Toh Nabi shallallahu &lsquo;alaihi wa sallam berhaji dengan naik onta, bahkan beliau juga wuquf sambil di atas onta beliau.</li>
+<li>Allah membanggakan para jama&rsquo;ah haji dihadapan para malaikat, bahkan Allah mempersaksikan kepada para malaikat bahwa Allah telah mengampuni para jama&rsquo;ah haji di padang Arofah</li>
+<li>Sebagian ganjaran tdk dijelaskan oleh Nabi -seperti ganjaran melempar jamarot-, Nabi hanya menyatakan bahwa ganjaran tersebut hanya bisa diketahui pada hari kiamat. Ini menunjukkan besarnya ganjaran tersebut</li>
+<li>Dzohir sabda Nabi &ldquo;hari dilahirkan dari perut ibunya&rdquo; menunjukan seluruh dosa -termasuk dosa besar- akan diampuni oleh Allah.</li>
+</ol>
+ 
+ 
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

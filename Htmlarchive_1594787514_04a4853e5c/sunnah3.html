@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Sholat Istisqa'</h1><br>
+
+<h3>Pengertian</h3>
+        <p>Shalat Istisqa’ adalah shalat yang   dianjurkan ketika lama tidak turun hujan atau ketika sumber mata air   sudah lama mengering, Shalat Istisqa’ disunnahkan berdasarkan sebab   dzahirnya, dan tidak dianjurkan lagi ketika sebab-sebabnya sudah tiada   seperti mulai turun hujan atau mengalirnya mata air dari sumbernya.</p>
+        <h3>Cara Pelaksanaan (referensi pertama) </h3>
+        <p>Ada 3 cara dalam melaksanakan Istisqa’ yang dianjurkan dalam Islam :</p>
+        <ol><li>
+		Berdo’a agar diturunkan hujan di setiap saat<br>
+          <li>Berdo’a di waktu I’tidal rakaat terakhir pada setiap Shalat Fardhu dan setiap setelah Shalat<br>
+          <li>Paling sempurnanya adalah dengan melaksanakan cara berikut ini :</p>
+		  <ul>
+        <li><p>Imam (pemimipin/pemerintah) atau yang mewakili Imam seperti Ulama memerintahkan masyarakat dengan :</p>
+        <p>i. Bertaubat dengan sebenar-benar taubat<br>
+          ii. Bersedekah kepada fakir-miskin, keluar dari kedzaliman, mendamaikan orang yang bertikai<br>
+          iii. Puasa 4 hari berturut-turut</p>
+        <li><p>Imam keluar   dengan masyarakat pada hari ke-4 puasa dengan memakai baju yang   sederhana (yang dianjurkan adalah memakai baju compang-camping) dan   penuh kekhusyuan dan penuh ketenangan di satu lapangan, kemudian Imam   atau wakilnya melakukan Shalat 2 rakaat berjama’ah bersama masyarakatnya   seperti dalam pelaksanaan Shalat Hari Raya.</p>
+        
+          <div class="arab">عَنِ   ابْنِ عَبَّاسٍ رَضِيَ اللهُ عَنْهُمَا قَالَ: خَرَجَ رَسُوْلُ اللهِ   صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ مُتَوَاضِعاً مُتَبَذِّلاً مُتَخَشِّعاً   مُتَرَّسِلاً مُتَضَرِّعاً فَصَلَّى رَكْعَتَيْنِ كَمَا يُصَلِّيْ فِى   الْعِيْدِ. رَوَاهُ ابْنُ مَاجَهَ (1266) وَغَيْرُهُ</div>
+        
+        <p><em>Dari Sayyidina   Ibnu Abbas ra, beliau berkata: “Rasulullah SAW keluar dengan penuh   tawadhdhu’ (merendahkan diri), compang-camping, penuh kekhusyuan, tidak   tergesa-gesa dan memohon dengan penuh kesungguhan, kemudian beliau   melakukan Shalat 2 rakaat seperti Shalat di hari raya.” HR. Imam Ibnu   Majah no. 1266 dll.</em></p>
+        <li><p>Setelah mereka   melakukan Shalat kemudian Imam berkhutbah 2 kali seperti khutbah hari   raya, hanya saja dalam khutbah ini membaca Istighfar 7 kali pada khutbah   yang pertama dan membaca Istighfar 5 kali pada khutbah yang ke-2   sebagai ganti dari pembacaan Takbir dalam Khutbah harai raya.</p>
+        <p>Berdasarkan firman Allah SWT :</p>
+        <div class="style2">
+          <div class="arab">{ اِسْتَغْفِرُوْا رَبَّكُمْ إِنَّهُ كَانَ غَفَّاراً * يُرْسِلِ السَّمَاءَ عَلَيْكُمْ مِدْرَاراً { [ نوح:10,11]</div>
+        </div>
+        <p>“<em>Mintalah ampun   kalian kepada tuhan kalian, sesungguhnya Dia maha pengampun, Dia-lah   yang menurunkan hujan dari langit untuk kalian dengan begitu derasnya</em>.” QS. Nuh : 10-11</p>
+        <p>Ketika Khotib   memulia Khutbah yang ke-2 dan telah berlalu 1/3 dari Kutbahnya setelah   itu Khotib menghadap Kiblat dan membelakangi Jama’ah, kemudian Khotib   merubah posisi Rida’-nya (Sorban yang diletakkan pada bahu) yaitu dengan   meletakkan posisi yang di atas dibalik ke bawah, serta yang kanan   dibalik ke kiri dan sebaliknya sebagai tanda pengharapan kepada Allah   SWT agar dirubahnya kondisi kemarau menjadi penuh hujan rahmat.</p>
+        <divp>
+        <div class="arab"><span class="style2">عَنْ   أَبِيْ هُرَيْرَةَ رَضِيَ اللهُ عَنْهُ قَالَ: خَرَجَ رَسُوْلُ اللهِ   صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يَوْماً يَسْتَسْقِيْ، فَصَلَّى بِنَا   رَكْعَتَيْنِ بِلاَ أَذَانٍ وَلاَ إِقَامَةٍ، ثُمَّ خَطَبَنَا وَدَعَا   اللهَ، وَحَوَّلَ وَجْهَهُ نَحْوَ الْقِبْلَةِ رَافِعاً يَدَيْهِ، ثُمَّ   قَلَّبَ رِدَاءَهُ: فَجَعَلَ اْلأَيْمَنَ عَلَى اْلأَيْسَرِ وَاْلأَيْسَرِ   عَلَى اْلأَيْمَنِ. رَوَاهُ ابْنُ مَاجَهَ (1268)</span></div>
+  
+        <p><em>Dari Sayyidina   Abu Hurairah ra, beliau berkata : “Rasulullah SAW keluar pada hari   beliau meminta hujan, kemudian Rasulullah Shalat bersama kami tanpa   Adzan dan Iqomah, beliau berkhutbah dan berdo’a kepada Allah dan   menghdapkan wajahnya ke kiblat serta mengangkat ke-2 tangannya, kemudian   beliau membalikkan sorbannya yaitu dengan meletakkan yang kanan di kiri   dan yang kiri di kanan.” HR. Imam Ibnu Majah no. 1268.</em></p>
+        <p>Bagi jama’ah yang ikut serta dalam pelaksanaan Shalat Istisqa’ disunnahkan juga untuk melakukan hal demikian tersebut di atas.</p>
+        <p>Disunnahkan bagi   Khotib untuk memperbanyak Istighfar, do’a, taubat dan permohonan yang   sungguh-sungguh serta bertawassul dengan orang-orang yang Sholeh dan   bertakwa.</p>
+        <div class="style3">
+          <div class="arab">عَنْ   أَنَسٍ رَضِيَ اللهُ عَنْهُ. أَنَّ عُمَرَ بْنَ الْخَطَّابِ رَضِيَ اللهُ   عَنْهُ كَانَ إِذَا قَحَطُوْا اِسْتَسْقَى بِالْعَبَّاسِ بْنِ عَبْدِ   الْمُطَلَّبِ رَضِيَ اللهُ عَنْهُ فَقَالَ: اَللَّهُمَّ إِنَّا كُنَّا   نَتَوَسَّلُ إِلَيْكَ بِنَبِيِّنَا فَتَسْقِيْنَا، وَإِنَّا نَتَوَسَّلُ   إِلَيْكَ بِعَمِّ نَبِيِّنَا فَاسْقِنَا. قَالَ: فَيُسْقَوْنَ. رَوَاهُ   الْبُخَارِيُّ (964)</div>
+        </div>
+        <p><em>Dari Anas ra,   “Sesungguhnya Sayyidina Umar Bin Al-Khattab ra ketika paceklik tiba   beliau meminta hujan dengan perantara (Tawassul) Sayyidina Abbas Bin   Abdul Muthollib ra dengan berdo’a :</em></p>
+        <div class="style2"> 
+          <div class="arab">اَللَّهُمَّ   إِنَّا كُنَّا نَتَوَسَّلُ إِلَيْكَ بِنَبِيِّنَا فَتَسْقِيْنَا، وَإِنَّا   نَتَوَسَّلُ إِلَيْكَ بِعَمِّ نَبِيِّنَا فَاسْقِنَا </div>
+        </div>
+        <p><em>“Ya Allah   sungguh kami bertawassul kepada-Mu dengan perantara Nabi-Mu maka   turunkanlah hujan untuk kami, dan sungguh kami juga bertawassul   kepada-Mu dengan perantara paman Nabi-Mu maka turunkanlah hujan untuk   kami.”</em></p>
+        <p><em>Kemudian Sayyidina Anas berkata : “Maka diturunkanlah hujan bagi mereka.”</em> HR. Imam Al-Bukhari no. 964.</p>
+        <li>Disunnahkan bagi   mereka yang menghadiri pelaksanaan Shalat Istisqa’ membawa anak kecil,   orang tua dan banatang ternak, sebab musibah (paceklik) tersebut   mengenai mereka semua dan tidak diperkenankan melarang Ahli Dzimmah (non   muslim yang diberi izin tinggal bersama kaum muslimin) untuk ikut serta   hadir dalam prosesi tersebut.</p>
+        <p>&nbsp;</p></ol><br>
+        <h3>Cara Pelaksanaan (referensi kedua) </h3>
+        <p>Agar doa kita cepat di ijabah oleh Alloh maka hendaknya kita melaksanakan puasa dahulu 3 hari sebelum kita melaksanakan shalat sunat istisqa dan senantiasa kita perbanyak membaca istigfar dan bertaubat kepada Alloh karena hakikatnya yang menurunkan hujan dan adanya musim kemarau yang panjang adalah atas kehendak Alloh. Maka mintalah kepada-Nya. </p>
+        <p>Untuk memohon turunnya hujan, ada tiga cara yang dapat dilakukan, yaitu:</p>
+        <ol>
+          <li>
+            <div align="left">Berdoa saja, baik sendiri-sendiri maupun bersama-sama</div>
+          </li>
+          <li>
+            <div align="left">Berdoa pada setiap selesai shalat fardhu atau dalam khutbah jumat</div>
+          </li>
+          <li>
+            <div align="left">Mengerjakan shalat sunat 2 rakaat (shalat Istisqa)</div>
+          </li>
+        </ol>
+        <div align="left">Cara yang terakhir inilah yang paling baik dilakukan. Waktu pelaksanaan shalat istisqa tidak ditentukan. Tapi biasanya dikerjakan pagi hari seperti shalat id. Hukumnya sunat muakad.<br>
+          Sebelum shalat istisqa dikerjakan, seorang imam hendaknya memerintahkan masyarakat untuk :<br>
+  <ul>
+    <li>Berpuasa 4 hari berturut-turut, karena doa orang yang berpuasa tak akan di tolak.</li>
+    <li>Menjauhkan kezaliman, dan taubat dari kemaksiatan, karena kedua hal inilah yang menjadi penyebab tertahannya air dari langit.</li>
+    <li>Banyak berbuat baik dan bersedekah, karena hal ini akan memperbesar kemungkinan diterimanya doa</li>
+    <li>Pada hari keempat keluar menuju temat shalat (tanah lapang) dengan mengajak anak-anak, orang-orang tua, dan binatang ternak, dengan terlebih dahulu mandi, bersiwak bersuci, dan mengenakan pakaian yang sederhana, tidak memakai wewangian, berjalan dengan tenang dan rendah hati.</li>
+  </ul>
+  <br>
+          Shalat istisqa dikerjakan tenpa didahului dengan adzan atau iqomah, pada saat memulai shalat ini bilal cukkup menyerukan;<br>
+        </div>
+  <div style="text-align: right;">
+    <div class="arab">اَلصَّلاَةُ جَامِعَةً </div>
+  </div>
+        <div align="left">
+          <p>Artinya: <i>“Mari kita kerjakan shalat berjamaah”</i><br>
+            <br>
+          Cara pelaksanaan shalat istsqa sama dengan cara pelaksanaan shalat id, yaitu dengan melakukan takbir 7kali pada rakaat pertama, dan 5 kali pada rakaat kedua dengan mengangkat kedua tangan setinggi bahu, dan setelah itu dilakukan 2 khutbah (Khutbah ini boleh juga dilakukan sebelum shalat).<br>
+          Lafadz Niat shalat Istisqa</p>
+          <p><br>
+            <br>
+          </p>
+  </div>
+        <div style="text-align: right;">
+          <div class="arab">اُصَلِّى سُنَّةَ اْلِاسْتِسْقَاءِ رَكْعَتَيْنِ مَأمُوْمًالِلَّهِ تَعَالَى</div>
+        </div>
+        <div align="left"><br>
+          Artinya:<i> “Aku (niat) shalat sunat istisqo' 2 rakaat, dengan menjadi makmum karena Alloh Ta’ala”.</i><br>
+  <br>
+          Jika menjadi imam maka kata “Ma’muuman” diganti dengan kata “Imaaman” (menjadi imam)<br>
+          Surat yang dibaca boleh surat apa saja yang dikehendaki, akan tetapi sebaiknya pada rakaat pertama sesudah Al- Fatihah dibaca surat Al-a’laa, dan pada rakaat kedua surat Al-Ghaasyiyah. Bacaan ini di jaharkan, seperti pada shalat Id.<br>
+  <br>
+          Setelah selesai shalat, dilanjut dengan 2 khutbah. Rukun dan syarat 2 khutbah istisqa ini sama dengan 2 khutbah id.<br>
+  <br>
+          Dalam khutbah shalat istisqa ada beberapa ketentuan yang perlu diperhatikan, yaitu:<br>
+  <ul>
+    <li>Khotib disunatkan memakai selendang (sorban)</li>
+    <li>Khutbah pertama dimulai dengan membaca istighfar 9x dan pada khutbah kedua 7x.&nbsp;</li>
+    <li>Isi hutbah hendaklah berupa anjuran agar jamaah dan masyarakat bertaubat dan memperbanyak istighfar, serta merendahkan diri di hadapanAlloh, yakin bahwa permohonan mereka akan dikabulkan.</li>
+    <li>Ketika berdoa hendaklah kedua tangan diangkat lebih tinggi dari biasanya</li>
+    <li>Khatib hendaklah mmemperbanyak membaca doa dan istighfar dan membaca pula surat Nuh ayat 10 dan 11.</li>
+    <li>Pada khhutbah kedua, ketika sedang berdoa. Khatib hendaklah memindahkan letakk selendangnya dari kanan ke kiri dan yang diatas menjadi di bawah, sambil berpaling kearah kiblat.</li>
+    <li>Dalam berdoa khatib hendaklah mengeraskan dan merendahkan suaranya. Pada saat khatib mengeraskan suranya, makmum mengucapkan “Amin”. Sedangkan pada saat khatib merendahkan suranya, makmum ikut berdoa dengan suara rendah.&nbsp;</li>
+    </ul>
+  <p>&nbsp;</p>
+  <ul>
+    <li>
+      <p><strong>Do’a-Do’a Yang Diajarkan Oleh Rasulullah SAW</strong></p>
+      <div>
+        <div class="arab">اَللَّهُمَّ   اجْعَلْهَا سُقْياَ رَحْمَةٍ، وَلاَ تَجْعَلْهَا سُقْياَ عَذَابٍ، وَلاَ   مَحْقٍ وَلاَ بَلاَءٍ، وَلاَ هَدْمٍ وَلاَ غَرْقٍ. اَللَّهُمَّ عَلَى   الظُّرَّابِ وَاْلآكَامِ، وَمَنَابِتِ الشَّجَرِ وَبُطُوْنِ اْلأَوْدِيَةِ،   اَللَّهُمَّ حَوَالَيْنَا وَلاَ عَلَيْنَا. اَللَّهُمَّ اسْقِنَا غَيْثاً   مُغِيْثاً، هَنِيْئاً مَرِيْئاً مُرِيْعاً، سَحاً عَاماً غَدْقاً طَبَقاً   مُجَلَّلاً، دَائِماً إِلَى يَوْمِ الدِّيْنِ. اَللَّهُمَّ اسْقِنَا   الْغَيْثَ وَلاَ تَجْعَلْنَا مِنَ الْقَانِطِيْنَ، اَللَّهُمَّ إِنَّ   بِالْعِبَادِ وَالْبِلاَدِ مِنْ الْجُهْدِ وَالْجُوْعِ وَالضَّنْكِ، مَا   لاَ نَشْكُوْ إِلاَّ إِلَيْكَ.اَللَّهُمَّ أَنْبِتْ لَنَا الزَّرْعَ   وَأَدِرَّ لَنَا الضَّرْعَ، وَأَنْزِلْ عَلَيْنَا مِنْ بَرَكَاتِ   السَّمَاءِ، وَأَنْبِتْ لَنَا مِنْ بَرَكَاتِ اْلأَرْضِ، وَاكْشِفْ عَنَّا   مِنَ الْبَلاَءِ مَا لاَ يَكْشِفُهُ غَيْرُكَ، اَللَّهُمَّ إِنَّا   نَسْتَغْفِرُكَ إِنَّكَ كُنْتَ غَفَّاراً، فَأَرْسِلِ السَّمَاءَ عَلَيْنَا   مِدْرَاراً.<br>
+          ( رَوَاهُ الْبُخَارِيُّ :967؛ وَمُسْلِمٌ : 897؛ وَأَبُوْ دَاوُدَ 1169؛ وَالشَّافِعِيُّ:” اْلأُمُّ 1/222″ ، وَغَيْرُهُمْ).</div>
+      </div>
+      <p>“<em>Ya Allah jadikanlah curahan ini   sebagai rahmat dan jangan engkau jadikan curahan ini sebagai siksa,   bukan kehancuran, bahaya, kerusakan dan bukan pula ketenggelaman bagi   kami. Ya Allah turunkanlah hujan pada bukit-bukit, tumbuh-tumbuhan dan   lembah-lembah. Ya Allah turunkanlah hujan di sekitar kami, bukan hujan   yang berakibat buruk atas kami. Ya Allah turunkanlah hujan yang   melepaskan kami dari paceklik, tanpa disertai kesusahan, baik akibatnya,   subur dengan kesegaran, deras dan lebat yang menyeluruh pada permukaan   bumi terus-menerus (manfaatnya) sampai hari Kiamat. Ya Allah turunkanlah   hujan untuk kami dan jangan Engkau jadikan kami orang-orang yang   berputus asa karena hujan yang belum turun. Ya Allah sungguh   hamba-hamba-Mu serta negri-negri mereka tertimpa kesulitan, kelaparan   dan paceklik yang dahsyat, sungguh tiada kami mengadu melainkan hanya   kepada-Mu. Ya Allah tumbuhkanlah kebun-kebun untuk kami dan perbanyaklah   susu kambing, turunkanlah barakah dari langit, tumbuhkanlah   barakah-barakah bumi, keluarkanlah kami dari bahaya yang tiada   seorangpun yang bisa mengeluarkannya melainkan hanya Engkau. Ya Allah   sesungguhnya kami memohon ampun kepada-Mu, sesungguhnya Engkau maha   pengampun, maka turunkanlah hujan dari langit untuk kami</em>.” HR. Imam   Al-Bukhari no. 967, Imam Muslim no. 897, Imam Abu Daud no. 1169 dan   Imam Asy-Syafi’i dalam kitab Al-Umm juz 1 hal. 222 dll.</p>
+    </li>
+  </ul>
+  <div align="left"></div>
+        </div>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

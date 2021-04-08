@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Burdah Imam Al-Bushiri - Bagian 6</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَلْفَصْلُ السَّادِسُ : فِي شَـرِفِ الْــقُرْآنِ وَمَدْحِـهِ
+
+<br>مَوْلَايَ صَلِّ وَسَلِّـمْ دَآئِــماً أَبَـدًا ۞ عَلـــَى حَبِيْبِـكَ خَيْــرِ الْخَلْقِ كُلِّهِمِ
+
+<br>دَعْنِي وَوَصْفِيَ آيَاتٍ لَهُ ظَهَرَتْ ۞ ظُهُوْرَ نَارِ الْقِرَي لَيْلًا عَلَي  عَلَمِ
+
+<br>فَالدُّرُّ يَزْدَادُ حُسْنًا وَّهْوَ مُنْتَظِمٌ ۞ وَلَيْسَ يَنْقُصُ قَدْرًا غَيْرَ مُنْتَظِمِ
+
+<br>فَمَا تَطَاوَلَ أٰمَالِ الْمَدِيْحِ إِلىٰ ۞ مَا فِيهِ مِنْ كَرَمِ الْأَخْلَاقِ وَالشِّيَمِ
+
+<br>أٰيَاتُ حَقٍّ مِنَ الرَّحْمٰنِ مُحْدَثَةٌ ۞ قَدِيْمَةٌ صِفَةُ الْمَوْصُوْفِ بِالْقِدَمِ
+
+<br>لَمْ تَقْتَــرِنْ بِزَمَانٍ وَّهْيَ تُخْبِرُنَا ۞ عَنِ الْمَعَادِ وَعَنْ عَادٍ وَعَنْ إِرَمِ
+
+<br>دَامَتْ لَدَيْنَا فَفَاقَتْ كُلَّ مُعْجِزَةٍ ۞ مِنَ النَّبِيِّيْـنَ إِذْ جَآءَتْ وَلَمْ تَدُمِ
+
+<br>مُحَكَّمَـــاتٌ فَمَا يُبْقِيْـنَ مِنْ شُبَهٍ ۞ لِذِيْ شِقَاقٍ وَمَا تَبْغِيْنَ مِنْ حَكَمِ
+
+<br>مَا حُوْرِبَتْ قَطُّ إِلَّا عَادَ مِنْ حَرَبٍ ۞ أَعْدَى الْأَعَادِيْ إِلَيْهَا مُلْقِيَ السَّلَمِ
+
+<br>رَدَّتْ بَلَاغَتُهَا دَعْوٰى مُعَارِضِهَا ۞ رَدَّ الْغَيُورِ يَدَ الْجَانِيْ عَنِ الْحُرَمِ
+
+<br>لَهَا مَعَانٍ كَمَوْجِ الْبَحْرِ فِيْ مَدَدٍ ۞ وَفَوْقَ جَوْهَرِهِ فِيْ الْحُسْنِ وَالْقِيَمِ
+
+<br>فَمَـــا تُعَدُّ وَلَا تُحْصٰى عَجَائِبُهَا ۞ وَلَا تُسَامُ عَلىَ الْإِكْثَارِ باِلسَّــأَمِ
+
+<br>قَرَّتْ بِهَا عَيْنُ قَارِيْهَا فَقُلْتُ لَهُ ۞ لَقَدْ ظَفِرْتَ بِحَبْلِ الِلّٰهِ فَاعْتَصِمِ
+
+<br>إِنْ تَتْلُهَا خِيْفَةً مِنْ حَرِّ نَارِ لَظىٰ ۞ أَطْفَأْتَ نَارَ لَظَى مِنْ وِّرْدِهَا الشَّبِمِ
+
+<br>كَأَنَّهَا الحَوْضُ تَبْيَضُّ الْوُجُوهُ بِهِ ۞ مِنَ العُصَاةِ وَقَدْ جَآءُوهُ كَالْحُمَمِ
+
+<br>وَكَالصِّــرَاطِ وَكَالْمِيْزَانِ مَعْدِلَةً ۞ فَالْقِسْطُ مِنْ غَيْرِهَا فِيْ  النَّاسِ لَمْ يَقُمِ
+
+<br>لَا تَعْجَبَنْ لِحَسُوْدٍ رَّاحَ يُنْكِرُهَا ۞ تَجَاهُلاً وَهْوَ عَيْنُ الْحَاذِقِ الْفَهِمِ
+
+<br>قَدْ تُنْكِرُ الْعَيْنُ ضَوْءَ الشَّمْسِ مِنْ رَّمَدٍ ۞ وَيُنْكِرُ الْفَمُ طَعْمَ الْمَآءِ مِنْ سَقَمِ</p><br><p><i>Al-fashlus-sādisu: Fī syarifil-Qur'āni wa mad-ḥihi.
+
+<br>Mawlāya shallī wa sallim dā iman abadā. ۞ 'Alā Ḥabībika Khayril-khalqi kullihimi.
+
+<br>Da'nī wa washfī āyātin lahu zhaharat. ۞ Zhuhūra nāril-qirā laylan 'alā 'alami.
+
+<br>Faddurru yazdādu ḥusnan wa huwa muntazhimun. ۞ Wa laysa yanqushu qadran ghayra muntazhimi.
+
+<br>Famā tathāwulu āmālil-madīḥi ilā. ۞ Mā fīhi min karamil-akhlāqi wasy-syi-yami.
+
+<br>Ayātu ḥaqqin minar-Raḥmāni muḥda-tsatun. ۞ Qadīmatun shifatul mawshūfi bil-qidami.
+
+<br>Lam taqtarin bi zamānin wah-ya tukhbirunā. ۞ 'Anil ma'ādi wa 'an 'ādin wa 'an irami.
+
+<br>Dāmat ladaynā fa-fāqat kulla mu'jizatin. ۞ Minan Nabiyyīna idz jā-at wa lam tadumi.
+
+<br>Muḥakkamātun fa mā tubqīna min syubahin. ۞ Li-dzī syiqāqin wa mā tabghīna min ḥakam.
+
+<br>Mā ḥūribat qath-thu illā 'āda min ḥarabin. ۞ A'dal-a-'ādī ilayha mulqiyas-salami.
+
+<br>Raddat balāghatuhā da'-wā mu'āridhihā. ۞ Raddal-ghayūri yadal-jānī 'anil-ḥurami.
+
+<br>Lahā ma'ānin kamawjil-baḥri fī madadin. ۞ Wa fawqa jawharihi fil-ḥusni wal-qiyami.
+
+<br>Fa mā tu'addu wa lā tuḥshā ajā-ibuhā. ۞ Wa lā tusāmu 'alal-ik-tsāri bissa-ami.
+
+<br>Qarrat bihā 'aynu qārīhā fa qultu lahu. ۞ Laqad zhafirta bi ḥabliLlāhi fa'-tashimi.
+
+<br>In tatluhā khīfatan min harri nāri lazhā. ۞ Athfa'-ta narra lazhā min wirdihasy-syabimi.
+
+<br>Ka-annahal-ḥawdhu tabyadh-dhul-wujūhu bihi. ۞ Minal-'ushāti wa qad jā ūhu kalḥumami.
+
+<br>Wa kash-shirāthi wa kal-mīzāni ma'dalatan. ۞ Fal-qisthu min ghayrihā fin-nāsi lam yaqumi.
+
+<br>Lā ta'jaban li-ḥasūdin rāḥa yunkiruhā. ۞ Tajāhulan wah-wa 'aynul ḥādziqil-fahimi.
+
+<br>Qad tunkirul-'aynu dhaw-asy-syamsi mir-ramadin. ۞ Wa yunkirul fammu tha'mal-mā-i min saqami.</i></p><br>
+<p><strong>Bagian VI: Kemuliaan Alquran dan pujian terhadapnya.</strong>
+
+<br>Wahai Tuanku, shalawat dan salam sudi Engkau limpahkan selalu. ۞ Kepada kekasih-Mu sebaik-baik makhluk yang Engkau titahkan.
+
+<br>Biarkan aku mengurai mukjizat yang tampak pada Nabi. ۞ Tampak bagai api jamuan malam hari di atas gunung menjulang tinggi.
+
+<br>Mutiara bertambah indah anggun bila ia rapi tersusun. ۞ Nilainya tak berkurang sedikit pun walau tak tersusun.
+
+<br>Maka, apakah yang menyampaikan angan-angan orang yang memuji. ۞ Pada akhlak mulia, Nabi pilihan dan sifat-sifat  yang terpatri padanya.
+
+<br>Ayat-ayat Alquran adalah dari Tuhan nan Rahman. ۞ Baru turunnya, terdahulu maknanya, dan sifat Dzat yang bersifat Maha Qidam.
+
+<br>Ayat-ayat Alquran tidak lah bersamaan dengan zaman. ۞ Dan ia mengabarkan kepada kita tentang akhirat, kaum `Ad dan kota Iram.
+
+<br>Ayat ayat Ilahi di sisi kita kekal abadi. ۞ Mengungguli mukjizat para nabi mukjizat yang datang tiada lestari.
+
+<br>Sungguh kokoh itu Alquran tak tinggalkan keserupaan. ۞ Bagi yang punya perselisihan tak usah mencari hakim kebenaran.
+
+<br>Sama sekali Alquran tak akan ditentang kecuali akan kembali dari medan perang. ۞ Musuh yang sangat hebat dan pasrah dalam keadaan tunduk dan pasrah.
+
+<br>Keindahan sastranya menaklukkan penentangnya. ۞ Bagai pencemburu membela keluarganya dari tangan jahil yang menjamahnya.
+
+<br>Bagi Alquran berlimpah banyak makna bertambah-tambah bak ombak samudra. ۞ Keindahan dan nilainya melebihi mutiara samudra.
+
+<br>Keajaiban ayat-ayat Al-Quran tak bisa dibatasi hitungan. ۞ Maknanya nan banyak bertebaran sama sekali tak membosankan.
+
+<br>Sejuklah mata pembacanya lalu kakatakan padanya. ۞ Sungguh Anda telah beroleh bahagia berpeganglah selalu pada tali Allah ﷻ.
+
+<br>Jika karena takut kau membacanya dari panas neraka Ladhza. ۞ Maka kau padamkan panasnya karena kesejukan airnya.
+
+<br>Alquran laksana telaga dapat putihkan wajah. ۞ Wajah para pendosa, wajah nan hitam arang tak cerah.
+
+<br>Alquran tegak bak lurusnya jalan laksana keadilan timbangan. ۞ Keadilan selain Alquran di kalangan manusia tiada lah langgeng bertahan lama.
+
+<br>Jangan heran pada pendengki yang berusaha mengingkari. ۞ Pura-pura bodoh diri padahal ia cerdas dan memahami.
+
+<br>Terkadang mata sakit mengingkari pada sinar matahari. ۞ Segar air terkadang mulut pungkiri karena sakit yang menyelimuti.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

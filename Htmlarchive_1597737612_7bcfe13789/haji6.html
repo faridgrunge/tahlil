@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Muzdalifah</h1>
+
+
+<p style="text-align: right;" class="arab"></p>
+<ol>
+<li>Muzdalifah adalah tempat antara Arofah dan Mina.</li> Dan Muzdalifah diambil dari kata زَلَفَ &ldquo;Zalafa&rdquo; yang maknanya kembali kepada arti dekat, dikatakan زَلَفَ إِلَيْهِ atau اِزْدَلَفَ إِلَيْهِ artinya mendekat kepadanya. Muzdalifah dinamakan dengan Muzdalifah karena para jama&aacute;h haji jika tiba di Muzdalifah sudah mendekat ke Mina. Atau karena Muzdalifah adalah tempat berkumpul karena الاِزْدِلاَفُ artinya الاِجْتِمَاعُ perkumpulan.</p>
+<li>Allah menamakan muzdalifah juga dengan al-Masy&aacute;r al-Haroom. </li>Allah berfirman</p>
+<p style="text-align: right;" class="arab">فَإِذَا أَفَضْتُمْ مِنْ عَرَفَاتٍ فَاذْكُرُوا اللَّهَ عِنْدَ الْمَشْعَرِ الْحَرَامِ وَاذْكُرُوهُ كَمَا هَدَاكُمْ وَإِنْ كُنْتُمْ مِنْ قَبْلِهِ لَمِنَ الضَّالِّينَ</p>
+<p>Maka apabila kamu telah bertolak dari &acute;Arafat, berdzikirlah kepada Allah di Masy&acute;arilharam. Dan berdzikirlah (dengan menyebut) Allah sebagaimana yang ditunjukkan-Nya kepadamu; dan sesungguhnya kamu sebelum itu benar-benar termasuk orang-orang yang sesat (QS Al-Baqoroh : 198)</p>
+<p>Jumhur ahli tafsir menyatakan bahwa yang dimaksud dengan al-Masy&aacute;r al-Haroom dalam ayat ini adalah Muzdalifah secara kesuluruhan<sup>(</sup>[14]<sup>)</sup>.</p>
+<p>Nabi shallallahu &aacute;laihi wasallam juga menamakan al-Muzdalifah dengan جَمْعٌ (Jamu&uacute;n) karena para jama&aacute;h haji menjamak sholat maghrib dan &Iacute;sya di Muzdalifah (lihat Tafsir al-Baghowi 1/229). Nabi bersabda :</p>
+<p style="text-align: right;" class="arab">وَوَقَفْتُ هَاهُنَا، وَجَمْعٌ كُلُّهَا مَوْقِفٌ</p>
+<p>&ldquo;Aku wuquf (berdiam diri) di sini (salah satu tempat di Muzdalifah<sup>([15])</sup>) dan Jam&uacute;un (yaitu Muzdalifah) seluruhnya adalah tempat wuquf&rdquo; (HR Muslim no 1218)</p>
+<li>Jika tiba di Muzdalifah maka kegiatan yang pertama adalah sholat maghrib dan isya dengan jama&rsquo; ta&rsquo;khiir<sup>([16])</sup>.</li>Dengan sekali adzan dan dua iqomat.</p>
+<ul>
+<br><li>Jika seseorang ternyata menunggu bus jemputan di &Aacute;rofah dan ternyata busnya terlambat datang hingga malam semakin larut, atau ternyata seseorang terjebak di jalan atau ada hambatan di jalan dan kawatir jika sampai di Muzdalifah maka waktu isya sudah habis maka ia boleh sholat jamak maghrib dan isya meskipun sebelum sampai di Muzdalifah.</li>
+</ul>
+<p>An-Nawawi rahimahullah berkata :</p>
+<p style="text-align: right;" class="arab">فَلَوْ جَمَعَ بَيْنَهُمَا فِي وَقْتِ الْمَغْرِبِ أَوْ فِي غَيْرِ الْمُزْدَلِفَةِ جَازَ</p>
+<p>&ldquo;Jika seseorang menjamak sholat maghrib dan sholat Isya di waktu maghrib (yaitu jamak taqdim) atau menjamaknya bukan di al-Muzdalifah maka tidak mengapa&rdquo;<sup>&nbsp;([17])</sup></p>
+<ul>
+<li>Jika seseorang sampai di Muzdalifah dengan cepat dan belum masuk waktu sholat Isya, maka ia boleh langsung sholat maghrib dan isya jama&rsquo; taqdiim. Karena yang pertama dilakukan oleh Nabi begitu sampai di al-Muzdalifah adalah menjamak sholat maghrib dan isya. Dan Nabi tidak memperinci dengan berkata, &ldquo;Jika ada yang sampai di al-Muzdalifah sebelum waktu isya maka tunggu dulu masuk waktu isya baru sholat&rdquo;. Dan tentunya bisa jadi seseorang sampai ke al-Muzdalifah sebelum masuk waktu isya. Dan seorang musafir tentu boleh melakukan jama&rsquo; taqdim atau jama&rsquo; ta&rsquo;khiir<sup>([18])</sup></li>
+</ul>
+<br><li>Jika telah sholat maghrib dan isya maka hendaknya istirahat sebagaimana Nabi shallallahu &lsquo;alaihi wasallam beristirahat di al-Muzdalifah.</p></li>
+<p>Jabir radhiallahu &aacute;nhu berkata :</p>
+<p style="text-align: right;" class="arab">وَلَمْ يُسَبِّحْ بَيْنَهُمَا شَيْئًا، ثُمَّ اضْطَجَعَ رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ حَتَّى طَلَعَ الْفَجْرُ</p>
+<p>&ldquo;Nabi sama sekali tidak sholat sunnah apapun antara sholat maghrib dan isya, kemudian Nabi shallallahu &aacute;laihi wasallam berbaring hingga terbit fajar&rdquo; (HR Muslim no 1218)</p>
+<p>Karenanya tidak disunnahkan di malam Muzdalifah untuk beribadah baik dengan sholat malam, baca al-Qur&aacute;n, dll. Akan tetapi sunnahnya adalah tidur sebagaimana yang dilakukan oleh Nabi shallallahu &aacute;laihi wasallam.</p>
+<ul>
+<br><li>Apakah tetap sholat witir?, maka ada perselisihan di kalangan para ulama, karena tidak ada satu riwayatpun yang menunjukan bahwa Nabi sholat witir di malam Muzdalifah, sehingga sebagian ulama memandang tidak dianjurkan sholat witir di malam tersebut. Dan sebagian ulama yang lain memandang tetap disunnahkan sholat witir berdasarkan keumuman hadits bahwasanya Nabi selalu sholat witir baik tatkal muqim maupun bersafar (lihat Asy-Syarh al-Mumti&rsquo;, al-Utsaimin 7/310)</li>
+<br><li>Jika seseorang tidak bisa tidur di malam Muzdalifah maka dia berusaha untuk tidur<sup>([19])</sup>, dan boleh saja baginya untuk berdzikir sambil berbaring di malam tersebut sambil mengisi waktu dari pada kosong tidak bermanfaat. (lihat Asy-Syarh al-Mumti, al-&Uacute;tsaimin 7/310-311). Kalau dia memang lagi rindu ingin sholat malam dan tidak merasa letih maka tidak mengapa ia sholat malam. Sebagaimana Asmaa&rsquo; binti Abi Bakar sholat malam sambil menunggu waktu untuk meninggalkan al-Muzdalifah<sup>([20])</sup>.</li>
+</ul>
+<br><li>Tidak harus dan tidak dikatakan sunnah untuk mencari kerikil di al-Muzdalifah, akan tetapi boleh dan dianjurkan bagi jama&aacute;h haji untuk mencari kerikil di al-Muzdalifah untuk persiapan melempar jamarot.</li> Nabi sendiri mengambil kerikil bukan di al-Muzdalifah tapi di perjalanan menuju Mina. Hanya saja di al-Muzdalifah memang tersedia banyak kerikil, berbeda dengan Mina yang kondisi sekarang agak susah untuk mencari kerikil<sup>([21])</sup></p>
+<li>Bagi orang-orang yang kuat dan tidak berudzur maka wajib untuk mabit (bermalam) di al-Muzdalifah sampai sholat subuh. </li>Adapun orang-orang yang lemah, seperti anak-anak, para wanita, orang-orang tua, orang-orang sakit, dan yang berudzur maka dibolehkan bagi mereka untuk meninggalkan al-Muzdalifah setelah lewat tengah malam<sup>(</sup>[22]<sup>)</sup></p>
+<p>Rukhsoh (keringanan) ini juga berlaku bagi orang-orang yang kuat namun mereka harus menemani para wanita dan orang-orang yang lemah atau harus menjaga mereka. Sebagaimana Nabi mengutus Ibnu &Aacute;bbas (tatkala itu usianya remaja sekitar 14 tahun) untuk menemani orang-orang lemah. Ibnu &Aacute;bbas berkata :</p>
+<p style="text-align: right;" class="arab">بَعَثَنِي رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ فِي الثَّقَلِ &ndash; أَوْ قَالَ فِي الضَّعَفَةِ &ndash; مِنْ جَمْعٍ بِلَيْلٍ</p>
+<p>&ldquo;Rasulullah shallallahu &aacute;laihi wasallam mengutus beliau bersama orang-orang lemah untuk keluar dari al-Muzdalifah di malam hari&rdquo; (HR Muslim no 1293)</p>
+<p>Sebagaimana pula Abdullah maula Asmaa&rsquo;binti Abu Bakar menemani Asmaa&rsquo; untuk keluar dari al-Muzdalifah setelah lewat tengah malam (HR Al-Bukhari no 1679 dan Muslim no 1291).</p>
+<p>Jika hal ini diperbolehkan di zaman Nabi shallallahu &aacute;laihi wasallam yang kepadatannya tidak begitu padat maka bagaimana lagi di zaman sekarang yang hingga jutaan jumlah jamaah haji<sup>([23])</sup>.</p>
+<li>Disunnahkan bagi jama&aacute;h haji -setelah mabit di Muzdalifah- untuk sholat subuh di Muzdalifah di awal waktunya. </li>Setelah sholat lalu berdoa kepada Allah hingga matahari sangat menguning -yaitu menjelang terbit- namun sebelum terbit. Dan ini sunnah yang banyak ditinggalkan oleh para jama&aacute;h haji, banyak diantara mereka setelah sholat subuh langsung beranjak menuju ke Mina, padahal setelah subuh waktunya untuk berdoa kepada Allah hingga menjelang matahari terbit.</p>
+<li>Disunnahkan sebelum matahari terbit para jama&aacute;h haji berangkat meninggalkan Muzdalifah menuju Mina.</p></li>
+<li>Barangsiapa yang tidak mabit di Muzdalifah tanpa udzur maka ia harus bayar dam karena telah meninggalkan salah satu kewajiban haji.</p></li>
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

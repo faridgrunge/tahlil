@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Pengertian Tayamum</h1><br>
+
+<p style="text-align:justify"> Kata tayamum menurut bahasa sama dengan al-qashdu yang berarti menuju, menyengaja. Menurut pengertian syara’ tayamum adalah menyengaja (menggunakan) tanah untuk menyapu dua tangan dan wajah dengan niat agar dapat mengerjakan shalat dan sepertinya. <Br>
+              <Br>
+            Tayamum adalah pengganti wudhu atau mandi wajib yang tadinya seharusnya menggunakan air bersih digantikan dengan menggunakan tanah atau debu yang bersih, sebagai rukhsah (keringanan) untuk orang yang tidak dapat memakai air karena beberapa halangan (uzur) yaitu karena sakit, karena dalam perjalanan, dan karena tidak adanya air. Yang boleh dijadikan alat tayamum adalah tanah suci yang ada debunya. <Br>
+            <Br>
+            Dilarang bertayamum dengan tanah berlumpur, bernajis atau berbingkah. Pasir halus, pecahan batu halus boleh dijadikan alat melakukan tayamum. Orang yang melakukan tayamum lalu shalat, apabila air sudah tersedia maka ia tidak wajib mengulang sholatnya. Namun untuk menghilangkan hadast, harus tetap mengutamakan air daripada tayamum yang wajib hukumnya bila sudah tersedia. Tayamum untuk hadast hanya bersifat sementara dan darurat hingga air sudah ada. Pensyari’atan tayamum ini berdasarkan firman Allah dalam Q.S.An-Nisa’ayat 43,sebagai berikut: </P>
+            <strong><br>
+            <br>
+  </strong>
+          <div dir="RTL">
+            <div align="right" class="arab">يَا أَيُّهَا الَّذِينَ آَمَنُوا لَا تَقْرَبُوا الصَّلَاةَ وَأَنْتُمْ سُكَارَى حَتَّى تَعْلَمُوا مَا تَقُولُونَ وَلَا جُنُبًا إِلَّا عَابِرِي سَبِيلٍ حَتَّى تَغْتَسِلُوا وَإِنْ كُنْتُمْ مَرْضَى أَوْ عَلَى سَفَرٍ أَوْ جَاءَ أَحَدٌ مِنْكُمْ مِنَ الْغَائِطِ أَوْ لَامَسْتُمُ النِّسَاءَ فَلَمْ تَجِدُوا مَاءً فَتَيَمَّمُوا صَعِيدًا طَيِّبًا فَامْسَحُوا بِوُجُوهِكُمْ وَأَيْدِيكُمْ إِنَّ اللَّهَ كَانَ عَفُوًّا غَفُورًا (43) </div>
+  </div>
+          <div class="arab"><br>
+          </div>
+          <div>
+            <div align="left">
+              <p><strong>Artinya: </strong></p>
+            </div>
+          </div>
+          <div><br>
+          </div>
+          <div>
+            <div align="justify"><em>Wahai orang-orang yang beriman, janganlah kalian mendekati shalat sedangkan kalian dalam keadaan mabuk, sampai kalain mengetahui apa yang kalian katakan; dan jangan pula dalam keadaan junub, kecuali sekedar lewat, sampai kalian mandi; dan jika kalian dalam keadaan sakit, atau safar, atau salah seorang dari kalian datang dari tempat menunaikan hajat, atau kalian “menyentuh” perempuan, kemudian kalian tidak mendapatkan air maka bertayammumlah kalian dengan debu yang suci. Maka usaplah wajah-wajah kalian dan tangan-tangan kalian, sesungguhnya Allah itu adalah Maha memaafkan lagi Maha mengampuni</em>.</div>
+          </div>
+          <P>&nbsp;</P>
+          <p align="left"><strong>Media yang dapat digunakan untuk  bertayammum</strong> adalah seluruh permukaan bumi yang bersih baik itu berupa  pasir, bebatuan, tanah yang berair, lembab ataupun kering. Hal ini berdasarkan  hadits Nabi <em>shollallahu ‘alaihi wa sallam </em>dari sahabat  Hudzaifah Ibnul Yaman<em> rodhiyallahu ‘anhu </em>di atas dan secara khusus, <br>
+  <div>
+        <div align="center" class="arab">
+          <div align="right">جُعِلَتِ  الأَرْضُ كُلُّهَا لِى وَلأُمَّتِى مَسْجِداً وَطَهُوراً </div>
+        </div>
+  </div>
+  <br>
+  <strong><em>Artinya ;</em></strong> </p>
+  <blockquote>
+    <p> “Dijadikan  permukaan bumi  seluruhnya bagiku dan ummatku sebagai tempat  untuk sujud dan sesuatu yang digunakan untuk bersuci”. (Muttafaq ‘alaihi)</p>
+          </blockquote>
+          <p><strong>Namun ulama Syafi'iyah Syaikh al-‘Allamah ‘Abdullah bin Hijazi bin Ibrahim  al-Syarqawi dalam Kitab Hasyiyah asy-Syarqowi menjelaskan  debu yang boleh digunakan untuk bertayammum adalah debu suci yang tidak basah dan tidak bercampur dengan pasir atau lainnya, disebut dengan debu غبار</strong>. Maka, debu yang terdapat di kaca atau dinding boleh digunakan untuk bertayammum.</p>
+          <div class="arab">
+            <div align="right">والمراد بالتراب مايصدق عليه اسمه باي لون كان خلقة ومن اي محل اخذ كثوب او حصير او جدار او حنطة او شعير اذا كان منها غبار </div>
+          </div>
+          <p>&nbsp;</p>
+          <p><strong>Kisah Munculnya Syariat Tayamum            </strong></p>
+          <p>Kisah ini diceritakan oleh Aisyah istri   tercinta Nabi shallallahu ‘alaihi wa sallam. Suatu saat, ia bersama Nabi   shallallahu ‘alaihi wa sallam dalam salah satu perjalanannya. Ketika   mereka telah sampai di Baida’ atau Dzatul Jaisy (hendak memasuki kota   Madinah), tiba-tiba Aisyah kehilangan kalung yang dipinjamnya dari Asma.   Akhirnya Rasulullah shallallahu ‘alaihi wa sallam berhenti dan berkenan   mencarinya dan orang-orang pun ikut mencarinya. Waktu itu mereka   berhenti di tempat yang tidak ada airnya dan mereka juga tidak membawa   air.<br>
+              <br>
+            Akhirnya (saat kalung Aisyah belum juga diemukan),   Rasulullah shallallahu ‘alaihi wa sallam tidur di pangkuan Aisyah   radhiallahu ‘anha. Saat itu orang-orang mengeluh kepada Abu Bakar   ash-Shidiq, “Tidakkah engkau lihat apa yang dilakukan Aisyah? Ia telah   menghentikan Rasulullah shallallahu ‘alaihi wasallam dan orang banyak,   padahal mereka tidak di tempat yang ada airnya dan tidak membawa air.”<br>
+            <br>
+            Abu   Bakar pun mendatangi Aisyah dan memarahinya. Aisyah radhiallahu ‘anha   menceritakan, “Abu Bakar mencercaku dan mengatakan apa yang dikehendaki   Allah untuk mengatakannya. Ia pun memukulku dengan keras seraya   berkata,’Apa engkau menahan orang-orang ini karena kalung?!’ Aku tidak   bisa berbuat apa-apa karena keberadaan Rasulullah shallallahu ‘alaihi wa   sallam sekalipun itu terasa menyakitkanku. Aku tidak dapat berbuat   sedikit pun karena Rasulullah shallallahu ‘alaihi wasallam berada di   pangkuanku.”<br>
+            <br>
+            Kemudian tibalah waktu shalat, dan mereka tidak   menemukan air. Dalam satu riwayat, para sahabat akhirnya shalat tanpa   wudhu. Hal tersebut disampaikan kepada Rasulullah shallallahu ‘alaihi wa   sallam, lalu Allah menurukan ayat tayammum (yaitu al-Maa-idah ayat 6).   Usaid bin Hudhair berkata kepada Aisyah, </p>
+  <blockquote>
+    <p justify“="">Semoga Allah membalas kebaikan bagimu. Demi   Allah, tidaklah engkau mengalami perkara yang tidak engkau sukai,   kecuali Allah memberikan untukmu (jalan keluarnya), dan (menjadikan)   kebaikan bagi kaum muslimin di dalamnya.” (HR. Bukhari dari beberapa   jalan periwayatan</p>
+  </blockquote>
+          <hr>
+          <h3 align="center">2. Syarat Tayamum</h3>
+          <hr>
+          <P>Dalam Kitab Fathul Qorib Syekh Muhammad bin Qosim Al-Ghazy menjelaskan syarat tayamum ada lima hal :</P>
+          <ol>
+		  <li><strong>Pertama</strong> : adanya alasan. Misalnya bepergian atau sakit.<br>
+            <li><strong>Kedua</strong> : masuknya waktu shalat. Tidak boleh tayamum untuk shalat sebelum masuknya waktunya.<br>
+            <li><strong>Ketiga</strong> : mencari air setelah waktu shalat tiba, baik dilakukan sendiri atau orang lain. Carilah air dari sesama rombongan. Jika sendirian, maka pandangan sekitarnya dari empat mata angin jika di tanah yang rata. Jika di tanah yang tinggi atau tanah naik turun, maka pandangan harus jeli.</p>
+          <li><strong>Keempat</strong> : tidak bisa menggunakan air. Misalnya kalau menggunakan air khawatir jiwa terancam atau khawatir hilangnya manfaat suatu anggota badan. Termasuk alasan keempat ini adalah ada air pada jarak dekat, namun jika ke air itu khawatir kalau diterkam binatang buas atau harta bendanya dicuri atau digasab. Termasuk alasan ini adalah membutuhkan air untuk selain wudhu.</p>
+          <li><strong>Kelima</strong> : debu yang suci dan mensucikan serta tidak basah. Termasuk debu suci adalah debu yang digasab dan debu kubur yang belum pernah digali lagi. Dalam sebagian salinan Taqrib terdapat tambahan bahwa debu itu harus bisa beterbangan. Jika tercampur dengan batu kapur atau pasir, maka tidak sah untuk tayamum. Hal ini sesuai dengan pendapat Syekh Nawawi dalam Majmuk syarah Muhadzab dan Tashih. Akan tetapi dalam Raudhah dan Fatawi Nawawi memperbolehkan hal tersebut. Yaitu tayamum dengan debu yang bercampur dengan batu kapur atau pasir.</p>
+          <p>Tayamum dengan pasir yang bisa beterbangan itu sah. Tidak sah tayamum dengan selain debu. Misalnya bedak dan tembikar yang diremuk. Demikian juga tidak sah tayamum dengan debu yang najis. Debu yang musta’mal (yang sudah pernah digunakan untuk tayamum) tidak boleh digunakan tayamum lagi.</p>
+          <p>&nbsp;</p></ol>
+          <hr>
+          <h3 align="center">3. Syarat Syah Tayamum </h3>
+          <hr>
+          <P>Dalam Matan Kitab Safinah Asy-Syaikh Salim bin Abdulloh bin Sa’ad bin Abdulloh bin Sumair Al-Hadhromi Asy-Syafi’I menjelaskan tentang syarat - syarat sah melakukan tayamum yaitu:</P>
+<ol>
+		  <li>Bertayammum dengan tanah.<br>
+            <li>Menggunakan tanah yang suci tidak terkena najis(lagi kering)<br>
+            <li>Tanahnya belum dipakai tayamum (bukan musta’mal atau bekas)<br>
+            <li>Tanahnya tidak tercampui tepung dan sebagainya (seperti kapur kering)<br>
+            <li>Bermaksud tayamum (dengan menyapukan tanah,bukan bermain-main)<br>
+            <li>Menyapu muka dan kedua tangan dengan  dua kali tepukan (ke tanah yaitu, sekali ke muka dan sekali lagi ke dua tangan)<br>
+            <li>Menghilangkan najis terlebih dahulu (dari badannya,walaupun bukan termasuk anggota tayamum)<br>
+            <li>Harus berijtihad mengenai arah kiblat sebelum tayamum<br>
+            <li>Tayamum hendaknya sesudah masuk waktu salat (bila tayamum untuk salat)<br>
+          <li>Dan sekali tayamum itu  hanya dapat dipakai untuk sekali salat fardu (kecuali shalat sunah,boleh berkali-kali) </ol>
+          <P>&nbsp;</P>
+          <hr>
+          <h3 align="center">4. Fardhu / Rukun Tayamum </h3>
+          <hr>
+  <p>Dalam kitab Fathul Qorib Syekh Muhammad bin Qosim Al-Ghazy menjelaskan fardhu / rukun tayamum ada empat hal, yaitu:</p>
+          <ol>
+		  <li><strong>Pertama </strong>: niat. Jika berniat fardhu dan sunat, maka boleh melakukan shalat fardhu dan shalat sunat. Jika niat hanya fardhu saja, maka boleh melakukan shalat fardhu dan sunat. Jika niat sunat saja, maka hanya boleh melakukan shalat sunat saja. Jika hanya niat shalat saja, maka juga hanya boleh melakukan shalat sunat saja.</p>
+          <div>&nbsp;
+           
+            <div align="center"><strong>Niat Tayamum </strong></div>
+			 <div></div>
+			 <div><img src="pic/tayamum/niat.jpg" width="1848" height="680"></div>
+			 <div> 
+			   <div align="center"><strong>Artinya: </strong>"Saya niat tayammum untuk diperbolehkan melakukan shalat karena Allah Ta'ala"<br>
+			       <strong><br>
+	             </strong> </div>
+		    </div>
+			 <div></div>
+          </div>
+          <div> 
+            <div class="arab">
+              <div align="center">نَوَيْتُ التَّيَمُّمَ لِاِسْتِبَاحَةِ الصَّلاَةِ فَرْضً ِللهِ تَعَالَى</div>
+            </div>
+          </div>
+          <div align="center"><strong>Nawaitut tayammuma li-istibahatis sholaati fardhal lillaahi ta'aalaa</strong><br>
+              <strong><br>
+            </strong> <strong>Artinya: </strong>"Saya niat tayammum untuk diperbolehkan melakukan shalat karena Allah Ta'ala"<br>
+              <strong><br>
+            </strong>          </div>
+          <p>&nbsp;</p>
+          <p>Niat tayamum harus disertakan dengan memindahkan debu ke wajah dan dua tangan. Niat itu juga harus diabadikan sampai mengusap sebagian dari wajah. Jika hadas setelah memindahkan debu, maka debu yang sudah diangkat jangan diusapkan. Gunakan debu lainnya untuk diusapkan.</p>
+          <li><p><strong>Kedua</strong> : mengusap wajah.</p>
+          <li><p><strong>Ketiga</strong> : mengusap dua tangan beserta dua siku. Mengusap dua tangan harus dengan dua pukulan. Jika tangan diletakkan pada debu yang halus, lalu ada debu yang menempel tanpa dipukulkan, maka sudah sah.</p>
+          <li><p><strong>Keempat </strong>: tertib. Yakni harus mendahulukan usapan ke wajah, baru mengusap dua tangan. Tayamum untuk hadas kecil dan untuk hadas besar dalam hal tertib ini sama saja. Jika tidak tertib, maka tayamumnya tidak sah. Namun tidak wajib tertib dalam mengambil debu untuk wajah dan dua tangan. Jika dua tangan dipukulkan ke debu, lalu tangan kanan digunakan mengusap wajah dan tangan kiri digunakan mengusap tangan kanan, maka sah dan boleh.</p>
+          <p>&nbsp;</p></ol>
+          <hr>
+          <h3 align="center">5. Sunnah - Sunnah Tayamum </h3>
+          <hr>
+          <p>Hal yang disunatkan dalam tayamum ada tiga hal :</p>
+          <ol>
+		  <li> membaca basmalah.</p>
+          <li>mendahulukan tangan kanan atas tangan kiri. Dan mendahulukan wajah bagian atas serta mengakhirkan wajah bagian bawah.</p>
+          <li> berturut-turut. Arti berturut-turut sudah kami jelaskan dalam bab wudhu.</p></ol>
+          <p>Kesunatan tayamum lainnya tersebut dalam kitab-kitab besar. Di antaranya melepaskan cincin dari tangan pada pukulan pertama. Pada pukulan kedua cincin harus dilepaskan.</p>
+  <p>&nbsp;</p>
+          <hr>
+          <h3 align="center">6. Perkara - Perkara yang Membatalkan Tayamum </h3>
+          <hr>
+          <p>Hal yang menyebabkan batalnya tayamum ada tiga :</p>
+          <ol>
+		  <li><strong>Pertama</strong> : segala hal yang membatalkan wudhu. Hal ini sudah kami jelaskan dalam bab penyebab hadas atau pembatal wudhu. Jika seseorang tayamum, lalu hadas, maka tayamumnya batal.<br>
+            <li><strong>Kedua</strong> : melihat air di luar eaktu shalat. Jika seseorang melakukan tayamum, kemudian melihat air atau mengira ada air</p>
+          <p>sebelum melakukan shalat, maka tayamumnya batal. Jika dia melihatnya setelah masuk dalam shalat, sedangkan di tempat dia shalat memang biasanya tidak ada air, maka shalatnya batal seketika. Jika tempat di mana dia shalat biasanya memang tidak ada air, maka shalatnya tidak batal, baik sunat atau fardhu.</p>
+          <p>Jika penyebab tayamum adalah penyakit atau sejenisnya, lalu melihat air, maka tidak batal sama sekali.</p>
+          <li><strong>Ketiga</strong> : murtad. Yaitu keluar dari agama Islam.</p></ol>
+          <p>&nbsp;</p>
+          <hr>
+          <h3 align="center">7. Tayamumnya Orang yang Diperban </h3>
+          <hr>
+          <p>Jika tidak bisa menggunakan air dalam suatu anggota badan dan anggota badan itu tidak ada pembalutnya, maka harus membasuh anggota badan yang bisa dibasuh dan tayamum lengkap. Tidak ada tertib dan urutan antara tayamum dan basuhan itu bagi orang mandi. Namun dalam wudhu, tayamum tersebut harus dilakukan pada saat tiba saat membasuh anggota badan itu.</p>
+          <p>Jika pada anggota badan di atas ada pembalutnya, maka caranya dia wudhu jika balut tidak bisa dilepas karena berbahaya adalah dengan mengusap balut dan tayamum lengkap. Setelah itu dia boleh shalat dan tidak wajib mengulanginya di saat lain jika dia meletakkan balut tersebut dalam keadaan suci dan balut tidak berada di anggota badan yang ditayamumi. Jika tidak demikian, maka dia harus mengulangi shalatnya. Demikian penjelasan Syekh Nawawi dalam kitab Ar Raudhah. Namun dalam kitab Majmuk Nawawi menjelaskan: “Perkataan kebanyakan ulama menunjukkan tidak ada perbedaan.” Yakni antara anggota badan yang ditayamumi dan yang tidak.</p>
+          <p>Balut dengan hukum di atas ada syaratnya. Yaitu hanya mengena bagian yang harus dikenai demi suksesnya pemasangan balut itu.</p>
+          <p>&nbsp;</p>
+          <hr>
+          <h3 align="center">8. Catatan Penting </h3>
+          <hr>
+          <p>Untuk satu shalat fardhu harus satu tayamum, baik shalat fardhu lima waktu atau shalat nadzar. Tidak sah satu tayamum untuk dua shalat fardhu. Demikian juga tidak sah satu tayamum untuk satu shalat fardhu dan satu thawaf. Dua thawaf juga tidak boleh dilakukan dengan satu tayamum. Shalat Jum’at dan khutbahnya juga harus dua tayamum. Jika istri tayamum dengan tujuan agar bisa ditiduri oleh suaminya, maka dia boleh menggunakan tayamum itu untuk shalat.</p>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

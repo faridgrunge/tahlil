@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>TAFSIR SURAH YASIN AYAT 8 - 12</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+
+<p class="arab">{إِنَّا جَعَلْنَا فِي أَعْنَاقِهِمْ أَغْلالا فَهِيَ إِلَى الأذْقَانِ فَهُمْ مُقْمَحُونَ (8) وَجَعَلْنَا مِنْ بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَاهُمْ فَهُمْ لَا يُبْصِرُونَ (9) وَسَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ لَا يُؤْمِنُونَ (10) إِنَّمَا تُنْذِرُ مَنِ اتَّبَعَ الذِّكْرَ وَخَشِيَ الرَّحْمَنَ بِالْغَيْبِ فَبَشِّرْهُ بِمَغْفِرَةٍ وَأَجْرٍ كَرِيمٍ (11) إِنَّا نَحْنُ نُحْيِي الْمَوْتَى وَنَكْتُبُ مَا قَدَّمُوا وَآثَارَهُمْ وَكُلَّ شَيْءٍ أحْصَيْنَاهُ فِي إِمَامٍ مُبِينٍ (12) }</p>
+<p ><em>Sesungguhnya Kami telah memasang belenggu di leher mereka, lalu tangan mereka </em>(diangkat) <em>ke dagu, maka karena itu mereka tertengadah. Dan Kami adakan di hadapan mereka dinding dan di belakang mereka dinding </em>(pula) <em>dan Kami tutup </em>(mata) <em>mereka sehingga mereka tidak dapat melihat. Sama saja bagi mereka apakah kamu memberi peringatan kepada mereka ataukah kamu tidak memberi peringatan kepada mereka, mereka tidak akan beriman. Sesungguhnya kamu hanya memberi peringatan kepada orang-orang yang mau mengikuti peringatan dan yang takut kepada Tuhan Yang Maha Pemurah, walaupun dia tidak melihatnya. Maka berilah mereka kabar gembira dengan ampunan dan pahala yang mulia. Sesungguhnya Kami menghidupkan orang-orang mati dan Kami menuliskan apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. Dan segala sesuatu Kami kumpulkan dalam Kitab induk yang nyata </em>(Lauh Mahfuz).</p>
+<p >Allah Swt. berfirman, "Sesungguhnya Kami menjadikan perumpamaan mereka yang telah dipastikan oleh Kami sebagai orang-orang yang celaka dalam hal mencapai petunjuk, sama dengan orang yang lehernya dibelenggu, lalu kedua tangannya disatukan dengan lehernya dalam belenggu itu sehingga kepalanya terangkat dan tidak dapat berbuat sesuatu apa pun." Karena itulah disebutkan oleh firman-Nya:</p>
+<p class="arab">{فَهُمْ مُقْمَحُونَ}</p>
+<p ><em>maka karena itu mereka tertengadah. </em>(Yasin: 8)</p>
+<p ><em>Al-muqmah </em>artinya orang yang terangkat kepalanya, seperti yang dikatakan oleh Ummu Zari' dalam ucapannya, "Saya minum dengan menengadahkan kepala," maksudnya dia minum hingga kenyang dengan menengadahkan kepalanya agar air mudah masuk dan menyegarkan. Dan sudah dianggap cukup hanya menyebut 'belenggu pada leher' tanpa menyebut 'kedua tangan', sekalipun pada kenyataannya kedua tangan pun dibelenggu pula menjadi satu dengan leher. Sebagaimana pengertian yang terdapat di dalam perkataan seorang penyair, yaitu:</p>
+<p class="arab">فَمَا أدْري إذَا يَمَّمْتُ أرْضًا ... أُرِيدُ الخَيْرَ أَيُّهُمَا يَليني ...</p>
+<p class="arab">أالْخَيْرُ الَّذِي أنَا أبْتَغيه ... أَمِ الشَّرّ الَّذِي لَا يَأتَليني ...</p>
+<p ><em>Aku</em> <em>mengetahui bila menuju suatu tempat untuk mencari kebaikan, manakah di antara keduanya </em>(baik atau <em>buruk) yang akan kuperoleh. </em></p>
+<p ><em>Apakah kebaikan yang menjadi tujuanku yang akan kuperoleh ataukah keburukan yang tidak kuinginkan yang akan kuperoleh.</em></p>
+<p >Dalam bait pertama hanya disebutkan kebaikan, tanpa menyebutkan keburukan, dan sudah cukup dimengerti dari konteks kalimatnya. Demikian pula halnya pengertian dalam ayat ini, mengingat belenggu itu hanya dipakai untuk mengikat kedua tangan bersama dengan leher, maka dianggap cukup hanya dengan menyebutkan leher saja tanpa kedua tangan, karena pengertiannya sudah termasuk di dalamnya.</p>
+<p >Al-Aufi telah meriwayatkan dari Ibnu Abbas r.a. sehubungan dengan makna firman-Nya: <em>Sesungguhnya Kami telah memasang belenggu di leher mereka, lalu tangan mereka </em>(diangkat) <em>ke dagu, maka karena itu mereka tertengadah. </em>(Yasin: 8) Bahwa ayat ini semakna dengan ayat lain yang mengatakan: <em>Dan janganlah kamu jadikan tanganmu terbelenggu pada lehermu. </em>(Al-Isra: 29) Yakni tangan mereka terikat ke leher mereka sebagai kata kiasan yang menunjukkan bahwa tangan mereka tidak mau diulurkan untuk memberi kebaikan.</p>
+<p >Mujahid mengatakan sehubungan dengan makna firman-Nya: <em>maka karena itu mereka tertengadah. </em>(Yasin: 8) Mereka menengadahkan kepalanya, sedangkan tangan mereka diletakkan di mulut mereka dan mereka terbelenggu tidak mendapatkan kebaikan apa pun.</p>
+<p >************</p>
+<p >Firman Allah Swt.:</p>
+<p class="arab">{وَجَعَلْنَا مِنْ بَيْنِ أَيْدِيهِمْ سَدًّا}</p>
+<p ><em>Dan Kami adakan di hadapan mereka dinding dan di belakang mereka dinding. </em>(Yasin: 9)</p>
+<p >Menurut Mujahid, dinding itu menutupi mereka dari kebenaran sehingga mereka kebingungan, yang menurut Qatadah disebutkan berada dalam kesesatan.</p>
+<p >Firman Allah Swt.:</p>
+<p class="arab">{فَأَغْشَيْنَاهُمْ}</p>
+<p ><em>dan kami tutup </em>(mata) <em>mereka. </em>(Yasin: 9)</p>
+<p >Yakni Kami tutup mata mereka dari kebenaran.</p>
+<p class="arab">{فَهُمْ لَا يُبْصِرُونَ}</p>
+<p ><em>sehingga mereka tidak dapat melihat. </em>(Yasin: 9)</p>
+<p >Maksudnya, tidak dapat mengambil manfaat dari kebaikan dan tidak mendapat petunjuk untuk menempuh jalan kebaikan.</p>
+<p >Ibnu Jarir mengatakan, telah diriwayatkan seterusnya dari Ibnu Abbas, bahwa ia membaca ayat ini dengan bacaan "فَأَعْشَيْنَاهُمْ" dengan memakai huruf <em>'ain </em>bukan <em>gin, </em>berasal dari akar kata <em>al-asya </em>yang artinya suatu penyakit yang mengenai mata.</p>
+<p >Abdur Rahman ibnu Zaid ibnu Aslam mengatakan bahwa Allah Swt. menjadikan dinding ini antara mereka dan Islam serta iman, karenanya mereka tidak dapat menembusnya. Lalu Abdur Rahman ibnu Zaid ibnu Aslam membaca firman-Nya:</p>
+<p class="arab">{إِنَّ الَّذِينَ حَقَّتْ عَلَيْهِمْ كَلِمَةُ رَبِّكَ لَا يُؤْمِنُونَ وَلَوْ جَاءَتْهُمْ كُلُّ آيَةٍ حَتَّى يَرَوُا الْعَذَابَ الألِيمَ}</p>
+<p ><em>Sesungguhnya orang-orang yang telah pasti terhadap mereka kalimat Tuhanmu, tidaklah akan beriman, meskipun datang kepada mereka segala macam keterangan, hingga mereka menyaksikan azab yang pedih. </em>(Yunus: 96-97)</p>
+<p >Kemudian ia mengatakan bahwa orang yang telah dicegah oleh Allah Swt. pasti tidak mampu.</p>
+<p >Ikrimah mengatakan, bahwa Abu Jahal pernah berkata, "Sekiranya aku melihat Muhammad, sungguh aku akan melakukan anu dan anu." Maka turunlah firman Allah Swt.: <em>Sesungguhnya Kami telah memasang belenggu di leher mereka </em>(Yasin: 8) sampai dengan firman-Nya: <em>sehingga mereka tidak dapat melihat. </em>(Yasin: 9). Ikrimah melanjutkan, bahwa mereka mengatakan, "Inilah Muhammad." Tetapi Abu Jahal bertanya, Mana dia, mana dia ?" Ternyata dia tidak dapat melihatnya. Demikianlah menurut riwayat Ibnu Jarir.</p>
+<p >Muhammad ibnu Ishaq mengatakan, telah menceritakan kepadaku Yazid ibnu Ziad dari Muhammad ibnu Ka'b yang mengatakan, bahwa Abu Jahal pernah berkata saat mereka sedang duduk, "Sesungguhnya Muhammad mengira bahwa jika kalian mengikutinya, pastilah kalian akan menjadi raja-raja. Dan apabila kalian telah mati, maka kelak akan dibangkitkan hidup kembali sesudah mati kalian, lalu kalian akan mendapatkan taman-taman surga yang lebih baik daripada taman-taman negeri Yordan. Dan jika kalian menentangnya, maka kalian akan disembelih olehnya (yakni dibunuh), kemudian kalian dibangkitkan sesudah mati kalian dan kalian akan mendapat neraka tempat kalian disiksa di dalamnya. Lalu Rasulullah Saw. saat itu keluar menyambut mereka, sedangkan di tangan beliau Saw. terdapat segenggam pasir, dan Allah Swt. telah menutup pandangan mereka dari Nabi Saw., maka Nabi Saw. menabur&shy;kan pasir itu di atas kepala mereka seraya membaca firman-Nya <em>Ya sin. Demi Al-Qur&rsquo;an yang penuh hikmah. </em>(Yasin: 1-2) sampai dengan firman-Nya: <em>Dan Kami adakan di hadapan mereka dinding dan di belakang mereka dinding </em>(pula), <em>dan Kami tutup </em>(mata) <em>mereka sehingga mereka tidak dapat melihat. </em>(Yasin: 9); Sedangkan Rasulullah Saw. pergi menunaikan keperluannya, dan mereka semalaman mengincar keluarnya Nabi Saw. di depan pintu rumahnya, sehingga keluarlah seseorang sesudah itu dari pintu yang dipakai keluar oleh Nabi Saw. dari rumah beliau Saw., lalu orang itu bertanya keheranan, "Sedang apa kalian di sini?" Mereka menjawab, "Kami sedang menunggu Muhammad." Orang tersebut menjawab, "Dia telah keluar melalui kalian, dan tiada seorang pun dari kalian, melainkan Nabi Saw. telah meletakkan pasir di atas kepalanya, lalu beliau pergi menuju ke tempat keperluannya." Maka tiap-tiap orang dari mereka menepiskan debu dari kepalanya. Ikrimah melanjutkan kisahnya, bahwa akhirnya sampai kepada Nabi Saw. perkataan Abu Jahal tersebut. Maka beliau bersabda:</p>
+<p class="arab">"وَأَنَا أَقُولُ ذَلِكَ: إِنَّ لَهُمْ مِنِّي لَذَبْحًا، وَإِنَّهُ أَحَدُهُمْ"</p>
+<p ><em>Dan aku akan menegaskan hal tersebut, bahwa sesungguhnya aku akan membunuh mereka dan sesungguhnya aku benar-benar akan menghukum mereka</em></p>
+<p >**************</p>
+<p >Firman Allah Swt.:</p>
+<p class="arab">{وَسَوَاءٌ عَلَيْهِمْ أَأَنْذَرْتَهُمْ أَمْ لَمْ تُنْذِرْهُمْ لَا يُؤْمِنُونَ}</p>
+<p ><em>Sama saja bagi mereka apakah kamu memberi peringatan kepada mereka ataukah kamu tidak memberi peringatan kepada mereka, mereka tidak akan beriman. </em>(Yasin: 10)</p>
+<p >Allah telah memastikan kesesatan atas diri mereka, karenanya tidak ada faedahnya lagi peringatan untuk mereka dan mereka tidak akan terpengaruh oleh peringatan. Hal yang semisal telah disebutkan di dalam tafsir surat Al-Baqarah; dan ayat ini semakna dengan apa yang disebutkan dalam ayat lain melalui firman-Nya:</p>
+<p class="arab">{إِنَّ الَّذِينَ حَقَّتْ عَلَيْهِمْ كَلِمَةُ رَبِّكَ لَا يُؤْمِنُونَ * وَلَوْ جَاءَتْهُمْ كُلُّ آيَةٍ حَتَّى يَرَوُا الْعَذَابَ الألِيمَ}</p>
+<p ><em>Sesungguhnya orang-orang yang telah pasti terhadap mereka kalimat Tuhanmu, tidaklah akan beriman, meskipun datang kepada mereka segala macam keterangan, hingga mereka menyaksikan azab yang pedih. </em>(Yunus: 96-97)</p>
+<p >***********</p>
+<p >Adapun firman Allah Swt.:</p>
+<p class="arab">{إِنَّمَا تُنْذِرُ مَنِ اتَّبَعَ الذِّكْرَ}</p>
+<p ><em>Sesungguhnya kamu hanya memberi peringatan kepada orang-orang yang mau mengikuti peringatan. </em>(Yasin: 11)</p>
+<p >Sesungguhnya orang-orang yang mengambil manfaat dari peringatanmu hanyalah orang-orang yang beriman, yaitu mereka yang mau mengikuti peringatan itu alias Al-Qur'an.</p>
+<p class="arab">وَخَشِيَ الرَّحْمَنَ بِالْغَيْبِ</p>
+<p ><em>dan yang takut kepada Tuhan Yang Maha Pemurah, walaupun dia tidak melihat-Nya. </em>(Yasin: 11)</p>
+<p >Yakni manakala tiada seorang pun yang melihatnya selain hanya Allah Swt., karena ia mengetahui bahwa Allah Swt. Maha Melihat kepadanya dan Maha Mengetahui segala yang diperbuatnya</p>
+<p class="arab">{فَبَشِّرْهُ بِمَغْفِرَةٍ}</p>
+<p ><em>Maka berilah mereka kabar gembira dengan ampunan dan pahala yang mulia. </em>(Yasin: 11)</p>
+<p >Yaitu ampunan dari dosa-dosanya dan pahala yang banyak, luas, baik, dan indah. Semakna dengan apa yang disebutkan oleh firman-Nya:</p>
+<p class="arab">{إِنَّ الَّذِينَ يَخْشَوْنَ رَبَّهُمْ بِالْغَيْبِ لَهُمْ مَغْفِرَةٌ وَأَجْرٌ كَبِيرٌ}</p>
+<p ><em>Sesungguhnya orang-orang yang takut kepada Tuhannya Yang tidak tampak oleh mereka, mereka akan memperoleh ampunan dan pahala yang besar. </em>(Al-Mulk: 12)</p>
+<p >************</p>
+<p >Adapun firman Allah Swt.:</p>
+<p class="arab">{إِنَّا نَحْنُ نُحْيِي الْمَوْتَى}</p>
+<p ><em>Sesungguhnya Kami menghidupkan orang-orang mati. </em>(Yasin: 12)</p>
+<p >Yakni kelak di hari kiamat.</p>
+<p >Di dalam makna ayat terkandung isyarat yang menunjukkan bahwa Allah Swt. dapat menghidupkan hati orang yang dikehendaki-Nya dari kalangan orang-orang kafir yang hatinya telah mati karena kesesatan, maka Allah memberinya petunjuk kepada jalan yang benar sesudah itu. Sebagaimana yang disebutkan di dalam firman-Nya sesudah menerangkan tentang orang-orang yang hatinya keras:</p>
+<p class="arab">{اعْلَمُوا أَنَّ اللَّهَ يُحْيِي الأرْضَ بَعْدَ مَوْتِهَا قَدْ بَيَّنَّا لَكُمُ الآيَاتِ لَعَلَّكُمْ تَعْقِلُونَ}</p>
+<p ><em>Ketahuilah olehmu bahwa sesungguhnya Allah menghidupkan bumi sesudah matinya. Sesungguhnya Kami telah menjelaskan kepadamu tanda-tanda kebesaran </em>(Kami) <em>supaya kamu memikirkannya </em>(Al-Hadid: 17)</p>
+<p >**********</p>
+<p >firman Allah Swt.:</p>
+<p class="arab">{وَنَكْتُبُ مَا قَدَّمُوا}</p>
+<p ><em>dan Kami menuliskan apa yang telah mereka kerjakan. </em>(Yasin: 12)</p>
+<p >Yaitu semua amal perbuatan yang telah mereka kerjakan.</p>
+<p >Dan sehubungan dengan makna firman-Nya:</p>
+<p class="arab">{وَآثَارَهُمْ}</p>
+<p ><em>dan bekas-bekas yang mereka tinggalkan. </em>(Ya sin: 12)</p>
+<p >Ada dua pendapat yang mengenainya.</p>
+<p ><em>Pendapat pertama, </em>mengatakan bahwa Kami mencatat semua amal perbuatan yang telah mereka kerjakan, juga jejak-jejak mereka yang dijadikan suri teladan sesudah mereka tiada, maka Kami membalas amal perbuatan itu. Jika amal perbuatannya baik, maka balasannya baik; dan jika amal perbuatnnya buruk, maka balasannya buruk pula. Seperti yang disebutkan di dalam hadis Nabi Saw. yang mengatakan:</p>
+<p class="arab">"مَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً حَسَنَةً، كَانَ لَهُ أَجْرُهَا وَأَجْرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ، مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أُجُورِهِمْ شَيْئًا، ومَنْ سَنَّ فِي الْإِسْلَامِ سُنَّةً سَيِّئَةً، كَانَ عَلَيْهِ وِزْرُهَا ووزرُ مَنْ عَمِلَ بِهَا مِنْ بَعْدِهِ، مِنْ غَيْرِ أَنْ يَنْقُصَ مِنْ أَوْزَارِهِمْ شَيْئًا".</p>
+<p ><em>Barang siapa yang mengerjakan suatu sunnah </em>(perbuatan) <em>baik, maka ia memperoleh pahalanya dan juga pahala dari orang-orang yang mengikuti jejaknya sesudah ia tiada, tanpa mengurangi pahala mereka barang sedikit pun. Dan barang siapa yang mengerjakan suatu perbuatan buruk, maka ia akan mendapatkan dosanya dan juga dosa orang-orang yang mengikuti jejaknya sesudah ia tiada tanpa mengurangi dosa-dosa mereka barang sedikit pun.</em></p>
+<p >Imam Muslim meriwayatkannya melalui Syu'bah, dari Aun ibnu Abu Juhaifah, dari Al-Munzir ibnu Jarir, dari ayahnya, dari Jarir ibnu Abdullah Al-Bajali r.a. Di dalamnya terdapat kisah orang-orang Mudar yang memetik buah-buahan.</p>
+<p >Ibnu Abu Hatim meriwayatkannya dari ayahnya, dari Yahya ibnu Sulaiman Al-Ju'fi, dari Abul Muhayya alias Yahya ibnu Ya'la, dari Abdul Malik ibnu Umair, dari Jarir ibnu Abdullah r.a., lalu disebutkan hal yang semisal dengan panjang lebar, kemudian ia membaca firman-Nya: <em>dan Kami menuliskan apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. </em>(Yasin: 12)</p>
+<p >Imam Muslim meriwayatkannya melalui Abu Uwwanah, dari Abdul malik ibnu Umair ibnul Munzir ibnu Jarir, dari ayahnya, lalu disebutkan hadis yang semisal.</p>
+<p >Hal yang sama dinyatakan di dalam hadis lain yang berada di dalam kitab <em>Sahih Muslim </em>melalui Abu Hurairah r.a. yang mengatakan bahwa Rasulullah Saw. pernah bersabda:</p>
+<p class="arab">"إِذَا مَاتَ ابْنُ آدَمَ، انْقَطَعَ عَمَلُهُ إِلَّا مِنْ ثَلَاثٍ: مِنْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ، أَوْ صَدَقَةٍ جَارِيَةٍ مِنْ بَعْدِهِ".</p>
+<p ><em>Apabila anak Adam mati, terputuslah amalnya kecuali tiga perkara, yaitu ilmu yang bermanfaat, atau anak saleh yang mendoakannya, atau sedekah jariyah </em>(yang terus mengalir pahalanya) <em>sesudah ia tiada.</em></p>
+<p >Sufyan As-Sauri telah meriwayatkan dari Abu Sa'id r.a. yang telah mengatakan bahwa ia pernah mendengar Mujahid mengatakan sehubungan dengan makna firman-Nya: <em>Sesungguhnya Kami menghidupkan orang-orang mati dan Kami menuliskan apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. </em>(Yasin: 12) bahwa makna yang dimaksud ialah kesesatan yang mereka tinggalkan.</p>
+<p >Ibnu Lahi'ah telah meriwayatkan dari Ata ibnu Dinar, dari Sa'id ibnu Jubair sehubungan dengan makna firman-Nya: <em>dan Kami menuliskan apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. </em>(Yasin: 12) Yakni bekas-bekas yang mereka tinggalkan, dengan kata lain suatu amal perbuatan yang jejaknya diikuti oleh orang lain sesudah ia tiada. Maka jika bekas-bekas itu baik, maka pelaku pertamanya mendapat pahala yang semisal dengan orang-orang yang mengikuti jejaknya tanpa mengurangi pahala mereka barang sedikit pun. Dan jika hal itu berupa perbuatan buruk, maka pelaku pertamanya mendapatkan dosa yang sama dengan orang-orang yang mengiktui jejaknya, tanpa mengurangi dosa-dosa mereka barang sedikit pun. Kedua riwayat ini diketengahkan oleh Ibnu Abu Hatim dan dipilih oleh Al-Bagawi.</p>
+<p ><em>Pendapat yang kedua, </em>mengatakan bahwa makna yang dimaksud ialah langkah-langkah mereka menuju kepada amal ketaatan atau kemaksiatan.</p>
+<p >Ibnu Abu Najih dan lain-lainnya telah meriwayatkan dari Mujahid sehubungan dengan makna firman-Nya: <em>apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. </em>(Yasin: 12) Yaitu langkah-langkah mereka.</p>
+<p >Hal yang sama dikatakan oleh Al-Hasan dan Qatadah, bahwa yang dimaksud dengan <em>atsarahum </em>(bekas-bekas mereka) adalah langkah-langkah mereka. Qatadah mengatakan bahwa seandainya Allah melupakan sesuatu dari keadaanmu, hai anak Adam, tentulah Dia melupakan sebagian dari jejak-jejak ini yang telah terhapus oleh angin. Akan tetapi, Dia mencatat terhadap anak Adam semua jejak dan amal perbuatannya, sehingga Dia pun mencatat langkah-langkahnya yang dipakainya untuk ketaatan kepada Allah atau kedurhakaan terhadap&shy;Nya. Maka barang siapa di antara kalian yang mampu mencatat jejaknya dalam ketaatan kepada Allah, hendaklah ia melakukannya. Sehubungan dengan pengertian ini ada banyak hadis yang mengutarakan hal yang semakna, seperti yang diterangkan berikut:</p>
+<p ><u>Hadis pertama, </u></p>
+<p class="arab">قَالَ الْإِمَامُ أَحْمَدُ: حَدَّثَنَا عَبْدُ الصَّمَدِ، حَدَّثَنَا أَبِي، حَدَّثَنَا الجُرَيْري، عَنْ أَبِي نَضْرَة، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ قَالَ: خَلَتِ الْبِقَاعُ حَوْلَ الْمَسْجِدِ، فَأَرَادَ بَنُو سَلَمَةَ أَنْ يَنْتَقِلُوا قُرْبَ الْمَسْجِدِ، فَبَلَغَ ذَلِكَ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ، فَقَالَ لَهُمْ: "إِنَّهُ بَلَغَنِي أَنَّكُمْ تُرِيدُونَ أَنْ تَنْتَقِلُوا قُرْبَ الْمَسْجِدِ". قَالُوا: نَعَمْ، يَا رَسُولَ اللَّهِ، قَدْ أَرَدْنَا ذَلِكَ. فَقَالَ: "يَا بَنِي سَلَمَةَ، دِيَارَكُمْ تُكْتَبْ آثَارُكُمْ، دِيَارَكُمْ تُكْتَبْ آثَارُكُمْ".</p>
+<p >Imam Ahmad mengatakan, telah menceritakan kepada kami Abdus Samad, telah menceritakan kepada kami ayahku, telah menceritakan kepada kami Al-Jariri, dari Abu Nadrah, dari Jabir ibnu Abdullah r.a. yang menceritakan bahwa tanah di sekitar Masjid Nabawi kosong, maka Bani Salamah bermaksud akan pindah tempat ke dekat Masjid Nabawi. Ketika berita itu terdengar oleh Rasulullah Saw., maka beliau bersabda kepada mereka: <em>'Sesungguhnya telah sampai berita kepadaku bahwa kalian bermaksud akan pindah tempat ke dekat masjid?&rdquo; </em>Mereka menjawab, "Benar, wahai Rasulullah, kami bermaksud akan pindah" Maka beliau Saw. bersabda,<em> "Hai Bani Salamah, tetaplah di tempat kalian, niscaya langkah-langkah kalian akan dituliskan; tetaplah di tempat kalian, niscaya langkah-langkah kalian akan dituliskan </em>(oleh Allah)."</p>
+<p >Hal yang sama telah diriwayatkan oleh Imam Muslim melalui hadis Sa'id Al-Jariri dan Kahmas ibnul Hasan, yang keduanya dari Abu Nadrah yang nama aslinya adalah Al-Munzir ibnu Malik ibnu Qit'ah Al-Abdi, dari Jabir r.a. dengan sanad yang sama.</p>
+<p ><u>Hadis kedua, </u></p>
+<p class="arab">قَالَ ابْنُ أَبِي حَاتِمٍ: حَدَّثَنَا مُحَمَّدُ بْنُ الْوَزِيرِ الْوَاسِطِيُّ، حَدَّثَنَا إِسْحَاقُ الْأَزْرَقُ، عَنْ سُفْيَانَ الثَّوْرِيِّ، عَنْ أَبِي سُفْيَانَ، عَنْ أَبِي نَضْرَةَ، عَنْ أَبِي سَعِيدٍ الْخُدْرِيِّ قَالَ: كَانَتْ بَنُو سلَمة فِي نَاحِيَةٍ مِنَ الْمَدِينَةِ، فَأَرَادُوا أَنْ يَنْتَقِلُوا إِلَى قَرِيبٍ مِنَ الْمَسْجِدِ، فَنَزَلَتْ: {إِنَّا نَحْنُ نُحْيِي الْمَوْتَى وَنَكْتُبُ مَا قَدَّمُوا وَآثَارَهُمْ} فَقَالَ لَهُمُ النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: "إِنَّ آثَارَكُمْ تُكْتبُ". فَلَمْ يَنْتَقِلُوا.</p>
+<p >Ibnu Abu Hatim mengatakan, telah menceritakan kepada kami Muhammad ibnul Wazir Al-Wasiti, telah menceritakan kepada kami Ishaq ibnul Azraq, dari Sufyan, dari Abu Nadrah, dari Abu Sa'id Al-Khudri r.a. yang mengatakan, bahwa dahulu Bani Salamah bermaksud akan pindah ke tempat yang berdekatan dengan masjid, karena mereka tinggal di pinggiran kota Madinah. Maka turunlah ayat ini, yaitu firman Allah Swt.: <em>Sesungguhnya Kami menghidupkan orang-orang mati dan Kami menuliskan apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. </em>(Yasin: 12) Maka Rasulullah Saw. bersabda kepada mereka: <em>Sesungguhnya jejak langkah-langkah kalian dituliskan </em>(oleh Allah pahalanya). Akhirnya mereka tidak jadi pindah;</p>
+<p >Imam Turmuzi di dalam kitab tafsirnya meriwayatkan hadis ini secara tunggal melalui Muhammad ibnul Wazir dengan sanad yang sama. Kemudian ia mengatakan bahwa predikat hadis <em>garib hasan </em>bila melalui hadis Sufyan As-Sauri. Ibnu Jarir meriwayatkan dari Sulaiman ibnu Umar ibnu Khalid Ar-Ruqi, dari Ibnul Mubarrak, dari Sufyan As-Sauri, dari Tarif alias Ibnu Syihab Abu Sufyan As-Sa'di, dari Abu Nadrah dengan sanad yang sama.</p>
+<p >Telah diriwayatkan pula bukan melalui Sufyan As-Sauri. Untuk itu Al-Hafiz Abu Bakar Al-Bazzar mengatakan: Telah menceritakan kepada kami Abbad ibnu Ziad As-Saji, telah menceritakan kepada kami Usman ibnu Umar, telah menceritakan kepada kami Syu'bah, dari Sa'id Al-Jariri, dari Abu Nadrah, dari Abu Sa'id r.a. yang mengatakan bahwa sesungguhnya Bani Salamah mengadu kepada Rasulullah Saw. tentang tempat tinggal mereka yang jauh dari masjid. Maka turunlah ayat berikut, yaitu firman Allah Swt.: <em>dan Kami menuliskan apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. </em>(Yasin: 12). Akhirnya mereka tetap berada di tempat tinggalnya, tidak jadi pindah.</p>
+<p >Dan telah menceritakan kepada kami Muhammad ibnul Musanna, telah menceritakan kepada kami Abdul A'la, telah menceritakan kepada kami Al-Jariri, dari Abu Nadrah, dari Abu Sa'id r.a., dari Nabi Saw., lalu disebutkan hal yang semisal, tetapi di dalamnya terkandung hal yang aneh, karena dipandang dari segi penuturan latar belakang turunnya ayat ini, padahal semua ayat yang ada di dalam surat ini Makkiyyah. Hanya Allah-lah Yang Maha Mengetahui.</p>
+<p ><u>Hadis ketiga, </u></p>
+<p >Ibnu Jarir mengatakan, telah menceritakan kepada kami Nasr ibnu Al-Jahdami, telah menceritakan kepada kami Abu Ahmad Az-Zubairi, telah menceritakan kepada kami Israil, dari Sammak, dari Ikrimah, dari Ibnu Abbas r.a. yang mengatakan bahwa dahulu tempat-tempat tinggal kaum Ansar berjauhan dengan masjid, lalu mereka beimaksud pindah ke dekat Masjid Nabawi. Maka turunlah ayat berikut, yaitu firman Allah Swt.: <em>dan Kami menuliskan apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. </em>(Yasin: 12); Akhirnya mereka berkata, "Kami akan tetap tinggal di tempat kami semula."</p>
+<p >Hal yang sama telah diriwayatkan oleh Ibnu Jarir, tetapi tidak ada tanda sesuatu pun yang menunjukkan <em>ke-marfu </em>'-annya.</p>
+<p >Imam Tabrani meriwayatkannya dari Abdullah ibnu Muhammad ibnu Sa'id ibnu Abu Maryam, dari Muhammad ibnu Yusuf Al-Faryabi, dari Israil, dari Sammak, dari Sa'id ibnu Jubair, dari Ibnu Abbas r.a. yang mengatakan bahwa rumah orang-orang Ansar jauh dari masj id. Maka mereka berniat akan pindah ke dekat masjid, lalu turunlah firman Allah Swt.: <em>dan Kami menuliskan apa yang telah mereka kerjakan dan bekas-bekas yang mereka tinggalkan. </em>(Yasin: 12); Akhirnya mereka tetap di tempat tinggal semula.</p>
+<p ><u>Hadis keempat, </u></p>
+<p class="arab">قَالَ الْإِمَامُ أَحْمَدُ: حَدَّثَنَا حَسَنٌ، حَدَّثَنَا ابْنُ لَهِيعَة، حَدَّثَنِي حُيَيّ بْنُ عَبْدِ اللَّهِ، عَنْ أَبِي عَبْدِ الرَّحْمَنِ الحُبُلي، عَنْ عَبْدِ اللَّهِ بْنِ عَمْرٍو قَالَ: تُوُفِّيَ رَجُلٌ بِالْمَدِينَةِ، فَصَلَّى عَلَيْهِ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَقَالَ: "يَا لَيْتَهُ مَاتَ فِي غَيْرِ مَوْلِدِهِ". فَقَالَ رَجُلٌ مِنَ النَّاسِ وَلِمَ يَا رَسُولَ اللَّهِ؟ فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: "إِنَّ الرَّجُلَ إِذَا تُوُفِّيَ فِي غَيْرِ مَوْلِدِهِ، قِيس لَهُ مِنْ مَوْلِدِهِ إلى منقطع أثره فِي الْجَنَّةِ".</p>
+<p >Imam Ahmad mengatakan, telah menceritakan kepada kami Hasan, telah menceritakan kepada kami Ibnu Lahi'ah telah menceritakan kepadaku Huyay ibnu Abdullah, dari Abu Abdur Rahman Al-Habli, dari Abdullah ibnu Amr r.a. yang menceritakan bahwa pernah ada seorang lelaki meninggal dunia di Madinah. Maka Nabi Saw. menyalatkan jenazahnya, lalu beliau bersabda: <em>Seandainya saja dia meninggal dunia bukan di tempat kelahirannya. </em>Maka ada seseorang yang bertanya, "Mengapa begitu, wahai Rasulullah?" Rasulullah Saw. menjawab: <em>Sesungguhnya seseorang itu apabila meninggal dunia bukan di tempat kelahirannya, maka akan dilakukan pengukuran baginya dari tempat kelahirannya hingga batas akhir dari jejaknya </em>(sebagai tempat tinggalnya nanti) <em>di dalam surga.</em></p>
+<p >Imam Nasai meriwayatkannya dari Yunus ibnu Abdul A'la, sedangkan Ibnu Majah meriwayatkannya dari Harmalah. Keduanya meriwayatkan&shy;nya dari Ibnu Wahb, dari Huyay ibnu Abdullah dengan sanad yang sama.</p>
+<p >Ibnu Jarir mengatakan, telah menceritakan kepada kami Ibnu Humaid, telah menceritakan kepada kami Abu Namilah, telah menceritakan kepada kami Al-Husain, dari Sabit yang mengatakan bahwa ia berjalan bersama Anas r.a., lalu ia melangkahkan kakinya dengan cepat, maka Anas memegang tangannya dan akhirnya kami berdua berjalan dengan langkah-langkah biasa. Setelah kami menyelesaikan salat kami, maka Anas berkata, "Saya pernah berjalan bersama Zaid ibnu Sabit r.a., lalu saya berjalan dengan langkah yang cepat. Maka Zaid ibnu Sabit berkata kepadaku, Hai Anas, tidakkah kamu merasakan bahwa langkah-langkah itu dicatat (pahalanya oleh Allah)?"</p>
+<p >Pendapat ini pada garis besarnya tidak bertentangan dengan pendapat yang pertama, balikan dalam pendapat yang kedua ini terkandung peringatan dan dalil yang menunjukkan kepada pendapat yang pertama dengan skala prioritas. Dengan kata lain, dapat disebutkan bahwa apabila langkah-langkah saja ditulis pahalanya, maka terlebih lagi jejak-jejak kebaikan yang di kemudian hari dijadikan suri teladan oleh orang lain. Begitu pula sebaliknya, jika jejak-jejak atau langkah-langkah itu untuk tujuan keburukan, maka balasannya akan buruk pula. Hanya Allah-lah Yang Maha Mengetahui.</p>
+<p >**********</p>
+<p >Firman Allah Swt.:</p>
+<p class="arab">{وَكُلَّ شَيْءٍ أحْصَيْنَاهُ فِي إِمَامٍ مُبِينٍ}</p>
+<p ><em>Dan segala sesuatu Kami kumpulkan dalam Kitab Induk yang nyata. </em>(Yasin: 12)</p>
+<p >Yakni semua yang ada dicatat di dalam kitab secara rinci lagi tepat, yaitu di Lauh Mahfuz. Yang dimaksud dengan <em>Imamul Mubin </em>dalam ayat ini ialah induk dari kitab (Ummul Kitab), demikianlah menurut apa yang dikatakan oleh Mujahid, Qatadah, dan Abdur Rahman ibnu Zaid ibnu Aslam. Hal yang semakna disebutkan di dalam firman-Nya:</p>
+<p class="arab">{يَوْمَ نَدْعُوا كُلَّ أُنَاسٍ بِإِمَامِهِمْ}</p>
+<p >(Ingatlah) <em>suatu hari </em>(yang di hari itu) <em>Kami panggil tiap-tiap umat dengan pemimpinnya. </em>(Al-Isra: 71)</p>
+<p >Yang dimaksud dengan <em>imam </em>dalam ayat ini adalah kitab-kitab amal perbuatan mereka yang menjadi saksi atas mereka terhadap semua amal perbuatan yang telah mereka kerjakan selama di dunia, yaitu amal baik dan amal buruknya. Seperti juga yang disebutkan di dalam firman-Nya:</p>
+<p class="arab">{وَوُضِعَ الْكِتَابُ وَجِيءَ بِالنَّبِيِّينَ وَالشُّهَدَاءِ}</p>
+<p ><em>dan diberikanlah buku </em>(perhitungan perbuatan masing-masing) <em>dan didatangkanlah para nabi dan saksi-saksi. </em>(Az-Zumar: 69)</p>
+<p class="arab">{وَوُضِعَ الْكِتَابُ فَتَرَى الْمُجْرِمِينَ مُشْفِقِينَ مِمَّا فِيهِ وَيَقُولُونَ يَا وَيْلَتَنَا مَالِ هَذَا الْكِتَابِ لَا يُغَادِرُ صَغِيرَةً وَلا كَبِيرَةً إِلا أَحْصَاهَا وَوَجَدُوا مَا عَمِلُوا حَاضِرًا وَلا يَظْلِمُ رَبُّكَ أَحَدًا}</p>
+<p ><em>Dan diletakkanlah kitab, lalu kamu akan melihat orang-orang yang berdosa ketakutan terhadap apa yang </em>(tertulis) <em>di dalamnya, dan mereka berkata, "Aduhai, celaka kami, kitab apakah ini yang tidak meninggalkan yang kecil dan tidak </em>(pula) <em>yang besar, melainkan ia mencatat semuanya, " dan mereka dapati apa yang telah mereka kerjakan ada </em>(tertulis). <em>Dan Tuhanmu tidak menganiaya seorang jua pun.&rdquo; </em>(Al-Kahfi: 49)</p>
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

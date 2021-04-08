@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Maulid ad-Diba'i - Bagian 8</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">دُعَاء مَوْلِدُ اَلدِّيْبَعِى<br><br>
+
+اَلْحَمْدُ ِللّٰهِ رَبِّ الْعَالَمِيْنَ ۞ اَللّٰهُـمَّ صَلِّ وَسَلِّمْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَ عَلىٰ اٰلِهٖ وَصَحْبِهٖ أَجْمَعِيْن ۞ جَعَلَنَا اللّٰهُ وَإِيَاكُمْ مِمَّنْ يَسْتَوْجِبُ شَفَاعَتَهُ ۞ وَيَرْجُوْ بِذٰلِكَ رَحْمَتَهُ وَرَأْفَتَهُ ۞<br><br>
+
+أَللّٰهُمَّ بِحُرْمَةِ هٰذَا النَّبِيِّ الْكَرِيْمِ ۞ وَاٰلِهِ وَأَصْحَابِهِ السَّالِكِيْنَ عَلىٰ مَنْهَجِهِ الْقَوِيْمِ ۞ إِجْعَلْنَا مِنْ خِيَارِ أُمَّتِهٖ ۞ وَاسْتُرْنَا بِذَيْلِ حُرْمَتِهِ ۞ وَاحْشُـرْنَا غَدًا فِيْ زُمْرَتِهِ ۞<br><br>
+
+وَاسْتَعْمِلْ أَلْسِنَتَنَا فِيْ مَدْحِهٖ وَنُصْـرَتِهِ ۞ وَأَحْيِنَا مُتَمَسِّكِيْنَ بِسُنَّتِهِ وَطَاعَتِهِ ۞ وَأَمِتْنَا عَلىٰ حُبِّهٖ وَجَمَاعَتِهِ ۞<br><br>
+
+أَللّٰهُمَّ أَدْخِلْنَا مَعَهُ الْجَنَّةَ فَإِنَّهُ أَوَّلُ مَنْ يَدْخُلُهَا ۞ وَأَنْزِلْنَا مَعَهٗ فِيْ قُصُوْرِهَا ۞ فَإِنَّهُ أَوَّلُ مَنْ يَنْزِلُهَا ۞ وَارْحَمْنَا يَوْمَ يَشْفَعُ لِلْخَلَآئِقِ فَتَرْحَمُهَا ۞<br><br>
+
+أَللّٰهُمَّ ارْزُقْنَا زِيَارَتَهٗ فِيْ كُلِّ سَنَةٍ ۞ وَلَا تَجْعَلْنَا مِنَ الْغَافِلِيْنَ عَنْكَ وَلَا عَنْهُ قَدْرَ سِنَةٍ ۞<br><br>
+
+أَللّٰهُمَّ لَا تَجْعَلْ فِيْ مَجْلِسِنَا هٰذَا أَحَدًا إِلاَّ غَسَلْتَ بِمَاءِ التَّوْبَةِ ذُنُوْبَهُ ۞ وَسَتَرْتَ بِرِدَآءِ الْمَغْفِرَةِ عُيُوْبَهُ ۞<br><br>
+
+اَللّٰهُـمَّ إِنَّهٗ كَانَ مَعَنَا فِي السَّنَةِ الْمَاضِيَةِ ۞ إِخْوَانٌ مَنَعَهُمُ اْلقَضَآءُ عَنِ الْوُصُوْلِ اِلٰى مِثْلِهَا ۞ فَلاَ تَحْرِمْهُمْ مِنْ ثَوَابِ هٰذِهِ السَّاعَةِ وَفَضْلِهَا ۞<br><br>
+
+اَللّٰهُـمَّ ارْحَمْنَا إِذَا صِرْنَا مِنْ أَصْحَابِ الْقُبُوْرِ ۞ وَوَفِّقْنَا لِعَمَلٍ صَالِحٍ يَبْقٰى سَنَاهُ عَلىٰ مَمَرِّ الدُّهُوْرِ ۞<br><br>
+
+اَللّٰهُـمَّ اجْعَلْنَا لِاٰلَآئِكَ ذَاكِرِيْنَ ۞ وَلِنَعْمَآئِكَ شَاكِرِيْنَ ۞ وَلِيَوْمِ لِقَآئِكَ مِنَ الذَّاكِرِيْنَ ۞ وَأَحْيِنَا بِطَاعَتِكَ مَشْغُوْلِيْنَ ۞ وَإِذَا تَوَفَّيْتَنَا فَتَوَفَّنَا غَيْرَ مَفْتُوْنِيْنَ ۞ وَلَا مَخْذُوْلِيْنَ ۞ وَٱخْتِمْ لَنَا مِنْكَ بِخَيْرٍ أَجْمَعِيْنَ ۞<br><br>
+
+اَللّٰهُـمَّ اكْفِنَا شَرَّ الظَّالِمِيْنَ ۞ وَاجْعَلْنَا مِنْ فِتْنَةِ هٰذِهِ الدُّنْيَا سَالِمِيْنَ ۞<br><br>
+
+اَللّٰهُـمَّ اجْعَلْ هٰذَا الرَّسُوْلَ الْكَرِيْمَ لَنَا شَفِيْعًا ۞ وَارْزُقْنَا بِهِ يَوْمَ الْقِيَامَةِ مَقَامًا رَفِيْعًا ۞<br><br>
+
+اَللّٰهُـمَّ اسْقِنَا مِنْ حَوْضِ نَبِيِّكَ مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ شَرْبَةً هَنِيْئَةً لَا نَظْمَأُ بَعْدَهَا أَبَدًا ۞ وَاحْشُــرْنَا تَحْتَ لِوَآئِهِ غَدًا ۞<br><br>
+
+اَللّٰهُـمَّ اغْفِرْ لَنَا بِهٖ وَلِاٰبـَآئِنَا وَلِأُمَّهَآتِنَا وَلِمَشَايِخِنَا وَلِمُعَلِّمِيْنَا ۞ وَذَوِي الْحُقُوْقِ عَلَيْنَا وَلِمَنْ أَجْرٰى هٰذَا الْخَيْرَ فِيْ هٰذِهِ السَّاعَةِ ۞ وَلِجَمِيْعِ الْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ ۞ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ ۞ اَلْأَحْيَآءِ مِنْهُمْ وَالْأَمْوَاتِ ۞ إِنَّكَ كَرِيْمٌ مُجِيْبُ الدَّعَوَاتِ ۞ وَقَاضِـيَ الْحَاجَاتِ ۞<br><br>
+
+وَغَافِرُ الذُّنُوْبِ وَالْخَطِيْئَاتِ ۞ يَاأَرْحَمَ الرَّاحِمِيْنَ ۞ وَصَلَّى اللّٰهُ عَلىٰ سَيِّدِنَا مُحَمَّدٍ وَعَلىٰ اٰلِهِ وَصَحْبِهٖ وَسَلَّمَ ۞ سُبْحَانَ رَبِّــكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَ ۞ وَسَلَامٌ عَلىٰ الْمُرْسَلِيْنَ ۞ وَالْحَمْدُ ِللّٰهِ رَبِّ الْعَالَمِيْنَ ۞<br><br>
+
+اَلْفَاتِحَة</p><br><br><p><i>Du-'ā mawlid ad-diiba-'i.<br><br>
+
+<br><br>Al-ḥamdu lillāhi Rabbil-'ālamīn. ۞ Allāhumma shalli wa sallim 'alā sayyidinā Muḥammadin wa 'alā ālihi wa shaḥbihī ajma-'īn. ۞ Ja'alanallāhu wa iyākum mimman yastawjibu syafā-'atah. ۞ Wa yarjū bi-dzālika raḥmatahu wa ra'fatah. ۞ Allāhumma bi-ḥurmati hādzan-Nabiyyil-karīm. ۞ Wa ālihi wa ash-ḥābihis-sālikīna 'alā manhajihil-qawīm. ۞ Ij-'alnā min khiyāri ummatih. ۞ Wasturnā bi-dzayli ḥurmatih. ۞ Waḥsyurnā ghadan fī zumratih. ۞ Wasta'mil al-sinatanā fī madḥihī wa nushratih. ۞ Wa aḥyinā mutamassikīna bi-sunnatihi wa thā-'atih. ۞ Wa amitnā 'alā ḥubbihī wa jamā-'atih. ۞ Allāhumma ad-khilnā ma-'ahul jannata fainnahu awwalu may-yad-khuluhā. ۞ Wa 'anzilnā ma-'ahū fī qushūrihā. ۞ Fainnahu awwalu may-yanziluhā. ۞ Warḥamnā yawma yasyfa-'u lil-khalā-iqi fatarḥamuhā. ۞ Allāhummar-zuqnā ziyāratahū fī kulli sanah. ۞ Wa lā taj-'alnā minal-ghāfilīna 'anka wa lā 'anhu qadra sinah. ۞ Allāhumma taj-'al fī majlisinā hādzā aḥadan ilā ghasalta bimā-it-tawbati dzunūbah. ۞ Wa satarta bi-ridhā-il-maghfirati 'uyūbah. ۞ Allāhumma innahū kāna ma-'anā fis-sanatil-mādhiyah. ۞ Ikhwānumm-mana-'ahumul-qadhā-u 'anil-wushūli ilā mits-lihā. ۞ Falā taḥrimhumm-min tsawābi hādzihis-sā-'ati wa fadhlihā. ۞ Allāhummar-ḥamnā idzā shirnā min ash-ḥābil-qubūr. ۞ Wa waffiqnā li-'amalin shāliḥiy-yabqā sanāhu 'alā mamarrid-duhūr. ۞ Allāhummaj-'alnā li-ālā-ika dzākirīn. ۞ Wa li-na'mā-ika syākirīn. ۞ Wa li-yawmi li-qā-ika minadz-dzākirīn. ۞ Wa aḥyinā bi-thā-'atika masy-ghūlīn. ۞ Wa idzā tawaffaytanā fatawaffanā ghayra maftūnīn. ۞ Wa lā makh-dzūlīn. ۞ Wakhtim lanā minka bi-khayrin ajma-'īn. ۞ Allāhummak-finā syarrazh-zhālimīn. ۞ Waj'alnā min fitnati hādzihid-dunyā sālimīn. ۞ Allāhummaj-'al hādzar-rasūlal-karīma lanā syafī-'ā. ۞ Warzuqnā bihi yawmal-qiyāmati maqāman rafī-'ā. ۞ Allāhummas-qinā min ḥawdhi Nabiyyika Muḥammadin shallallāhu 'alayhi wa sallama syarbatan hanī-atan lā nazhma-u ba'dahā abadā. ۞ Waḥsyurnā taḥta li-wā-ihi ghadā. ۞ Allāhummagh-firlanā bihī wa li-ābā-inā wa li-ummahātinā wa li-masyā-yikhinā wa li-mu-'allimīna. ۞ Wa dzawil-ḥuqūqi 'alaynā wa li-man ajrā hādzal-khayra fī hādzihis-sā-'ah. ۞ Wa li-jamī-'il-mu'minīna wal-mu'mināt. ۞ Wal-muslimīna wal-muslimāt. ۞ Al-aḥyā-i minhum wal-amwāt. ۞ Innaka karīmumm-mujībud-da-'awāt. ۞ Wa qādhiyal-ḥājāt. ۞ Wa ghāfirudz-dzunūbi wal-khathī-āt. ۞ Yā arḥamar-rāḥimīn. ۞ Wa shallallāhu 'alā sayyidinā Muḥammadin wa 'alā ālihi wa shaḥbihī wa sallam. ۞ Fasubḥāna Rabbika Rabbil-'izzati 'ammā yashifūn. ۞ Wa salāmun 'alal-mursalīn. ۞ Wal-ḥamdu lillāhi Rabbil-'ālamīn. ۞ Al-Fātihah.</i></p><p>Doa Maulid Ad-Diba'i
+
+<br><br>Segala puji bagi Allah penguasa semesta alam, ۞ wahai Allah limpahkan rahmat dan salam kepada junjungan kami Nabi Muhammad ﷺ dan kepada keluarga serta sahabatnya semuanya. ۞ Semoga Allah menjadikan kami dan kalian semua golongan orang yang memperoleh syafaatnya, ۞ dan mengharap rahmat dan kasih sayangnya. ۞ Wahai Allah, dengan kehormatan Nabi ﷺ yang mulia ini, ۞ dan para keluarga serta para sahabatnya yang menempuh jalan lurus. ۞ Jadikanlah kami sebaik-baik umatnya, ۞ dan tutuplah segala kecacatan kami dengan kesempurnaannya, ۞ serta himpunlah kami kelak ke dalam golongannya. ۞ Jadikanlah lisan kami untuk memuji dan membelanya. ۞ Hidupilah kami selalu berpegang pada sunnahnya dan menaatinya. ۞ Dan matikanlah kami dalam keadaan tetap cinta kepadanya dan termasuk dalam golongannya. ۞ Wahai Allah, masukkanlah kami ke surga bersamanya, karena beliaulah orang pertama yang memasukinya. ۞ Tempatkanlah kami bersama Nabi ﷺ di dalam istananya di surga, ۞ karena beliaulah orang yang pertama kali menempatinya. ۞ Dan berilah kami kasih sayang pada hari Nabi ﷺ memberi syafaat kepada para makhluk, lantas Engkau memberi kasih sayang kepada mereka. ۞ Wahai Allah, berilah kami rezeki untuk dapat berziarah kepadanya setiap tahun. ۞ Janganlah kami Engkau jadikan golongan orang yang melupakan Engkau dan melupakan Nabi ﷺ meskipun hanya sejenak. ۞ Wahai Allah, janganlah Engkau menjadikan seorang pun yang berada di majelis kami ini, melainkan Engkau bersihkan dosa-dosanya dengan kucuran air taubat, ۞ dan Engkau tutupi aibnya dengan selendang pengampunan. ۞ Ya Allah, sesungguhnya ada bersama kami pada tahun yang lalu, ۞ yaitu saudara kami yang telah ditakdirkan ajalnya terlebih dahulu, ۞ maka jangan Engkau halangi mereka dari pahala kebaikan ini dan keutamaannya. ۞ Wahai Allah, belas kasihilah kami, apabila kami telah menjadi penghuni kubur. ۞ Berilah kami taufik untuk beramal shalih yang kekal keluhurannya sepanjang masa. ۞ Wahai Allah, jadikanlah kami kepada golongan orang-orang yang selalu mengingat Ketuhanan-Mu, ۞ dan mensyukuri nikmat-nikmat-Mu, ۞ serta mengingat akan hari menghadap kepada-Mu. ۞ Hidupkanlah kami selalu tekun menaati perintah-Mu. ۞ Dan bila Engkau matikan kami, maka matikanlah kami bersih tanpa segala fitnah, ۞ dan tanpa segala kehinaan. ۞ Akhirilah kami dengan segala kebaikan dari sisi-Mu. ۞ Wahai Allah, hindarkanlah kami dari kejahatan orang-orang yang zalim. ۞ Jadikanlah kami orang-orang yang selamat dari fitnah dunia. ۞ Wahai Allah, jadikanlah Rasul yang mulia ini, memberikan syafaat kepada kami. ۞ Berikan kepada kami karena syafaatnya suatu kedudukan yang tinggi kelak di hari kiamat. ۞ Wahai Allah, berilah kami minuman dari air telaga Nabi-Mu, Muhammad ﷺ , yang merupakan suatu minuman segar yang menghilangkan dahaga sesudahnya dan untuk selama-lamanya. ۞ Kumpulkanlah kami kelak di hari kiamat di bawah benderanya. ۞ Ya Allah, karena Nabi Muhammad ﷺ ampunilah kami, bapak-bapak kami, ibu-ibu kami, serta guru-guru kami, ۞ dan yang mengajar kami serta orang-orang yg mempunyai hak wajib atas kami. ۞ Serta kepada seluruh orang-orang mukmin laki-laki dan perempuan, ۞ dan orang-orang islam laki-laki dan perempuan, ۞ baik mereka yang masih hidup dan telah meninggal. ۞ Sesungguhnya Engkau Zat yang Maha Pengabul semua doa ۞ Pemenuh semua hajat, ۞ Pengampun semua dosa dan kesalahan. ۞ Wahai Zat yang paling Penyayang dari para penyayang. ۞ Semoga Allah tetap melimpahkan rahmat-Nya kepada junjungan kami Nabi Muhammad ﷺ dan kepada keluarganya serta sahabatnya dan juga limpahan kesejahteraan. ۞ {Kutipan ayat Alquran: "Mahasuci Tuhanmu, Tuhan yang Mahaagung dari segala yang disifatkan oleh para kafir dan semoga salam tetap dilimpahkan kepada para Rasul."} ۞ Serta segala puji hanya milik Allah, Tuhan sekalian alam. ۞ Al-Fatihah.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

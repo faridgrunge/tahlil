@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,html {
+	font-family: KFGQPC Uthman Taha Naskh Bold, sans-serif, Arial, Helvetica, roboto, sans;
+	font-size: 18px;
+	color: #000000;
+	widht: 100%;
+}
+
+p{text-align:left;}
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h2 { padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;     text-align: center;
+ border-style: solid;     border-bottom: double #666;     border-top: double;
+  border-left: 0px;  border-right: 0px;  border-center: 0px;     border-radius: 0px;         font-family: "sans;georgia;arial" }
+
+h3 { padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;     text-align: center;
+ border-style: solid;     border-bottom: double #666;     border-top: double;
+  border-left: 0px;  border-right: 0px;  border-center: 0px;     border-radius: 0px;         font-family: "sans;georgia;arial" }
+
+@font-face {
+    font-family: KFGQPC Uthman Taha Naskh Bold;
+    src: url("file:///android_asset/font.ttf")
+}
+
+
+
+
+
+/* css list with numeber circle background -------------- */
+
+ol {
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font: 19px Arial, Sans, Lato;
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+
+ol ol {
+    margin: 0 0 0 2em;
+}
+
+.rectangle-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em .8em;
+    *padding: .4em;
+    margin: .5em 0 .5em 2.5em;
+    background: #E6F8E0;
+    color: #000;
+    text-decoration: none;
+
+}
+
+.rectangle-list a:hover{
+    background: #BDBDBD;
+}
+
+.rectangle-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -2.5em;
+    top: 50%;
+    margin-top: -1em;
+    background: #3fc380;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rectangle-list a:after{
+    position: absolute;
+    content: '';
+    border: .5em solid transparent;
+    left: -1em;
+    top: 50%;
+    margin-top: -.5em;
+
+}
+
+.rectangle-list a:hover:after{
+    left: -.5em;
+    border-left-color: #3fc380;
+}
+
+
+
+/* End css list with numeber circle background -------------- */
+
+
+
+
+img {max-width: 100%}
+
+
+

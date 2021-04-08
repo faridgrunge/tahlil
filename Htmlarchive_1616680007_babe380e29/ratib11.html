@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Ratib Al-Kubra - Bagian 3
+</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>
+
+اَلَمْ نَشْرَحْ لَكَ صَدْرَكَۙ - ١ وَوَضَعْنَا عَنْكَ وِزْرَكَۙ - ٢ الَّذِيْٓ اَنْقَضَ ظَهْرَكَۙ - ٣ وَرَفَعْنَا لَكَ ذِكْرَكَۗ - ٤ فَاِنَّ مَعَ الْعُسْرِ يُسْرًاۙ - ٥ اِنَّ مَعَ الْعُسْرِ يُسْرًاۗ - ٦ فَاِذَا فَرَغْتَ فَانْصَبْۙ - ٧ وَاِلٰى رَبِّكَ فَارْغَبْ ࣖ - ٨<br><br>
+
+اِنَّ اللّٰهَ وَمَلٰۤىِٕكَتَهٗ يُصَلُّوْنَ عَلَى النَّبِيِّۗ يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْا صَلُّوْا عَلَيْهِ وَسَلِّمُوْا تَسْلِيْمًا<br><br>
+
+لَبَّيْكَ <br><br>
+
+اللهم صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ كَمَا صَلَّيْت عَلَى سَيِّدِنَا إبْرَاهِيمَ وَعَلَى آلِ سَيِّدِنَا إبْرَاهِيمَ وَبَارِكْ عَلَى  سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ كَمَا بَارَكْت عَلَى  سَيِّدِنَا إبْرَاهِيمَ وَعَلَى آلِ سَيِّدِنَا إبْرَاهِيمَ إنَّك حَمِيدٌ مَجِيدٌ
+(dibaca 3 kali atau 1 kali)<br><br>
+
+اللهم صَلِّ  وَسَلِّمْ وَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ عَبْدُكَ وَنَبِيُّكَ وَرَسُوْلُكَ النَّبِيُّ الأُمِّيُّ, الصَّادِقُ الْاَمِيْنُ, حُجَّةُ ا للّٰهِ وَرَحْمَةٌ لِلْعَالَمِيْنَ وَاٰلِهِ وَأَصْحَابِهِ الْأَكْرَمِيْنَ, وَأَزْوَاجِهِ أُمَّهَاتِ الْمُؤْمِنِيْنَ, وَذُرِّيَّتِهِ وَأَهْلِ بَيْتِهِ الطَّاهِرِيْنَ, وَصَلِّ وَسَلِّمْ وَبَارِكْ عَلَيْهِ وَعَلَيْهِمْ أَجْمَعِيْنَ, صَلَاةً دَآئِمَةً اِلٰى يَوْمِ الدِّيْنِ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ<br><br>
+
+اللهم صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ عَبْدُكَ وَنَبِيُّكَ وَرَسُوْلُكَ النَّبِيُّ الأُمِّيُّ وَعَلٰى أٰلِهِ وَصَحْبِهِ وَبَارِكْ وَسَلِّمْ
+(dibaca 3 kali)<br><br>
+
+اللهم صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ عَبْدُكَ وَنَبِيُّكَ وَرَسُوْلُكَ النَّبِيُّ الأُمِّيُّ وَعَلٰى أٰلِهِ وَصَحْبِهِ وَبَارِكْ وَسَلِّمْ تَسْلِيْمًا بِقَدْرِ عَظَمَةِ ذَاتِكَ فِيْ كُلِّ وَقْتٍ وَحِيْنٍ
+(dibaca 3 kali)<br><br>
+
+اللهم صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ عَبْدُكَ وَنَبِيُّكَ وَرَسُوْلُكَ النَّبِيُّ الأُمِّيُّ وَعَلٰى أٰلِهِ وَصَحْبِهِ وَسَلِّمْ عَدَدَ مَا عَلِمْتَ   وَزِنَةَ مَا عَلِمْتَ وَمِلْءَ مَا عَلِمْتَ
+(dibaca 3 kali)<br><br>
+
+اللهم إِنِّي أَسْئَلُكَ بِكَ أَنْ تُصَلِّيَ وَتُسَلِّمَ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَعَلٰى سَآئِرِ الْأَنْبِيآءِ وَالْمُرْسَلِيْنَ وَعَلٰى اٰلِهِ وَصَحْبِهِ أَجْمَعِيْنَ<br><br>
+وَاَنْ تَغْفِرَلِيْ فِيْمَا مَضٰى وَتَحْفَظَنِيْ فِيْمَا بَقِيَ
+(dibaca 3 kali)<br><br>
+
+غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَصِيْرُ<br><br>
+
+لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَا ۗ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ اِنْ نَّسِيْنَآ اَوْ اَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ اِصْرًا كَمَا حَمَلْتَهٗ عَلَى الَّذِيْنَ مِنْ قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهٖۚ وَاعْفُ عَنَّاۗ وَاغْفِرْ لَنَاۗ وَارْحَمْنَا ۗ اَنْتَ مَوْلٰىنَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكٰفِرِيْنَ<br><br>
+
+لَا إلَهَ إلَّا اللَّهُ وَحْدُهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+(dibaca 3 kali)<br><br>
+
+سُبْحَانَ اللّٰهِ وَالْحَمْدُ لِلّٰهِ  وَلَا اِلٰهَ اِلَّا اللّٰهُ وَاللّٰهُ أَكْبَرُ
+(dibaca 3 kali)<br><br>
+
+سُبْحَانَ اللّٰهِ وَبِحَمْدِهِ سُبْحَانَ اللّٰهِ الْعَظِيْمِ
+(dibaca 3 kali)<br><br>
+
+اللهم صَلِّ وَسَلِّمْ عَلٰى سَيِّدِنَا مُحَمَّدٍ عَبْدِكَ وَرَسُوْلِكَ وَصَلِّ عَلٰى الْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ<br><br>
+اللهم اغْفِرْلِيْ وَلِوَالِدَيَّ وَلِلْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ اَلْأَحْيآءِ مِنْهُمْ وَالْاَمْوَاتِ
+(dibaca 3 kali atau 7 kali)<br><br>
+
+
+اللهم اغْفِرْ أُمَّةَ  سَيِّدِنَا مُحَمَّدٍ اللهم ارْحَمْ أُمَّةَ  سَيِّدِنَا مُحَمَّدٍ اللهم أَصْلِحْ أُمَّةَ  سَيِّدِنَا مُحَمَّدٍ اللهم اسْتُرْ أُمَّةَ  سَيِّدِنَا مُحَمَّدٍ اللهم فَرِّجْ عَلٰى أُمَّةَ  سَيِّدِنَا مُحَمَّدٍ اللهم اجْبُرْ أُمَّةَ  سَيِّدِنَا مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَاٰلِهِ وَسَلَّمَ
+(dibaca 3 kali)<br><br>
+
+اللهم اصْلِحِ الْإِمَامَ وَالْأُمَّةَ, وَالرَّاعِيَ وَالرَّعِيَّةَ وَأَلِّفْ بَيْنَ قُلُوْبِهِمْ وَادْفَعْ شَرَّ بَعْضِهِمْ عَنْ بَعْضٍ
+(dibaca 3 kali)<br><br>
+
+أَصْلَحَ اللّٰهُ أُمُوْرَ الْمُسْلِمِيْنَ صَرَّفَ اللّٰهُ شَرَّ الْمُؤْذِيْنَ
+(dibaca 3 kali)<br><br>
+
+يَا عَلِيُّ يَا كَبِيْرُ يَا عَلِيْمُ يَا قَدِيْرُ يَا سَمِيْعُ يَا بَصِيْرُ يَا لَطِيْفُ يَا خَبِيْرُ
+(dibaca 3 kali)<br><br>
+
+فَاِنْ تَوَلَّوْا فَقُلْ حَسْبِيَ اللّٰهُ لَآ اِلٰهَ اِلَّا هُوَ ۗ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيْمِ
+(dibaca 3 kali)<br><br>
+
+حَسْبُنَا اللّٰهُ وَنِعْمَ الْوَكِيْلُ
+(dibaca 7 kali)<br><br>
+
+اللهم إِنِّيْ أَسْتَوْدِعُكَ نَفْسِيْ وَدِيْنِيْ وَأَهْلِيْ وَأَوْلَادِيْ وَمَالِيْ وَجَمِيْعَ مَا أَنْعَمْتَ بِهِ عَلَيَّ أَسْتَوْدِعُ اللّٰهَ دِيْنِيْ وَأَمَانَتِيْ وَخَوَاتِمَ عَمَلِيْ
+(dibaca 3 kali)<br><br>
+
+أَعُوذُ بِكَلِمَاتِ اللّٰهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ 
+(dibaca 3 kali)<br><br>
+
+بِسْمِ اللّٰهِ الَّذِيْ لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِيْ الْأَرْضِ وَلَا فِيْ السَّمَآءِ وَهُوَ السَّمِيْعُ الْعَلِيْمُ
+(dibaca 3 kali)<br><br>
+
+اللَّهُـمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ. صَلَاةً تَكْفِيْنَا بِهَا شَرًّا مِّمَّا نَخَافُ وَنَحْذَرُ
+(dibaca 3 kali)<br><br>
+
+حَسْبُنَا اللّٰهُ لِدِيْنِنَا حَسْبُنَا اللّٰهُ لِمَا أَهَمَّنَا حَسْبُنَا اللّٰهُ لِمَنْ بَغٰى عَلَيْنَا حَسْبُنَا اللّٰهُ لِمَنْ حَسَدَنَا حَسْبُنَا اللّٰهُ لِمَنْ كَادَنَا بِسُوْءٍ حَسْبُنَا اللّٰهُ عِنْدَ الْمَوْتِ  حَسْبُنَا اللّٰهُ عِنْدَ الْمَسْأَلَةِ فِيْ الْقَبْرِ حَسْبُنَا اللّٰهُ عِنْدَ الْمَسْأَلَةِ فِيْ الْمِيْزَانِ حَسْبُنَا اللّٰهُ عِنْدَ الْحِسَابِ حَسْبُنَا اللّٰهُ عِنْدَ الصِّرَاطِ <br><br>
+
+حَسْبِيَ اللّٰهُ لَآ اِلٰهَ اِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَاِلَيْهِ أُنِيْبُ<br><br>
+
+اللَّهُـمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ النَّبِيِّ الْأُمِّيِّ الْحَبِيْبِ الْعَالِيْ الْقَدْرُ الْعَظِيْمِ الْجَاهُ وَعَلٰى اٰلِهِ وَصَحْبِهِ وَبَارِكْ وَسَلِّمْ
+(dibaca 3 kali atau 10 kali atau 100 kali)<br><br>
+
+يَا ذَا الْجَلَالِ وَالْإِكْرَامِ أَمِتْنَا عَلٰى دِيْنِ الْإِسْلَامِ
+(dibaca 5 kali) <br><br>
+
+اللهم سَلِّمْنَا وَأَهْلَنَا وَأَوْلاَدَنَا وَأَبْنَائَنَا وَذُرِّيَّاتِنَا وَنَسْلَنَا فِيْ يَوْمِ يُبْعَثُوْنَ, يَوْمٌ لاَ يَنْفَعُ مَالٌ وَلاَ بَنُوْنٌ اِلَّا مَنْ أَتَى اللّٰهَ بِقَلْبٍ سَلِيْمٍ<br><br>
+
+ لَّآ اِلٰهَ اِلَّآ اَنْتَ سُبْحٰنَكَ اِنِّيْ كُنْتُ مِنَ الظّٰلِمِيْنَ<br><br>
+
+فَاسْتَجَبْنَا لَهٗۙ وَنَجَّيْنٰهُ مِنَ الْغَمِّۗ وَكَذٰلِكَ نُـْۨجِى الْمُؤْمِنِيْنَ<br><br>
+
+وَلَوْ اَنَّهُمْ اِذْ ظَّلَمُوْٓا اَنْفُسَهُمْ جَاۤءُوْكَ فَاسْتَغْفَرُوا اللّٰهَ وَاسْتَغْفَرَ لَهُمُ الرَّسُوْلُ لَوَجَدُوا اللّٰهَ تَوَّابًا رَّحِيْمًا<br><br>
+
+رَبَّنَا لَا تُزِغْ قُلُوْبَنَا بَعْدَ اِذْ هَدَيْتَنَا وَهَبْ لَنَا مِنْ لَّدُنْكَ رَحْمَةً ۚاِنَّكَ اَنْتَ الْوَهَّابُ<br><br>
+
+رَبَّنَا اغْفِرْ لِيْ وَلِوَالِدَيَّ وَلِلْمُؤْمِنِيْنَ يَوْمَ يَقُوْمُ الْحِسَابُ<br><br>
+
+رَبَّنَا اغْفِرْ لَنَا وَلِاِخْوَانِنَا الَّذِيْنَ سَبَقُوْنَا بِالْاِيْمَانِ وَلَا تَجْعَلْ فِيْ قُلُوْبِنَا غِلًّا لِّلَّذِيْنَ اٰمَنُوْا رَبَّنَآ اِنَّكَ رَءُوْفٌ رَّحِيْمٌ<br><br>
+
+اللهم اِنَّا نَسْئَلُكَ رِضَاكَ وَالْجَنَّةَ وَنَعُوْذُ بِكَ مِنْ سَخَطِكَ وَالنَّارِ
+(dibaca 3 kali)<br><br>
+
+يَالَطِيْفْ
+(16 kali atau dibaca 129 kali)<br><br>
+
+يَا لَطِيْفًا بِخَلْقِهِ يَا عَلِيْماً بِخَلْقِهِ، يَاخَبِيْراً بِخَلْقِهِ، ألطُفْ بِنَا، يالَطِيْفُ، يَاعَلِيْمُ، يَاخَبِيْرُ
+(dibaca 3 kali)<br><br>
+
+يَا لَطِيْفًا لَّمْ يَزَلْ اُلْطُفْ بِنَا فِيْمَا نَزَلْ، إِنَّكَ لَطِيْفٌ لَّمْ تَزَلْ، اُلْطُفْ بِنَا وَالْمُسْلِمِيْنَ
+(dibaca 3 kali)<br><br>
+
+لَآ إِلٰهَ إِلَّا اللّٰهُ, اَلْمَلِكُ الْحَقُّ الْمُبِيْنُ
+(dibaca 10/50/100 kali)<br><br>
+
+مُحَمَّدٌ رَّسُوْلُ اللّٰهِ, اَلصَّادِقُ الْوَعْدِ الْأَمِيْنُ. صَلَّى اللّٰهُ عَلَيْهِ وَأٰلِهِ وَسَلَّمَ</p><br><br><p><i>Bismillaahir Rohmaanir Rohiim #  Alam nasyroh laka shodrok  #  wa wadlo’naa ‘angka wizrok # alladziii angqodlo dhohrok # wa rofa’naa laka dzikrok # fa inna ma’al ‘usri yusroo # inna ma’al ‘usri yusroo # fa idzaa faroghta fangshob # wa ilaa robbika farghob #
+
+<br><br>Innallooha wa Malaaa-ikatahuu yusholluuna  ‘alan Nabiy, yaaa ayyuhalladziina aamanuu sholluu  ‘alaihi wa sallimuu tasliimaa # Labbaiik ...
+
+<br><br>Alloohumma sholli  ‘alaa sayyidinaa Muhammad wa ‘alaa aali sayyidinaa Muhammad, kamaa shollaita ‘alaa say-yidina Ibroohiim wa ‘alaa aali sayyidinaa Ibroohiim, wabaa-rik ‘alaa sayyidinaa Muham-mad wa ‘alaa aali sayyidinaa Muhammad, kamaa baarokta ‘alaa say-yidinaa Ibroohiim wa ‘alaa aali sayyidinaa Ibroo-hiim, fil ‘aalamiina innaka Hamiidum Ma-jiid ... 1 x / 3 x
+
+<br><br>Allohumma sholli wa sallim wa baarik ‘alaa Sayyidinaa Muhammadin, ‘abdika wa nabiyyika wa Rosuulikan Nabiyyil Ummiyy, ash-shoodiqil amiin, hujjatulloohi wa rohmatul lil ‘aalamiin, wa aalihi wa ash-haabihil akromiin, wa azwaa-jihii ummahaatil mu’miniin, wa dzzurriyyatihii wa ahli baitihith thoohiriin, wa sholli wa sallim wa baarik ‘alaihi wa ‘alaihim ajma’iin, sholaatan daa-imatan ilaa yaumid diin, wal hamdu lillaahi Robbil ‘aalamiin.
+
+<br><br>Allohumma sholli ‘alaa Sayyidinaa Muhammadin, ‘abdika wa nabiyyika wa Rosuulikan nabiyyil ummiyy, wa ‘alaa aalihi wa shohbihii wa baarik wa sallim 3x
+
+<br><br>Allohumma sholli ‘alaa Sayyidinaa Muhammadin, ‘Abdika wa Nabiyyika wa Rosuulikan Nabiyyil Ummiyy, wa ‘alaa aalihii wa shohbihii wa sallim tasliimaa, biqodri ‘adhomati dzaatika fii kulli waqtin wa hiin ... 3 x 
+<br> Alloohumma sholli  ‘alaa Sayyidinaa Muhammadinin Nabiyyil Ummiy, wa ‘alaa aalihii wa shohbihii wa sallim, ‘adada maa ‘alimta wa zinata maa ‘alimta wa mil-a maa ‘alimta … 3 x 
+<br> Allaahumma innii as-aluka bika, an tusholliya ‘alaa say-yidinaa Muhammad, wa ‘alaa saaa-iril ambiyaa-i wal mur-saliin, wa ‘alaa aalihim wa shohbihim ajma‘iin,<br><br>
+
+wa an taghfiro lii fiimaa madloo wa tahfadhonii fiimaa baqii ... 3 x <br><br>
+ 
+Ghufraanaka Robbanaa wa ilaikal mashiir # laa yukallifulloohu nafsan illaa wus‘ahaa, lahaa maa kasabat wa ‘alaihaa maktasabat, Robbanaa laa tu-aakhidznaaa in nasii-naaa au akhtho’naa, Robbanaa walaa tahmil ‘alainaaa ishrong kamaa hamaltahuuu ‘alalla-dziina ming qoblinaa, Robbanaa walaa tuhammilnaa maa laa thooqota lanaa bih, wa’fu ‘annaa waghfirlanaa warhamnaaa, anta maulaanaa fangshurnaa ‘alal qoumil kaafiriin.
+
+<br><br>Laa ilaaha illallooh, wahdahuu laa syariika lah, lahul mulku wa lahul hamdu yuhyii wa yumiit, wa Huwa ‘alaa kulli syai-ing Qodiir … 3 x 
+ 
+<br><br>Subhaanalloohi wal hamdulillaahi walaa ilaaha illalloohu walloohu akbar ... 3 x 
+ 
+<br><br>Subhaanalloohi wa bihamdih, subhaanalloohil ‘adhiim ... 3 x 
+ 
+<br><br>Alloohumma shollii ‘alaa sayyidinaa Muhammad, ‘abdi-ka wa nabiyyika wa rosuulikan nabiyyil ummiy, wa shollii ‘alal mu’miniina wal mu’mi-naat, wal muslimiina wal muslimaat.
+
+<br><br>Allohummaghfir lii wa liwaalidayya wa lil mu’miminiina wal mu’minaat, wal muslimii-na wal muslimaat, al ahyaa-i min-hum wal amwaat... 3x / 7x 
+ 
+<br><br>Alloohummaghfir ummata sayyidinaa Muhammad, Alloohummarham ummata sayyidinaa Muhammad, Alloohumma Ashlih ummata sayyidinaa Muhammad, Alloohummastur ummata sayyidinaa Muhammad, Alloohumma farrij ‘an ummati sayyidinaa Ahmad, Alloohummajbur ummata say-yidinaa Muhammad, shollalloohu ‘alaihi wa aalihii wa sallam ... 3 x
+
+<br><br>Alloohumma ashlihil imaama wal ummah, war roo‘iya war ro‘iyyah, wa allif baina quluubihim, wadfa’ syarro ba’dlihim ‘am ba’dl ... 3 x 
+ 
+<br><br>Ashlahalloohu umuurol muslimiin, shorofalloohu syarrol mu’dziin ... 3 x 
+ 
+<br><br>Yaa ‘Alliyyu yaa Kabiir, yaa ‘Aliimu yaa Qodiir yaa Samii’u yaa Bashiir, yaa Lathiifu yaa Khobiir ... 3 x 
+<br> Fa-in tawallau faqul hasbiyalloohu laaa ilaaha illaa huu, ‘alaihi tawakkaltu wa huwa robbul ‘arsyil ‘adhiim ... 7 x
+
+<br><br>Hasbunallooh wa ni’mal wakiil ... 7 x 
+ <br>Allohumma innii astaudi’uka nafsii wa diinii wa ahlii wa aulaadii wa maalii wa jamii’a maa an’amta bihii ‘alayya, astaudi’ullooha diinii wa amaanatii wa khowaatima ‘amalii ... 3 x 
+<br> A‘uudzu bi kalimaatillaahit taaammaati ming syarri maa kholaq ... 3 x 
+ 
+<br><br>Bismillaahilladzii laa yadlurru ma‘asmihii syai-un fil ardli walaa fis samaaa-i wa Huwas Samii‘ul ‘Aliim ... 3 x
+
+<br><br>Alloohumma sholii ‘alaa sayyidinaa muhammad, wa ’alaa aali sayyidinaa Muham-mad, sholaatan an takfiyanaa bihaa syarrom, mimmaa na-khoofu wa nahdzar ... 3 x 
+<br> Hasbunallooh lidiininaa, Hasbunallooh lidun-yaanaa, Hasbunallooh limaa ahammanaa, Hasbunallooh liman baghoo ’alainaa, Hasbunallooh liman hasadanaa, Hasbunallooh liman kaadanaa bisuuu’, Hasbunallooh ‘indal mauut, Hasbunallooh ‘indal mas-alati fil qobr, Hasbunallooh ‘indal mas-alati fil miizaan, Hasbunallooh ‘indal hisaab, Hasbunallooh ‘indash shirooth
+
+<br><br>Hasbiyallooh laa illaaha illaa Huu, ‘alaihi tawakkaltu wa ilaihi uniib. 
+ 
+<br><br>Alloohumma sholli ‘alaa sayyidinaa muhammadinin  nabiyyil ummiy, al-habiibil ‘aalil qodril ‘adhiimil jaah, wa ‘alaa aalihii wa sohbihii wa baarik wa sallim ... 3 x / 10 x / 100 x 
+ 
+<br><br>Yaa Dzal jalaali wal ikroom, amitnaa ‘alaa diinil islam ... 7 x Allohumma sallimnaa wa ahlanaa wa aulaadanaa wa abnaa-anaa wa dzurriyyatanaa wa naslanaa fii yaumi yub’atsuun, yauma laa yanfa’u maaluw walaa banuun, illaa man atallooha bi qolbin saliim
+
+<br><br>Laaa ilaaha illaa Anta, subhaanaka innii kuntu minadh dhoolimiin # fastajabnaa lahuu wanajjainaahu minal ghomm, wa kadzaalika nunjil mu’mi-niin # walau annahum idh dhola-muuu angfusahum jaaa-uuka fastaghfarullooha wastaghfara lahumurrosuulu lawajadulloo-ha Tawwaabar Rohiimaa # 
+<br> Robbanaa laa tuzigh quluubanaa ba’da idz hadaitanaa wahab lanaa mil ladungka rahmah, innaka antal wahhaab # Robbanaghfirlii wa liwaalidayya wa lil mu’miniina yauma yaquumul hisaab 
+
+<br><br>Robbanagh firlanaa wa li ikhwaaninal ladzziina sabaquunaa bil iimaani walaa taj’al fii quluubinaa ghillal lilladzii-na aamanuu Robbanaaa inna-ka Rouufur Rohiim # 
+<br> Alloohumma innaa nas-aluka ridlooka wal jannah, wa na’uudzu bika ming sakhothika wan naar ... 3 x 
+<br> Yaa lathiifu ... 16 x / 129 x 
+<br> Yaa Lathiifan bikholqih, yaa ‘Aliiman bikholqih, yaa Khobiiron bikholqih, ultuf binaa yaa Lathif, yaa ‘Aliimu yaa Khobiir 3 x Yaa lathifan lam yazal, ultuf binaa fiimaa nazal, innaka lathiiful lam tazal, ulthuf biinaa wal muslimiin ... 3 x 
+
+<br><br>Laa illaha illallooh, al Malikul Haqqul Mubiin ... 10 x  / 50 x  / 100 x 
+ 
+<br><br>Muhammadur Rosuulullooh, ash shoodiqul wa’dil amiin, shollalloohu ‘alaihi wa ‘alaa aalihii wa ashhaabihii wa sallam</i></p><p>-</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

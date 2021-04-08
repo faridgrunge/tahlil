@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Burdah Imam Al-Bushiri - Bagian 3</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَلْفَصْلُ الثَّالِثُ : فِي مَدْحِ سَيِّدِ الْمُرْسَلِيْنَ صَلَّى اللهُ عَلَيْهِ وَسَلَّمِ
+
+<br>مَوْلَايَ صَلِّ وَسَلِّـمْ دَآئِــماً أَبَـدًا ۞ عَلـــَى حَبِيْبِـكَ خَيْــرِ الْخَلْقِ كُلِّهِمِ
+
+<br>ظَلَمْتُ سُنَّةَ مَنْ أَحْيَا الظَّلَامَ إِلَى ۞ أَنِ اشْتَكَتْ قَدَمَاهُ الضُّرَّ مِنْ وَرَمِ
+
+<br>وَشَدَّ مِنْ سَغَبٍ أَحْشَاءَهُ وَطَوٰى ۞ تَحْتَ الْحِجَارَةِ كَشْحًا مُتْرَفَ الأَدَمِ
+
+<br>وَرَاوَدَتْهُ الْجِبَالُ الشُّمُّ مِنْ ذَهَبٍ ۞ عَنْ نَفْسِهِ فَأَرَاهَا أَيَّمَا شَمَمِ
+
+<br>وَأَكَّدَتْ زُهْدَهُ فِيْهَا ضَرُوْرَتُهُ ۞ إِنَّ الضَّرُورَةَ لَا تَعْدُوْ عَلىَ الْعِصَمِ
+
+<br>وَ كَيْفَ تَدْعُوا إِلَي الدُّنْيَــا ضَرُورَةُ مَنْ ۞ لَوْلَاهُ لَمْ تُخْرُجِ الدُّنْيَا مِنَ العَدَمِ
+
+<br>مُحَمَّدٌ سَيِّدُ الْكَوْنَيْنِ وَالثَّقَلَيْــنِ ۞ وَالفَرِيقَيْنِ مِنْ عُرْبٍ وَمِنْ عَجَمِ
+
+<br>نَبِيُّنَا اْلآمِرُ النَّاهِي فَلَا أَحَدٌ ۞ أَبَرَّ فِيْ قَوْلِ لاَ مِنْهُ وَلاَ نَعَمِ
+
+<br>هُوَ الْحَبِيْبُ الَّذِيْ تُرْجَى شَفَاعَتُهُ ۞ لِكُلّ هَوْلٍ مِنَ الْأَهْوَالِ مُقْتَحِمِ
+
+<br>دَعَا إِليَ اللّٰهِ فَالْمُسْتَمْسِكُونَ بِهِ ۞ مُسْتَمْسِكُونَ بِحَبْلٍ غَيْرِ مُنْفَصِمِ
+
+<br>فَاقَ النَّبِيِّيْنَ فِي خَلْقٍ وَّفِيْ خُلُقٍ ۞ وَلَمْ يُدَانُوْهُ فِي عِلْمٍ وَلاَ كَرَمِ
+
+<br>وَكُلُّـهُمْ مِنْ رَسُولِ اللّٰهِ مُلْتَمِسٌ ۞ غَرْفًا مِنَ البَحْرِ أَوْ رَشْفًا مِنَ الدِّيَمِ
+
+<br>وَوَاقِفُونَ لَدَيْـهِ عِنْدَ حَدِّهِمِ ۞ مِنْ نُقْطَةِ الْعِلْمِ أَوْ مِنْ شَكْلَةِ الْحِكَمِ
+
+<br>فَهْوَ الَّذِيْ تَمَّ مَعْنَاهُ وَصُــوْرَتُهُ ۞ ثُمَّ اصْطَفَاهُ حَبِيـْـــبًا بَــارِئُ النَّسَمِ
+
+<br>مُنَزَّهٌ عَنْ شَرِيكٍ فِيْ مَحَـــاسِنِهِ ۞ فَجَوْهَرُ الْحُسْنِ فِيْهِ غَيْرُ مُنْقَسِمِ
+
+<br>دَعْ مَاادَّعَتْهُ النَّصَارٰى فِي نَبِيّهِمِ ۞ وَاحْكُمْ بِمَا شِئْتَ مَدْحًا فِيْهِ وَاحْتَكِمِ
+
+<br>وَانْسُبْ إِلَي ذَاتِــهِ مَا شِئْتَ مِنْ شَرَفٍ ۞ وَانْسُبْ إِلىٰ قَدْرِهِ مَا شِئْتَ مِنْ عِظَمِ
+
+<br>فَإِنَّ فَضْلَ رَسُـولِ اللّٰهِ لَيْسَ لَهُ ۞ حَدٌّ فَيُعْرِبَ عَنْهُ نَـاطِقٌ بِفَـمِ
+
+<br>لَوْ نَاسَبَتْ قَدْرَهُ أٰيَـا تُهُ عِظَمًا ۞ أَحْيَا أسْمُهُ حِيْنَ يُدْعٰى دَارِسَ الرِّمَمِ
+
+<br>لَمْ يَمْتَحِنَّا بِمَا تَعْيَا الْعُقُـــوْلُ بِهِ ۞ حِرْصًا عَلَيْنَا فَلَمْ نَرْتَـبْ وَلَمْ نَهِمِ
+
+<br>أَعْيَا الوَرٰى فَهْمُ مَعْنَاهُ فَلَيْسَ يُرٰى ۞  لِلْقُرْبِ وَالْبُعْدِ فِيــهِ غَيْرُ مُنْفَحِمِ
+
+<br>كَالشَّمْسِ تَظْهَرُ لِلْعَيْنَيْنِ مِنْ بُعُدٍ ۞ صَغِيــْرَةً وَتُكِلُّ الطَّرْفَ مِنْ أُمَمِ
+
+<br>وَكَيْفَ يُدْرِكُ فِي الدُّنْيَا حَقِيقَتَهُ ۞ قَوْمٌ نِيَامٌ تَسَلَّوْا عَنْهُ بِالْحُلُمِ
+
+<br>فَمَبْلَغُ الْعِلْمِ فِيْــهِ أَنَّهُ بَشَرٌ ۞ وَأَنَّهُ خَيْـــرُ خَلْقِ اللَّهِ كُلِّهِمِ
+
+<br>وَكُلُّ أٰيٍ أَتَى الرُّسْلُ الْكِرَامُ بِهَا ۞ فَإِنّمَا اتَّصَلَتْ مِنْ نُــوِرِهِ بِهِمِ
+
+<br>فَإِنّهُ شَمْسُ فَضْلٍ هُمْ كَوَا كِبُـهَا ۞ يُظْهِرْنَ أَنْوَارَهَا لِلنَّاسِ فِيْ الظُّلَمِ
+
+<br>حَتَّــى إِذَا طَلَعَتْ فِي الْكَـوْنِ عَمَّ هُدَا ۞ هَا الْعَالَمِيْــنَ وَ أَحْيَتْ سَآئِرَ الْأُمَمِ
+
+<br>أَكْرِمْ بِخَلْقِ نَبِيٍ زَانَهُ خُلـُقٌ ۞ بِالْحُسْنِ مُشْتَمِلٍ بِالْبِشْرِ مُتَّسِمِ
+
+<br>كَالزَّهْرِ فِيْ تَرَفٍ وَالبَدْرِ فِي شَرَفٍ ۞ وَالبَحْرِ فِي كَرَمٍ وَالدَّهْرِ فِي هِمَمِ
+
+<br>كَأَنَّهُ وَهْوَ فَرْدٌ مِنْ جَلَالَتِــهِ ۞ فِي عَسْكَرٍ حِيْنَ تَلْقَــاهُ وَفِي حَشَمٍ
+
+<br>كَأَنَّمَا اللُّؤْلُؤُ المَكْنُــوْنُ فِيْ صَدَفٍ ۞ مِنْ مَّعْدِنَيْ مَنْطِقٍ مِنْهُ وَمُبْتَسَمِ
+
+<br>لَا طِيْبَ يَعْدِلُ تُرْبًا ضَمَّ أَعْظُمَهُ ۞ طُوبَ لِمُنْتَشِقٍ مِنْهُ وَمُلْتَثِمِ</p><br><p><i>Al-fashluts-tsālitsu: Fī mad-ḥi syayyidil-mursalīna shallalLāhu 'alaihi wa sallami.
+
+<br>Mawlāya shallī wa sallim dā iman abadā. ۞ 'Alā Ḥabībika Khayril-khalqi kullihimi.
+
+<br>Zhalamtu sunnata man aḥyāzh-zhalāma ilā. ۞ Anisytakat qadamāhudh-dhurra min warami.
+
+<br>Wa syadda min saghabin aḥsyā-ahu wa thawā. ۞ Taḥtal ḥijārati kasy-ḥan mutrafal-adami.
+
+<br>Wa rā-wadathul-jibālusy-syummu min dzahabin. ۞ 'An-nafsihi fa-arāhā ayyamā syamami.
+
+<br>Wa akkadat zuhdahu fīhā dharūratuhu. ۞ Innadh-dharūrata lā ta'dū 'alal-'ishami.
+
+<br>Wa kayfa tad-'ū iladdun-yā dharūratu man. ۞ Law lā hu lam tukhrajiddun-yā minal 'adami.
+
+<br>Muḥammadun Sayyidul-kawnayni wats-tsaqalayni. ۞ Wal farīqayni min 'urbin wa min 'ajami.
+
+<br>Nabiyyunal āmirun-nahī fa lā aḥadun. ۞ Abarra fī qawli lā minhu wa lā na'ami.
+
+<br>Huwal ḥabībul-ladzī turjā syafā-'atuhu. ۞ Li kulli hawlin minal ahwāli muqtaḥami.
+
+<br>Da-'ā ilalLāhi fal-mustamsikūna bihi. ۞ Mustamsikūna biḥablin ghayri munfashimi.
+
+<br>Fāqan-Nabiyyīna fī khalqin wa fī khuluqin. ۞ Wa lam yudānūhu fī 'ilmin wa lā karami.
+
+<br>Wa kulluhum-min Rasūlillāhi multamisun. ۞ Gharfan minal baḥri aw rasyfan minaddiyami.
+
+<br>Wa wāqifūna ladayhi 'inda ḥaddihimi. ۞ Min-nuqthatil-'ilmi aw min syaklatil-ḥikami.
+
+<br>Fahuwal-ladzī tamma ma'-nāhu wa shūratuhu. ۞ Tsummashthafāhu ḥabīban bāri-unnasami.
+
+<br>Munazzahun 'an-syarīkin fī maḥāsinihi. ۞ Fa jawharul-ḥusni fīhi ghayru munqasimi.
+
+<br>Da'madda-'at-hun-nashārā fī nabiyyihimi. ۞ Waḥkum-bimā syi'ta mad-ḥan fīhi waḥtakimi.
+
+<br>Wansub ilā dzātihi mā syi'-ta min syarafin. ۞ Wansub ilā qadrihi mā syi'-ta min 'izhami.
+
+<br>Fa inna fadhla Rasūlillāhi laysa lahu. ۞ Ḥaddun fa-yu'riba 'anhu nāthiqun bifami.
+
+<br>Law nāsabat qadrahu āyātuhu 'izhaman. ۞ Aḥyasmuhu ḥīna yud-'ā dārisar-rimami.
+
+<br>Lam yamtaḥinnā bi mā ta'yal-'uqūlu bihi. ۞ Ḥirshan 'alaynā fa lam nartab wa lam nahimi.
+
+<br>A'yal-warā fahmu ma'nāhu falaysa yurā. ۞ Fil qurbi wal bu'-di fīhi ghayru munfaḥimi.
+
+<br>Kasy-syamsi tazh-haru lil-'aynayni min bu-'udin. ۞ Shaghīratan wa tukilluth-tharfa min amami.
+
+<br>Wa kayfa yudriku fid-dunyā ḥaqīqatahu. ۞ Qawmun-niyāmun tasallū 'anhu bil-hulumi.
+
+<br>Famab-laghul-'ilmi fīhi annahu basyarun. ۞ Wa annahu khayru khalqillāhi kullihimi.
+
+<br>Wa kullu ā-yin atar-Ruslul-kirāmu bihā. ۞ Fa innamat-tashalat min nūrihi bihimi.
+
+<br>Fa innahu syamsu fadhlin hum kawākibuhā. ۞ Yuzh-hirna anwārahā lin-nāsi fizh-zhulami.
+
+<br>Ḥattā i-dzā thala-'at fil-kawni 'amma hudā. ۞ Hal-'ālamīna wa aḥyat sāiral-umami.
+
+<br>Akrim-bikhalqi Nabiyyin zānahu khuluqun. ۞ Bil-ḥusni musytamilin bil-bisyri muttasimi.
+
+<br>Kazzahri fī tarafin wal badri fī syarafin. ۞ Wal baḥri fī karamin wad-dahri fī himami.
+
+<br>Ka annahu wa huwa fardun min jalālatihi. ۞ Fī 'askarin ḥīna talqāhu wa fī ḥasyami.
+
+<br>Ka annamal-lu'-lu-ul maknūnu fī shadafin. ۞ Mim-ma'dinā manthiqin minhu wa mubtasami.
+
+<br>Lā thība ya'-dilu turban dhamma a'-zhumahu. ۞ Thūbā li muntasyiqin minhu wa multa-tsimi.</i></p><br><br>
+
+<p><strong>Bagian III: Pujian kepada Rasulullah ﷺ.</strong>
+
+<br>Wahai Tuanku, shalawat dan salam sudi Engkau limpahkan selalu. ۞ Kepada kekasih-Mu sebaik-baik makhluk yang Engkau titahkan.
+
+<br>Kutinggalkan sunnah Nabi, yang selalu beribadah menghidupkan gulita malam. ۞ Hingga sakit telapak kaki, membengkak karena ibadah malam.
+
+<br>Nabi yang begitu hebat, menahan nafsu dan lapar. ۞  Mengikatkan batu halus pada perut, karena begitu zuhud keduniaan.
+
+<br>Nabi yang ditawarkan gunung emas menjulang tinggi. ۞ Namun beliau tolak, dengan bangga perasaan hati.
+
+<br>Sungguh menambah kezuhudan Nabi, butuh harta namun tidak menerimanya. ۞ Meskipun ketika butuh harta, tidaklah merusak nilai kesuciannya.
+
+<br>Bagaimana mungkin Nabi nan mulia tertarik kepada kemilau dunia. ۞ Andai saja tanpa Nabi Muhammad ﷺ, dunia tak akan pernah ada.
+
+<br>Dialah Nabi Muhammad ﷺ, sang penghulu, seorang pemimpin baik di dunia maupun akhirat. ۞ Juga pemimpin jin dan manusia, baik bangsa Arab ataupun Ajam (bangsa selain Arab). 
+
+<br>Yaitu Nabi kita Rasulullah Muhammad ﷺ, sang penganjur kebaikan dan pencegah kemungkaran. ۞ Tak seorangpun lebih baik daripadanya, dalam berkata jangan kau lakukan dan ini sangat baik kau kerjakan.
+
+<br>Beliau kekasih Allah ﷻ, yang diharapkan oleh semua insan syafaatnya. ۞ Dari tiap perkara yang menakutkan yang datang mencekam.
+
+<br>Beliau mengajak menuju keridhaan Allah ﷻ, orang yang berpegang teguh padanya. ۞  Berarti ia berpegang pada tali-tali yang pasti tak akan putus.
+
+<br>Beliau melampaui nabi-nabi terdahulu baik ketampanan ataupun akhlak budi pekerti. ۞ Mereka nabi-nabi terdahulu tak akan menyamainya, baik dalam ilmu atau kemuliannya.
+
+<br>Semua nabi-nabi terdahulu memohon dari diri Rasulullah ﷺ. ۞ Seciduk lautan ilmunya dan setetes hujan kesantunannya.
+
+<br>Berdirilah mereka para nabi di sisi Rasulullah ﷺ pada puncak mereka. ۞ Mengharap setitik ilmu dan sebaris tanda bunyi huruf dalam hikmah.
+
+<br>Dialah nabi yang sempurna baik batin maupun lahirnya. ۞ Demikianlah Rasulullah ﷺ, terpilih sebagai kekasih Allah ﷻ, pencipta manusia.
+
+<br>Dia sang Nabi yang suci dari persamaan dalam segala kebaikan.  ۞  Inti kebaikan pada diri Nabi tak mungkin terbagi.
+
+<br>Tinggalkan tuduhan kaum Nasrani, tuduhan yang dilontarkan kepada nabi-nabi mereka. ۞ Tetapkanlah untaian pujian kepada nabi pujian apapun yang engkau suka.
+
+<br>Nisbahkan kepada dzat Nabi segala kemulian yang engkau kehendaki. ۞ Nisbahkan kepada martabat Nabi segala keagungan yang engkau kehendaki.
+
+<br>Karena keutamaan Rasulullah ﷺ, tiada tepi batasnya. ۞ Sehingga mengurai mudah terasa, bagi lisan yang berkata.
+
+<br>Andai saja keagungan mukjizat Rasulullah ﷺ sama dengan ketinggian derajatnya. ۞ Maka dengan sebutan namanya dapat hidupkan orang yang telah hancur tulangnya.
+
+<br>Nabi tidaklah menguji kita dengan apa yang tak terjangkau akal manusia. ۞ Karena sangat cintanya kita peroleh cahaya hingga tiada ragu bimbang pada apa yang ia bawa.
+
+<br>Seluruh makhluk rapuh, tiada mampu memahami rahasia hakikat kenabian. ۞ Tak akan melihat dari dekat atau jauh kecuali lemah tak berdaya berdiam diri.
+
+<br>Kenabian Rasulullah ﷺ, bagaikan matahari dari jauh tampak kecil pada kedua mata. ۞ Padahal mata tiada mampu bila berdekatan dengannya.
+
+<br>Bagaimana diketahui hakikat Nabi semasa dalam dunia.  ۞  Sedangkan mereka lega jumpa Nabi walau dalam sekilas mimpi.
+
+<br>Puncak pengetahuan tentang Rasulullah ﷺ, bahwa sesungguhnya beliau adalah manusia. ۞ Dan sesungguhnya beliau sebaik-baik makhluk Allah ﷻ, semua tanpa terkecuali.
+
+<br>Semua ayat, mukjizat yang datang tiba dibawa para rasul mulia ۞ Hanyalah pancaran cahaya Rasulullah ﷺ, yaitu cahaya yang melekat pada para Rasul.
+
+<br>Maka sesungguhnya Rasulullah ﷺ bagaikan mentari dalam keutamaan, sedangkan para nabi bagaikan bintang-bintangnya. ۞  Bintang pantulkan sinar sang surya kepada manusia dalam suasana gelap gulita.
+
+<br>Sehingga ketika memancarkan cahayanya, memberi penerang hidayah. ۞  Hidayah bagi seluruh alam, dan menghidupkan segala umat manusia.
+
+<br>Alangkah mulia budi pekerti Rasulullah ﷺ, yang menghiasi kesempurnaan keanggunannya. ۞  Keindahan yang dimiliki paras wajahnya tampak berseri.
+
+<br>Keanggunannya laksana bunga, dan kemuliaannya bagaikan purnama. ۞ Kedermawanannya laksana samudra, cita-citanya bagai perjalanan masa.
+
+<br>Seakan-akan Rasulullah ﷺ ialah Nabi yang berbeda dari nabi-nabi lainnya dari keagungannya. ۞ Di antara para pasukan dan pelayan kala kau jumpa karena dampak keagungannya.
+
+<br>Rasulullah ﷺ bagaikan mutiara yang tersimpan dalam kerangnya. ۞ Dikeluarkan dari dua pemikat yaitu ucapan dan senyumnya.
+
+Tiada keharuman melebihi tanah buana, tanah yang mengubur jasadnya. ۞ Betapa bahagia orang yang mencium dan mengecupnya.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

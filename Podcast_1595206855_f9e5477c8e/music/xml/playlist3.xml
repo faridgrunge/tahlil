@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<data>
+
+	<li class= 'playlistItem' data-type='podcast' data-path='http://robertkelly.libsyn.com/rss' data-dlink data-thumb='media/default_artwork/podcast/01.jpg'><a class='plink' href='http://codecanyon.net/user/Tean/portfolio' target='_blank'><img src='media/data/url.png' alt = 'purchase'/></a></li>
+	<li class= 'playlistItem' data-type='local' data-mp3='../media/audio/1/Tim_McMorris_-_A_Bright_And_Hopeful_Future.mp3' data-ogg='../media/audio/1/Tim_McMorris_-_A_Bright_And_Hopeful_Future.ogg' data-thumb='../media/audio/1/Tim_McMorris_-_A_Bright_And_Hopeful_Future.jpg'><a class='playlistNonSelected' href='#'>Tim McMorris - A Bright And Hopeful Future</a></li>
+	<li class= 'playlistItem' data-type='ofm_single' data-path='D4lw' data-dlink data-thumb='media/default_artwork/ofm_single/01.jpg'></li>
+	
+</data>
+
+
+
+

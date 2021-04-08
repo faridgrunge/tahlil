@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Muzdalifah</h1>
+
+
+<p style="text-align: right;" class="arab"></p>
+
+<ol>
+<li>
+Hari Arofah yaitu tanggal 9 Dzulhijjah.</li><p>Hari ini memiliki banyak keutamaan, diantaranya :</p>
+<ul>
+<li>Hari yang Allah paling banyak mencatat hambaNya terbebaskan dari neraka.</li>
+<li>Hari dimana Allah membanggakan jama&rsquo;ah haji di hadapan para malaikat</li>
+<li>Hari dimana Allah turun ke langit dunia mendekat kepada para jama&rsquo;ah haji yang sedang wuquf di &lsquo;Arofah</li>
+</ul>
+<p>Nabi shallallahu &lsquo;alaihi wasallam bersabda :</p>
+<p style="text-align: right;" class="arab">مَا مِنْ يَوْمٍ أَكْثَرَ مِنْ أَنْ يُعْتِقَ اللهُ فِيهِ عَبْدًا مِنَ النَّارِ، مِنْ يَوْمِ عَرَفَةَ، وَإِنَّهُ لَيَدْنُو، ثُمَّ يُبَاهِي بِهِمِ الْمَلَائِكَةَ، فَيَقُولُ: مَا أَرَادَ هَؤُلَاءِ؟</p>
+<p>&ldquo;Tidak ada hari yang paling banyak Allah membebaskan hambaNya dari neraka dari hari &Aacute;rofah. Dan sesungguhnya Allah mendekat, lalu Allah membanggakan para jama&aacute;h haji kepada para malaikat. Maka Allah berkata kepada para malaikat, &ldquo;Apa yang diinginkan oleh mereka (jama&aacute;h haji yang sedang wuquf)?<sup>&nbsp;([1])</sup>&rdquo; (HR Muslim no 1348)</p>
+<p>Nabi juga bersabda :</p>
+<p style="text-align: right;" class="arab">فَإِذَا وَقَفَ بِعَرَفَةَ فَإِنَّ اللَّهَ عَزَّ وَجَلَّ يَنْزِلُ إِلَى السَّمَاءِ الدُّنْيَا فَيَقُولُ: انْظُرُوا إِلَى عِبَادِي شُعثاً غُبراً اشْهَدُوا أَنِّي قَدْ غَفَرْتُ لَهُمْ ذُنُوبَهُمْ وَإِنْ كَانَ عَدَدَ قَطْرِ السَّمَاءِ وَرَمْلِ عالجٍ</p>
+<p>&ldquo;Jika ia wuquf di Arofah maka Allah turun ke langit dunia lalu Allah berkata : Lihatlah hamba-hambaKu datang memenuhi panggilanKu dalam kondisi rambut semerawut dan penuh dengan debu, maka saksikanlah (wahai para malaikat) sesungguhnya aku telah mengampuni dosa-dosa mereka meskipun sebanyak butiran-butiran air hujan, meskipun sebanyak butiran-butiran pasir yang menjulang&rdquo; (Shahih Ibni Khuzaimah no 1984, dinyatakan oleh Syaikh Al-Albani : Hasan ligoirihi)</p>
+<p>Allah maha kaya, sama sekali tidak membutuhkan hajinya para jama&rsquo;ah, tidak membutuhkan keletihan mereka, tidak membutuhkan apapun dari hambanya, akan tetapi Allah membanggakan para jam&rsquo;ah haji di padang Arofah kepada para malaikat sebagai bentuk pemuliaan terhadap mereka.</p>
+<ul>
+<li>Pada hari Arofah turun ayat tentang sempurnanya Islam</li>
+</ul>
+<p style="text-align: right;" class="arab">عَنْ عُمَرَ بْنِ الخَطَّابِ، أَنَّ رَجُلًا، مِنَ اليَهُودِ قَالَ لَهُ: يَا أَمِيرَ المُؤْمِنِينَ، آيَةٌ فِي كِتَابِكُمْ تَقْرَءُونَهَا، لَوْ عَلَيْنَا مَعْشَرَ اليَهُودِ نَزَلَتْ، لاَتَّخَذْنَا ذَلِكَ اليَوْمَ عِيدًا. قَالَ: أَيُّ آيَةٍ؟ قَالَ: {اليَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الإِسْلاَمَ دِينًا} قَالَ عُمَرُ: &laquo;قَدْ عَرَفْنَا ذَلِكَ اليَوْمَ، وَالمَكَانَ الَّذِي نَزَلَتْ فِيهِ عَلَى النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ، وَهُوَ قَائِمٌ بِعَرَفَةَ يَوْمَ جُمُعَةٍ&raquo;</p>
+<p>Dari &Uacute;mar bin Al-Khottob bahwasanya ada seorang Yahudi berkata kepadanya, &ldquo;Wahai Amirul mukminin, sebuah ayat di kitab suci kalian yang kalian membacanya, jika ayat tersebut turun kepada kami kaum Yahudi tentu kami akan jadikan hari turunnya ayat tersebut sebagai hari raya&rdquo;. Umar berkata, &ldquo;Ayat yang mana?&rdquo;. Si Yahudi berkata, &ldquo;Pada hari ini telah Ku-sempurnakan bagi kalian agama kalian, dan telah Ku-cukupkan kepada kalian nikmat-Ku, serta telah Ku-ridhoi Islam itu menjadi agama kalian&rdquo; (QS Al-Maidah : 3). Umar berkata, &ldquo;Kami telah mengetahui hari tersebut, demikian juga tempat diturunkannya ayat tersebut kepada Nabi shallallahu &aacute;laihi wasallam, yaitu tatkala Nabi wuquf di Arofah pada hari jum&aacute;t&rdquo; (HR Al-Bukhari no 45 dan Muslim no 3017)</p>
+<p>Lihatlah bagaimana Yahudi saja mengerti bahwa hari &Aacute;rofah adalah hari yang agung, hari diturunkannya ayat tentang sempurnanya nikmat Allah dan sempurnanya Islam, bahkan kalau itu turun di kalangan Yahudi akan dijadikan sebagai hari raya<sup>([2])</sup>.</p>
+<ul>
+<li>Hari &Aacute;rofah disebut dengan مَشْهُوْد hari yang dipersaksikan. Allah berfirman bersumpah dengan hari &Aacute;rofah dalam firmanNya وَشَاهِدٍ وَمَشْهُود &ldquo;Demi yang menyaksikan dan demi yang dipersakiskan&rdquo; (QS Al-Buruuj : 3). Nabi shallallahu &aacute;laihi wasallam bersabda :</li>
+</ul>
+<p style="text-align: right;" class="arab">وَاليَوْمُ الْمَشْهُودُ يَوْمُ عَرَفَةَ، وَالشَّاهِدُ يَوْمُ الجُمُعَةِ</p>
+<p>&ldquo;Hari yang dipersaksikan adalah hari &Aacute;rofah, dan yang menyaksikan adalah hari jum&aacute;t&rdquo; (HR At-Tirmidzi no 3339, dan dihasankan oleh Al-Albani dalam as-Shahihah no 1502 dan al-Mubarokfuri dalam Mir&aacute;atul Mafaatiih 4/435)<sup>&nbsp;([3])</sup></p>
+<ul>
+<li>Jamaah haji tidak disunnahkan untuk berpuasa pada hari Arofah, karena mereka sedang menunaikan ibadah yang lebih mulia, yaitu wuquf ang ymerupakan rukun Haji, sedangkan puasa dapat menyebabkan jamaah haji kurang maksimal dalam beribadah pada hari Ar</li>
+<li>Berpuasa di hari &lsquo;Arofah (untuk selain yang berhaji) maka akan menghapuskan dosa setahun sebelumnya dan setahun sesudahnya.</li>
+</ul>
+<p>Nabi bersabda :</p>
+<p style="text-align: right;" class="arab">صِيَامُ يَوْمِ عَرَفَةَ، أَحْتَسِبُ عَلَى اللهِ أَنْ يُكَفِّرَ السَّنَةَ الَّتِي قَبْلَهُ، وَالسَّنَةَ الَّتِي بَعْدَهُ</p>
+<p>&ldquo;Puasa hari &Aacute;rofah aku beraharap kepada Allah agar mengampuni dosa setahun sebelumnya dan dosa setahun sesudahnya&rdquo; (HR Muslim no 1162)</p>
+<p>Jika orang yang tidak berhaji lalu berpuasa dan mendapatkan ampunan dosa, lantas bagaimana lagi dengan jama&aacute;h haji yang langsung memohon ampunan di padang &Aacute;rofah?</p>
+<ul>
+<li>Hari &Aacute;rofah adalah siang yang terbaik sepanjang tahun<sup>([4])</sup>, sebagaimana malam lailatul Qodar adalah malam yang terbaik sepanjang tahun</li>
+</ul>
+<br><li>Seseorang yang hendak wuquf harus memastikan bahwa ia wuquf di padang Arofah.</li><p> Dan di padang Arofah telah dibuat plakat dan plank yang menunjukan batasan-batasan Arofah.</p>
+<ul>
+<li>Alhamdulillah semua tenda-tenda jama&aacute;h haji yang resmi (termasuk tenda-tenda jama&aacute;h haji Indonesia) lokasinya berada dalam areal &Aacute;rofah</li>
+<li>Bagi yang wuquf di Mesjid Namiroh maka hanya sekitar sepertiga masjid (yaitu bagian belakang masjid) yang termasuk dari Arofah, maka jangan ia wuquf di bagian depan atau tengah masji</li>
+<li>Jama&aacute;h haji tidak perlu jauh-jauh mencari jabal Ar-Rohmah, karena lokasinya jauh dari tenda jam&aacute;h haji Indonesia, dan juga tidak disyari&aacute;tkan untuk naik ke jabal Ar-Rohmah<sup>([5])</sup></li>
+<li>Barang siapa yang wuquf di luar Arofah hingga habis waktu wuquf maka hajinya tidak sah</li>
+</ul>
+<br><li>Wuquf di &Aacute;rofah hanya sah jika di waktu disyari&aacute;tkannya untuk wuquf.</li>
+<ul>
+<li>Waktu mulai wuquf -menurut jumhur &uacute;lama- adalah sejak waktu dzhuhur.<sup>([6])</sup>&nbsp;Karenanya jika jama&aacute;h telah tiba di Arofah di pagi hari, maka sebaiknya mereka istirahat yang cukup, agar ketika dzuhur kuat untuk berdoa dan tidak ngantuk hingga maghrib.</li>
+<li>Adapun akhir waktu wuquf adalah hingga terbit fajar hari An-Nahr (tanggal 10 Dzulhijjah).</li>
+<li>Bagi yang tidak berhalangan maka ia harus wuquf dari waktu dzuhur hingga terbenam matahari. Jika ia keluar dari padang Arofah sebelum terbenam matahari, maka jika ia kembali lagi ke Arofah meskipun telah malam, ia tidak perlu membayar fidyah. Adapun jika ia keluar sebelum terbenam matahari dan tidak kembali lagi maka ia membayar dam<sup>([7])</sup>. Yang lebih hati-hati dan sesuai sunnah adalah wuquf dari dzhuhur hingga terbenam matahari.</li>
+<li>Bagi yang berhalangan<sup>([8])</sup>&nbsp;maka tidak mengapa wuquf di malam hari, yang penting sebelum terbit fajar.</li>
+</ul>
+<br><li>Disunnahkan bagi imam untuk berkhutbah setelah masuk waktu dzuhur dan sebelum sholat.</li><p> Setelah khutbah baru kemudian adzan<sup>([9])</sup>, lalu iqomat lalu sholat dzuhur 2 raka&aacute;t lalu iqomat lagi dan sholat ashar 2 raka&aacute;t (jamak taqdim)<sup>([10])</sup>. Setelah selesai sholat maka jama&aacute;h haji silahkan memulai wuqufnya dengan banyak berdoa dan berdzikir kepada Allah.</p>
+<li>Disunnahkan berwuquf dan berdoa dalam kondisi bersuci. Bahkan disunnahkan untuk mandi sebelum wuquf<sup>([11])</li></sup>. Namun jika dalam kondisi tidak sucipun tetap sah menurut kesepakatan para ulama. Maka orang junub, wanita haid dan nifas sah wuqufnya (Al-Majmuu&rsquo; Syarh Al-Muhadzdzab 8/118)</p>
+<li>Nabi shallallahu &aacute;laihi wasallam wuquf di atas onta beliau, sehingga sebagian ulama berpendapat bahwa wuquf di atas tunggangan/kendaraan lebih utama, karena lebih kuat untuk berdoa.</li> Sebagaimana orang yang haji dianjurkan untuk tidak puasa pada hari itu agar lebih kuat berdoa. (lihat Al-Muhadzdzab 1/412). Sebagian ulama memandang bahwa hal ini kembali kepada kondisi sang haji. Jika seseorang dibutuhkan untuk dilihat orang-orang karena mereka membutuhkannya maka wuquf di atas tunggangan lebih afdol, atau seseorang susah untuk meninggalkan kendaraannya maka di atas kendaraan lebih afdol (lhat Majmuu Al-Fataawa, Ibnu Taimiyyah 26/132). Jika seseorang ternyata lebih khusyu&rsquo; doanya tatkala di kendaraan maka lebih afdol wuquf di kendaraan, namun jika sebaliknya yaitu tidak di kendaraan (wuquf di kemah) lebih khusyu&rsquo; maka lebih afdol baginya di kemah (lihat Majmuu Fataawaa wa Rosaail, al-&Uacute;tsaimin 24/531-532)</p>
+<li>Disunnahkan untuk berdoa dengan mengangkat kedua tangan.</p></li>
+<p>Usamah bin Zaid radhiallahu &aacute;nhumaa berkata :</p>
+<p style="text-align: right;" class="arab">كُنْتُ رَدِيفَ النَّبِيِّ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ بِعَرَفَاتٍ، فَرَفَعَ يَدَيْهِ يَدْعُو، فَمَالَتْ بِهِ نَاقَتُهُ، فَسَقَطَ خِطَامُهَا فَتَنَاوَلَ الْخِطَامَ بِإِحْدَى يَدَيْهِ، وَهُوَ رَافِعٌ يَدَهُ الْأُخْرَى</p>
+<p>&ldquo;Aku dibonceng di belakang Nabi shallallahu &aacute;laihi wasallam di padang Arofah. Maka beliau berdoa sambil mengangkat kedua tangannya, lalu onta beliau bergerak memiringkan beliau dan tali kekangnya terjatuh. Maka beliaupun mengambil tali kekang onta dengan salah satu tangannya dan tangannya yang lain tetap beliau angkat (untuk berdoa)&rdquo; (HR An-Nasaai no 3011 dan dishahihkan oleh Al-Albani)</p>
+<p>Lihatlah bagaimana semangat Nabi shallallahu &aacute;laihi wasallam berdoa sambil tetap terus mengangkat tangan meskipun hanya satu tangan yang beliau angkat karena tangan yang satu harus memegang tali kekang onta beliau.</p>
+<li>Nabi shallallahu &aacute;laihi wasallam tidak menentukan doa khusus di &Aacute;rofah dan juga dzikir khusus kecuali:</p></li>
+<p style="text-align: right;" class="arab">لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
+<p>Abdullah bin &Aacute;mr bin al-&Aacute;ash berkata :</p>
+<p style="text-align: right;" class="arab">كَانَ أَكْثَرُ دُعَاءِ رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يَوْمَ عَرَفَةَ: &rdquo; لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
+<p>&ldquo;Doa Rasulullah shallallahu &aacute;laihi wasallam yang paling banyak (beliau ucapkan) tatkala hari &Aacute;rofah adalah : Laa ilaaha illallahu wahdahu laa syariika lahu, lahul mulku walahul hamdu wa huwa &aacute;laa kulli syai-in qodiir&rdquo; (HR Ahmad no 6961 dan dihasankan oleh para pentahqiq Al-Musnad)</p>
+<p>Dalam riwayat yang lain Nabi bersabda :</p>
+<p style="text-align: right;" class="arab">خَيْرُ الدُّعَاءِ دُعَاءُ يَوْمِ عَرَفَةَ، وَخَيْرُ مَا قُلْتُ أَنَا وَالنَّبِيُّونَ مِنْ قَبْلِي: لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ المُلْكُ وَلَهُ الحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
+<p>&ldquo;Sebaik-baik doa adalah doa di hari &Aacute;rofah, dan sebaik-baik yang aku ucapkan dan juga para nabi sebelumku adalah : Laa ilaaha illallahu wahdahu laa syariika lahu, lahul mulku walahul hamdu wa huwa &aacute;laa kulli syai-in qodiir&rdquo; (HR At-Tirmidzi no 3585 dan dihasankan oleh Al-Albani)</p>
+<p>Selain dzikir ini maka seorang haji bebas membaca doa apa saja dan dzikir apa saja yang ia sukai, bertakbir, bertahlil, bertalbiyah, dan lain-lain hingga maghrib (lihat Majmuu Al-Fataawa, Ibnu Taimiyyah 26/132)</p>
+<li>Ingat bahwa Nabi shallallahu &aacute;laihi wasallam telah bersabda الْحَجُّ عَرَفَةُ </li>&ldquo;Haji itu adalah &Aacute;rofah&rdquo;. (HR Abu Dawud no 1949 dan At-Tirmidzi no 889 dan dishahihkan oleh Al-Albani di Al-Irwaa no 1064) Ibnu Hajar berkata tentang hadits ini, أَيْ مُعْظَمُ الْحَجِّ وَرُكْنُهُ الْأَكْبَرُ &ldquo;Yaitu mayoritas amalan haji dan rukunnya yang terbesar adalah wuquf di Arofah&rdquo;(Fathul Baari 11/94). Ini menunjukan bahwa inti dari pada ibadah haji adalah wuquf di Arofah. Tujuan dari para jama&aacute;h haji mengeluarkan biaya yang banyak, meninggalkan keluarga dan kampung halaman serta meninggalkan pekerjaan adalah untuk bisa berdoa kepada Allah di padang Arofah. Maka hendaknya para jama&aacute;h haji benar-benar menghadirkan dalam diri mereka betapa bernilainya setiap detik dan menit di padang Arofah. Jangan sam</p>
+<li>Terlebih lagi Nabi shallallahu &aacute;laihi wasallam menyatakan</p></li>
+<p style="text-align: right;" class="arab">خَيْرُ الدُّعَاءِ دُعَاءُ يَوْمِ عَرَفَةَ</p>
+<p>&ldquo;Sebaik-baik do&aacute; adalah doa di hari Arofah&rdquo;</p>
+<p>Ibnu &lsquo;Abdilbarr berkata :</p>
+<p style="text-align: right;" class="arab">وَفِيهِ مِنَ الْفِقْهِ أَنَّ دُعَاءَ يَوْمِ عَرَفَةَ أَفْضَلُ مِنْ غَيْرِهِ &hellip; وَفِي الْحَدِيثِ أَيْضًا دَلِيلٌ عَلَى أَنَّ دُعَاءَ يَوْمِ عَرَفَةَ مُجَابٌ كُلُّهُ فِي الْأَغْلَبِ</p>
+<p>&ldquo;Diantara fikih hadits ini adalaha bahwasanya doa di hari &Aacute;rofah lebih baik dari pada doa di hari-hari yang lain&hellip;.dan hadits ini juga menunjukan bahwa do&aacute; pada hari &Aacute;rofah secara dominan akan dikabulkan seluruhnya&rdquo; (At-Tamhiid 6/41)</p>
+<li>Bahkan diantara bentuk pemuliaan Allah kepada para jama&aacute;h haji yang wuquf di Arofah adalah Allah menerima syafa&aacute;t mereka terhadap orang-orang yang mereka doakan sehingga Allah juga mengampuni mereka.</li> Nabi bersabda :</p>
+<p style="text-align: right;" class="arab">وَأَمَّا وُقُوفُكَ عَشِيَّةَ عَرَفَةَ، فَإِنَّ اللَّهَ تَبَارَكَ وَتَعَالَى يَهْبِطُ إِلَى سَمَاءِ الدُّنْيَا، فَيُبَاهِي بِكُمُ الْمَلائِكَةَ، يَقُولُ: عِبَادِي جَاءُونِي شُعْثًا مِنْ كُلِّ فَجٍّ عَمِيقٍ يَرْجُونَ جَنَّتِي، فَلَوْ كَانَتْ ذُنُوبُكُمْ كَعَدَدِ الرَّمْلِ، أَوْ كَقَطْرِ الْمَطَرِ، أَوْ كَزَبَدِ الْبَحْرِ لَغَفَرَهَا، أَوْ لَغَفَرْتُهَا، أَفِيضُوا عِبَادِي مَغْفُورًا لَكُمْ وَلِمَنْ شَفَعْتُمْ لَهُ</p>
+<p>&ldquo;Adapun wuquf-mu di petang hari &Aacute;rofah, maka sesungguhnya Allah tabaaroka wa ta&aacute;ala turun ke langit dunia, lalu Allah membanggakan kalian (para jama&aacute;h haji) di hadapan para malaikat. Allah berkata, &ldquo;Hamba-hambaKu, mereka mendatangiku dalam kondisi rambut semerawut dari segenap penjuru karena mengharapkan surgaKu. Jika dosa kalian sebanyak butiran pasir, sebanyak tetesan hujan atau sebanyak buih di lautan maka Aku akan mengampuninya, maka pergilah kalian (meninggalkan padang Arofah) dalam kondisi telah diampuni dosa-dosa kalian dan orang-orang yang kalian doakan mereka&rdquo;<sup>&nbsp;([12])</sup></p>
+<p>Maka hendaknya seseorang berbaik sangka kepada Allah dan menguatkan keyakinan bahwa Allah akan mengabulkan doanya di Arofah. Abdullah bin Al-Mubaarok berkata :</p>
+<p style="text-align: right;" class="arab">جِئْتُ إلَى سُفْيَانَ عَشِيَّةَ عَرَفَةَ وَهُوَ جَاثٍ عَلَى رُكْبَتَيْهِ وَعَيْنَاهُ تَهْمِلَانِ فَبَكَيْتُ فَالْتَفَتَ إِلَيَّ فَقَالَ: مَا شَأْنُكَ؟ فَقُلْتُ: مَنْ أَسْوَأُ هَذَا الْجَمْعِ حَالًا؟ قَالَ: الَّذِي يَظُنُّ أَنَّ اللَّهُ عَزَّ وَجَلَّ لَا يُغْفَرَ لَهُمْ</p>
+<p>&ldquo;Aku mendatangi Sufyan At-Tsauri di petang hari &Aacute;rofah, sementara beliau sedang bertelekan di atas kedua lututnya, kedua matanya mengalirkan air mata, maka akupun menangis. Lalu beliau menoleh kepadaku seraya berkata, &ldquo;Ada apa denganmu?&rdquo;. Aku berkata, &ldquo;Siapakah orang yang paling buruk di antara kumpulan para jama&aacute;h haji ini?&rdquo;, beliau berkata, &ldquo;Orang yang berprasangka bahwa Allah Azza wa Jalla tidak mengampuni mereka&rdquo; (Diriwayatkan oleh Ibnu Abid Dunya di Husnu Adz-Dzhon billahi no 72)</p>
+<p>Al-Fudhoil bin &Iacute;yaadh wuquf di padang Arofah lalu beliau melihat isakan dan tangisan manusia, maka ia berkata :</p>
+<p style="text-align: right;" class="arab">أَرَأَيْتُمْ لَوْ أَنَّ هَؤُلاَءِ صَارُوا إِلَى رَجُلٍ فَسَأَلُوْهُ دَانِقًا أَكَانَ يَرُدُّهُمْ؟ قَالَوا : لاَ، قَالَ : وَاللهِ، لَلْمَغْفِرَةُ عِنْدَ اللهِ أَهْوَنُ مِنْ إِجَابَةِ رَجُلٍ لَهُمْ بِدَانِقٍ</p>
+<p>&ldquo;Menurut kalian jika mereka (para jama&aacute;h haji) semuanya pergi ke seseorang lantas mereka meminta kepadanya daniq (1/6 dirham) apakah orang ini akan menolak memberikan kepada mereka?&rdquo;. Mereka berkata, &ldquo;Tentu tidak&rdquo;.</p>
+<p>Al-Fudhoil berkata, &ldquo;Demi Allah, sungguh ampunan di sisi Allah lebih mudah daripada pemberian orang tersebut 1/6 dirham kepada mereka&rdquo; (Majlis fi Fadhli Yaumi &Aacute;rofah, Ibnu Nashiruddi Ad-Dimasyqi hal 63)</p>
+<p>Dalam sautu hadits yang mursal dari Tholhah bin &Uacute;baidillah Al-Khuzaa&iacute; bahwasanya Nabi shallallahu &aacute;laihi wasallam bersabda:</p>
+<p style="text-align: right;" class="arab">مَا رُئِيَ الشَّيْطَانُ يَوْمًا هُوَ أَصْغَرُ فِيهِ وَلَا أَدْحَرُ وَلَا أَحْقَرُ وَلَا أَغْيَظُ مِنْهُ فِي يَوْمِ عَرَفَةَ؛ وَمَا ذَلِكَ إِلَّا مِمَّا يَرَى مِنْ تَنَزُّلِ الرَّحْمَةِ وَتَجَاوُزِ اللهِ عَنِ الذُّنُوبِ الْعِظَامِ</p>
+<p>&ldquo;Dan tidaklah terlihat syaitan pada suatu hari dalam konidisi paling kecil, paling terkalahkan, paling terhinakan, dan paling marah seperti di hari Arofah. Dan tidaklah hal ini kecuali karena syaitan melihat rahmat Allah yang banyak turun dan Allah memaafkan dosa-dosa yang besar&rdquo;<sup>&nbsp;([13])</sup></p>
+<li>Peringatan :</li>
+<ul>
+<li>Hendaknya seseorang bersemangat untuk berdoa di padan Arofah dengan doa-doa yang datang dari Nabi shallallahu &aacute;laihi wasallam. Karena doa-doa yang diajarkan Nabi penuh barokah dan lebih mendorong untuk dikabulkan. Demikian juga doa-doa yang ada di dalam al-Qur&aacute;n. Dan tentu boleh ia berdoa dengan Bahasa Indonesia jika ia ingin mengungkapkan permohonannya dengan lebih leluasa, akan tetapi tetap memperhatikan adab-adab doa</li>
+<li>Jika ada saudara-saudaranya yang meminta kepadanya untuk mendoakan mereka di Arofah maka hendaknya ia mendoakan mereka, karena -sebagaimana telah lalu- bahwa Allah juga mengabulkan syafaat jamaah haji yang mendoakan orang lain.</li>
+<li>Janganlah ia hanya membatasi doanya untuk dirinya sendiri, akan tetapi ia juga mendoakan kedua orang tuanya, kakak-adiknya, kerabatnya, dan kaum muslimin secara umum. Terlebih lagi di zaman sekarang yang terlalu banyak fitnah yang tersebar menimpa kaum muslimin di penjuru dunia.</li>
+<li>Hendaknya berdoa sendiri-sendiri, karena itulah sunnahnya Nabi shallallahu &aacute;laihi wasallam dan para sahabat tatkala mereka berdoa di Arofah.</li>
+<li>Hendaknya ia ikhlash dalam doanya. Karena ibadah hanya bisa diterima oleh Allah jika dibangun di atas keikhlasan. Banyak dari jama&aacute;h haji yang berpose sambil berdoa lalu berfotoan atau berselfiyan, maka hendaknya ia tidak sibuk melakukan demikian. Karena kawatir doanya, wuqufnya, dan hajinya terancam dengan riya&rsquo; sehingga akan hilang pahalanya. Syaitan tidak perduli sebanyak apa anda beribdah yang penting bagi syaitan ibadah tersebut tidak diterima, diantaranya adalah jika tercampur riya&rsquo; (ingin dipunji dan dilihat oleh orang lain).</li>
+<li>Hendaknya ia benar-benar memanfaatkan waktunya. Jika ia telah lelah berdoa maka hendaknya ia berdzi Jangan sampai ia membuang-buang waktunya. Banyak jama&aacute;h haji di padang Arofah sibuk jalan kesana sini, memotret sana sini, ngobrol, atau tidur hingga menjelang maghrib. Maka tidak mengapa meminum kopi atau yang semisalnya untuk menghilangkan rasa kantuk agar kuat beribadah dan berdoa pada siang yang sangat mulia tersebut.</li>
+<li>Waktu berdoa hingga azan maghrib, maka hingga menjelang maghrib hendaknya seseorang tetap semangat berdoa. Jika mereka sudah harus naik bus sebelum maghrib maka hendaknya terus berdoa di atas bus, ia tidak tahu bisa jadi doanya dipenghujung waktu yang lebih berkah dari waktu-waktu sebelumnya.</li>
+<li>Tatkala berdoa disunnahkan untuk menghadap ke Ka&rsquo;bah -apakah bertepatan menghadap jabal Ar-Rahmah atau tidak-, yang penting menghadap kiblat. Sebagian jama&aacute;h haji sengaja untuk berdoa menghadap Jabal Ar-Rahmah dan ini merupakan kesalahan.</li>
+</ul>
+<br><li>Jika telah tiba azan maghrib maka jama&aacute;h haji betolak dari Arofah menuju Muzdalifah.</li>Tetap bertalbiyah dan berdzikir dalam perjalanan menuju ke Muzdalifah. Dan disunnahkan untuk berjalan dengan tenang. Jabir berkata :</p>
+<p style="text-align: right;" class="arab">وَيَقُولُ بِيَدِهِ الْيُمْنَى &laquo;أَيُّهَا النَّاسُ، السَّكِينَةَ السَّكِينَةَ&raquo;</p>
+<p>&ldquo;Nabi mengisyaratkan dengan tangan kanannya seraya berkata, &ldquo;Wahai manusia sekalian berjalanlah dengan tenang, berjalanlah dengan tenang&rdquo; (HR Muslim no 1218).</p>
+<p>Demikian juga Ibnu &Aacute;bbas meriwayatkan bahwa tatkala Nabi mendengar orang-orang memukul onta mereka dengan keras agar cepat berjalan, maka Nabi berkata :</p>
+<p style="text-align: right;" class="arab">أَيُّهَا النَّاسُ عَلَيْكُمْ بِالسَّكِينَةِ فَإِنَّ البِرَّ لَيْسَ بِالإِيضَاعِ</p>
+<p>&ldquo;Wahai manusia sekalian, hendaknya kalian tenang, karena sesungguhnya kebaikan bukan dengan cepat-cepat/teburu-buru&rdquo; (HR Al-Bukhari no 1671)</p>
+<p>Ibnu Hajar berkata,</p>
+<p style="text-align: right;" class="arab">فَبَيَّنَ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ أَنَّ تَكَلُّفَ الْإِسْرَاعِ فِي السَّيْرِ لَيْسَ مِنَ الْبِرَّ أَيْ مِمَّا يُتَقَرَّبُ بِهِ وَمِنْ هَذَا أَخَذَ عُمَرُ بْنُ عَبْدِ الْعَزِيزِ قَوْلَهُ لَمَّا خَطَبَ بِعَرَفَةَ لَيْسَ السَّابِقُ مَنْ سَبَقَ بَعِيرُهُ وَفَرَسُهُ وَلَكِنَّ السَّابِقَ مَنْ غُفِرَ لَهُ</p>
+<p>&ldquo;Maka Nabi shallallahu &aacute;laihi wasallam menjelaskan bahwa berusah untuk cepat-cepat dalam perjalanan bukanlah merupakan kebaikan, yaitu bukan perkara yang mendekatkan diri kepada Allah. Dari sini &Uacute;mar bin Abdil Aziz tatkala berkhutbah di &Aacute;rofah beliau berkata, &ldquo;Bukanlah orang yang di depan adalah orang yang ontanya dan kudanya lebih di depan, akan tetapi orang yang di diepan adalah orang yang diampuni dosa-dosanya&rdquo; (Fathul Baari 3/522)</p>
+</li>
+</ol>
+
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

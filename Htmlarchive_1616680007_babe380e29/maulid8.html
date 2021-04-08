@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Maulid ad-Diba'i - Bagian 7</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+وَكَانَ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ أَحْسَنَ النَّاسِ خَلْقًا وَخُلُقًا ۞ وَأَهْدَاهُمْ اِلٰى الْحَقِّ طُرُقًا ۞ كَانَ خُلُقُهُ الْقُرْاٰنُ ۞ وَشِيْمَتُهُ الْغُفْرَانُ ۞ يَنْصَحُ لِلْإِنْسَانِ ۞ وَيَفْسَحُ فِي الْإِحْسَانِ ۞<br><br>
+
+وَيَعْفُوْ عَنِ الذَّنْبِ إِذَا كَانَ فِيْ حَقِّهٖ وَسَبَبِهِ ۞ وَإِذَا ضُيِّعَ حَقُّ اللّٰهِ لَمْ يَقُمْ أَحَدٌ لِغَضَبِهِ ۞ مَنْ رَاٰهُ بَدِيْهَةً هَابَهُ ۞ وَإِذَا دَعَاهُ الْمِسْكِيْنُ أَجَابَهُ ۞ يَقُوْلُ الْحَقَّ وَلَوْكَانَ مُرًّا ۞<br><br>
+
+وَلَا يُضْمِرُ لِمُسْلِمٍ غِشًّا وَلَا ضُرًّا ۞ مَنْ نَظَرَ فِيْ وَجْهِهِ عَلِمَ أَنَّهٗ لَيْسَ بِوَجْهِ كَذَّابٍ ۞ وَكَانَ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ لَيْسَ بِغَمَّازٍ وَلَا عَيَّابٍ ۞ إِذَا سُرَّا فَـكَأَنَّ وَجْهَهُ قِطْعَةُ قَمَرٍ ۞<br><br>
+
+وَإِذَا كَلَّمَ النَّاسَ فَكَأَنَّمَا يَجْنُوْنَ مِنْ كَلَامِهٖ أَحْلٰ ثَمَرٍ ۞ وَإِذَا تَبَسَّمَ تَبَسَّمَ عَنْ مِثْلِ حَبِّ الْغَمَامِ ۞ وَإِذَا تَكَلَّمَ فَكَأَنَّمَا الدُّرُّ يَسْقُطُ مِنْ ذٰلِكَ الْكَلَامِ ۞<br><br>
+
+وَإِذَا تَحَدَّثَ فَكَأَنَّ الْمِسْكَ يَخْرُجُ مِنْ فِيْهِ ۞ وَإِذَا مَرَّ بِطَرِيْقٍ عُرِفَ مِنْ طِيْبِهٖ أَنَّهٗ قَدْ مَرَّ فِيْهِ ۞ وَإِذَا جَلَسَ فِيْ مَجْلِسٍ بَقِـيَ طِيْبُهٗ فِيْهِ أَيَّامًا وَإِنْ تَغَيَّبَ ۞ وَيُوْجَدُ مِنْهُ أَحْسَنُ طِيْبٍ وَإِنْ لَمْ يَكُنْ قَدْ تَطَيَّبَ ۞<br><br>
+
+وَإِذَا مَشـٰى بَيْنَ أَصْحَابِهٖ فَكَأَنَّهُ الْقَمَرُ بَيْنَ النُّجُوْمِ الزُّهْرِ ۞ وَإِذَا أَقْبَلَ لَيْلًا فَكَأَنَّ النَّاسَ مِنْ نُوْرِهٖ فِيْ أَوَانِ الظُّهْرِ ۞ وَكَانَ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ أَجْوَدَ بِالْخَيْرِ مِنَ الرِّيْحِ الْمُرْسَلَةِ ۞<br><br>
+
+وَكَانَ يَرْفُقُ بِالْيَتِيْمِ وَالْأَرْمَلَةِ ۞ قَالَ بَعْضُ وَاصِفِيْهِ مَا رَأَيْتُ مِنْ ذِيْ لِمَّةٍ سَوْدَآءَ ۞ فِيْ حُلَّةٍ حَمْرَآءَ ۞ أَحْسَنَ مِنْ رَسُوْلِ اللهِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ ۞<br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+وَقِيْلَ لِبَعْضِهِمْ كَأَنَّ وَجْهَهُ الْقَمَرُ ۞ فَقَالَ بَلْ أَضْوَأُ مِنَ الْقَمَرِ إِذَا لَمْ يَحُلْ دُوْنَهُ الْغَمَامُ ۞ قَدْ غَشِيَهُ الْجَلَالُ ۞ وَانْتَهٰى إِلَيْهِ الْكَمَالُ ۞<br><br>
+
+قَالَ بَعْضُ وَاصِفِيْهِ مَا رَأَيْتُ قَبْلَهُ وَلَا بَعْدَهٗ مِثْلَهُ ۞ فَيُعْجِزُ لِسَانُ الْبَلِيْغِ إِذَا اَرَادَ أَنْ يُحْصِيَ فَضْلَهُ ۞ فَسُبْحَانَ مَنْ خَصَّهُ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ بِالْمَحَلِّ الْأَسْنٰى ۞<br><br>
+
+وَأَسْرٰى بِهٖ اِلٰى قَابِ قَوْسَيْنِ أَوْ أَدْنٰى ۞ وَأَيَّدَهٗ بِالْمُعْجِزَاتِ الَّتِيْ لَا تُحْصٰى ۞ وَاَوفَاهُ مِنْ خِصَالِ الْكَمَالِ بِمَا يَجِلُّ أَنْ يُسْتَقْصٰـى ۞ وَأَعْطَاهُ خَمْسًا لَمْ يُعْطِهِنَّ أَحَدًا قَبْلَهُ ۞<br><br>
+
+وَاٰتَاهُ جَوَامِعَ الْكَلِمِ فَلَمْ يُدْرِكْ أَحَدٌ فَضْلَهُ ۞ وَكَانَ لَهٗ فِيْ كُلِّ مَقَامٍ عِنْدَهٗ مَقَالٌ ۞ وَلِكُلِّ كَمَالٍ مِنْهُ كَمَالٌ ۞ لَا يَحُوْلُ فِيْ سُؤَالٍ وَلَا جَوَابٍ ۞ وَلَا يَجُوْلُ لِسَانُهٗ إِلَّا فِيْ صَوَابٍ ۞<br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+وَمَا عَسٰى أَنْ يُقَالَ فِيْمَنْ وَصَفَهُ الْقُرْاٰنُ ۞ وَأَعْرَبَ عَنْ فَضَائِلِهٖ التَّوْرَاةُ وَالْإِنْجِيْلُ وَالزَّبُوْرُ وَالْفُرْقَانُ ۞ وَجَمَعَ اللهُ لَهٗ بَيْنَ رُؤْيَتِهٖ وَكَلَامِهِ ۞ وَقَرَنَ اسْمُهٗ مَعَ اسْمِهٖ تَنْبِيْهًا عَلىٰ عُلُوِّ مَقَامَهِ ۞ وَجَعَلَهٗ رَحْمَةً لِلْعَالَمِيْنَ وَنُوْرًا ۞ وَمَلَأَ بِمَوْلِدِهِ الْقُلُوْبَ سُرُوْرًا ۞<br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+يَا بَـدْرَتِمٍّ حَازَ لَّ كَمَالِ ۞ مَاذَا يُعَبِّرُعَنْ عُلَاكَ مَقَالِ<br>
+اَنْتَ الَّذِی اَشْرَقْتَ فِی اُفُقِ الْعُلَا ۞ فَمَحَوْتَ بِالأَنْـوَارِلَّ ضَلَالِ<br>
+وَبِكَ اسْتَنَارَ الْكَوْنُ يَاعَلَمَ الْهُدٰى ۞ بِالنُّـوْرِ وَاْلاِنْعَـامِ وَاْلاِفْضَالِ<br><br>
+
+صَلَّى عَلَيْكَ اللّٰهُ رَبِّي دَائِمًـا ۞ اَبَدًامَـعَ اْلإِبْكَارِ وَاْلاٰصَـالِ<br>
+وَعَلىٰ جَمِيْـعِ الاٰلِ وَاْلأَصْحَابِ مَنْ ۞ قَدْ خَصَّهُمْ رَبُّ الْعُـلَا بِكَمَالِ<br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ</p><br><br><p><i>Allāhumma shalli wa sallim wa bārik 'alaīh.<br><br>
+
+Wakāna shallallāhu 'alayhi wa sallama aḥsanan-nāsi khalqan wa khuluqan. ۞ Wa ahdāhum ilal-ḥaqqi thuruqā. ۞ Kāna khuluquhul-qur-ān. ۞ Wa syīmatuhul-ghufrān. ۞ Yanshaḥu lil-insān. ۞ Wa yafsaḥu fil-iḥsān. ۞ Wa ya'fū 'anidz-dzamm-bi idzā kāna fī ḥaqqihī wa sababihi. ۞ Wa idzā dhuyyi-'a ḥaqqullāhi lam yaqum aḥadun li-gha-dhabih. ۞ Man ra-āhu badīhatan hābah. ۞ Wa idzā da-'āhul-miskīnu ajābah. ۞ Yaqūlul-ḥaqqa wa law kāna murrā. ۞ Wa lā yudhmiru li-muslimin ghisy-syā wa lā dhurrā. ۞ Man nazhara fī wajhihi 'alima annahū laysa bi-wajhi kadz-dzāb. ۞ Wa kāna shallallāhu 'alayhi wa sallama laysa bi-ghammāzin wa lā 'ayyābin. ۞ Idzā surrā faka-anna wajhahu qith-'atu qamar. ۞ Wa idzā kallaman-nāsa faka-annamā yajnūna min kalāmihī aḥlā tsamar. ۞ Wa idzā tabassama tabassama 'am-mits-li ḥabbil-ghamām. ۞ Wa idzā takallama faka-annamad-durru yasquthu min dzālikal-kalām. ۞ Wa idzā taḥadda-tsa faka-annal-miska yakhruju min fīh. ۞ Wa idzā marra bi-tharīqin 'urifa min thībihī annahū qad marra fīh. ۞ Wa idzā jalasa fī majlisimm-baqiya thībuhū fīhi ayyāman wa inta-ghayyab. ۞ Wa yūjadu minhu aḥsanu thībiw-wa il-lam yaqun qad ta-thayyab. ۞ Wa idzā masyā bayna ash/-hābihī faka-annahul-qamaru baynan-nujūmiz-zuhri. ۞ Wa idzā aqbala laylan faka-annan-nāsa min-nūrihī fī awānizh-zhuhri. ۞ Wa kāna shallallāhu 'alayhi wa sallama ajwada bil-khayri minar-rīḥil-mursalah. ۞ Wa kāna yarfuqu bil-yatīmi wal-armalah. ۞ Qāla ba'dhu wāshifīhi mā ra-aytu min dzī limmatin saw-dā'. ۞ Fī ḥullatin ḥamrā'. ۞ Aḥsana mir-rasūlillāhi shallallāhu 'alayhi wa sallam. ۞
+<br>Allāhumma shalli wa sallim wa bārik 'alaīh.
+<br>Wa qīla li-ba'dhihim ka-anna wajhahul-qamar. ۞ Faqāla bal adhwā-u minal-qamari idzā lam yaḥul dūnahul-ghamām. ۞ Qad gha-syi-yahul-jalāl. ۞ Wantahā ilayhil-kamāl. ۞ Qāla ba'dhu wāshifīhi mā ra-aytu qablahu wa lā ba'dahū mits-lah. ۞ Fayu'jizu lisānul-balīghi idzā arāda ayyuḥshiya fadhlah. ۞ Fasubḥāna man khash-sha-hu shallallāhu 'alayhi wa sallama bil-maḥallil-asnā. ۞ Wa asrā bihī ilā qābi qawsayni aw adnā. ۞ Wa ayyadahū bil-mu'jizātil-latī lā tuḥshā. ۞ Wa aw fāhu min khi-shālil-kamāli bimā yajillu ayyustaq-shā. ۞ Wa a'thāhu khamsan lam yu'thi-hinna aḥadan qablah. ۞ Wa ā-tāhu jawāmi-'al-kalimi falam yudrik aḥadun fadhlah. ۞ Wa kāna lahū fī kulli maqāmin 'indahū maqāl. ۞ Wa li-kulli kamālim-minhu kamāl. ۞ Lā yaḥūlu fī su-ālin wa lā jawāb. ۞ Wa lā yajūlu lisānuhū illā fī shawāb. ۞
+<br>Allāhumma shalli wa sallim wa bārik 'alaīh.
+<br>Wa mā 'asā ayyuqāla fīman wa shafahul-qur-ān. ۞ Wa a'raba 'an fadhā-ilihit-tawrātu wal-injīlu waz-zabūru wal-furqān. ۞ Wa jama-'allāhu lahū bayna ru'yatihī wa kalāmih. ۞ Wa qaranasmuhū ma-'asmihī tamm-bīhan 'alā 'uluwwi maqāmih. ۞ Wa ja-'alahū raḥmatan lil-'ālamīna wa nūrā. ۞ Wa mala-a bi-mawlidihil-qulūba surūrā. ۞
+<br>Allāhumma shalli wa sallim wa bārik 'alaīh.
+<br>Yā badratimmin ḥāza kulla kamāl. ۞ Mā dzā yu-'abbiru 'an 'u-lāka maqālī.
+<br>Antal-ladzī asyraqta fī u-fuqil-'ulā. ۞ Famaḥawta bil-anwāri kulla dhalāl.
+<br>Wa bikas-tanāral-kawnu yā 'alamal-hudā. ۞ Bin-nūri wal-in-'āmi wal-ifdhāl.
+<br>Shallā 'alaykallāhu Rabbī dā-iman. ۞ Abadan ma-'al-ibkāri wal-āshāl.
+<br>Wa 'alā jamī-'il-āli wal-ash-ḥābi man. ۞ Qad khash-shahum Rabbul-'ulā bi-kamāl.
+
+<br><br>Allāhumma shalli wa sallim wa bārik 'alaīh.</i></p><br><br><p>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+
+<br><br>Adalah Nabi Muhammad ﷺ sebaik-baik manusia dalam kejadian bentuk tubuh dan budi pekerti, ۞ dan paling banyak menunjukkan manusia ke jalan yang benar. ۞ Budi pekertinya sesuai Alquran, ۞ bertabiat pengampun, ۞ pemberi nasehat manusia, ۞ luas dalam berbuat kebajikan. ۞ Pemaaf kesalahan, bila memang menjadi haknya dan diketahui sebab-sebabnya. ۞ Dan bila hak Allah dilanggar, maka tak seorangpun berani berdiri menentang kemarahannya. ۞ Siapa yang melihatnya sepintas maka akan tampak kewibawaannya, ۞ jikalau diundang oleh orang miskin, maka beliau memenuhinya. ۞ Beliau ﷺ berkata benar meskipun pahit. ۞ Kepada kaum muslim tidak pernah menyimpan rasa dengki dan tidak pula membahayakan. ۞ Siapa yg memandang wajahnya, pasti akan mengerti bahwa sesungguhnya Beliau ﷺ bukanlah wajah pendusta. ۞ Dan Nabi ﷺ adalah bukan seorang pengumpat dan pencela. ۞ Bila Nabi ﷺ gembira, wajahnya bagaikan belahan bulan. ۞ Apabila berbicara dengan manusia, seolah-olah mereka memetik buah yang manis. ۞ Bila Nabi ﷺ tersenyum, maka senyumannya laksana belahan awan yg ditembus sinar, ۞ dan bila berbicara, seakan-akan pembicaraannya permata yang berjatuhan. ۞ Dan bilamana itu terjadi, seakan-akan wewangian keluar dari mulutnya. ۞ Dan jika Nabi ﷺ melewati suatu jalan, meninggalkan kebaikan dari aroma wanginya setelah dilewatinya. ۞ Bila Nabi ﷺ duduk dalam satu majlis, maka aroma harumnya tetap membekas dalam majelis itu sampai beberapa hari walau Beliau ﷺ telah tiada di situ. ۞ Dan Beliau ﷺ selalu beraroma sangat harum meskipun tidak memakai wangi-wangian. ۞ Dan jika berjalan diantara para sahabatnya, maka bagaikan bulan diantara bintang-bintang yang bergemerlapan. ۞ Dan bila berjumpa dimalam hari, seolah-olah manusia berada di siang hari, disebabkan dari pancaran cahayanya. ۞ Dan adalah Nabi ﷺ lebih cepat berbuat kebajikan daripada tiupan angin topan, ۞ dan Beliau ﷺ selalu berbelas kasih kepada anak-anak yatim dan wanita janda. ۞ Sebagian orang yang menyifatinya telah berkata, "Tiada pernah saya melihat seorang berambut hitam ۞ dengan hiasan pakaian merah ۞ yang lebih baik daripada Rasulullah ﷺ." ۞
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Pernah ditanyakan oleh sebagian orang, "Betulkah wajahnya bagaikan rembulan?" Maka dijawab, "Bahkan lebih terang daripada bulan yang tiada tertutup awan." Nabi ﷺ memang memperoleh keagungan dan sifat-sifat yang serba sempurna. Kata sebagian orang yang menyifati beliau, "Tak pernah saya melihat sebelum dan sesudahnya seorang pun yang yang menyerupainya." Takkan berdaya lisan yang fasih jika hendak menggambarkan sifat-sifat keutamaannya. Mahasuci Tuhan yang telah menentukan Nabi ﷺ pada tempat yang tertinggi dan menjalankannya di waktu malam menghadap Allah sampai sejarak anak panah dengan busurnya atau lebih dekat lagi. Dan dikokohkan nya dengan berbagai mukjizat yang tak terhitung banyaknya. Allah menyempurnakannya dengan budi pekerti sempurna tak terjangkau banyaknya dan Allah memberinya lima perkara yang belum pernah diberikan kepada orang sebelumnya. Dianugerahkan kepadanya kepandaian menyusun kata-kata yang tidak seorang pun dapat melebihinya, dan di tiap-tiap tempat Nabi ﷺ mengucapkan perkataan yang sesuai, dan setiap kesempurnaan Nabi ﷺ ada kesempurnaan lain. Beliau ﷺ tak pernah berpaling dari pertanyaan, dan jawaban dan lisannya tak pernah bergerak selain ucapan yang benar.
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Mudah-mudahan kata-kata pujian selalu diucapkan untuk Nabi ﷺ yang sifat-sifatnya telah disebut dalam Alquran. Telah diuraikan pula tentang keutamaan dalam Taurat, Injil, Zabur, dan Furqan. Dan Allah telah mengumpulkan kepada Beliau ﷺ yaitu memandang Dzat-Nya dan menerima firman-Nya. Juga menyertakan sebutan nama-Nya dengan nama Nabi ﷺ, yang merupakan peringatan akan ketinggian derajatnya. Dan Allah menjadikan Beliau ﷺ sebagai rahmat dan cahaya kepada seluruh alam dengan sebab kelahirannya, maka Allah penuhi hati manusia dengan rasa gembira.
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Wahai purnama yang sempurnanya mencapai puncak kesempurnaan. ۞ Apakah ungkapan yang aku katakan untuk menguraikan keluhuranmu.
+<br>Engkaulah yang terbit di ufuk yang tinggi. ۞ Engkaulah pelenyap kesesatan dengan cahayamu.
+<br>Dan sebab engkau seisi alam menjadi terang-benderang, wahai jalan petunjuk. ۞ Dengan cahaya dan kenikmatan serta keanugerahan.
+<br>Semoga rahmat Allah Tuhanku dilimpahkan kepadamu dengan abadi selamanya. ۞ Kekal sepanjang masa di waktu pagi dan sore hari.
+<br>Dan juga kepada semua keluarga dan para sahabat, yaitu.. ۞ Orang-orang yang benar-benar Allah tentukan dengan sempurna.
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Segala puji bagi Allah penguasa alam, wahai Allah limpahkan rahmat dan salam kepada junjungan kami Nabi Muhammad ﷺ dan kepada keluarga serta sahabatnya semuanya. Semoga Allah menjadikan kami dan kalian semua golongan orang yang memperoleh syafaatnya dan mengharap rahmat dan kasih sayangnya. Wahai Allah dengan kehormatan Nabi ﷺ yang mulia ini dan para keluarga serta para sahabatnya yang menempuh jalan lurus. Jadikanlah kami sebaik-baik umatnya dan tutuplah segala kecacatan kami serta himpunlah kami besok ke dalam golongannya. Jadikanlah lisan kami untuk memuji dan menolongnya. Hidupilah kami selalu berpegang pada sunnahnya dan menaatinya. Dan matikanlah kami dalam keadaan tetap cinta kepadanya dan termasuk golongannya. Wahai Allah, masukkanlah kami ke surga bersamanya, kerana beliaulah orang pertama yang memasukinya. Tempatkanlah kami bersama Nabi ﷺ di dalam istana surga, karena beliaulah orang yang pertama kali menempatinya dan berilah kami rahmat kasih sayang pada hari Nabi ﷺ memberi syafaat kepada para makhluk, lantas Engkau memberi rahmat kasih sayang kepada mereka. Wahai Allah, berilah kami rezeki untuk dapat berziarah kepadanya setiap tahun. Janganlah kami Engkau jadikan golongan orang yang melupakan Engkau dan melupakan Nabi ﷺ meskipun hanya sejenak. Wahai Allah, janganlah Engkau menjadikan seorang pun yang berada di majelis kami ini, melainkan Engkau bersihkan dosa-dosanya dengan air taubat dan Engkau tutupi aibnya dengan selendang pengampunan. Ya Allah, sesungguhnya ada bersama kami pada tahun yang lalu yaitu saudara kami yang telah ditakdirkan ajalnya terlebih dahulu, maka jangan Engkau halangi mereka dari pahala pada saat ini dan keutamaannya. Wahai Allah, belas kasihilah kami, apabila kami telah menjadi penghuni kubur. Berilah kami taufik untuk beramal shalih yang kekal keluhurannya sepanjang masa. Wahai Allah, jadikanlah kami kepada golongan nya orang-orang yang selalu mengingat nikmat-nikmat-Mu dan mensyukuri nya serta ingat akan hari menghadap kepada-Mu. Hidupkanlah kami selalu tekun menaati perintah-Mu. Dan bila Engkau matikan kami, maka matikanlah kami selamat dari fitnah dan kehinaan. Akhirilah kami dengan segala kebaikan dari sisi-Mu. Wahai Allah, hindarkanlah kami dari kejahatan orang-orang yang zalim. Jadikanlah kami orang-orang yang selamat dari fitnah dunia. Wahai Allah, jadikanlah Rasul yang mulia ini, memberikan syafaat kepada kami, berikan kepada kami karena syafaatnya suatu kedudukan yang tinggi kelak di hari kiamat. Wahai Allah, berilah kami minuman dari air telaga Nabi Muhammad ﷺ yg merupakan suatu minuman segar yang menghilangkan dahaga sesudahnya untuk selama-lamanya. Kumpulkanlah kami kelak di hari kiamat di bawah benderanya. Ya Allah, karena Nabi Muhammad ﷺ ampunilah kami dan bapak-bapak serta ibu-ibu kami, guru-guru kami, dan yang mengajar kami serta orang-orang yg mempunyai hak wajib atas kami serta kepada seluruh orang-orang mukmin laki-laki dan perempuan dan orang-orang islam laki-laki dan perempuan, baik mereka yang masih hidup dan telah meninggal. Sesungguhnya Engkau Zat yang Maha Pengabul semua hajat, Pengampun semua dosa dan kesalahan. Wahai Zat yang paling penyayang dari para penyayang. Semoga Allah tetap melimpahkan rahmat-Nya kepada junjungan kami Nabi Muhammad ﷺ dan kepada keluarganya serta sahabatnya dan juga limpahan kesejahteraan. {Kutipan ayat Alquran: "Mahasuci Tuhanmu, Tuhan yang Mahaagung dari segala yang disifatkan oleh para kafir dan semoga salam tetap dilimpahkan kepada para Rasul serta segala puji hanya milik Allah, Tuhan sekalian alam."} Amin.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

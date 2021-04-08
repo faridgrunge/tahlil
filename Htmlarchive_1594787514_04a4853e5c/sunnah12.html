@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Sholat Ghaib</h1><br>
+
+<p>”Ghaib” artinya tidak ada. Shalat Ghaib adalah shalat jenazah yang dilakukan seseorang ketika jasad si mayit sudah dimakamkan, atau shalat yang dilakukan dari jarak yang jauh dari si mayit.</p>
+          <p>Shalat Ghaib ini termasuk shalat yang unik. Pada <em>Muktamar ke-11</em> NU di Banjarmasin tahun 1936, telah diambil keputusan lewat pendapat Imam Ibnu Hajar yang menyatakan: "Tak perlu Shalat Ghaib bagi seorang yang meniggal di dalam satu negeri." Sementara fakta yang berlaku di masyarakat NU, biasanya pada hari Jum'at sebelum khotbah ada pengumuman untuk mengerjakannya secara bersama-sama; seorang imam berdiri dan diikuti jama'ah untuk mengerjakan Shalat Ghaib.</p>
+          
+          <p>Dua kubu yang kami sebutkan tadi tampil dengan argumen masing-masing. Bagi kubu yang tidak perlu Shalat Ghaib (Keputusan Muktamar ke 11) dalilnya adalah:</p>
+          <p>”Bahwa tak sah shalat jenasah atas mayit yang ghaib yang tidak berada di tempal seorang yang hendak menyalatinyaa, sementara ia berada di negeri (daerah) di mana mayit itu berada walaupun negeri tersebut luas karena dimungkinkan untuk bisa mendatanginya. Para ulama menyamakannya dengan qadha atas seorang yang berada di suatu negeri sementara ia bisa menghadirinya. Yang menjadi pedoman adalah ada tidaknya kesulitan untuk mendatangi tempat si mayit. Jika sekiranya sulit untuk mendatanginya walaupun berada di negerinya, misalnya karena sudah tua atau sebab lain maka shalat hgaibnya sah. Sedangkan jika tidak ada kesulitan maka shalatnya tidak sah walau berada di luar batas negeri yang bersangkutan.” (dalam kitab <em>I’anatut Thalibin</em>)</p>
+          <p>Dalil kedua: Keterangan yang ada di dalam kitab <em>Tuhfah </em>dapat dijadikan pedoman bahwa seseorang tidak boleh melakukan shalat ghaib atas mayit yang meninggal dalam satu negeri, sedang ia tidak hadir karena sakit atau ditahan.</p>
+          <p>Sedangkan dari kubu yang membolehkan dilakukan shalat ghaib dalilnya adalah, pertama, shalat ghaib boleh diselenggarakan karena lain negara. Rasulullah pernah menyalati seorang muslim Najasyi yang meninggal sewaktu berada di Madinah (<em>HR Bukhari dan Muslim</em>).</p>
+          <p>Jika seorang menyalati jenasah di hari meninggalnya setelah dimandikan, hukumnya adalah sah, sebagaimana pendapat Imam Ar-Rayani. Juga menyalati jenasah yang telah dimakamkan, hukumnya juga sah karena Rasulullah pernah menyalati jenasah yang sudah dikubur (<em>HR Bukhari dan Muslim dan Imam Darul-Quthni</em>). (Lihat dalam kitab <em>Kifayatul Ahyar I </em>hlm 103-104)</p>
+          <p>Dalil kedua: Jelas tertera dalam kitab Shahih Bukhari dan Muslim: Ada seorang Najasi meninggal Rasulullah segera memberi tahu para sahabatnya, sabdanya: ”<em>Saudara kita di negeri Habasyah telah meninggal shalatlah kalian untuknya</em>.” Mereka pun keluar menuju lapangan, membuat barisan, dan mengerjakan shalat untuknya. (<em>Tafsir Ibnu Katsir I </em>hlm. 443)</p>
+          <p>Dalil ketiga: ”Boleh menyalati beberapa jenasah dengan sekali shalat dan niat untuk semua secara global.” Disebutkan juga boleh dengan niat ''ijmal'' artinya seperti dalam kalimat saya niat shalat untuk para jenazah muslim... atau, berniat shalat seperti sang imam menyalati saja. (dalam kitab <em>Fathul Mu’in</em>, juga <em>Ianatut Thalibin II</em>, 132-135).</p>
+          <p>Dalil keempat: ”Batasan ''ghaib'' adalah bila seseorang berada di sebuah tempat di mana panggilan adzan sudah tak terdengar. Di dalam kitab Tuhfah disebutkan: Jika sudah di luar jangkauan pertolongan.” (<em>Bughyatul Musytarsyidin</em>, hlm 95)</p>
+          <p>Dalil Kelima, <em>Keputusan bahtsul masail Syuriah NU se-Jateng 1984</em>. Ketentuan jarak untuk Shalat Ghaib ada tiga versi: (1) Jarak 44 meter, (2) Jarak 1666 meter (1 mil), (3) Jarak 2000 - 3000 meter.</p>
+    <ol>
+	<li>Rukun Pertama Niat : <br>
+          <p>niat untuk shalat Ghaib:</p>
+          <div>
+            <div align="right" class="arab">اُصَلِى عَلىَ المَيِّتِ/المَيِّتَةِ (فُلاَنٍ/فُلاَنَةٍ) اْلغَائِبِ/الْغَائِبَةِ اَرْبَعَ تَكْبِيْرَاتٍ فَرْضَ اْلِكفَايَةِ للهِ تعالى</div>
+    </div>
+          <p>Seperti yang diketahui shalat Jenazah atau Ghaib memiliki empat takbir. Dalam setiap selesai membaca empat takbir itu, ada doa yang harus dibaca.</p>
+          <li>Pada takbir pertama membaca surat al-Fatihah:
+          <li>Pada takbir kedua membaca doa shalawat:
+<div>
+            <div align="right" class="arab">اَللَّهُمَّ صَلِّ عَلَى سَيِّدِناَ مُحَمَّدٍ وَعَلَى آلِ سَيِّدِناَ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى سَيِّدِناَ إِبْرَاهِيْمَ وَعَلَى آلِ سَيِّدِناَ إِبْرَاهِيْمَ و بَارِكْ عَلَى سَيِّدِناَ مُحَمَّدٍ وَعَلَى آلِ سَيِّدِناَ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى سَيِّدِناَ إِبْرَاهِيْمَ وَعَلَى آلِ سَيِّدِناَ إِبْرَاهِيْمَ في العَالَمِيْنَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ</div>
+    </div>
+          <li>Pada takbir ketiga membaca doa sebagai berikut:</strong></p>
+          <p><strong>Bagi mayit laki-laki:</strong></p>
+<div>
+            <div align="right" class="arab">اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمهُ وعَافِهِ وَاعْفُ عَنْهُ وأَكْرِمْ نُزُلَهُ وَوَسِّعْ مَدْخَلَهُ وَاغْسِلْهُ بِالْمَاءِ وَ الثَّلْجِ وَ الْبَرَدِ، وَنَقِّهِ مِنَ الخَطَايَا كَمَا يُنَقَّى الثَّوْبُ الأَبْيَضُ مِنَ الدَّنَسِ. اَللَّهُمَّ أَبْدِلْهُ دَارًا خَيْرًا مِنْ دَارِهِ، وَ جَارًا خَيْرًا مِنْ جَارِهِ، وَزَوْجًا خَيْراً مِنْ زَوْجِهِ، وأَهْلًا خَيْراً مِنْ أَهْلِهِ، وَ أَدْخِلْهُ الْجَنَّةَ وَ أَعِذْهُ مِنْ عَذَابِ القَبْرِ ومِنْ عَذَابِ النَّارِ</div>
+    </div>
+          <p><span class="arab"><strong></strong></span><strong>Bagi mayit perempuan:</strong></p>
+    <div class="style1">
+            <div align="right" class="arab">اللَّهُمَّ اغْفِرْ لَهاَ وارْحَمهاَ وعَافِهاَ وَاعْفُ عَنْهاَ وأَكْرِمْ نُزُلَهاَ وَوَسِّعْ مَدْخَلَهاَ وَاغْسِلْهاَ بِالْمَاءِ وَ الثَّلْجِ وَ الْبَرَدِ ونَقِّهاَ مِنَ الخَطَايَا كَمَا يُنَقَّي الثَوْبُ الأَبْيَضُ مِنَ الدَّنَسِ. اَللَّهُمَّ أَبْدِلْهاَ دَارًا خَيْرًا مِنْ دَارِهاَ وَ جَارًا خَيْرًا مِنْ جَارِهَا وَزَوْجًا خَيْراً مِنْ زَوْجِهاَ وأَهْلًا خَيْراً مِنْ أهلِهاَ وَ أَدْخِلْهَا الْجَنَّةَ وَ أَعِذْهَا مِنْ عَذَابِ القَبْرِ ومِنْ عَذَابِ النَّارِ</div>
+    </div>
+          <p><strong>Bagi mayit banyak:</strong></p>
+<div>
+            <div align="right" class="arab">اللَّهُمَّ اغْفِرْ لَهُمْ وارْحَمْهُمْ وعَافِهِمْ وَاعْفُ عَنْهُمْ وأَكْرِمْ نُزُلَهُمْ وَوَسِّعْ مَدْخَلَهُمْ وَاغْسِلْهُمْ بِالْمَاءِ وَ الثَّلْجِ وَ الْبَرَدِ ونَقِّهِمْ مِنَ الخَطَايَا كَمَا يُنَقَّي الثَوْبًُ الأَبْيَضُ مِنَ الدَّنَسِ. اَللَّهُمَّ أَبْدِلْهُمْ دِيَارًا خَيْرًا مِنْ دِيَارِهِمْ وَ جِيْرَانًا خَيْرًا مِنْ جِيْرَانِهِمْ وَأَزْوَاجاً خَيْراً مِنْ أَزْوَاجِهِمْ وأَهْلًا خَيْراً مِنْ أَهْلِهِمْ وَ أَدْخِلْهُمُ الْجَنَّةَ وَ أَعِذْهُمْ مِنْ عَذَابِ القَبْرِ ومِنْ عَذَابِ النَّارِ</div>
+    </div>
+          <p><span class="arab"><strong></strong></span><strong>Bagi mayit anak-anak belum baligh:</strong></p>
+          <div>
+            <div align="right" class="arab">اَللَّهُمَّ اجْعَلْهُ (هَا) فَرَطًا لِأَبَوَيْهِ (هَا) وَ سَلَفًا وَ ذُخْرًا وَ عِظَةً وَ اعْتِبَارًا وَ شَفِيْعًا وَ ثَقِّلْ بِهِ (هَا) مَوَازِيْنَهُمَا وَ أَفْرِغِ الصَّبْرَ عَلَى قُلُوْبِهِمَا وَ لَا تَفْتِنْهُمَا بَعْدَهُ (هَا) وَ لَا تَحْرِمْهُمَا أَجْرَهُ (هَا</div>
+          </div>
+          <li>Setelah takbir keempat membaca doa sebagai berikut:
+          <p><strong>Bagi mayit laki-laki:</strong></p>
+          <div>
+            <div align="right" class="arab">اللَّهُمَّ لاَتَحرِمْنَا أَجْرَهُ ولاَتَفْتِنّاَ بَعْدَهُ وَاغْفِرْ لَناَ وَ لَهُ</div>
+          </div>
+          <p><strong>Bagi mayit perempuan:</strong></p>
+          <div>
+            <div align="right" class="arab">اللَّهُمَّ لاَتَحرِمْنَا أَجْرَهاَ ولاَتَفْتِنّاَ بَعْدَهاَ وَاغْفِرْ لَناَ وَ لَهاَ</div>
+          </div>
+          <p><span class="arab"><strong></strong></span><strong>Bagi mayit banyak:</strong></p>
+          <div>
+            <div align="right" class="arab">اللَّهُمَّ لاَتَحرِمْنَا أَجْرَهُمْ ولاَتَفْتِنّاَ بَعْدَهُمْ وَاغْفِرْ لَناَ وَ لَهُمْ</div>
+          </div>
+          <li>Do’a Shalat Jenazah dan Shalat Ghaib</strong></p>
+          <div>
+            <div align="right" class="arab">أَعُوْذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ<br>
+            بِسْمِ اللهِ الرَّحْمن الرَّحِيْمِ. اَلْحَمْدُ لِلّهِ رَبِّ اْلعَالَمِيْنَ. حَمْدَ الشَّاكِرِيْنَ حَمْدَ النَّاعِمِيْنَ، حَمْدًا يُوَافِيْ نِعَمَهُ وَيُكَافِئُ مَزِيْدَهُ. يَا رَبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِيْ لِجَلاَلِ وَجْهِكَ وَعَظِيْمِ سُلْطَانِكَ.<br>
+            اَللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِناَ مُحَمَّدٍ فِى اْلأَوَّلِيْنَ. وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِناَ مُحَمَّدٍ فِى اْلآخِرِيْنَ. وَصَلِّ وَسَلِّمْ. عَلَى سَيِّدِناَ مُحَمَّدٍ فِى كُلِّ وَقْتٍ وَحِيْنٍ. وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِناَ مُحَمَّدٍ فِى اْلمَلَإِ اْلأَعْلَى إِلَى يَوْمِ الدِّيْنِ<br>
+            اَللَّهُمَّ اجْعَلْ وَأَوْصِلْ ثَوَابَ مَا قَرَأْنَاهُ مِنَ اْلقُرْآنِ الْعَظِيْمِ. وَمَا هَلَّلْنَاهُ مِنْ قَوْلِ لاَ إِلهَ إِلاَّ اللهُ وَ مَا سَبَّحْنَاهُ مِنْ قَوْلِ سُبْحَانَ اللهِ وَبِحَمْدِهِ وَمَا صَلَّيْنَاهُ عَلَى سَيِّدِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ فِى هذَا اْلمَجْلِسِ اْلمُبَارَكِ هَدِيَّةً وَاصِلَةً وَرَحْمَةً نَازِلَةً وَبَرَكَةً شَامِلَةً وَصَدَقَةً مُتَقَبَّلَةً إِلَى حَضْرَةِ سَيِّدِنَا وَحَبِيْبِنَا وَشَفِيْعِنَا وَقُرَّةِ أَعْيُنِنَا وَمَوْلَانَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ وَاِلَى جَمِيْعِ اِخْوَانِهِ مِنَ اْلأَنْبِيَآءِ وَالْمُرْسَلِيْنَ، وَاْلاَوْلِيَآءِ وَالشُّهَدَآءِ وَالصَّالِحِيْنَ وَالصَّحَابَةِ وَالتَّابِعِيْنَ وَالْعُلَمَآءِ الْعَامِلِيْنَ وَالْمُصَنِّفِيْنَ وَالْمُخْلِصِيْنَ وَجَمِيْعِ الْمُجَاهِدِيْنَ فِيْ سَبِيْلِ اللهِ رَبِّ الْعَالَمِيْنَ وَالْمَلاَئِكَةِ الْمُقَرَّبِيْنَ خُصُوْصًا اِلَى سَيِّدِنَا الشَّيْخِ عَبْدِ الْقَادِرِ الْجِيْلَانِيِّ<br>
+            ثُمَّ إليَ جَمِيْعِ أَهْلِ اْلقُبُوْرِ مِنَ الْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ مِنْ مَشَارِقِ اْلأَرْضِ إِلَى مَغَارِبِهَا بَرِّهَا وَبَحْرِهَا وَخُصُوْصًا إِلَى آبَائِنَا وَاُمَّهَاتِنَا وَاَجْدَاتِنَا وَجَدَّاتِنَا وَنَخُصُّ خُصُوْصًا إِلَى مَنِ اجْتَمَعْنَا هَاهُنَا بِسَبَبِهِ وَلِاَجْلِهِ.<br>
+            اَللَّهُمَّ اغْفِرْلَهُمْ وَارْحَمْهُمْ وَعَافِهِمْ وَاعْفُ عَنْهُمْ. اَللَّهُمَّ أَنْزِلِ الرَّحْمَةَ وَالْمَغْفِرَةَ عَلَى اَهْلِ الْقُبُوْرِ مِنْ اَهْلِ لاَ اِلَهَ اِلاَّ اللهُ مُحَمَّدٌ رَّسُوْلُ اللهِ <br>
+            (sebut nama mayit) وَنَخُصُّ خُصُوْصًا إِلَى <br>
+            اَللَّهُمَّ اغْفِرْ لَهُ (لَهَا/لَهُمَا/لَهُمْ) وَارْحَمْهُ (هَا/هُمَا/هُمْ) وَعَافِهِ (هَا/هِمَا/هِمْ) وَاعْفُ عَنْهُ (هَا/هُمَا/هُمْ)، وَأَكْرِمْ نُزُلَهُ (هَا/هُمَا/هُمْ)، وَوَسِّعْ مَدْخَلَهُ (هَا/هُمَا/هُمْ)، وَاغْسِلْهُ (هَا/هُمَا/هُمْ) بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ، وَنَقِّهِ (هَا/هِمَا/هِمْ) مِنَ الْخَطَايَا كَمَا يُنَقَّي الثَّوْبُ اْلأَبْيَضُ مِنَ الدَّنَسِ، وَأَبْدِلْهُ (هَا/هُمَا/هُمْ) دَارًا خَيْرًا مِنْ دَارِهِ (هَا/هِمَا/هِمْ)، وَأَهْلاً خَيْرًا مِنْ أَهْلِهِ (هَا/هِمَا/هِمْ)، وَزَوْجًا خَيْرًا مِنْ زَوْجِهِ (هَا/هِمَا/هِمْ)، وَأَدْخِلْهُ (هَا/هُمَا/هُمْ) الْجَنَّةَ، وَأَعِذْهُ (هَا/هُمَا/هُمْ) مِنْ عَذَابِ الْقَبْرِ وَعَذَابِ النَّارِ.<br>
+            اَللَّهُمَّ لاَ تَحْرِمْنَا أَجْرَهُ (هَا/هُمَا/هُمْ), وَلاَ تَفْتِنَّا بَعْدَهُ (هَا/هُمَا/هُمْ), وَاغْفِرْلَنَا وَلَهُ (هَا/هُمَا/هُمْ).<br>
+            اَللَّهُمَّ اغْفِرْ لِحَيِّنَا وَمَيِّتِنَا وَشَاهِدِنَا وَغَآئِبِنَا وَصَغِيْرِنَا وَكَبِيْرِنَا وَذَكَرِنَا وَأُنْثَانَا.<br>
+            اَللَّهُمَّ مَنْ أَحْيَيْتَهُ مِنَّا فَأَحْيِهِ عَلَى اْلإِسْلاَمِ، وَمَنْ تَوَفَّيْتَهُ مِنَّا فَتَوَفَّهُ عَلَى اْلإِيْمَانِ.<br>
+            رَبَّنَا آتِنَا فِى الدُّنْيَا حَسَنَةً وَفِى اْلآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ.<br>
+            وَصَلَّى اللهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ وَباَرَكَ وَسَلَّمَ. سُبْحَانَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَ. وَسَلاَمٌ عَلَى الْمُرْسَلِيْنَ وَالْحَمْدُ ِللهِ رَبِّ الْعَالَمِيْنَ.<br>
+            اَلْفَاتِحَة</div>
+          </div>
+          <p align="justify">&nbsp;</p>
+    <p align="justify">Salah satu ulama yang berpendapat demikian adalah Imam Ibnu Hazm. Beliau berkata dalam kitabnya Al-Muhalla (5/169, no.260) bahwa “Mayit tetap dishalatkan ghaib, karena Nabi shallallahu ‘alaihi wasallam pernah menyalatkan raja Najasyi bersama para sahabatnya dalam beberapa shaf. Ini merupakan ijma’ mereka yang tidak boleh dibantah.”</p>
+    <p align="justify"><em><strong>Adapun dalil yang mengisyaratkan shalat ghaib adalah sebuah hadist yang diriwayatkan oleh Imam Bukhari dan Muslim:</strong></em></p>
+    <div class="style1">
+      <div align="right" class="arab">لِمَا صَحَّ أَنَّ النَّبِيَُ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ نَعَى النَّجَاشِيَّ لأَصْحَابِهِ وَ هُوَ بِالمَدِيْنَةِ وَصَلَّى عَلَيْهِ وَ صَلُّوْا خَلْفَهُ (رواه الشيخان)</div>
+    </div>
+    <p align="justify">bahwasanya pada suatu hari, Nabi saw memberitahu para shahabat tentang kematian Najasyi. Lalu, Nabi saw mengajak para shahabat untuk bersholat atas Najasyi. Mereka shalat di belakang beliau. (HR Bukhari Muslim)</p>
+    <p align="justify">Diperbolehkan menyolatkan mayat yang sudah dikubur dengan syarat jika yang menyolatkan mayat termasuk orang yang wajib menyolatkannya dan dia tidak mendapat kesempatan untuk menyolatkanya disaat mayat tsb hadir untuk dishalatkan sebelum dikubur.</p>
+    <div class="style1">
+      <div align="right" class="arab">عَنْ ابْنِ عَبَّاسٍ رَضِيَ اللَّهُ عَنْهُما: أَنَّ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ مَرَّ بِقَبْرٍ قَدْ دُفِنَ لَيْلا ، فَقَالَ : مَتَى دُفِنَ هَذَا ؟ قَالُوا : الْبَارِحَةَ . قَالَ : أَفَلا آذَنْتُمُونِي !؟ قَالُوا : دَفَنَّاهُ فِي ظُلْمَةِ اللَّيْلِ فَكَرِهْنَا أَنْ نُوقِظَكَ . فَقَامَ فَصَفَفْنَا خَلْفَهُ ، قَالَ ابْنُ عَبَّاسٍ وَأَنَا فِيهِمْ فَصَلَّى عَلَيْهِ (رواه الشيخان)</div>
+    </div>
+    <p align="justify">Dari Ibnu Abbas ra, ia menyatakan bahwa Rasulallah saw lewat dekat sebuah kuburan yang baru semalam dikuburkan. Rasulallah saw bertanya: ”Kapan dibuburkan?”. Mereka menjawab: ”Tadi Malam”. Beliau bertanya lagi: ”Kenapa kalian tidak memberitahukan kepadaku?”. Mereka menjawab: ”Kami kuburkan ia tengah malam yang sangat gelap karena itu kami tidak mau membangunkan engkau”. Lalu Nabi berdiri, kami berbaris dibelakang beliau untuk shalat. Ibnu Abbas berkata:”Dan aku termasuk orang yang berbaris. Maka beliau shalat” (HR Bukhari Muslim)</p>
+  </div>
+</div> <div data-role="page" id="page6" data-theme="c"><div data-role="content"></div>
+	</ol>
+
+
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Mohon Ilmu / Wirid Belajar (Lengkap)</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">سُبْحٰنَكَ لَا عِلْمَ لَنَآ اِلَّا مَا عَلَّمْتَنَا ۗاِنَّكَ اَنْتَ الْعَلِيْمُ الْحَكِيْمُ<br><br>رَّبِّ زِدْنِيْ عِلْمًا <br><br>اللَّهُـمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا طَيِّبًا وَعَمَلاً مُتَقَبَّلاً<br><br>اللَّهُـمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي وَعَلِّمْنِي مَا يَنْفَعُنِي وَزِدْنِي عِلْمًا وَالْحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ<br><br>اللَّهُـمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي وَعَلِّمْنِي مَا يَنْفَعُنِي وَزِدْنِي عِلْمًا وَالْحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ وَأَعُوذُ بِاللَّهِ مِنْ عَذَابِ النَّارِ<br><br>اللَّهُـمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي وَعَلِّمْنِي مَا يَنْفَعُنِي وَزِدْنِي عِلْمًا الْحَمْدُ لِلَّهِ عَلَى كُلِّ حَالٍ وَأَعُوذُ بِاللَّهِ مِنْ حَالِ أَهْلِ النَّارِ<br><br>اَللَّهُـمَّ انْفَعْنِيْ بِمَا عَلَّمْتَنِيْ، وَعَلِّمْنِيْ مَا يَنْفَعُنِيْ، وَارْزُقْنِيْ عِلْماً تَنْفَعُنِيْ بِهِ<br><br>اللَّهُـمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَأَعُوذُ بِكَ مِنْ عِلْمٍ لاَ يَنْفَعُ<br><br>اللَّهُـمَّ إِنِّي أَعُوذُ بِكَ مِنْ عِلْمٍ لاَ يَنْفَعُ وَمِنْ قَلْبٍ لاَ يَخْشَعُ وَمِنْ نَفْسٍ لاَ تَشْبَعُ وَمِنْ دَعْوَةٍ لاَ يُسْتَجَابُ لَهَا<br><br>اَللَّهُـمَّ لَا سَهْلَ إِلَاَّ مَا جَعَلتَهُ سَهْلاً وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلاً<br><br>اَللَّهُـمَّ إِنَّا نَسْأَلُكَ عِلْمًا نَافِعًا، وَعَمَلًا صَالِحًا، وَقَلْبًا خَاشِعًا، وَدُعَاءً مَسْمُوْعًا، اللهم عَلِّمْنَا مَا يَنْفَعُنَا وَانْفَعْنَا بِمَا عَلَّمْتَنَا وَزِدْنَا عِلْمًا وَعَمَلًا، يَا أَرْحَمَ الرَّاحِمِيْنَ<br><br>اَلَّلهُـمَّ افْتَحْ لَنَا حِكْمَتَكَ وَانْشُرْ عَلَيْنَا رَحْمَتَكَ يَا ذَا الجَلَالِ وَالإِكْرَامِ<br><br>Di beberapa pesantren di Tanah Air, umum juga dilengkapi dengan doa-doa berikut:<br><br>اللَّهُـمَّ افْتَحْ لَنَا مِنْ خَزَائِنِ رَحْمَتِكَ لَا تُعَذِّبْنَا بَعْدَهَا أَبَدًا فِي الدُّنْيَا وَالْآخِرَةِ وَمِنْ فَضْلِكَ الْوَاسِعِ رِزْقًا حَلَالًا طَيِّبًا وَلَا تُفْقِرْنَا بَعْدَهُ إِلٰى أَحَدٍ سِوَاكَ أَبَدًا ، تَزِيْدُنَا لَكَ بِهَا شُكْرًا وَإِلَيْكَ فَاقَةً وَفَقْرًا ، وَبِكَ عَمَّنْ سِوَاكَ غِنًى وَتَعَفُّفًا<br><br>رَضِيتُ بِاللَّهِ رَبًّا وَبِالإِسْلاَمِ دِينًا وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيًّا<br><br>اللَّهُـمَّ أَرِنَا الْحَقَّ حَقًّا وَارْزُقْنَا اتِّبَاعَهُ  وَأَرِنَا الْبَاطِلَ بَاطِلاً وَارْزُقْنَا اجْتِنَابَهُ وَصَلَّى اللَّهُ  عَلٰى نَبِيِّنَا مُحَمَّدٍ وَاٰلِهِ وَصَحْبِهِ اَجْمَعِيْنَ آمين<br><br>Kemudian setelah belajar, dapat membaca doa berikut:<br><br>لَا إِلٰهَ إِلَّا أَنْتَ سُبْحَانَكَ اللَّهُـمَّ أَسْتَغْفِرُكَ لِذَنْبِيْ ، وَأَسْأَلُكَ رَحْمَتَكَ ،اللَّهُـمَّ زِدْنِيْ عِلْمًا ، وَلَا تُزِغْ قَلْبِيْ بَعْدَ إِذْ هَدَيْتَنِيْ ، وَهَبْ لِيْ مِنْ لَدُنْكَ رَحْمَةً إِنَّكَ أَنْتَ الْوَهَّابُ</p><p><i>Sub-ḥānaka lā 'ilma lanā illā mā 'allamtanā, innaka antal-'alīmul-ḥakīm.<br><br>Rabbi zidnī 'ilmā.<br><br>Allahumma inni as-aluka ‘ilman naafi’a wa rizqon thoyyibaa wa ‘amalan mutaqobbalaa.<br><br>Allahummanfa’ni bima ‘allamtani wa ‘allimni ma yanfa’uni wa zidni ‘ilman walhamdulillahi ‘ala kulli halin.<br><br>Allahummanfa’ni bima ‘allamtani wa ‘allimni ma yanfa’uni wa zidni ‘ilman walhamdulillahi ‘ala kulli halin wa ‘audzubillahi min ‘azabin naar. <br><br>Allahummanfa’ni bima ‘allamtani wa ‘allimni ma yanfa’uni wa zidni ‘ilman walhamdulillahi ‘ala kulli halin wa ‘audzubillahi min haali ahlin naar. <br><br>Allahummanfa’ni bima ‘allamtani wa ‘allimni ma yanfa’uni, war-zuqnii 'ilman tanfa'unii bih.<br><br>Allahumma innii as-aluka 'ilman naafi'an, wa a'uudzu bika min 'ilmin laa yanfa'.<br><br>Allahumma innii a’udzubika min ‘ilmi laa yanfa’u wa min qalbin laa yakhsya’ wa min nafsin laa yasba’ wa min da’watin laa yustajab laha. <br><br>Allāhumma lā sahla illā mā ja-'altahu sahlan, wa anta taj'alul-ḥazna idza shi'ta sahlan.<br><br>Allahumma inna nasaluka ilman nafi’an wa ‘amalan shalihan waqalban khasyi’an wa du’aan masmu’an allahumma ‘allimna ma yanfa’una wanfa’na bima ‘allamtana wazidna ‘ilman wa ‘amalan ya arhamar rahimina. <br><br>Allâhummaftah lanâ wansyur ‘alainâ rahmataka yâ dzal jalâli wal ikrâm.<br><br>Allahummaftah lana min khazaini rahmatikala tu’adzdzibna ba’daha Abadan fid dunya wal akhirati wamin fadlikal wasi’ rizqan halalan thayyiban wala tufqirna ba’dahu ila ahadin siwaka Abadan, taziduna laka biha syukran wailaika faqatan wafaqran, wabika ‘amman siwaka ghinan wata’affufan.<br><br>Radhitu billahi rabban wabil islami dinan wabi muhammadin shallallahu ‘alihi wasallama nabiyyan.<br><br>Allahumma arinal haqqa haqqan war zuqnat tiba’ahu, wa arinal bathila bathilan warzuqnaj tinabahu washallallahu ‘ala nabiyyina muhammadin wa alihi washahbihi wasallama.<br><br>Lailahailla anta subhanaka allahumma astaghfiruka lidzanbi wa asaaluka rahmataka allahumma zidni ilman wala tuzigh qalbi ba’da idz hadaytani wahabli min ladunka rahmatan innaka antal wahhab.</i></p><p>Mahasuci Engkau, tidak ada yang kami ketahui selain apa yang telah Engkau ajarkan kepada kami. Sungguh, Engkaulah Yang Maha Mengetahui, Mahabijaksana (QS. Al-Baqarah [2]: 32). <br><br>Ya Tuhanku, tambahkanlah ilmu kepadaku (QS. Taha [20]: 114).<br><br>Ya Allah, aku memohon pada-Mu ilmu yang bermanfaat, rezeki yang baik, dan amal yang diterima (HR. Ibnu Majah no. 925). <br><br>Ya Allah, berilah kemanfaatan atas segala ilmu yang Engkau ajarkan kepadaku. Berilah aku ilmu yang bermanfaat dan tambahkanlah ilmu kepadaku. Segala puji bagi Allah dalam setiap kondisi (HR. Ibnu Majah no. 251).<br><br>Ya Allah, berilah kemanfaatan atas segala ilmu yang Engkau ajarkan kepadaku. Berilah aku ilmu yang bermanfaat dan tambahkanlah ilmu kepadaku. Segala puji bagi Allah dalam setiap kondisi. Dan aku berlindung dari siksa api neraka (HR. Ibnu Majah no. 3833). <br><br>Ya Allah, berilah kemanfaatan atas segala ilmu yang Engkau ajarkan kepadaku. Berilah aku ilmu yang bermanfaat dan tambahkanlah ilmu kepadaku. Segala puji bagi Allah dalam setiap kondisi. Dan aku berlindung dari kondisi atau perbuatan para penduduk neraka (HR. Tirmidzi no. 3599).<br><br>Ya Allah, berilah kemanfaatan atas segala ilmu yang Engkau ajarkan kepadaku. Berilah aku ilmu yang bermanfaat dan rezekikanlah aku ilmu yang dengannya Engkau memberi manfaat kepadaku (HR. Hakim no. 1908). <br><br>Ya Allah, aku memohon kepada-Mu ilmu yang bermanfaat, dan berlindung kepada-Mu dari ilmu yang tidak bermanfaat (HR. Ibnu Hibban no. 82). <br><br>Ya Allah, aku berlindung kepadamu dari ilmu yang tak bermanfaat, dari hati yang tidak khusyuk, hawa nafsu yang tidak pernah puas, dan doa yang tidak dikabulkan (HR. Muslim no. 2722).<br><br>Ya Allah, tidak ada yang mudah kecuali apa yang engkau mudahkan dan tidak ada yang sulit jika engkau menghendakinya kemudahan (HR. Ibnu Hibban no. 2427). <br><br>Ya Allah, sesungguhnya kami memohon kepada-Mu ilmu yang berguna, perbuatan yang baik, hati yang khusyuk serta doa yang didengar. Ya Allah, ajari kami ilmu yang berguna kepada kami, dan berilah manfaat  terhadap ilmu yang Engkau ajarkan kepada kami. Dan tambahkan ilmu kami serta perbuatan baik kami wahai Zat yang paling belas kasih di antara yang paling pengasih (I’jaz al-Qur’an,  Shalih Ibn Abdul Aziz, 1/1). <br><br>Ya Tuhanku, bukakan lah ilmu-Mu bagi kami dan hamburkan lah rahmat-Mu di atas kami. Wahai Tuhan pemilik kebesaran dan keagungan (Sayid Utsman bin Yahya, Maslakul Akhyar, Al-‘Aidrus, Jakarta). <br><br>Ya Allah, bukakanlah (pintu rahmatmu) dari gudang-gudang rahmatmu untuk kami, janganlah  siksa kami selamanya setelah kami mendapatkan rahmat itu di dunia maupun di akhirat. Dan dari karunia-Mu yang Maha Luas rezeki yang halal serta baik untuk kami. Setelah itu, janganlah Engkau membuat kami membutuhkan orang lain selain-Mu selamanya, sebab rahmat dan karunia-MU, membuat kami semakin bersyukur kepada-Mu, dan semakin membutuhkanMu, dan semakin tidak membutuhkan orang lain selain Engkau ya Allah. (Doa Imam Muzanni, Zuhd Ahmad Ibnu Hanbal No. 1854)<br><br>Aku ridha Allah sebagai Tuhanku dan Islam sebagai agamaku, dan nabi Muhammad ﷺ sebagai nabiku ( HR. Bukhari no. 93 & Ibnu Hibban no. 863) <br><br>Ya Allah, perlihatkanlah kepada kami kebenaran sebagai sesuatu yang benar, dan berikan kemampuan kepada kami untuk mengikutinya Dan perlihatkanlah kepada kami sesuatu yang salah (batil) sebagai kesalahan (kebatilan) dan berilah kami kemampuan untuk menjauhinya. Semoga Allah memberikan rahmat kepada Nabi kami, nabi Muhammad ﷺ dan keluarganya serta seluruh  sahabatnya, kabulkanlah doa kami ya Allah. (Musnad Ibnu Rahawaih, 1/9)<br><br>Tiada Tuhan selain Engkau, Maha Suci Engkau. Ya Allah, aku mohon ampunan kepada-MU karena dosaku, aku mohon rahmat-MU. Ya Allah, tambahkanlah aku ilmu. Janganlah Engkau cabut hatiku setelah Engkau beri aku hidayah, berilah aku rahmat dari sisi-Mu, karena sesungguhnya Engkau adalah Dzat yang Maha Memberi (Al-Adzkar, al-Nawawi, 1/96).</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Doa-doa di atas bersumber dari Al-Qur'an, hadis, dan doa para ulama.</p><p><strong>Berbagai sumber
+</strong></p>
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Miqot-miqot</h1>
+
+
+
+<p style="text-align: right;" class="arab"></p>
+<ol>
+<li><strong>Dzulhulaifah</strong></li>
+<p>Dzulhulaifah terletak disebelah utara kota Mekkah, merupakan miqat terjauh, Dzulhulaifah ini lebih di kenal dengan nama Bir &lsquo;Ali.</p>
+<p>Bir &lsquo;Ali letaknya di kota Madīnah, jarak antara Mekkah dan Bir &lsquo;Ali kira-kira 450 Km. Dzulhulaifah adalah miqatnya penduduk Madīnah.</p>
+<p><img src="https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat.png" sizes="(max-width: 576px) 100vw, 576px" srcset="https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat.png 576w, https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat-300x164.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat-500x273.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat-400x219.png 400w" alt="" width="576" height="315" data-srcset="https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat.png 576w, https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat-300x164.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat-500x273.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat-400x219.png 400w" data-src="https://bekalislam.com/wp-content/uploads/2020/02/miqat-miqat.png" data-sizes="(max-width: 576px) 100vw, 576px" /></p>
+<li><strong>Al- Juhfah</strong></li>
+<p>Al-Juhfah adalah miqatnya penduduk Syām, Mesir dan Maroko. Jarak Al-Juhfah sampai kota Mekkah kurang lebih sekitar 157 Km. Akan tetapi sekarang orang-orang mengambil miqot dari Rabigh yang posisinya sedikit sebelum Al-Juhfah, dan para ulama sepakat bahwa barang siapa yang berihram sebelum miqot maka ihramnya sah. Hal ini dikarenakan al-Juhfah sekarang adalah lokasi yang rusak dan tidak dihuni. Dahulu kota Madinah adalah kota wabah demam, namun Nabi berdoa kepada Allah agar memindahkan wabah tersebut ke al-Juhfah. Beliau berdoa :</p>
+<p style="text-align: right;" class="arab">اللَّهُمَّ حَبِّبْ إِلَيْنَا المَدِينَةَ كَحُبِّنَا مَكَّةَ أَوْ أَشَدَّ، اللَّهُمَّ بَارِكْ لَنَا فِي صَاعِنَا وَفِي مُدِّنَا، وَصَحِّحْهَا لَنَا، وَانْقُلْ حُمَّاهَا إِلَى الجُحْفَةِ</p>
+<p>&ldquo;Ya Allah, jadikanlah kami cinta kepada kota Madinah sebagaimana cinta kami kepada kota Mekah atau lebih lagi. Ya Allah berkahilah shoo&rsquo; dan mudd kami (yaitu alat-alat takaran di kota Madinah-pen), jadikanlah kota Madinah tempat yang sehat bagi kami, dan pindahkanlah demamnya ke al-Juhfah&rdquo; (HR Al-Bukhari No. 1889 dan Muslim No. 1376)</p>
+<p>Akhirnya al-Juhfah sejak saat itu tidak lagi menjadi tempat hunian, bahkan al-Imam An-Nawawi berkata :</p>
+<p style="text-align: right;" class="arab">فَإِنَّ الْجُحْفَةَ مِنْ يَوْمِئِذٍ مُجْتَنَبَةٌ وَلَا يَشْرَبُ أَحَدٌ مِنْ مائها إِلاَّحُمَّ</p>
+<p>&ldquo;Sesungguhnya al-Juhfah sejak saat itu dijauhi, dan tidak seorangpun yang minum dari air nya kecuali demam&rdquo; (Al-Minhaaj Syarh Shahih Muslim 9/150)</p>
+<p><img src="https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah.png" sizes="(max-width: 576px) 100vw, 576px" srcset="https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah.png 576w, https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah-300x169.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah-500x281.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah-400x225.png 400w" alt="" width="576" height="324" data-srcset="https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah.png 576w, https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah-300x169.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah-500x281.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah-400x225.png 400w" data-src="https://bekalislam.com/wp-content/uploads/2020/02/aljuhfah.png" data-sizes="(max-width: 576px) 100vw, 576px" /></p>
+<li><strong>Yalamlam</strong></li>
+<p>Dibawah Al-Juhfah yaitu di sebelah selatan kota Mekkah ada miqat Yalamlam. Yalamlam adalah miqat bagi penduduk negeri Yaman, jarak Yalamlam ke Mekkah kira-kira 130 Km.</p>
+<p><img src="https://bekalislam.com/wp-content/uploads/2020/02/yalamlam.png" sizes="(max-width: 576px) 100vw, 576px" srcset="https://bekalislam.com/wp-content/uploads/2020/02/yalamlam.png 576w, https://bekalislam.com/wp-content/uploads/2020/02/yalamlam-300x172.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/yalamlam-500x286.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/yalamlam-400x229.png 400w" alt="" width="576" height="330" data-srcset="https://bekalislam.com/wp-content/uploads/2020/02/yalamlam.png 576w, https://bekalislam.com/wp-content/uploads/2020/02/yalamlam-300x172.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/yalamlam-500x286.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/yalamlam-400x229.png 400w" data-src="https://bekalislam.com/wp-content/uploads/2020/02/yalamlam.png" data-sizes="(max-width: 576px) 100vw, 576px" /></p>
+<li><strong>Qorn Al-Manazil (as-Sail al-Kabiir)</strong></li>
+<p>Qorn Al-Manazil terletak timur kota Mekkah. Qarn Al-Manazil adalah miqat bagi penduduk Najed. Jarak antara Qarn Al-Manazil dengan kota Mekkah kira-kira 80-90 Km.&nbsp;<strong>Inilah miqot terdekat yang jaraknya sekitar 2 marhalah.</strong></p>
+<p><img src="https://bekalislam.com/wp-content/uploads/2020/02/qarn.png" sizes="(max-width: 500px) 100vw, 500px" srcset="https://bekalislam.com/wp-content/uploads/2020/02/qarn.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/qarn-300x169.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/qarn-400x225.png 400w" alt="" width="500" height="281" data-srcset="https://bekalislam.com/wp-content/uploads/2020/02/qarn.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/qarn-300x169.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/qarn-400x225.png 400w" data-src="https://bekalislam.com/wp-content/uploads/2020/02/qarn.png" data-sizes="(max-width: 500px) 100vw, 500px" /></p>
+<li><strong> Dzatu &lsquo;Irq</strong></li>
+<p>Dzatu &lsquo;Irq adalah miqatnya bagi penduduk Iraq.</p>
+<p>Para ulamā khilaf tentang miqat Dzatu &lsquo;Irq ini. Apakah miqat Dzatu &lsquo;Irq ditetapkan oleh Nabi shallallāhu &lsquo;alayhi wa sallam ataukah merupakan ijtihad &lsquo;Umar radhiyallāhu Ta&rsquo;āla &lsquo;anhu?. Karena di zaman &lsquo;Umar datang penduduk Iraq, mereka ingin melaksanakan haji atau umrah. Jika mereka (penduduk Iraq) harus berputar ke arah Qarn al-Manazil terlalu jauh, sehingga &lsquo;Umar pun membuat miqat bagi mereka yang sejajar dengan Qarn al-Manazil dan menetapkan Dzatu &lsquo;Irq yang jaraknya kira-kira sama sejajar dengan Qarn al-Manazil sebagai miqat mereka.</p>
+<p>Namun dalam sebagian riwayat disebutkan Nabi shallallāhu &lsquo;alaihi wa sallam -lah yang menentukan Dzatu &lsquo;Irq. Sebagian ulamā mengkompromikan bahwasanya Nabi shallallāhu &lsquo;alahi wa sallam pernah menentukan Dzatu &lsquo;Irq namun &lsquo;Umar tidak mengetahuinya.</p>
+<p>Kemudian tatkala datang penduduk Iraq yang ingin bermiqat dari tempat selain dari Qarn Al-Manazil (karena kalau dari Qorn al-Manazil terlalu jauh, mereka harus berputar) maka &lsquo;Umar pun menentukan bagi mereka Dzatu &lsquo;Irq. Dan ternyata ijtihad &lsquo;Umar sesuai dengan hadīts Nabi shallallāhu &lsquo;alayhi wa sallam.</p>
+<p><strong><img src="https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq.png" sizes="(max-width: 576px) 100vw, 576px" srcset="https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq.png 576w, https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq-300x225.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq-500x375.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq-400x300.png 400w" alt="" width="576" height="432" data-srcset="https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq.png 576w, https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq-300x225.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq-500x375.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq-400x300.png 400w" data-src="https://bekalislam.com/wp-content/uploads/2020/02/dzatu-irq.png" data-sizes="(max-width: 576px) 100vw, 576px" />&nbsp;</strong></p>
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

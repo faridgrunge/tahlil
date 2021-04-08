@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,html {
+	font-family: sans-serif, open sans, sans, Arial, Helvetica;
+	font-size: 18px;
+	color: #000000;
+	widht: 100%;
+line-height:1.5;
+}
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+ul{
+margin:0px;
+padding-left:20px;
+}
+
+li{
+margin:0px  0px 20px 0px;
+padding:0px  0px 10px 0px;
+border-bottom: solid 2px #cccccc;
+}
+
+ img {
+
+  width:100%;
+}
+
+h2 { padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;     text-align: center;  background-color: #C0C0C0;   border-style: solid;     border-bottom: double #666;     border-top: double;     border-left: 0px;     border-right: 0px;     border-radius: 0px;     line-height: 1;     font-family: "sans;georgia;arial" }
+
+

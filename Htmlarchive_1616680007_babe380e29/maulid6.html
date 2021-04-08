@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Maulid ad-Diba'i - Bagian 5</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+اَحْضِرُوْا قُلُوْبَكُمْ يَا مَعْشَرَ ذَوِي الْأَلْبَابِ ۞ حَتَّى أَجْلُوَ لَكُمْ عَرَائِسَ مَعَانِيْ أَجَلِّ الْأَحْبَابِ ۞ الْمَخْصُوْصِ بِأَشْرَفِ الْأَلْقَابِ ۞ الرَّاقِيْ إِلَى حَضْرَةِ الْمَلِكِ الْوَهَّابِ ۞<br><br>
+
+حَتَّى نَظَرَ إِلَى جَمَالِهِ بِلَا سِتْرٍ وَ لَا حِجَابٍ ۞ فَلَمَّا آنَ أَوَانُ ظُهُوْرِ شَمْسِ الرِّسَالَةِ ۞ فِيْ سَمَاءِ الْجَلَالَةِ ۞ خَرَجَ بِهِ مَرْسُوْمُ الْجَلِيْلِ ۞ لِنَقِيْبِ الْمَمْلَكَةِ جِبْرِيْلَ ۞<br><br>
+
+يَا جِبْرِيْلُ نَادِ فِيْ سَائِرِ الْمَخْلُوْقَاتِ ۞ مِنْ أَهْلِ الْأَرْضِ وَ السَّمَاءِ ۞ أَنْقُلُهُ فِيْ هذِهِ اللَّيْلَةِ إِلَى بَطْنِ أُمِّهِ مَسْرُوْرًا ۞ أَمْلَأُ بِهِ الْكَوْنَ نُوْرًا ۞ وَ أَكْفُلُهُ يَتِيْمًا وَ أُطَهِّرُهُ وَ أَهْلَ بَيْتِهِ تَطْهِيْرًا <br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+فَاهْتَزُّ الْعَرْشُ طَرَبًا وَاسْتِبْشَارًا ۞ وَ ازْدَادَ الْكُرْسِيُّ هَيْبَةً وَ وَقَارًا وَ امْتَلَأَتِ السَّمَاوَاتُ أَنْوَارًا ۞ وَ ضَجَّتِ الْمَلَائِكَةُ تَهْلِيْلًا وَ تَمْحِيْدًا وَ اسْتِغْفَارًا ۞<br><br>
+
+وَ لَمْ تَزَلْ أُمُّهُ تَرَى أَنْوَاعًا مِنْ فَخْرِهِ وَ فَضْلِهِ ۞ إِلَى نِهَايَةِ تَمَامِ حَمْلِهِ ۞ فَلَمَّا اشْتَدَّ بِهَا الطَّلْقُ ۞<br><br>
+
+بِإِذْنِ رَبِّ الْخَلْقِ ۞ وَضَعَتِ الْحَبِيْبَ صَلَّى اللّٰهُ عَلَيْهِ وَ سَلَّمَ سَاجِدًا شَاكِرًا حَامِدًا كَأَنَّهُ الْبَدْرُ فِيْ تَمَامِهِ ۞ <br><br>
+
+محل القيام<br><br>
+
+يَا نَبِيُّ سَلَامٌ عَلَيْكَ ۩  يَا رَسُوْلُ سَلَامٌ عَلَيْكَ<br><br>
+
+يَا حَبِيْبُ سَلَامٌ عَلَيْكَ ۩ صَلَوَاتُ اللّٰهِ عَلَيْكَ<br><br>
+
+أَشْرَقَ الْبَدْرُ عَلَيْنَا ۩ فَاخْتَفَتْ مِنْهُ الْبُدُوْرُ<br><br>
+
+مِثْلَ حُسْنِكَ مَا رَأَيْنَا ۩  قَطُّ يَا وَجْهَ السُّرُوْرِ<br><br>
+
+أَنْتَ شَمْسٌ أَنْتَ بَدْرٌ ۩  أَنْتَ نُوْرٌ فَوْقَ نُوْرٍ<br><br>
+
+أَنْتَ إِكْسِيْرٌ وَغَالِيٌّ ۩  أَنْتَ مِصْبَاحُ الصُّدُوْرِ<br><br>
+
+يَاحَبِيْبِيْ يَا مُحَمَّدُ ۩ يَا عَرُوْ سَ الْخَافِقَيْنِ<br><br>
+
+يَا مُؤَيَّدُ يَا مُمَجَّدُ ۩ يَا إِمَامَ الْقِبْلَتَيْنِ<br><br>
+
+مَرْحَبًا مَرْحَبًا يَا نُوْرَ الْعَيْنِ ۩ مَرْحَبًا مَرْحَبًا جَدَّ الْحُسَيْنِ<br><br>
+
+مَرْحَبًا مَنْ رَآىْ وَجْهَكَ يَسْعَدُ ۩ مَرْحَبًا يَا كَرِيْمَ الْوَالِدَيْنِ<br><br>
+
+مَرْحَبًا حَوْضُكَ الصَّافِيُّ الْمُبَرَّدُ ۩ مَرْحَبًا وِرْدُنَا يَوْمَ النُّشُوْرِ<br><br>
+
+مَرْحَبًا يَا نُوْرَ الْعَيْنِ (مَرْحَبًا مَرْحَبًا) ۩ مَرْحَبًا جَدَّ الْحُسَيْنِ (مَرْحَبًا مَرْحَبًا)<br><br>
+
+مَا رَأَيْنَا الْعِيْسَ حَنَّتْ (مَرْحَبًا مَرْحَبًا) ۩ بِالشُّرٰى اِلَّا اِلَيْكَ (مَرْحَبًا مَرْحَبًا)<br><br>
+
+وَالْغَمَامَةُ قَدْ أَظَلَّتْ (مَرْحَبًا مَرْحَبًا) ۩ وَالْمَلَا صَلَّوْا عَلَيْكَ (مَرْحَبًا مَرْحَبًا)<br><br>
+
+وَاسْتَجَارَتْ يَا حَبِيْبِيْ ۩ عِنْدَكَ الظَّبْيُ النُّفُوْرُ<br><br>
+
+عِنْدَ مَا شَدُّوْا الْمَحَامِلُ۩ وَتَنَادَوْا لِلرَّحِيْلِ<br><br>
+
+جِئْتُهُمْ وَالدَّمْعُ سَآئِلٌ ۩ قُلْتُ قِفْ لِيْ يَا دَلِيْلُ<br><br>
+
+وَتَحَمَّلْ لِيْ رَسَآئِلَ ۩ أَيُّهَا الشَّوْقُ الْجَزِيْلُ<br><br>
+
+يَا نَبِيُّ سَلَامٌ عَلَيْكَ ۩  يَا رَسُوْلُ سَلَامٌ عَلَيْكَ<br><br>
+
+يَا حَبِيْبُ سَلَامٌ عَلَيْكَ ۩ صَلَوَاتُ اللّٰهِ عَلَيْكَ<br><br>
+
+فِيْكَ يَا بَدْرٌ تَجَلّٰى۩ فَلَكَ الْوَصْفُ الْحَسِيْنُ<br><br>
+
+لَيْسَ أَزْكٰى مِنْكَ أَصْلًا ۩  قَطُّ يَا جَدَّ الْحُسَيْنِ<br><br>
+
+صَلّٰى اللّٰهُ عَلٰى مُحَمَّدٍ (مَرْحَبًا) ۩  صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ (مَرْحَبًا)<br><br>
+
+فَعَلَيْكَ اللّٰهُ صَلّٰى ۩  دَآئِمًا طُوْلَ الدُّهُوْرِ<br><br>
+
+يَا وَلِيَّ الْحَسَنَاتِ ۩  يَا رَفِيْعَ الدَّرَجَاتِ<br><br>
+
+رَبِّ فَاغْفِرْلِيْ ذُنُوْبِيْ ۩ بِبَرْكَةِ الْهَادِيْ مُحَمَّدٍ<br><br>
+
+رَبِّ فَارْحَمْنَا جَمِيْعًا ۩ بِجَمِيْعِ الصَّالِحَاتِ<br><br>
+
+وَصَلَاةُ اللّٰهِ تَغْشٰى ۩ أَشْرَفَ الرُّسُلِ مُحَمَّدْ<br><br>
+
+وَسَلَامٌ مُسْتَمِرٌّ ۩ كُلَّ حِيْنٍ يَتَجَدَّدُ<br><br>
+
+طَلَعَ الْبَدْرُ عَلَيْنَا ۩ مِنْ ثَنِيَّةِ الْوَدَاعِ<br><br>
+
+وَجَبَ الشُّكْرُ عَلَيْنَا ۩  مَا دَعَا ِللّٰهِ دَاعٍ<br><br>
+
+مَرْحَبًا يَا مَرْحَبًا يَا نُوْرَ الْعَيْنِ ۩  مَرْحَبًا يَا جَدَّ الْحُسَيْنِ مَرْحَبًا يَا مَرْحَبًا<br><br>
+
+صَلّٰى اللّٰهُ عَلٰى مُحَمَّدٍ ۩ صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ<br><br>
+
+صَلّٰى اللّٰهُ عَلٰى مُحَمَّدٍ ۩ يَا رَبِّيْ صَلِّ وَسَلِّمْ<br><br>
+
+يَا نَبِيُّ سَلَامٌ عَلَيْكَ ۩  يَا رَسُوْلُ سَلَامٌ عَلَيْكَ<br><br>
+
+يَا حَبِيْبُ سَلَامٌ عَلَيْكَ ۩ صَلَوَاتُ اللّٰهِ عَلَيْكَ<br><br>
+
+~۞۞۞~<br><br>
+
+وَوُ لِدَ صَلَّى اللّٰهُ عَلَيْهِ وَ سَلَّمَ مَخْتُوْنًا بِيَدِ الْعِنَايَةِ ۞ مَكْحُوْلًا بِكُحْلِ الْهِدَايَةِ ۞ فَأَشْرَقَ بِبَهَائِهِ الْفَضَآءَ ۞ وَ تَلَأْلَأَ الْكَوْنُ مِنْ نُوْرِهِ وَ أَضَآءَ ۞ وَ دَخَلَ فِيْ عَقْدِ بَيْعَتِهِ مَنْ بَقِيَ مِنَ الْخَلَائِقِ كَمَا دَخَلَ فِيْهِ مَنْ مَضَى أَوَّلُ فَضِيْلَةِ الْمُعْجِزَاتِ ۞<br><br>
+
+بِخُمُوْدِ نَارِ فَارِسَ وَ سُقُوْطِ الشُّرُفَاتِ ۞ وَ رَمِيَتِ الشَّيَاطِيْنُ مِنَ السَّمَاءِ بِالشُّهُبِ الْمُحْرِقَاتِ ۞ وَ رَجَعَ كُلُّ جَبَّارٍ مِنَ الْجِنِّ وَ هُوَ بِصَوْلَةِ سُلْطَنَتِهِ ذَلِيْلٌ خَاضِعٌ ۞ لَمَّا تَأَلَّقَ مِنْ سَنَاهُ النُّوْرُ السَّاطِعُ ۞ وَ أَشْرَقَ مِنْ بَهَآئِهِ الضِّيَآءُ اللَّامِعُ ۞ حَتَّى عُرِضَ عَلَى الْمَرَاضِعِ <br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+قِيْلَ مَنْ يَكْفُلُ هذِهِ الدُّرَّةَ الْيَتِيْمَةَ ۞ الَّتِيْ لَا تُوْجَدُ لَهَا قِيْمَةٌ ۞ قَالَتِ الطُّيُوْرُ نَحْنُ نَكْفُلُهُ وَ نَغْتَنِمُ هِمَّتَهُ الْعَظِيْمَةَ ۞ قَالَتِ الْوُحُوْشُ نَحْنُ أَوْلَى بِذلِكَ لِكَيْ نَنَالَ شَرَفَهُ وَ تَعْظِيْمَةُ ۞ قِيْلَ يَا مَعْشَرَ الْأُمَمِ اسْكُنُوْا فَإِنَّ اللّٰهَ قَدْ حَكَمَ فِيْ سَابِقِ حِكْمَتِهِ الْقَدِيْمَةِ ۞ بِأَنَّ نَبِيَّهُ مُحَمَّدًا صَلَّى اللّٰهُ عَلَيْهِ وَ سَلَّمَ يَكُوْنُ رَضِيْعًا لِحَلِيْمَةِ الْحَلِيْمَةِ ۞<br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+ثُمَّ أَعْرَضَ عَنْهُ مَرَاضِعُ الْإِنْسِ لِمَا سَبَقَ فِيْ طَيِّ الْغَيْبِ ۞ مِنَ السَّعَادَةِ لِحَلِيْمَةِ بِنْتِ أَبِيْ ذُؤَيْبٍ ۞ فَلَمَّا وَقَعَ نَظَرُهَا عَلَيْهِ ۞ بَادَرَتْ مُسْرِعَةً إِلَيْهِ ۞<br><br>
+
+وَ وَضَعَتْهُ فِيْ حِجْرِهَا ۞ وَ ضَمَّتْهُ إِلَى صَدْرِهَا ۞ فَهَشَّ لَهَا مَتَبَسِّمًا ۞ فَخَرَجَ مِنْ ثَغْرِهِ نُوْرٌ لَحِقَّ بِالسَّمَآءِ ۞ فَحَمَلَتْهُ إِلَى رَحْلِهَا ۞ وَارْتَحَلَتْ بِهِ إِلَى أَهْلِهَا ۞ فَلَمَّا وَصَلَتْ بِهِ إِلَى مُقَامِهَا عَايَنَتْ بَرَكَتَهُ عَلَى أَغْنَامِهَا ۞<br><br>
+
+وَ كَانَتْ كُلَّ يَوْمٍ تَرَى مِنْهُ بُرْهَانًا ۞ وَ تَرْفَعُ لَهُ قَدْرًا وَ شَانًا ۞ حَتَّى انْدَرَجَ فِيْ حِلَّةِ اللُّطْفِ وَ الْأَمَانِ ۞ وَ دَخَلَ بَيْنَ إِخْوَتِهِ مَعَ الصِّبْيَانِ</p><br><br><p><i>Allāhumma shalli wa sallim wa bārik 'alaīh.<br><br>
+
+Aḥdhirū qulūbakum yā ma'syara dzawil-albāb. ۞ Ḥatta ajluwa lakum 'arā-isa ma-'ānī ajallil-aḥbāb. ۞ Al-makhshūshi bi-asyrafil-alqāb. ۞ Ar-raqī ilā ḥadhratil-malakil-wahhāb. ۞ Ḥatta azhara ilā jamālihi bilā sitriw-wa lā ḥijāb. ۞ Falammā āna awānu zhuhūri syamsyir-risālati. ۞ Fī samā-il-jalālah. ۞ Kharaja bihi marsūmul-jalīl. ۞ Li-naqībil-mamlakati jibrīl. ۞ Yā jibrīlu nādi fī sā-iril-makhlūqāt. ۞ Min ahlil-ardhi was-samā-i. ۞ Anquluhu fī hadzihil-laylati ilā bathni ummihi masrūrā. ۞ Amla-u bihil-kawna nūrā. ۞ Wa akfuluhu yatīmaw-wa u-thahhiruhu wa ahla baytihi tath-hīrā. ۞
+<br>Allāhumma shalli wa sallim wa bārik 'alaīh.
+<br>Fahtazzul-'arsyu tharabaw-wastibsyārā. ۞ Wazdādal-kursiyyu haybatan wa waqāran wamtala-atis-samāwātu anwārā. ۞ Wa dhajjatil-malā-ikatu tahlīlan wa tamḥīdan wastighfāran. ۞ Wa lam tazal ummuhu tarā awwā-'an min fakhrihi wa fadhlih. ۞ Ilā nihāyati tamāmi ḥamlihi. ۞ Falammasytadda bihath-thalq. ۞ Bi-idzni Rabbil-khalq. ۞ Wa dha-'atil-ḥabība shallallāhu 'alayhi wa sallama sājidan syākiran ḥāmidan ka-annahul-badru fī tamāmih. ۞
+<br><br>
+Mahlul-qiyām<br><br>
+
+Yâ nabî salâm ‘alaika, Yâ Rosûl salâm ‘alaika.<br>
+Yâ habîb salâm ‘alaika, sholawâtullâh ‘alaika.<br>
+Asyroqol badru ‘alainâ, fakhtafat minhul budûru.<br>
+Mitsla husnik mâ ro-ainâ, qotthu yâ wajhas-surûri.<br>
+Anta syamsun anta badrun, anta nûrun fauqo nûrin.<br>
+Anta iksîrun wa ghôlî, anta mishbâhush-shudûri.<br>
+Yâ habîbî yâ Muhammad, yâ ‘arûsal-khôfiqoini.<br>
+Yâ mu-ayyad yâ mumajjad, yâ imâmal qiblataini.<br>
+Marhaban Marhaban Ya Nurul ‘Aini, Marhaban Marhaban Jaddal Husaini.<br>
+Man ro-â wajhaka yas’ad, yâ karîmal wâlidaini.<br>
+Haudlukash-shôfîl mubarrod, wirdunâ yauman-nusyûri.<br>
+Marhaban Ya Nurul ‘Aini (Marhaban Marhaban), Marhaban Jaddal Husaini (Marhaban Marhaban).<br>
+Mâ ro-ainâl ‘îsa hannat (Marhaban Marhaban), bissurô illâ ilaika (Marhaban Marhaban).<br>
+Wal ghomâmah qod adhollat (Marhaban Marhaban), wal malâ shollû ‘alaika (Marhaban Marhaban).<br>
+Wastajârot yâ habîbî, ‘indakadh-dhobyun-nufûru.<br>
+‘Indamâ syaddûl mahâmil, wa tanâdau lirrohîli.<br>
+Ji tuhum waddam’u sã-il, qultu qif lî yâ dalîlu.<br>
+Wa tahammal lî rosã-il, ayyuhâsy-syauqul jazîlu.<br>
+Yâ nabî salâm ‘alaika, Yâ Rosûl salâm ‘alaika.<br>
+Yâ habîb salâm ‘alaika sholawâtullâh ‘alaika.<br>
+Fîka yâ badrun tajallâ, falakal washful hasînu.<br>
+Laisa azkâ minka ashlân, qotthu yâ jaddal husaini.<br>
+Shalallahu alaa Muhammad (Marhaban), Shalallahu Alaihi wa salam (Marhaban).<br>
+Fa’alaikallâhu shollâ, dã-imân thûlad-duhûri.<br>
+Yâ waliyyal hasanâti, yâ rofî’ad-darojâti.<br>
+Robbi faghfirli dzunubi, bi barkatil hadi Muhammad.<br>
+Robbi farhamnâ jamî’an, bijamî’ish-shôlihâti.<br>
+Wa sholâtullâhi taghsyâ, asyrofar-rusli Muhammad.<br>
+Wa salâmun mustamirrun kulla hînin yatajaddad.<br>
+Thala‘a al-badru ‘alaynā. Min tsanīyāti al-wadā‘.<br>
+Wajab al-syukru ‘alaynā. Mā da‘ā lillāhi dā‘.<br>
+Marhaban Ya Marhaban Ya Nurul ‘Aini Marhaban Jaddal Husaini, Marhaban...Marhaban.<br>
+Shalallahu alaa Muhammad, Shalallahu Alaihi wa salam.<br>
+Shalallahu alaa Muhammad, Ya Robbi Sholli wa salim.<br>
+Ya nabi sallam alaika, Ya rossul sallam alaika.<br>
+Ya habib sallam alaika, Sholawatullah alaika.<br><br>
+
+Wa wulida shallallāhu 'alayhi wa sallama makhtūnan bi-yadil-'ināyah. ۞ Makḥūlan bi-kuḥlil-hidayāh. ۞ Fa-asyraqa bi-bahā-ihil-fadhā-a. ۞ Watala'la-al-kawnu min-nūrihi wa adhā-a. ۞ Wa dakhala fī 'aqdi bay-'atihi mamm-baqiya minal-khalā-iqi kamā dakhala fīhi mamm-madhā awwalu fadhīlatil-mu'jizāt. ۞ Bi-khumūdi nāri fārisa wa suqūthisy-syurufāt. ۞ Wa ramiyatisy-syayāthīnu minas-samā-i bisy-syuhubil-muḥriqāt. ۞ Wa raja-'a kullu jabbārimm-minal-jinni wa huwa bi-shawlati sulthanatihi dzalīlun khādhi'. ۞ Lammā ta-allaqa min sanāhun-nūrus-sāthi'. ۞ Wa asyraqa mimm-bahā-ihidh-dhiyā-ullāmi'. ۞ Ḥattā 'uridha 'alal-marādhi'. ۞
+<br>Allāhumma shalli wa sallim wa bārik 'alaīh.
+<br>Qīla mayyakfulu hadzihid-durratal-yatīmah. ۞ Allatī lā tūjadu lahā qīmah. ۞ Qālatith-thuyūru naḥnu nakfuluhu wa naghtanimu himmatahul-'azhīmah. ۞ Qālatil-wuḥūsyu naḥnu aw lā bi-dzalika li-kaynanāla syarafahu wa ta'zhīmah. ۞ Qīla yā ma'syaral-umamiskunū fainnallāha qad ḥakama fī sābiqi ḥikmatihil-qadīmah. ۞ Bi-anna Nabiyyahu Muḥammadan shallallāhu 'alayhi wa sallama yakūnu radhī-'an li-ḥalīmatil-'halīmah. ۞
+<br>Allāhumma shalli wa sallim wa bārik 'alaīh.
+<br>Tsumma a'radha 'anhu marādhi-'ul-insi limā sabaqa fī thayyil-ghaīb. ۞ Minas-sa-'ādati binti abī dzu-ayb. ۞ Falammā wa qa-'a nazharuhā 'alaīh. ۞ Bādarat musyri-'atan ilaīh. ۞ Wa wadha-'at-hu fī ḥijrihā. ۞ Wa dhammat-hu ilā shad-rihā. ۞ Fahasy-sya lahā matabassimā. ۞ Fakharaja min tsagh-rihi nūrul-laḥiqqa bis-samā-i. ۞ Faḥamalat-hu ilā raḥlihā. ۞ Wartaḥalat bihi ilā ahlihā. ۞ Falammā wa shalat bihi ilā muqāmiha 'āyanat barakatahu 'alā aghnāmihā. ۞ Wa kānat kulla yawmin tarā minhu burhānā. ۞ Wa tarfa-'u lahu qadran wa syānā. ۞ Ḥatta andaraja fī ḥillatil-luthfi wal-amān. ۞ Wa dakhala bayna ikhwatihi ma-'ash-shibyān.</i></p><p>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br><br>
+Khusyukkanlah hatimu wahai orang-orang yang berakal sehat, ۞ sehingga dapat kujelaskan kepadamu makna-makna keagungan seorang kekasih yang paling dicintai Allah. ۞ Yang diistimewakan dengan gelar-gelar yang paling mulia, ۞ yaitu seorang Nabi yang pernah menghadap Allah Yang Maha Merajai, Yang selalu melimpahkan karunia-Nya, ۞ sehingga dapat melihat keagungan-Nya tanpa terhalang sedikitpun. ۞ Ketika telah datang tanda-tanda munculnya cahaya kerasulan, ۞ di langit yang penuh keagungan, ۞ maka keluarlah dengan membawa cahaya itu, ۞ yaitu Jibril, untuk membuka kerajaan di dunia. ۞ Seraya diperintahkan, “Wahai Jibril, serulah kepada seluruh makhluk, ۞ yang menghuni bumi dan langit, ۞ bahwasannya malam ini Aku pindahkan Nur Muhammad ke perut ibunya dengan gembira. ۞ Dengan Nur ini Aku penuhi seluruh alam dengan cahaya. ۞ Aku pelihara dia sebagai anak yatim, dan Aku sucikan dia dan keluarganya dari segala noda dan dosa.” ۞
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Berguncanglah 'Arsy karena senang dan gembira ria, ۞ dan kursi keagungan pun bertambah dahsyat dan penuh wibawa, langit-langit penuh cahaya. ۞ Suara malaikat bergemuruh mengucapkan kalimat tahlil, tahmid, dan istighfar. ۞ {Berhenti untuk membaca "Subḥānallāhi wal-ḥamdu lillāhi wa lā ilāha illallāhu wallāhu akbar" (3x).} Ibunya senantiasa melihat beraneka ragam tanda-tanda kemuliaan dan keutamaan putra yang dikandungnya, ۞ sampai benar-benar sempurna masa kandungannya. ۞ Ketika sang bayi suci hampir keluar dengan dahsyatnya, ۞ dengan izin Allah, Tuhan semua makhluk, ۞ keluarlah sang kekasih yaitu bayi suci yang segala rahmat Allah dan keselamatan tercurah kepadanya, dalam keadaan bersujud, bersyukur, dan memuji Allah, bagaikan bulan purnama yang penuh kesempurnaan. ۞
+
+<br><br>Saat untuk berdiri.
+
+<br><br>Wahai Nabi, salam sejahtera untukmu, Wahai Rosul salam sejahtera untukmu.
+<br>Wahai kekasih, salam sejahtera untukmu dan shalawat (rahmat) Allah untukmu.
+<br>Bulan purnama telah terbit menyinari kami, Pudarlah purnama purnama lainnya.
+<br>Belum pernah aku lihat keelokan sepertimu wahai orang yang berwajah riang.
+<br>Engkau bagai matahari, engkau bagai bulan purnama, engkau cahaya di atas cahaya.
+<br>Engkau bagaikan emas murni yang mahal harganya, Engkaulah pelita hati.
+<br>Wahai kekasihku, wahai Muhammad, wahai pengantin tanah timur dan barat (sedunia).
+<br>Wahai Nabi yang dikuatkan (dengan wahyu), wahai Nabi yang diagungkan, wahai imam dua arah kiblat.
+<br>Selamat Datang Wahai Cahaya Mataku, Selamat Datang Wahai Kakeknya 2 Husain.
+<br>Siapa pun yang melihat wajahmu pasti berbahagia, wahai orang yang mulia kedua orang tuanya.
+<br>Telagamu jernih dan dingin, yang akan kami datangi kelak di hari kiamat.
+<br>Selamat Datang Wahai Cahaya Mataku, Selamat Datang Wahai Kakeknya 2 Husain.
+<br>Belum pernah unta putih berbalur hitam berdenting berjalan malam hari kecuali unta yang datang kepadamu.
+<br>Awan tebal memayungimu, seluruh tingkat golongan manusia mengucapkan shalawat kepadamu.
+<br>Kijang gesit datang memohon keselamatan kepadamu wahai kekasih.
+<br>Ketika serombongan berkemas dan menyerukan untuk berangkat.
+<br>Kudatangi mereka dengan berlinang air mata seraya kuucapkan tunggulah wahai pemimpin rombongan.
+<br>Bawakan aku surat yang berisikan kerinduan yang mendalam.
+<br>Wahai Nabi, semoga keselamatan tetap untukmu, Wahai Rosul, semoga keselamatan tetap untukmu.
+<br>Wahai kekasih, semoga keselamatan tetap untukmu Juga rahmat Alloh semoga tercurah untukmu.
+<br>Wahai bulan purnama yang nampak terang bagimu sifat yang indah.
+<br> Tiada orang yang orang tuanya lebih suci darimu sama sekali wahai kakek Hasan dan Husain.
+<br>Shalawat atas Muhammad, shalawat atas keluarga serta keselamatan atasnya.
+<br>Bagimu shalawat Allah selamanya sepanjang masa.
+<br>Wahai Dzat Penguasa kebaikan, wahai Dzat Yang berpangkat Tinggi.
+<br>Robbi, ampunilah dosa-dosaku, dengan restu petunjuk dari Muhammad.
+<br>Robbi belas kasihanilah kami semua dengan mampu menjalankan segala amal baik.
+<br>Semoga shalawat Allah meliputi selalu.. rasul termulia, Muhammad.
+<br>Serta salam terus-menerus.. silih berganti setiap saat. 
+<br>Wahai bulan purnama yang terbit kepada kita. Dari lembah Wadā.
+<br>Dan wajiblah kita mengucap syukur. Di mana seruan adalah kepada Allah.
+<br>Selamat datang wahai cahaya mataku. Selamat datang wahai kakeknya 2 Husain
+<br>Shalawat atas Muhammad, shalawat atas keluarga serta keselamatan atasnya.
+<br>Shalawat atas Muhammad, shalawat atas keluarga serta keselamatan atasnya.
+<br>Wahai Nabi, semoga keselamatan tetap untukmu. Wahai Rosul, semoga keselamatan tetap untukmu.
+<br>Wahai kekasih, semoga keselamatan tetap untukmu. Juga rahmat Allah semoga tercurah untukmu.
+<br><br>
+Lahirlah Rasululluh ﷺ dalam keadaan berkhitan dengan kekuasaan Allah, ۞ bercelak mata dengan celak al-Hidayah, ۞ maka angkasa bersinar terang dengan cahaya kerasulannya, ۞ dan alam raya bergemerlapan sinar dari cahayanya, ۞ umat-umat sesudahnya ikut menyaksikan kerasulannya, sebagaimana kesaksian umat-umat terdahulu walaupun belum pernah melihatnya. Keutamaan mukjizatnya yang pertama kali adalah; ۞ padamnya api sesembahan orang-orang Persia (Iran) dan gugurnya para pembesar kerajaan Persia, ۞ dan setan-setan yang telah dilempari dengan batu-batu meteor langit yang membakar. ۞ Para pembesar-pembesar jin yang kuat dan ganas kembali tunduk dan hina, ۞ karena cemerlangnya cahaya yang keluar dari mulut Nabi ﷺ, ۞ dan sinar-sinar cahaya yang berkilauan dari kemegahan Nabi ﷺ, ۞ kemudian Nabi ﷺ diserahkan kepada wanita-wanita mulia yang menyusukannya. ۞
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Ditanyakan; “Siapakah yang bersedia mengasuh permata yatim yang sangat berharga, ۞ permata yang tiada banding nilainya?” ۞ Burung-burung menjawab, “Kami mau mengasuhnya sehingga kami mendapatkan cita-citanya yang agung.” ۞ Binatang-binatang liar menjawab, “Kami lebih berhak mengasuhnya, agar kami memperoleh kemuliaan dan kehormatannya.” ۞ Dikatakan; “Wahai segenap makhluk, diamlah kalian semua, sesungguhnya Allah telah menentukan di dalam ketentuannya yang telah lalu, ۞ bahwa Nabi-Nya, Muḥammad ﷺ akan diasuh dan disusui oleh Sayyidah Halimah, wanita yang sangat penyantun." ۞
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Kemudian para wanita penyusu pergi dari Nabi ﷺ karena suratan takdir telah menentukan; ۞ kebahagiaan kepada Sayyidah Halimah binti Abiī Dzu’aib. ۞ Ketika Sayyidah Ḥalimah melihat Nabi ﷺ, ۞ ia segera mendekat kepadanya, ۞ dan memangku di pangkuannya, ۞ lalu mendekapnya di dadanya, ۞ maka Nabi pun tersenyum kepada Sayyidah Halimah, ۞ dan tampak cahaya dari mulutnya menerpa cahaya langit. ۞ Kemudian Sayyidah Halimah membawa Nabi ﷺ ke kendaraannya, ۞ dan berangkat pulang menuju keluarganya. ۞ Ketika telah sampai di rumahnya, tampaklah berkah Nabi ﷺ terutama pada kambing-kambing miliknya. ۞ Setiap hari ia melihat pada diri Nabi ﷺ tanda-tanda kemuliaan. ۞ Dan karena berkah mengasuh Nabi ﷺ, kehidupan Sayyidah Halimah semakin baik dan sejahtera. ۞ Hingga Nabi ﷺ berada dalam asuhan hidup yang tenteram dan aman, ۞ bergaul dengan saudara-saudara sesusunya dan teman-teman kecil sebayanya.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Syarat Sah Wudhu</h1><br>
+
+<p>Syarat Syarat wudhu dan Penjelasannya :<br>
+    	   
+    	   
+		   <ol>
+		   <li><strong>Islam </strong><br>
+    	   Maka tidak syah wudhunya orang kafir atau orang murtad.<br>
+    	   <br>
+    	   <li><strong>Tamiyiz </strong><br>
+    	   Yang dimaksud dengan tamiyiz adalah seseorang yang memahami dari pada percakapan atau bisa makan sendiri, minum sendiri dan membersihkan buang hajat sendiri atau bisa membedakan antara kanan dan kiri atau juga bisa membedakan antara kurma dan bara api.<br>
+    	   <br>
+   	       <li><strong>Bersih dari haid dan nifas</strong><br>
+   	      Haid adalah darah yang keluar pada waktu tertentu bagi setiap wanita yang sudah dewasa. sedangkan nifas adalah darah yang keluar setelah melahirkan. </p>
+    	 <li><strong>Tidak adanya sesuatupun yang mencegah sampainya air ke kulit anggota wudhu</strong><br>
+   	      Yaitu bersihnya kulit anggota wudhu dari semisal cat atau kotoran kotoran lain yang menempel di kulit sehingga air tidak bisa masuk. </p>
+    	 <li><strong>Tidak ada sesuatupun di anggota wudhu yang bisa merubah air </strong><br>
+   	      Yaitu bersihnya anggota tubuh yang bisa merubah air dan mencabut  nama air tersebut. contohnya seperti tinta dan jakfaron yang banyak. </p>
+<li><strong>Mengetahui kefardhuan/kewajiban dari pada wudhu</strong><br> 
+  Seorang yang wudhu harus mengetahui bahwasannya hukum dari pada wudhu adalah fardhu. jia dia meyakini bahwa wudhu hukumnya adalah sunnah maka tidak syah wudhunya. </p>
+<li><strong>Tidak meyakini kefardhuan/kewajiban dari pada rukun rukun wudhu adalah sunnah </strong><br>
+  Seseorang yang wudhu tidak boleh meyakini rukun rukun wudhu memiliki hukum sunnah semisal dia meyakini bahwasannya membasuh kedua tangan sampai siku siku adalah sunnah. </p>
+<li><strong>Memakai air yang suci dan mensucikan</strong> <br>
+  Yaitu air yang digunakan adalah air yang bersih dari najis dan juga bukan air musta'mal. air musta'mal adalah air yang digunakan  pertama kali dalam bersuci (basuhan wajib). </p>
+<li><strong>Masuknya waktu</strong> <br>
+  Seseorang yang terus menerus mengeluarkan najis (anyang anyangan-beser) maka wudhunya harus masuk waktu sholat. diluar waktu sholat tidak syah. </p>
+<li><strong>Muwalah</strong> <br>Yaitu tanpa adanya jeda waktu antara setiap basuhan wudhu dan sholat bagi yang selalu hadas. jadi setelah melaksanakan wudhu diharuskan langsung melaksanakan sholat. </p>
+<p>NB : syarat nomer 9 dan 10 berlaku bagi yang selalu mengeluarkan hadast secara terus menerus ( anyang-anyangan).</p></ol>
+<br>
+<h2 align="center" class="style2">Fardhu Wudhu </h2>
+<p align="left" class="style3"> Syekh Salim bin Sumair Al-Hadhrami dalam kitabnya Safinatun Najâ mengungkapkan: <br>
+  <br>
+</p>
+
+  <p class="arab">فروض الوضوء ستة: الأول النية الثاني غسل الوجه الثالث غسل اليدين مع المرفقين الرابع مسح شيئ من الرأس الخامس غسل الرجلين مع الكعبين السادس الترتيب</p>
+
+<br>
+<p align="left" class="style3">Fardhu wudhu ada enam: </p>
+<ol>
+<li>
+Niat, 
+<p>Berikut ini adalah bacaa niat ketika hendak melakukan wudhu ;</p>
+<p>Niat Berwudhu</p>
+            <center>
+                <div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/wudhu/wudhu_doa_niat.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </center>
+<p align="center">&nbsp;</p>
+<p class="arab">نَوَيْتُ الْوُضُوْءَ لِرَفْعِ الْحَدَثِ اْلاَصْغَرِ فَرْضًا الِلَهِ تعَالَى</p>
+<p align="center">Nawaitul whudu-a lirof'il hadatsil ashghori fardhol lillaahi ta'aalaa</p>
+<br/>
+Artinya :<br>
+  <em>&quot;Saya niat berwudhu untuk menghilangkan hadast kecil fardu (wajib) karena Allah ta'ala&quot;</em>
+<p>&nbsp;</p>
+<li>Membasuh muka, </p>
+<li>Membasuh kedua tangan beserta kedua siku,</p>
+<li>Mengusap sebagian kepala, </p>
+<li>Membasuh kedua kaki beserta kedua mata kaki, dan </p>
+<li>Tertib,</p></ol>
+<p>&nbsp;</p>
+<p>Keenam rukun tersebut dijelaskan oleh Syekh Nawawi Banten sebagai berikut.<br>
+  <br><ol>
+  <li><strong>Niat wudhu</strong> dilakukan secara berbarengan pada saat pertama kali membasuh bagian muka, baik yang pertama kali dibasuh itu bagian atas, tengah maupun bawah.<br>
+  Bila orang yang berwudhu tidak memiliki suatu penyakit maka ia bisa berniat dengan salah satu dari tiga niat berikut:<br>
+     
+  a. Berniat menghilangkan hadats, bersuci dari hadats, atau bersuci untuk melakukan shalat.<br>
+     
+  b. Berniat untuk diperbolehkannya melakukan shalat atau ibadah lain yang tidak bisa dilakukan kecuali dalam keadaan suci.<br>
+     
+  c. Berniat melakukan fardhu wudhu, melakukan wudhu atau wudhu saja, meskipun yang berwudhu seorang anak kecil atau orang yang memperbarui wudhunya.<br>
+  <br>
+  Orang yang dalam keadaan darurat seperti memiliki penyakit ayang-ayangen atau beser baginya tidak cukup berwudhu dengan niat menghilangkan hadats atau bersuci dari hadats. Baginya wudhu yang ia lakukan berfungsi untuk membolehkan dilakukannya shalat, bukan berfungsi untuk menghilangkan hadats.<br>
+  <br>
+  Sedangkan orang yang memperbarui wudhunya tidak diperkenankan berwudhu dengan niat menghilangkan hadats, diperbolehkan melakukan shalat, atau bersuci dari hadats.<br>
+  <li><strong>
+  Membasuh muka</strong><br>
+  Sebagai batasan muka, panjangnya adalah antara tempat tumbuhnya rambut sampai dengan di bawah ujung kedua rahangnya. Sedangkan lebarnya adalah antara kedua telinganya. Termasuk muka adalah berbagai rambut yang tumbuh di dalamnya seperti alis, bulu mata, kumis, jenggot, dan godek. Rambut-rambut tersebut wajib dibasuh bagian luar dan dalamnya beserta kulit yang berada di bawahnya meskipun rambut tersebut tebal, karena termasuk bagian dari wajah. tetapi tidak wajib membasuh bagian dalam rambut yang tebal bila rambut tersebut keluar dari wilayah muka.<br>
+  <br>
+  <li><strong>Membasuh kedua tangan beserta kedua sikunya.</strong><br>
+  Dianggap sebagai siku bila wujudnya ada meskipun di tempat yang tidak biasanya seperti bila tempat kedua siku tersebut bersambung dengan pundak.<br>
+  <br>
+  <li><strong>Mengusap sebagian kecil kepala</strong><br>
+  Mengusap sebagian kecil kepala ini bisa hanya dengan sekadar mengusap sebagian rambut saja, dengan catatan rambut yang diusap tidak melebihi batas anggota badan yang disebut kepala. Seumpama seorang perempuan yang rambut belakangnya panjang sampai sepunggung tidak bisa hanya mengusap ujung rambut tersebut karena sudah berada di luar batas wilayah kepala. Dianggap cukup bila dalam mengusap kepala ini dengan cara membasuhnya, meneteskan air, atau meletakkan tangan yang basah di atas kepala tanpa menjalankannya.<br>
+  <br>
+  <li><strong>Membasuh kedua kaki beserta kedua mata kaki</strong><br>
+  Dalam hal ini yang dibasuh adalah bagian telapak kaki beserta kedua mata kakinya. Tidak harus membasuh sampai ke betis atau lutut. Diwajibkan pula membasuh apa-apa yang ada pada anggota badan ini seperti rambut dan lainnya. Orang yang dipotong telapak kakinya maka wajib membasuh bagian yang tersisa. Sedangkan bila bagian yang dipotong di atas mata kaki maka tidak ada kewajiban membasuh baginya namun disunahkan membasuh anggota badan yang tersisa.<br>
+  <br>
+  <li><strong>Tertib</strong><br>
+  Yang dimaksud dengan tertib di sini adalah melakukan kegiatan wudhu tersebut secara berurutan sebagaimana disebut di atas, yakni dimulai dengan membasuh muka, membasuh kedua tangan beserta kedua siku, mengusap sebagian kecil kepala, dan diakhiri dengan membasuh kedua kaki beserta kedua mata kaki.</p></ol>
+<br>
+<h2 align="center"><span class="style2">Sunnah-sunnah Wudhu </span></h2>
+<p>Syekh Abu Syuja’ Al-Asfahani menyebutkan ada sepuluh perkara-perkara yang sunah dilakukan dalam berwudhu. Dalam kitabnya Matn Ghayah At-Taqrib beliau mengatakan:</p>
+<p align="right" class="arab">وسننه عشرة أشياء: التسمية وغسل الكفين قبل إدخالهما الإناء والمضمضة والاستنشاق ومسح الأذنين ظاهرهما وباطنهما بماء جديد وتخليل اللحية الكثة وتخليل أصابع اليدين والرجلين وتقديم اليمنى على اليسرى والطهارة ثلاثا ثلاثا والموالاة</p>
+<p>Artinya: “Ada sepuluh sunah dalam berwudhu, yaitu membaca basmalah, membasuk kedua telapak tangan sebelum memasukannya ke dalam tempat air, berkumur, menghirup air ke dalam hidung, mengusap bagian luar dan dalam telinga dengan air yang baru, menyela-nyela rambut jenggot yang tebal, menyela-nyela jari-jari tangan dan kaki, mendahulukan anggota badan yang kanan dari yang kiri, tiga kali basuhan, dan berturut-turut.”</p>
+<p>Kesepuluh hal tersebut dijelaskan secara singkat oleh Sykeh Ibnu Qasim Al-Ghazi sebagai berikut:</p><ol>
+<li><p><strong>Membaca basmalah</strong> dilakukan pada awal pertama kali akan melakukan wudhu dengan kalimat “bismillah” untuk ringkasnya atau “bismillahirrahmanirrahim” untuk sempurnanya. Bila di awal berwudhu belum membaca basmalah maka bisa disusulkan di pertengahan wudhu. Namun bila sampai selesai berwudhu belum juga membacanya maka tak perlu dilakukan.</p>
+<li><p><strong>Membasuh kedua telapak tangan sampai dengan pergelangan tangan</strong> dilakukan sebelum berkumur. Bila air yang digunakan untuk berwudhu berada pada bejana dan vulomenya kurang dari dua qullah maka sebelum kedua telapak tangan dimasukkan ke bejana tersebut dibasuh tiga kali terlebih dahulu bila diragukan kesucian kedua telapak tangan tersebut. Adalah makruh memasukkan keduanya ke dalam bejana sebelum membasuhnya terlebih dahulu. Namun bila yakin bahwa kedua telapak tangannya dalam keadaan suci maka tidak mengapa memasukkannya tanpa membasuhnya terlebih dahulu.</p>
+<li><p><strong>Berkumur</strong> dilakukan setelah membasuh kedua telapak tangan. Kesunahan berkumur ini bisa didapatkan dengan cara memasukkan air ke dalam mulut, baik air tersebut digerakkan di dalamnya dan kemudian dimuntahkan ataupun tidak. Yang lebih sempurna adalah memuntahkannya.</p>
+<li><p><strong>Menghirup air kedalam hidung dilakukan setelah berkumur.</strong> Kesunahannya bisa didapatkan dengan cara memasukkan air ke dalam hidungdengan cara menghisapnya hingga sampai di pangkal hidung dan kemudian menyemprotkannya ataupun tidak. Yang lebih sempurna adalah menyemprotkannya. </p>
+<p>Orang yang berkumur dan menghirup air ke dalam hidung saat berwudhu dituntut untuk melakukannya secara kuat. Lebih utama lagi bila kedua kesunahan itu dilakukan dengan tiga kali cidukan di mana masing-masing cidukan digunakan untuk berkumur kemudian dihirup ke dalam hidung. Ini lebih utama dari pada memisah keduanya dengan cidukan sendiri-sendiri.</p>
+<li><p><strong>Membasuh seluruh kepala</strong>, tidak hanya sekedar mengusapnya saja. Sebagaimana diketahui bahwa mengusap sebagian kepala adalah merupakan rukun wudhu yang hukumnya wajib. Sedangkan membasuh keseluruhan kepala adalah sunah hukumnya.</p>
+<p>Sebagai catatan, sunah membasuh kepala ini tidak disebutkan dalam salah satu dari sepuluh sunah wudhu yang disebutkan oleh Syekh Abu Syuja’ dalam kitab Taqribnya. Namun demikian Syekh Ibnu Qasim menyebutkannya dalam menjelaskan tulisan Abu Syuja’ sehingga pada akhirnya sunah wudhu yang disebutkan di sini ada sebelas, bukan sepuluh sebagaimana tersebut di atas.</p>
+<li><p> <strong>Mengusap seluruh bagian luar dan dalam kedua telinga dengan menggunakan air yang baru</strong>, bukan dengan menggunakan basahnya air yang digunakan untuk membasuh kepala. Dalam melakukan ini sunahnya dengan cara memasukkan kedua jari telunjuk tangan ke dalam lubang telinga dan melakukannya pada lekukan-lekukan telinga, sedangkan ibu jari dijalankan pada bagian luar telinga. Setelah itu kedua telapak tangan yang dalam keadaan basah dilekatkan pada kedua telinga.</p>
+<li><p><strong> Menyela-nyela rambut jenggot yang tebal adalah sunah hukumnya.</strong> Sedangkan menyela-nyela jenggot yang tipis adalah wajib. Ini dilakukan dengan cara memasukkan jari-jari ke bagian bawah janggut.</p>
+<li><p><strong>Menyela-nyela jari-jari tangan dan kaki hukumnya sunah meskipun air wudhu bisa sampai tanpa menyela-nyela</strong>. Namun bila dengan tidak menyela-nyela air tidak bisa sampai ke sela-sela jari maka wajib hukumnya untuk menyela-nyela.</p>
+<li><p><strong>Mendahulukan anggota badan yang kanan dari yang kiri untuk kedua tangan dan kedua kaki.</strong> Adapun untuk dua anggota badan yang bisa dengan mudah dibasuh dengan sekali basuhan seperti kedua pipi maka cukup dibasuh dengan sekali basuhan secara bersamaan tanpa harus mendahulukan yang kanan dari yang kiri.</p>
+<li><p><strong>Menigakalikan basuhan. </strong>Yakni setiap anggota badan yang dibasuh pada saat berwudhu dibasuh atau diusap sebanyak masing-masing tiga kali.</p>
+<li><p><strong>Berturut-turut.</strong> Artinya tidak ada jeda yang lama di antara basuhan dua anggota badan. Setiap anggota badan dibasuh segera setelah anggota sebelumnya selesai dibasuh dan belum mengering. Berturut- turut ini dihukumi sunah bagi orang yang tidak dalam kondisi darurat. Adapun bagi orang yang dalam kondisi darurat, seperti berpenyakit beser, selalu buang air, atau terkena istihadlah, maka hukum berturut-turut dalam berwudhu menjadi wajib.</p>
+<p align="center">&nbsp;</p>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

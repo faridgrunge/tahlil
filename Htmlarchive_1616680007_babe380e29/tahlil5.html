@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Tahlil - Bagian 5</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">الَّذِيْ لَآ اِلٰهَ اِلَّا هُوَ اَلْحَيُّ الْقَيُّوْمُ وَأَتُوْبُ إِلَيْهِ، اَفْضَلُ الذِّكْرِ فَاعْلَمْ اَنَّهُ لَااِلَهَ اِلَّااللّٰهُ، حَيٌّ مَوْجُوْدٌ <br><br>
+
+لَااِلَهَ اِلَّا اللّٰهُ، حَيٌّ مَعْبُوْدٌ<br><br>
+
+لَااِلَهَ اِلَّا اللّٰهُ، حَىٌّ بَاقٍ الَّذِيْ لَا يَمُوْتُ<br><br>
+
+لَااِلَهَ اِلَّا اللّٰهُ
+(dibaca 160x) <br><br>
+
+لَا اِلَهَ اِلَّا اللّٰهُ مُحَمَّدٌ رَّسُوْلُ اللّٰهِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ<br><br>
+
+عَلَيْهَا نَحْيَا وَعَلَيْهَا نَمُوْتُ وَعَلَيْهَا نُبْعَثُ إِنْ شَاءَ اللّٰهُ تَعَالَى مِنَ الآمِنِيْنَ<br><br>
+
+الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ حَمْدًا يُّوَافِى نِعَمَهُ وَيُكَافِىءُ مَزِيْدَهُ، يَا رَبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِيْ لِجَلَالِ وَجْهِكَ وَعَظِيْمِ سُلْطَانِكَ، سُبْحَانَكَ لَا نُحْصِى ثَنَاءً عَلَيْكَ أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ، فَلَكَ الحَمْدُ قَبْلَ الرِّضَى وَلَكَ الحَمْدُ بَعْدَ الرِّضَى وَلَكَ الحَمْدُ إِذَا رَضِيْتَ عَنَّا دَائِمًا أَبَدًا<br><br>
+
+اللَّهُـمَّ صَلِّ علَى الذَّاتِ المُكَمَّلَةِ وَالرَّحْمَةِ المُنَزَّلَةِ سَيِّدِنَا مُحَمَّدٍ وَعَلَى اَلِهِ وَصَحْبِهِ وَسَلِّمْ<br><br>
+
+وَصَلِّ اللَّهُـمَّ عَلَيْهِ يَا ذَا البَهَاءِ وَالجَلَالِ بُكْرَةً وَأَصِيْلًا<br><br>
+
+اللَّهُـمَّ كَمَا خَصَّصْتَنَا بِكِتَابِكَ الكَرِيْمِ وَهَدَيْتَنَا إِلَى صِرَاطِكَ المُسْتَقِيْمِ، وأَصْلِحْ بِهِ مِنَّا جَمِيْعَ مَا فَسَدَ، وَطَهِّرْ بِهِ مِنَّا مَا ظَهَرَ وَمَا بَطَنَ<br><br>
+
+اللَّهُـمَّ اشْرَحْ بِالقُرْآنِ صُدُوْرَنَا وَيَسِّرْ بِهِ أُمُوْرَنَا وَعَظِّمْ بِهِ أُجُوْرَنَا وَحَسِّنْ بِهِ أَخْلَاقَنَا وَوَسِّعْ بِهِ أَرْزَاقَنَا وَنَوِّرْ بِهِ قُبُوْرَنَا<br><br>
+
+اللَّهُـمَّ اجْعَلْ ثَوَاَبَ مَا قَرَأْنَاهُ وَبَرَكَةَ مَا تَلَوْنَاهُ وَصَلَّيْنَاهُ عَلَى نَبِيِّكَ مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَمَا هَلَلْنَا هَدِيَّةً بَالِغَةً وَرَحْمَةً مِنْكَ نَازِلَةً نُقَدِّمُهَا وَنُهْدِيْهَا اِلَى حَضَرَاتِ النَّبِيِّ الأَكْرَمِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ، ثُمَّ اِلَى أَرْوَاحِ آبَائِهِ وَإِخْوَانِهِ مِنَ النَّبِيِّيْنَ وَالمُرْسَلِيْنَ وَإِلَى مَلَائِكَةِ اللّٰهِ الْمُقَرَّبِيْنَ وَالكَرُّوْبِيِّيْنَ، وَاِلَى أَرْوَاحِ سَادَاتِنَا أَبِي بَكْرٍ وَعُمَرَ وَعُثْمَانَ وَعَلِيٍّ، وَإِلَى البَقِيَّةِ العَشْرَةِ المُبَشَّرَةِ بِالجَنَّةِ وَسَائِرِ الصَّحَابَةِ وَالقَرَابَةِ وَالتَّابِعِيْنَ وَإِلَى أَرْوَاحِ الحَسَنِ وَالحُسَيْنِ وَأُمِّهِمَا سَيِّدَتِنَا فَاطِمَةَ الزَّهْرَاءِ وَسَيِّدَتِنَا خَدِيْجَةَ الكُبْرَى وَسَيِّدِنَا حَمْزَةَ وَالعَبَّاسِ وَالشُّهَدَاءِ البَدْرِيِّيْنَ وَالأُحُدِيِّيْنَ وَإِلَى أَرْوَاحِ الخِضْرِ وَإِلْيَاسَ وَسَيِّدِنَا عَبْدِ اللّٰهِ ابْنِ عَبَّاسٍ وَإِلَى أَرْوَاحِ الأَرْبَعَةِ الأَئِمَّةِ المُجْتَهِدِيْنَ وَمُقَلِّدِيْهِمْ فِي الدِّيْنِ وَإِلَى أَرْوَاحِ العُلَمَاءِ العَامِلِيْنَ وَالقُرَّاءِ وَأَئِمَّةِ الحَدِيْثِ وَالمُفَسِّرِيْنَ وَسَادَاتِنَا الصُّوْفِيَّةِ المُحَقِّقِيْنَ وَإِلَى رُوْحِ القُطْبِ الرَّبَّانِيِّ وَالعَارِفِ الصَّمَدَانِيِّ سَيِّدِيْ عَبْدِ القَادِرِ الجَيْلَانِيّ وَسَيِّدِيْ أَحْمَدَ البَدَوِيِّ وَسَيِّدِيْ أَحْمَدَ الرِّفَاعِيِّ وَسَيِّدِيْ إِبْرَاهِيْمَ الدَّسُوْقِيِّ وَسَيِّدِيْ أَبِي القَاسِمِ الجُنَيْدِ البَغْدَادِيِّ وَسَيِّدِيْ أَحْمَدَ ابْنِ عَلْوَانَ وَسَيِّدِيْ أَبِي طَالِبٍ المَكِّيِّ وَإِلَى أَرْوَاحِ كُلِّ وَلِيٍّ وَوَلِيَّةٍ  لِلّٰهِ مِنْ مَشَارِقِ الأَرْضِ وَمَغَارِبِهَا بَرِّهَا وَبَحْرِهَا أَيْنَمَا كَانُوْا وَكَانَ الكَائِنُ فِي عِلْمِكَ وَحَلَّتْ أَرْوَاحُهُمْ يَا رَبَّ العَالَمِيْنَ<br><br>
+
+وَإِلَى أَرْوَاحِ سَادَاتِنَا أَهْلِ المُعَلَّا وَالشُّبَيْكَةِ وَالبَقِيْعِ وَأَمْوَاتِ المُسْلِمِيْنَ كَافَّةً عَامَّةً وَفِي صَحَائِفِ مَنْ لَا زَائِرَ لَهُ وَلَا ذَاكِرَ لَهُ عُمَّ الجَمِيْعَ بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِيْنَ</p><br><br><p><i>Alladzi lā ilāha illā huw, al-ḥayyul-qayyụm, waatubu ilaih, Afdlaludz dzikri fa’lam annahuu : Laa ilaaha illaallaahu, hayyum maujuud.<br><br>
+
+Laa ilaaha illaallaahu, hayyum ma’buud.<br><br>
+
+Laa ilaaha illaallaahu, hayyun baaqiladzii laa yamuut.<br><br>
+
+Laa ilaaha illaallaah.<br><br>
+
+Laa ilaaha illaallaah Muahmmadur Rasuululllahi Sallallahu alaihi wasallam.<br><br>
+
+Alaihaa nahyaa wa 'alaihaa namuutu wa 'aalaihaa nub'atsu Insyaa Allahu Ta'alaa minal aaminin.<br><br>
+
+Al-ḥamdu lillāhi rabbil-‘ālamīn hamdaay yuwaafii ni’amahuu wa yukaafiu maziidah. Yaa rabbanaa lakal hamdu kamaa yanbaghii lijalaali wajhika wa ‘adhii-mi sulthaanik. Subhaanaka laa nuhsii tsanaa a alaika anta kamaa atsnaita 'alaa nafsika, falakal hamdu qablar ridha walakal hamdu ba'dar ridha walakal hamdu idzaa radiita 'anna daa iman abadan.<br><br>
+
+Allahumma sholli ‘aladzaatil mukammalati warrohmatil munajjalati Sayyidinaa Muhammadin wa ‘ala alihi wa shahbihi wasallam.<br><br>
+
+Wassholli Allahumma álaihi yaa dzal bahaai waljalali bukrotan waashila<br><br>
+
+Allahumma kamaa khissostanaa bikitaabikal kariimi wa hadaitanaa Ilaa sirootikal mustaqiim, wa aslih bihi minna jamiia’ maa fasad, wa tohhir bihi minnaa maa dzohara wamaa bathana.<br><br>
+
+Allahummassrah bilqur’aaani suduu ronaa wa yassir bihi umuu rona wa ‘adhim bihi ajuu ronaa wahassin bihi akhlaaqonaa wawassi’ bihi arjaqnaa wa nawwir bihi qubuuronaa.<br><br>
+
+Allahumma tsawa aba maa qaraa naahu wabarakata maa talaunahu wasollainaahu ‘alaa nabiiyika Muhammad Shallallahu alaihi wasallama wama halalnaa hadiyyata baalighata warahmata minka naajilata nuqaddimuha wanuhdiihaa ilaa hadaratinnabiyyil akrami shallalahu ‘alaihi wasallam, tsamma ilaa arwaahi āabaa ihii wa ikhwaanihii minannabiyyiinaa walmursaliina wa ilaa malaaikatillahil muqarrabiin walkarrubiyyiin, wailaa arwaahi saadaatina abii bakri wa umara wa ustmanaa wa ‘ali wa ilalbaqiyyatil asratil mubassarati biljannati wasaairis sohaabati walqaraabati wattabi’iina waila arwahil hasani wal husaini waamihimaa sayyidatina fatimatajjahra i wasayyidatina khadiijatal kubra wasayyidatina hamzah wal abbasi wassahaadaill badriyyina wal ahuddiyiina wa ilaa arwahil khidri wa ilyaasa wasayyidina abdillahibni abbasi wa ilaa arwahil arba’atil aimmatil muztahidiina wamuqallidiihim fiddiin wa ilaa arwahil ulamail ‘aamiliina wal qurraai wa aimmatil haditsii walmufassiriina wasaa datinas sufiyyatil muhaqqiiina wa ilaa ruuhi qutbir rabbaniyyi wal ‘arifis somadaniyyi sayyidii ‘abdil qaadiril zalailaa niyyi wa sayyidil ahmadal badawiyyi wasayyidi ahmadarrifaaiyyi wasayyidi ibraahiimad dasuuqiyyi wasayydidi abiil qaasimiil junaidil bagdaadiyyi wa sayyidi ahmadabni ‘alwaana wasayyidi abii thaalibil makkiyyi wa ilaa arwahi kulli waliyyi wawaliyyatil lillaahi min masyaariqil ardhi wamaghaaribiha barrihaa wabahrihaa ainamaa kaanu wakaanal kaa inu fii ilmika wahallat arwaahuhum Yaa Rabbal ‘Aalamaiin.<br><br>
+
+Wa ilaa arwaahi sadaatina ahlil mu’alla wassyubaikati walbaqii’i wa amwaatil muslimiina kaaffatan ‘aammatan wafii sohaaifi man laa zaaira lahu walaa dzaakira lahu ‘ammal zamii’a birahkmatika Aaa Arhamar Rahimiin.</i></p><br><br><p>(Allah) yang tiada tuhan selain Dia yang maha hidup, lagi terjaga. Aku bertobat kepada-Nya.<br>
+Sebaik-baik zikir–ketahuilah–adalah lafal ‘La ilāha illallāh’, tiada tuhan selain Allah, zat yang hidup dan ujud.<br><br>
+
+Tiada tuhan selain Allah, zat yang hidup dan disembah.<br><br>
+
+Tiada tuhan selain Allah, zat kekal yang tak akan mati.<br><br>
+
+Tiada tuhan selain Allah.<br><br>
+
+Tiada tuhan selain Allah. Nabi Muhammad ﷺ utusan-Nya.<br><br>
+
+Dengan kalimat itu, kami hidup. Dengannya, kami wafat. Dengannya pula insyaAllah kelak kami dibangkitkan termasuk orang yang aman.<br><br>
+
+Aku berlindung kepada Allah dari setan yang dilontar. Dengan nama Allah Yang Maha Pengasih, lagi Maha Penyayang. Segala puji bagi Allah, Tuhan seru sekalian alam sebagai pujian orang yang bersyukur, pujian orang yang memperoleh nikmat sama memuji, pujian yang memadai nikmat-Nya, dan pujian yang memungkinkan tambahannya. Tuhan kami, hanya bagi-Mu segala puji sebagaimana pujian yang layak bagi kemuliaan dan keagungan kekuasaan-Mu. Maha Suci Engkau, kami tidak (dapat) menghitung pujian atas diri-Mu sebagaimana Kaupuji diri sendiri. Hanya bagi-Mu pujian sebelum rida. Hanya bagi-Mu pujian setelah ridha. Hanya bagi-Mu pujian ketika Kau meridhai kami selamanya.<br><br>
+
+Ya Allah, limpahkan salawat dan salam untuk zat yang disempurnakan dan rahmat yang diturunkan, yaitu Nabi Muhammad SAW, keluarga, dan sahabatnya.<br><br>
+
+Ya Allah, wahai zat yang indah dan agung, limpahkanlah shalawat kepada Nabi Muhammad SAW pada pagi dan sore hari.<br><br>
+
+Ya Allah, sebagaimana Kau muliakan kami dengan Kitab Suci-Mu yang mulia dan Kau tunjuki kami ke jalan yang lurus, maka berikanlah kemaslahatan untuk kami sebagai pengganti mafsadat dan sucikan kami dari kotoran yang tampak dan tersembunyi.<br><br>
+
+Ya Allah, dengan Alquran lapangkanlah hati kami, mudahkan urusan kami, lipat gandakanlah pahala kami, perbaiki akhlak kami, luaskan rezeki kami, serta terangilah kubur kami.<br><br>
+
+Ya Allah, jadikanlah pahala dan keberkahan bacaan kami, salawat kami, dan tahlil kami sebagai hadiah yang sampai dan rahmat-Mu yang turun, yang kami persembahkan dan hadiahkan untuk Nabi Muhammad ﷺ termulia, arwah bapak moyangnya, saudaranya dari kalangan para nabi dan rasul, malaikat muqarrabin dan karubiyyin, pemimpin kami Abu Bakar RA, Umar RA, Ustman RA, Ali RA, sepuluh sahabat yang dijanjikan masuk surga, seluruh sahabat, kerabat, tabi‘in, arwah Hasan, Husein, Ibu keduanya yaitu Sayyidah Fatimah Az-Zahra, Sayyidah Khadijah Al-Kubra, Sayyidina Hamzah, Abbas RA, Syuhada Badar dan Uhud, arwah Khidhir, Ilyas, Sayyidina Abdullah bin Abbas RA, arwah empat Imam Mujtahid dan pengikut mereka perihal agama, arwah ulama, Ahli Qiraah, Imam Hadits, Mufasir, pemuka Sufi Ahli Hakikat, Roh Qutub Rabbani dan Arif As-Samadani Syekh Abdul Qadir Al-Jailani, Sayyid Ahmad Badawi, Sayyid Ahmad Ar-Rifa‘i, Sayyid Ibrahim Ad-Dasuqi, Sayyid Abul Qasim Al-Junaid Al-Baghdadi, Sayyid Ahmad bin Alwan, Sayyid Abu Thalib Al-Makki, seluruh wali Allah baik laki-laki dan perempuan dari Timur ke Barat baik di daratan maupun di lautan; di mana saja mereka dan roh mereka berada. Sementara semua yang ada berada dalam pengetahuan-Mu, wahai Tuhan sekalian alam.<br><br>
+
+Dan kepada arwah pemimpin kami, yaitu ahli kubur Mualla, Syubaikah, Baqi‘, semua arwah umat Islam, dan pada lembaran ahli kubur yang tidak diziarahi dan tidak diingat, ratakanlah semuanya dengan rahmat-Mu, wahai Zat Yang Maha Penyayang.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

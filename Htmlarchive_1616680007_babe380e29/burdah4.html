@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Burdah Imam Al-Bushiri - Bagian 4</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَلْفَصْلُ الرَّابِعِ : فِي مَوْلِدِهِ عَلَيْهِ الصَّلَاةُ وَالسَّلَامُ
+
+<br>مَوْلَايَ صَلِّ وَسَلِّـمْ دَآئِــماً أَبَـدًا ۞ عَلـــَى حَبِيْبِـكَ خَيْــرِ الْخَلْقِ كُلِّهِمِ
+
+<br>أَبَانَ مَوْلِدُهُ عَنْ طِيْــبِ عُنْصُرِهِ ۞ يَا طِيْـــبَ مُبْتَدَإٍ مِنْهُ وَمُخْتَتَمِ
+
+<br>يَوْمٌ تَفَرَّسَ فِيْــهِ الفُرْسُ أَنَّهُمُ ۞ قَدْ أُنْذِرُوا بِحُلُولِ الْبُؤْسِ وَالنِّقَمِ
+
+<br>وَبَاتَ إِيْوَانُ كِسْرٰى وَهْوَ مُنْصَدِعٌ ۞ كَشَمْلِ أَصْحَابِ كِسْرٰى غَيْرَ مُلْتَئِمِ
+
+<br>وَالنَّارُ خَامِدَةُ الْأَنْفَاسِ مِنْ أَسَفٍ ۞ عَلَيْهِ وَالنَّهْرُ سَاهِيْ العَيْنِ مِنْ سَدَمِ
+
+<br>وَسَاءَ سَاوَةَ أَنْ غَاضَتْ بُحَيْرَتُهَا ۞ وَرُدَّ وَارِدُهَا بِالغَيْظِ حِيْنَ ظَمِيْ
+
+<br>كَأَنَّ بِالنَّارِ مَا بِالْمَا ءِ مِنْ بَلَلٍ ۞ حُزْنًا وَبِالمَا ءِ مَا بِالنَّارِ مِنْ ضَرَمِ
+
+<br>وَالْجِنُّ تَهْتِفُ وَالْأَنْوَارُ سَاطِعَــةٌ ۞ وَالْحَقُّ يَظْهَرُ مِنْ مَّعْنًى وَمِنْ كَلِــــمِ
+
+<br>عَمُوْا وَصَمُّوا فَإِعْلَانُ الْبَشَائِرِ لَمْ ۞ تُسْمَعْ وَبَــارِقَةُ اْلِإنْذَارِ لَمْ تُشَمِ
+
+<br>مِنْ بَعْدِ مَا أَخْبَرَ الْأَقْوَامَ كَاهِنُهُمْ ۞ بِأَنَّ دِيْنَهُمُ الْمُعْوَجَّ لَمْ يَقُــــمِ
+
+<br>وَبَعْدَمَا عَايَنُوْا فِيْ الْأُفْقِ مِنْ شُهُبٍ ۞ مُنْقَضَّةٍ وِفْقَ مَا فِيْ الْأَرْضِ مِنْ صَنَمِ
+
+<br>حَتَّى غَدَا عَنْ طَرِيقِ الْوَحْيِ مُنْهَزِمٌ ۞ مِنَ الشَّيَاطِيْنِ يَقْفُ إِثْرَ مُنْهَزِمِ
+
+<br>كَأَنَّهُمْ هَرَبًا أَبْطَالُ أَبْرَهَــةٍ ۞ أَوْ عَسْكَرٍ بِالحَصٰى مِنْ رَاحَتَيْهِ رُمِيْ
+
+<br>نَبْذًا بِهِ بَعْدَ تَسْبِيحٍ بِبَطْنِهِمَا ۞ نَبْذَ الْمُسَبِّحِ مِنْ أَحْشَاءِ مُلْتَقِمِ</p><br><p><i>Al-fashlur-rābi': Fī mawlidīhish-shalātu was-salāmu.
+
+<br>Mawlāya shallī wa sallim dā iman abadā. ۞ 'Alā Ḥabībika Khayril-khalqi kullihimi.
+
+<br>Abāna mawliduhu 'an-thībi 'unshurihi. ۞ Yā Thība mubtada-in minhu wa mukhtatami.
+
+<br>Yawmun tafarrasa fīhil-fursu annahumu. ۞ Qad undzirū biḥulūlil-bu'-si wanniqami.
+
+<br>Wa bāta īwānu kisrā wah-wa munshadi'un. ۞ Syamli ash-ḥābi kisrā ghayra multa-imi.
+
+<br>Wannaru khāmidatul-anfāsi min asafin. ۞ 'Alayhi wannahru sāhil-'ayni min sadami.
+
+<br>Wa sā-a sāwata an ghādhat buhayratuhā. ۞ Wa rudda wāriduhā bil-ghayzhi ḥīna zhamī.
+
+<br>Ka anna binnāri mā bil-mā-i min balalin. ۞ Ḥuznan wa bil-mā-i mā binnāri min dharami.
+
+<br>Wal jinnu tahtifu wal-anwāru sāthi'atun. ۞ Wal ḥaqqu yazh-haru mim-ma'nan wa min kalimi.
+
+<br>Amū wa shammū fa-i'lānul-basyāiri lam. ۞ Tusma' wa bāriqatul-indzāri lam tusyami.
+
+<br>Min-ba'di mā akhbaral-aqwāma kāhinuhum. ۞ Bi-anna dīnahumul-mu'wajja lam yaqumi.
+
+<br>Wa ba'da mā 'āyanū fil-ufqi min-syuhubin. ۞ Munqadh-dhatin wifqa mā fil-ardi min-shanami.
+
+<br>Ḥattā ghadā 'an tharīqil-waḥyī munhazimin. ۞ Minasy-shayāthīni yaqfu itsra munhazimi.
+
+<br>Ka-annahum haraban abthālu abrahatin. ۞ Aw 'askarin bil-ḥashā min rāḥatayhi rumī.
+
+<br>Nab-dzan-bihi ba'da tasbīḥin bi bathnihimā. ۞ Nab-dzal-musabbiḥi min aḥsyā-i multaqimi.</i></p><br><p><strong>Bagian IV: Kelahiran Rasulullah ﷺ.</strong>
+
+<br>Wahai Tuanku, shalawat dan salam sudi Engkau limpahkan selalu. ۞ Kepada kekasih-Mu sebaik-baik makhluk yang Engkau titahkan.
+
+<br>Kelahiran sang Nabi menampakkan kesucian diri. ۞ Alangkah indah permulaannya, juga indah penghabisannya.
+
+<br>Hari kelahiran Rasulullah ﷺ saat ada firasat bangsa Persia. ۞ Bahwa ada peringatan kepada mereka datangnya bencana dan siksa.
+
+<br>Saat menjelang malam tiba istana Kisra hancur terbelah. ۞  Sebagaimana kumpulan sahabat Kisra tiada menyatu terpecah belah.
+
+<br>Api sesembahan padam karena duka yang mencekam. ۞ Sungai Eufrat tak mengalir, muram karena susah yang amat dalam.
+
+<br>Penduduk negeri sawah resah duka saat danaunya kering kerontang. ۞ Pengambil air kembali dengan tangan hampa kecewa ketika terjerat rasa dahaga.
+
+<br>Seakan akan pada api nan membara terdapat cairan air karena duka. ۞ Dan pada air nan sejuk segar, api yang membakar.
+
+<br>Para jin menjerit, suara cahaya membumbung ke angkasa. ۞ Kebenaran tampak nyata dari makna maupun kata.
+
+<br>Mereka buta dan tuli tak dengar hingga kabar gembira tiada didengar. ۞ Begitu juga kilatan peringatan sama sekali tak terhiraukan.
+
+<br>Para rahib mereka telah kabarkan berita. ۞ Bahwa agama mereka melenceng, dan tak akan bertahan lama.
+
+<br>Setelah mereka menyaksikan bintang-bintang di ufuk berjatuhan. ۞ Bersamaan di bumi ada kejadian berhala-berhala runtuh bergelimpangan.
+
+<br>Hingga lenyap setan berlari terbirit-birit dari pintu langit jalan wahyu Ilahi. ۞ Mereka lari mengikuti setan nan berlari tak henti.
+
+<br>Mereka berlarian laksana laskar Raja Abrahah. ۞ Atau bak pasukan yang dihujani kerikil oleh tangan Rasul.
+
+Batu yang Nabi lemparkan, setelah bertasbih dalam genggaman. ۞ Bak terlemparnya Nabi Yunus dari perut ikan.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

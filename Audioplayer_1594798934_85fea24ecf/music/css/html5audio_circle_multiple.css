@@ -1,0 +1,391 @@
+body {
+	background:#333;
+}
+
+
+
+
+
+#componentWrapper{
+	position:relative;
+	width:160px;
+	height:160px;
+	float:left;
+	margin-top:50px;
+	margin-right:50px;
+	margin-left:10px;
+}
+	
+#componentWrapper .circlePlayer{
+	width:160px;
+	height:160px;
+	/*background:green;*/
+}
+
+/* DO NOT set the width and heigth of the canvas in css! This is done in the html (<canvas class="play_canvas" width="160" height="160"></canvas>). */	
+#componentWrapper .load_canvas,
+#componentWrapper .play_canvas{
+	position:absolute;
+	display: block;
+}
+
+
+	
+#componentWrapper .player_progress_tooltip{
+	position:absolute;
+	top:-35px;
+	left:45px;
+	width:70px;
+	height:16px;
+	background:#fff;
+	display:none;
+	text-align:center;
+	
+	-moz-box-shadow: 3px 3px 3px #222;
+	-webkit-box-shadow: 3px 3px 3px #222;
+	box-shadow: 3px 3px 3px #222;
+	behavior: url('PIE.htc');
+	
+	-moz-border-circleRadius: 8px;
+	-webkit-border-circleRadius: 8px;
+	border-circleRadius: 8px; /* future proofing */
+	-khtml-border-circleRadius: 8px; /* for old Konqueror browsers */
+}
+	
+#componentWrapper .player_progress_tooltip p {
+	position:relative;
+	top:-1px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#333;
+	margin:0;
+	line-height:18px;
+}
+
+
+
+
+/* playlist holder */	
+#componentWrapper .playlistHolder{
+	position:relative;
+	top:41px;
+	float:left;
+	clear:both;
+	min-width:300px;
+	max-width:600px;
+	background:#222;
+	
+	border: 1px solid #111;
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+	
+	/*-moz-box-shadow: 0px 5px 5px #111;
+	-webkit-box-shadow: 0px 5px 5px #111;
+	box-shadow: 0px 5px 5px #111;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#111111')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#111111');*/
+	
+	display:none;
+	
+}
+
+#componentWrapper .playlist_inner{
+	/*margin:20px 30px 20px 20px;
+	background:blue;*/
+}
+
+
+
+/* playlist items */	
+#componentWrapper .playlistItem{
+	position:relative;
+	top:0px;
+	left:0px;
+	clear:left;
+	display:inline-block;
+	
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	width:100%;
+
+	padding:5px 0px 5px 10px;
+	
+	list-style:none;
+	
+}
+
+#componentWrapper .playlistItem:nth-child(odd){
+	/*background: #333; */
+}
+
+#componentWrapper .playlistItem:last-child {  
+	margin-bottom:0px;
+	padding-bottom:5px;
+}
+
+#componentWrapper .playlistItem a:hover{
+	color:#6699cc;
+}
+
+#componentWrapper .playlistSelected {
+	float:left;
+	color: #6699cc;
+	margin-top:3px;
+}
+
+#componentWrapper .playlistNonSelected {
+	float:left;
+	color: #ffffff;
+	margin-top:3px;
+}
+
+
+/* playlist icons */
+#componentWrapper .dlink {
+	float:right;
+}
+
+#componentWrapper .dlink img{
+	display:block;
+}
+
+#componentWrapper .plink {
+	float:right;
+}
+
+#componentWrapper .plink img{
+	display:block;
+}
+
+#componentWrapper .premove {
+	float:right;
+}
+
+#componentWrapper .premove img{
+	display:block;
+}
+
+/* preloader */
+#componentWrapper .preloader{
+	position:absolute;
+	width:36px;
+	height:30px;
+	top:50%;
+	left:50%;
+	margin-left:-16px;
+	margin-top:-15px;
+	background: #111 url('../media/data/loading.gif') no-repeat center center; 
+}
+
+
+
+
+
+
+
+
+
+
+#componentWrapper2{
+	position:relative;
+	width:160px;
+	height:160px;
+	float:left;
+	margin-top:50px;
+	margin-left:10px;
+}
+	
+#componentWrapper2 .circlePlayer{
+	width:160px;
+	height:160px;
+	/*background:green;*/
+}
+
+
+/* DO NOT set the width and heigth of the canvas in css! This is done in the html (<canvas class="play_canvas" width="160" height="160"></canvas>). */	
+#componentWrapper2 .load_canvas,
+#componentWrapper2 .play_canvas{
+	position:absolute;
+	display: block;
+}
+
+
+	
+#componentWrapper2 .player_progress_tooltip{
+	position:absolute;
+	top:-35px;
+	left:45px;
+	width:70px;
+	height:16px;
+	background:#fff;
+	display:none;
+	text-align:center;
+	
+	-moz-box-shadow: 3px 3px 3px #222;
+	-webkit-box-shadow: 3px 3px 3px #222;
+	box-shadow: 3px 3px 3px #222;
+	behavior: url('PIE.htc');
+	
+	-moz-border-circleRadius: 8px;
+	-webkit-border-circleRadius: 8px;
+	border-circleRadius: 8px; /* future proofing */
+	-khtml-border-circleRadius: 8px; /* for old Konqueror browsers */
+}
+	
+#componentWrapper2 .player_progress_tooltip p {
+	position:relative;
+	top:-1px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#333;
+	margin:0;
+	line-height:18px;
+}
+
+
+
+
+/* playlist holder */	
+#componentWrapper2 .playlistHolder{
+	position:relative;
+	top:41px;
+	float:left;
+	clear:both;
+	min-width:300px;
+	max-width:600px;
+	background:#222;
+	
+	border: 1px solid #111;
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+	
+	/*-moz-box-shadow: 0px 5px 5px #111;
+	-webkit-box-shadow: 0px 5px 5px #111;
+	box-shadow: 0px 5px 5px #111;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#111111')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#111111');*/
+	
+	display:none;
+	
+}
+
+#componentWrapper2 .playlist_inner{
+	/*margin:20px 30px 20px 20px;
+	background:blue;*/
+}
+
+
+
+/* playlist items */	
+#componentWrapper2 .playlistItem{
+	position:relative;
+	top:0px;
+	left:0px;
+	clear:left;
+	display:inline-block;
+	
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	width:100%;
+
+	padding:5px 0px 5px 10px;
+	
+	list-style:none;
+	
+	/*cursor:move;*/
+	
+}
+
+#componentWrapper2 .playlistItem:nth-child(odd){
+	/*background: #333; */
+}
+
+#componentWrapper2 .playlistItem:last-child {  
+	margin-bottom:0px;
+	padding-bottom:5px;
+}
+
+#componentWrapper2 .playlistItem a:hover{
+	color:#6699cc;
+}
+
+#componentWrapper2 .playlistSelected {
+	float:left;
+	color: #6699cc;
+	margin-top:3px;
+}
+
+#componentWrapper2 .playlistNonSelected {
+	float:left;
+	color: #ffffff;
+	margin-top:3px;
+}
+
+
+/* playlist icons */
+#componentWrapper2 .dlink {
+	float:right;
+}
+
+#componentWrapper2 .dlink img{
+	display:block;
+}
+
+#componentWrapper2 .plink {
+	float:right;
+}
+
+#componentWrapper2 .plink img{
+	display:block;
+}
+
+#componentWrapper2 .premove {
+	float:right;
+}
+
+#componentWrapper2 .premove img{
+	display:block;
+}
+
+/* preloader */
+#componentWrapper2 .preloader{
+	position:absolute;
+	width:36px;
+	height:30px;
+	top:50%;
+	left:50%;
+	margin-left:-16px;
+	margin-top:-15px;
+	background: #111 url('../media/data/loading.gif') no-repeat center center; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		 
+		 
+		 
+		 
+		 
+		  

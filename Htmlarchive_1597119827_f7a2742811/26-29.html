@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>TAFSIR SURAH YASIN AYAT 26 - 29</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+
+<p class="arab">{قِيلَ ادْخُلِ الْجَنَّةَ قَالَ يَا لَيْتَ قَوْمِي يَعْلَمُونَ (26) بِمَا غَفَرَ لِي رَبِّي وَجَعَلَنِي مِنَ الْمُكْرَمِينَ (27) وَمَا أَنزلْنَا عَلَى قَوْمِهِ مِنْ بَعْدِهِ مِنْ جُنْدٍ مِنَ السَّمَاءِ وَمَا كُنَّا مُنزلِينَ (28) إِنْ كَانَتْ إِلا صَيْحَةً وَاحِدَةً فَإِذَا هُمْ خَامِدُونَ (29) }</p>
+<p><em>Dikatakan </em>(kepadanya), <em>"Masuklah ke surga.&rdquo; Ia berkata, "Alangkah baiknya sekiranya kaumku mengetahui apa yang menyebabkan Tuhanku memberi ampun kepadaku dan menjadikan aku termasuk orang-orang yang dimuliakan.&rdquo; Dan Kami tidak menurunkan kepada kaumnya sesudah dia </em>(meninggal) <em>suatu pasukan pun dari langit dan tidak layak Kami menurunkannya. Tidak ada siksaan atas mereka melainkan satu teriakan saja; maka tiba-tiba mereka semuanya mati.</em></p>
+<p>Muhammad ibnu Ishaq telah meriwayatkan dari salah seorang temannya, dari Ibnu Mas'ud r.a. yang mengatakan bahwa kaum lelaki itu menginjak-injaknya dengan kaki mereka hingga isi perutnya keluar dari liang anusnya. Lalu Allah Swt. berfirman kepada laki-laki itu: <em>Masuklah ke surga. </em>(Yasin: 26) Maka laki-laki itu masuk ke dalam surga dan diberi rezeki di dalamnya, dan Allah telah melenyapkan darinya penderitaan dunia, kesedihan, dan kelelahannya.</p>
+<p>Mujahid mengatakan bahwa dikatakan kepada Habib (laki-laki itu), "Masuklah ke surga." Dikatakan demikian karena dia gugur dalam membela agama Allah, maka sudah merupakan keharusan baginya masuk surga. Setelah ia melihat pahala yang diterimanya, <em>Ia berkata, "Alangkah baiknya sekiranya kaumku mengetahui. </em>(Yasin: 26)</p>
+<p>Qatadah mengatakan bahwa tidaklah engkau menjumpai orang yang benar-benar mukmin, melainkan dia adalah seorang yang mengharapkan kebaikan bagimu, dan tidaklah engkau jumpai dia sebagai seorang penipu.</p>
+<p>Setelah lelaki itu menyaksikan penghormatan yang diberikan oleh Allah kepadanya, maka berkatalah ia, seperti yang disitir oleh firman-Nya:</p>
+<p class="arab">{قَالَ يَا لَيْتَ قَوْمِي يَعْلَمُونَ بِمَا غَفَرَ لِي رَبِّي وَجَعَلَنِي مِنَ الْمُكْرَمِينَ}</p>
+<p><em>"Alangkah baiknya sekiranya kaumku mengetahui apa yang menyebabkan Tuhanku memberi ampun kepadaku dan menjadi&shy;kan aku termasuk orang-orang yang dimuliakan.&rdquo; </em>(Yasin: 26-&shy;27)</p>
+<p>Demi Allah, dia mengharapkan andai kata saja kaumnya mengetahui kemuliaan yang diberikan oleh Allah kepadanya dan akibat terpuji yang diperolehnya.</p>
+<p>Ibnu Abbas mengatakan bahwa Habib menasihati kaumnya saat ia masih hidup: <em>Hai kaumku, ikutilah utusan-utusan itu. </em>(Yasin: 20) Juga sesudah matinya, seperti yang diceritakan oleh firman-Nya: <em>Alangkah baiknya sekiranya kaumku mengetahui apa yang menyebabkan Tuhanku memberi ampun kepadaku dan menjadi&shy;kan aku termasuk orang-orang yang dimuliakan. </em>(Yasin- 26&shy;27)</p>
+<p>Demikianlah menurut apa yang telah diriwayatkan oleh Ibnu Abu Hatim.</p>
+<p>Sufyan As-Sauri telah meriwayatkan dari Asim Al-Ahwal, dari Abu Mujlaz sehubungan dengan makna firman-Nya: <em>apa yang menyebabkan Tuhanku memberi ampun kepadaku dan menjadikan aku termasuk orang-orang yang dimuliakan </em>(Yasin: 27) Yakni berkat keimananku kepada Tuhanku dan kepercayaanku kepada para utusan.</p>
+<p>Maksudnya, seandainya kaumnya dapat menyaksikan pahala dan balasan serta kenikmatan abadi yang diterimanya, tentulah hal tersebut akan mendorong mereka untuk mengikuti para rasul. Semoga Allah Swt. melimpahkan rahmat-Nya kepadanya; dia sangat menginginkan agar kaumnya mendapat hidayah.</p>
+<p class="arab">قَالَ ابْنُ أَبِي حَاتِمٍ: حَدَّثَنَا أَبِي، حَدَّثَنَا هِشَامُ بْنُ عُبَيْدِ اللَّهِ، حَدَّثَنَا ابْنُ جَابِرٍ -وَهُوَ مُحَمَّدٌ-عَنْ عَبْدِ الْمَلِكِ -يَعْنِي: ابْنَ عُمَيْرٍ-قَالَ: قَالَ عُرْوَةُ بْنُ مَسْعُودٍ الثَّقَفِيُّ لِلنَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: ابْعَثْنِي إِلَى قومي أدعوهم إِلَى الْإِسْلَامِ. فَقَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: "إِنِّي أَخَافُ أَنْ يَقْتُلُوكَ". فَقَالَ: لَوْ وَجَدُونِي نَائِمًا مَا أَيْقَظُونِي. فَقَالَ لَهُ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وسلم: "انطلق". فَانْطَلَقَ فَمَرَّ عَلَى اللَّاتِ وَالْعُزَّى، فَقَالَ: لأصبحَنَّك غَدًا بِمَا يَسُوءُكِ. فَغَضِبَتْ ثَقِيفٌ، فَقَالَ: يَا مَعْشَرَ ثَقِيفٍ، إِنَّ اللَّاتَ لَا لَاتَ، وَإِنَّ العُزى لَا عُزى، أَسْلِمُوا تَسْلَمُوا. يَا مَعْشَرَ الْأَحْلَافِ، إِنَّ الْعُزَّى لَا عُزَّى، وَإِنَّ اللَّاتَ لَا لَاتَ، أَسْلِمُوا تَسْلَمُوا. قَالَ ذَلِكَ ثَلَاثَ مَرَّاتٍ، فَرَمَاهُ رَجُلٌ فَأَصَابَ أكْحَله فَقَتَلَهُ، فَبَلَغَ رسولَ الله صلى الله عليه وسلم فقال: "هَذَا مَثَلُهُ كَمَثَلِ صَاحِبِ يس، {قَالَ يَا لَيْتَ قَوْمِي يَعْلَمُونَ * بِمَا غَفَرَ لِي رَبِّي وَجَعَلَنِي مِنَ الْمُكْرَمِينَ}</p>
+<p>Ibnu Abu Hatim mengatakan, telah menceritakan kepada kami ayahku, telah menceritakan kepada kami Hisyam ibnu Ubaidillah, telah menceritakan kepada kami Ibnu Jabir alias Muhammad, dari Abdul Malik ibnu Umair yang mengatakan bahwa Urwah ibnu Mas'ud As-Saqafi r.a. pernah berkata kepada Nabi Saw., "Utuslah aku kepada kaumku, aku akan menyeru mereka untuk memeluk Islam." Maka Rasulullah Saw. bersabda, <em>"Sesungguhnya aku merasa khawatir bila mereka nanti akan membunuhmu</em>." Urwah berkata, "Seandainya mereka menjumpaiku sedang tidur, mereka tidak berani membangunkanku." Akhirnya Rasulullah Saw. bersabda, <em>"Pergilah kamu</em>." Maka Urwah berangkat menuju tempat berhala Lata dan 'Uzza, lalu ia berkata, "Sungguh aku benar-benar akan melakukan suatu hal yang akan membuatmu celaka besok pagi." Maka orang-orang Saqif marah, dan Urwah berkata, "Hai orang-orang Saqif, sesungguhnya tiada ketinggian lagi bagi Lata dan tiada kejayaan lagi bagi 'Uzza. Maka masuk Islamlah kalian, niscaya kalian selamat. Hai orang-orang yang tergabung di dalam persekutuan, sesungguhnya tiada kejayaan lagi bagi 'Uzza dan tiada ketinggian lagi bagi Lata. Masuk Islamlah kalian, niscaya kalian selamat." Urwah mengucapkan kalimat tersebut sebanyak tiga kali dengan suara yang lantang, lalu ada seorang lelaki dari kaum yang membidikkan anak panahnya ke arah dia dan mengenai anggota tubuh yang mematikan. Akhirnya Urwah gugur. Ketika peristiwa tersebut sampai beritanya kepada Rasulullah Saw., maka beliau bersabda: <em>Orang ini senasib dengan apa yang dialami oleh lelaki yang disebutkan di dalam surat Yasin. Ia berkata, "Alangkah baiknya sekiranya kaumku mengetahui apa yang menyebabkan Tuhanku memberi ampun kepadaku dan menjadikan aku termasuk orang-orang yang dimuliakan.&rdquo; </em>(Yasin: 26-27)</p>
+<p>Muhammad ibnu Ishaq telah meriwayatkan dari Abdullah ibnu Abdur Rahman ibnu Ma'mar ibnu Hazm. Ia pernah menceritakan dari Ka'bul Ahbar yang telah menceritakan kepadanya tentang kisah Habib ibnu Zaid ibnu Asim saudara lelaki Bani Mazin ibnun Najjar yang dipotong-potong tubuhnya oleh Musailamah Al-Kazzab di Yamamah, ketika Musailamah menanyakan kepadanya tentang Rasulullah Saw. Disebutkan bahwa Musailamah bertanya kepadanya, "Apakah engkau membenarkan bahwa Muhammad adalah utusan Allah?" Habib menjawab, "Ya." Kemudian Musailamah berkata, "Apakah kamu percaya bahwa aku adalah utusan Allah?" Habib menjawab, "Saya tidak dapat mendengar suaramu." Musailamah <em>laknatullah </em>berkata, "Apakah kamu mendengar dia, sedangkan kamu tidak mendengarku?" Habib menjawab, "Ya." Maka Musailamah menyiksanya dengan memotong tubuhnya satu demi satu. Setiap kali Musailamah menanyainya, jawabannya sama dengan yang pertama, hingga akhirnya si Habib mati di tangannya. Lalu Ka'b berkata saat ditanya nama lelaki itu, bahwa nama lelaki itu adalah Habib, dan demi Allah, nama lelaki yang disebutkan di dalam surat Yasin pun adalah Habib.</p>
+<p>********</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{وَمَا أَنزلْنَا عَلَى قَوْمِهِ مِنْ بَعْدِهِ مِنْ جُنْدٍ مِنَ السَّمَاءِ وَمَا كُنَّا مُنزلِينَ}</p>
+<p><em>Dan Kami tidak menurunkan kepada kaumnya sesudah dia </em>(meninggal) <em>suatu pasukan pun dari langit dan tidak layak Kami menurunkannya. </em>(Yasin: 28)</p>
+<p>Allah Swt. menceritakan bahwa Dia membalas perbuatan kaum laki-laki itu &mdash;sesudah ia dibunuh mereka&mdash; karena murka kepada mereka, sebab mereka telah mendustakan rasul-rasul-Nya dan membunuh kekasih-Nya. Lalu Allah Swt. menyebutkan bahwa Dia tidak menurunkan pasukan malaikat apa pun untuk membinasakan mereka, Dia tidak memerlukannya untuk membinasakan mereka, bahkan untuk menanganinya amatlah mudah bagi-Nya.</p>
+<p>Ibnu Mas'ud r.a. -menurut apa yang diriwayatkan oleh Ibnu Ishaq dari sebagian teman-temannya- telah mengatakan sehubungan dengan makna firman-Nya: <em>Dan Kami tidak menurunkan kepada kaumnya sesudah dia </em>(meninggal) <em>suatu pasukan pun dari langit dan tidak layak Kami menurunkannya. </em>(Yasin: 28) Artinya Kami tidak perlu menurunkan balatentara untuk membinasakan mereka karena untuk membinasakan mereka itu teramat mudah bagi Kami. <em>Tidak ada siksaan atas mereka melainkan satu teriakan saja; maka dengan serta merta mereka semuanya mati. </em>(Yasin: 29) Ibnu Mas'ud mengatakan, bahwa maka Allah Swt. membinasakan rajanya dan membinasakan penduduk Intakiyah. Mereka dimusnahkan dan muka bumi tanpa ada seorang pun yang selamat.</p>
+<p>Menurut pendapat lain, sehubungan dengan makna firman Allah Swt.: <em>dan tidak layak Kami menurunkannya. </em>(Yasin: 28) Yakni tidak sekali-kali Kami menurunkan para malaikat bila Kami hendak membinasakan mereka, melainkan Kami hanya menimpakan atas mereka suatu azab yang membinasakan mereka.</p>
+<p>Menurut pendapat yang lainnya lagi sehubungan dengan makna firman-Nya: <em>Dan Kami tidak menurunkan kepada kaumnya sesudah dia </em>(meninggal) <em>suatu pasukan pun dari langit. </em>(Yasin: 28) Yaitu risalah lain kepada mereka, menurut Mujahid dan Qatadah.</p>
+<p>Qatadah mengatakan bahwa demi Allah, Allah tidak menegur kaumnya sesudah mereka membunuhnya, <em>Tidak ada siksaan atas mereka melainkan satu teriakan saja; maka dengan serta merta mereka semuanya mati. </em>(Yasin: 29)</p>
+<p>Ibnu Jarir mengatakan bahwa yang paling sahih adalah pendapat yang pertama, karena risalah (perutusan) tidak dinamakan <em>jundun </em>(pasukan)!</p>
+<p>Ulama tafsir mengatakan bahwa Allah Swt. mengirimkan Malaikat Jibril a.s. kepada mereka. Jibril memegang kedua sisi pintu gerbang negeri mereka, kemudian ia melakukan suatu teriakan yang mengguntur terhadap mereka. Maka dengan serta merta mereka semuanya mati, tanpa ada seorang pun yang selamat saat itu juga tanpa meregang nyawa lagi.</p>
+<p>Dalam keterangan yang lalu telah disebutkan dari kebanyakan ulama Salaf bahwa negeri tersebut adalah Intakiyah, dan ketiga orang itu adalah orang-orang yang diutus oleh Al-Masih Isa ibnu Maryam a.s., seperti yang telah dinaskan oleh Qatadah dan lain-lainnya. Tetapi pendapat Qatadah ini tidak ada seorang pun dari kalangan ulama tafsir yang mutaakhkhirin mengemukakannya selain Qatadah sendiri. Mengenai keabsahannya masih diragukan ditinjau dari berbagai alasan berikut:</p>
+<p><em>Pertama, </em>pengertian lahiriah kisah menunjukkan bahwa mereka bertiga adalah utusan-utusan Allah Swt., bukan utusan Al-Masih a.s. Seperti yang dimengerti dari firman-Nya:</p>
+<p class="arab">{إِذْ أَرْسَلْنَا إِلَيْهِمُ اثْنَيْنِ فَكَذَّبُوهُمَا فَعَزَّزْنَا بِثَالِثٍ فَقَالُوا إِنَّا إِلَيْكُمْ مُرْسَلُونَ} إِلَى أَنْ قَالُوا: {رَبُّنَا يَعْلَمُ إِنَّا إِلَيْكُمْ لَمُرْسَلُونَ * وَمَا عَلَيْنَا إِلا الْبَلاغُ الْمُبِينُ}</p>
+<p>&nbsp;(yaitu) <em>ketika Kami mengutus kepada mereka dua orang utusan, lalu mereka mendustakan keduanya; kemudian Kami kuatkan dengan </em>(utusan) <em>yang ketiga, maka ketiga utusan itu berkata, "Sesungguhnya kami adalah orang-orang yang diutus kepadamu.&rdquo; </em>(Yasin: 14) sampai dengan firman-Nya: <em>Mereka berkata, "Tuhan kami mengetahui bahwa sesungguhnya kami adalah orang yang diutus kepada kamu. Dan kewajiban kami tidak lain hanyalah menyampaikan </em>(perintah Allah) <em>dengan jelas.&rdquo;</em> (Yasin: 16-17)</p>
+<p>Sekiranya mereka termasuk kaum Hawari (penolong Isa a.s.), tentulah mereka mengatakan kalimat yang sesuai dengan kedudukan mereka, bahwa mereka adalah utusan Isa a.s.; hanya Allah-lah Yang Maha Mengetahui. Kemudian seandainya mereka adalah utusan dari Al-Masih a.s., niscaya kaum negeri itu tidak mengatakan kepada mereka: <em>Kamu tidak lain hanyalah manusia seperti kami. </em>(Yasin: 15)</p>
+<p><em>Kedua, </em>bahwa penduduk Intakiyah telah beriman kepada utusan Al-Masih yang dikirimnya kepada mereka, dan mereka adalah penduduk suatu negeri yang pertama beriman kepada Al-Masih; karena itulah maka Intakiyah merupakan salah satu dari keempat kota yang di dalamnya terdapat para patrik. Yaitu kota Al-Quds yang merupakan negeri Al-Masih sendiri; kota Intakiyah, karena ia merupakan suatu kota yang pertama penduduknya beriman kepada Al-Masih seluruhnya. Kemudian kota Iskandaria, karena ia merupakan suatu kota yang para penduduknya mencetuskan suatu gagasan untuk mengangkat patrik, matarun, uskup, pendeta, rahib, dan syamamis. Yang terakhir adalah kota Roma yang merupakan ibu kota kerajaan Konstantinopel yang rajanya selalu menolong dan membantu agama Al-Masih. Setelah dia membangun kota Konstantinopel, maka ia memindahkan kepatrikan dari Roma ke Konstantinopel. Demikianlah menurut apa yang disebutkan oleh ahli sejarah yang bukan hanya seorang, seperti Sa'id ibnu Butriq dan lain&shy; lainnya dari kalangan Ahli Kitab maupun dari kalangan kaum muslim. Apabila telah terbukti bahwa Intakiyah adalah kota yang mula-mula seluruh penduduknya beriman, berarti kota yang dibinasakan oleh Allah karena penduduknya mendustakan rasul-rasul-Nya dengan satu teriakan hanya Allah-lah Yang Mengetahuinya.</p>
+<p><em>Ketiga, </em>bahwa kisah penduduk Intakiyah dengan kaum Hawari (penolong Isa Al-Masih) terjadi sesudah kitab Taurat diturunkan. Abu Sa'id Al-Khudri r.a. dan ulama Salaf lainnya yang bukan hanya seorang mengatakan bahwa sesudah Allah menurunkan Kitab Taurat, maka Dia tidak lagi membinasakan suatu umat pun sampai tertumpas semuanya dengan azab yang Dia timpakan kepada mereka, melainkan Dia memerintahkan kepada orang-orang yang beriman sesudah itu untuk memerangi kaum musyrik. Mereka mengatakan hal ini dalam kaitan tafsiran mereka terhadap firman-Nya:</p>
+<p class="arab">{وَلَقَدْ آتَيْنَا مُوسَى الْكِتَابَ مِنْ بَعْدِ مَا أَهْلَكْنَا الْقُرُونَ الأولَى}</p>
+<p><em>Dan sesungguhnya telah Kami berikan kepada Musa Al-Kitab </em>(Taurat) <em>sesudah Kami binasakan generasi-generasi terdahulu. </em>(Al-Qassas: 43)</p>
+<p>Berdasarkan keterangan di atas dapat ditentukan bahwa kota yang disebutkan di dalam surat Yasin bukanlah kota Intakiyah, melainkan kota lain, sebagaimana yang telah dikatakan oleh bukan hanya seorang dari kalangan ulama Salaf.</p>
+<p>Atau nama kota tersebut memang Intakiyah, tetapi bukan kota Intakiyah yang terkenal itu, melainkan kota lainnya. Karena sesungguhnya kota Intakiyah yang terkenal itu belum pernah ada yang mengetahui bahwa ia pernah dibinasakan, baik di masa agama Nasrani maupun di masa sebelumnya; hanya Allah-lah Yang Maha Mengetahui.</p>
+<p>Adapun hadis yang diriwayatkan oleh Al-Hafiz Abul Qasim At-Tabrani yaitu:</p>
+<p class="arab">حَدَّثَنَا الْحُسَيْنُ بْنُ إِسْحَاقَ التُّسْتري، حدثنا الْحُسَيْنُ بْنُ أَبِي السَّرِيِّ الْعَسْقَلَانِيُّ، حَدَّثَنَا حُسَين الْأَشْقَرُ، حَدَّثَنَا ابْنِ عُيَيْنة، عَنِ ابْنِ أَبِي نَجِيح، عَنْ مُجَاهِدٍ، عَنِ ابْنِ عَبَّاسٍ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ قَالَ: "السُّبَّق ثَلَاثَةٌ: فَالسَّابِقُ إِلَى مُوسَى يُوشَعُ بْنُ نُونٍ، وَالسَّابِقُ إِلَى عِيسَى صَاحِبُ يس، وَالسَّابِقُ إِلَى مُحَمَّدٍ عَلِيُّ بْنُ أَبِي طَالِبٍ"،</p>
+<p>Telah menceritakan kepada kami Al-Husain ibnu Ishaq At-Tusturi, telah menceritakan kepada kami Al-Husain ibnu Abus Sirri Al-Asqalani, telah menceritakan kepada kami Husain Al-Asyqar, telah menceritakan kepada kami Ibnu Uyaynah, dari Ibnu Abu Najih, dari Mujahid, dari Ibnu Abbas r.a.. dari Nabi Saw. yang telah bersabda: <em>Orang yang paling terdahulu itu ada tiga orang, orang yang paling terdahulu </em>(beriman) <em>kepada Musa a.s. adalah Yusya ibnu Nun, dan orang yang paling terdahulu kepada Isa a.s adalah lelaki yang disebutkan dalam surat Yasin</em> <em>dan orang yang paling dahulu kepada Muhammad Saw. adalah Ali ibnu Abu Talib r.a.</em></p>
+<p>Maka sesungguhnya hadis ini <em>munkar </em>kecuali melalui jalur Husain Al-Asyqar, sedangkan dia adala seorang syi'ah yang tak terpakai hadisnya, hanya Allah-lah Yang Maha Mengetahui tentang kebenaran.</p>
+
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Jeddah bukan miqot bagi jamaah haji/umroh Indonesia</h1>
+
+
+
+<p style="text-align: right;" class="arab"></p>
+<p>Pembahasan &ldquo;Bandara Jeddah miqot atau bukan?&rdquo; termasuk pembahasan yang sangat urgen bagi jamaah haji/umroh Indonesia, karena jika ternyata Jeddah bukanlah miqot bagi mereka maka berihrom di Jeddah adalah suatu bentuk pelanggaran (yaitu meninggalkan kewajiban berihrom dari miqot). Meskipun haji/umroh mereka tetap sah, akan tetapi mereka harus membayar dam karena meninggalkan kewajiban.</p>
+<p>Kalau kita perhatikan, Nabi shallallāhu &lsquo;alayhi wa sallam mengatakan:</p>
+<p style="text-align: right;" class="arab">هُنَّ لَهُنَّ وَلِمَنْ أَتَى عَلَيْهِنَّ مِنْ غَيْرِهِنَّ ، مِمَّنْ أَرَادَ الْحَجَّ وَالْعُمْرَةَ</p>
+<p>&ldquo;<em>Tempat-tempat miqot tersebut adalah bagi penduduk-penduduk negeri tersebut dan demikian pula bagi orang-orang yang melewati miqat-miqat tersebut dari selain penghuni negeri-negeri tersebut bagi orang yang hendak melaksanakan haji dan umrah</em>&rdquo;</p>
+<p>Sabda Nabi ini menunjukkan bahwasanya miqat-miqat ini meliputi seluruh sisi-sisi Mekkah baik arah utara, timur, selatan maupun barat. Sehingga Nabi menyatakan &ldquo;<em>dan demikian pula bagi orang-orang yang melewati miqat-miqat tersebut dari selain penghuni negeri-negeri tersebut</em>&rdquo;.</p>
+<p>Maka siapaun yang masuk ke Mekah pasti melewati salah satu dari miqot-miqot tersebut atau yang sejajar dengannya.</p>
+<ul>
+<li>Jika melewati arah utara, mereka pasti bertemu/sejajar dengan Madīnah.</li>
+<li>Jika melewati timur Mekkah pasti mereka akan bertemu/sejajar dengan Qarn Al-Manazil</li>
+<li>Jika melewati selatan kota Mekkah maka akan bertemu/sejajar dengan Yalamlam</li>
+<li>Jika lewat barat laut mereka akan sejajar dengan al-Juhfah</li>
+<li>Jika lewat barat daya mereka akan sejajar dengan Yalamlam</li>
+</ul>
+<p>Kecuali yang datang&nbsp;<strong>persis</strong>&nbsp;dari&nbsp;<strong>arah barat</strong>&nbsp;-baik melalui lautan atau udara- masuk ke arah Jeddah, maka disini ada perselisihan diantara para ulama, apakah orang tersebut memungkinkannya untuk bisa melakukan muhaadzaat (sejajar dengan miqot yang terdekat) atau tidak mungkin?. Ada dua pendapat di kalangan para ulama :</p>
+<p><strong>Pertama</strong>&nbsp;: Sebagian ulama memandang bahwa orang tersebut tidak mungkin untuk melakukan&nbsp;<em>muhaadzaat</em>. Ini pendapat Ibnu Hajar al-Haitami.</p>
+<p>al-Imam An-Nawawi rahimahullah berkata :</p>
+<p style="text-align: right;" class="arab">وَإِنْ لَمْ يُحَاذِ أَحْرَمَ عَلَى مَرْحَلَتَيْنِ مِنْ مَكَّةَ</p>
+<p>&ldquo;Jika ia tidak mensejajari (miqot manapun-pen) maka ia berihrom dari jarak 2 marhalah dari Mekah&rdquo; (Minhaaj At-Thoolibiin hal 84).</p>
+<p>Ibnu Hajar Al-Haitami mengomentari perkataan An-Nawawi ini dengan berkata :</p>
+<p style="text-align: right;" class="arab">لِأَنَّهُ لَا مِيقَاتَ دُونَهُمَا &hellip; أَنَّ الْإِحْرَامَ مِنْ الْمَرْحَلَتَيْنِ هُنَا بَدَلٌ عَنْ أَقْرَبِ مِيقَاتٍ إلَى مَكَّةَ وَأَقْرَبُ مِيقَاتٍ إلَيْهَا عَلَى مَرْحَلَتَيْنِ مِنْهَا</p>
+<p>&ldquo;Karena tidak ada miqot yang jaraknya lebih dekat dari 2 marhalah&hellip;sesungguhnya ihrom dari jarak 2 marhalah di sini sebagai pengganti dari miqot terdekat ke Mekah, dan jarak miqot terdekat ke Mekah adalah 2 marhalah (yaitu Qorn al-Mnaazil -pen)&rdquo;(Tuhfatul Muhtaaj 4/42)</p>
+<p>Sehingga Ibnu Hajar al-Haitami berkesimpulan bahwa Jeddah adalah miqot bagi orang-orang yang datang dari Suakin melalui lautan, karena mereka telah sampai ke Jeddah sebelum muhadzaat (sejajar) dengan Robigh atau Yalamlam. Beliau berkata :</p>
+<p style="text-align: right;" class="arab">يُتَصَوَّرُ بِالْجَائِي مِنْ سَوَاكِن إلَى جِدَّةَ مِنْ غَيْرِ أَنْ يَمُرَّ بِرَابِغٍ وَلَا بِيَلَمْلَمَ؛ لِأَنَّهُمَا حِينَئِذٍ أَمَامَهُ فَيَصِلُ جِدَّةَ قَبْلَ مُحَاذَاتِهِمَا، وَهِيَ عَلَى مَرْحَلَتَيْنِ مِنْ مَكَّةَ فَتَكُونُ هِيَ مِيقَاتَهُ</p>
+<p>&ldquo;Bisa dibayangkan seseorang yang datang dari Suakin (suatu kota pelabuhan di Sudan) menuju Jeddah tanpa melewati Rabigh (al-Juhfah) dan Yalamlam, karena keduanya di hadapannya. Maka ia sampai di Jedah sebelum sejajar dengan keduanya (Rabigh dan Yalamlam), dan jarak Jedak ke Mekah adalah 2 marhalah, maka Jeddah menjadi miqot baginya&rdquo; (Tuhfatul Muhtaaj 4/42)</p>
+<p>Pendapat Ibnu Hajar al-Haitami ini juga persis yang dipilih oleh Al-Buhuti dari madzhab Hanbali (lihat Daqooiq Ulin Nuhaa li syarh Muntahaa al-Irodaat 1/525).</p>
+<p><strong>Kedua</strong>&nbsp;: Namun sebagian ulama -seperti Ibnu &lsquo;Abidin al-Hanafi- memandang bahwa kondisi seseorang untuk tidak mensejajari satu miqotpun tidaklah mungkin, hal ini dikarenakan miqot-miqot yang telah ditentukan oleh Nabi shallallahu &lsquo;alaihi wasallam meliputi seluruh arah ke Mekah, jadi barang siapa yang hendak ke Mekah pasti melewati miqot-miqot tersebut atau sejajar dengan miqot-miqot tersebut.&nbsp;<strong>Menurut beliau seseorang boleh berihrom dari jarak 2 marhalah dari Mekah jika ia tidak tahu apakah dia telah mensejajari salah satu miqot atau tidak, meskipun pada hakikatnya dia pasti mesejajari salah satu miqot</strong>.</p>
+<p>Beliau berkata :</p>
+<p style="text-align: right;" class="arab">(قَوْلُهُ فَإِنْ لَمْ يَكُنْ إلَخْ) كَذَا فِي الْفَتْحِ لَكِنَّ الْأَصْوَبَ قَوْلُ اللُّبَابِ، فَإِنْ لَمْ يَعْلَمْ الْمُحَاذَاةَ لِمَا قَالَ شَارِحُهُ أَنَّهُ لَا يُتَصَوَّرُ عَدَمُ الْمُحَاذَاةِ اهـ أَيْ لِأَنَّ الْمَوَاقِيتَ تَعُمُّ جِهَاتِ مَكَّةَ كُلِّهَا فَلَا بُدَّ مِنْ مُحَاذَاةِ أَحَدِهَا (قَوْلُهُ فَعَلَى مَرْحَلَتَيْنِ)</p>
+<p>&ldquo;Perkataannya&nbsp;<em>Jika ia tidak bersejajar dengan miqot</em>) -demikiannya ibarat yang terdapat dalam kitab al-Fath-, akan tetapi yang lebih benar adalah perkataan al-Lubaab : (<em>Jika ia&nbsp;</em><strong><em>tidak mengetahui</em></strong><em>&nbsp;sejajar dengan miqot</em>) karena pensyarah buku tersebut berkata, (<em>Tidaklah mungkin tergambarkan tidak adanya kesejajaran dengan miqot</em>). Yaitu karena miqot-miqot meliputi seluruh sisi Mekah, maka pasti adanya kesejajaran dengan salah satu dari miqot-miqot tersebut&rdquo; (Rodd Al-Muhtaar &lsquo;ala ad-Dur al-Mukhtaar 2/476)</p>
+<p>Pendapat ini juga yang dipilih oleh Ibnu Hajar al-&lsquo;Asqolaani (menyelisihi para ulama syafi&rsquo;iyyah padahal beliau bermadzhab syafi&rsquo;i). Beliau berkata :</p>
+<p style="text-align: right;" class="arab">وَاسْتُدِلَّ بِهِ عَلَى أَنَّ مَنْ لَيْسَ لَهُ مِيقَاتٌ أَنَّ عَلَيْهِ أَنْ يُحْرِمَ إِذَا حَاذَى مِيقَاتًا مِنْ هَذِهِ الْمَوَاقِيتِ الْخَمْسَةِ وَلَا شَكَّ أَنَّهَا مُحِيطَةٌ بِالْحَرَمِ فَذُو الْحُلَيْفَةِ شَامِيَّةٌ وَيَلَمْلَمُ يَمَانِيَةٌ فَهِيَ مُقَابِلُهَا وَإِنْ كَانَتْ إِحْدَاهُمَا أَقْرَبَ إِلَى مَكَّةَ مِنَ الْأُخْرَى وَقَرْنٌ شَرْقِيَّةٌ وَالْجُحْفَةُ غَرْبِيَّةٌ فَهِيَ مُقَابِلُهَا وَإِنْ كَانَتْ إِحْدَاهُمَا كَذَلِكَ وَذَاتُ عِرْقٍ تُحَاذِي قَرْنًا فَعَلَى هَذَا فَلَا تَخْلُو بُقْعَةٌ مِنْ بِقَاعِ الْأَرْضِ مِنْ أَنْ تُحَاذِيَ مِيقَاتًا مِنْ هَذِهِ الْمَوَاقِيتِ فَبَطَلَ قَوْلُ مَنْ قَالَ مَنْ لَيْسَ لَهُ مِيقَاتٌ وَلَا يُحَاذِي مِيقَاتًا هَلْ يُحْرِمُ مِنْ مِقْدَارٍ أَبْعَدَ مِنَ الْمَوَاقِيتِ أَوْ أَقْرَبَهَا</p>
+<p>(Fathul Baari 3/390)</p>
+<p>Beliau juga mengkritiki penentuan jarak 2 marhalah bagi yang tidak sejajar dengan miqot (lihat Fathul Baari 3/390-391)</p>
+<p>Adapun ulama Malikiyah maka dengan tegas mereka menyatakan bahwa Jeedah bukanlah miqot. Asy-Syaikh Ad-Dirdir berkata</p>
+<p style="text-align: right;" class="arab">(وَلَوْ) كَانَ الْمُحَاذِي (بِبَحْرٍ) كَالْمُسَافِرِ مِنْ جِهَةِ مِصْرَ بِبَحْرِ السُّوَيْسِ؛ فَإِنَّهُ يُحَاذِي الْجُحْفَةَ قَبْلَ وُصُولِهِ جُدَّةَ فَيُحْرِمُ فِي الْبَحْرِ حِينَ الْمُحَاذَاةِ</p>
+<p>&ldquo;Meksipun jamaah (haji/umroh) yang bersejajar (dengan miqot) berada di lautan. Seperti orang yang safar dari arah Mesir melalui laut As-Suwais, maka ia akan bersejajar dengan al-Juhfah sebelum sampai ke Jeddah, maka ia berihroh di laut tatkala sejajar (dengan al-Juhfah)&rdquo; (Haasyiat As-Showi &lsquo;ala Asy-Syarh As-Shogiir 2/23)</p>
+<p>Perselisihan di atas mengakar pada dua perkara :</p>
+<ul>
+<li>Apakah mungkin seseorang masuk ke Mekah tanpa bersejajar dengan salah satu miqot yang telah ditentukan Nabi?</li>
+<li>Apakah yang dimaksud dengan &ldquo;<em>muhaadzaat</em>&rdquo;?. Jika yang dimaksud dengan&nbsp;<em>muhaadzaat</em>&nbsp;(sejajar) adalah seseorang berada diantara garis lurus antara dua miqot. Ataukah yang dimaksud dengan muhaadzaat adalah jarak yang sama ke Mekah?</li>
+</ul>
+<p>Dan kedua perkara ini saling berkaitan. Bagi yang berpendapat bahwa makna&nbsp;<em>muhaadzaat</em>&nbsp;adalah jarak yang sama ke Mekah, maka tidaklah mungkin seorang masuk Mekah kecuali pasti telah bermuhaadzaat dengan salah satu miqot. Dan yang masuk mekah melalui dari barat via lautan menuju Jeddah maka sebelum sampai ke Jeddah pasti telah&nbsp;<em>bermuhaadzaat</em>&nbsp;dengan al-Juhfah atau Yalamlam.</p>
+<p>Adapun yang berpendapat bahwa memungkinkan seseorang masuk ke Mekah tanpa bermuhadzaat dengan miqot manapun, yaitu jika Masuk ke Mekah dari barat via lautan menuju Jeddah maka ia akan sampai ke Jeddah sebelum&nbsp;<em>bermuhadzaat</em>&nbsp;dengan al-Juhfah atau Yalamlam. Dan ini tidak mungkin terealisasi kecuali jika dibawakan makna muhaadzaat kepada makna menarik garis lurus antara dua miqot yang terdekat, sebagaimana gambar berikut :</p>
+<p><strong>Pendapat yang kuat :</strong></p>
+<p><img src="https://bekalislam.com/wp-content/uploads/2020/02/area-miqat.png" sizes="(max-width: 429px) 100vw, 429px" srcset="https://bekalislam.com/wp-content/uploads/2020/02/area-miqat.png 429w, https://bekalislam.com/wp-content/uploads/2020/02/area-miqat-300x252.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/area-miqat-400x336.png 400w" alt="" width="429" height="360" data-srcset="https://bekalislam.com/wp-content/uploads/2020/02/area-miqat.png 429w, https://bekalislam.com/wp-content/uploads/2020/02/area-miqat-300x252.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/area-miqat-400x336.png 400w" data-src="https://bekalislam.com/wp-content/uploads/2020/02/area-miqat.png" data-sizes="(max-width: 429px) 100vw, 429px" /></p>
+<p>Pendapat yang terkuat adalah pendapat yang mengatakan bahwa Jeddah bukanlah miqot sama sekali, karena posisi Jeddah lebih dekat ke Mekah daripada posisi muhaadzaat al-Juhfah atau Yalamlam. Hal ini karena makna &ldquo;<em>al-muhaadzaat</em>&rdquo; (sejajar) adalah jarak yang sama ke Mekah.</p>
+<p>Ibnul al-Mandzuur berkata :</p>
+<p style="text-align: right;" class="arab">ذَاتُ عِرْقٍ حَذْوَ قَرْنٍ&hellip; وذاتُ عِرْق مِيقاتُ أَهل الْعِرَاقِ، وقَرَنٌ ميقاتُ أَهل نَجْدٍ، وَمَسَافَتُهُمَا مِنَ الْحَرَمِ سَوَاءٌ</p>
+<p>&ldquo;Dzaatu &lsquo;Irq sejajar dengan Qorn (al-Manaazil)&hellip;.dan Dzaatu &lsquo;Irq adalah miqotnya penduduk Iraq, dan Qorn (al-Manaazil) adalah miqotnya penduduk Nejd,&nbsp;<strong>dan jarak keduanya dari haram (Mekah) adalah sama</strong>&rdquo; (Lisaanul &lsquo;Arob 14/170)</p>
+<p>Ibnu Syaas Al-Maaliki (wafat 616 H) berkata</p>
+<p style="text-align: right;" class="arab">وَمَنْ حَاذَي مِيْقَاتًا فَمِيْقَاتُهُ عِنْدَ الْمُحَاذَاةِ؛ إِذِ الْمَقْصُوْدُ مِقْدَارُ الْبُعْدِ عَنْ مَكَّةَ</p>
+<p>&ldquo;Barang siapa yang sejajar dengan miqot maka miqotnya adalah tatkala sejajar, karena<strong>&nbsp;maksud dari sejajar adalah ukuran jarak dari Mekah</strong>&rdquo; (&lsquo;Aqdu al-Jawaahir ats-Tsamiinah fi Madzhab &lsquo;Aalim Al-Madinah 1/270)</p>
+<p>Coba kita perhatikan Dzātu &lsquo;Irq !. Dzātu &lsquo;Irq adalah miqat yang ditentukan oleh &lsquo;Umar bin Khathab radhiyallāhu Ta&rsquo;āla &lsquo;anhu bagi penduduk Iraq, karena penduduk Iraq tidak ingin melewati Qarn Al Manazil (As-Sail Al-Kabiir), maka &lsquo;Umar membuat miqat untuk mereka yang sejajar dengan Qarn Al-Manazil.</p>
+<p>Seandainya cara mengetahui maksud sejajar dengan miqat adalah dengan cara menarik garis lurus dari satu titik miqat ke titik miqat yang lainnya, maka tatkala kita tarik garis lurus dari Dzulhulaifah menuju Qarn Al-Manazil (as-Sail al-Kabir) hasilnya Dzātu &lsquo;Irq jaraknya terlalu lebih jauh.</p>
+<p>Tapi ternyata cara &lsquo;Umar menentukan miqat bukan dengan menarik garis lurus dari satu titik ke titik yang lainnya akan tetapi dengan cara mensejajarkan. Yaitu jarak Dzatu &lsquo;Irq ke Mekah mirip dengan jarak Qorn al-Manaazil ke Mekah yaitu sekitar dua marhalah -sebagaimana penjelasan Ibnu Mandzuur di atas-.</p>
+<p>Demikian juga seandainya makna&nbsp;<em>al-</em><em>muhaadzaat</em>&nbsp;adalah menarik garis lurus antara dua miqot, maka seharusnya Jeddah masih jauh sebelum kesejajaran miqot .</p>
+<p>Dari sini kita ketahui bahwasanya pernyataan bahwasanya para ulama telah ijmak :&nbsp;<strong>&ldquo;Barangsiapa yang masuk kota Mekkah tidak melewati miqat atau tempat yang sejajar dengan miqat maka mereka cukup berihram dari jarak 2 marhalah dari kota Mekkah&rdquo;</strong>, maksudnya adalah jika seseorang&nbsp;<strong>tidak bermuhaadzaat</strong>&nbsp;dengan satu miqot-pun, atau dia&nbsp;<strong>dalam kondisi tidak mengetahui</strong>&nbsp;bahwasanya telah bermuhaadzaat.</p>
+<p>Maka jika kita berbicara tentang penduduk Suakin di Sudan yang masuk ke Mekah melewati lautan dan melewati Jeddah, maka menurut pendapat pertama mereka boleh menjadikan Jeddah sebagai miqot, karena mereka tidak bersejajar dengan miqot.</p>
+<p>Namun menurut pendapat kedua -dan yang ini lebih kuat- mereka tetap tidak boleh bermiqot di Jeddah tapi harus melakukan muhaadzaat, yaitu bermuhaadzaat dengan Yalamlam sekitar 130 km atau bermuhaadzaat dengan al-Juhfah sekitar 157 km, dan kedua jarak ini berarti sebelum mereka sampai ke Jeddah yang jarak pelabuhannya dari Mekah sekitar 76 km dan jarak bandaranya ke Mekah sekitar 97 km. Pendapat inilah yang merupakan qoror (ketetapan) Al-Majma&rsquo; al-Fiqhi al-Islami pada tahun 1402 H (qoror No. 2, dauroh No. 5)</p>
+<p><strong><img src="https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat.png" sizes="(max-width: 717px) 100vw, 717px" srcset="https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat.png 717w, https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat-300x110.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat-600x221.png 600w, https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat-500x184.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat-400x147.png 400w" alt="" width="717" height="264" data-srcset="https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat.png 717w, https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat-300x110.png 300w, https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat-600x221.png 600w, https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat-500x184.png 500w, https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat-400x147.png 400w" data-src="https://bekalislam.com/wp-content/uploads/2020/02/tabel-miqat.png" data-sizes="(max-width: 717px) 100vw, 717px" />Peringatan</strong>&nbsp;:</p>
+<p>Pembahasan para ulama madhzab (Al-Hanafiyah, as-Syafi&rsquo;iyyah, dan al-Hanabilah) adalah tentang orang yang tidak melewati miqot dan tidak sejajar dengan miqot sama sekali, maka ia boleh berihrom dengan jarak 2 marhalah (sekitar 80 km) dari Mekah. Adapun orang yang melewati miqot atau yang sejajar dengan miqot maka ini diluar pembahasan mereka. Karena para ulama telah sepakat bahwa yang melewati miqot atau yang sejajar dengan miqot maka harus berihrom dari tempat tersebut.</p>
+<p>Dengan demikian para ulama tersebut tidak menjadikan Jeddah sebagai miqot bagi jamaah haji/umroh yang datang dari arah manapun. Akan tetapi hanya membatasi bagi mereka yang datang dari arah barat Mekah (yaitu dari arah kota Suakin di Sudan).</p>
+<p>Karenanya sebagian ulama kontemporer dengan tegas membolehkan Jeddah sebagai miqot khusus hanya untuk orang-orang yang datang dari kota Suakin di Sudan (yaitu dari arah barat), karena mereka tidak bersejajar dengan miqot Yalamlam dan miqot al-Juhfah. Adapun jika mereka datang dari Sudan namun dari arah selatan atau utara Jeddah maka harus berihrom sebelum Jeddah. Sebagaimana pernyataan Asy-Syaik Bin Baaz (silahkan lihat&nbsp;http://www.binbaz.org.sa/noor/4360) dan Asy-Syaikh Al-&lsquo;Utsaimin&nbsp;http://binothaimeen.net/content/9657).</p>
+<p>Sedangkan bagi masyarakat Indonesia, maka biasanya datang ke Makkah melalui Miqat Yalamlam terlebih dahulu, atau bila terlebih dahulu ke Madinah, maka mereka pastilah melalui Miqat Dzul Hulaifah. Dengan demiian, tidak dibenarkan bagi jamaah haji yang datang dari Indonesia untuk menunda ihram hingga tiba di bandara King Abdul Aziz di Jeddah.</p>
+<p>Akan tetapi pendapat inipun dibangun di atas gambaran bahwa penduduk kota Suakin tidak akan bersejajar dengan miqot, artinya mereka akan sampai ke Jeddah sebelum bersejajar dengan miqot Yalamlam atau al-Juhfah. Namun -sebagaimana telah lalu- bahwasanya pendapat yang benar adalah penduduk Suakin juga harus berihrom sebelum sampai di Jeddah, karena jarak Jeddah-Mekah lebih dekat daripada jarak Yalamlam-Mekah dan al-Juhfah-Mekah, sebagaiamana yang telah ditetapkan oleh Al-Majma&rsquo; al-Fiqhi al-Isalami.</p>
+<p><strong>KESIMPULAN</strong></p>
+<p>Para jamaah haji atau Umroh Indonesia yang mendarat di bandara King Abdul Aziz Jeddah maka mereka masuk ke Mekah dari arah selatan atau timur kota Mekah. Maka mereka pasti akan melewati Yalamlam atau Qorn al-Manazil atau yang sejajar dengan keduanya. Dengan demikian mereka tidak boleh mengakhirkan ihrom di bandara King Abdul Aziz di Jeddah, akan tetapi mereka berihram di atas pesawat menjelang mendarat di Jeddah.</p>
+<p>Dari sini maka apa yang dilakukan oleh sebagian jama&rsquo;ah haji tatkala bermiqat di Jeddah adalah sikap yang keliru dan menyelisihi pendapat para ulama madzhab termasuk para ulama syafi&rsquo;iyyah. Karena maksud pernyataan Ibnu Hajar al-Haitami asy-Syafi&rsquo;i rahimahullah yang menyatakan Jeddah sebagai miqot adalah khusus bagi mereka yang tidak melewati miqot. Maka menjadikan perkataan Ibnu Hajar al-Haitami sebagai dalil untuk menjadikan Jeddah sebagai miqot bagi jamaah haji/umroh Indonesia adalah kesalahan, karena jamaah haji/umroh Indonesia pasti melewati miqot yaitu Yalamlam atau Qorn al-Manaazil atau yang sejajar dengannya. Wallāhu Ta&rsquo;āla A&rsquo;lam bish Shawab</p>
+<p><strong>Peringatan</strong>&nbsp;:</p>
+<p><em>Pertama</em>&nbsp;: Seorang yang berihrom di pesawat hendaknya sudah persiapan dengan memakai kain ihrom tatkala menjelang sampai ke zona miqot. Dia ia baru berniat ihrom setelah pemberitahuan dari pihak pesawat bahwasanya pesawat sudah berada di zona (daerah) miqot.</p>
+<p>Namun jika kawatir tertidur sehingga terlewatkan miqotnya atau tidak ada yang memberitahukan kepadanya kapan pesawat berada di zona miqot, atau menurut persangkaannya pemberitahuan bisa jadi terlambat, maka hendaknya ia berhati-hati sehingga boleh untuk berniat ihrom sebelum miqot. (lihat Majmu&rsquo; Fataawa Ibni Baaz 17/48).</p>
+<p>Hukum asal berihram sebelum miqat adalah makruh. Semestinya seseorang berihram, ditempat miqatnya (tepat dititiknya). Seperti penduduk Madīnah kalau berihram maka hendaknya di miqot mereka yaitu Dzulhulaifah (Bir &lsquo;Ali), bukan di masjid Nabawi atau hotel, karena hotel atau masjid Nabawi letaknya sebelum miqat.</p>
+<p>Tetapi kalau kita melihat kondisi di pesawat yang terbang dengan kecepatan tinggi, maka orang yang berihram boleh berihram sebelum bermiqat meskipun jarak 10 atau 30 menit. Meskipun hukum asalnya adalah makruh namun kita tahu dalam kaidah ushul fiqih bahwasanya jika dalam kondisi dibutuhkan (haajah) maka hukum makruhnya menjadi hilang karena الحَاجَةُ تُنَزَّلُ مَنِزْلَةَ الضَّرُوْرَةِ haajah ditempatkan menempati posisi darurat.</p>
+<p>Para ulama telah sepakat bahwa berihrom sebelum miqot hukumnya sah. Ibnul Munzir berkata :</p>
+<p style="text-align: right;" class="arab">وَأَجْمَعُوا عَلَى أَنَّ مَنْ أَحْرَمَ قَبْلَ الْمِيْقَاتِ أَنَّهُ مُحْرِمٌ</p>
+<p>&ldquo;Dan para ulama telah ijmak (sepakat) bahwasanya barang siapa yang berihrom sebelum miqot maka ia telah sah berihrom&rdquo; (Al-Ijma&rsquo; hal 51)</p>
+<p><em>Kedua</em>&nbsp;: Jika ternyata ia lupa membawa kain ihromnya di atas pesawat, maka ia harus tetap berihrom di atas pesawat sebelum pesawat mendarat di bandara Jeddah. Dan ia tetap memakai celananya namun ia tidak boleh memakai songkok (penutup kepala) dan tidak boleh memakai baju. Nabi bersabda :</p>
+<p style="text-align: right;" class="arab">مَنْ لَمْ يَجِدْ إِزَارًا فَلْيَلْبَسْ سَرَاوِيلَ، وَمَنْ لَمْ يَجِدْ نَعْلَيْنِ فَلْيَلْبَسْ خُفَّيْنِ</p>
+<p>&ldquo;Barang siapa yang tidak mendapati izar (kain ihrom) maka hendaknya ia memakai celana panjang, dan barang siapa yang tidak mendapai dua sandal maka hendaknya ia memakai sepatu&rdquo; (HR Al-Bukhari dari hadits Ibnu Umar no 5852 dan Muslim dari hadits Jabir no 1179)</p>
+<p>Jika ia memiliki kain yang bisa digunakan sebagai penutup badannya maka wajib baginya untuk membuka bajunya dan menajadikan kain tersebut sebagai kain ihrom atasnya. Namun jika tidak ada maka ia tetap memakai baju hingga pesawat mendarat lalu ia mengganti baju dan celananya dengan kain ihrom, dan ia membayar fidyah atas pelanggaran yang ia lakukan yaitu memakai baju. Fidyah tersebut adalah salah satu dari tiga pilihan, berpuasa selama tiga hari atau menyembelih seekor kambing, atau memberikan sedekah kepada 6 orang fakir miskin, masing-masing 1/2 zakat fitrah (yaitu sekitar 1,3 kg beras). (Lihat Majmuu&rsquo; Fataawa Bin Baaz 17/48-49)</p>
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

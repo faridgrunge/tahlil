@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Mohon Ketabahan Menghadapi Lawan Yang Lebih Kuat</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">رَبَّنَآ اَفْرِغْ عَلَيْنَا صَبْرًا وَّثَبِّتْ اَقْدَامَنَا وَانْصُرْنَا عَلَى الْقَوْمِ الْكٰفِرِيْنَ</p><p><i>Rabbanā afrig ‘alainā ṣabraw wa ṡabbit aqdāmanā wanṣurnā ‘alal-qaumil-kāfirīn(a).</i></p><p>Ya Tuhan kami, limpahkanlah kesabaran kepada kami, kukuhkanlah langkah kami dan tolonglah kami menghadapi orang-orang kafir.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Doa ini diucapkan oleh Thalut dan tentaranya ketika mereka berhadapan dengan musuh yang begitu kuat, yaitu Jalut dan tentaranya, sekitar 3000 tahun yang lalu. Mengapa dikatakan begitu kuat?<br><br>Menurut sejarawan Tom Logan, Jalut dan tentaranya tidak hanya kemungkinan berjumlah lebih besar, tetapi juga mereka berhasil mengolah perunggu sedemikian efektif hingga dapat digunakan sebagai pelindung dan tameng ketika bertempur dengan bangsa lain. <br><br>Dengan kata lain, teknologi pengolahan perunggu mereka jauh lebih maju dari bani Israil yang menjadi lawan mereka kala itu. Analogi sederhananya mungkin seperti ini: ada satu bangsa yang sudah berhasil membuat senjata api, sedangkan lawannya masih bertempur menggunakan panah—tentunya hal ini tidak imbang.<br><br>Dan yang tak kalah penting, Jalut sendiri terkenal sebagai kesatria yang begitu besar dan tangguh—selain tentunya ia memakai jubah pelindung. Tak aneh bila Thalut dan tentaranya berdoa agar mereka diberi kesabaran dan kekukuhan langkah. <br><br>Menurut Tafsir Al-Jalalain dan Ibnu Katsir, yang dimaksud “kukuhkanlah langkah kami” adalah agar mereka tidak ciut nyalinya dalam menghadapi perang yang di atas kertas tidak akan dimenangi oleh mereka. Jalut yang konon setinggi 2 meter lebih tiba-tiba muncul dan menantang bani Israil untuk tarung satu lawan satu. Melihat lawan yang begitu besar, tak ada satu pun dari bani Israil yang berani maju. <br><br>Mereka saling melihat satu sama lain berharap teman atau saudaranya sebangsa berani maju. Namun, tetap tak ada satu pun yang punya nyali menghadapi algojo macam Jalut.<br><br>Dalam kondisi yang begitu genting, Allah menjawab doa bani Israil. Allah kemudian mengutus Nabi Dawud as.—seorang penggembala—untuk menghadapi Jalut. Sekalipun Nabi Dawud as. bertubuh kecil, beliau as. berhasil menaklukan Jalut yang terkenal besar dan perkasa.<br><br>Menurut Syekh Abdullah bin Bayyah, salah satu tema sentral dalam Al-Qur'an adalah kegigihan dan kepatuhan kelompok kecil yang beriman pada Allah dalam menghadapi cobaan dan kezaliman dari kelompok yang lebih besar. Contoh di antaranya adalah kaum Musa melawan Firaun dan bala tentaranya, Nabi Muhammad ﷺ dan sahabatnya melawan suku Quraisy, dan Nabi Dawud as. melawan Jalut. <br><br>Meski kaum beriman kadang harus melawan kekuatan yang jauh lebih besar, Allah membantu mereka sehingga mereka dapat meraih kemenangan. Jika kita pelajari secara saksama, kemenangan mereka tentunya berasal dari Allah. Selain itu, mereka juga diilhami oleh Allah agar mampu berpikir kreatif dan cerdik dalam menghadapi musuh yang lebih kuat. <br><br>Nabi Muhammad ﷺ, misalnya, begitu jeli dalam menempatkan pasukan dan mengatur strategi peperangan sehingga kaum Quraisy yang memiliki tentara lebih besar—sekitar 3 kali lipat lebih besar—justru kalah pada Perang Badar dan hampir kalah pada Perang Uhud. <br><br>Nabi Dawud as., misalnya, sengaja memilih ketapel batu ketimbang pedang dan tameng ketika menghadapi Jalut. Dan ini adalah keputusan yang cerdas. Seperti yang dijelaskan oleh Malcolm Gladwell dalam bukunya David and Goliath, pilihan ketapel ini menjadi kunci kemenangan. Pasalnya, sekalipun Jalut memakai baju zirah, bagian wajahnya terbuka sehingga membuatnya menjadi sasaran empuk bagi Dawud yang sudah mahir menggunakan ketapel.<br><br>Baju zirah Jalut yang berat justru membuat langkahnya melambat, sementara Dawud dengan cekatan telah menyiapkan batu dan siap melontarkannya. Sekalipun Jalut jauh lebih besar dan kuat, kekuatan lontaran batu yang diciptakan oleh orang yang mahir melontarkan ketapel seperti Dawud dapat menumbangkan Jalut seketika. <br><br>Para ahli menjelaskan bahwa kekuatan lontaran batu sebesar 3000 Newton dapat membunuh manusia jika mengenai organ vital atau tempurung kepala. Orang yang terbiasa—apalagi ahli—melontar  ketapel bisa menciptakan kekuatan lontaran melebihi 3600 Newton. Nah, jika lontaran batu sebesar 3000 Newton saja dapat menghancurkan tengkorak manusia, apalagi 3600 Newton. <br><br>Inilah alasan mengapa lontaran Nabi Dawud as. begitu kuat dan mematikan. Jika saja Nabi Dawud as. memilih untuk menggunakan pedang dan tameng untuk menghadapi Jalut yang lebih besar dan memakai baju zirah, maka hasilnya mungkin akan berbeda. Namun Allah mengilhami Nabi Dawud as. hingga ia berhasil memilih strategi yang tepat. Selain dapat diamalkan ketika menghadapi musuh yang lebih kuat, doa ini juga baik untuk diamalkan setiap hari guna memperkokoh kesabaran kita dalam menjalani hidup yang kadang penuh cobaan dan tantangan besar.<br><br>Dalam tafsirnya Al-Misbah, M. Quraish Shihab menjelaskan bahwa kemenangan Nabi Dawud as. atas Jalut adalah bagian dari kebijaksanaan-Nya yang berlaku di alam raya ini. Sebab kebijaksanaan-Nya ada yang rasional dan ada juga yang suprarasional. <br><br>Belajar dari kisah Nabi Dawud as, beliau as. tidak hanya berdoa kepada Allah, tetapi juga menggunakan pemberian Allah yang begitu penting—yaitu akal—untuk memilih strategi yang tepat kemudian berikhtiar sebisa mungkin.  <br><br>Referensi: David and Goliath oleh Malcolm Gladwell, Tafsir Al-Misbah karya M. Quraish Shihab, Tafsir Al-Jalalain, Tafsir Ibnu Katsir, Qisas Al-Anbiya</p><p><strong>QS. Al-Baqarah [2]: 250
+</strong></p>
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

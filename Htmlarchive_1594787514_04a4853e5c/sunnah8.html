@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="t" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content">
+		
+		
+<header>
+
+<h1>Sholat Tahiyatul Masjid</h1><br>
+
+ <p align="justify">Shalat Tahiyatul Masjid adalah shalat untuk menghormati masjid. Sebagai tempat suci, masjid patut dihormati oleh Muslim yang akan melakukan aktivitas ibadah di tempat sujud  itu.	    Hukum shalat sunnah tahiyatul masjid adalah sunnah muakkad. Bahkan pada waktu khutbah jum'at shalat tersebut masih dilanjutkan untuk dikerjakan.</p>
+	
+	<h3>Doa masuk dan keluar masjid</h3><hr>
+    <center>
+        <span class="arab"><font size="+1">
+        </font></span>
+      <div align="right" class="arab">إِذَا دَخَلَ أَحَدُكُمُ الْمَسْجِدَ فَلْيَقُلِ : اَللََّهُمَّ افْتَحْ لِى أَبْوَابَ رَحْمَتِكَ</div>
+    </center>
+    <br>
+	 <b><I> Artinya :</I></b>
+	 <blockquote>Jika salah seorang di antara kalian memasuki masjid, maka ucapkanlah ‘Allahummaftahlii abwaaba rahmatik’ (Ya Allah, bukakanlah pintu-pintu rahmat-Mu</blockquote>
+	 <div align="right"><br>
+       
+       <span class="arab">وَإِذَا خَرَجَ فَلْيَقُلِ : اَللََّهُمَّ إِنِّى أَسْأَلُكَ مِنْ فَضْلِكَ       </span></div>
+	 <br><I>	  Artinya :</I></b>
+	 <blockquote>
+	  Jika keluar dari masjid, ucapkanlah: ‘Allahumma inni as-aluka min fadhlik’ (Ya Allah, aku memohon pada-Mu di antara karunia-Mu)</blockquote><br>
+      
+	<p align="justify">Sholat sunnah tahyatal masjid dapat dikerjakan disetiap waktu ketika seseorang masuk masjid dan ingin duduk di dalamnya. Termasuk di dalamnya waktu waktu yang terlarang untuk shalat. Menurut pendapat yang paling kuat di kalangan ulama. Ini adalah pendapat Imam Syafi'i dan lainnya, yang dikuatkan juga oleh Ibnu Taimiyah. Cara mengerjakan shalat tahiyatul masjid sama seperti mengerjakan shalat sunnah lainnya hanya niatnya saja yang berbeda.</p>
+	<p align="justify">Tahiyatul masjid tergolong sebagai penghormatan terhadap masjid. Seolah memberi ucapan salam ketika masuk ke suatu tempat sebagaimana orang yang memberi salam kepada sahabatnya ketika bertemu.</p>
+	<p align="justify">Imam an nawawi berkata bahwa sebagian yang lain mengibaratkannya dengan memberi salam kepada pemilik masjid. Karena maksud dilakukannya shalat tahiyatul masjid adalah mendekatkan diri kepada Allah bukan kepada masjid. Sebab seseorang yang masuk ke rumah orang lain yang diberi salam adalah pemilik bukan rumahnya.</p>
+	<p><em>Nabi Muhammad SAW Bersabda</em>:
+	  Dari Abu Qatadah Al-Harits bin Rab’y Al-Anshary Radhiyallahu anhu, dia berkata, <blockquote>“Rasulullah Shallallahu alaihi wa sallam bersabda: “Jika salah seorang di antara kalian masuk masjid, maka janganlah duduk sebelum shalat dua rakaat” </blockquote><br>
+      
+      Apabila dikarenakan satu dan lain hal tidak bisa melaksanakannya, maka diganti dengan membaca</p>
+      <span class="style2"><font size="+1"></font></span>
+      <div>
+        <div align="right" class="style3">سُبْحَانَ اللهَ ، وَالْحَمْدُ ِلله ، وَلاَ إِلَهَ إِلاَّ اللهُ ، وَاللهُ أَ كْبَرْ      </div>
+      </div>
+
+<br>
+<b><I>Artinya ;</I></b><blockquote>
+	  Maha suci Allah, Puji syukur kepada Allah, Tidak ada Tuhan selain Allah dan Allah Maha Besar</blockquote><br><Br>
+      
+        <h3>Lafadz atau Bacaan Niat Shalat Tahiyatul Masjid </h3><hr>
+	</center>
+	  </p>
+
+      <div align="right"><span class="arab">اُصَلِّى سُنَّةً تَحِيَّةَ الْمَسْجِدِ رَكْعَتَيْنِ ِللهِ تَعَالَى  </span>
+        <br>
+      </div>
+      <p></p>
+<b><I>Latin ;</I></b><br><Br>
+	  USHOLLI SUNNATA TAHIYYATAL MASJIDI ROK'ATAINI LILLAAHI TA'AALAA<br>
+	  <br>
+      
+<b><I>Artinya :</I></b><br><Br>
+Saya niat shalat sunnah tahiyatul masjid dua rakaat karena allah ta'ala.</p>
+<br>
+
+<h3>Cara mengerjakan sholat Tahiyatul masjid</h3>
+Cara dalam mengerjakan sholat sunnah tahiyatul masjid ini, sama dengan sholat sunnah lainnya, yakni dilakukan sebanyak 2 rekaat dengan 1 salam.
+
+
+
+<ol>
+
+<b><I>Rekaat pertama</I></b><br>
+<li>Takbiratul ihram disertai membaca niat</li>
+<li>Membaca surat alfatihah</li>
+<li>Membaca surat pendek alquran</li>
+<li>Rukuk</li>
+<li>i'tidal</li>
+<li>Sujud</li>
+<li>Duduk diantara dua sujut</li>
+<li>sujud</li>
+<br>
+
+<b><I>Rekaat ke dua</I></b><br>
+<li>Membaca surat alfatihah</li>
+<li>Membaca surat pendek alquran</li>
+<li>Rukuk</li>
+<li>i'tidal</li>
+<li>Sujud</li>
+<li>Duduk diantara dua sujut</li>
+<li>sujud</li>
+<li>Tasyahut ahir</li>
+<li>Salam</li></ol>
+
+<br>
+	<h3>Hikmah disyariatkan shalat tahiyatul masjid</h3><hr>
+	<p>Tahiyatul masjid tergolong sebagai penghormatan terhadap masjid. Seolah memberi ucapan salam ketika masuk ke suatu tempat sebagaimana orang yang memberi salam kepada sahabatnya ketika bertemu.</p>
+	<p>Imam an nawawi berkata bahwa sebagian yang lain mengibaratkannya dengan memberi. Salam kepada pemilik masjid. Karena maksud dilakukannya shalat tahiyatul masjid adalah mendekatkan diri kepada Allah bukan kepada masjid. Sebab seseorang yang masuk ke rumah orang lain yang diberi salam adalah pemilik bukan rumahnya.</p>
+	<p align="left">&nbsp;</p>
+	</div>
+	</ol>
+
+</div>      
+
+	</div> 
+	</div>
+	</div><!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

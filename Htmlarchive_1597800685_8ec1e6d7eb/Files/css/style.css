@@ -1,0 +1,126 @@
+.content{
+    margin: 10px 10px 10px 10px;
+    top:410px;
+}    .tr1{
+    background:white;
+}
+
+html{
+    height:100%;
+}
+
+table { width:100%;border-collapse: separate; border-spacing: 0; }
+td a{
+    display:block;
+}
+
+.tr1 td:first-child { border-top:2px solid silver;border-left:2px solid silver; border-bottom:2px solid silver;border-top-left-radius: 10px;border-bottom-left-radius: 10px; }
+.tr1 td:last-child { border-top:2px solid silver;border-right:2px solid silver; border-bottom:2px solid silver;border-top-right-radius: 10px; border-bottom-right-radius: 10px; }
+
+
+.imge{
+ padding:10px 0px 10px 10px;
+}
+.cimg{
+    width:50px;
+}
+body{
+
+overflow-x:hidden;
+outline:none;
+        border-radius:7px;
+        padding:2px;
+margin:0px;
+        background:url(../images/back.png);
+background-repeat:repeat;
+
+}
+@font-face{
+    font-family:en;
+    src:url(../fonts/Arcon-Regular.otf)
+
+}
+@font-face{
+    font-family:ml;
+    src:url(../fonts/ml.otf)
+
+}.ml  a{
+ color:black;
+ font-family:ml;
+ text-decoration:none;
+}
+a{
+     color:black;
+ font-family:ml;
+ text-decoration:none;
+}
+
+.flex-container {
+
+     margin:10px;
+     background:white;
+     padding:10px;
+     border:2px solid silver;
+     border-radius:10px;
+    text-align:center;
+  display: flex;
+  flex-flow: row wrap;
+   -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+    justify-content: space-between;
+        flex-flow:row wrap;
+
+}
+
+.flex-container>div {
+        margin:0px;
+
+    width:50px ;
+}
+.flex-container>span{
+    text-align:center;
+
+}
+.banner{
+    border:2px solid black;
+    margin:5px;
+}
+.big{
+    font-size: 12px;
+}
+
+hr.type_4 {
+border: 0;
+height: 40px;
+background-image: url(../images/type_4.png);
+background-repeat: no-repeat;
+background-size:100% auto;}
+hr.type_41 {
+border: 0;
+height: 40px;
+background-image: url(../images/type_41.png);
+background-repeat: no-repeat;
+background-size:100% auto;}
+.tab{
+    font-family: ml;
+    padding: 12px;
+    background: white;
+    border:2px solid silver;
+    border-radius:10px;
+}
+.tab{
+    font-family: ml;
+    padding: 12px;
+    background: white;
+    border:2px solid silver;
+    border-radius:10px;
+}
+.tab{
+    font-family: ml;
+    padding: 12px;
+    background: white;
+    border:2px solid silver;
+    border-radius:10px;
+}

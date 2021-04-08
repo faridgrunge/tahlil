@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Hikmah Tayamum  </h1><br>
+
+Disyariatkannya tayamum ialah memberi keringanan kepada umat Islam dalam melaksanakan syariat agamanya karena kondisi yang tidak memungkinkan menggunakan air. Keringanan tersebut disebut rukhsah<br>
+  <ol>
+  <li>Untuk menunjukkan sifat Rahman dan Rahim Tuhan, bahwa syariat Islam itu tidak mempersulit umat-Nya. <br>
+ <li> Hikmah yang terdapat pada tanah sebagai pengganti air untuk bersuci antara lain adalah menuntut keikhlasan dan kesabaran kita.<br>
+  <li>Menyadarkan akan asal manusia diciptakan, bahwa dirinya diciptakan dari tanah. <br>
+  <li>Memberikan kesadaran bahwa tidak ada alas an untuk meninggalkan ibadah.</ol>
+<p style="text-align:justify">Diantara hikmah tayyamum adalah
+    untuk menyucikan diri kita dan agar kita bersyukur dengan syari’at ini.
+    Sehingga semakin nampak kepada kita bahwa Allah sama sekali tidak ingin
+    memberatkan hamba-Nya. Setelah menyebutkan syariat bersuci, Allah mengakhiri ayat
+    tersebut dengan firman-Nya:</p>
+
+      <div align="right" class="arab"> مَا
+        يُرِيدُ اللَّهُ لِيَجْعَلَ عَلَيْكُمْ مِنْ حَرَجٍ وَلَكِنْ يُرِيدُ
+        لِيُطَهِّرَكُمْ وَلِيُتِمَّ نِعْمَتَهُ عَلَيْكُمْ لَعَلَّكُمْ تَشْكُرُونَ</div>
+  <blockquote>
+  <p align="left" style="text-align:justify"><b><I>Artinya ;</I></b> </p>
+  <p align="left" style="text-align:justify">“Allah
+    tidak hendak menyulitkan kamu, tetapi Dia hendak menyucikan kamu dan menyempurnakan&nbsp;<b>nikmat</b>-Nya
+    bagimu, supaya kamu bersyukur.(Qs.
+    Al Maidah: 6).</p>
+  </blockquote>
+<p class="style1" style="text-align:justify">Diantara hal-hal yang dituduh menyelisihi akal adalah masalah tayamum. Maka ada tanggapan bahwa tayamum tidak dapat diterima oleh akal apabila ditinjau dari dua segi, yaitu: pertama, tanah atau debu adalah sesuatu yang kotor, sehingga tidak dapat menghilangkan daki maupun kotoran-kotoran lainnya. Demikian pula tidak dapat membersihkan pakaian. Kedua, tayamum hanya disyari’atkan pada dua anggota badan (wudlu), dan ini tidak sesuai dengan akal logika yang sehat.<br>
+  <br>
+  Benar jika syari’at tayamum itu memang tidak sesuai dengan akal yang picik. Akan tetapi, ia sangat selaras dengan akal yang sehat. Karena sesungguhnya Allah SWT telah menjadikan air sebagai su,ber utama kehidupan, sementara manusia diciptakan dati tanah. Tubuh kita tersiri dari dua unsur tersebut, yakni air dan tanah. Dan telah pula dijadikan dari dua unsur itu makanan bagi kita. Lalu keduanya dijadikan alat bagi kita untuk bersuci dan beribadah. Tanah adalah materi asal kejadian manusia dan air adalah sumber kehidupan bagi segal sesuatu. Lalu Allah SWT menyusun alam ini dan kedua unsur itu sebagai sumber utamanya.<br>
+  <br>
+  Pada dasarnya, bahan yang dipakai untuk membersihkan sesuatu dari kotoran dari situasi dan kondisi yang biasa adalah air. Tidak diperkenankan untuk tidak mempergunakan air sebagai bahan pembersih, kecuali pada saat itu air tidak ada, atau karena adanya halangan seperti sakit serta sebab-sebab yang lain (yang dapat dibenarkan oleh syara’). Pada saat kondisi tidak memungkinkan untuk mempergunakan air seperti itu, maka mempergunakan tanah sebagai pengganti air adalah jauh lebih utama dibandingkan dengan yang lain. Hal ini karena tanah adalah saudara kandung air. Meskipun pada lahirnya tanah (debu) nampak kotor, namun ia dapat mensucikan kotoran secara batin. Hal ini diperkuat oleh kemampuan tanah untuk menghilangkan kotoran-kotoran secara lahir ataupun mengurangi kadar kotornya. Ini adalah persoalan yang tidak asing bagi mereka yangilmu yang mendalam, sehingga mampu mengungkap hakikat-hakikat dari sesuatu amalan serta memahami kaitan antara lahir dan batin bersama interaksi yang terjadi diantara keduanya.<br>
+  <br>
+  Adapun segi atau pandangan yang kedua, yaiut pensyari’atan tayamum yang hanya pada dua anggota badan (wudlu) tidak sesuai dengan akal, sementara telah diketahui, bahwa tayamum disyari’atkan pada seluruh anggota badan (wudlu) seperti halnya dengan air.<br>
+  <br>
+  Akan tetapi, pada hakikatnya pensyari’atan tayamum hanya pada dua anggota badan (wudlu) berada pada puncak kesucian dan keselarasan dengan akal yang sehat, serta mengandung rasia dan hikmah yang cukup mendalam. Karena pada umumnya, melumuri kepala denagna debu (tanah) adalah perbuatan yang tidak sesuai dengan jiwa yang normal. Oleh sebab itu, perbuatan tersebut umumnya hanya dilakukan orang saat ia ditimpa musibah dan kesulitan. Adapun kedua kaki umumnya adalah anggota badan yang senantiasa bersentuhan dengan tanah.<br>
+  <br>
+  Dari sisi lain, menyapukan tanah (debu) kemuka atau wajah merupakan gambaran ketundukan dan pengagungan kepada Allah SWT, dan kerendan hati sangat disukai oleh Allah SWT dan mengandung manfaat yang besar bagi hamba. Oleh sebab itu, diperintahkan bagi setiap hamba untuk sujud dan langsung menempelkan wajahnya langsung ke tanah, dan tidak melakukan sesuatu yang menghalangi wajahnya bersebtuhan dengan tanah.<br>
+  <br>
+  Apabila kita telusuri persoalan ini lebih jauh, maka akan nampak bagi kita hikmah lain yang unik, dimana tayamum disyari’atkan hanya pada dua anggota badan (wudlu) yang wajib dibasuh saat seseorang berwudlu, dan tidak disyari’atkan pada dua anggota badan (wudlu) lain yang boleh untuk dibasuh. Bukankah kaki boleh dibasuh di atas sepatu dan kepala boleh disuh di atas sorban? Maka setelah kepala dan kaki mendapat keringanan dari mencuci menjadi membasuh saat berwudlu, sudah sepatutnya apabila kedua anggota ini juga diberi keringanan atas dasar pengampunan untuk tidak disapu dengan tanah saat melakukan tayamum. Sebab, apabila kepala dan kaki disyari’atkan untuk disapu pula dengan tanah (debu) pada saat bertayamum, niscaya tidak ada keringanan yang terjadi (akan tetapi justru memberatkan). Yang ada hanyalah perpindahan bentu dari menyapu dengan menyapu dengan tanah (debu). Dan ini menyalahi hikmah pensyari’atan tayamum yang bertujuan memberikan keringanan. Dari sini nampak jelas, bahwa hokum yang ditetapkan oleh syari’at Islam itu demikian sempurna dan adil. Dan inilah timbangan yang benar untuk memahami persoalan ini.<br>
+  </ul> 
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

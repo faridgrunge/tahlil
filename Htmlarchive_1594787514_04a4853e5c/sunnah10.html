@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="t" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content">
+		
+		
+<header>
+
+<h1>Sholat witir</h1><br>
+
+  <p>Pengertian Shalat Witir itu sendiri ialah Shalat Sunah yg dilakukan pada malam hari dg jumlah Raka’at satu, dua, tiga, lima, tujuh atau sebelas dan dikerjakan selepas Shalat Isya hingga terbit sang fajar atau sebelum masuk waktu shalat subuh dan biasanya Shalat Sunah Witir ini dirangkaikan dg Shalat Sunah Tarawih pada bulan puassa. Hukum Mengerjakan Shalat Witir inni adlh Sunnah tetapi Shalat Sunah yg sangat di utamakan untuk dikerjakan.</p>
+    <p>Hadist yg berbunyi,<blockquote> ” Hai para pencita – cita Al-Qur’an, kerjakanlah Shalat Witir, Sebab Alloh Swt itu Tunggal (ESa) dan dia suka kepada bilangan Witir (Bilangan Ganjil)”. </blockquote>
+    
+    Sehingga melihat hadist tersebut bisa kita simpulkan bahwa Shalat Sunah Witir ini jg sangat penting dan jika anda bisa dan bersedia untuk mengerjakan Shalat Sunah Witir ini maka akan mendapatkan pahala yg besar dari Alloh Swt karena Alloh menyukai bilangan witir.</p>
+    <p>Sedangkan untuk Jumlah Raka’at Shalat Witir bisa anda tentukan sendiri karena Shalat Witir bisa dilaksanakan dg Raka’at satu sampai sebelas tetapi bilangan ganjil karena Nabi Muhammad Saw melakukan Shalat Sunah Witir ini tidak lebih dari sebelas Raka’at. Shalat witir sendiri jg boleh dikerjakan 2 (Dua) Raka’at saja dg Satu salam dan Satu Raka’at dg Satu Salam. Kemudian untuk Niat Shalat Witir sendiri bisa anda lihat dan pelajari di bawah ini karena sudah kami buatkan untuk anda semua yg dilengkapi dg terjemahan latin dan artian bahasa indonesia serta dilengkapi dg Doa Setelah Shalat Witir Terlengkap.</p><br>
+    <h3>Lafadz atau Bacaan Niat Shalat Witir</h3><hr>
+    <center>
+        <div>
+          <div align="right" class="arab">اُصَلِّى سُنًّةَ الْوِتْرِرَكْعَةً مُسْتَقْبِلَ الْقِبْلَةِ  مَأْمُوْمًا ِللهِ تَعَالَى </span>          </div>
+        </div>
+<p></p>
+<b><I>Latin ;</I></b><br><Br>
+    <p align="center" class="style11">USHOLLI SUNNATAL WITRI RAK'ATAN MUSTAQBILAL QIBLATI MA'MUUMAN LILLAAHI TA'ALA<br>
+        <br>
+    
+    <b><I>  Artinya :</I></b><blockquote>
+      <div align="left">Saya niat sholat witir satu raka'at menghadap kiblat sebagai ma'mum karena Allah Ta'ala</div>
+    </blockquote>
+      <br>
+    <p class="style11"><span class="style19"><b>Catatan: </b></span><br>
+      Niat diatas dibaca ketika kita shalat witir menjadi ma'mum. Namun apabila kita menjadi imam, maka lafadz &quot;MA'MUUMAN&quot; diganti menjadi &quot;IMAAMAN&quot;. Sehingga lafadznya menjadi seperti ini :<div>
+        <div align="right" class="arab">اُصَلِّى سُنًّةَ الْوِتْرِرَكْعَةً مُسْتَقْبِلَ الْقِبْلَةِ اِمَامًا ِللهِ تَعَالَى </div>
+        <div>
+                <p><strong>Latin ;</strong></p>
+    <p align="center" class="style11">USHOLLI SUNNATAL WITRI RAK'ATAN MUSTAQBILAL QIBLATI IMAAMAN LILLAAHI TA'ALA<br>
+      <br>
+    <b><I>
+      Artinya :</I></b><blockquote>
+        <div align="left">Saya niat sholat witir satu raka'at menghadap kiblat sebagai imam karena Allah Ta'ala</div>
+      </blockquote><br>
+      
+      
+      
+    <p class="style11">      Dan apabila sholat witir dilaksanakan sendirian, maka lafadz niatnya tanpa disertai dengan &quot;MA'MUUMAN&quot; dan/atau &quot;IMAAMAN&quot;. Sehingga lafadz niat shalat witir sendirian adalah seperti ini :<div>
+      <div align="right" class="arab">اُصَلِّى سُنًّةَ الْوِتْرِرَكْعَةً مُسْتَقْبِلَ الْقِبْلَةِ ِللهِ تَعَالَى</div>
+    </div>
+    <p><strong>Latin ;</strong></p>
+    <p align="center" class="style11">USHOLLI SUNNATAL WITRI RAK'ATAN MUSTAQBILAL QIBLATI LILLAAHI TA'ALA<br><br>
+<b><I>      Artinya :</I></b><blockquote>
+      <div align="left">Saya niat sholat witir satu raka'at menghadap kiblat karena Allah Ta'ala</div>
+</blockquote>
+      
+      <br>
+    <p align="left">     Dan begitu juga seterusnya tergantung berapa raka'at shalat witir, maka kita sesuaikan saja niatnya sesuai raka'at yang akan kita laksanakan.Waktu pelaksanaan shalat witir yaitu pada malam hari setelah shalat isya hingga sebelum terbit fajar atau sebelum masuk waktu subuh, yang dilakukan setelah shalat lainnya, seperti shalat tarawih pada bulan ramadhan dan/atau setelah shalat sunnah tahajud. Adapun hukum mengerjakan shalat witir adalah sunnah muakkad, yaitu sunnah yang sangat dianjurkan untuk dilaksanakan.</p>
+    <p align="left">Adapun bilangan rakaat shalat witir itu sedikitnya adalah satu rakaat dan sebanyak banyaknya adalah sebelas rakaat. Sebagaimana yang telah diterangkan dalam hadits Nabi SAW yang artinya :
+     <blockquote> 
+       <div align="left">“ Adalah Rasulullah SAW biasa melakukan shalat 11 rakaat antara waktu setelah shalat isya sampai terbit fajar . Beliau salam setiap dua rakaat dan shalat witir 1 rakaat…” (HR Jamaah kecuali Imam Tarmidzi dari Aisyah ra )</div>
+     </blockquote>
+    <p align="justify" class="style13">Beberapa Riwayat dari  Sholat witir itu memiliki keutamaan sbb : </p>
+    <ol align="left">
+	<li>Diriwayatkan dari Ali bin Abi Thalib Rodhiyallohu Anhu bahwa beliau berkata, “Sholat witir memang bukan kewajiban sebagaimana sholat fardlu, akan tetapi ia merupakan sholat yang disunnahkan Rosululloh sholallohu alaihi wa salam. Beliau bersabda, “ sesunggguhnya Allah itu witir (Maha Ganjil) dan menyukai yang ganjil (witir). Oleh karena itu, kerjakanlah sholat witir, ahai generasi qur’an”
+      HR. Abu Dawud (1416), Tirmidzi (453), Nasai (II/228,229) dan Ibnu Majah (1170).</p>
+    <li>Abu Huroiroh Rodhiyallohu Anhu berkata, <blockquote>
+      <div align="left">“ Kekasihku, Nabi sholallohu alaihi wa salam memberikan wasiat kepadaku dengan tiga hal, agar aku tidak meninggalkannya sampai aku mati. Ketiganya adalah puasa tiga hari setiap bulan, Sholat Dluha, dan tidur malam dalam keadaan sudah mengerjakan sholat witir.” </div>
+    </blockquote>
+      HR. Bukhori (1178) dan Muslim (72)</p>
+    <li>Diriwayatkan dari Aisyah rodhiyallohu anha bahwa ia berkata ,<blockquote> 
+      <div align="left">“Dari sepanjang malam, nabi sholallohu alaihi wasalam pernah mengerjakan sholat witir di awal malam (setelah sholat isya’), di tengah malam dan di akhir malam. Waktu sholat witir beliau berakhir hingga waktu sahur (menjelang sholat subuh).</div>
+    </blockquote>
+      HR. Bukhori (II/406), Muslim (745), Nasa’I (III/230), Tirmidzi (357) dan Abu Dawud (1435).</p>
+    <li>Dari Jabir rodhiyallohu anhu,bahwa Rosululloh sholallohu alaihi wa salam bersabda :<br>
+<blockquote>      
+  <div align="left">” Barangsiapa khawatir tidak bias bangun di akhir malam (untuk mengerjakan sholat), maka hendaklah ia mengerjakan sholat witir di awal malam (sebelum tidur). Barang siapa yakin akan bisa bangun di akhir malam , hendaklah ia mengerjakan sholat witir di akhir malam. Sebab sholat di akhir malam itu disaksikan (oleh para malaikat), dan yang demikian itu jelas lebih utama.”</div>
+</blockquote>
+      HR. Muslim (755) dan Tirmidzi (456).</p>
+    <li>Diriwayatkan dari Abdulloh bin Amru bin Ash rodhiyallohu anhu, bahwa Nabi sholallohu alaihi wasalam bersabda, <blockquote>
+      <div align="left">“Sesungguhnya Allah SWT telah memberikan tambahkan satu sholat kepada kalian. Oleh karena itu , jagalah selalu sholat tersebut. Yaitu sholat witir.”</div>
+    </blockquote>
+      Diriwayatkan oleh Ahmad dalam musnadnya (6654)</p>
+    <li>Diriwayatkan dari Abdulloh bin Umar rodhiyallohu anhu, bahwa Nabi sholallohu alaihi wasalam bersabda, <blockquote>
+      <div align="left">“ Dahuluilah sholat subuh dengan sholat witir.”</div>
+    </blockquote>
+    <div align="left"><br>
+      HR. Muslim (750), Tirmidzi (467) dan Abu Dawud (1436).<br>
+      Diriwayatkan dari Abdulloh bin Umar rodhiyallohu anhu, bahwa Nabi sholallohu alaihi wasalam bersabda, </div>
+    <blockquote>
+        <div align="left">“Jadikanlah sholat witir sebagai akhir dari sholat malam kalian di malam hari!.”</div>
+      </blockquote>
+      <div align="left">HR. Bukhori (II/406), Muslim (751), Nasa’I (III/230 dan 231), dan Abu Dawud (1438).
+        </p>
+      </div>
+      <p align="left" class="style11">Abdulloh bin Umar rodhiyallohu anhu berkata, <blockquote>
+      <div align="left">“Barang siapa Mengerjakan sholat malam maka hendaklah ia menjadikan akhir sholatnya itu adalah sholat witir. Sebab yang demikian itu Rosululloh sholallohu alaihi wasalam memerintahkan demikian.”HR. Muslim (751).
+        </p>
+    </div>
+    </blockquote>
+      <li>Diriwayatkan dari Abu Sa’id Al-Khudri rodhiyallohu anhu, bahwa Nabi sholallohu alaihi wasalam bersabda,<blockquote> 
+      <div align="left">“Kerjakan sholat witir sebelum kalian memasuki waktu pagi (sholat subuh)!” </div>
+    </blockquote>
+      HR. Muslim (754), Tirmidzi (468) dan Nasa’I (III/ 231)</p>
+    <li>Diriwayatkan dari Aisyah rodhiyallohu anha, bahwa Nabi sholallohu alaihi wasalam mengerjakan sholat di malam hari, sememtara itu Aisyah tidur mrlintang di hadapan beliau. Ketika tinggal mengerjakan sholat witir, maka beliau membangunkannya, lalu iapun mengerjakan sholat witir .
+      HR. Muslim (744).</p>
+    <li>Diriwayatkan dari Abu Bashroh Al-Ghiffari rodhiyallohu anhu, bahwa Nabi sholallohu alaihi wasalam bersabda,<blockquote> 
+      <div align="left">“Sesunggguhnya Allah memberikan tambahan sholat kepada kalian yaitu sholat witir. Oleh karena itu kerjakanlah sholat witir itu dalam rentang waktu antara sholat isya’ dan sholat fajar.”</div>
+    </blockquote>
+    <div align="left"><br>
+      Diriwayatkan oleh Ahmad dalam musnadnya (6880)
+      </p>
+    </div>
+    <li>Dalam riwayat lain disebutkan, <blockquote>
+      <div align="left">“Ketika Nabi sholallohu alaihi wasalam tinggal mengerjakan sholat witir, maka beliau berkata kepada Aisyah, Bangunlah dan kerjakanlah sholat witir, wahai Aisyah.”</div>
+    </blockquote>
+    <li>Diriwayatkan dari Abu Ayyub Al-Anshori rodhiyallohu anhu, bahwa Nabi sholallohu alaihi wasalam bersabda, <blockquote>
+      <div align="left">“Sholat witir adalah haq (disyariatkan, sangat dianjurkan). Siapa saja boleh mengerjakan dalam lima rokaat, atau tiga rokaat, atau bahkan satu rokaat.”</div>
+    </blockquote>
+      HR. Abu Dawud (1421), Nasa’I (1711), Ibnu Majah (1190) dan Ibnu Hibban dalam shohihnya (2407)</p>
+    
+    </div>
+	</ol>   
+
+	</div> 
+	</div>
+	</div><!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

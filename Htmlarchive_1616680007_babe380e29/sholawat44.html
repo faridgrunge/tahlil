@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Sholawat Mudhoriyah</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br>
+
+يَارَبِّ صَلِّ عَلَى الْمُخْتَارِمِنْ مُضَرِوَاْلأَنْبِيَاوَجَمِيْعِ الرُّسُلِ مَادُكِرُوْا<br>
+
+وَصَلِّ رَبِّ عَلَى الْهَادِي وَشِيْعَتِهِ وَصَحْبِهِ مَنْ لِطَيِّ الدِّيْنِ قَدْ نَشَرُوْا<br>
+
+وَجَاهَدُوْا مَعَهُ فِي اللّٰهِ وَاجْتَهَدُوْا وَهَاجَرُوْاوَلَهُ اَوَوْاوَقَدْنَصَرُوْا<br>
+
+وَبَيَّنُواالْفَرْضَ وَالْمَسْنُوْنَ وَاعْتَصَبُوْا ِللّٰهِ وَاعْتَصَمُوْابِا للّٰهِ فَانْتَصَرُوْا<br>
+
+أَزْكَى صَلَاةٍ وَأَنْمَاهَاوَأَشْرَفَهَا يُعَطِّرُالْكَوْنَ رَيًّانَشْرِهَاالعَطِرُ<br>
+
+مَعْبُوْقَةً بِعَبِيْقِ الْمِسْكِ زَاكِيَةً مِنْ طِيْبِهَاأَرَجُ الرِّضْوَانِ يَنْتَشِرُ<br>
+
+عَدَّالْحَصَى وَالشَّرَى وَالرَّمْلِ يَتْبَعُهَا نَجْمُ السَّمَاوَنَبَاتُ اْلأَرْضِ وَالْمَدَرُ<br>
+
+وَعَدَّوَزْنِ مَثَاقِيْلِ الْجِبَالِ كَمَا يَلِيْهِ قَطْرُجَمِيْعِ الْمَاءِوَالْمَطَرُ<br>
+
+وَعَدَّمَاحَوَتِ الْأَشْجَارُمِنْ وَرَقٍ وَكُلِّ حَرْفٍ غَدَايُتْلَى وَيُسْتَطَرُ<br>
+
+وَالْوَحْشِ وَالطَّيْرِوَاْلأَسْمَاكِ مَعْ نَعَمٍ يَلِيْهِمُ الْجِنُّ وَاْلأَمْلَاكَ وَاْلبَشَرُ<br>
+
+وَالدَّرُّوَالنَّمْلُ مَعْ جَمْعِ الْحُبُوْبِ كَدَا وَالشَّعْرُوَالصُّوْفُ وَاْلأَرْيَاشُ وَالْوَبَرُ<br>
+
+وَمَاأَحَاطَ بِهِ الْعِلْمُ الْمُحِيْطُ وَمَاجَرَى بِهِ الْقَلَمُ الْمَأْمُوْرُوَالْقَدَرُ<br>
+
+وَعَدَّنَعْمَائِكَ اللَّاتِي مَنَنْتَ بِهَاعَلَى الْخَلَائِقِ مُدْكَانُوْاوَمُدْحُشِرُوْا<br>
+
+وَعَدَّمِقْدَارِهِ السَّامِي الَّدِي شَرُفَتْ بِهِ النَّبِيُّوْنَ وَالأَمْلَاكُ وَافْتَخَرُوا<br>
+
+وَعَدَّمَاكَانَ فِي اْلأَكْوَانِ يَاسَنَدِي وَمَايَكُوْنُ إِلَى أَنْ تُبْعَثَ الصُّوَرُ<br>
+
+فِي كُلِّ طَرْفَةِ عَيْنٍ يَطْرِفُوْنَ بِهَاأَهْلُ السَّمَوَاتِ وَاْلأَرْضِيْنَ أَوْيَدَرُ<br>
+
+مِلْءَالسَّمَوَاتِ وَاْلأَرْضِيْنَ مَعَ جَبَلٍ وَالْفَرْشِ وَالْعَرْشِ وَالْكُرْسِي وَمَاحَصَرُوْا<br>
+
+مَاأَعْدَمَ اللّٰهُ مَوْجُوْدًاوَأَوْجَدَمَعْ دُوْمًاصَلَاةًدَوَامًالَيْسَ تَنْحَصِرُ<br>
+
+تَسْتَغْرِقُ الْعَدَّمَعْ جَمْعِ الدُّهُوْرِكَمَا تُحِيْطُ بِالْحَدِّلاَتُبْقِيْ وَلاَتَدَرُ<br>
+
+لَاغَايَةً وَانْتِهَاءًيَاعَظِيْمُ لَهَاوَلَالَهَاأَمَدٌيُقْضَى فَيُعْتَبَرُ<br>
+
+وَعَدَّأَضَعَافِ مَاقَدْمَرَّمِنْ عَدَدٍمَعْ ضِعْفِ أَضْعَافِهِ يَامَنْ لَهُ الْقَدَرُ<br>
+
+كَمَاتُحِبُّ وَتَرْضَى سَيِّدِي وَكَمَاأَمَرْتَنَاأَنْ نُصَلِىَّ أَنْتَ مُقْتَدِرُ<br>
+
+مَعَ السَّلَامِ كَمَاقَدْمَرَّمِنْ عَدَدٍرَبِّي وَضَاعِفْهُمَاوَالْفَضْلُ مُنْتَشِرُ<br>
+
+وَكُلُّ دَلِكَ مَضْرُوْبٌ بِحَقِّكَ فِي أَنْفَاسِ خَلْقِكَ إِنْ قَلُّوْاوَإِنْ كَثُرُوْا<br>
+
+يَارَبِّ وَاغْفِرْلِقَارِيْهَاوَسَامِعِهَاوَالْمُسْلِمِيْنَ جَمِيْعًاأَيْنَمَاحَضَرُوْا<br>
+
+وَوَالِدِيْنَاوَأَهْلِيْنَاوَجِيْرَتِنَاوَكُلُّنَاسَيِّدِي لِلْعَفْوِمُفْتَقِرُ<br>
+
+وَقَدْأَتَيْتُ دُنُوْبًالَاعِدَادَلَهَالَكِنَّ عَفْوَكَ لَايُبْقِي وَلَايَدَرُ<br>
+
+وَالْهَمُّ عَنْ كُلِّ مَاأَبْغِيْهِ أَشْغَلَنِيْ وَقَدْأَتَى خَاضِعًاوَالْقَلْبُ مُنْكَسِرُ<br>
+
+أَرْجُوْكَ يَارَبِّ فِي الدَّارَيْنِ تَرْحَمُنَابِجَاهِ مَنْ فِي يَدَيْهِ سَبَّحَ الْحَجَرُ<br>
+
+يَارَبِّ أَعْظِمْ لَنَاأَجْرًاوَمَغْفِرَةً فَإِنَّ جُوْدَكَ بَحْرٌلَيْسَ يَنْحَصِرُ<br>
+
+وَاقْضِ دُيُوْنًالَهَااْلأَخْلَاقُ ضَائِقَةٌ وَفَرِّجِ الْكَرْبَ عَنَّاأَنْتَ مُقْتَدِرُ<br>
+
+وَكُنْ لَطِيْفًابِنَافِي كُلِّ نَازِلَةٍ لُطْفًاجَمِيْلًا بِهِ اْلأَهْوَالُ تَنْحَسِرُ<br>
+
+بِالْمُصْطَفَى الْمُجْتَبَى خَيْرِاْلأَنَامِ وَمَنْ جَلَالَةً نَزَلَتْ فِي مَدْحِهِ السُّوَرُ<br>
+
+ثُمَّ الصَّلَاةُ عَلَى الْمُخْتَارِمَاطَلَعَتْ النَّهَارِوَمَاقَدْشَعْشَعَ اْلقَمَرُ<br>
+
+ثُمَّ الرِّضَاعَنْ أَبِى بَكْرٍخَلِيْفَتِهِ مَنْ قَامَ مِنْ بَعْدِهِ لِلَّدِيْنِ يَنْتَصِرُ<br>
+
+وَعَنْ أَبِيْ حَفْصٍ الْفَارُوْقِ صَاحِبِهِ مَنْ قَوْلُهُ الْفَصْلُ فِي أَحْكَامِهِ عُمَرُ<br>
+
+وَجُدْلِعُثْمَانَ دِيْ النُّورَيْنِ مَنْ كَمُلَتْ لَهُ الْمَحَاسِنُ فِي الدَّارَيْنِ وَالظَّفَرُ<br>
+
+كَدَاعَلِيٌ مَعَ ابْنَيْهِ وَأُمِّهِمَاأَهْلُ الْعَبَاءِ كَمَا قَدْجَاءَنَاالْخَبَرُ<br>
+
+كَدَاخَدِيْجَتُنَاالْكُبْرَى الَّتِي بَدَلَتْ أَمْوَالَهَالِرَسُوْلِ اللّٰهِ يَنْتَصِرُ<br>
+
+وَاللطَّاهِرَاتُ نِسَاءُالْمُصْطَفَى وَكَدَابَنَاتُهُ وَبَنُوْهُ كُلَّمَادُكِرُوْا<br>
+
+سَعْدٌسَعِيْدُابْنُ عَوْفٍ طَلْحَةٌ وَأَبُوْ عُبَيْدَةً وَزُبَيْرٌسَادَةٌ غُرَرُ<br>
+
+وَحَمْزَةٌ وَكَدَاالْعَبَّاسُ سَيِّدُنَاوَنَجْلُهُ الْحَبْرُمَنْ زَالَتْ بِهِ الْغِيَرُ<br>
+
+وَاْلاَلُ وَالصَّحْبُ وَاْلأَتْبَاعُ قَاطِبَةً مَاجَنَّ لَيْلُ الدَّيَا جِيْ أَوْبَدَاالسَّحَرُ<br>
+
+مَعَ الرِّضَامِنْكَ فِيْ عَفْوٍوَعَافِيَةٍ وَحُسْنِ خَاتِمَةٍ إِنْ يَنْقَضِي الْعُمْرُ</p><br><p><i>Bismillāhir-raḥmānir-raḥīm(i).<br>
+Ya rabbi shalli’alal-mukhtari min mudharin. Wal-anbiya wa jami’irusli madzu-kiru.<br>
+Wa shalli rabbi’alal-hadi wa syi’atihi, Wa shabihi man lithayyid-dini qad nasyaru.<br>
+Wa jahadu ma’ahu fillahi waj-tahadu. Wa hajaru wa lahu awaw wa qad nasharu.<br>
+Wa bayyanul-fardha wal-masnuna wa’tashabu. Lillahi wa’tashamu billahi fantasharu.<br>
+Azka shalatin wa anmaha wa asyrafaha. Yu’athirul-kauna rayyan nasyrihal-‘athiru.<br>
+Ma’buqatan bi’abiqil-miski zakiya-tan. Min thibiha arajur-ridwani yantasyiru.<br>
+‘Addal-hasha wats-tsara war-ramli yatba’uha. Najmus-sama wa nabatul-ardhi wal-madaru.<br>
+Wa’adda wazni matsaqilil-jibali kama. Yalihi qathru jami’il-ma’i wal matharu.<br>
+Wa’adda ma hawatil-asyjaru min waraqin. Wa kulli harfin ghada yutla wa yus-tatharu.<br>
+Wal-wahsyi wath-thairi wal-asmaki ma’ na’amin. Yalihimul-jinnu wal-amlaku wal-basyaru.<br>
+Wadz-dzaru wan-namlu ma’jam’il hububi kadza. Wasy-sya’ru wash-shufu wal-arya-syu wal-wabaru.<br>
+Wa ma ahatha bihil-ilmul-muhithu wa ma. Jara bihil-qalamul-ma’muru wal-qadaru.<br>
+Wa’adda na’ma-ikal lati mananta biha. ‘ALal-khala-iqi mudz kanu wa mudz husyiru.<br>
+Wa ‘adda miqdarihis-samil-ladzi syarufat. Bihin-nabiyyuna wal-amlaku wafta-kharu.<br>
+Wa ‘adda ma kanna fil-akwani ya sanadi. Wa ma yakunu ila an tub’atsash-shuwaru.<br>
+Fi kulli tharfati ‘ainin yathrifuna biha. Ahlus-samawati wal-ardhina au yadzaru<br>
+Mil-as-samawati wal-ardhina ma’a-jabalin. Wal-farsyi wal-‘arsyi wal-kursiy wa ma hasharu.<br>
+Ma-a’damallahu maujuda wa auja-da ma’. Duman shalatan dawaman laisa tan hashiru<br>
+Tastaghriqul-‘adda ma’ jam’id-duhuri kama. Tuhithu bil-haddi la tubqi wa la tadzaru.<br>
+La ghayatan wantiha’an ya ‘azhimu laha. Wa la laha amadun yuqdha fayu’tabaru<br>
+Wa ‘adda adh’afi ma qad marra min ‘adadin. Ma’ dhi’fi adh’afihi ya man lahul-qadaru<br>
+Kama tuhibbu wa tardha sayyidi wa kama. Amartana an nushalliya anta muqtadiru<br>
+Ma’as-salami kama qad marra min ‘adadin. Rabbi wa dha’ifhuma wal-fardhlu muntasyiru.<br>
+Wa kullu dzalika madhrubun bihaqqika fi. Anfasi khalqika in qallu wa in katsuru.<br>
+Ya Rabbi waghfir liqariha wa sami’iha. Wal-muslimina jami’an ainama hadharu.<br>
+Wa walidina wa ahlina wa jiritana. Wa kulluna sayyidi lil-afwi muftaqiru.<br>
+Wa qad ataitu dzunuban la ‘idada laha. Lakinna ‘afwaka la yubqi wa la yadzaru.<br>
+Wal-hammu ‘an kulli ma abghihi asyghalani. Wa qad ata khadi’an wal-qalbu munkasiru.<br>
+Arjuka ya Rabbi fid-daraini tarhamuna. Bijahi man fi yadaihi sabbahal-hajaru.<br>
+Ya Rabbi a’zhim lana ajran wa magh-firatan. Fa inna judaka bahrun laisa yanhashiru.<br>
+Waqdhi duyunan lahal-akhlaqu dha-iqatun. Wa farrijil-karba ‘anna anta muqtadiru.<br>
+Wa kun lathifan bina fi kulli nazilatin. Luthfan jamilan bihil-ahwalu tanhasiru.<br>
+Bil-mushthafal-mujtaba kahiril-anami waman. Jalalatam nazalat fi madhihis-suwaru.<br>
+Tsummash-shalatu ‘alal-mukhtari ma thala’at. Syamsun-nahari wama qad sya’sya’al qamaru.<br>
+Tsummar-ridha ‘an abi bakrin khalifatihi. Man qama min ba’dihi liddini yantashiru.<br>
+Wa ‘an abi hafshil-faruqi shahibihi. Man qauluhul-fashlu fi ahkamihi ‘umaru.<br>
+Wa jud li ‘utsmana dzin-nuraini man kamulat. Lahul-mahasinu fid-daraini wazh-zhafaru.<br>
+Kadza ‘aliyyun ma’abnaihi wa ummihima. Ahlul-‘aba’i kama qad ja’anal-khabaru<br>
+Khadza khadijatunal-kubrallati badzalat. Amwalaha lirasulollahi yantashiru<br>
+Wath-thahiratu nisa-ul-musthafa wa kadza. Banatuhu wa banuhu kullama dzukiru.<br>
+Sa’dun sa’idubnu ‘sufin thalhstun wa abu. ‘Ubaidata wa zubairun sadatun ghuraru.<br>
+Wa Hamzatun wa kadzal-‘abbasu sayyiduna. Wanajluhul-habru man zalat bihil-ghiyaru<br>
+Wal-alu wash-shahbu wal-atba’u qathi-batan. Ma janna lailud-dayaji au badas-saharu<br>
+Ma’ar-ridha minka fi ‘afwin wa ‘afiatin. Wa husni khatimatin in yanqadhil-‘umru.</i></p><br><p>Tuhanku, limpahkanlah rahmat-Mu untuk nabi pilihan dari suku Muhdar, juga untuk seluruh nabi dan rasul yang telah lalu.<br>
+Shalawat-Mu, wahai Tuhanku, atas nabi pembawa hidayah beserta seluruh pengikut dan shabatnya yang telah berjasa menyebarluaskan agama ini. <br>
+Yang telah ikut berjihad dan berijtihad bersama beliau ﷺ, juga yang ikut hijrah bersama beliau ﷺ, dan yang memberi tempat singgah serta memenangkan misi beliau ﷺ.<br>
+Yang telah menerangkan hukum wajib dan sunah secara bersatu padu, berupaya tanpa pamrih, dan berpegang teguh pada agama Allah hingga mereka mendapatkan kemenangan.<br>
+Yaitu shalawat-Mu yang suci sesuci-sucinya, sebanyak-banyaknya, dan semulia-mulianya, yang menebarkan harum semerbak di seluruh alam semesta.<br>
+Keharuman yang bercampur dengan misik kesturi yang mahal, yang aromanya tersebar luaslah keridhoan-Mu.<br>
+Sebanyak jumlah batuan,pasir beserta debunya, juga sebanyak bintang gemintang dilangit, tanaman, dan kerikil di bumi.<br>
+Dan sejumlah beratnya timbangan gunung-gunung, sejumlah seluruh tetesan air yang mengalir dan air hujan.<br>
+Juga sejumlah dedaunan yang terdapat di pepohonan,sebanyak semua huruf yang terbaca oleh lisan dan tertulis oleh pena.<br>
+Sebanyak jenis dan jumlah biantang liar, burung-burung, ikan dan hewan ternak. Juga sejumlah jin, malaikat dan manusia.<br>
+Sebanyak jumlah atom,semut dan semua jenis biji-bijian, juga sejumlah helai rambut manusia,hewan, dan bulu segala jenis binatang.<br>
+Seluas kandungan ilmu Allah tentang makhluk dan apa yang ditulis qalam (pena) yang memuat suratan takdir.<br>
+Sebanyak nikmat-nikmat-Mu, yang telah Engkau karuniakan kepada semua makhluk-Mu yang dahulu dan yang akan datang.<br>
+Setinggi jumlah derajat yang di capai oleh masing-masing nabi dan malaikat yang mulia, dengan maqam tersebut.<br>
+Sebanyak apa yang pernah ada kemudian tiada di alam jagat raya, dan apa yang masih ada maupun yang akan ada sampai kiamat.<br>
+Sebanyak tiap kedipan mata yang di gerakan setiap penduduk langit dan bumi.<br>
+Sepenuh isi langit dan bumi, gunung dan hamparan, dan seluas arsy, kursy, dan semua yang terdapat di dalamnya.<br>
+Yang terus-menerus tiada henti selama Allah meniadakan yang ada dan mengadakan yang tiada, dengan berkelanjutan tanpa batas.<br>
+Yang melampai batas tanpa hitungan, dan menembus seluruh zaman, yang terus berjalan menjangkau apap un tanpa menyisakan.<br>
+Yang tak berujung, tak berpangkal dan tak kenal habis, wahai Dzat Yang Maha Agung, Yang tak mengenal batas waktu hingga tak bisa di kira-kira.<br>
+Sebanyak jumlah kelipatan jumlah yang telah tersebut, ditambah kelipatan dari kelipatan tersebut, Wahai Dzat Yang Maha Kuasa melakukan segala sesuatu.<br>
+Seperti yang Engkau sukai dan ridhoi, seperti shalawat yang Engkau perintahkan kepada kami, Engkaulah Yang Maha Kuasa.<br>
+Beserta salam yang jumlahnya juga sebanyak bilangan di atas, ya Rabbi. Bahkan lipat gandakan nilai bilangan shalawat dan salam kami terus-menerus. Anugerah-Mu tak terbatas.<br>
+Dan setiap shalawat serta salam tersebut dikalikan dengan jumlah seluruh nafas makhluk-Mu, baik yang sedikit maupun yang banyak.
+Dan,Tuhanku, hapuskanlah dosa-dosa orang yang membaca shalawat ini, juga yang mendengarnya dan semua muslimin di  mana pun mereka berada.<br>
+Juga kedua orang tua kami,tetangga kami. Dan kami semua, oh Tuhan, sangat membutuhkan ampunan-Mu.<br>
+Sungguh, aku telah melakukan dosa-dosa yang tak terhitung jumlahnya, tetapi luasnya ampunan-Mu dapat menghapuskan dosa-dosa tersebut sampai tak tersisa.<br>
+Kepayahan dalam usaha mencari apa yang kuharapkan telah menyita banyak waktuku, sekarang aku datang bersimpuh di hadapan-Mu dalam kehinaan.<br>
+Tuhanku,aku memohon agar Engkau mengasihi kali didunia dan akhirat dengan kemuliaan orang yang batupun bertasbih di tangannya (Nabi Muhammad ﷺ).<br>
+Ya Tuhanku, besarkan dan limpahkan untuk kami pahala serta ampunan-Mu, karena kemurahan-Mu bagai lautan tak bertepi.<br>
+Dan lunaskanlah hutang-hutang kami, yang membuat ruang gerak kami seakan menjadi sempit, dan bebaskan kami dari kesulitan yang menimpa kami, Engkau Maha kuasa.<br>
+Dan kasihanilah kami pada setiap bencana yang melanda kami, karena dengan kasih-Mu segala yang menakutkan itu akan sirna.<br>
+Dengan kemuliaan Al-Mushthafa Al-Mujtaba (Rasulullah ﷺ), sebaik-baik manusia, yang telah turun ayat-ayat suci berisi pujian dan sanjungan terhadap Rasulullah ﷺ.<br>
+Kemudian sebagai penutup,semoga kasih sayang-Mu selalu terlimpah untuk Al-Mukhtar (Yang Terpilih, Rasulullah ﷺ), selama matahari masih terbit dan rembulan masih memancarkan sinarnya.<br>
+Kami memohon pula ridho-Mu untuk Khalifah Abu Bakar, yang telah berjasa mengemban misi agama ini setelah beliau ﷺ tiada hingga berhasil.<br>
+Begitu pula untuk Abu Hafsh Al-Faruq Umar bin Khathab, orang yang perkataannya terkenal selalu benar dan yang tegas dalam berhukum.<br>
+Juga untuk Utsman bin Affan Dzun-Nurain (orang yg memiliki dua cahaya), yang memiliki kebaikan dan kemenangan sempurna dunia dan akhirat.<br>
+Juga untuk Ali serta kedua putranya dan ibu kedua putranya (Sayidah Fatimah), mereka itu adalah Ahlul-Aba (keluarga dalam pelukan kasih sayang Nabi) sebagaimana di sebutkan dalam hadis.<br>
+Begitu pula untuk Khodijah Al-Kubra, wanita yang mengorbankan hartanya untuk dakwah Rasulullah hingga beliau ﷺ meraih kemenangan.<br>
+Dan para wanita suci, istri-istri Nabi Al-Musthafa, juga untuk putra dan putri beliau ﷺ selama mereka dikenang.<br>
+Juga untuk para sahabat Nabi, Sa’ad bin Abi Waqas, Sa’id bin Jubair, Abdurahman bin Auf, Thalhah bin Ubaidillah, Abu Ubaidah bin Jarrah dan Zubair bin Awwam, pemimpin-pemimpin yang berwibawa.<br>
+Begitu juga untuk Hamzah dan Abbas beserta putranya (Abdullah bin Abbas), seorang ulama yang dapat menyelesaikan berbagai masalah sesulit apapun.<br>
+Dan untuk keluarga, sahabat, dan pengikutnya selama malam masih beredar, atau selama fajar masih menyingsing.<br>
+(Semua itu) beserta keridhaan, ampunan serta kesejahteraan dari-Mu, dan semoga khusnul khatimah dapat tercapai menjelang ajal nanti.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Shalawat Mudhoriyah adalah salah satu syair karya Imam Al-Bushiri. Dinamakan Mudhoriyah karena salah satu Datuk Nabi Muhammad ﷺ yang bernama Mudhor.</p><p><strong>
+</strong></p>
+
+
+
+
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

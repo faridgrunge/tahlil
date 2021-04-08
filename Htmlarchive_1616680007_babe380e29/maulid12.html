@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Maulid Simthud-Durar - Bagian 3</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللّٰه الرَّحْمَنِ الرَّحِيْمِ <br>
+اَلْحَمْدُلِلَّهِ الْقَوِيِّ سُلْطَانُهْ ۞ اَلْوَاضِحِ بُرْهَانُهْ ۞ اَلْمَبْسُوْطِ فِي الْوُجُوْدِ كَرَمُهُ وَاِحْسَانُهْ ۞ تَعَالَى مَجْدُهُ وَعَظُمَ شَأْنُهْ ۞ خَلَقَ الْخَلْقَ لِحِكْمَهْ ۞ وَطَوَى عَلَيْهَا عِلْمَهْ ۞ وَبَسَطَ لَهُمْ مِنْ فَآئِضِ الْمِنَّةِ مَا جَرَتْ بِهِ فِى اَقْدَارِهِ الْقِسْمَةْ ۞ فَأَرْسَلَ إِلَيْهِمْ اَشْرَفَ خَلْقِهِ وَاَجَلَّ عَبِيْدِهِ رَحْمَة ۞ تَعَلَّقَتْ اِرَادَتُهُ الْأَزَلِيَّةُ بِخَلْقِ هٰذَا الْعَبْدِ الْمَحْبُوْبِ ۞ فَانْتَشَرَتْ اَثَارُ شَرَفِهِ فِي عَوَالِمِ الشَّهَادَةِ وَالْغُيُوْبْ ۞ فَمَا اَجَلَّ هٰذَا الْمَنَّ الَّذِيْ تَكَرَّمَ بِهِ الْمَنَّانْ ۞ وَمَا اَعْظَمَ هٰذَا  الْفَضْلَ الَّذِيْ بَرَزَ مِنْ حَضْرَةِ الْإِحْسَانْ ۞ صُوْرَةً كَامِلَةً ظَهَرَتْ فِي هَيْكَلٍ مَحْمُوْدْ ۞ فَتَعَطَّرَتْ بِوُجُوْدِهَا اَكْنَافُ الْوُجُوْدِ ۞ وَطَرَّزَتِ بُرْدَ الْعَوَالِمِ بِطِرَازِ التَّكْرِيْم ۞
+اللّٰهُـمَّ صَلِّ وَسَلِّمْ اَشْرَفَ الصَّلَاةِ وَالتَّسْلِيْمِ عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدِ نِ الرَّؤُوْفُ الرَّحِيْمِ<br>
+تَجَلَّى الْحَقُّ فِي عَالِمِ قُدْسِهِ الْوَاسِعْ ۞ تَجَلِيًّا قَضَى بِإنْتِشَارِ فَضْلِهِ فِي الْقَرِيْبِ وَالشَّاسِعْ ۞ فَلَهُ الْحَمْدُ الَّذِيْ لَا تَنْحَصِرُ اَفْرَادُهُ بِتِعْدَادْ ۞ وَلَايُمَلُّ تَكْرَارُهُ بِكَثْرَةِ تَرْدَادْ ۞ حَيْثُ اَبْرَزَ مِنْ عَالَمِ الْأِمْكَانْ ۞ صُوْرَةَ هٰذَا الْأِنْسَانْ ۞ لِيَتَشَرَّفَ بِوُجُوْدِهِ الثَّقَلاَنْ ۞ وَتَنْتَشِرَ اَسْرَارَهُ فِي الْأَكْوَانْ ۞ فَمَا مِنْ سِرٍّ اتَّصَلَ بِهِ قَلْبُ مُنِيْبْ ۞ اِلَّا مِنْ سَوَابِغِ فَضْلِ اللّٰهِ عَلَى هٰذَا الْحَبِيْبِ يَالَقَلْبٍ سُرُوْرُهُ قَدْ تَوَلَّى بِحَبِيْبٍ عَمَّ الْاَنَامَ نَوَالَا جَلَّ مَنْ شَرَّفَ الْوُجُوْدَ بِنُوْرٍ غَمَّرَ الْكَوْنَ بَهْجَةً وَجَمَالَا قَدْ تَرَقَّى فِى الْحُسْنِ اَعْلَى مَقَامٍ وَتَنَاهَى فِى مَجْدِهِ وَتَعَالَى لَا حَظَتْهُ الْعُيُوْنُ فِيمَا اجْتَلَتْهُ بَشَرًا كَامِلًا يُزِيْحُ الضَّلَالاَ وَهْوَ مِنْ فَوْقِ عِلْمٍ مَا قَدْ رَأَتْهُ رِفْعَةً فِى شُؤُوْنِهِ وَكَمَالَا فَسُبْحَانَ الَّذِيْ اَبْرَزَ مِنْ حَضْرَةِ الْأِمْتِنَان ۞ مَا يَعْجِزُ عَنْ وَصْفِهِ اللِّسَانِ ۞ وَيَحَارُ فِي تَعَقُّلِ مَعَانِيْهِ الْجَنَان ۞ اِنْتَشَرَ مِنْهُ فِي عَالِمِ الْبُطُوْنِ وَالظُّهُوْر ۞ مَا مَلَاءَ الْوُجُوْدَ الْخَلْقِيَّ نُوْر ۞ فَتَبَارَكَ اللّٰهُ مِنْ اِلٰهٍ كَرِيْمٍ ۞ بَشَّرَتْنَا اَيَاتُهُ فِي الذِّكْرِ الْحَكِيْم ۞ بِبِشَارَةِ - لَقَدْ جَآءَكُمْ رَسُوْلٌ مِنْ اَنْفُسِكُم ۞ عَزِيْزٌ عَلَيْهِ مَا عَنِتُّمْ حَرِيْصٌ عَلَيْكُمْ بِالْمُؤْمِنِيْنَ رَؤُوْفٌ رَحِيْم ۞ فَمَنْ فَاجَأَتْهُ هَذِهِ الْبِشَارَةُ وَتَلَقَّاهَا بِقَلْبٍ سَلِيْم ۞ فَقَدْ هُدِيَ اِلَى صِرَاطٍ مُسْتَقِيْم ۞<br>
+اَللّٰهُـمَّ صَلِّ وَسَلِّمْ اَشْرَفَ الصَّلَاةِ وَالتَّسْلِيْم عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدِ نِ الرَّؤُوْفُ الرَّحِيْمِ<br>
+وَاَشْهَدُ اَنْ لَا اِلَهَ اِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيْكَ لَهُ شَهَادَةً تُعْرِبُ بِهَا اللِّسَانْ ۞ عَمَّا تَضَمَّنَهُ الْجِنَانْ ۞ مِنَ التَّصْدِيْقِ بِهَا وَالْاِذْعَانْ ۞ تَثْبُتُ بِهَا فِي الصُّدُوْرِ مِنَ الْإِيْمَانِ قَوَاعِدُه ۞ وَتَلُوْحُ عَلَى اَهْلِ الْيَقِيْنِ مِنْ سِرِّ ذٰلِكَ الْأِذْعَانِ وَالتَّصْدِيْقِ شَوَاهِدُهُ ۞ وَاَشْهَدُ اَنَّ سَيِّدَنَا مُحَمَّدَنِ الْعَبْدُ الصَّادِقَ فِي قَوْلِهِ وَفِعْلِهْ ۞ وَالْمُبَلِّغَ عَنِ اللّٰهِ مَا اَمَرَهُ بِتَبْلِيْغِهِ لِخَلْقِهِ مِنْ فَرْضِهِ وَنَفْلِهْ ۞ عَبْدٌ اَرْسَلَهُ اللّٰهُ لِلْعَالَمِيْنَ بَشِيْرًا وَنَذِيْرًا ۞ فَبَلَّغَ الرِّسَالَةْ ۞ وَاَدَّى الْأَمَانَةْ ۞ وَهَدَى اللّٰهُ بِهِ مِنَ الْأُمَّةِ بَشَرًا كَثِيْرًا ۞ فَكَانَ فِي ظُلْمَةِ الْجَهْلِ لِلْمُسْتَبْصِرِيْنَ سِرَاجاً وَقَمَرًا مُنِيْرًا ۞ فَمَا اَعْظَمَهَا مِنْ مِنَّةٍ تَكَرَّمَ اللّٰهُ بِهَا عَلَى الْبَشَرْ ۞ وَمَا اَوْسَعَهَا مِنْ نِعْمَةٍ اِنْتَشَرَ سِرُّهَا فِي الْبَحْرِ وَالْبَرْ ۞ اللّٰهُـمَّ صَلِّ وَسَلِّمْ بِاَجَلِّ الصَّلَوَاتِ وَاَجْمَعِهَا وَاَزْكَى التَّحِيَّاتِ وَاَوْسَعِهَا ۞ عَلَى هٰذَا الْعَبْدِ الَّذِيْ وَفَّى بِحَقِّ الْعُبُوْدِيَّةْ ۞ وَبَرَزَ فِيْهَا فِي خِلْعَةِ الْكَمَالْ ۞ وَقَامَ بِحَقِّ الرُّبُوْبِيَّةِ فِي مَوَاطِنِ الْخِدْمَةِ ِللّٰهِ وَاَقْبَلَ عَلَيْهِ غَايَةَ الْإِقْبَالْ ۞ صَلَاةً يَتَّصِلُ بِهَا رُوْحُ الْمُصَلَّي عَلَيْهِ بِهِ ۞ فَيَنْبَسِطُ فِي قَلْبِهِ نُوْرُ سِرِّ تَعَلُّقِهِ بِهِ وَحُبِّهِ ۞ وَيُكْتَبُ بِهَا بِعِنَايَةِ اللّٰهِ فِي حِزْبِه ۞ وَعَلَى اٰلِهِ وَصَحْبِهِ اَلَّذِيْنَ ارْتَقَوْا صَهْوَةَ الْمَجْدِ بِقُرْبِهِ ۞ وَتَفَيَّأُوْا ظِلَالَ الشَّرَفَ الْأَصْلِيِّ بِوُدِّهِ وَحُبِّهِ ۞ مَا عَطَّرَ الْأَكْوَانَ بِنَشْرِ ذِكْرَاهُمْ نَسِيْمْ ۞<br>
+اللّٰهُـمَّ صَلِّ وَسَلِّمْ اَشْرَفَ الصَّلَاةِ وَالتَّسْلِيْم عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدِ نِ الرَّؤُوْفُ الرَّحِيْمِ<br>
+اَمَّا بَعْدُ - فَلَمَّا تَعَلَّقَتْ اِرَادَةُ اللّٰه فِي الْعِلْمِ الْقَدِيْم ۞ بِظُهُوْرِ اَسْرَارِ التَّخْصِيْصِ لِلْبَشَرِ الْكَرِيْم ۞ بِالتَّقْدِيْمِ وَالتَّكْرِيْمِ ۞ نَفَذَتِ الْقُدْرَةُ الْبَاهِرَةْ ۞ بِالنِّعْمَةِ الْوَاسِعَةِ وَالْمِنَّةِ الْغَامِرَة ۞ فَانْفَلَقَتْ بَيْضَةُ التَّصْوِيْر ۞ فِي الْعَالَمِ الْمُطْلَقِ الْكَبِيْر ۞ عَنْ جَمَالٍ مَشْهُوْدٍ بِالْعَيْن ۞ حَاوٍ لِوَصْفِ الْكَمَالِ الْمُطْلَقِ وَاْلحُسْنِ التَّامِّ وَالزَّيْن ۞ فَتَنَقَّلَ ذٰلِكَ الْجَمَالُ الْمَيْمُوْن ۞ فِي الْأَصْلَابِ الْكَرِيْمَةِ وَالْبُطُوْن ۞ فَمَا مِنْ صُلْبٍ ضَمَّتْ ۞ اِلَّا وَتَمَّتْ عَلَيْهِ مِنَ اللّٰهِ النِّعْمَة ۞ فَهُوَ الْقَمَرُ التَّامُّ الَّذِيْ يَتَنَقَّلُ فِي بُرُوْجِهِ ۞ لِيَتَشَرَّفَ بِهِ مَوْطِنُ اسْتِقْرَارِهِ وَمَوْضِعُ خُرُوْجِهِ ۞ وَقَدْ قَضَتِ الْأَقْدَارُ الْأَزَلِيَّةُ بِمَا قَضَتْ وَاَظْهَرَتْ مِنْ سِرِّ هٰذَا النُّوْرِ مَا اَظْهَرَت ۞ وَخَصَّصَتْ بِهِ مَنْ خَصَّصَتْ ۞ فَكَانَ مُسْتَقَرُّهُ فِي الْأَصْلَابِ الْفَاخِرَة ۞ وَالْأَرْحَامِ الشَّرِيْفَةِ الطَّاهِرَة ۞ حَتَّى بَرَزَ فِي عَالَمِ الشَّهَادَةِ بَشَرًا لَا كَالْبَشَر ۞ وَنُوْرًا حَيَّرَ الْأَفْكَارَ ظُهُوْرُهُ وَبَهَر ۞ فَتَعَلَّقَتْ هِمَّةُ الرَّاقِمِ لِهَذِهِ الْحُرُوْف ۞ بِأَنْ يَرْقُمَ فِي هٰذَا الْقِرْطَاسِ مَاهُوَ لَدَيْهِ مِنْ عَجَائِبِ ذَلِكَ النُّوْرِ مَعْرُوْف ۞ وَإِنْ كَانَتِ الْأَلْسُنُ لَا تَفِيْ بِعُشْرِ مِعْشَارِ اَوْصَافِ ذٰلِكَ الْمَوْصُوْف ۞ تَشْوِيْقًا لِلسَّامِعِيْن ۞ مِنْ خَوَاصِّ الْمُؤْمِنِيْن ۞ وَتَرْوِيْحًا لِلْمُتَعَلِّقِيْنَ بِهٰذَا النُّوْرِ الْمُبِيْن ۞ وَاِلَّا فَاَنَّى تُعْرِبُ الْأَقْلَام ۞ عَنْ شُؤُوْنِ خَيْرِ الْأَنَام ۞ وَلٰكِنْ هَزَّنيِ اِلَى تَدْوِيْنِ مَا حَفِظْتُهُ مِنْ سِيَرِ اَشْرَفِ الْمَخْلُوْقِيْن ۞ وَمَا اَكْرَمَهُ اللّٰهُ بِهِ فِي مَوْلِدِهِ مِنَ الْفَضْلِ الَّذِي عَمَّ الْعَالَمِيْن ۞ وَبَقِيَتْ رَايَتُهُ فِي الْكَوْنِ مَنْشُوْرَةً عَلَى مَرِّ الْأَيَّامِ وَالشُّهُوْرِ وَالسِّنِيْن ۞ دَاعِي التَّعَلُّقِ بِهٰذِهِ الْحَضْرَةِ الْكَرِيْمَة ۞ وَلَاعِجُ التَّشَوُّقِ اِلَى سَمَاعِ اَوْصَافِهَا الْعَظِيْمَة ۞ وَلَعَلَّ اللّٰهُ يَنْفَعُ بِهِ الْمُتَكَلِّمُ وَالسَّامِع ۞ فَيَدْخُلَانِ فِي شَفَاعَةِ هٰذَا النَّبِيِّ الشَّافِع ۞ وَيَتَرَوَّحَانِ بِرُوْحِ ذٰلِكَ النَّعِيْم ۞<br>
+اللّٰهُـمَّ صَلِّ وَسَلِّمْ اَشْرَفَ الصَّلَاةِ وَالتَّسْلِيْم عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدِ نِ الرَّؤُوْفُ الرَّحِيْمِ<br>
+وَقَدْ آنَ لِلْقَلَمِ اَنْ يَخُطَّ مَا حَرَّكَتْهُ فِيْهِ الْأَنَامِلْ ۞ مِمَّا اسْتَفَادَهُ الْفَهْمُ مِنْ صِفَاتِ هٰذَا الْعَبْدِ الْمَحْبُوْبِ الْكَامِل ۞ وَشَمَائِلِهِ الَّتِي هِيَ اَحْسَنُ الشَّمَائِل ۞ وَهُنَا حَسُنَ اَنْ نُثْبِتَ مَا بَلَغَ اِلَيْنَا فِي شَأْنِ هٰذَا الْحَبِيْبِ مِنْ اَخْبَارٍ وَأَثَار ۞ لِيَتَشَرَّفَ بِكِتَابَتِهِ الْقَلَمُ وَالْقِرْطَاسُ وَتَتَنَزَّهَ فِي حَدَائِقِهِ الْأَسْمَاعُ وَالْأَبْصَار ۞ وَقَدْ بَلَغَنَا فِي الْأَحَادِيْثِ الْمَشْهُوْرَة ۞ أَنَّ اَوَّلَ شَيْءٍ خَلَقَهُ اللّٰهُ هُوَ النُّوْرُ الْمُوْدَعُ فِي هٰذِهِ الصُّوْرَة ۞ فَنُوْرُ هٰذَا الْحَبِيْبِ اَوَّلُ مَخْلُوْقٍ بَرَزَ فِي الْعَالَم ۞ وَمِنْهُ تَفَرَّعَ الْوُجُوْدُ خَلْقًا بَعْدَ خَلْقٍ فِيْمَا حَدَثَ وَمَا تَقَادَم ۞ وَقَدْ اَخْرَجَ عَبْدُالرَّزَّاقِ بِسَنَدِهِ عَنْ جَابِرِ بْنِ عَبْدِ اللّٰهِ الْأَنْصَارِيِّ رَضِيَ اللّٰهُ عَنْهُمَا قَالَ - قُلْتُ يَارَسُوْلَ اللّٰه بِاَبِي وَاُمِّي اَخْبِرْنِي عَنْ اَوَّلِ شَيْءٍ خَلَقَهُ اللّٰهُ قَبْلَ الْأَشْيَآء ۞ قَالَ يَاجَابِرُ إِنَّ اللّٰهَ خَلَقَ قَبْلَ الْأَشْيَآءِ نُوْرَ نَبِيِّكَ مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ مِنْ نُوْرِه ۞ وَقَدْ وَرَدَ مِنْ حَدِيْثِ اَبِي هُرَيْرَةَ رَضِيَ اللّٰه عَنْهُ اَنَّهُ قَالَ ۞ قَالَ - رَسُوْلُ اللّٰه صَلَّى اللّٰه عَلَيْهِ وَسَلَّمَ كُنْتُ اَوَّلَ النَّبِيِّيْنَ فِي الْخَلْقِ وَآخِرَهُمْ فِي الْبَعْثِ ۞ وَقَدْ تَعَدَّدَتِ الرِّوَايَاتُ بِاَنَّهُ اَوَّلُ الْخَلْقِ وُجُوْدًا وَاَشْرَفُهُمْ مَوْلُوْدًا ۞ وَلَمَّا كَانَتِ السَّعَادَةُ الْأَبْدِيَّة ۞ لَهَا مُلَاحَظَةٌ خَفِيَّةٌ اِخْتَصَّتْ منَ شَاءَتْ مِنَ الْبَرِيَّة ۞ بِكَمَالِ الْخُصُوْصِيَّة ۞ فَاسْتَوْدَعَتْ هٰذَا النُّوْرَ الْمُبِيْن ۞ اَصْلَابَ وَبُطُوْنَ مِنْ شَرَّفَتْهُ مِنَ الْعَالَمِيْن ۞ فَتَنَقَّلَ هٰذَا النُّوْرُ مِنْ صُلْبِ اَدَمَ وَنُوْحٍ وَ إِبْرَاهِيْم ۞ حَتَّى اَوْصَلَتْهُ يَدُ الْعِلْمِ الْقَدِيْم ۞ اِلَى مَنْ خَصَّصَتْهُ بِالتَّكْرِيْمِ اَبِيْهِ الْكَرِيْم ۞ عَبْدِ اللّٰهِ ابْنِ عَبْدِالْمُطَّلِبِ ذِيْ الْقَدْرِالْعَظِيْم ۞ وَاُمُّهُ الَتِي هِيَ فِي الْمُخَاوِفِ آمِنَة ۞ اَلسَّيِّدَةِ الْكَرِيْمَةِ اَمِنَة ۞ فَتَلَقَّاهُ صُلْبُ عَبْدُاللّٰهِ فَاَلْقَاهُ اِلَى بَطْنِهَا ۞ فَضَمَّتْهُ اَحْشَاؤُهَا بِمَعُوْنَةِ اللّٰهِ مُحَافَظَةً عَلَى حَقِّ هٰذِهِ الدُّرَّةِ وَصَوْنِهَا ۞ فَحَمَلَتْهُ بِرِعَايَةِ اللّٰهِ كَمَا وَرَدَ عَنْهَا حَمْلاً خَفِيْفًا لَا تَجِدُ لَهُ ثِقَلًا ۞ وَلَا تَشْكُوْا مِنْهُ اَلَمًا وَلَا عِلَلًا ۞ حَتَّى مَرَّ الشَّهْرُ بَعْدَ الشَّهْرِ مِنْ حَمْلِه ۞ وَقَرُبَ وَقْتُ بُرُوْزِهِ اِلَى عَالَمِ الشَّهَادَةِ لِتَنْبَسِطَ عَلَى اَهْلِ هٰذَا الْعَالَمِ فَيُوْضَاتُ فَضْلِه ۞ وَتَنْتَشِرَ فِيْهِ اَثَارُ مَجْدِهِ الصَّمِيْم ۞<br>
+اللّٰهُـمَّ صَلِّ وَسَلِّمْ اَشْرَفَ الصَّلَاةِ وَالتَّسْلِيْم عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدِ نِ الرَّؤُوْفُ الرَّحِيْمِ<br>
+وَمُنْذُ عَلِقَتْ بِهِ هَذِهِ الدُّرَّةُ الْمَكْنُوْنَة ۞ وَالْجَوْهَرَةُ الْمَصُوْنَة وَالْكَوْنُ كُلُّهُ يُصْبِحُ وَيُمْسِيْ فِي سُرُوْرٍ وَابْتِهَاج ۞ بِقُرْبِ ظُهُوْرِ اِشْرَاقِ هٰذَا  السِّرَاج ۞ وَالْعُيُوْنُ مُتَشَوِّفَةٌ اِلَى بُرُوْزِه ۞ مُتَشَوِّقَةٌ اِلَى الْتِقَاطِ جَوَاهِرِ كُنُوْزِه ۞ وِكُلُّ دَآبَّةٍ لِقُرَيْشٍ نَطَقَتْ بِفَصِيْحِ الْعِبَارَة ۞ مُعْلِنَةً بِكَمَالِ الْبِشَارَة ۞ وَمَا مِنْ حَامِلٍ حَمَلَتْ فِي ذَلِكَ الْعَامِ ۞ اِلَّا اَتَتْ فِي حَمْلِهَا بِغُلَامِ ۞ مِنْ بَرَكَاتِ وَسَعَادَةِ هٰذَا الْأِمَامِ ۞ وَلَمْ تَزَلِ الْأَرْضُ وَالسَّمَوَات ۞ مُتَضَمِّخَةً بِعِطْرِ الْفَرَحِ بِمُلَاقَاةِ اَشْرَفِ الْبَرِيَّاتْ ۞ وَبُرُوْزِهِ مِنْ عَالَمِ الْخَفَاءِ اِلَى عَالَمِ الظُّهُوْرِ ۞ بَعْدَ تَنَقُّلِهِ فِى الْبُطُوْنِ وَالظُّهُوْرِ ۞ فَاَظْهَرَاللّٰهُ فِي الْوُجُوْدِ بَهْجَةَ التَّكْرِيْمِ ۞ وَبَسَطَ فِي الْعَالَمِ الْكَبِيْرِ مَائِدَةَ التَّشْرِيْفِ وَالتَّعْظِيْمِ ۞ بِبُرُوْزِ هٰذَا  الْبَشَرِالْكَرِيْمِ ۞<br>
+اللّٰهُـمَّ صَلِّ وَسَلِّمْ اَشْرَفَ الصَّلَاةِ وَالتَّسْلِيْم عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدِ نِ الرَّؤُوْفُ الرَّحِيْمِ<br>
+فَحِيْنَ قُرَبَ اَوَانَ وَضْعِ هٰذَا  الْحَبِيْب ۞ اَعْلَنَتِ السَّمَوَاتُ وَالْأَرَضُوْنَ وَمَنْ فِيْهِنَّ بِالتَّرَاحِيْب ۞ وَاَمْطَارُ الْجُوْدِ اْلاِلٰهِيِّ عَلَى اَهْلِ الْوُجُوْدِ تَثِج ۞ وَاَلْسِنَةُ الْمَلَائِكَةِ بِالتَّبْشِيْرِ لِلْعَالَمِيْنَ تَعِج ۞ سُبْحَانَ اللّٰهِ وَالْحَمْدُلِلَّهِ وَلَااِلٰهَ اِلَّااللّٰهُ وَاللّٰهُ اَكْبَر (ثلاثا) وَالْقُدْرَةُ كَشَفَتْ قِنَاعَ هٰذَا  الْمَسْتُوْر ۞ لِيَبْرُزَ نُوْرُهُ كَامِلًا فِي عَالَمِ الظُّهُوْر ۞ نُوْرًا فَاقَ كُلَّ نُوْر ۞ وَاَنْفَذَالْحَقُّ حُكْمَه ۞ عَلَى مَنْ اَتَمَّ اللّٰهُ عَلَيْهِ النِّعْمَة ۞ مِنْ خَوَاصِّ الْأُمَّة ۞ اَنْ يَحْضُرَ عِنْدَ وَضْعِهِ اُمَّةْ ۞ تَاْنِيْساً لِجَنَابِهَا الْمَسْعُوْد ۞ وَمُشَارَكَةً لَهَا فِي هٰذَا  السِّمَاطِ الْمَمْدُوْد ۞ فَحَضَرَتْ بِتَوْفِيْقِ اللّٰهِ السَّيِّدَةُ مَرْيَمُ وَالسَّيِّدَةُ اَسِيَة ۞ وَمَعَهُمَا مِنَ الْحُوْرِالْعِيْنِ مَنْ قَسَمَ اللّٰهُ لَهُ مِنَ الشَّرَفِ بِالْقِسْمَةِ الْوَافِيَة ۞ فَاَتَى الْوَقْتُ الَّذِيْ رَتَّبَ اللّٰهُ عَلَى حُضُوْرِهِ وُجُوْدَ هٰذَا  الْمَوْلُوْد ۞ فَانْفَلَقَ صُبْحُ الْكَمَالِ مِنَ النُّوْرِ عَنْ عَمُوْد ۞ وَبَرَزَ الْحَامْدُ الْمَحْمُوْد ۞ مُذْعِناً لِلَّهِ بِالتَّعْظِيْمِ وَالسُّجُوْ ۞</p><br><br><p><i>Bismillāhir-raḥmānir-raḥīm.<br>
+Alḥamdu lillāhil-qawiyyi sulthānuh. ۞ Alwādhihi burhānuh. ۞ Almabsūthi fil-wujūdi karamuhu wa iḥsānuh. ۞ Ta-'ālā majduhu wa 'azhuma syānuh. ۞ Khalaqal-khalqa li-ḥikmah. ۞ Wa thawā 'alayhā 'ilmah. ۞ Wa basatha lahum min fā-idhil-minnati mā jarat bihi fī aqdārihil-qismah. ۞ Fa-arsala ilaiyhim asyrafa khalqihi wa ajalla 'abīdihi raḥmah. ۞ Ta-'allaqat irādatuhul-azaliyyatu bi-khalqi hadzal-'abdil-maḥbūb. ۞ Fantasyarat a-tsāru syarafihi fī 'awālimisy-syahādati wal-ghuyūb. ۞ Famā ajalla hadzal-mannal-ladzī takarrama bihil-mannān. ۞ Wa mā a'zhama hadzal-fadhlal-ladzī baraza min ḥadhratil-iḥsān. ۞ Shūratan kāmilatan zhaharat fī haykalin maḥmūd. ۞ Fata-'aththarat bi-wujūdihā aknāful-wujūd. ۞ Wa tharrazat burdal-'awālimi bi-thirāzit-takrīm. ۞
+<br>Allāhumma shalli wa sallim asyrafash-shalāti wat-taslīm 'alā sayyidinā wa Nabiyyinā Muḥammadinir-ra-ūfur-raḥīm.
+<br>Tajallal-haqqi fī 'ālami qudsihil-wāsi'. ۞ Tajaliyyan qadhā bi-intisyāri fadhlihi fil-qarībi wasy-syāsi'. ۞ Falahul-ḥamdul-ladzī lā tanḥashiru afrāduhu bi-ta'dād. ۞ Wa lā yumallu takrāruhu bi-kats-rati tardād. ۞ ḥaytsu abraza min 'ālamil-imkān. ۞ Shūrata hadzal-insān. ۞ Li-yatasyarrafa bi-wujūdihits-tsaqalān. ۞ Wa tantasyira asrāruhu fil-akwān. ۞ Famā min sirrit-tashala bihi qalbu munīb. ۞ Illā min sawābighi fadhlillāhi 'alā hadzal-ḥabībi yā laqalbin surūruhu qad tawallā biḥabībin 'ammal-anāma nawālā jalla man syarrafal-wujūda bi-nūrin ghamaral-kawna bahjatan wa jamālā qad taraqqā fil-ḥusni a'lā maqāmin wa tanāha fī majdihi wa ta-'ālā lā ḥa-zhat-hul-'uyūnu fīmajtalat-hu basyaran kāmilan yuzīḥudh-dhalālā wahwa min fawqi 'ilmi mā qad ra-at-hu rif'atan fī syu-ūnihi wa kamālā fasubḥānal-ladzī abraza min ḥadhratil-imtinān. ۞ Mā ya'jizu 'an washfihil-lisān. ۞ Wa yaḥāru fī ta'aqquli ma'ānīhil-janān. ۞ Intasyara minhu fī 'ālamil-buthūni wazh-zhuhūr. ۞ Mā mala-al-wujūdal-khalqiyya nūr. ۞ Fatabārakallāhu min ilāhin karīm. ۞ Basy-syaratnā ayātuhu fidz-dzikril-hakīm. ۞ Bi-bisyārati - laqad jā-akum rasūlum-min anfusikum. ۞ Azīzun 'alayhi mā 'anittum ḥarīshun 'alaykumm-bil-mu'minīna ra'ūfur-raḥīm. ۞ Faman fā ja-at-hu hadzihil-bisyāratu wa talaqqā hā bi-qalbin salīm. ۞ Faqad hudiya ilā shirāthim-mustaqīm. ۞
+<br>Allāhumma shalli wa sallim asyrafash-shalāti wat-taslīm 'alā sayyidinā wa nabiyyinā Muḥammadinir-ra-ūfur-raḥīm.
+<br>Wa asyhadu allā ilāha illallāhu waḥdahu lā syarīka lahu syahādatan tu'ribu bihal-lisān. ۞ 'Ammā tadhammānahul-janān. ۞ Minat-tashdīqi bihā wal-idz'ān. ۞ Tatsbutu bihā fish-shudūri minal-īmāni qawā-'iduh. ۞ Wa talūhu 'alā ahlil-yaqīni min sirri dzālikal-idz'ān wat-tashdīqi syawāhiduhu. ۞ Wa asyhadu anna sayyidanā Muḥammadanil-'abdush-shādiqa fī qawlihi wa fi'lih. ۞ Wal-muballigha 'anil-lāhi mā amarahu bi-tab-līghi-hi li-khalqihi min fardhihi wa naflih. ۞ 'Abdun arsalahullāhu lil'ālamīna basyīran wa nadzīran. ۞ Faballaghar-risālah. ۞ Wa addal-mānah. ۞ Wa hadallāhu bihi minal-ummati basyaran katsīran. ۞ Fakāna fī zhulmatil-jahli lil-mustab-shirīna sirājan wa qamaran munīran. ۞ Famā a'zhamahā min minnatin takarramallāhu bihā 'alal-basyar. ۞ Wa mā awsa'ahā min ni'matin intasyara sirruhā fil-baḥri wal-bar. ۞ Allāhumma shalli wa sallim bi’ajallish-shalawāti wa ajma'ihā wa azkat-tahiyyāti wa awsa'ihā. ۞ 'Alā hadzal-'abdil-ladzī waffā bi-ḥaqqil-'ubūdiyyah. ۞ Wa baraza fīhā fī khil'atil-kamal. ۞ Wa qāma bi-ḥaqqir-rubūbiyyati fī mawāthinil-khidmati lillāhi wa aqbala 'alayhi ghāyatal-iqbāl. ۞ Shalātan yattashilu bihā rūḥul-mushallī 'alayhi bihi. ۞ Fayamm-basithu fī qalbihi nūru sirri ta'alluqihi bihi wa ḥubbihi. ۞ Wa yuktabu bihā bi'ināyatillāhi fī ḥizbihi. ۞ Wa 'alā ālihi wa shaḥbihil-ladzīnartaqaw shahwatal-majdi biqurbihi. ۞ Wa tafayya-ū zhilālasy-syarafil-ashliyyi bi-wuddihi wa ḥubbihI. ۞ Mā 'aththral-akwāna bi-nasyri dzikrāhum nasīm. ۞
+<br>Allāhumma shalli wa sallim asyrafash-shalāti wat-taslīm 'alā sayyidinā wa nabiyyinā Muḥammadinir-ra-ūfur-raḥīm.
+<br>Ammā ba'du - Falammā ta'allaqat irādatullāhi fil-'ilmil-qadīm. ۞ Bi-zhuhūri asrārit-takh-shīshi lil-basyaril-karīm. ۞ Bit-taqdīmi wat-takrīm. ۞ Nafadzatil-qud-ratul-bāhirah. ۞ Bin-ni'matil-wāsi'ati wal-minnatil-ghāmirah. ۞ Fanfalaqat baydhatut-tashwīr. ۞ Fil-'ālamil-muthlaqil-kabīr. ۞ 'An-jamālin masy-hūdin bil-'ain. ۞ ḥāwin li-washfil-kamālil-muthlaqi wal-ḥusnit-tāmmi waz-zaīn. ۞ Fatanaqqala dzalikal-jamālul-maymūn. ۞ Fil-ashlābil-karīmati wal-buthūn. ۞ Famā min shulbin dhammah. ۞ Illā wa tammat 'alayhi minallāhin-ni'mah. ۞ Fahuwal-qamarut-tāmmul-ladzī yatanaqqalu fī burūjih. ۞ Li-yatasyarrafa bihi mauthinus-tiqrārihi wa maudhi'u khurūjih. ۞ Wa qad qadhatil-aqdārul-azaliyyatu bimā qadhat wa azh-harat min sirri hādzan-nūri mā azh-harat. ۞ Wa khashsha-shat bihi man khashsha-shat. ۞ Fakāna mustaqarruhu fil-ashlābil-fākhirah. ۞ Wal-arḥāmisy-syarīfatith-thāhirah. ۞ ḥattā baraza fī 'ālamisy-syahādati basyaran lā kal-basyar. ۞ Wa nūran ḥayyaral-afkāra zhuhūruhu wa bahar. ۞ Fata'allaqat himmatur-rāqimi li-hadzihil-ḥurūf. ۞ Bi-ayyarquma fī hadzal-qirthāsi mā huwa ladayhi min 'ajā-ibi dzālikan-nūri ma'rūf. ۞ Wa in kānatil-alsunu lā tafī bi'usyri mi'syāri awshāfi dzalikal-mawshūf. ۞ Tasywīqan lissāmi-'īn. ۞ Min khawashshil-mu'minīn. ۞ Wa tarwīḥan lil-muta-'alliqīna bi-hdzan-nūril-mubīn. ۞ Wa illā fa-anna tu'ribul-aqlam. ۞ 'An-syu-ūni khayril-anām. ۞ Wa lākin hazzanī ilā tadwīni mā ḥafizh-tuhu min-siyari asyrafil-makhlūqīn. ۞ Wa mā akramahullāhu bihi fī mawlidihi minal-fadhlil-ladzī 'ammal-'ālamīn. ۞ Wa baqiyat rāyatuhu fil-kawni mansyūratan 'alā marril-ayyāmi wasy-syuhūri was-sinīn. ۞ Dā-'itta-'alluqi bi-hadzihil-ḥadhratil-karīmah. ۞ Wa lā 'ijut-tasyawwuqi ilā samā-'i aw shāfihal-'azhīmah. ۞ Wa la-'allallāha yan-fa-'u bihil-mutakallima was-sāmi'. ۞ Fayad-khulāni fī syafā-'ati hadzan-nabiyyisy-syāfi'. ۞ wa yatarawwaḥāni bi-rūḥi dzālikan-na'īm. ۞
+<br>Allāhumma shalli wa sallim asyrafash-shalāti wat-taslīm 'alā sayyidinā wa nabiyyinā Muḥammadinir-ra-ūfur-raḥīm.
+<br>Wa qad āna lil-qalami ayyakhuth-tha mā ḥarrakat-hu fīhil-anāmil. ۞ Mimmas-tafādahul-fahmu min shifāti hadzal-'abdil-maḥbūbil-kāmil. ۞ Wa syamā-ilihil-latī hiya aḥsanusy-syamā-il. ۞ Wa hunā ḥasuna an nutsbita mā balagha ilaynā fī sya’ni hadzal-habībi min akhbārin wa a-tsār. ۞ Liyatasyarrafa bi-kitābatihil-qalamu wal-qirthāsu wa tatanazzaha fī ḥadā-iqihil-asmā-'u wal-abshār. ۞ wa qad balaghanā fil-aḥādītsil-masyhūrah. ۞ Anna awwala syay-in khalaqahullāhu huwan-nūrul-mūda-'u fī hadzihish-shūrah. ۞ Fanūru hadzal-habībi awwalu makhlūqin baraza fil-'ālam. ۞ Wa minhu tafarra-'al-wujūdu khalqan ba'da khalqin fīmā ḥada-tsa wa mā taqādam. ۞ Wa qad akhraja 'abdur-razzāqi bi-sanadihi 'an-jābiribni 'abdillāhil-anshāriyyi radhiyallāhu 'an humā qalā - qultu yā Rasūlallāhi bi-abī wa ummī akhbirnī 'an awwali syay-in khalaqahullāhu qablal-asy-yā. ۞ qāla yā jābiru innallāha khalaqa qablal-asy-yā-i nūra nabiyyika Muḥammadin shallallāhu 'alayhi wa sallama min-nūrih. ۞ Wa qad warada min ḥadītsi abī hurayrah radhiyallāhu 'anhu annahu qāl. ۞ Qāla rasūlul-lāhi shallallāhu 'alaihi wa sallama kuntu awwalan-nabiyyīna fil-khalqi wa ākhirahum fil-ba'ts. ۞ Wa qad ta'addadatir-riwāyātu bi-annahu awwalul-khalqi wujūdan wa asyrafuhum mawlūdā. ۞ Wa lamma kānatis-sa-'ādatul-abdiyyah. ۞ Lahā mulāhazhatun khafiyyatun ikhtash-shat man syā-at minal-bariyyah. ۞ Bi-kamālil-khushūshiyyah. ۞ Fastawda'at hadzan-nūral-mubīn. ۞ Ashlāba wa buthūna min syarrafat-hu minal-'ālamīn. ۞ Fatanaqqala hadzan-nūru min shulbi ādama wa nūḥin wa ibrāhīm. ۞ ḥattā aw shalat-hu yadul-'ilmil-qadīm. ۞ Ilā man khashsha-shat-hu bit-takrīmi abīhil-karīm. ۞ 'Abdillāhib-ni 'abdil-muth-thalibi dzil-qadril-'azhīm. ۞ Wa ummuhul-latī hiya fil-mukhāwifi āminah. ۞ As-sayyidatil-karīmati āmīnah. ۞ Fatalaqqāhu shulbu 'abdullāhi fa'alqāhu ilā bathnihā. ۞ Fadhammat-hu aḥsyā'uhā bima-'ūnatillāhi muḥāfazhatan 'alā ḥaqqi hadzihid-durrati wa shawnihā. ۞ Faḥamalat-hu biri-'āyatillāhi kamā wa rada-'anhā ḥamlan khafīfan lā tajidu lahu tsiqalan. ۞ Wa lā tasykū minhu alaman wa lā 'ilalan. ۞ 'Hattā marrasy-syahru ba`dasy-syahri min ḥamlih. ۞ Wa qaruba waqtu burūzihi ilā 'ālamisy-syahādati li-tammbasitha 'alā ahli hadzal-'ālami fuyūdhātu fadhlih. ۞ Wa tantasyira fīhi ā-tsāru majdihish-shamīm. ۞
+<br>Allāhumma shalli wa sallim asyrafash-shalāti wat-taslīm 'alā sayyidinā wa nabiyyinā Muḥammadinir-ra-ūfur-raḥīm.
+<br>Wa mundzu 'aliqat bihi hādzihid-durratul-maknūnah. ۞ Wal-jawharatul-mashūnah wal-kawnu kulluhu yushbiḥu wa yumsī fī surūriwwabtihāj. ۞ Bi-qurbi zhuhūri isyrāqi hadzas-sirāj. ۞ Wal-'uyūnu mutasyawwifatun ilā burūzih. ۞ Mutasyawwiqatun ilal-tiqāthi jawāhiri kunūzih. ۞ Wa kullu dābbatin li quraysyin nathaqat bi-fashīhil-’ibārah. ۞ Mu'linatan bi-kamālil-bisyārah. ۞ Wa mā min ḥāmilin ḥamalat fī dzalikal-'ām. ۞ Illā atat fī ḥamlihā bighulām. ۞ Mimm-barakāti wa sa'ādati hadzal-imām. ۞ Wa lam tazalil-ardhu was-samawāt. ۞ Mutadhammikhatan bi'ithril-faraḥi bi-mulāqāti asyrafil-bariyyāt. ۞ Burūzihi min 'ālamil-khafā-i ilā 'ālamizh-zhuhūr. ۞ Ba'da tanaqqulihi fil-buthūni wazh-zhuhūr. ۞ Fa-'azh-harallāhu fil-wujūdi bahjatat-takrīm. ۞ Wa basatha fil-'ālamil-kabīri mā-idatat-tasyrīfi wat-ta'zhīm. ۞ Bi-burūzi hadzāl-basyaril-karīm. ۞
+<br>Allāhumma shalli wa sallim asyrafash-shalāti wat-taslīm 'alā sayyidinā wa nabiyyinā Muḥammadinir-ra-ūfur-raḥīm.
+<br>Faḥīna quraba awāna wadh-'i hadzal-ḥabīb. ۞ A'lanatis-samawātu wal-ardhūna wa man fīhinna bit-tarḥīb. ۞ Wa amthārul-jūdil-ilāhiyyi 'alā ahlil-wujūdi ta-tsij. ۞ Wa alsinatul-malā’ikati bit-tabsyīri lil-'ālamīna ta-'ij. ۞ Subḥanallāh wal-ḥamdulillāh wa lā ilāha illallāhu Allāhu akbar (3x). Wal-qud-ratu kasyafat qinā-'a hadzal-mastūr. ۞ Li-yab-ruza nūruhu kāmilan fī 'ālamizh-zhuhūr. ۞ Nūran fāqa kulla nūr. ۞ Wa anfadzal-ḥaqqu ḥukmah. ۞ 'Alā man atammallāhu 'alayhin-ni'mah. ۞ Min khawashshil-ummah. ۞ Ayyaḥdhura 'inda wadh-'ihi ummah. ۞ Ta'nīsan li-janābihal-mas'ūd. ۞ Wa musyārakatan lahā fī hadzas-simāthil-mamdūd. ۞ Faḥadharat bi-tawfīqillāhis-sayyidatu maryamu was-sayyidatu āsiyah. ۞ Wa ma-'ahumā minal-ḥūril-'īni man qasamallāhu lahu minasy-syarafi bil-qismatil-wāfiyah. ۞ fa-atal-waqtul-ladzī rattaballāhu 'alā ḥudhūrihi wujūda hadzal-mawlūd. ۞ Fan-falaqa shubḥul-kamāli minan-nūri 'an 'amūd. ۞ Wa barazal-ḥāmidul-maḥmūd. ۞ Mudz'inan lillāhi bit-ta'zhīmi was-sujūd.</i></p><br><br><p>Dengan nama Allah, Yang Maha Pengasih lagi Maha Penyayang.
+<br>Segala puji bagi Allah, yang amat teguh kekuasaan-Nya. ۞ Amat jelas bukti-bukti kebenaran-Nya. ۞ Terbentang luas kedermawanan dan kemurahan-Nya. ۞ Mahatinggi kemuliaan-Nya, Mahaagung kedudukan-Nya. ۞ Diciptakan segalanya dengan penuh hikmah. ۞ Lalu diliputinya dengan ilmu-NYa. ۞ Dihamparkan bagi mereka limpahan karunia-Nya. Denqan kadar pembagian yang ditentukan dalam kehendak-Nya. ۞ Maka diutus kepada mereka, seorang termulia di antara makhluk-Nya terkemuka di antara hamba-hamba-Nya, dengan penuh rahmat. ۞ lradah-Nya yang azali menghendaki penciptaan hamba yang amat dikasihi ini. ۞ Maka tersebarlah pancaran kemuliaannya. Di alam nyata ataupun tersembunyi. ۞ Aduhai, betapa agung anugerah ini, dilimpahkan oleh Dia Yang Maha Pemberi Anugerah. ۞ Betapa tinggi nilai keutamaan ini. Datang dari Tuhan Sumber segala ihsan. ۞ Karunia teramat sempurna dalam bentuk insan terpuji. ۞ Kehadirannya mengharumi segenap penjuru. ۞ Menghiasnya dengan sulaman indah penuh keagungan. ۞
+<br>Limpahkan, ya Allah semulia-mulia rahmat dan keselamatan atas junjungan dan Nabi kami, Muhammad ﷺ, yang amat penyantun dan amat penyayang.
+<br>Allah Mahabenar mewujudkan kebenarannya dalam alam kudus-Nya yang amat luas. ۞ Menetapkan penyebaran anugerah-Nya pada yang dekat dan jauh tak terkecuali. ۞ Maka hanya bagi-Nya segala puji tiada terhingga bilangannya. ۞ Tiada menjemukan pengulangan sebutannya, betapapun sering diulang-ulang. ۞ Atas perkenan-Nya menampilkan di alam kenyataan. ۞ Perwujudan semulia-mulia insan. ۞ Agar seluruh makhluk beroleh kemuliaan tiada terhingga. ۞ Dengan rahasia keutamaan yang mengiringi kehadirannya, tersebar merata di seluruh alam semesta. ۞ Maka tiada satu pun rahasia itu, menyentuh menyatu dengan qalbu yang sadar. ۞ Kecuali pasti karena curahan karunia Allah. Melalui insan tersayang ini. Bahagia dan suka ria, berdatangan merasuki qalbu, menyambut datangnya kekasih Allah, pembawa anugerah bagi seluruh manusia. Mahaagung Dia yang telah memuliakan, wujud ini dengan nur berkilauan, meliputi semuanya, dengan keriangan dan kecantikan. Mencapai tingkat keindahan tertinggi, menjulang mengangkasa, dengan kemuliaannya. Mata memandang penuh damba, bentuk insan sempurna, pengikis segala yang sesat. Meski sesungguhnya, keluhuran dan kesempurnaannya melampaui segala yang bisa dicapai pengetahuan yang mana pun jua. Mahasuci Allah yang telah berkenan menampakkan dari hadirat kemurahan-Nya. ۞ Apa yang lidah tiada mampu menyifatkannya. ۞ Pikiran tiada mampu menjangkau hakikatnya. ۞ Menyebar merata di alam batin ataupun nyata. ۞ Memenuhi jagatraya dengan nur terang benderang. ۞ Mahasuci Allah, Tuhan Maha Pemurah. ۞ Yang dalam kitab suci Alquran penuh kebijaksanaan. ۞ Mengungkap berita gembira dengan firman-Nya, telah datang kepadamu, seorang rasul dari kalangan sendiri. ۞ la selalu prihatin atas apa yang menimpamu. Sangat ia inginkan kamu beriman. la sangat penyantun, sangat penyayang. ۞ Maka siapa saja yang sampai kepadanya, berita gembira ini. Serta menerimanya dengan hati dan pikiran sehat. ۞ Niscaya ia beroleh Petunjuk menuju arah jalan yang lurus. ۞
+<br>Limpahkan, ya Allah semulia-mulia rahmat dan keselamatan atas junjungan dan Nabi kami, Muhammad ﷺ, yang amat penyantun dan amat penyayang.
+<br>Aku bersaksi, tiada Tuhan selain Allah, Maha Esa, tiada sekutu bagi-Nya, sebuah kesaksian terucapkan dengan lisan. ۞ Apa yang terkandung dalam hati sanubari. ۞ Mengungkapkan ketulusan dan kepatuhan. ۞ Memperteguh tonggak-tonggak iman yang tertanam jauh di dalam dada. ۞ Rahasia hakikatnya tampak hanya bagi mereka yang tulus patuh tiada sedikit pun ragu padanya. ۞ Dan aku bersaksi bahwasannya Penghulu kami Muhammad adalah hamba Allah yang benar dalam ucapan dan perbuatannya. ۞ Dan menyampaikan atas nama Allah apa yang harus disampaikan kepada hamba-hamba-Nya, tentang yang diwajibkan atau yang dianjurkan-Nya. ۞ Dialah hamba Allah yang diutus kepada penghuni alam semesta. ۞ Pembawa berita gembira juga ancaman derita. ۞ Maka ia pun menyampaikan risalah. ۞ Dan menunaikan amanah. ۞ Sehingga umat dalam jumlah besar, beroleh hidayah Allah dengan perantaraannya. ۞ Jadilah ia pelita penerang dan bulan purnama, bagi pencari cahaya penembus kejahilan gelap gulita. ۞ Aduhai, betapa agung karunia Allah, dilimpahkan atas manusia. ۞ Betapa luas nikmat Allah bertebaran hikmahnya di lautan dan daratan luas merata. ۞ Ya Allah, ya Tuhan kami, limpahkan shalawat dan salam yang terbesar dan mencakup segalanya, teramat suci, luas jangkauannya. ۞ Atas diri insan ini, yang dengan seksama memenuhi kewajiban perhambaan pada Tuhannya. ۞ Dengan menyandang segala sifat sempurna. ۞ Dan bersungguh-sungguh dalam berbakti kepada llahi, serta menghadapkan diri kepada-Nya. Dengan sebaik dan sesempurna cara. ۞ Shalawat rahmat yang mengukuhkan, jalinan ikatan dengan pribadinya, bagi si pembaca shalawat atas dirinya. ۞ Menjadikan hatinya terang benderang tersentuh nur kecintaan dan kerinduan padanya. ۞ Dan memasukkannya dengan inayah Allah ke dalam golongannya. ۞ Shalawat dan salam terus-menerus tiada hentinya tercurah kepadanya, demikian pula atas segenap keluarganya, serta para sahabatnya, yang menduduki puncak derajat yang tinggi, karena dekat kepadanya. ۞ Dan bernaung di bawah bayang-bayang kemuliaan sejati dengan mencintainya sepenuh hati. ۞ Selama hembusan angin mengharumi mayapada, menyebar sebutan indah mereka semuanya. ۞
+<br>Limpahkan, ya Allah semulia-mulia rahmat dan keselamatan atas junjungan dan Nabi kami, Muhammad ﷺ, yang amat penyantun dan amat penyayang.
+<br>Amma ba’du - Manakala iradat Allah dalam ilmu-Nya yang qadim. ۞ Berkenan menampakkan inti kekhususan, bagi manusia yang mulia. ۞ Dengan keutamaan dan penghormatan. ۞ Terwujudlah dengan kodrat gemilang. ۞ Nikmat llahi yang luas merata, serta anugerah-Nya yang melimpah ruah. ۞ Maka terkuaklah karsa cipta-Nya. ۞ Di alam mutlak tiada berbatas. ۞ Menyingkap “keindahan” disaksikan pandangan mata. ۞ Mencakup segala sifat keindahan dan keelokan sempurna. ۞ Dan berpindah-pindahlah ia dengan segala keindahan sempurna. ۞ Dalam sulbi-sulbi dan rahim-rahim yang mulia. ۞ Tiada satu pun sulbi yang merangkumnya. ۞ Kecuali beroleh nikmat Allah nan sempurna. ۞ Laksana bulan purnama, berpindah-pindah dalam orbitnya. ۞ Agar setiap tempat yang didiaminya, ataupun jalan yang dilaluinya, meraih kemuliaan tiada terhingga. ۞ Demikianlah ditetapkan dalam suratan takdir azali, menampakkan rahasia nur ini dalam diri mereka. ۞ Yang beroleh kekhususan dan keistimewaan. ۞ Sehingga tiap kediamannya, selalu dalam sulbi-sulbi megah nan anggun. ۞ Serta rahim-rahim yang suci nan bersih. ۞ Sampai tiba saat ia datang ke alam nyata, sebagai manusia yang tiada sama dengan manusia biasa. ۞ Bagaikan nur cahaya menyilaukan, penampilannya mencengangkan akal dan pikiran. ۞ Maka tergeraklah jiwa dan semangat penulis ini. ۞ Mencatat apa yang sampai kepadanya, tentang keajaiban nur mulia ini. ۞ Meski lidah tak kan mampu mengungkap sifat-sifatnya walaupun sekelumit atau lebih sedikit. ۞ Tapi sekadar penawar hati para pendengar. ۞ Yang termasuk kalangan khusus di antara kaum mukminim. ۞ Dan penghibur mereka yang terpaut hatinya pada pesona nur yang terang ini. ۞ Sebab bagaimana mungkin pena para penulis mampu melukiskan. ۞ Tentang segala sesuatu yang bersangkutan. ۞ Dengan manusia terbaik di antara manusia seluruhnya. ۞ Namun hatiku tergerak menuliskan yang kuhafal selama ini tentang riwayat hidup manusia termulia di antara makhluk semuanya. ۞ Juga tentang karunia agung yang dilimpahkan Allah pada peristiwa kelahirannya yang meliputi seluruh penghuni alam semesta. ۞ Dan panji-panjinya yang berkibar megah di segenap penjuru jagat raya, terus-menerus sepanjang pergantian hari, bulan, dan tahun. ۞ Semuanya itu didorong semata-mata oleh kegandrunganku pada pribadi yang luhur ini. ۞ Serta kerinduanku untuk mendengarkan selalu, sebutan sifat-sifatnya yang serba agung. ۞ Dan kiranya Allah berkenan melipatgandakan manfaatnya bagi si pembicara maupun pendengarnya. ۞ Sehingga keduanya akan memasuki pintu syafaat. ۞ Dan menghirup sejuknya kenikmatan itu. ۞
+<br>Limpahkan, ya Allah semulia-mulia rahmat dan keselamatan atas junjungan dan Nabi kami, Muhammad ﷺ, yang amat penyantun dan amat penyayang.
+<br>Kini tiba saat penaku digerakkan jari jemari yang terjangkau oleh pikiran. ۞ Tentang sifat hamba yang sempurna dan dikasihi ini. ۞ Serta perilakunya yang terluhur di antara semua perilaku. ۞ Dan di sinilah sepatutnya kutuliskan apa yang telah sampai ke pengetahuanku, tentang berita dan kisah insan tercinta ini. ۞ Agar kalam dan kertas beroleh kemuliaan, pendengaran dan penglihatan pun berkesempatan bertamasya dalam taman-tamannya yang indah mempesona. ۞ Telah sampai kepada kami. Dalam hadits-hadits yang masyhur. ۞ Bahwa sesuatu yang mula pertama diciptakan Allah, ialah nur yang tersimpan dalam pribadi ini. ۞ Maka nur insan tercinta inilah makhluk pertama muncul di alam semesta. ۞ Darinya bercabang seluruh wujud ini, ciptaan demi ciptaan, yang baru datang ataupun yang sebelumnya. ۞ Sebagaimana diriwayatkan Abdurrazzaq dengan sanadnya yang sampai pada Jabir bin Abdullah Al-Anshari, semoga Allah meridhai keduanya. Bahwasanya ia pernah bertanya, “Demi ayah dan ibuku, ya Rasulullah, beri tahukanlah kepadaku tentang sesuatu yang diciptakan Allah sebelum segalanya yang lain." ۞ Jawab beliau, “Wahai Jabir, sesungguhnya Allah, Telah menciptakan nur nabimu, Muhammad ﷺ, dari nur-Nya. Sebelum sesuatu yang lain.” ۞ Dan telah diriwayatkan hadits oleh Abu Hurairah, semoga Allah meridhainya, yaitu; ۞ Bahwasanya Nabi ﷺ telah bersabda, "Aku adalah yang pertama di antara para nabi dalam penciptaan. Namun yang terakhir dalam kerasulan…" ۞ Banyak pula riwayat lain menyatakan, bahwa beliaulah yang pertama adanya, dan termulia di antara mereka semua. ۞ Dan manakala kebahagiaan abadi menampakkan. ۞ Pengamatannya yang tersembunyi, mengkhususkan manusia yang dipilihnya. ۞ Dengan kekhususan yang sempurna. ۞ Dititipkannya nur benderang ini. ۞ Pada berbagai sulbi dan rahim yang dimuliakan, di antara penghuni jagat raya. ۞ Dan berpindah-pindahlah ia, dari sulbi Adam, Nuh, dan lbrahim. ۞ Sehingga setelah sekian lama pada akhirnya. ۞ Sampailah ia ke ayahandanya, yang terpilih menerima kehormatan tiada terhingga, yaitu; ۞ Abdullah bin Abdul Muththalib yang bijak dan benribawa. ۞ Serta ibundanya, Aminah, yang selalu merasa aman dan tenteram, meski di tengah apa saja yang menggelisahkan. ۞ Aminah yang amat mulia. ۞ Maka disambutlah ia oleh sulbi Abdullah, lalu diteruskan ke perut istrinya. ۞ Yang merangkumnya dengan penuh kasih sayang memelihara mutiara amat berharga disertai pertolongan Allah yang selalu mendampinginya. ۞ Ia pun mengandungnya di bawah pengawasan Allah dengan segala kemudahan dan keringanan. ۞ Tiada sedikit pun berat terasa ataupun sakit diderita. ۞ Bulan demi bulan berlalu, sampai hampir tiba saatnya. ۞ Kandungan itupun lahir ke alam nyata, sehingga luapan keutamaannya, menggenangi penghuni alam semesta. ۞ Tebaran keluhurannya melingkupi mereka semua.
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

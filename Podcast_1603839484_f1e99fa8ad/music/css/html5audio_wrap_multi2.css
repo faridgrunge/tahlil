@@ -1,0 +1,573 @@
+body {
+	background:#333;
+}
+
+
+/* dropdown css addition */
+.sbHolder{
+	top:5px;
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+	color: #66ffff;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: #66ffff;
+}
+.sbOptions .sbGroup{
+	color: #66ffff;
+}
+
+
+
+
+
+
+
+#componentWrapper{
+	position:relative;
+	min-width:300px;
+	max-width:840px;
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+}
+
+/* playlist holder */	
+#componentWrapper .playlistHolder{
+	position:relative;
+	top:50px;
+}
+
+#componentWrapper .playlist_inner{
+	/*background:blue;*/
+}
+
+
+/* playlist items */	
+#componentWrapper .playlistItem{
+	display:block;
+	position:relative;
+	
+	top:0px;
+	left:0px;
+	
+	width:auto;
+	height:160px;
+	
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	
+	list-style:none;
+	
+	margin-right:10px;
+	margin-bottom:10px;
+	
+	float:left;
+	
+	/*overflow:hidden; we need to have yt player visible on mobile init!*/
+	
+}
+
+#componentWrapper .playlistItem:last-child {  
+	margin-bottom:0px;
+}
+
+#componentWrapper .playlistSelected {
+	
+}
+
+#componentWrapper .playlistNonSelected {
+	
+}
+
+#componentWrapper .playlistSelected img{
+	display:block;
+	width:auto;
+	height:160px;
+	cursor:move;
+}
+#componentWrapper .playlistNonSelected img{
+	display:block;
+	width:auto;
+	height:160px;
+	cursor:move;
+}
+
+#componentWrapper .hap_title{
+	position:absolute;
+	top:0px;
+	padding:10px;
+	width:100%;
+	background: rgb(0, 0, 0) transparent;
+	background: rgba(0, 0, 0, 0.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:15px;
+	cursor:move;
+};
+
+
+
+
+
+/* playlist icons */
+#componentWrapper .dlink {
+	float:right;
+}
+
+#componentWrapper .dlink img{
+	display:block;
+}
+
+#componentWrapper .plink {
+	float:right;
+}
+
+#componentWrapper .plink img{
+	display:block;
+}
+
+#componentWrapper .premove {
+	float:right;
+}
+
+#componentWrapper .premove img{
+	display:block;
+}
+
+/* preloader */
+#componentWrapper .preloader{
+	position:absolute;
+	width:36px;
+	height:30px;
+	top:50%;
+	left:50%;
+	margin-left:-16px;
+	margin-top:-15px;
+	background: #111 url('../media/data/loading.gif') no-repeat center center; 
+}
+
+
+
+
+
+
+
+
+.componentWrapper{
+	position:absolute;
+	width:200px;
+	height:40px;
+	left:-10000px;
+}
+
+.componentWrapper .controls_toggle{
+	position:absolute;
+	width:40px;	
+	height:40px;
+	left:0px;
+	background:#333;
+	
+	border-right: 1px solid #555;
+	border-right-color: rgba( 255, 255, 255, .1 );
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+}
+
+.componentWrapper .controls_toggle img{
+	display:block;
+	position:absolute;
+	width:12px;	
+	height:15px;
+	left:50%;
+	top:50%;
+	margin-left:-6px;
+	margin-top:-8px;
+	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+}
+
+.componentWrapper .controls_toggle:hover{
+	background: #222;
+}
+.componentWrapper .controls_toggle.hap_no_hover:hover{
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+}
+
+.componentWrapper .player_progress{
+	position:absolute;
+	height:40px;
+	left:40px;
+	right:40px;
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	
+	behavior: url('PIE.htc');
+}
+
+.componentWrapper .progress_bg{
+	position:absolute;
+	height:10px;
+	background:#222;
+	top:15px;
+	left:10px;
+	right:10px;
+	
+	-webkit-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	-moz-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.componentWrapper .load_progress{
+	position:absolute;
+	height:10px;
+	background:#444;
+	top:15px;
+	left:10px;
+	right:10px;
+	width:0px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.componentWrapper .play_progress{
+	position:absolute;
+	height:10px;
+	background:#fff;
+	top:15px;
+	left:10px;
+	right:10px;
+	width:0px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+}
+
+.componentWrapper .player_progress_tooltip{
+	position:relative;
+	top:-10px;
+	width:72px;
+	background:#333;
+	height:16px;
+	display:none;
+	text-align:center;
+	
+	-moz-box-shadow: 1px 1px 3px #222;
+	-webkit-box-shadow: 1px 1px 3px #222;
+	box-shadow: 1px 1px 3px #222;
+	behavior: url('PIE.htc');
+}
+
+.componentWrapper .player_progress_tooltip p {
+	color:white;
+	font-size:10px;
+	margin:0;
+	line-height:16px;
+}
+
+.componentWrapper .player_volume_wrapper{
+	position:absolute;
+	width:40px;	
+	height:40px;
+	/*background:#333;*/
+	right:0px;
+}
+
+.componentWrapper .player_volume{
+	width:40px;	
+	height:40px;
+	
+	border-left: 1px solid #111;
+	border-left-color: rgba( 0, 0, 0, .25 );
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+}
+
+.componentWrapper .player_volume img{
+	display:block;
+	position:absolute;
+	width:18px;	
+	height:16px;
+	left:50%;
+	top:50%;
+	margin-left:-9px;
+	margin-top:-8px;
+	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+}
+
+.componentWrapper .player_volume:hover{
+	background: #222;
+}
+.componentWrapper .player_volume.hap_no_hover:hover{
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+}
+
+.componentWrapper .volume_seekbar{
+	position:absolute;
+	top:-80px;
+	left:0px;
+	width:40px;
+	height:80px;
+	
+	background-image: url('../media/data/player_bg2_vol.png'); 
+	background-repeat: repeat-x; 
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+	
+	display:none;
+}
+
+.componentWrapper .volume_bg{
+	position:absolute;
+	width:10px;
+	height:60px;
+	background:#222;
+	bottom:10px;
+	left:15px;
+	
+	-webkit-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	-moz-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.componentWrapper .volume_level{
+	position:absolute;
+	width:10px;
+	height:30px;
+	background:#fff;
+	bottom:10px;
+	left:15px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.componentWrapper .player_volume_tooltip{
+	position:relative;
+	left:2px;
+	top:-15px;
+	width:35px;
+	height:16px;
+	background:#333;
+	display:none;
+	text-align:center;
+	
+	-moz-box-shadow: 1px 1px 3px #222;
+	-webkit-box-shadow: 1px 1px 3px #222;
+	box-shadow: 1px 1px 3px #222;
+	behavior: url('PIE.htc');
+}
+
+.componentWrapper .player_volume_tooltip p {
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#ffffff;
+	margin:0;
+	line-height:18px;
+}
+
+
+
+
+
+
+/* playlist holder */	
+.componentWrapper .playlistHolder{
+	position:relative;
+	top:5px;
+	float:left;
+	clear:both;
+	width:100%;
+	background:#111;
+	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	
+	/*-moz-box-shadow: 0px 5px 5px #111;
+	-webkit-box-shadow: 0px 5px 5px #111;
+	box-shadow: 0px 5px 5px #111;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#111111')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#111111');*/
+	
+	display:none;
+}
+
+.componentWrapper .playlist_inner{
+	margin:20px 30px 20px 20px;
+	/*background:blue;*/
+}
+
+.componentWrapper .playlist_inner .drag_info{
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:15px;
+	text-align:center;
+}
+
+/*we need to have min height to be able to drop on empty list!*/
+.componentWrapper .playlist_inner ul{
+	min-height:30px;
+}
+
+
+/* playlist items */	
+.componentWrapper .playlistItem{
+	position:relative;
+	top:0px;
+	left:0px;
+	clear:left;
+	display:inline-block;
+	
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	width:100%;
+	
+	padding:5px 0px 5px 10px;
+	
+	list-style:none;
+}
+
+.componentWrapper .playlistItem:nth-child(odd){
+	background: #222; 
+}
+
+.componentWrapper .playlistItem:last-child {  
+	margin-bottom:0px;
+}
+
+.componentWrapper .playlistItem a:hover{
+	color:#66ffff;
+	text-decoration:none;
+}
+
+.componentWrapper .playlistSelected {
+	float:left;
+	color: #66ffff;
+	margin-top:3px;
+}
+
+.componentWrapper .playlistNonSelected {
+	float:left;
+	color: #ffffff;
+	margin-top:3px;
+}
+
+
+/* playlist icons */
+.componentWrapper .dlink {
+	float:right;
+}
+
+.componentWrapper .dlink img{
+	display:block;
+}
+
+.componentWrapper .plink {
+	float:right;
+}
+
+.componentWrapper .plink img{
+	display:block;
+}
+
+.componentWrapper .premove {
+	float:right;
+}
+
+.componentWrapper .premove img{
+	display:block;
+}
+
+
+
+
+
+
+
+
+
+		 
+
+		  
+					  
+
+/* public functions */	
+#publicFunctions{
+	position: absolute;
+	height:500px;
+	overflow-y: scroll;
+	padding: 20px;
+	background:#444;
+	left:650px;
+	top:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color:#fff;
+	list-style:circle;
+	display:none;
+}
+
+#publicFunctions li a{
+	color:#fff;
+}
+
+#publicFunctions li a:hover, #publicFunctions li .current{
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+

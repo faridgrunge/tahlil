@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+ <h1>
+      <center>
+        Waktu yang Dilarang Untuk Sholat
+      </center>
+    </h1>
+    <hr><br>
+    <p style="text-align:justify"> Telah kami ketengahkan dalil-dalil yang menjelaskan larangan mengerjakan shalat setelah Subuh sampai terbitnya matahari dan shalat Ashar sampai terbenamnya matahari. Kami pun telah menyebutkan bahwa larangan mengerjakannya di awal waktu setelah Subuh dan Ashar bersifat ringan; dibolehkan mengerjakan shalat jika ada sebabnya. Tidak makruh hukumnya saat demikian. Berbeda dengan saat terbit dan terbenamnya matahari, dengan saat terbit dan terbenamnya matahari, larangan pada saat ini bersifat keras. Di dua waktu ini dilarang shalat, kecuali shalat wajib.<br>
+        <Br>
+      Karena waktu terlarang bagian pertama dan bagian kedua bersambung, baik dari setelah Subuh sampai terbitnya matahari ataupun dari setelah Ashar sampai terbenamnya matahari, maka semestinya kita mengetahui kadar waktu larangan keras supaya kita bisa menghindari shalat di saat itu. Waktu larangan keras ini dijelaskan oleh beberapa hadist.
+    <ol>
+      <li>
+        <p style="text-align:justify">Imam Al-Bukhari dan Imam Muslim meriwayatkan dari Abdullah bin Umar radhiyallahu anhu. Katanya Rasalullah Shallallahu ‘Alaihi wa Sallam bersabda:
+        <blockquote>
+          <p style="text-align:justify"> “Apabila matahari mulai muncul, tundalah shalat sampai ia benar-benar tampak. Apabila matahari mulai menghilang, tundalah shalat sampai ia benar-benar terbenam.”[1]          </blockquote>
+      <li>
+        <p style="text-align:justify">Bilal radhiyallahu anhu bertutur, 
+        <blockquote>
+          <p style="text-align:justify">“Tidaklah shalat itu dilarang kecuali saat terbitnya matahari. Sesungguhnya ia terbit di antara dua tanduk setan.”[2]          </blockquote>
+      <Li>Shafwan bin Al-Mu’aththal As-Salmi pernah berkata kepada Nabi Shallallahu ‘Alaihi wa Sallam,
+          <blockquote>
+            <p style="text-align:justify">“Wahai Nabi Allah, sungguh saya akan bertanya kepadamu tentang sesuatu yang engkau tahu dan saya tidak tahu.” “Apakah itu?” tanya Nabi. Shafwan bertanya, “Adakah waktu di malam hari dan di siang hari yang shalat makruh pada waktu itu?” Rasulullah Shallallahu ‘Alaihi wa Sallam menjawab, “Ya. Jika kamu telah mengerjakan shalat Subuh, janganlah mengerjakan shalat sampai matahari terbit. Jika telah terbit, silakan shalat; sesungguhnya shalat (saat itu) dihadirkan dan diterima sampai matahari tegak di atas kepalamu seperti tombak. Jika matahari tegak di atas kepalamu, sesungguhnya waktu itu neraka Jahannam dinyalakan dan pintu-pintunya di buka sampai matahari bergeser ke sisi kananmu. Jika matahari telah bergeser ke sisi kananmu, silahkan kamu shalat. Sesungguhnya shalat (saat itu) dihadirkan dan diterima sampai kamu shalat Ashar.”[3]               </blockquote>
+      <Li>Musa bin Ali meriwayatkan dari ayahnya dari Uqbah bin Amir Al-Juhanni radhiyallahu anhu, katanya,
+        <blockquote>
+          <p style="text-align:justify">“Ada tiga waktu yang kita dilarang melakukan shalat atau mengubur mayat oleh Rasulullah Shallallahu ‘Alaihi wa Sallam. Ketika matahari terbit sampai meninggi, ketika matahari tepat berada di atas sampai tergelincir, dan ketika matahari mulai terbenam sampai terbenam.”[4]            </blockquote>
+        <br>
+      </Li>
+      </Li>
+      </li>
+      </li>
+    </ol>
+    <p style="text-align:justify"> Dari hadist-hadist di atas dapat dipahami bahwa seseorang boleh mengerjakan shalat kapan saja, malam atau pun siang, kecuali waktu-waktu yang terlarang. Waktu-waktu itu adalah:
+    <ol>
+      <li>
+         Saat Syuruq. </li>Yaitu saat matahari mulai dan tampak sampai setinggi tombak. Waktu terlarang ini sekitar 15 menit.<br>
+      <br><Li>
+          Waktu Zhahirah.</li> Yaitu saat matahari tepat di tengah langit, saat tidak ada bayangan bagi orang yang berdiri. Apabila bayang-bayang sudah mulai terlihat, masuklah waktu Dzuhur dan shalat puun diperkenankan.[5]<br>
+      <br><Li>
+            Ketika matahari mulai terbenam sampai terbenam seluruhnya. </li> Jika sudah terbenam, masuklah Maghrib dan shalat pun diperkenankan. Wkatu terlarang di saat ini kira-kira 15 menit.
+      Ketiga waktu di atas adalah waktu dilarang shalat sunnah walaupun ada sebabnya. Bahkan larangannya sampai ke tingkatan haram. Atau dalam istilah madzhab Hanafi makruh tahrim. Terutama saat terbit matahari dan saat terbenamnya. Inilah pendapat yang dipegang Umar bin Khaththan, Ummul Mukminin Aisyah, Abdullah bin Umar, Abdullah bin Zubair, Ibnu Sirin, dan Ibnu Jarir Ath-Thabari.[6]      </Li>
+      </Li>
+      </li>
+    </ol>
+    <p style="text-align:justify"> Ini juga pendapat madzhab Imam Malik bin Anas. Namun Imam Malik bin Anas tidak melarang shalat saat tengah hari. Beliau mengaharamkan shalat sunnah walaupun ada sebabnya di saat matahari terbit dan terbenam.<br>
+        <Br>
+      Adapun menurut para ulama madzhab Hambali dan Hanafi, penulis Al-Mughni mengatakan, “Mengqadha’ shalat sunnah dan mengerjakan shalat sunnah yang memiliki sebab seperti shalat Tahiyatul masjid, shalat Gerhana, dan sujud Tilawah pada waktu-waktu terlarang adalah tidak boleh menurut madzhab (Hambali).” Kemudian beliau menyatakan bahwa ini juga pendapat Ashhabur Ra’yi (madzhab Hanafi).
+      Selanjutnya beliau mengetengahkan pernyataan mereka yang membolehkannya. Lantas beliau menolaknya dengan berkata, “Menurut kami, larangan itu untuk mengharamkan, sementara perintah (mengerjakan amalan sunnah) adalah nadb (sunnah). Meninggalkan yang haram lebih utama daripada mengerjakan yang sunnah. Tentang pernyataan mereka bahwa perintah ini khusus berkenaan dengan shalat, kami katakan: akan tetapi perintah itu umum di sembarang waktu, sementara larangannya khusus di waktu itu. maka larangan ini didahulukan. Dan tidaklah benar mengqiyaskannya dengan qadha’ shalat setelah Ashar; sebab larangan di sini sifatnya lebih ringan.”[7]<br>
+      <Br>
+      Ibnu Sirin telah menyusun ungkapan yang bagus dan ringkas. Dia berkata,
+    <blockquote>
+      <p style="text-align:justify">Shalat dimakruhkan pada tiga waktu dan diharamkan pada dua waktu. Dimakruhkan setelah Ashar, setelah Subuh dan di tengah hari saat panas menyengat. Diharamkan ketika matahari mulai terbit sampai benar-benar tampak semuanya dan ketika warnanya memerah sampai benar-benar tenggelam.”[8]      </blockquote>
+    <br>
+    <Br>
+    <p style="text-align:justify"> “Apabila matahari muncul, tundalah shalat sampai ia benar-benar tampak. Apabila matahari mulai menghilang, tundalah shalat sampai ia benar-benar terbenam.” [<I>Syahida.com</I>] <br>
+        <Br>
+        <b><I>Sumber: </I></b>Sulitkah Shalat Subuh Tepat Waktu? oleh Samir Al-Qarny bin Muhammad
+    <ol>
+      [1]
+        Muslim hadist no. 829.
+      <br>
+         [2] Diriwayatkan oleh Ahmad dan Ath-Thabarani di dalam Al-Mu’jam Al-Kabir, para periwayatnya adalah para periwayat Ash-Shahih. Demikian disebut di dalam Majma’ Az-Zawaid 2/226.
+      <br>
+         [3] Ahmad, di dalam Al-Fath Ar-Rabbani 2/ 290, para periwayatnya orang-orang yang tsiqqah.
+      <br>
+          [4] Mukhtashar Shahih Muslim hadist no. 219, Shahih Sunan An-Nasa’i hadist no. 546, dan Shahih Sunan Ibnu Majah hadist no. 1519.
+      <br>
+          [5] Waktu larangan shalat sebelum Dzuhur ini sekitar satu atau dua menit.
+      <br>
+          [6] Di dalam Fath Al-Bari Ibnu Hajar 2/ 359 menulis, “Sebagian ulama membedakan antara larangan shalat setelah Subuh dan Ashar dengan larangan shalat ketika terbitnya matahari dan ketika terbenamnya. Mereka mengatakan, pada waktu dua waktu
+      <br>
+           [7] Al-Mughni 1/ 758. Di dalam As-Sail Al-Jarrar 1/189 menulis, “Yang lebih tepat adalah meninggalkan Tahiyyatul Masjid pda waktu-waktu larangan. Dan semestinya orang-orang yang berhati-hati dalam agamanya tidak memasuki masjid pada jam-jam itu, dan kalau memasukinya untuk suatu keperluan tidak usahlah duduk disana.” Di dalam Nail Al-Authar 3/ 69 beliau menulis, “Yang terbaik bagi orang yang wara’ adalah tidak masuk masjid di waktu-waktu larangan.” Saya katakan, “Perlu diketahui bahwa Asy-Syaukani termasuk yang mewajibkan Tahiyyatul Masjid.”
+      <br>
+           [8] ‘Abdur Razzaq meriwayatkan dari Hisyam bin Hissa dari Ibnu Sirin. At-Tamhid 13/82.      
+    </ol>
+    <br><div>
+      <div align="left"><span lang="EN-US">Para ulama menyebutkan ada beberapa waktu yang terlarang mengerjakan shalat di dalamnya, waktu- waktu tersebut adalah  :</span></div>
+    </div>
+    <ol>
+      
+        
+		<li>
+        <strong></strong><strong>Setelah shalat shubuh hingga matahari agak meninggi.</strong></li>
+      
+    
+    
+      <div align="left">Setelah waktu shubuh <span lang="EN-US">tidak ada shalat sunnah sampai waktu yang dibolehkan, yakni setelah matahari terbit dan agak meninggi. </span>Tingginya matahari sebagaimana di sebutkan di dalam hadits adalah setinggi satu tombak atau dua tombak. <span lang="EN-US">Kalau dikira-kira dengan waktu, tingginya matahari yang sudah membolehkan dikerjakannnya shalat adalah 10 menit setelah terbit.</span></div>
+    
+    
+      <br>
+       <li><strong></strong><strong>Ketika matahari Terbit</strong></li>
+      
+    
+    
+      <div align="left"><span lang="EN-US">Yakni waktu ketika secara kasat mata matahari terlihat sedang proses terbit di ufuk timur.</span></div>
+    
+    
+      <br>
+        <li><strong><span lang="EN-US"></span></strong><strong><span lang="EN-US">Ketika Matahari tepat berada diatas (istiwa)</span></strong></li>
+      
+    
+    
+      <div align="left"><span lang="EN-US">Waktu ini adalah</span> ketika matahari <span lang="EN-US">posisinya sedang </span>tepat berada di atas langit atau di tengah- cakrawala.</div>
+    
+   <br>
+        <li><strong><span lang="EN-US"></span></strong><strong><span lang="EN-US">Setelah waktu Ashar sampai Matahari terbenam</span></strong></li>
+     
+    
+      <div align="left"><span lang="EN-US">Tidak ada shalat sunnah setelah dikerjakannya shalat Ashar. Shalat disini adalah shalat Asharnya seseorang yang ia kerjakan, bukan shalat Ashar yang dikerjakan berjama’ah di masjid.</span></div>
+    
+    <br>
+       <li><strong><span lang="EN-US"></span></strong><strong><span lang="EN-US">Ketika matahari terbenam.</span></strong></li>
+    
+    <div>
+      <div align="left"><span lang="EN-US">Waktu ini adalah ketika langit di sore hari menguning hingga matahari sempurna terbenam, yakni masuknya waktu maghrib</span></div>
+    </div>
+	</ol>
+    <div>
+      <div align="left">
+        <p>&nbsp;</p>
+        <p><strong><span lang="EN-US">Keterangan</span></strong></p>
+      </div>
+    </div>
+    <div>
+      <div align="left"><span lang="EN-US">Sebenarnya 5 waktu terlarangnya mengerjakan shalat yang telah disebutkan diatas, bisa dikatakan 3 waktu saja. Karena nomor 2 tercakup oleh  nomor 1 dan nomor 5 tercakup oleh nomor 4. Sehingga dalam kitab-kitab fiqih kebanyakannya  menyebutkan bahwa waktu yang dilarang untuk shalat itu ada tiga waktu.<a href="https://www.blogger.com/blogger.g?blogID=7508007205561633556#_ftn1" name="_ftnref1" title="" target="_top"><span lang="EN-US">[1]</span></a></span><span dir="RTL" lang="AR-SA"> </span></div>
+    </div>
+    <div>
+      <div align="left">
+        <p>&nbsp;</p>
+        <p><strong><span lang="EN-US">Dalil-dalilnya</span></strong></p>
+      </div>
+    </div>
+    <div>
+      <div align="left">
+        <p><span lang="EN-US">Penetapan terlarangnya dikerjakan shalat pada waktu-waktu tersebut berdasarkan dalil dalil hadits berikut ini :</span></p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    <div dir="RTL">
+      <div align="right"><span class="arab">عَنْ أَبِي هرَيْرَةَ رَضِيَ اللهُ عَنْهُ ، أَنَّ النَبِيَّ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ  نَهَى عَنِ الصَّلاَةِ بَعْدَ العَصْرِ حَتَّى تَغْرُبَ الشَّمْسُ وَبَعْدَ الصُّبْحِ حَتَّى تَطْـلُعَ الشَّمْسُ </span></div>
+    </div>
+    <div>
+      <div align="left">
+        <p>&nbsp;</p>
+        <p>Dari Abu Hurairah , sesungguhnya Nabi <em>shalallahu’alaihi wassalam </em>melarang shalat setelah ashar sampai matahari tenggelam dan setelah shalat subuh sampai terbit matahari. (HR. Muslim)<span dir="RTL" lang="AR-SA"> </span></p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    <div dir="RTL">
+      <div align="right"><span class="arab">عَنْ عُقْبَةَ ابْنِ عَامِرٍ رَضِيَ اللَّهُ عَنْهُ قَالَ : ثَلاَثُ سَاعَاتٍ كَانَ رَسُولُ اللّهِ يَنْهَانَا أَنْ نُصَلِّيَ فِيهِنَّ  أَوْ أَنْ نَقْبُرَ فِيهِنَّ مَوْتَانَا: حِينَ تَطْلُعُ الشَّمْسُ بَازِغَةً حَتَّى تَرْتَفِعَ. وَحِينَ يَقُومُ قَائِمُ الظَّهِيرَةِ حَتَّى تَمِيلَ الشَّمْسُ. وَحِينَ تضيّفُ الشَّمْسُ لِلْغُرُوبِ حَتَّى تَغْرُبَ </span></div>
+    </div>
+    <div>
+      <div align="left">
+        <p>&nbsp;</p>
+        <p>‘Uqbah bin ‘Amir berkata : “Ada tiga waktu di mana Nabi shalallahu’alaihi wassalam melarang kami untuk melaksanakan shalat di tiga waktu tersebut atau menguburkan jenazah kami, yaitu ketika matahari terbit sampai tinggi, ketika seseorang berdiri di tengah hari saat matahari berada tinggi di tengah langit (tidak ada bayangan di timur dan di barat) sampai matahari tergelincir dan ketika matahari miring hendak tenggelam sampai benar-benar tenggelam.” (HR. Muslim)<span dir="RTL" lang="AR-SA"> </span></p>
+      </div>
+    </div>
+    <div>
+      <div align="left">
+        <p>&nbsp;</p>
+        <p><strong><span lang="EN-US">Hukumnya</span></strong></p>
+      </div>
+    </div>
+    <div>
+      <div align="left"><span lang="EN-US">Hukum mengerjakan shalat pada waktu-waktu tersebut adalah makruh, bukan haram. Berkata al </span>Imam An Nawawi <span lang="EN-US">rahimahullah</span>, “Umat sepakat tentang dibencinya shalat yang dikerjakan tanpa sebab pada waktu-waktu terlarang tersebut.<span lang="EN-US">”<a href="https://www.blogger.com/blogger.g?blogID=7508007205561633556#_ftn2" name="_ftnref2" title="" target="_top"><span lang="EN-US">[2]</span></a></span></div>
+    </div>
+    <div>
+      <div align="left">
+        <p>&nbsp;</p>
+        <p><strong><span lang="EN-US">Shalat apa saja yang dilarang ?</span></strong></p>
+      </div>
+    </div>
+    <div>
+      <div align="left"><span lang="EN-US">Menurut kalangan ulama </span>Hanafiyya<span lang="EN-US">h dan </span>Malikiyyah seluruh shalat sunnah<span lang="EN-US"> mutlak terlarang</span><span lang="EN-US"> </span><span lang="EN-US">dikerjakan </span>kecuali dua rakaat thawaf. Mereka berdalil dengan keumuman larangan yang disebutkan dalam hadits-hadits<span lang="EN-US">diatas</span>.</div>
+    </div>
+    <div>
+      <div align="left">Sedangkan kalangan mazhab Syafi’iyyah dan mazhab Hanabilah berpendapat bahwa yang dilarang adalah shalat-shalat sunnah yang dikerjakan tanpa sebab. Adapun yang memiliki sebab seperti shalat tahiyatul masjid bagi orang yang masuk masjid, shalat sunnah dua rakaat setelah wudhu, qadha shalat, gerhana dan semisalnya itu dibolehkan.<a href="https://www.blogger.com/blogger.g?blogID=7508007205561633556#_ftn3" name="_ftnref3" title="" target="_top">[3]</a></div>
+    </div>
+    <div>
+      <div align="left"><br>
+      </div>
+    </div>
+    <div>
+      <div align="left">
+        <p>&nbsp;</p>
+        <p>Dalil<span lang="EN-US"> pendapat ini </span>adalah <span lang="EN-US">hadits –hadits berikut ini :</span></p>
+      </div>
+    </div>
+    <div dir="RTL">
+      <div align="right" class="arab"><span lang="AR-SA">مَنْ نَسِىَ صَلاَةً فَلْيُصَلِّ إِذَا ذَكَرَهَا لاَكَفَّرَةَ لَهَا إِلاَّ ذلِكَ</span> </div>
+    </div>
+    <div>
+      <div align="left">
+        <p><em>“Barangsiapa lupa terhadap suatu shalat, maka hendaklah ia shalat ketika ingat. Tidak ada kaffarat baginya kecuali (shalat) itu.” </em><span lang="EN-US"> (Mutafaqqun ‘alaih)</span><span lang="EN-US"> </span></p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    <div dir="RTL">
+      <div align="right" class="arab"><span lang="AR-SA">إِذَا دَخَلَ أَحَدُكُمُ الْمَسْجِدَ فَلاَ يَجْلِسْ حَتَّى يُصَلِّيَ رَكْعَتَيْنِ</span> <span dir="LTR"> .</span></div>
+    </div>
+    <div>
+      <div align="left"><em>“Jika salah seorang di antara kalian masuk masjid, maka janganlah duduk hingga shalat dua raka’at.”</em><em><span lang="EN-US">(</span></em><span lang="EN-US">Mutafaqqun ‘alaih)</span></div>
+    </div>
+    <div>
+      <div align="left"><br>
+          <span lang="EN-US">Demikian, Wallahu a’lam.</span></div>
+    </div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

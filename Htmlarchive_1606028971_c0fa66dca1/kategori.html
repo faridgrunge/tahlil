@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Kategori Asmaul Husna</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+ <p style="font-weight:bold;">
+Nama-Nama Sifat Allah Subhanahu Wa Ta'ala Yang Berkaitan Dengan Zat Peribadinya:</p> 
+<p>
+1. Al-Waahid (Maha Tunggal)</br>
+2. Al-Ahad (Maha Esa)</br>
+3. Al-Haq (Maha Benar)</br>
+4. Al-Qudduus (Maha Suci)</br>
+5. As-Shamad (Maha Diperlukan)</br>
+6. Al-Ghaniy (Maha Kaya)</br>
+7. Al-Mughni (Maha Mengayakan)</br>
+8. Al-Awwal (Maha Pertama)</br>
+9. Al-Akhir (Maha Penghabisan)</br>
+10. Al-Hayyu (Maha Hidup)</br>
+11. Al-Qayyuum (Maha Berdiri Sendiri)</br>
+</p> 
+ <p style="font-weight:bold;">
+Nama-Nama Sifat Allah Subhanahu Wa Ta'ala Yang Berhubung Dengan Penciptaan-Nya:</p> 
+<p>
+1. Al-Khaaliq (Maha Mencipta)</br>
+2. Al-Baari’ (Maha Pembuat)</br>
+3. Al-Mushawwir (Maha Pembentuk)</br>
+4. Al-Badii’ (Maha Pencipta yang baru)</br>
+</p> 
+ <p style="font-weight:bold;">
+Nama-Nama Sifat Allah Subhanahu Wa Ta'ala Yang Berhubungan Dengan Sifat Kecintaan Dan Kerahmatan:</p> 
+<p>
+1. Rahmaan (Maha Pengasihi)</br>
+2. Rahiim (Maha Penyayang)</br>
+3. Ar-Rauuf (Maha Pengasih)</br>
+4. Al- Waduud (Maha Pencinta)</br>
+5. Al-Lathiif (Maha Lemah Lembut /Halus)</br>
+6. Al-Tawwaab (Penerima Taubat)</br>
+7. Al-Haliim (Maha Penghiba)</br>
+8. Al-’Afuw (Maha Pemaaf)</br>
+9. Al-Ghaffar  (Maha Mengampun)</br>
+10. Al-Ghaffur (Maha Pengampun)</br>
+11. Asy-Syakuur (Maha Pembalas, Pemberi Kurnia)</br>
+12. As-Salaam (Maha Pengaman)</br>
+13. Al-Mu’min (Maha Pemelihara keamanan)</br>
+14. Al-Barr (Maha Mencipta Kebaikan /Dermawan)</br>
+15. Rafli’ (Maha Mengangkat Darjat)</br>
+16. Ar-Razzaaq (Maha Pemberi rezeki)</br>
+17. Al-Wahhaab (Maha Pemberi)</br>
+18. Al-Waasi’ (Maha Luas)</br>
+</p> 
+<p style="font-weight:bold;">
+Nama-Nama Yang Berhubungan Dengan Kebesaran, Keagungan Dan Kemuliaan Allah Subhanahu Wa Ta'ala:</p> 
+<p>
+1. Al-’Azhiim (Maha Agung)</br>
+2. Al-’Aziiz (Maha Mulia)</br>
+3. Al-Aliy (Maha Tinggi)</br>
+4. Al-Muta’aalii (Maha Suci)</br>
+5. Al-Qawiy (Maha Kuat)</br>
+6. Al-Qahhaar (Maha Pemaksa)</br>
+7. Al-Jabbaar (Maha Perkasa)</br>
+8. Al-Mutakabbir (Maha Megah)</br>
+9. Al-Kabiir (Maha Besar)</br>
+10. Al-Kariim (Maha Pemurah)</br>
+11. Al-Hamiid (Maha Terpuji)</br>
+12. Al-Majiid (Maha Mulia)</br>
+13. Al-Matiin (Maha Kuat)</br>
+14. Az-Zhaahir (Maha Nyata)</br>
+15. Zuljalaali Wal Ikraam (Maha Memiliki Kebesaran dan Kemuliaan)</br>
+</p> 
+<p style="font-weight:bold;">
+Nama-Nama Yang Berhubungan Dengan Ilmu Pengetahuan Allah Subhanahu Wa Ta'ala:</p> 
+<p>
+1. Al-’Aliim (Maha Mengetahui)</br>
+2. Al-Hakiim (Maha Bijaksana)</br>
+3. As-Samii’ (Maha Mendengar)</br>
+4. Al-Khabiir (Maha Waspada)</br>
+5. Al-Bashiir (Maha Melihat)</br>
+6. Asy-Syahiid (Maha Menyaksikan)</br>
+7. Ar-Raqiib (Maha Meneliti)</br>
+8. Al-Baathin (Maha Tersembunyi)</br>
+9. Al-Muhaimin (Maha Menjaga)</br>
+</p>
+<p style="font-weight:bold;">
+Nama-Nama Yang Berhubungan Dengan Kekuasaan Dan Pimpinan  Allah Subhanahu Wa Ta'ala:</p> 
+<p>
+1. Al-Qaadir (Maha Kuasa)</br>
+2. Al-Muqtadir (Maha Menguasai)</br>
+3. Al-Wakiil (Maha Memelihara penyerahan)</br>
+4. Al-Haflidz (Maha Pemelihara)</br>
+5. Al-Malik (Maha Merajai)</br>
+6. Al-Fattaah (Maha Membukakan)</br>
+7. Al-Hasiib (Maha Penjamin)</br>
+8. Al-Muntaqim (Maha Penyiksa)</br>
+9. Al- Muqiit (Maha Pemberi kecukupan)</br>
+</p>
+<p style="font-weight:bold;">
+Nama-Nama Yang Berhubungan Dengan Kekuasaan Dan Pimpinan  Allah Subhanahu Wa Ta'ala:</p> 
+<p>
+1. Al-Qaabidh (Maha Pencabut)</br>
+2. Al-Baasith (Maha Meluaskan)</br>
+3. Al-Mu’iz (Maha Pemberi kemuliaan)</br>
+4. Al-Mudzil (Maha Pemberi kehinaan)</br>
+5. A1-Mujiib (Maha Mengabulkan)</br>
+6. Al-Baa’its (Maha Membangkitkan)</br>
+7. Al-Muhshii (Maha Penghitung)</br>
+8. Al-Mubdi’ (Maha Memulai)</br>
+9. A1-Mu’iid (Maha Mengulangi)</br>
+10. Al-Muhyii (Maha Menghidupkan)</br>
+11. Al-Mumiit (Maha Mematikan)</br>
+12. Maalikul Mulk (Maha Menguasai kerajaan)</br>
+13. AI-Jaami’ (Maha Mengumpulkan)</br>
+14. Ad-Dhaar (Maha Pemberi Kemudaratan)</br>
+15. Al-Maani’ (Maha Membela, Maha Menolak)</br>
+16. At-Haadi (Maha Pemberi Petunjuk)</br>
+17. Al-Baaqi (Maha Kekal)</br>
+18. Al-Waarits (Maha Pewaris)</br>
+</font>
+<p style="font-weight:bold;">
+Nama-Nama Yang Berhubungan Dengan Iradat  Allah Subhanahu Wa Ta'ala:</p> 
+<p>
+1. An-Nuur (Maha Bercahaya)</br>
+2. Ash-Shabuur (Maha Penyabar)</br>
+3. Ar-Rasyiid (Maha Cendekiawan)</br>
+4. Al-Muqsith (Maha Mengadili)</br>
+5. An-Naafi’ (Maha Memanfaat)</br>
+6. AI-Waalii (Maha Menguasai)</br>
+7. AI-Jaliil (Maha Luhur)</br>
+8. Al-Waaliy (Maha Mengendalikan Segala Urusan)</br>
+9. Al-’Adl (Maha Adil)</br>
+10. Al-Khaafidh (Maha Menjatuhkan)</br>
+11. Al- Waajid (Maha Kaya)</br>
+12. AI-Muqaddim (Maha Mendahulukan)</br>
+13. Al-Muakhkhir (Maha Mengakhirkan)</br>
+14. Al-Hakam (Maha Menghukum)</br>
+</div>
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

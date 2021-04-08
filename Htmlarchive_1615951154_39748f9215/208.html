@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Wirid Penyembuh (Penyakit dan Ketenangan)</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ<br><br>Aku berlindung kepada Allah dari godaan setan yang terkutuk.<br><br>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.<br><br>1.	QS. Yunus [10]: 57 <br><br>يٰٓاَيُّهَا النَّاسُ قَدْ جَاۤءَتْكُمْ مَّوْعِظَةٌ مِّنْ رَّبِّكُمْ وَشِفَاۤءٌ لِّمَا فِى الصُّدُوْرِۙ وَهُدًى وَّرَحْمَةٌ لِّلْمُؤْمِنِيْنَ<br><br>Wahai manusia! Sungguh, telah datang kepadamu pelajaran (Al-Qur'an) dari Tuhanmu, penyembuh bagi penyakit yang ada dalam dada dan petunjuk serta rahmat bagi orang yang beriman.<br><br>2.	QS. Al-Isra’ [17]: 82<br><br>وَنُنَزِّلُ مِنَ الْقُرْاٰنِ مَا هُوَ شِفَاۤءٌ وَّرَحْمَةٌ لِّلْمُؤْمِنِيْنَۙ<br><br>Dan Kami turunkan dari Al-Qur'an (sesuatu) yang menjadi penawar (penyembuh) dan rahmat bagi orang yang beriman. <br><br>3.	QS. Fussilat [41]: 44 <br><br>قُلْ هُوَ لِلَّذِيْنَ اٰمَنُوْا هُدًى وَّشِفَاۤءٌ<br><br>Katakanlah, “Al-Qur'an adalah petunjuk dan penyembuh bagi orang-orang yang beriman.” <br><br>4.	QS. As-Syu’ara’ [26]: 80<br><br>وَاِذَا مَرِضْتُ فَهُوَ يَشْفِيْنِ ۙ<br><br>Dan apabila aku sakit, Dialah (Allah) yang menyembuhkan aku. <br><br>5.	QS. At-Taubah [9]: 14<br><br>وَيَشْفِ صُدُوْرَ قَوْمٍ مُّؤْمِنِيْنَۙ <br><br>Serta melegakan (menyembuhkan) hati orang-orang yang beriman. <br><br>6.	QS. Al-Baqarah [2]: 286<br><br>لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَا ۗ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ اِنْ نَّسِيْنَآ اَوْ اَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ اِصْرًا كَمَا حَمَلْتَهٗ عَلَى الَّذِيْنَ مِنْ قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهٖۚ وَاعْفُ عَنَّاۗ وَاغْفِرْ لَنَاۗ وَارْحَمْنَا ۗ اَنْتَ مَوْلٰىنَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكٰفِرِيْنَ ࣖ<br><br>Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya. Dia mendapat (pahala) dari (kebajikan) yang dikerjakannya dan dia mendapat (siksa) dari (kejahatan) yang diperbuatnya. (Mereka berdoa), “Ya Tuhan kami, janganlah Engkau hukum kami jika kami lupa atau kami melakukan kesalahan. Ya Tuhan kami, janganlah Engkau bebani kami dengan beban yang berat sebagaimana Engkau bebankan kepada orang-orang sebelum kami. Ya Tuhan kami, janganlah Engkau pikulkan kepada kami apa yang tidak sanggup kami memikulnya. Maafkanlah kami, ampunilah kami, dan rahmatilah kami. Engkaulah pelindung kami, maka tolonglah kami menghadapi orang-orang kafir.”<br><br>7.	QS. Al-Hasyr [59]: 22-24<br><br>هُوَ اللّٰهُ الَّذِيْ لَآ اِلٰهَ اِلَّا هُوَۚ عَالِمُ الْغَيْبِ وَالشَّهَادَةِۚ هُوَ الرَّحْمٰنُ الرَّحِيْمُ - ٢٢<br><br>Dialah Allah tidak ada tuhan selain Dia. Yang Mengetahui yang gaib dan yang nyata, Dialah Yang Maha Pengasih, Maha Penyayang.<br><br>هُوَ اللّٰهُ الَّذِيْ لَآ اِلٰهَ اِلَّا هُوَ ۚ اَلْمَلِكُ الْقُدُّوْسُ السَّلٰمُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيْزُ الْجَبَّارُ الْمُتَكَبِّرُۗ سُبْحٰنَ اللّٰهِ عَمَّا يُشْرِكُوْنَ - ٢٣<br><br>Dialah Allah tidak ada tuhan selain Dia. Maharaja, Yang Mahasuci, Yang Mahasejahtera, Yang Menjaga Keamanan, Pemelihara Keselamatan, Yang Mahaperkasa, Yang Mahakuasa, Yang Memiliki Segala Keagungan, Mahasuci Allah dari apa yang mereka persekutukan.<br><br>هُوَ اللّٰهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْاَسْمَاۤءُ الْحُسْنٰىۗ يُسَبِّحُ لَهٗ مَا فِى السَّمٰوٰتِ وَالْاَرْضِۚ وَهُوَ الْعَزِيْزُ الْحَكِيْمُ ࣖ - ٢٤<br><br>Dialah Allah Yang Menciptakan, Yang Mengadakan, Yang Membentuk Rupa, Dia memiliki nama-nama yang indah. Apa yang di langit dan di bumi bertasbih kepada-Nya. Dan Dialah Yang Mahaperkasa, Mahabijaksana.<br><br>8.	Doa Asmaul Husna Ibnu Majah no. 3857 & 3858<br><br>اللَّهُـمَّ إِنِّي أَسْأَ لُكَ بِأَنَّكَ أَنْتَ اللَّهُ الأَحَدُ الصَّمَدُ الَّذِي لَمْ يَلِدْ وَلَمْ يُولَدْ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ<br><br>Ya Allah, sesungguhnya aku memohon kepada-Mu, bahwasanya Engkau adalah Allah Yang Maha Esa, Yang Bergantung pada-Nya segala sesuatu, yang tidak beranak dan tidak diperanakkan, dan tidak ada seorang pun yang setara dengan-Nya. <br><br>اللَّهُـمَّ إِنِّي أَسْأَ لُكَ بِأَنَّ لَكَ الْحَمْدَ لاَ إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ الْمَنَّانُ بَدِيعُ السَّمَوَاتِ وَالأَرْضِ ذُو الْجَلاَلِ وَالإِكْرَامِ <br><br>Ya Allah, sesungguhnya aku memohon kepada-Mu bahwa bagi-Mu segala pujian, tiada Tuhan melainkan Engkau yang tidak ada sekutu bagi-Mu, yang Maha memberi, Pencipta langit dan bumi, Yang Maha memiliki Keluruhan dan Kemurahan. <br><br>9.	Hamdalah (Al-Adzkar An-Nawawiyah)<br><br>اَلْحَمْدُ لِلّٰهِ رَبِّ اْلعَالَمِيْنَ حَمْدًا يُوَافِى نِعَمَهُ وَيُكَافِئ ُمَزِيْدَهُ<br><br>Segala puji bagi Allah Tuhan semesta alam, pujian yang sebanding dengan nikmat-nikmat-Nya dan menjamin tambahannya.<br><br>10.	  Shalawat Ibrahimiyah (Salah satu redaksinya, misalnya, bersumber dari HR. Bukhari no. 6358):<br><br>اللَّهُـمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ، وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَآلِ إِبْرَاهِيمَ<br><br>Ya Allah limpahkanlah rahmat dan keselamatan kepada Muhammad ﷺ hamba dan utusan-Mu sebagaimana Engkau telah memberi rahmat dan keselamatan kepada Ibrahim, dan berilah keberkahan kepada Muhammad ﷺ dan keluarga Muhammad ﷺ sebagaimana Engkau telah memberi keberkahan kepada Ibrahim, dan keluarga Ibrahim. <br><br>11.	  Shalawat Thibbil Qulub<br><br>اللَّهُـمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ طِبِّ الْقُلُوْبِ وَدَوَائِهَا. وَعَافِيَةِ اْلأَبْدَانِ وَشِفَائِهَا. وَنُوْرِ اْلأَبْصَارِ وَضِيَائِهَا  وَعَلَى آلِهِ وَصَحْبِهِ وَسَلِّمْ<br><br>Ya Allah, limpahkanlah rahmat dan keselamatan kepada pemimpin kami, Muhammad ﷺ, yang menjadi penyembuh dan obat bagi hati, penyehat dan terapi tubuh, cahaya dan sinar hati. Limpahkanlah kasih sayang kepada keluarganya dan sahabatnya, juga limpahkanlah keselamatan.<br><br>12.	  Istighfar (HR. Abu Dawud no. 1517 & Tirmidzi no. 3577) dibaca 3X<br><br>أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إِلَهَ إلَّا هُوَ الْحَيُّ القَيُّومُ وَأَتُوبُ إِلَيهِ<br><br>Aku minta ampun kepada Allah, tiada tuhan yang berhak disembah kecuali Dia, yang Mahahidup dan terus-menerus mengurus makhluk-Nya.<br><br>13.	  Sayyidul Istighfar (HR.Bukhari no. 6306)<br><br>اللَّهُـمَّ أَنْتَ رَبِّي لاَ إِلَهَ إِلاَّ أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَىَّ وَأَبُوءُ لَكَ بِذَنْبِي فَاغْفِرْ لِي،فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ<br><br>Ya Allah, Engkau adalah Tuhanku, tidak ada Tuhan yang berhak diibadahi selain Engkau. Engkau telah menciptakanku dan aku adalah hamba-Mu. Aku menetapi perjanjian-Mu dan janji-Mu sesuai dengan kemampuanku. Aku berlindung kepada-Mu dari keburukan perbuatanku, aku mengakui dosaku kepada-Mu dan aku akui nikmat-Mu kepadaku, maka ampunilah aku. Sebab tidak ada yang dapat mengampuni dosa selain-Mu.<br><br>14.	  QS. Al-Anbiya’ [21]:83 dibaca 3X<br><br>رَبَّهٗٓ اَنِّيْ مَسَّنِيَ الضُّرُّ وَاَنْتَ اَرْحَمُ الرَّاحِمِيْنَ<br><br>(Ya Tuhanku), sungguh, aku telah ditimpa penyakit, dan Engkau Tuhan Yang Maha Penyayang dari semua yang penyayang. <br><br>15.	  Al-Adabul Mufrad no. 701 dibaca 3X<br><br>اللَّهـُمَّ عَافِنِي فِي بَدَنِي اللَّهـُمَّ عَافِنِي فِي سَمْعِي اللَّهـُمَّ عَافِنِي فِي بَصَرِي، لاَ إِلَهَ إِلاَّ أَنْتَ<br><br>Ya Allah, sehatkanlah badanku, Ya Allah sehatkanlah pendengaranku, Ya Allah, sehatkanlah pengelihatanku. Tiada Tuhan selain Engkau. <br><br>16.	 Al-Adabul Mufrad no. 1200<br><br>اللَّهُـمَّ إِنِّي أَسْأَ لُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ‏<br><br>اللَّهُـمَّ إِنِّي أَسْأَ لُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ، وَأَهْلِي وَمَالِي‏.‏ اللَّهُـمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي‏<br><br> اللَّهُـمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي، وَعَنْ يَمِينِي وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ مِنْ أَنْ أُغْتَالَ مِنْ تَحْتِي<br><br>Ya Allah, sesungguhnya aku memohon ampunan dan kesehatan yang prima di dunia dan akhirat. Ya Allah, sesungguhnya aku memohon ampunan dan kesehatan yang prima dalam urusan agamaku, duniaku, keluargaku dan hartaku. Ya Allah, tutupilah auratku (aib dan kejelekan) dan tenangkanlah aku dari rasa takut. Ya Allah, jagalah aku dari arah depan, belakang, kanan, kiri dan dari atasku, dan aku berlindung dengan kebesaran-Mu, agar aku tidak dihancurkan dari bawahku.<br><br>17.	Letakkan tangan (kanan) di daerah yang sakit (i.e., dada, perut, dsb.) dan baca doa ini setidaknya 3X (HR. Tirmidzi no. 3588)<br><br>بِسْمِ اللَّهِ أَعُوذُ بِعِزَّةِ اللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ مِنْ وَجَعِي هَذَا<br><br>Dengan nama Allah, Aku berlindung kepada keperkasaan Allah dan kekuasaan-Nya dari setiap keburukan yang aku jumpai dari rasa sakitku ini.<br><br>18.	 Letakkan tangan (kanan) di daerah yang sakit (i.e., dada, perut, dsb.) dan  baca doa ini (HR. Muslim no. 2202) <br><br>بِاسْمِ اللَّهِ    (tiga kali)<br><br>أَعُوذُ بِاللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ ‏     (tujuh kali)<br><br>19.	  HR. Abu Dawud no. 5088 & Tirmidzi no. 3388 dibaca 3X<br><br>بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَىْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ <br><br>Dengan nama Allah yang bila disebut tiada sesuatu pun di bumi dan di langit yang bisa menimbulkan bahaya. Dan Dia Maha Mendengar lagi Maha Mengetahui.<br><br>20.	  HR. Ibnu Majah no. 3547 & Tirmidzi no. 3604 dibaca 3X<br><br>أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ<br><br>Aku berlindung dengan kalimat-kalimat Allah yang sempurna (yaitu) dari kejahatan makhluk-Nya.<br><br>21.	  HR. Abu Dawud no. 1554<br><br>اللَّهُـمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْبَرَصِ وَالْجُنُونِ وَالْجُذَامِ وَمِنْ سَيِّئِ الأَسْقَامِ<br><br>Ya Allah, aku berlindung kepada-Mu dari penyakit belang, gila, kusta, dan dari segala penyakit buruk (mengerikan) lainnya.<br><br>22.	  HR. Ibnu Majah no. 1619<br><br>أَذْهِبِ الْبَاسَ رَبَّ النَّاسِ ‏.‏ وَاشْفِ أَنْتَ الشَّافِي لاَ شِفَاءَ إِلاَّ شِفَاؤُكَ شِفَاءً لاَ يُغَادِرُ سَقَمًا<br><br>Jauhkanlah penyakit, wahai Tuhan manusia. Sembuhkanlah, Engkau adalah Maha Penyembuh, tidak ada kesembuhan kecuali kesembuhan dari-Mu, kesembuhan yang tidak meninggalkan rasa sakit. <br><br>23.	  Doa kesembuhan untuk saudara kita yang sedang sakit (sebagaimana dianjurkan HR. Muslim no. 2732)<br><br>اللَّهُـمَّ اشْفِ مَرْضَانَا وَمَرْضَى الْمُسْلِمِينَ<br><br>Ya Allah, sembuhkanlah penyakit kami dan penyakit kaum muslimin pada umumnya. <br><br>اللَّهُـمَّ اشْفِ كُلَّ مَرِيضٍ وَعَا فِي كُلَّ مُبْتَلَي . اللَّهُـمَّ أَلْبِسْهُمْ لِبَاسَ الصِّحَّةَ وَالعَافِيَةَ<br><br>Ya Allah, sembuhkanlah orang-orang yang sakit dan sembuhkanlah orang-orang yang terjangkit/tertimpa musibah. Ya, Allah, pakaikanlah (hiasilah) mereka pakaian kesehatan lahir batin. <br><br>24.	  QS. Al-Qasas [28]: 24: <br><br>رَبِّ اِنِّيْ لِمَآ اَنْزَلْتَ اِلَيَّ مِنْ خَيْرٍ فَقِيْرٌ<br><br>Ya Tuhanku, sungguh aku amat membutuhkan kebaikan apa pun yang Engkau berkenan berikan kepadaku. <br><br>25.	  QS. Al-Anbiya’ [21]: 87<br><br>لَّآ اِلٰهَ اِلَّآ اَنْتَ سُبْحٰنَكَ اِنِّيْ كُنْتُ مِنَ الظّٰلِمِيْنِ<br><br>Tidak ada tuhan selain Engkau, Mahasuci Engkau. Sungguh, aku termasuk orang-orang yang zalim.<br><br>26.	  Al-Mu’jam Al-Kabir no. 20417 <br><br>اللَّهُ رَبِّي لَا شَرِيكَ لَهُ<br><br>Allah adalah Tuhanku tiada sekutu bagi-Nya. <br><br>27.	  Membaca beberapa Asmaul Husna disertai doa<br><br>يَااللّٰهُ<br><br>يَا رَحْمٰنُ يَارَحِيْـمُ <br><br>يَامَلِكُ يَاقُـدُّوْسُ<br><br>يَا عَفُـوُّ يَا غَفُـوْرُ<br><br>يَا ﻟَﻄِﻴﻒُ ﻳَﺎ ﻣَﻨَّﺎنْ<br><br>يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ<br><br>يَا ذَا الْجَلَالِ وَالْإِكْرَامِ يَا حَيُّ يَا قَيُّومُ إِنِّي أَسْأَ لُكَ<br><br>يَاشَافِي يَا كَافِي يَامُعَافِي يَااللّٰهُ<br><br>يَاشَافِي يَا كَافِي اِشْفِ يَااللّٰهُ<br><br>Wahai Allah. Wahai Yang Maha Pengasih, Wahai Yang Maha Penyayang. Wahai Yang Maha Menguasai, Wahai yang Maha Suci, Wahai yang Maha Pemaaf, Wahai yang Maha Pengampun. Wahai yang Maha Lembut terhadap hamba-Nya, Wahai Maha Pemberi Nikmat. Wahai Yang Maha Hidup, wahai Yang Maha Berdiri Sendiri, dengan rahmat-Mu aku memohon pertolongan. Wahai Zat Pemilik Keagungan dan Kemuliaan. Wahai Zat yang Maha Hidup lagi Maha Berdiri Sendiri, aku memohon kepada-Mu. Wahai Yang Maha Penyembuh, Wahai yang Maha Mencukupi, Wahai yang Menyembuhkan, Wahai Allah. Wahai Yang Maha Penyembuh, Wahai yang Maha Mencukupi, sembuhkanlah kami ya Allah. <br><br>28.	  QS. Al-Baqarah [2]: 201<br><br>رَبَّنَآ اٰتِنَا فِى الدُّنْيَا حَسَنَةً وَّفِى الْاٰخِرَةِ حَسَنَةً وَّقِنَا عَذَابَ النَّارِ <br><br>Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka.<br><br>29.	  HR. Malik no. 400:<br><br>اللَّهُـمَّ صَلِّ عَلَى مُحَمَّدٍ وَأَزْوَاجِهِ وَذُرِّيَّتِهِ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ، وَبَارِكْ عَلَى مُحَمَّدٍ وَأَزْوَاجِهِ وَذُرِّيَّتِهِ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ<br><br>Ya Allah, limpahkanlah rahmat dan keselamatan kepada Muhammad ﷺ dan istri-istrinya serta keturunannya sebagaimana engkau memberi rahmat dan keselamatan kepada keluarga Ibrahim, dan berkahilah Muhammad ﷺ dan istri-istrinya serta keturunannya sebagaimana engkau memberkahi keluarga Ibrahim. Sesungguhnya Engkau Maha Terpuji dan Maha Mulia. <br><br>30.	  QS. As-Saffat [37]: 180-182 <br><br>سُبْحٰنَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَۚ وَسَلٰمٌ عَلَى الْمُرْسَلِيْنَۚ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ<br><br>Mahasuci Tuhanmu, Tuhan Yang Mahaperkasa dari sifat yang mereka katakan. Dan selamat sejahtera bagi para rasul. Dan segala puji bagi Allah Tuhan seluruh alam.<br><br>الفاتحة<br>(Ditutup dengan membaca surat Al-Fatihah)</p><p><i>N/A</i></p><p>N/A</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Al-faqir mengalami sakit yang cukup parah hingga harus dirawat di rumah sakit selama 12 hari. Al-faqir berusaha untuk tetap semangat, mengikuti arahan para dokter, dan senantiasa berdoa kepada Allah agar diberikan kekuatan dan kesembuhan. Tak lupa, Al-faqir juga memperbanyak beristighfar dan bershalawat kepada Nabi Muhammad ﷺ. Alhamdulillah, keadaan Al-faqir sedikit demi sedikit membaik, hingga akhirnya dibolehkan untuk pulang dan memulai pemulihan di rumah. <br><br>Berikut adalah zikir dan doa rutin yang dibaca oleh Al-faqir, terutama setelah shalat wajib. Silakan diamalkan dan dibagikan jika dirasa bermanfaat. Semoga saja amalan ini dapat bermanfaat bagi orang lain, terutama bagi saudara seiman dan seislam yang sedang sakit keras. Al-faqir paham betul bahwa perjuangan mereka tidaklah mudah. Semoga amalan zikir dan doa ini dapat membantu. <br><br>Zikir dan doa ini telah di-review oleh beberapa ulama di antaranya KH. Ma’ruf Khozin, Habib Muhammad Syahab, Gus Rifqil Muslim Suyuthi, dan Ustadz Abdul Walid.</p><p><strong>Berbagai sumber
+</strong></p>
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

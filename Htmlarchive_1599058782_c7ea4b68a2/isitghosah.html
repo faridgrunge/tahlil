@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 30px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"qalam";
+        src:url("font/qalam.ttf")
+    }
+	.arab{font-family:qalam; font-size: 30px;
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Istighosah</h1>
+
+
+
+<p style="text-align: right;" class="arab"></p>
+
+<p><em>
+</em></p>
+<item>
+    <id> </id>
+    <p> </p>
+    <p style="text-align: right;" class="arab">بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيم</p>
+    <p>BISMILLAHIRRAHMAANIRRAHIIM(I)</p>
+    <p>Dengan nama Allah Yang Maha Pengasih lagi Maha Penyayang</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Surat Al-Fatihah</h3>
+    <p style="text-align: right;" class="arab">بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ ۝ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلاَ الضَّالِّين ۝</p>
+    <p> </p>
+    <p> </p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Istighfar (3x)</h3>
+    <p style="text-align: right;" class="arab">أسْتَغْفِرُ اللهَ الْعَظِيْمَ</p>
+    <p>ASTAGHFIRULLAHAL ‘ADHIIM(I)</p>
+    <p>Saya mohon ampun kepada Allah Yang Maha Agung</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Dzikir berserah diri (3x)</h3>
+    <p style="text-align: right;" class="arab">لَاحَوْلَ وَلَا قُوَّةَ إلَّا بِا للهِ الْعَلِيِّ الْعَظِيْ</arab>
+    <p>LAA HAULA WA LAA QUWWATA ILLAA BILLAHIL ‘ALIYYIL ADHIIM(I) </p>
+    <p>Tiada daya untuk menjauhi maksiat kecuali dengan pemeliharaan Allah dan tiada kekuatan untuk melakukan ketaatan kecuali dengan pertolongan Allah</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Shalawat (3x)</h3>
+    <p style="text-align: right;" class="arab">أللَّهُمَّ صَلِّي عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ</arab>
+    <p>ALLAHUMMA SHALLII ‘ALAA SAYYIDINAA MUHAMMADIN WA ‘ALAA AALI SAYYIDINAA MUHAMMADIN</p>
+    <p>Ya Allah. Limpahkanlah rahmat dan kemuliaan kepada junjungan kami Nabi Muhammad berserta keluarganya</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Dzikir berserah diri (40x)</h3>
+    <p style="text-align: right;" class="arab">لَا إلهَ إلَّا أنْتَ سُبْحَانَكَ إنِّي كُنْتُ مِنَ الظَّالِمِيْنَ</arab>
+    <p>LAA ILAAHA ILLAA ANTA SUBHAANAKA INNII KUNTU MINAZHZHOOLIMIIN(A)</p>
+    <p>Tiada Tuhan yang berhak disembah selain Engkau, Maha Suci Engkau, Sungguh aku termasuk orang-orang yang telah berbuat dzalim</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Asmaul Husna(33x)</h3>
+    <p style="text-align: right;" class="arab">يَا اَللهُ يَا قَدِيْمُ</arab>
+    <p>YAA ALLAHU YAA QADIIM(U)</p>
+    <p>Wahai Allah, wahai Dzat yang ada tanpa permualaan</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Asmaul Husna(33x)</h3>
+    <p style="text-align: right;" class="arab">يَا سَمِيْعُ يَا بَصِيْرُ</arab>
+    <p>YAA SAMII’U YAA BASHIIR(U)</p>
+    <p>Wahai Allah, wahai Dzat Yang Maha Mendengar dan Maha Melihat</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Asmaul Husna(33x)</h3>
+    <p style="text-align: right;" class="arab">يَا مُبْدِعُ يَا خَالِقُ</arab>
+    <p>YAA MUBDI’U YAA KHAALIQ(U)</p>
+    <p>Wahai Dzat yang mewujudkan sesuatu dari tidak ada, wahai Dzat Yang Maha Pencipta</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Asmaul Husna(33x)</h3>
+    <p style="text-align: right;" class="arab">يَا حَفِيْظُ يَا نَصِيْرُ يَا وَكِيْلُ ياَ اللهُ</arab>
+    <p>YAA HAFIIZHU YAA NASHIIRU YAA WAKIILU YAA ALLAH(U)</p>
+    <p>Wahai Dzat yang memelihara dari keburukan dan kebinasaan, wahai Dzat Yang Maha Menolong, wahai Dzat yang menjamin rizki para hamba dan mengetahui kesulitan-kesulitan hamba, ya Allah</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Asmaul Husna dan Doa (33x)</h3>
+    <p style="text-align: right;" class="arab">يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أسْتَغِيْثُ</arab>
+    <p>YAA HAYYU YAA QAYYUUMU BIRAHMATIKA ASTAGHIITS(U)</p>
+    <p>Wahai Dzat Yang Hidup, yang terus menerus mengurus makhluknya, dengan rahmat-Mu aku memohon pertolongan-MU</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Asmaul Husna (41x)</h3>
+    <p style="text-align: right;" class="arab">يَا لَطِيْفُ</arab>
+    <p>YAA LATHIIF(U)</p>
+    <p>Wahai Dzat yang Maha Lembut</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Istighfar (33x)</h3>
+    <p style="text-align: right;" class="arab">أسْتَغْفِرُ اللهَ الْعَظِيْمَ إنَّهُ كَانَ غَفَّارًا</arab>
+    <p>ASTAGHFIRULLAHAL’AZHIIMA INNAHU KAANA GHAFFARAA</p>
+    <p>Aku mohon ampung kepada Allah Yang Maha Agung, sunggu Allah Dzat Yang Maha Pengampun</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Shalawat (3x)</h3>
+    <p style="text-align: right;" class="arab">أللَّهُمَّ صَلِّي عَلَى سَيِّدِنَا مُحَمَّدٍ قَدْ ضَاقَتْ حِيْلَتِي أدْرِكْنِي يَا اَللهُ</arab>
+    <p>ALLAHUMMA SHALLII ‘ALAA SAYYIDINAA MUHAMMADIN QAD DHAAQAT HIILATII ADRIKNII YAA ALLAH(U)</p>
+    <p>Ya Allah, limpahkanlah rahmat dan kemuliaan kepada junjungan kami Nabi Muhammad, sungguh telah habis daya dan upayaku maka tolonglah kami, Ya Allah Ya Allah Ya Allah</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Shalawat Nariyah</h3>
+    <p style="text-align: right;" class="arab">أللّهُمَّ صَلِّي صَلَاةً كَامِلَةً وَسَلِّمْ سَلَامًا تَامًّا عَلَى سَيِّدِنَا مُحَمَّدِ الّذِي تَنْحَلُّ بِهِ الْعُقَدُ وَتَنْفَرِجُ بِهِ الْكُرَبُ وَتُقْضَى بِهِ الْحَوَائِجُ وَتُنَالُ بِهِ الرَّغَائِبُ وَحُسْنُ الْخَوَاتِمِ وَيُسْتَسْقَى الْغَمَامُ بِوَجْهِهِ الْكَرِيْمِ وَعَلَى آلِهِ وَصَحْبِهِ فِيْ كُلِّ لَمْحَةٍ وَنَفَسٍ بِعَدَدِ كُلِّ مَعْلُوْمٍ لَكَ</arab>
+    <p>ALLAHUMMA SHALLII SHALAATAN KAAMILATAN WA SALLIM SALAAMAN TAAMMAN ‘ALAA SAYYIDINAA MUHAMMADILLADZII TANHALLU BIHIL’UQADU WA TANFARIJU BIHILKURABU WA TUQDHAA BIHILHAWAA-IJU WA TUNAALU BIHIRRAGHAA-IBU WA HUSNULKHAWAATIMI WA YUSTASQALGHAMAAMU BI WAJHIHILKARIIMI WA ‘ALAA AALIHI WA SHAHBIHI FII KULLI LAMHATIN WA NAFASIN BI’ADADI KULLI MA’LUUMIN LAK(A)</p>
+    <p>Ya Allah, limpahkanlah shalawat yang sempurna dan curahkanlah salam kesejahteraan yang penuh kepada junjungan kami Nabi Muhammad, yang dengan sebab beliau semua kesulitan dapat terpecahkan, semua kesusahan dapat dilenyapkan, semua keperluan dapat terpenuhi, dan semua yang didambakan serta husnul khatimah dapat diraih, dan berkat dirinya yang mulia hujanpun turun, dan semoga terlimpahkan kepada keluarganya serta para sahabatnya, di setiap detik dan hembusan nafas sebanyak bilangan semua yang diketahui oleh Engkau</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Asmaul Husna (41x)</h3>
+    <p style="text-align: right;" class="arab">يَا بَدِيْعُ</arab>
+    <p>YAA BADII’U</p>
+    <p>Wahai Dzat yang menciptakan makhluk tanpa ada contoh sebelumnya</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Dzikir (41x)</h3>
+    <p style="text-align: right;" class="arab">حَسْبُنَا اللهُ وَنِعْمَ الْوَكِيْلُ</arab>
+    <p>HASBUNALLAHU WA NI’MAL WAKIIL(U)</p>
+    <p>Cukup bagi kami Allah, dan Dia sebaik-baik penolong</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>(Baca Surat yasin)</h3>
+    <p style="text-align: right;" class="arab">يس</arab>
+    <p>(Baca Surat Yasin)</p>
+    <p>(Baca Surat Yasin)</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Dzikir (33x)</h3>
+    <p style="text-align: right;" class="arab">اللهُ أكْبَرُ يَا رَبَّنَا وَإلَهَنَا وَسَيِّدَنَا أنْتَ مَوْلَانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِيْنَ</arab>
+    <p>ALLAHU AKBARU YAA RABBANAA WA ILAAHANAA WA SAYYIDANAA ANTA MAULAANAA FANSHURNAA ‘ALAL QAUMIL KAAFIRIIN(A)</p>
+    <p>Allah maha besar maha mulia, Wahai Tuhan kami, sesembahan kami, tuan kami, Engkau-lah penolong kami, menangkan kami atas orang­orang kafir</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Dzikir dan Doa (33x)</h3>
+    <p style="text-align: right;" class="arab">حَصَّنْتُكُمْ بِالْحَيِّ الْقَيُّوْمِ الَّذِيْ لَا يَمُوْتُ أبَدًا وَدَفَعْتُ عَنْكُمُ السُّوْءَ بِألْفِ ألْفِ لَا حَوْلَ وَلَا قُوَّةَ إلَّا بِا للهِ الْعَلِيِّ الْعَظِيْ</arab>
+    <p>HASHSHANTUKUM BILHAYYILQAYYUUMILLADZII LAA YAMUUTU ABADAN WA DAFA’TU ‘ANKUMUS SUU-A BI-ALFI ALFI ALFI LAA HAULA WA LAA QUWWTA ILLAA BILLAHIL ‘ALIYYIL ‘AZHIIM(I)</p>
+    <p>Aku mohonkan pemeliharaan untuk kalian kepada Dzat yang maha hidup dan terus menerus mengatur hamba-Nya yang tidak pernah mati selamanya, dan aku tolak dan hindarkan dari kalian segala keburukan dengan sejuta bacaan “La haula wa la quwwata illa billahil aliyyil adzim”</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Dzikir (33x)</h3>
+    <p style="text-align: right;" class="arab">الْحَمْدُ للهِ الَّذِيْ أنْعَمَ عَلَيْنَا وَهَدَانَا عَلَى دَيْنِ الإسْلَامِ</arab>
+    <p>ALHAMDULILLALLADZII ‘AN’AMA ‘ALAINAA WA HADAANAA ‘ALAA DAINIL ISLAAM(I)</p>
+    <p>Segala puji bagi Allah yang telah memberikan kita nikmat dan petunjuk kepada agama Islam.</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Dzikir</h3>
+    <p style="text-align: right;" class="arab">بِسْمِ اللهِ مَاشَاءَ اللهُ لَا يَسُوْقُ الْخَيْرَ إلَّا اللهِ بِسْمِ اللهِ مَاشَاءَ اللهُ لَا يَصْرِفُ السُّوْءَ إلَّا اللهُ بِسْمِ اللهِ مَاشَاءَ اللهُ مَا كَانَ مِنْ نِعْمَةٍ فَمِنَ اللهِ بِسْمِ اللهِ مَاشَاءَ اللهُ لَا حَوْلَ وَلَا قُوَّةَ إلَّا بِا للهِ الْعَلِيِّ الْعَظِيْمِ</arab>
+    <p>BISMILLAHI MAASYAA-ALLAHU LAA YASUUQUL KHAIRA ILLALLAHI BISMILLAHI MAASYAA-ALLAHU LAA YASHRIFUS SUU-A ILLALLAHU BISMILLAHI MAASYAA-ALLAHU MAA KAANA MIN NI’MATIN FAMINALLHI BISMILLAHI MAASYAA-ALLAHU LAA HAULA WA LAA QUWWATA ILLAA BILLAHIL’ALIYYIL ‘AZHIMM(I)</p>
+    <p>Dengan nama Allah yang segala sesuatu terjadi dengan kehendak-Nya, tidak ada yang mendatangkan kebaikan kecuali la. Dengan nama Allah yang segala sesuatu terjadi dengan kehendak-Nya, tidak ada yang menyingkirkan keburukan kecuali la. Dengan nama Allah yang segala sesuatu terjadi dengan kehendak-Nya, tidak ada kenikmatan melainkan dari Allah. Dengan nama Allah yang segala sesuatu terjadi dengan kehendak-Nya, tiada daya untuk berbuat kebaikan kecuali dengan pertolongan Allah dan tiada kekuatan untuk menghindar dari perbuatan maksiat kecuali dengan perlindungan Allah yang maha Mulia dan maha agung.</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Doa (33x)</h3>
+    <p style="text-align: right;" class="arab">سَألْتُكَ يَا غَفَّارُ عَفْوًا وَتَوْبَةً وَبِالْقَهْرِ يَا قَهَّارُ خُذْ مَنْ تَحَيَّلَا</arab>
+    <p>SA-ALTUKA YAA GHAFFAARU ‘AFWAN WA TAUBATA WA BILQAHRI YAA QAHHAARU KHUDZ MAN TAHAYYALAA</p>
+    <p>Ya Allah, aku memohon ampunan dan taubat yang diterima kepada-Mu Ya Allah yang maha pengampun, dan dengan kekuatan dan kekuasaan-Mu Wahai Dzat yang maha mengalahkan, tundukkan dan hukumlah orang yang melakukan tipu muslihat dan ingin mencelakai kami.</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Dzikir dan Doa (33x)</h3>
+    <p style="text-align: right;" class="arab">يَا جَبَّارُ يَا قَهَّارُ يَا ذَا الْبَطْشِ الشَّدِيْدِ خُذْ حَقَّنَا وَحَقَّ الْمُسْلِمِيْنَ مِمَّنْ ظَلَمَنَا وَالْمُسْلِمِيْنَ وَتَعَدَّى عَلَيْنَا وَعَلَى الْمُسْلِمِيْنَ</arab>
+    <p>YAA JABBAARU YAA QAHHAARU YAA DZAL BATH-SYISY SYADIIDI KHUDZ HAQQANAA WA HAQQAL MUSLIMIINA MIMMAN ZHALAMNAA WAL MUSLIMIINA WA TA’ADDAA ‘ALAINAA WA ‘ALALMUSLIMIIN(A)</p>
+    <p>Wahai Dzat yang maha mengalahkan, maha menundukkan, Dzat yang keras azab-Nya, ambilkan hak-hak kami dan hak-hak umat Islam dari orang-orang yang menzhalimi kami dan menzhalimi umat Islam, yang telah menganiaya kami dan menganiaya umat Islam.</p>
+  </item>
+  <item>
+    <id> </id>
+    <h3>Surat Al-Fatihah</h3>
+    <p style="text-align: right;" class="arab">الفَاتِحَة</arab>
+    <p>(Membaca Surat Al-Fatihah)</p>
+
+  </item>
+ 
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

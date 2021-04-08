@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>TAFSIR SURAH YASIN AYAT 68 - 70</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+
+
+<p class="arab">{وَمَنْ نُعَمِّرْهُ نُنَكِّسْهُ فِي الْخَلْقِ أَفَلا يَعْقِلُونَ (68) وَمَا عَلَّمْنَاهُ الشِّعْرَ وَمَا يَنْبَغِي لَهُ إِنْ هُوَ إِلا ذِكْرٌ وَقُرْآنٌ مُبِينٌ (69) لِيُنْذِرَ مَنْ كَانَ حَيًّا وَيَحِقَّ الْقَوْلُ عَلَى الْكَافِرِينَ (70) }</p>
+<p><em>Dan barang siapa yang Kami panjangkan umurnya, niscaya Kami kembalikan dia kepada kejadiannya). Maka apakah mereka tidak memikirkan? Dan Kami </em><em>tidak mengajarkan syair</em><em> kepadanya </em>(Muhammad) <em>dan bersyair itu tidaklah layak baginya. Al-Qur'an itu tidak lain hanyalah pelajaran dan kitab yang memberi penerangan, supaya dia </em>(Muhammad) <em>memberi peringatan kepada orang-orang yang hidup </em>(hatinya) <em>dan "supaya pastilah ketetapan </em>(azab) <em>terhadap orang-orang kafir. </em></p>
+<p>Allah Swt. menceritakan tentang anak Adam, bahwa manakala usianya dipanjangkan, maka dikembalikanlah ia kepada keadaan lemah sesudah kuat dan lelah sesudah semangat. Seperti yang disebutkan di dalam firman-Nya:</p>
+<p class="arab">{اللَّهُ الَّذِي خَلَقَكُمْ مِنْ ضَعْفٍ ثُمَّ جَعَلَ مِنْ بَعْدِ ضَعْفٍ قُوَّةً ثُمَّ جَعَلَ مِنْ بَعْدِ قُوَّةٍ ضَعْفًا وَشَيْبَةً يَخْلُقُ مَا يَشَاءُ وَهُوَ الْعَلِيمُ الْقَدِيرُ}</p>
+<p><em>Allah, Dialah yang menciptakan kamu dari keadaan lemah, kemudian Dia menjadikan </em>(kamu) <em>sesudah keadaan lemah itu menjadi kuat, kemudian Dia menjadikan </em>(kamu) <em>sesudah kuat itu lemah </em>(kembali) <em>dan beruban. Dia menciptakan apa yang dikehendaki-Nya dan Dialah Yang Maha Mengetahui lagi Mahakuasa. </em>(Ar-Rum: 54)</p>
+<p>Dan firman Allah Swt.:</p>
+<p class="arab">{وَمِنْكُمْ مَنْ يُرَدُّ إِلَى أَرْذَلِ الْعُمُرِ لِكَيْلا يَعْلَمَ مِنْ بَعْدِ عِلْمٍ شَيْئًا}</p>
+<p><em>dan di antara kamu ada yang dikembalikan kepada umur yang paling lemah </em>(lanjut dan pikun) <em>supaya dia tidak mengetahui lagi sesuatu pun yang pernah diketahuinya. </em>(An-Nahl: 70)</p>
+<p>Makna yang dimaksud &mdash;hanya Allah Yang Maha Mengetahui&mdash; memberitakan tentang keadaan dunia ini, bahwa ia adalah negeri yang lenyap dan sebagai tempat persinggahan, bukan negeri yang abadi, bukan pula tempat menetap selamanya. Karena itulah disebutkan dalam firman berikutnya:</p>
+<p class="arab">{أَفَلا يَعْقِلُونَ}</p>
+<p><em>Maka apakah mereka tidak memikirkan? </em>(Yasin: 68)</p>
+<p>Yakni tidakkah mereka menggunakan akal pikirannya untuk merenungkan permulaan kejadian mereka, kemudian perjalanan hidup mereka yang berakhir di usia tua, lalu usia pikun, agar mereka mengetahui bahwa diri mereka itu diciptakan bukan untuk menetap di negeri yang fana ini, melainkan untuk negeri akhirat yang abadi. Dia harus pindah dari negeri fana ke negeri kekekalan yang tidak berpindah lagi sesudahnya.</p>
+<p>***********</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{وَمَا عَلَّمْنَاهُ الشِّعْرَ وَمَا يَنْبَغِي لَهُ}</p>
+<p><em>Dan Kami tidak mengajarkan syair kepadanya </em>(Muhammad) <em>dan bersyair itu tidaklah layak baginya. </em>(Yasin: 69)</p>
+<p>Allah Swt. menceritakan perihal Nabi-Nya Muhammad Saw., bahwa Dia tidak mengajarkan syair kepadanya.</p>
+<p class="arab">{وَمَا يَنْبَغِي لَهُ}</p>
+<p><em>dan bersyair itu tidak layak baginya. </em>(Yasin: 69)</p>
+<p>Nabi Muhammad Saw. diciptakan tidak untuk bersyair. Karena itu, dia tidak dapat bersyair dan tidak menyukainya, serta secara fitrah bukanlah sebagai penyair. Berkaitan dengan hal ini telah disebutkan bahwa beliau Saw. tidak pernah hafal suatu bait pun dengan <em>wazan </em>yang teratur, melainkan beliau mengucapkannya secara acak dan tidak lengkap.</p>
+<p>Abu Zar'ah Ar-Razi mengatakan, telah menceritakan kepada kami Ismail ibnu Mujalid, dari ayahnya, dari Asy-Sya'bi yang mengatakan bahwa tidak sekali-kali Abdul Muttalib melahirkan keturunan, baik laki-laki maupun perempuan, melainkan pandai bersyair, terkecuali Rasulullah Saw. Demikianlah menurut apa yang disebutkan oleh Ibnu Asakir dalam autobiografi Atabah ibnu Abu La'b yang matinya dimakan oleh singa di Az-Zarqa.</p>
+<p>Ibnu Abu Hatim mengatakan, telah menceritakan kepada kami ayahku, telah menceritakan kepada kami Abu Salamah, telah menceritakan kepada kami Hammad ibnu Salamah, dari Ali ibnu Zaid, dari Al-Hasan Al-Basri yang mengatakan bahwa sesungguhnya Rasulullah Saw. pernah mengutip bait syair berikut:</p>
+<p>كَفَى بالإسْلام والشيْب للمرْء نَاهيًا</p>
+<p><em>Cukuplah Islam dan uban menjadi peringatan bagi seseorang.</em></p>
+<p>Maka Abu Bakar berkata, "Wahai Rasulullah, bunyi syair itu sebenarnya harus seperti ini:</p>
+<p>كَفى الشَّيْبُ وَالْإِسْلَامُ لِلْمَرْءِ نَاهِيًا ...</p>
+<p><em>Cukuplah Uban dan Islam menjadi peringatan bagi seseorang.</em></p>
+<p>Abu Bakar atau Umar berkata: Aku bersaksi sesungguhnya engkau adalah Rasulullah, Allah berfirman: <em>Dan Kami tidak mengajarkan syair kepadanya </em>(Muhammad) <em>dan bersyair itu tidaklah layak baginya. </em>(Yasin: 69)</p>
+<p class="arab">قَالَ الْإِمَامُ أَحْمَدُ: حَدَّثَنَا هُشَيْم، حَدَّثَنَا مُغِيرَةُ، عَنِ الشَّعْبِيِّ، عَنْ عَائِشَةَ، رَضِيَ اللَّهُ عَنْهَا، قَالَتْ: كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ إِذَا اسْتَرَاثَ الْخَبَرَ، تَمَثَّلَ فِيهِ بِبَيْتِ طَرَفَة:</p>
+<p class="arab">ويَأْتِيكَ بالأخْبار مَنْ لَمْ تُزَوِّدِ</p>
+<p>Imam Ahmad mengatakan, telah menceritakan kepada kami Hasyim, telah menceritakan kepada kami Mugirah, dari Asy-Sya'bi, dari Aisyah r.a. yang mengatakan bahwa Rasulullah Saw. apabila merasa ragu terhadap suatu berita, maka beliau mengutip ucapan syair Tarfah yang mengatakan: <em>dan akan datang kepadamu seseorang membawa berita-berita yang kamu belum membuat persiapan </em>(untuk menghadapinya).</p>
+<p>Hal yang sama telah diriwayatkan oleh Imam Nasai di dalam kitab <em>Al-Yaum wal Lailah </em>melalui jalur Ibrahim ibnu Muhajir, dari Asy-Sya'bi. Imam Turmuzi dan juga Imam Nasai telah meriwayatkan pula hal yang semisal melalui hadis Al-Miqdam ibnu Syuraih ibnu Hani', dari ayahnya, dari Aisyah r.a. Kemudian Imam Turmuzi mengatakan bahwa hadis ini <em>hasan sahih.</em></p>
+<p class="arab">قَالَ الْحَافِظُ أَبُو بَكْرٍ الْبَزَّارُ: حَدَّثَنَا يُوسُفُ بْنُ مُوسَى، حَدَّثَنَا أُسَامَةُ، عَنْ زَائِدَةَ، عَنْ سِمَاك، عَنْ عِكْرِمَة، عَنِ ابْنِ عَبَّاسٍ قَالَ: كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَتَمَثَّلُ مِنَ الْأَشْعَارِ:</p>
+<p class="arab">وَيَأتيكَ بالأخْبَار مَنْ لَمْ تُزَوِّدِ ...</p>
+<p>Al-Hafiz Abu Bakar Al-Bazzar mengatakan, telah menceritakan kepada kami Yusuf ibnu Musa, telah menceritakan kepada kami Usamah, dari Za-id, dari Sammak, dari Ikrimah, dari Ibnu Abbas r.a. yang mengatakan bahwa Rasulullah Saw. pernah mengutip ucapan penyair yang bunyinya seperti berikut: <em>dan akan datang kepadamu seseorang membawa berita-berita yang kamu belum membuat persiapan </em>(untuk menghadapinya).</p>
+<p>Kemudian Al-Bazzar mengatakan bahwa diriwayatkan pula oleh selain zaidah, dari Sammak, dari Atiyyah, dari Aisyah r.a.</p>
+<p>Apa yang telah disebutkan di atas merupakan petikan dari syair Tarfah ibnul Abd dalam <em>Mu&rsquo;allaqat-nya </em>yang terkenal itu. Bait yang telah disebutkan merupakan kalimat akhirnya, sedangkan permulaannya adalah seperti berikut:</p>
+<p class="arab">سَتُبْدي لكَ الأيامُ مَا كُنْتَ جَاهلا ... وَيَأتيك بالأخْبَارِ مَنْ لَمْ تُزَوِّدِ ...</p>
+<p>وَيَأتيكَ بالأخْبَار مَنْ لَمْ تَبِع لهُ ... بَتَاتا وَلَمْ تَضرب لَهُ وَقْتَ مَوْعِدِ </p>
+<p><em>Hari-hari </em>(masa) <em>akan menampakkan kepadamu banyak hal yang belum kamu ketahui, dan akan datang seseorang kepadamu membawa berita-berita yang kamu belum membuat persiapan </em>(untuk menyambutnya). <em>Dan akan datang membawa berita kepadamu seseorang yang kamu tidak pernah berjual beli dengannya sama sekali dan belum pernah pula kamu membuat suatu janji dengannya.</em></p>
+<p>Sa'id ibnu Abu Urwah telah meriwayatkan dari Qatadah, bahwa pernah ditanyakan kepada Siti Aisyah r.a., "Apakah dahulu Rasulullah Saw. pernah mengutip sesuatu dari bait syair?" Siti Aisyah r.a. menjawab bahwa syair merupakan perkataan yang paling tidak disukai oleh beliau. Hanya saja beliau pernah mengutip bait syair saudaraku dari Bani Qais, maka beliau menjadikannya terbalik, yang awal diakhirkan dan yang akhir diawalkan. Lalu Abu Bakar r.a. berkata, "Bukan begitu, wahai Rasulullah Saw." maka beliau Saw. bersabda:</p>
+<p class="arab">"إني وَاللَّهِ مَا أَنَا بِشَاعِرٍ وَلَا يَنْبَغِي لِي"</p>
+<p><em>Sesungguhnya aku, demi Allah, bukanlah seorang penyair, dan bersyair itu tidak layak bagiku.</em></p>
+<p>Demikianlah menurut apa yang telah diriwayatkan oleh Ibnu Abu Hatim dan Ibnu Jarir, lafaz hadis di atas berdasarkan apa yang ada pada Ibnu Jarir.</p>
+<p>Ma'mar telah meriwayatkan dari Qatadah, telah sampai kepadanya suatu berita yang mengatakan bahwa Aisyah r.a. pernah ditanya, "Apakah Rasulullah Saw. pernah mengutip kata-kata seorang penyair?" Maka Siti Aisyah r.a. menjawab, "Tidak, kecuali bait syair milik Tarfah, yaitu: <em>Hari-hari akan menampakkan kepadamu banyak hal yang kamu belum tahu, dan akan datang kepadamu seseorang membawa berita-berita yang kamu belum membuat persiapan </em>(untuk menyambutnya). Beliau Saw. mengucapkannya secara terbalik, yaitu: <em>"Man lam tuzawwad bil akhbar.&rdquo; </em>Maka Abu Bakar berkata, "Bukan demikian." Lalu Rasulullah Saw. bersabda: <em>Sesungguhnya aku bukan seorang penyair, dan bersyair itu tidak layak bagiku.</em></p>
+<p class="arab">قَالَ الْحَافِظُ أَبُو بَكْرٍ الْبَيْهَقِيُّ: أَخْبَرَنَا أَبُو عَبْدِ الْحَافِظُ، حَدَّثَنَا أَبُو حَفْصٍ عُمَرُ بن أحمد بن نُعَيْمٍ -وَكِيلُ الْمُتَّقِي بِبَغْدَادَ-حَدَّثَنَا أَبُو مُحَمَّدٍ عَبْدُ اللَّهِ بْنُ هِلَالٍ النَّحْوِيُّ الضَّرِيرُ، حَدَّثَنَا عَلِيُّ بْنُ عَمْرٍو الْأَنْصَارِيُّ، حَدَّثَنَا سُفْيَانُ بْنُ عُيَيْنَةَ ، عَنِ الزُّهْرِيِّ، عَنْ عُرْوَةَ، عَنْ عَائِشَةَ، رَضِيَ اللَّهُ عَنْهَا، قَالَتْ: مَا جَمَعَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ بَيْتَ شِعْرٍ قَطُّ، إِلَّا بَيْتًا وَاحِدًا. </p>
+<p class="arab">تَفَاءلْ بِمَا تَهْوَى يَكُنْ فَلَقَلَّمَا ... يُقَالُ لِشَيْءٍ كَانَ إِلَّا تَحَقَّقَا</p>
+<p>Al-Hafiz Abu Bakar Al-Baihaqi mengatakan, telah menceritakan kepada kami Abu Abdullah Al-Hafiz, telah menceritakan kepada kami Abu Hafs Umar ibnu Ahmad ibnu Na'im wakil Al-Muttaqi di Bagdad, telah menceritakan kepada kami Abu Muhammad alias Abdullah ibnu Hilal An-Nahwi yang tuna netra, telah menceritakan kepada kami Ali ibnu Amr Al-Ansari, telah menceritakan kepada kami Sufyan ibnu Uyaynah, dari Az-Zuhri, dari Urwah, dari Aisyah r.a. yang mengatakan bahwa Rasulullah Saw. belum pernah mengucapkan suatu bait syair pun secara lengkap kecuali syair berikut: <em>Bersikap optimislah terhadap sesuatu yang kamu sukai, niscaya kamu dapat meraihnya; karena jarang sesuatu yang sering disebut-sebut, melainkan terlaksana.</em></p>
+<p>Selanjutnya A!-Baihaqi mengatakan bahwa ia pernah bertanya kepada gurunya (yaitu Al-Hafiz Abul Hajjaj Al-Mazi) mengenai hadis ini. Dia mengatakan, hadis ini berpredikat <em>munkar </em>karena ada dua perawinya yang tidak dikenal.</p>
+<p>Disebutkan dalam kitab sahih bahwa Nabi Saw. pada hari penggalian parit mengutip bait-bait syair Abdullah ibnu Rawwahah r.a., tetapi beliau mengikuti ucapan para sahabatnya karena saat itu mereka mendendangkan syair tersebut sambil menggali parit. Mereka mengatakan:</p>
+<p class="arab">لاهُمَّ لوْلا أنت مَا اهْتَدَيْنَا مَا اهْتَدَيْنَا ... وَلا تَصَدَّقْنَا وَلا صَلَّيْنَا ...</p>
+<p class="arab">فَأَنزلَنْ سَكِينَةً عَلَيْنَا ... وَثَبِّت الأقْدَامَ إنْ لاقَيْنَا ...</p>
+<p>إِنَّ الْأُلَى قَدْ بَغَوا عَليْنَا ... إذَا أرَادُوا فِتْنَةً أَبَيْنَا ...</p>
+<p><em>Ya Allah, sekiranya bukan karena Engkau, tentulah kami tidak mendapat petunjuk, dan tidak bersedekah serta tidak salat. Maka turunkanlah ketenangan kepada kami, dan teguhkanlah kaki kami saat menghadapi musuh. Sesungguhnya mereka </em>(golongan-golongan yang bersekutu itu) <em>telah berbuat melampaui batas terhadap kami. Apabila mereka menghendaki fitnah terhadap diri kami, maka kami menolaknya.</em></p>
+<p>Nabi Saw. mengucapkan kalimat <em>abaina </em>dengan suara keras dan nada yang panjang. Hal ini telah diriwayatkan pula di dalam kitab <em>Sahihain. </em></p>
+<p>Hal yang semisal telah terbuktikan bahwa Nabi Saw. dalam Perang Hunain mengutip ucapan seorang penyair berikut seraya menunggangi hewan begalnya maju menguak barisan musuh, yaitu:</p>
+<p>أَنَا النَّبِيّ لَا كَذِبْ ... أنَا ابْنُ عُبْد المُطَّلِبْ</p>
+<p><em>Aku adalah nabi, tidak pernah dusta; aku adalah putra Abdul Muttalib.</em></p>
+<p>Akan tetapi, mereka mengatakan bahwa hal ini terjadi secara kebetulan tanpa sengaja bertepatan dengan <em>wazan </em>syair, bahkan tanpa sengaja Nabi Saw. mengucapkannya.</p>
+<p>Demikian pula apa yang telah disebutkan di dalam kitab <em>Sahihain </em>melalui Jundub ibnu Abdullah r.a. yang telah menceritakan bahwa ketika kami (para sahabat) bersama Rasulullah Saw dalam sebuah gua, tiba-tiba jari telunjuk beliau terluka hingga berdarah. Maka Nabi Saw. bersabda:</p>
+<p>هَلْ أنْت إِلَّا إصْبَعٌ دَمِيت ... وَفِي سَبيل اللَّهِ مَا لَقِيت</p>
+<p><em>Tidaklah engkau ini selain jari telunjuk yang terluka padahal dalam perang sabilillah engkau tidak mengalami hal ini.</em></p>
+<p>Dan nanti dalam tafsir firman-Nya:</p>
+<p class="arab">{إِلا اللَّمَمَ}</p>
+<p><em>selain dari kesalahan-kesalahan kecil. </em>(An-Najm: 32)</p>
+<p>akan disebutkan bahwa Nabi Saw. pernah mengatakan kalimat berikut yang secara kebetulan sesuai dengan <em>wazan </em>syair:</p>
+<p class="arab">إنْ تَغْفر اللَّهُمَّ تَغْفِرْ جَمَّا ... وَأيُّ عَبْدٍ لكَ مَا ألَمَّا ...</p>
+<p><em>Jika Engkau mengampuni, ya Allah, Engkau mengampuni dosa-dosa yang banyak, dan tiada seorang hamba pun yang tidak pernah berbuat kesalahan terhadap Engkau.</em></p>
+<p>Semuanya ini tidaklah bertentangan dengan kenyataan bahwa beliau Saw adalah seorang yang tidak mengenal syair dan bersyair itu tidak layak baginya, karena sesungguhnya Allah Swt. hanya mengajarkan kepadanya Al-Qur'an:</p>
+<p class="arab">{لَا يَأْتِيهِ الْبَاطِلُ مِنْ بَيْنِ يَدَيْهِ وَلا مِنْ خَلْفِهِ تَنزيلٌ مِنْ حَكِيمٍ حَمِيدٍ}</p>
+<p><em>yang tidak datang kepadanya kebatilan, baik dari depan maupun dari belakangnya, yang diturunkan dari Tuhan Yang Mahabijaksana lagi Maha Terpuji. </em>(Fussilat: 42)</p>
+<p>Al-Qur'an bukanlah syair, tidak sebagaimana yang disangka oleh segolongan orang-orang bodoh dari kalangan Kuffar Quraisy, bukan tenung, bukan buat-buatan, bukan pula sihir yang dipelajari dari orang-orang dahulu seperti yang diduga oleh pendapat-pendapat yang sesat dan pendapat-pendapat orang-orang yang bodoh. Sesungguhnya Rasulullah Saw. secara fitrah menolak syair, dan beliau bukanlah diciptakan sebagai penyair.</p>
+<p>Imam Abu Daud mengatakan:</p>
+<p class="arab">حَدَّثَنَا عُبَيْدُ اللَّهِ بْنُ عُمَر، حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يَزِيدَ، حَدَّثَنَا سَعِيدٌ بْنُ أَبِي أَيُّوبَ، حَدَّثَنَا شُرَحْبِيلُ بْنُ يَزِيدَ المَعَافري، عَنْ عَبْدِ الرَّحْمَنِ بْنِ رَافِعٍ التَّنُوخِيِّ قَالَ: سَمِعْتُ عَبْدَ اللَّهِ بْنَ عَمْرٍو يَقُولُ: [سَمِعْتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ]: مَا أُبَالِي مَا أُوتِيْتُ إِنْ أَنَا شَربت تِرْيَاقًا، أَوْ تَعَلَّقْتُ تَمِيمَةً، أَوْ قُلْتُ الشِّعْرَ مِنْ قِبَلِ نَفْسِي"</p>
+<p>telah menceritakan kepada kami Ubaidillah ibnu Amr, telah menceritakan kepada kami Abdullah ibnu Suwaid, telah menceritakan kepada kami Sa'id ibnu Abu Ayyub, telah menceritakan kepada kami Syurahbil ibnu Yazid Al-Ma'afiri, dari Abdur Rahman ibnu Rafi' At-Tanukhi yang mengatakan bahwa ia pernah mendengar Abdullah ibnu Amr r.a. mengatakan bahwa ia pernah mendengar Rasulullah Saw. bersabda: <em>Aku tidak peduli terhadap apa yang diberikan kepadaku jika aku minum tiryaq </em>(air jampi), <em>atau mengalungkan jimat, atau mengatakan syair dari diriku sendiri.</em></p>
+<p>Hadis diriwayatkan oleh Imam Abu Daud secara tunggal.</p>
+<p>Imam Ahmad mengatakan, telah menceritakan kepada kami Abdur Rahman ibnu Mahdi, dari Al-Aswad ibnu Syaiban, dari Abu Naufal yang mengatakan bahwa ia pernah bertanya kepada Aisyah r.a., "Apakah Rasulullah Saw. setuju bila diucapkan syair di hadapannya?" Maka Aisyah r.a. menjawab, "Syair adalah perkataan yang paling tidak disukai olehnya."</p>
+<p>Telah diriwayatkan pula dari Siti Aisyah r.a. bahwa Rasulullah Saw. menyukai doa-doa yang singkat dan padat, dan beliau sering mengucapkan doa yang demikian.</p>
+<p class="arab">قَالَ أَبُو دَاوُدَ: حَدَّثَنَا أَبُو الْوَلِيدِ الطَّيَالِسِيُّ، حَدَّثَنَا شُعْبَةُ، عَنِ الْأَعْمَشِ، عَنْ أَبِي صَالِحٍ، عَنْ أَبِي هُرَيْرَةَ، رَضِيَ اللَّهُ عَنْهُ، عَنِ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: "لِأَنَّ يَمْتَلِئُ جَوْفُ أَحَدِكُمْ قَيْحًا، خَيْرٌ لَهُ مِنْ أَنْ يَمْتَلِئَ شِعْرًا".</p>
+<p>Abu Daud mengatakan, telah menceritakan kepada kami Abul Walid At-Tayalisi, telah menceritakan kepada kami Syu'bah, dari Al-A'masy, dari Abu Saleh, dari Abu Hurairah r.a., dari Nabi Saw. yang telah bersabda: <em>Hendaklah seseorang di antara kalian memenuhi perutnya dengan nanah adalah lebih baik baginya daripada memenuhi dirinya dengan syair.</em></p>
+<p>Imam Ahmad meriwayatkannya secara <em>munfarid </em>dari jalur ini, sanadnya dengan syarat Syaikhain (dapat diterima), tetapi keduanya tidak mengetengahkannya.</p>
+<p class="arab">قَالَ الْإِمَامُ أَحْمَدُ: حَدَّثَنَا بُرَيْدٌ، حَدَّثَنَا قَزَعةُ بْنُ سُوَيْد الْبَاهِلِيُّ، عَنْ عَاصِمِ بْنِ مَخْلَد، عَنْ أَبِي الْأَشْعَثِ، الصَّنْعَانِيِّ (ح) وَحَدَّثَنَا الْأَشْيَبُ فَقَالَ: عَنِ ابْنِ عَاصِمٍ، عَنْ [أَبِي] الْأَشْعَثِ عَنْ شَدَّاد بْنِ أَوْسٍ قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ: "مَنْ قَرَضِ بَيْتَ شِعْرٍ بَعْدَ الْعِشَاءِ الْآخِرَةِ، لَمْ تُقْبَلْ لَهُ صلاة تلك الليلة".</p>
+<p>Imam Ahmad mengatakan, telah menceritakan kepada kami Yazid, telah menceritakan kepada kami Quza'ah ibnu Suwaid Al-Bahili, dari Asim ibnu Makhlad, dari Abul Asy'as As-San'ani, dan telah menceritakan kepada kami Al-Asy-yab, ia telah meriwayatkan dari Ibnu Asim, dari Al-Asy'as, dari Syaddad ibnu Aus r.a. yang mengatakan bahwa Rasulullah Saw. pernah bersabda: <em>Barang siapa yang membuat satu bait syair sesudah salat Isya, maka tidak diterima darinya salat malam itu.</em></p>
+<p>Hadis ini <em>garib </em>bila ditinjau dari segi jalurnya, tiada seorang pun dari <em>Sittah </em>yang mengetengahkannya. Yang dimaksud dalam hadis ini ialah membuat syair, bukan mengucapkannya; hanya Allah-lah Yang Maha Mengetahui.</p>
+<p>Perlu diketahui bahwa di antara syair itu ada yang disyariatkan, misalnya syair untuk menyerang kaum musyrik seperti yang pernah dilakukan oleh para penyair Islam di masa Nabi Saw. Para tokohnya, antara lain Hassan ibnu Sabit, Ka'b ibnu Malik, Abdullah ibnu Rawwahah, dan lain-lainnya, semoga Allah melimpahkan rida-Nya kepada mereka.</p>
+<p>Di antara syair ada yang bersubjekkan hikmah-hikmah, pelajaran-pelajaran, dan etika-etika, seperti yang dijumpai pada syair sejumlah penyair masa Jahiliah yang antara lain Umayyah ibnu Abus Silt yang dinilai oleh Rasulullah Saw. melalui sabdanya:</p>
+<p class="arab">"آمَنَ شِعْرُهُ وَكَفَرَ قَلْبُهُ"</p>
+<p><em>Syairnya beriman, tetapi hatinya kafir.</em></p>
+<p>Salah seorang sahabat pernah mendendangkan syair sebanyak seratus bait syair untuk Nabi Saw., dan sesudah tiap bait syair beliau Saw. me&shy;ngatakan, "<em>Terus</em>," yakni memintanya agar meneruskan bait-bait syairnya.</p>
+<p>Abu Daud telah meriwayatkan melalui hadis Ubay ibnu Ka'b, Buraidah ibnul Khasib, serta Abdullah ibnu Abbas, bahwa Rasulullah Saw. pernah bersabda:</p>
+<p class="arab">"إِنَّ مِنَ الْبَيَانِ سِحْرًا، وَإِنَّ مِنَ الشِّعْرِ حِكَمًا"</p>
+<p><em>Sesungguhnya di dalam paramasastra itu terdapat pengaruh yang memukaukan seperti pengaruh sihir, dan sesungguhnya di antara syair itu ada yang mengandung hikmah.</em></p>
+<p>Untuk itulah maka disebutkan oleh firman-Nya:</p>
+<p class="arab">{وَمَا عَلَّمْنَاهُ الشِّعْرَ}</p>
+<p><em>Dan Kami tidak mengajarkan syair kepadanya. </em>(Yasin: 69) Maksudnya, Allah tidak mengajarkan syair kepada Muhammad Saw.</p>
+<p class="arab">{وَمَا يَنْبَغِي لَهُ}</p>
+<p><em>dan bersyair itu tidak layak baginya. </em>(Yasin: 69)</p>
+<p>Yaitu tidak pantas baginya bersyair.</p>
+<p class="arab">{إِنْ هُوَ إِلا ذِكْرٌ وَقُرْآنٌ مُبِينٌ}</p>
+<p><em>Al-Qur&rsquo;an itu tidak lain hanyalah pelajaran dan kitab yang memberi penerangan. </em>(Yasin: 69)</p>
+<p>Yakni apa yang Kami ajarkan kepadanya itu.</p>
+<p class="arab">{إِلا ذِكْرٌ وَقُرْآنٌ مُبِينٌ}</p>
+<p><em>tidak lain hanyalah pelajaran dan kitab yang memberi penerangan. </em>(Yasin: 69)</p>
+<p>Yakni yang jelas dan gamblang bagi orang yang mau merenungkan dan memikirkannya. Karena itulah dalam firman berikutnya disebutkan:</p>
+<p class="arab">{لِيُنْذِرَ مَنْ كَانَ حَيًّا}</p>
+<p><em>supaya dia </em>(Muhammad) <em>memberi peringatan kepada orang-orang yang hidup. </em>(Yasin: 70)</p>
+<p>Supaya dengan Al-Qur'an yang memberi penerangan ini dia memberi peringatan kepada semua makhluk hidup yang ada di muka bumi ini. Ayat ini semakna dengan ayat lain yang mengatakan:</p>
+<p class="arab">{لأنْذِرَكُمْ بِهِ وَمَنْ بَلَغَ} </p>
+<p><em>supaya dengan Al-Qur&rsquo;an ini aku memberi peringatan kepadamu dan kepada orang-orang yang sampai Al-Qur&rsquo;an </em>(kepadanya). (Al-An'am: 19)</p>
+<p>Dan firman Allah Swt.:</p>
+<p class="arab">{وَمَنْ يَكْفُرْ بِهِ مِنَ الأحْزَابِ فَالنَّارُ مَوْعِدُهُ}</p>
+<p><em>Dan barang siapa di antara mereka </em>(kaum Quraisy) <em>dan sekutu-sekutunya yang kafir kepada Al-Qur&rsquo;an, maka nerakalah tempat yang diancamkan baginya. </em>(Hud: 17)</p>
+<p>Dan sesungguhnya orang yang mau menerima peringatannya hanyalah orang yang hidup hatinya lagi terang pandangan mata hatinya, seperti yang dikatakan oleh Qatadah hidup hatinya dan hidup pandangannya. Sedangkan menurut Ad-Dahhak, makna yang dimaksud ialah yang berakal.</p>
+<p class="arab">{وَيَحِقَّ الْقَوْلُ عَلَى الْكَافِرِينَ}</p>
+<p><em>supaya pastilah ketetapan </em>(azab) <em>terhadap orang-orang kafir. </em>(Yasin: 70)</p>
+<p>Artinya, Al-Qur'an itu merupakan rahmat bagi orang-orang mukmin dan hujah terhadap orang-orang kafir.</p>
+
+
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,114 @@
+@font-face {
+   font-family: lato-regular;
+    src: local("lato-regular"),
+         url(fonts/lato-regular.woff2) format('woff2'),
+         url(fonts/lato-regular.woff) format('woff'),
+         url(fonts/lato-regular.ttf) format('truetype');
+}
+
+
+@font-face {
+   font-family: qalam;
+    src: local("qalam"),
+         url(fonts/qalam.woff2) format('woff2'),
+         url(fonts/qalam.woff) format('woff'),
+         url(fonts/qalam.ttf) format('truetype');
+}
+
+
+h1 {
+text-align=center;
+color:#123240;
+font-size:24px;
+}
+
+h2 {
+color:#123240;
+font-size:20px;
+}
+
+h3 {
+font-family: lato-regular, sans-serif;
+color:#123240;
+font-size:20px;
+text-align=left;
+}
+
+h4 {
+color:#123240;
+font-size:12px;
+}
+
+
+p1 {
+font-family: lato-regular, sans-serif;
+color:#123240;
+font-size:16px;
+font-style: italic;
+}
+
+p2 {
+color:#123240;
+font-size:16px;
+}
+
+phr {
+color:#918e8f;
+font-size:14px;
+}
+
+pnt {
+color:black;
+font-size:14px;
+font-style: italic;
+}
+
+hds{
+ dir="rtl" lang="ar" style="color:#123240;font-size:18px; font-family: me_quran"
+
+}
+
+.ArbText01 {
+    font-family:qalam;
+    font-size:30px;
+    color:#123240;
+
+
+}
+
+audio:hover, audio:focus, audio:active
+{
+-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
+-webkit-transform: scale(1.05);
+-moz-transform: scale(1.05);
+transform: scale(1.05);
+
+}
+
+audio
+{
+-webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+
+border-radius:7px 7px 7px 7px ;
+
+}
+
+audiooldori
+{
+-webkit-transition:all 0.5s linear;
+-moz-transition:all 0.5s linear;
+-o-transition:all 0.5s linear;
+transition:all 0.5s linear;
+-moz-box-shadow: 2px 2px 4px 0px #006773;
+-webkit-box-shadow:  2px 2px 4px 0px #006773;
+box-shadow: 2px 2px 4px 0px #006773;
+-moz-border-radius:7px 7px 7px 7px ;
+-webkit-border-radius:7px 7px 7px 7px ;
+border-radius:7px 7px 7px 7px ;
+}
+

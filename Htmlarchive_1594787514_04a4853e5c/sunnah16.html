@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Sholat Tasbih</h1><br>
+
+<p align="justify">Shalat sunnah tasbih ialah shalat yang sebagaimana di ajarkan oleh Rosulullah saw, kepada mamaknya Sayyidina Abbas Abdul Muthalih. Shalat tasbih ini di anjurkan mengamalkannya, kalau bisa tiap tiap malam, kalau tidak bisa tiap malam, maka sekali seminggu, kalau juga tak sanggup sekali seminggu, dapat juga di lakukan sebulan sekali atau setahun sekali, dan kalau tidak bisa sekali setahun, setidak tidaknya sekali seumur hidup.</p>
+    <h3>Cara mengerjakan shalat Tasbih</h3>
+      <ol>
+	  <li>Niat melakukan sholat tasbih pada siang hari (4 rakaat dengan 1 salam)</p>
+    <p><img src="gambar wudhu/t1.jpg" width="320" height="45"></p>
+    <p>Artinya: Aku niat sholat tasbih empat rakaat karena Allah Ta'ala</p>
+    <p><br>
+      Niat sholat tasbih pada malam hari (4 rakaat dengan 2 salam)<br>
+   <img src="gambar wudhu/2t.jpg" width="599" height="85"> </p>
+    <p>Artinya: Aku Niat sholat tasbih dua rakaat karena Allah Ta'ala.<br>
+      <li>Kemudian takbiratul ihram, membaca doa Iftitah, dilanjutkan membaca surat Al-Fatihah kemudian membaca surat Al-Kafiruun (pada rakaat pertama) dan surat Alikhlas (pada rakaat kedua), setelah selesai membaca surat, dilanjutkan membaca tasbih sebanyak 15 X.<br>
+      Berikut Bacaan tasbih:</p>
+    <li>Lalu ruku’ dan  membaca doa seperti biasa, kemudian membaca tasbih seperti di atas sebanyak 10 x.<br>
+     <li> Lalu I’tidal, dan membaca  doa I’tidal kemudian membaca Tasbih sebanyak 10 X.<br>
+      <li>Lalu sujud, dan membaca doa sujud seperti biasa, kemudian membaca Tasbih sebanyak 10 X.<br>
+      <li>Lalu duduk diantara dua sujud dan membaca doa seperti biasa, kemudian membaca tasbih sebanyak 10 X<br>
+      <li>Lalu sujud yang kedua kali, dan membaca doa sujud, kemudian membaca tasbih sebanyak 10 X,<br>
+      <li>Selanjutnya sebelum berdiri pada rakaat yang kedua, supaya duduk istirahat sejenak dan dalam duduk istirahat tersebut membaca tasbih  sebanyak 10 X.<br>
+      <li>Untuk selanjutnya pada rakaat yang ke 2 sama seperti pada rakaat pertama.<br>
+      <li>Kemudian duduk tasyahud akhir. Pada tasyahud akhir membaca tasbih terlebih dahulu sebanyak 10 x, kemudian baru membaca doa tasyahud akhir.<br>
+      <li>Lalu memberi salam.</ol><br>
+      Demikianlah cara mengerjakan shalat Tasbih. Tiap-tiap satu rakaat apabila kita hitung seluruh bacaan tasbihnya berjumlah 75 kali tasbih, dan 75 x 4 raka’at = 300 tasbih.</p>
+    <p>Setelah melangsungkan sholat dengan 300 tasbih di dalamnya. Berikutnya dianjurkan membaca doa ini :</p>
+    <div>
+      <div align="right" class="arab">اللَّهُمَّ إنِّي أَسْأَلُك تَوْفِيقَ أَهْلِ الْهُدَى وَأَعْمَالَ أَهْلِ الْيَقِينِ وَمُنَاصَحَةَ أَهْلِ التَّوْبَةِ وَعَزْمَ أَهْلِ الصَّبْرِ وَوَجَلَ أَهْلِ الْخَشْيَةِ وَطَلَبَ أَهْلِ الرَّغْبَةِ وَتَعَبُّدَ أَهْلِ الوَرَعِ وَعِرْفَانَ أَهْلِ الْعِلْمِ حَتَّى أَخَافَك،</div>
+    </div
+    ><div class="arab">
+      <div align="right">اللَّهُمَّ إنِّي أَسْأَلُكَ مَخَافَةً تَحْجِزُنِي عَنْ مَعَاصِيكَ حَتَّى أَعْمَلَ بِطَاعَتِك عَمَلًا أَسْتَحِقُّ بِهِ رِضَاك وَحَتَّى أُنَاصِحَكَ بِالتَّوْبَةِ خَوْفًا مِنْك حَتَّى أَخْلُصَ لَك النَّصِيحَةَ حَيَاءً مِنْكَ وَحَتَّى أَتَوَكَّلَ عَلَيْكَ فِي الْأُمُورِ كُلِّهَا وَحَتَّى أَكُونَ أُحْسِنَ الظَنَّ بِكَ، سُبْحَانَ خَالِقِ النُّورِ. ا هـ وَفِي رِوَايَةٍ خَالِقِ النُّورِ</div>
+    </div>
+    <p>ALLÂHUMMA INNÎ AS’ALUKA TAUFÎQA AHLIL HUDÂ, WA A‘MÂLA AHLIL YAQÎN, WA MUNÂSHAHATA AHLIT TAUBAH, WA ‘AZMA AHLIS SHABRI, WA WAJALA AHLIL KHASYYAH, WA THALABA AHLIR RAGHBAH, WA TA‘ABBUDA AHLIL WARA‘I, WA ‘IRFÂNA AHLIL ‘ILMI HATTÂ AKHÂFAK.</p>
+    <p>ALLÂHUMMA INNÎ AS’ALUKA MAKHÂFATAN TAHJIZUNÎ ‘AN MA‘ÂSHÎKA HATTÂ A‘MALA BI THÂ‘ATIKA ‘AMALAN ASTAHIQQU BIHÎ RIDHÂKA WA HATTÂ UNÂSHIHAKA BIT TAUBAH, KHAUFAN MINKA HATTÂ AKHLUSHA LAKAN NASHÎHATA HAYÂ’AN MINKA WA HATTÂ ATAWAKKALA ‘ALAIKA FIL ’UMÛRI KULLIHÂ WA HATTÂ AKÛNA ’UHSINUZ ZHANNA BIKA, SUBHÂNA KHÂLIQIN NÛR (LAIN RIWAYAT KHÂLIQIN NÂR).</p>
+    <p><em>Artinya :</em></p>
+    <p><em>Ya Allah, kepada-Mu aku meminta petunjuk mereka yang terima hidayah, amal-amal orang yang yakin, ketulusan mereka yang bertobat, keteguhan hati mereka yang bersabar, kekhawatiran mereka yang takut (kepada-Mu), doa mereka yang berharap, ibadah mereka yang wara’, dan kebijaksanaan mereka yang berilmu agar aku menjadi takut kepada-Mu.</em></p>
+    <p align="justify"><em>Ya Allah, masukkanlah rasa takut di kalbuku yang dapat menghalangi diri ini untuk mendurhakai-Mu. Dengan demikian aku dapat beramal saleh yang mengantarkanku pada ridha-Mu, dan aku bertobat setulusnya karena takut kepada-Mu. Dengan itu pula aku beribadah secara tulus karena malu kepada-Mu. Dengan rasa takut itu aku menyerahkan segala urusanku kepada-Mu. Karena itu juga aku dapat berbaik sangka selalu kepada-Mu. Mahasuci Engkau Pencipta cahaya (lain riwayat, Pencipta api).”</em></p>
+
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

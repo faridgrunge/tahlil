@@ -1,0 +1,13 @@
+@font-face {
+	font-family: Arabic;
+	src: url('../fonts/tradbdo.ttf') format('truetype');
+ 	font-weight: 400;
+	font-style: bold; 
+}
+
+@font-face {
+	font-family: Arabic;
+	src: url('../fonts/trado.ttf') format('truetype');
+ 	font-weight: 400;
+	font-style: normal;
+}

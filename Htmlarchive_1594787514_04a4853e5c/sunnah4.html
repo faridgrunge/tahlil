@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Sholat Sunnah Hajat</h1><br>
+
+<p style="text-align:justify">Salat Hajat (bahasa Arab: <font size="+1">صلاة الحاجة</font>) adalah salat sunnat yang dilakukan seorang muslim saat memiliki hajat tertentu dan ingin dikabulkan Allah. Salat Hajat dilakukan antara 2 hingga 12 raka'at dengan salam di setiap 2 rakaat. Salat ini dapat dilakukan kapan saja kecuali pada waktu-waktu yang dilarang untuk melakukan salat.<Br><Br>
+
+Shalat Hajat adalah shalat yang dikerjakan agar hajat (keinginan/kebutuhan)-nya dikabulkan Allah. Hajat yang dimaksudkan di sini adalah hajat yang dibenarkan syariat Islam, baik berupa perlindungan ataupun tercapainya maksud. Shalat hajat ini dikerjakan beberapa kali. Biasanya sampai 7 malam berturut-turut.
+
+  <!--** isi content ** -->
+  <br>
+ <hr>
+
+   <h3>
+     Waktu mengerjakan sholat hajat
+   </h3>
+
+ <hr>
+ <p style="text-align:justify"> Sedangkan waktu pelaksanaannya boleh siang ataupun malam hari, asal bukan pada waktu-waktu terlarang. Akan tetapi waktu yang paling baik adalah sepertiga malam yang terakhir (antara pukul 01.00 WIB dan menjelang subuh) atau setiap selesai shalat fardhu. ,kecuali pada waktu waktu yang diharamkan atau dilarang untuk shalat.
+   
+   <br>
+ <hr>
+
+   <h3>
+     Jumlah rekaat
+   </h3>
+
+ <hr>
+ <p style="text-align:justify"> Shalat Hajat sendiri dikerjakan minimal 2 raka’at dan maksimal sampai dengan 12 (dua belas) raka’at dengan masing – masing dua raka’atnya satu salam.
+   <!--** isi content ** -->
+     <br>
+     </ul>
+	 <br>
+ <hr>
+
+   <h3>
+     Bacaan niat sholat hajat
+   </h3>
+
+ <hr>
+ <p style="text-align:justify">Niat dilakukan di dalam hati ketika sedang takbiratul ihram (mengangkat tangan). Lafazh niat salat hajat: 
+   <br />
+    <div class="style1"> 
+      <div align="center" class="style2">
+        <div align="right">أُصَلِّي سُنَّةَ الحَاجَةِ رَكْعَتَيْنِ لِلَّهِ تَعاَلَى</div>
+      </div>
+    </div>
+    <p style="text-align:justify"><Br />
+      <b><i>Latin ;</i></b><br />
+      <Br />
+   Ushollii sunnatal haajati rok’aataini lillaahi ta’aala. <Br />
+   <Br />
+   <b><I>Artinya: </I></b>
+    <center>
+    <blockquote>“Aku berniat salat sunah hajat dua rakaat karena Allah Ta’ala.”</blockquote>
+ </center><br>
+ <hr>
+
+   <h3>
+     Ayat & Hadits rosululloh
+   </h3>
+ <hr>
+ <p style="text-align:justify"> Hukum mengerjakan shalat sunnat hajat adalah sunnat Mu’akkad, maksudnya yaitu sunnat yang sangat dianjurkan untuk dikerjakan bagi orang yang membutuhkannya. Seperti yang telah dijelaskan didalam firman Allah SWT yang artinya sebagai berikut :
+ <blockquote>
+   <p style="text-align:justify"> “Wahai orang-orang yang beriman mohonlah pertolongan (kepada ALLAH) dengan sabar dan sholat, karena sesungguhnya Allah bersama-sama dengan orang yang sabar (QS. Al Baqarah : 153)</p>
+ </blockquote>
+ <div align="left"><br>
+     <Br>
+   Hadits Rasulullah SAW terkait salat hajat antara lain :<br />
+  <Br />
+ </div>
+ <ol>
+   <li>
+     <p style="text-align:justify">"Siapa yang berwudhu dan sempurna wudhunya, kemudian salat dua rakaat (Salat Hajat) dan sempurna rakaatnya maka Allah berikan apa yang ia pinta cepat atau lambat" ( HR.Ahmad )
+       
+    <li>
+       <p style="text-align:justify">“Barangsiapa yang memunyai kebutuhan (hajat) kepada Allah atau salah seorang manusia dari anak-cucu adam, maka wudhulah dengan sebaik-baik wudhu. Kemudian salat dua rakaat (salat Hajat), lalu memuji kepada Allah, mengucapkan salawat kepada Nabi. Setelah itu, mengucapkan “Laa illah illallohul haliimul kariimu, subhaana.... (HR Tirmidzi dan Ibnu Majah)
+         
+    <li>
+         <p style="text-align:justify">Diriwayatkan dari Abu Sirah an-Nakh’iy, dia berkata, “Seorang laki-laki menempuh perjalanan dari Yaman. Di tengah perjalan keledainya mati, lalu dia mengambil wudhu kemudian salat dua rakaat, setelah itu berdoa. Dia mengucapkan, “Ya Allah, sesungguhnya saya datang dari negeri yang sangat jauh guna berjuang di jalan-Mu dan mencari ridha-Mu. Saya bersaksi bahwasanya Engkau menghidupkan makhluk yang mati dan membangkitkan manusia dari kuburnya, janganlah Engkau jadikan saya berhutang budi terhadap seseorang pada hari ini. Pada hari ini saya memohon kepada Engkau supaya membangkitkan keledaiku yang telah mati ini.” Maka, keledai itu bangun seketika, lalu mengibaskan kedua telinganya.” (HR Baihaqi; ia mengatakan, sanad cerita ini shahih)
+           
+    <li>
+           <p style="text-align:justify">    
+           <p style="text-align:justify">Ada seorang yang buta matanya menemui Nabi saw, lalu ia mengatakan, “Sesungguhnya saya mendapatkan musibah pada mata saya, maka berdoalah kepada Allah (untuk) kesembuhanku.” Maka Nabi saw bersabda, “Pergilah, lalu berwudhu, kemudian salatlah dua rakaat (salat hajat). Setelah itu, berdoalah....” Dalam waktu yang singkat, laki-laki itu terlihat kembali seperti ia tidak pernah buta matanya.” Kemudian Rasulullah saw bersabda, “Jika kamu memiliki kebutuhan (hajat), maka lakukanlah seperti itu (salat hajat).” (HR Tirmidzi)
+    </li>
+ </ol>
+ <hr>
+
+   <h3>
+     Sholat hajat
+   </h3>
+
+ <hr>
+ <p style="text-align:justify"> dalam pengerjaan sholat sunnah hajat, dilakukan dengan 2 rekaat diakhiri dengan 1 salam, minimal dikerjakan 2 keraat dan maksimal 12 rekaat yaitu 6 salam. proses pengerjaannya sama dengan solat-sholat pada umumnya, namum ada beberapa bacaan khusus didalamnya.
+   
+   Berikut adalah cara dalam melakukan sholat sunnah hajat ;<br>
+  <br>
+   Adapun suratnya yang harus dibaca surat apa saja yang dikehendaki. Akan tetapi sebaiknya dibaca surat berikut: <br>
+ <ol>
+   <li>
+     <p style="text-align:justify">Pada rakaat pertama setelah surat Al-Fatihah dibaca surat Al-Kaafirun 10 x (minimal 3x) , atau ayat kursi 3 x, dan pada rakaat kedua surat Al-Ikhlash 3 kali. 
+   </li>
+   <li>
+     <p style="text-align:justify">Pada rakaat kedua setelah surat Al-Fatihah dibaca ayat kursi (1x) lalu membaca surat Al-Ikhlash 10 x (minimal 3x) kali.  
+   </li>
+   <li>
+     <p style="text-align:justify">Pada rekaat kedua setelah membaya tasyahut ahir/tahiyat ahir, tepetnya sebelum salam, sujud kembali dengan takbir <br>
+         <Br>
+    </ol>
+ <div align="left"><b><I><U>Catatan</U></I></b><br>
+    <Br>
+   jika melakukan sholat hanya 2 rekaat, maka di rekaat ke 2 sebelum salam sujut kembali dengan membaca bacaan di bawah ini.<br>
+  <Br>
+   jika melakukan sholat 6 rekaat, maka bacaan berikut di baca di hari rekaat yaitu pada saat rekaat ke enam, jaid pada rekaat ke 2,4 tidak perlu, hanya di akhirnya saja,<br>
+  <Br>
+   dan seterusnya... <br>
+  <br>
+   Berikut  membaca  ketika sujud setelah atahiyat akhir ;
+ </div>
+ <ol>
+  <li>
+    <div align="left"><b><i>Tasbih (10x)</i></b></div>
+  </li>
+  <div align="left"><div>
+      <div align="right"><font size="+1"> سُبْحَانَ اللّهِ  - والْحَمْدُللّهِ -  وَ لا اِلهَ اِلَّا اللّهُ  - وَ اللّهُ اَكْبَرُ</font> </div>
+  </div>
+      <br>
+      <b><I>Latin ;</I></b><br>
+      <Br>
+    subhanallah walhamdulillah walailahaillallah wallahuakbar <br>
+    <Br>
+    <b><I>Artinya ;</I></b>  </div>
+  <blockquote> 
+    <div align="left">Maha suci Allah dan segala puji bagi-Nya, dan tiada tuhan selain Allah, dan Allah yang Maha besar. </div>
+  </blockquote>
+  <div align="left"><br>
+  </div>
+  <li>
+    <div align="left"><b><I>Sholawat (10x)</I></b></div>
+  </li>
+  <div align="left"><div>
+      <div align="right"><font size="+1">اَللهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ</font></div>
+  </div>
+      <br>
+      <b><I>Latin ;</I></b><br>
+      <Br>
+    Allahumma shalli 'ala sayyidinaa Muhammad, wa 'ala 'ali sayyidina muhammad. <Br>
+    <Br>
+    <b><I>Artinya ;</I></b>
+    <blockquote> "Ya Allah! Limpahkanlah rahmat, kasih sayang kepada Nabi Muhammad dan keluarganya </blockquote>
+    <br>
+  </div>
+  <li>
+    <div align="left"><b><I>Doa mohon ampun (10x)</I></b></div>
+  </li>
+  <div align="left"><div>
+      <div align="right"><font size="+1">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</font> </div>
+  </div>
+      <Br>
+      <b><I>Latin ;</I></b><Br>
+      <Br>
+      Rabbana atina fiddunya hasanah wa fil akhiroti hasanah waqina 'adzabannar" <br>
+      <Br>
+      <b><I>Artinya ;</I></b> <br>
+      <Br>
+      ("Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat dan peliharalah kami dari siksa neraka".) QS. Al Baqoroh 201. <Br>
+      <Br>
+  </div>
+  <li>
+    <p align="left" style="text-align:justify">Setelah membaca doa tersebut, mintakan apa yang menjadi hajat, keinginan kita dengan bersungguh sunggu, dan penuh pengharapan, (permohonannya cukup disebut dalam hati).Lanjut bangkit dari sujud sambil bertakbir, kemudian memberi salam.  </li>
+  </ol>
+  <br>
+ <hr>
+   <h3>
+     Bacaan dzikir dan doa setelah sholat hajat
+   </h3>
+
+ <hr>
+ <center>
+   <center>
+     <b><i><font color="#FF0000">1.</font></i></b>
+   </center>
+   <b><I>Membaca istighfar (100x)</I></b>
+   <hr>
+   <div align="left"><br>
+      <div>
+        <div align="right"><font size="+1"> اَسْتَغْفِرُاللهَ الّذِيْ لاَ اِلَهَ اِلَّا هُوَ الحَيُّ القَيُّوّمُ وَاَتُوْبُ اِلَيْهِ</font><br>
+        </div>
+      </div>
+      <p><b><I>Latin ;</I></b><br>
+        <Br>
+     Astaghfirullahal ladzii laa ilaaha illaa huwal hayyul qayyuumu wa atuubu ilaihi <br>
+      <Br>
+      <b><I>Artinya ;</I></b><br>
+      <Br>
+     Aku meminta pengampunan kepada Allah yang tidak ada tuhan selain Dia Yang Maha Hidup dan Berdiri Sendiri dan aku bertaubat kepadanya. <br>
+      <Br>
+     Bisa juga membaca<b><I> sayyidul Istighfar</I></b></p>
+      <p><br>
+      </p>
+   </div>
+   <div>
+     <div align="right"><font size="+1"> للَّهُمَّ أَنْتَ رَبِّيْ لاَ إِلَـهَ إِلاَّ أَنْتَ، خَلَقْتَنِيْ وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوْءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوْءُ بِذَنْبِيْ فَاغْفِرْ لِيْ فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوْبَ إِلاَّ أَنْت</font> <br>
+     </div>
+   </div>
+   <div align="left"><b><I>Latin ;</I></b><br>
+     <Br>
+   </div>
+ </center>
+ <p style="text-align:justify"> "Allahumma anta robbii laa ilaaha illaa anta, kholaqtanii wa ana ‘abduka wa ana ‘ala ‘ahdika wa wa’dika mastatho’tu. A’udzu bika min syarri maa shona’tu, abuu-u laka bini’matika ‘alayya, wa abuu-u bi dzanbii, faghfirlii fainnahuua laa yaghfirudz dzunuuba illa anta" <br>
+     <br>
+     <center>
+       <b><i>Artinya ;</i></b>
+     </center>
+   <br>
+ <p style="text-align:justify"> ”Ya Allah Engkau adalah Tuhanku, Tidak ada sesembahan yang haq kecuali Engkau,Engkau yang menciptakanku, sedang aku adalah hamba-Mu dan aku diatas ikatan janji -Mu dan akan menjalankannya dengan semampuku, aku berlindung kepadamu dari segala kejahatan yang telah aku perbuat, aku mengakui-Mu atas nikmat-Mu terhadap diriku dan aku mengakui dosaku pada-Mu, maka ampunilah aku, sesungguhnya tiada yang mengampuni segala dosa kecuali Engkau” <br>
+     <Br>
+ <hr>
+ <center>
+   <b><i><font color="#FF0000">2.</font></i></b>
+ </center>
+ <b><i>
+ <center>
+ <div align="center">Membaca Sholawat (100x)</i></b>
+ </div>
+ <hr>
+ <div align="left"><br>
+    <div>
+      <div align="right"><font size="+1">اَللهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ</font><br>
+      </div>
+		<br>
+           <b><I>Latin ;</I></b><br>
+        
+    </div>
+   Allahumma shalli 'ala sayyidinaa Muhammad, wa 'ala 'ali sayyidina muhammad. <Br>
+  <Br>
+  <b><I>Artinya ;</I></b>
+ </div>
+ <blockquote> 
+   <div align="left">"Ya Allah! Limpahkanlah rahmat, kasih sayang kepada Nabi Muhammad dan keluarganya </div>
+ </blockquote>
+<br>
+<hr>
+<center>
+  <b><i><font color="#FF0000">3.</font></i></b>
+</center>
+<b><i>
+<center>
+  Membaca doa sesudah solat hajat</i></b>
+  <hr>
+  <div align="right"><br>
+      <Br>
+      <font size="+1"> لاَ إِلَهَ إِلاَّ اللهُ الْحَلِيْمُ الْكَرِيْمُ سُبْحَانَ اللهِ رَبُّ الْعَرْشِ الْعَظِيْمِ الْحَمْدُ ِللهِ رَبِّ الْعَالَمِيْنَ. اَسْأَلُكَ مُوْجِبَاتِ رَحْمَتِكَ وَعَزَائِمَ مَغْفِرَتِكَ وَالْغَنِيْمَةَ مِنْ كُلِّ بِرٍّ وَالسَّلاَمَةَ مِنْ كُلِّ إِثْمٍ لاَتَدَعْ لِى ذَنْبًا إِلاَّ غَفَرْتَهُ وَلاَ هَمًّا إِلاَّ فَرَّجْتَهُ وَلاَ حَاجَةً هِىَ لَكَ رِضَا إِلاَّ قَضَيْتَهَا يَا أَرْحَمَ الرَّاحِمِيْنَ</font><br>
+      <Br>
+      <b><I>Latin ;</I></b><br>
+      <Br>
+  </div>
+</center>
+<blockquote>
+  <p align="left" style="text-align:justify"> Laa ilaha illallohul haliimul kariimu subhaanallohi robbil ‘arsyil ‘azhiim. Alhamdu lillaahi robbil ‘aalamiin. As `aluka muujibaari rohmatika wa ‘azaaima maghfirotika wal ghoniimata ming kulli birri wassalaamata ming kulli itsmin Laa tada’ lii dzamban illa ghofartahu walaa hamman illaa farojtahu walaa haajatan hiya laka ridhon illa qodhoitahaa yaa arhamar roohimiin.</p>
+</blockquote>
+<Br>
+<Br>
+<center>
+  <b><i> Artinya :</i></b>
+</center>
+<br>
+<blockquote>
+  <p style="text-align:justify"> Tidak ada Tuhan melainkan Allah Yang Maha Lembut dan Maha Penyantun. Maha Suci Allah, Tuhan pemelihara Arsy yang Maha Agung. Segala puji bagi Allah Tuhan seru sekalian alam. Kepada-Mu-lah aku memohon sesuatu yang mewajibkan rahmat-Mu, dan sesuatu yang mendatangkan ampunan-Mu dan memperoleh keuntungan pada tiap-tiap dosa. Janganlah Engkau biarkan dosa daripada diriku, melainkan Engkau ampuni dan tidak ada sesuatu kepentingan, melainkan Engkau beri jalan keluar, dan tidak pula sesuatu hajat yang mendapat kerelaan-Mu, melainkan Engkau kabulkan. Wahai Tuhan Yang Paling Pengasih dan Penyayang.</p>
+</blockquote>
+<p style="text-align:justify"><br>
+    </ul> 
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,51 @@
+html {
+	font-family: arial;
+	background: white;
+	color: #ffffff;
+}
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+ul {
+	list-style: none;
+	padding: 10px;
+}
+
+li {
+	background: #20A294;
+	border-radius: 4px;
+	height: 80px;
+	margin-bottom: 5px;
+}
+
+.box {
+	padding: 10px;
+}
+
+.box img {
+	margin: 5px 20px 10px 10px;
+	float: left;
+	max-width: 50px;
+	min-width: 50px;
+}
+
+.box .title {
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	padding-top: 10px;
+}
+
+.box .sub-title {
+	display: block;
+}
+
+.box .description {
+	display: block;
+}
+
+
+

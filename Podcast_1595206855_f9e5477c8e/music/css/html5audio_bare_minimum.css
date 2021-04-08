@@ -1,0 +1,60 @@
+
+body {
+	background:#444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* public functions */	
+#publicFunctions{
+	position: absolute;
+	padding: 20px;
+	background:#444;
+	left:50px;
+	top:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color:#fff;
+	list-style:circle;
+	/*display:none;*/
+	-webkit-overflow-scrolling: touch;
+}
+
+#publicFunctions li a{
+	color:#fff;
+}
+
+#publicFunctions li a:hover, #publicFunctions li .current{
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+		 
+		 
+		 
+		 
+		 
+		  
+
+
+

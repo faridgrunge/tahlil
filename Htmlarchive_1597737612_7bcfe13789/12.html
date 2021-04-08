@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Hakikat Talbiyah “Labbaik Allahumma Labbaik”</h1>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;" class="arab"></p>
+<p>Dzikir yang indah yang dimpikan oleh banyak kaum muslimin di penjuru alam semesta. Tidaklah disyari&rsquo;atkan untuk mengucapkannya kecuali orang yang sedang berihram. Baik ketika umroh maupun ketika haji.</p>
+<p>Itulah dzikir &ldquo;Labbaik Allahumma Labbaik&hellip;&rdquo;</p>
+<p>Ibnu Umar radhiallahu &aacute;nhumaa meriwayatkan bahwasanya talbiyah Rasulullah shallallahu &aacute;laihi wasallam adalah :</p>
+<p style="text-align: right;" class="arab">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لاَ شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الحَمْدَ وَالنِّعْمَةَ لَكَ وَالمُلْكَ، لاَ شَرِيكَ لَكَ</p>
+<p>&ldquo;Ya Allah aku memenuhi panggilanMu, Ya Allah aku memenuhi panggilanMu, tidak ada sekutu bagiMu, sesungguhnya pujian dan kenikmatan hanya milikMu, dan kerajaan hanyalah milikMu, tiada sekutu bagiMu&rdquo; (HR Al-Bukhari no 1549 dan Muslim no 1184)</p>
+<p>Apa makna talbiyah?</p>
+<p>Ibnul Qoyyim rahimahullah menyebutkan delapan makna talbiyah, yaitu :</p>
+<ol>
+<li style="text-align: right;" class="arab">إِجَابَةً لَكَ بَعْد إِجَابَةٍ <p></li>Aku memenuhi panggilan-Mu dan aku memenuhi panggilan-Mu<br>
+<li style="text-align: right;" class="arab">اِنْقَدْتُ لَكَ وَسَعَتْ نَفْسِي لَكَ خَاضِعَةً ذَلِيلَةً </li>Aku tunduk kepada-Mu dan jiwaku lapang untuk-Mu dalam kondisi rendah dan hina untuk-Mu<br>
+<li style="text-align: right;" class="arab">أَنَا مُقِيْمٌ عَلَى طَاعَتِكَ مُلَازِمٌ لَهَا </li>Aku senantiasa tetap dalam ketaatan kepada-Mu dan selalu melazimi ketaatan tersebut</li></br>
+<li style="text-align: right;" class="arab">مُوَاجِهَتُكَ بِمَا تُحِبُّ مُتَوَجِّهٌ إِلَيْكَ </li>Aku menghadap dan menuju kepada-Mu dengan apa yang Engkau cintai</li><br>
+<li style="text-align: right;" class="arab">&nbsp;حُبًّا لَكَ بَعْدَ حُبٍّ </li>Aku datang karena mencinta-iMu dan mencintai-Mu</li><br>
+<li style="text-align: right;" class="arab">أَخْلَصْتُ لُبِّي وَقَلْبِي لَكَ </li>Aku memrunikan hatiku dan pikiranku hanya untuk-Mu</li><br>
+<li style="text-align: right;" class="arab">فِي حَالٍ وَاسِعَةٍ مُنْشَرِحِ الصَّدْرِ </li>Aku mendatangi-Mu dalam kondisi hati yang lapang</li><br>
+<li style="text-align: right;" class="arab">اِقْتِرَابًا إِلَيْكَ بَعْدَ اِقْتِرَابٍ كَمَا يَتَقَرَّبُ الْمُحِبُّ مِنْ مَحْبُوْبِهِ </li>Aku terus mendekatkan diriku kepada-Mu sebagaimana seorang pecinta yang mendekat kepada yang dia cintai</li><br>
+</ol>
+<p>(lihat Hasyiat Ibnil Qoyyim &aacute;laa sunan Abi Dawud 5/175-176)</p>
+<p>Kedelapan makna di atas menunjukan seseorang yang mengucapkan talbiyah benar-benar fokus kepada Allah, menuju Allah, memenuhi panggilan Allah dengan hati yang lapang, gembira, yang dipenuhi rasa cinta dan rindu.</p>
+<p>Adapun makna :</p>
+<p style="text-align: right;" class="arab">إِنَّ الحَمْدَ وَالنِّعْمَةَ لَكَ وَالمُلْكَ، لاَ شَرِيكَ لَكَ</p>
+<p>&ldquo;Sesungguhnya pujian dan kenikmatan hanya milikMu, dan kerajaan hanyalah milikMu, tiada sekutu bagiMu&rdquo;</p>
+<p>Digandengkannya antara الحَمْدَ (pujian) dan النِّعْمَةَ (kenikmatan) pada ucapan إِنَّ الحَمْدَ وَالنِّعْمَةَ لَكَ, sementara وَالمُلْكَ (kepemilikan) disendirikan, karena pujian kepada Allah diantaranya karena kenikmatan-kenikmatan yang Allah berikan. Seakan-akan seorang yang bertalibiyah berkata, &ldquo;Tidak ada pujian yang sesungguhnya kecuali hanya kepadaMu karena seluruh kenikmatan sesungguhnya hanyalah dariMu&rdquo; (lihat Fathul Baari 3/409)</p>
+<p>Seseorang tatkala mengucapkan talbiyah hendaknya benar-benar meresapi bahwasanya seluruh kenikmatan, anugrah, kemudahan, keimanan, dan berbagai macam karunia yang tidak terhingga semuanya dari Allah. Allah berfirman :</p>
+<p style="text-align: right;" class="arab">وَمَا بِكُمْ مِنْ نِعْمَةٍ فَمِنَ اللَّهِ</p>
+<p>Dan apa saja nikmat yang ada pada kamu, maka dari Allah-lah (datangnya) (QS An-Nahl : 53)</p>
+<p>Adapun وَالمُلْكَ (kepemilikan hanya kepadaMu), hal itu karena hanya Allah yang menciptakan alam semesta, tidak ada sesuatupun selain Allah yang bisa menciptakan. Allah berfirman :</p>
+<p style="text-align: right;" class="arab">يَا أَيُّهَا النَّاسُ ضُرِبَ مَثَلٌ فَاسْتَمِعُوا لَهُ إِنَّ الَّذِينَ تَدْعُونَ مِنْ دُونِ اللَّهِ لَنْ يَخْلُقُوا ذُبَابًا وَلَوِ اجْتَمَعُوا لَهُ وَإِنْ يَسْلُبْهُمُ الذُّبَابُ شَيْئًا لَا يَسْتَنْقِذُوهُ مِنْهُ ضَعُفَ الطَّالِبُ وَالْمَطْلُوبُ</p>
+<p>Hai manusia, telah dibuat perumpamaan, maka dengarkanlah olehmu perumpamaan itu. Sesungguhnya segala yang kamu seru selain Allah sekali-kali tidak dapat menciptakan seekor lalatpun, walaupun mereka bersatu menciptakannya. Dan jika lalat itu merampas sesuatu dari mereka, tiadalah mereka dapat merebutnya kembali dari lalat itu. Amat lemahlah yang menyembah dan amat lemah (pulalah) yang disembah (QS Al-Hajj : 73)</p>
+<p>Jika seluruh sesembahan selain Allah berkumpul, baik yang disembah adalah malaikat, para nabi, para orang shalih, dan juga para jin untuk bersatu padu menciptakan lalat maka mereka tidak bakal mampu.</p>
+<p>Jangankan menciptakan lalat, bahkan menciptakan biji-bijian yang ditanam akan bertunas tumbuh maka mereka tidak bakal mampu melakukannya.</p>
+<p>Dalam hadits qudsi Allah berkata :</p>
+<p style="text-align: right;" class="arab">وَمَنْ أَظْلَمُ مِمَّنْ ذَهَبَ يَخْلُقُ كَخَلْقِي، فَلْيَخْلُقُوا حَبَّةً، وَلْيَخْلُقُوا ذَرَّةً</p>
+<p>&ldquo;Dan siapakah yang lebih dzolim dari orang yang hendak menciptakan seperti ciptaanku?. Maka hendaknya mereka menciptakan biji dan hendaknya mereka menciptakan semut&rdquo; (HR Al-Bukhari no 5953)</p>
+<p>Maka semua yang ada di alam semesta ini pada hakikatnya adalah milik Allah, karena Allah-lah yang menciptakannya.</p>
+<p>Dari sini kita bisa menyadari bahwa sesungguhnya kandungan kalimat talbiyah adalah tauhid kepada Allah. Pengakuan bahwa hanya Allah yang menciptakan, yang memiliki, yang memberikan kenikmatan, karenanya hanya kepadaNya-lah ibadah ditujukan. Jabir mensifati talbiyah Nabi dengan tauhid. Jabir berkata :</p>
+<p style="text-align: right;" class="arab">فَأَهَلَّ بِالتَّوْحِيدِ &laquo;لَبَّيْكَ اللهُمَّ، لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ، وَالْمُلْكَ لَا شَرِيكَ لَكَ&raquo;</p>
+<p>&ldquo;Maka Nabipun bertalbiyah dengan tauhid, Labbaik Allahumma Labbaiik&hellip;.&rdquo; (HR Muslim no 1218)</p>
+<p>Ini adalah syi&aacute;r para jamaah haji -talbiyah yang merupakan syi&aacute;r tauhid-, yang disunnahkan untuk diucapkan dengan suara yang keras. Nabi shallallahu &aacute;laihi wasallam bersabda :</p>
+<p style="text-align: right;" class="arab">أَتَانِي جِبْرِيلُ عَلَيْهِ السَّلَامُ فَقَالَ: أَنْ آمُرَ أَصْحَابِي، أَوْ مَنْ مَعِي أَنْ يَرْفَعُوا أَصْوَاتَهُمْ بِالتَّلْبِيَةِ</p>
+<p>&ldquo;Jibril &lsquo;alaihis salam datang kepadaku lalu memerintahkan aku agar aku memerintahkan para sahabatku atau yang sedang bersamaku untuk mengeraskan suara mereka dengan talbiyah&rdquo; (HR Ahmad no 16567, Ibnu Majah no 2922, Abu Dawud no 1814, at-Tirmidzi no 829 dan An-Nasaai no 2753)</p>
+<p>Abu Sa&iacute;d al-Khudri berkata :</p>
+<p style="text-align: right;" class="arab">خَرَجْنَا مَعَ رَسُولِ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ نَصْرُخُ بِالْحَجِّ صُرَاخًا</p>
+<p>&ldquo;Kami keluar/bersafar bersama Rasulullah shallallahu &aacute;laihi wasallam, kami sungguh berteriak dengan talbiyah haji&rdquo; (HR Muslim no 1247)</p>
+<p>Namun teriakan talbiyah adalah dengan teriakan yang wajar yang tidak memudorotkan diri sendiri, adapun wanita cukup dengan suara yang lirih yang didengarnya sendiri, karena suara wanita bisa menimbulkan fitnah (lihat penjelasan An-Nawawi dalam Al-Minhaaj 8/232)</p>
+<p>Kalimat talbiyah adalah dzikir yang paling banyak diucapkan oleh Jama&aacute;h haji, mereka mengucapkannya tatkala di Mina, di Muzdalifah, di padang &lsquo;&Aacute;rofah, dan menjelang melempar Jamarot.</p>
+<p>Rasulullah juga bersabda :</p>
+<p style="text-align: right;" class="arab">مَا أَهَلَّ مُهِلٍّ قَطٌّ وَلاَ كَبَّرَ مُكَبِّرٌ قَطٌّ إِلاَّ بُشِّرَ بِالْجَنَّةِ</p>
+<p>&ldquo;Tidaklah seorangpun yang berihlaal (bertalbiyah) dan tidak pula seorangpun yang bertakbir kecuali diberi kabar gembira dengan surga&rdquo; (HR At-Thobroni dan dishahihkan oleh Al-Albani dalam As-Shahihah no 1621)</p>
+<p>Kalimat &ldquo;talbiyah&rdquo; kalimat yang menandakan seseorang keluar dari dunia menuju akhirat, yang ia nyatakan dari lubuk hatinya yang paling dalam ingin memenuhi panggilan Allah. Ungkapan yang menjiwai ini mempengaruhi apa-apa yang ada di sekitarnya sehingga ikut bertalbiyah bersamanya. Nabi shallallahu &aacute;liahi wasallam bersabda :</p>
+<p style="text-align: right;" class="arab">مَا مِنْ مُسْلِمٍ يُلَبِّي إِلَّا لَبَّى مَنْ عَنْ يَمِينِهِ وَشِمَالِهِ: مِنْ حَجَرٍ أَوْ شَجَرٍ أَوْ مَدَرٍ حَتَّى تنقطِعَ الأرضُ منْ ههُنا وههُنا</p>
+<p>&ldquo;Tidaklah seorang muslimpun yang bertalbiyah kecuali bertalbiyah juga semua yang ada di kanan dan kirinya, baik batu, pohon, atau tanah lihat, hingga di penjuru bumi dari arah sana dan sana&rdquo; (HR At-Tirmidzi dan Ibnu Majah, dan dishahihkan oleh Al-Albani dalam Shahih Al-Jaami&rsquo; no 5570)</p>
+<p>Talbiyah disunnahkan tatkala umroh dimulai sejak berihram di miqot hingga tatkala mulai thowaf. Karena talbiyah artinya memenuhi panggilan menuju ka&rsquo;bah, dan tatkala tiba di ka&rsquo;bah dan hendak thowaf maka talbiyah dihentikan karena sudah sampai tujuan, dan diganti dengan dzikir thowaf.</p>
+<p>Adapun tatkala haji, maka talbiyah dimulai sejak berihram hingga awal melempar jamrotul &aacute;qobah pada tanggal 10 dzulhijjah, dan dzikirnya berubah menjadi takbir.</p>
+<p>Semakin banyak talbiyah seorang yang sedang berhaji maka semakin tinggi kualitas hajinya. Nabi pernah ditanya, أَيُّ الحَجِّ أَفْضَلُ &ldquo;Haji apakah yang paling afdol?&rdquo;, maka Beliau menjawab العَجُّ وَالثَّجُّ &ldquo;Yang paling banyak mengangkat suara dalam bertalbiyah dan yang paling banyak menyembelih hewan hadyu&rdquo; (HR At-Tirmidzi dan Ibnu Majah, dan dishahihkan oleh Al-Albani dalam As-Shahihah no 1500)</p>
+<p>Karena betapa banyak jama&aacute;h haji yang kurang bertalbiyah, kurang mengangkat suara mereka tatkala bertalbiyah. Dan masih banyak jama&aacute;h haji yang menghabiskan waktu mereka pada obrolan-obrolan yang tidak bermanfaat.</p>
+<p><strong>Peringatan&nbsp;:</strong></p>
+<p>Sebagian jama&aacute;h haji tatkala berangkat dari Madinah menuju Mekah hanya bertalbiyah sebentar di bis, setelah itu lebih banyak diamnya. Tentu tidak dilarang untuk istirahat dan tidur di masjid akan tetapi jika terjaga maka hendaknya memperbanyak talbiyah. Jika para sahabat dahulu sekitar sepekan mereka berangkat dari Madinah menuju Mekah untuk berhaji, itupun mereka banyak bertalbiyah maka hendaknya kita yang lebih ringan hanya sekitar 6-7 jam lebih menyempatkan diri untuk bertalbiyah.</p>
+<p>Demikian juga tatkala tanggal 8 dzulhijjah hingga 10 dzulhijjah para jama&aacute;h hendaknya memperbanyak talbiyah, bahkan tatkala di tenda-tenda. Diantara hikmah diulang-ulangnya talbiyah agar jama&aacute;h haji diingatkan terus untuk selalu ikhlash, bahwa kedatangannya di tanah suci adalah untuk memenuhi penggilan Allah semata, bukan untuk disanjung dan dipuji oleh manusia.</p>
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

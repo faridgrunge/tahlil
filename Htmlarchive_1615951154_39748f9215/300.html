@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Doa Setelah Baca Surat Al-Kahfi</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ<br><br>اللهم  صَلِّ عَلٰى سَيِّدِنَا مُحَمَّدٍ وَاٰلِهِ وَصَحْبِهِ وَسَلَّمَ<br><br> اللهم يَا ذَاالْجَلَالِ وَالْاِكْرَامِ, وَالْمَوَاهِبِ الْعِظَامِ, وَخَالِقِ الْحَلَالِ وَالْحَرَامِ, وَالْمُوَفِّقِ مَنْ يَشَآءُ مِنْ عِبَادِهِ اِلٰى اَسْبَابٍ وَمُوْجِبَاتِ الْاِلْتِزَامِ<br><br>نَسْئَلُكَ اللهم  اَنْ تُحْيِيَنَا عَلٰى الْاِسْلَامِ  وَتُمِيْتَنَا عَلٰى  الْاِيْمَانِ وَتُرَقِّيَنَا بَيْنَهُمَا فِيْ مَرَاتِبِ الْاِحْسَانِ وَالْاِيْقَانِ وَالْعِرْفَانِ يَاكَرِيْمُ يَا مَنَّانُ<br><br>اللهم احْفَظْنَا مِنْ كُلِّ فِتْنَةٍ مُظِلَّةٍ وَاشْفِنَا مِنْ كُلِّ سَقَمٍ وَعِلَّةٍ وَاغْفِرْ لَنَا كُلَّ مَعْصِيَّةٍ وَزَلَّةٍ وَثَبِّتْنَا عَلٰى  الْحَقِّ وَالْمِلَّةِ وَاجْعَلْ لَنَا مُذَكِرًا وَمُعِيْنًا مِنْ عِبَادِكَ الْمُدِلَّةِ<br><br>وَإِذَا اَرَدْتَ مِنْ عِبَادِكَ فِتْنَةً فَاقْبِضْنَا اِلَيْكَ غَيْرَ مَفْتُوْنِيْنَ وَلَآ الضَّآلِّيْنَ وَلَا مُضِلِّيْنَ بِمَنِّكَ وَكَرَمِكَ يَا اَرْحَمَ الرَّاحِمِيْنَ<br><br> اللهم  اعْصِمْنَا بِفَضْلِكَ مِنْ فِتْنَةِ الْمَسِيْحِ الدَّجَّالِ وَمِنْ سُوْءِ الْاَعْمَالِ وَفَسَادِ الْاَحْوَالِ  وَفُضُوْلِ الْاَقْوَالِ وَاهْدِنَا لِمَا يُرْضِيْكَ عَنَّا فِيْ كُلِّ حَالٍ <br><br> وَاخْتِمْ اَعْمَارَنَا بِالْحُسْنٰى فِيْ خَيْرٍ وَعَافِيَةٍ وَسَلاَمَةٍ يَاذَا الْجَلَالِ<br><br> وَصَلَّى اللَّهُ عَلَى سَيِّدِنَا وَنَبِيِّنَا مُحَمَّدٍ وَعَلٰى  اٰلِهِ وَصَحْبِهِ وَسَلَّمَ وَالْحَمْدُلِلّٰهِ رَبِّ الْعَالَمِيْنَ</p><p><i>Bismillahirrahmanirrahimi. <br><br>Alhamdulillahi rabbil ‘alamina. <br><br>Allhumma shalli ‘ala sayyidina muhammadin wa alihi wa sallama. Allahumma ya dzal jalali wal ikrami, wal mawahibil ‘idhami, wa khaliqil halali wal harami, wal muwaffiqi man yasya’u min ‘ibadihi ila asbabin wamujibatil iltizam. Nas alukallahumma an tuhyiyana ‘alal islami wa tumitana ‘alal imani waturaqqiyana baynahuma fi maratibil ihsani wal iqani wal irfani ya karimu ya mannanu.<br><br>Allahummahfadhna min kulli fitnatin mudhillatin wasyfina min kulli saqamin wa ‘illatin waghfirlana kulla Ma'had Aly’shiyyatin wazallatin watsabbitna ‘alal haqqi wal millati waj’al lanan mudzakiran wa mu’inan min ‘ibadikal mudillati. <br><br>Waidza aradta min ‘ibadika fitnatan faqbidhna ilaika ghaira maftuninawaladh dhallinawa mudhillina bimannika wakaramika ya arhamarrahimina Allahumma’ shimna bifadhlika min fitnatil masihid dajjali wamin su’il a’mali wafasadil ahwali wa fudhulil aqwali wahdina lima yurdhika ‘anna fi kulli halin Wakhtim a’marana bil husna fi khairin wa ‘afiyatin wa salamatin ya dzal jalali.  <br><br>washallahu ‘ala sayyidina wanabiyyina muhammadin wa ‘ala alihi washahbihi wasallama walhamdulillahi rabbil ‘alamina.</i></p><p>Dengan menyebut nama Allah yang Maha pengasih dan Maha penyayang. Segala puji hanya milik Allah, Pengatur alam semesta. <br><br>Ya Allah, berilah rahmat dan keselamatan kepada Tuan kami Muhammad dan keluarga-Nya serta Sahabat-Nya. Ya Allah, Dzat yang memiliki keagungan dan kemuliaan. Dan Dzat yang memiliki segala pemberian yang tak terhingga. Dzat Pencipta sesuatu yang halal dan yang haram, Dzat yang menunjukkan jalan kepada hamba-hamba-Nya yang dikehendaki-Nya untuk melakukan sebab-sebab dan kewajiban-kewajiban.<br><br> Kami memohon kepadaMu, agar Engkau memberikan kehidupan kepada kami di atas syari’at Islam dan mengambil kehidupan kami di atas bimbingan keimanan dan meningkatkan taraf kehidupan kami di antara Islam dan Iman dalam segala dimensi kebaikan, keyakinan, pengetahuan wahai Dzat yang Maha Mulia dan Dzat yang Maha menganugerahi. <br><br>Ya Allah, jagalah kami dari segala fitnah (cobaan) yang menyesatkan dan menjatuhkan. Sembuhkan kami dari sakit dan penyakit. Ampuni kami dari segala kedurhakaan dan keteledoran kami dan kokohkanlah hati dan pendirian kami di atas jalan kebenaran dan agama. Jadikan kami orang yang senantiasa mengingat nikmat-Mu dan orang yang selalu memberikan bantuan dari golongan hamba-Mu yang menunjukkan jalan kebaikan.<br><br>Bila Engkau menginginkan fitnah terjadi pada hamba-hamba-Mu, maka selamatkanlah kami dalam keadaan tidak terkena fitnah itu, dan juga dalam keadaan tidak sesat menyesatkan, dengan karunia-Mu dan kedermawanan-Mu wahai Dzat yang paling mengasihi. <br><br>Ya Allah, jagalah kami dengan karunia-Mu dari fitnah Dajjal dan dari buruknya perbuatan dan rusaknya keadaan dan perkataan yang berlebihan dan berilah kami petunjuk untuk melakukan perbuatan yang Engkau ridhai dalam setiap keadaan. Sudahilah umur-umur kami dengan kebaikan dan dalam kebaikan serta kesehatan dan keselamatan wahai Dzat yang Maha Agung. <br><br>Semoga Allah memberi rahmat dan keselamatan kepada Tuan kami dan Nbai kami Muhammad dan keluarga serta shahabtnya segala puji hanya milik Allah, Pengatur alam semesta.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Doa ini disusun oleh Habib Abubakar Al-Adni bin Ali al-Masyhur untuk dibaca setelah membaca surat Al-Kahfi. Doa ini mencakup permintaan kepada Allah untuk meningkatkan kadar keimanan, keislaman, dan keihsanan kita. Doa ini juga mencakup perlindungan dari berbagai macam fitnah dan cobaan, termasuk  fitnah Dajjal.</p><p><strong>Habib Abubakar al-Adni bin Ali al-Masyhur
+</strong></p>
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

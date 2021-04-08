@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Qasidah Ya Arhamar Rahimin</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">يَااَرْحَمَ الرَّحِمِيْنَ - يَااَرْحَمَ الرَّحِمِيْنَ<br>
+يَااَرْحَمَ الرَّحِمِيْنَ - فَرِّجْ عَلَى الْمُسْلِمِيْنْ<br><br>
+
+يَا رَبَّنَا يَاكَرِيْم – يَارَبَّنَا يَارَحِيْم<br>
+اَنْتَ الْجَوَادُ الْحَلِيْم – وَاَنْتَ نِعْمَ الْمُعِيْن<br><br>
+
+وَلَيْسَ نَرْجُوْسِوَاكْ – فَادْرِكْ اِلَهِيْ دَرَاكْ<br>
+قَبْلَ الْفَنَا وَالْهَلَاكْ – يَعُمُّ دُنْيَاوَدِيْنْ<br><br>
+
+وَمَالَنَارَبَّنَا – سِوَاكَ يَاحَسْبَنَا<br>
+يَاذَاالْعُلَاوَالْغِنَى – وَيَا قَوِيُّ يَامَتِيْنْ<br><br>
+
+نَسْاَلُكَ وَالِى يُقِيْم – الْعَدْلَ كَى نَسْتَقِيْم<br>
+عَلَى هُدَاكَ الْقَوِيْمْ – وَلَانُطِيْعُ اللَّعِيْن<br><br>
+
+يَارَبَّنَا يَامُجِيْبْ – اَنْتَ لسَّمِيْعُ الْقَرِيْبْ<br>
+ضَاقَ الْوَسِيْعُ الرَّحِيْبْ – فَانْظُرْ اِلَى الْمُؤْمِنِيْنْ<br><br>
+
+نَظْرَةْ تُزِيْلُ الْعَنَا – عنَّا وَ تُدْنِى الْمُنَا<br>
+مِنَّاوَكُلَّ الْهَنَا – نُعْطَاهُ فِى كُلِّ حِيْنْ<br><br>
+
+سَالَكْ بِجَاهِ الْجُدُوْدْ – وَاِلَى يُقِّيْمُ الْحُدُوْدْ<br>
+فِيْنَاوَيَكْفِى الْحَسُوْدْ – وَيَدْفَعُ الظَّالِمِيْنْ<br><br>
+
+يُزِيْلُ لِلْمُنْكَرَاتْ – يُقِيْمُ لِلصَّلَوَاتْ<br>
+يَاْمُرُ بِالصَّالِحَاِت – مُحِبٌ للِصَّالِحِيْنْ<br><br>
+
+يُزِيْحُ كُلَّ الْحَرَامْ – يَقْهَرُ كُلَّ الطَّعَامْ<br>
+يَعْدِلُ بَيْنَ الْاَنَامْ – وَيُؤْمِنُ الْجَائِفِيْنْ<br><br>
+
+رَبِّ اسْقِنَا غَيْثَ عَامْ – نَافعْ مُبَارَكْ دَوَامْ<br>
+يَدُوْمُ فِى كُلِّ عَامْ – عَلَى مَمَرِّالسِّنِيْنْ<br><br>
+
+رَبِّ احْيِنَا شَاكِرِيْنْ – وَتَوَفَّنَا مُسْلِمِيْنْ<br>
+نُبْعَثْ مِنَ الْاَمِنِيْنْ – فِيْ زُمْرَةِ السَّابِقِيْنْ<br><br>
+
+بِجَاهِ طَهَ الرَّسُوْلْ – جُدْ رَبَّنَا بِالْقَبُوْلْ<br>
+وَهَبْ لَنَا كُلَّ سُولْ – رَبِّ اسْتَجِبْ لِىْ اۤمِيْنْ<br><br>
+
+عَطَاكَ رَبِّيْ جَزِيْلْ – وَكُلَّ فِعْلِكْ جَمِيْلْ<br>
+وَفِيْكْ اَمَلْنَا طَوِيْلْ – فَجُدْ عَلَى الطَّامِعِيْنْ<br><br>
+
+يَارَبِّ ضَاقَ الْخِنَاقْ - مِنْ فِعْلِ مَا لَا يُطَاقْ<br>
+فَامْنُنْ بِفَكِّ الْغَلَاقْ – لِمَنْ بِذَنْبِهْ رَهِيْنْ<br><br>
+
+وَاغْفِرْلِكُلِّ الذُّنُوْبْ – وَاسْتُرْ لِكُلِّ الْعُيُوبْ<br>
+وَاكْشِفْ لِكُلِّ الْكُرُوبْ – وَاكْفِ اَذَى الْمُؤْذِيِينْ<br><br>
+
+وَاخْتِمْ بِاَحْسَنْ خِتَامْ – اِذَا دَنَى الْاِنْضِرَامْ<br>
+وَحَانَ حِيْنُ الْحِمَامْ – وَزَادَ رَشْحُ الْجَبِينْ<br><br>
+
+ثُمَّ الصَّلاَةْ وَالسَّلاَمْ – عَلَى شَفِيْعِ الْاَنَامْ<br>
+وَالْاَلِ نِعْمَ الْكِرَامْ – وَالصَّحْبِ وَالتَّابِعِينْ</p><br><br><p><i>Yâ Arhamar-Rôhimîn Yâ Arhamar-Rôhimîn Yâ Arhamar-Rôhimîn Farrij ‘alâl muslimîn.<br><br>
+
+Yâ Robbanâ Yâ Karîm Yâ Robbanâ Yâ Rohîm Antal jawâdul halîm wa anta ni’mal mu’în.<br><br>
+
+Wa laisa narjû siwâk Fadrik ilâhî darôk Qoblal fanâ wal halâk Ya’ummu dunyâ wa dîn.<br><br>
+
+Wa mâ lanâ Robbanâ Siwâka Yâ hasbanâ Yâ dzal’ulâ wal ghinâ Wa Yâ qowiyyu Yâ Matîn.<br><br>
+
+Nas-aluka wâlî yuqîm. Al’ad-la kay nastaqîm ‘Alâ hudâkal qowîm wa lâ nuthî’ulla’în.<br><br>
+
+Yâ Robbanâ Yâ Mujîb Antas-samî’ul qorîb Dlôqol wasî’ur-rohîb Fandhur ilâl mu'minîn.<br><br>
+
+Nadhrot tuzîlul ‘anâ ‘Annâ wa tudnîl munâ Minnâ wa kullal hanâ Nu’thôhu fî kulli hîn.<br><br>
+
+Sâlak bijâhil judûd Wâliy yuqîmul hudûd Fînâ wa yakfîl hasûd Wa yadfa’udh-dhôlimîn.<br><br>
+
+Yuzîlu lilmunkarôt Yuqîmu lissholawât Ya,muru bisshôlihât Muhibbun lisshôlihîn.<br><br>
+
+Yuzîhu kullal harôm Yaqharu kullath-thoghôm Ya’dilu bainal anâm wa yu,minul khô-ifîn.<br><br>
+
+Robbi-sqinâ ghoitsa ‘âm Nâfi’ mubârok dawâm Yadûmu fî kulli ‘âm ‘alâ mamarris-sinîn.<br><br>
+
+Robbihyinâ syâkirîn wa tawaffanâ Muslimîn Nub’ats minal ãminîn fî zumrotis-sâbiqîn.<br><br>
+
+Bijâhi Thôhâr-Rosûl Jud robbanâ bil qobûl Wa hab lanâ kulla sûl Robbistajib lî amîn.<br><br>
+
+‘Athôka robbî jazîl Wa kullu fi’lik jamîl Wa fîk amalnâ thowîl Fajud ‘alâth-thômi’în.<br><br>
+
+Yâ Robbi dlôqol khinâq Min fi’li mâ lâ yuthôq Famnun bifakil ghilâq Liman bidzanbih rohîn.<br><br>
+
+Waghfir likullidz-dzunûb wastur likullil ‘uyûb Waksyif likullil kurûb wakfi adzâl mu,dziyîn.<br><br>
+
+Wakhtim bi-ahsan khitâm Idzâ danâl inshirôm Wa hâna hînul himâm Wa zâda rosyhul jabîn.<br><br>
+
+Tsummas-sholât was-salâm ‘Alâ Syafî’il anâm Wal ãli ni’mal kirôm wash-shohbi wat-tâbi’în.</i></p><br><br><p>Wahai yang Maha Penyayang dari semua penyayang. Wahai yang Maha Penyayang dari semua penyayang. Wahai yang Maha Penyayang dari semua penyayang. Berilah pertolongan kepada kaum muslimin.<br><br>
+
+Wahai Tuhan yang Maha Pemurah. Wahai Tuhan yang Maha berkasih sayang. Engkaulah Maha Pemurah dan Maha berlemah lembut. Dan Engkaulah yang Maha Melimpahkan kenikmatan dan Maha Menolong.<br><br>
+
+Dan tiadalah kami mengharap pada selain-Mu, maka datangkanlah Wahai Tuhan kami yaitu pertolongan-Mu dan kepedulian-Mu, sebelum terjadinya kerusakan dan kehancuran yang menyeluruh dipermukaan bumi dan agama kami.<br><br>
+
+Dan tiadalah bersama kami Wahai Tuhan kami, selain-Mu. Wahai yang Maha mampu mencukupi kami<br>
+Wahai yang Maha memiliki keluhuran, Wahai Yang Maha kaya – yang Maha kuat , Wahai yang Maha Dahsyat kekuasaan-Nya.<br><br>
+
+Kami minta kepadaMu pemimpin yang menegakkan – keadilan agar kami bisa lebih melakukan istiqomah ibadah di atas tuntunan hidayah-Mu yang tegak dengan benar dan mulia – dan hingga kami tidak berpemimpin kepada orang yang engkau murkai.<br><br>
+
+Wahai Tuhan Kami , Wahai yang menjawab do’a dengan lebih dari apa yang diminta – Engkaulah yang Maha mendengar dan Maha dekat. Sungguh telah sempit ( hal-hal yang sebelumnya luas dan menyenangkan kini telah berubah menjadi kesempitan) – maka pandanglah kepada orang-orang mukmin dengan kasih sayang-Mu dan kasihanilah orang-orang yang beriman. <br><br>
+
+Pandangan kasih saying yang membuat sirnanya segala kesedihan pada diri kami - dan dekatkanlah pada kami semua yang kami cita-citakan pada diri kami. Dari apa-apa yang kami cita-citakan dan semua kebahagiaan - agar kami dilimpahi anugerah setiap waktu.<br><br>
+
+Pemimpin selalu membenahi kemungkaran – Melakukan shalat. Pemimpin yang selalu memerintah kepada hal-hal yang baik – dan mencintai orang-orang yang shalih. <br><br>
+
+Pemimpin yang selalu berusaha membenahi segala hal yang dilarang agama – dan menindas semua yang berbuat zhalim. Pemimpin yang adil diantar manusia – dan mengamankan serta melindungi orang-orang yang dalam ketakutan dan kerisauan.<br><br>
+
+Wahai Tuhan kami, hujani kami dengan lebatnya rahmat-Mu sepanjang tahun – yang membawa limpahan manfaat dan keberkahan yang baik berkesinambungan. Yang berlanjut sepanjang tahun – dari masa ke masa.<br><br>
+
+Wahai Tuhan kami , jadikanlah kehidupan kami selalu jadi hamba yang bersyukur – dan wafatkanlah kami sebagai orang muslim hingga kami dibangkitkan dalam kelompok orang-orang yang aman dari siksa kemurkaanMu – di dalam kelompok orang-orang yang masuk surga terlebih dahulu.<br><br>
+
+Demi tingginya derajat Nabi Muhammad ﷺ - maka berkasih sayanglah Wahai Tuhan kami kepada kami dengan memberikan pengabulan-pengabulan terhadap harapan-harapan kami. Dan limpahkanlah bagi kami apa-apa yang kami minta – Wahai Tuhan kami perkenankanlah kami dan kabulkanlah (doa) kami. <br><br>
+
+Anugerah-Mu Wahai Tuhan Kami, sungguh indah dan banyak – dan semua perbuatan-Mu indah<br>
+Dan pada-Mu cita-cita kami sangat panjang – maka bermurah hatilah kepada orang-orang yang sangat mendambakan anugerah-Mu.<br><br>
+
+Wahai Tuhan kami, telah sempit tenggorokan kami (dalam kesulitan yang besar) - dari perbuatan perbuatan yang tidak mampu kami hindari. Maka anugerahilah kami dengan terlepasnya segala kesulitan yang mengunci kami - untuk sang hamba yang tergadaikan oleh dosa-dosanya sendiri.<br><br>
+
+Dan ampunilah setiap dosa - dan tutupilah segala aib aib kami. Singkapkanlah dari kami dan singkirkanlah segala permasalahan dan cobaan dan musibah. Lindungi kami dan cukupkanlah gangguan dari orang orang yang mengganggu kami.<br><br>
+
+Dan akhirilah kami dengan Husnul khotimah - bila telah dekat ajal kami dan telah dekat nafas kami yang terakhir - dan tambahkanlah keringat yang mengalir di dahi sebagai tanda kematian kami yang mulia (orang-orang yang ahli surga wafat dalam keadaan husnul khotimah itu salah satu tandanya adalah dahinya berkeringat saat dia menghembuskan nafas terakhir).<br><br>
+
+Dan limpahkan shalawat dan salâm - atas sang pembawa Syafa’at bagi manusia,  dan atas keluarga beliau semulia mulia orang yang mulia - dan para shahabat dan tabi’in.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Qasidah ini ditulis oleh Imam Al-Habib Abdullah bin Husain Bin Tahir.</p><p><strong>
+</strong></p>
+
+
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

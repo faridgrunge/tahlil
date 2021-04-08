@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="t" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content">
+		
+		
+<header>
+
+<h1>Sholat Sunnah Dhuha</h1><br>
+
+
+    <h3>   Pengertian    </h3>
+	<hr>
+  
+ 
+<p  style="text-align:justify">Shalat Dhuha adalah shalat sunah yang dilakukan setelah terbit matahari sampai menjelang masuk waktu zhuhur. Afdhalnya dilakukan pada pagi hari disaat matahari sedang naik ( kira-kira jam 9.00 ). Shalat Dhuha lebih dikenal dengan shalat sunah untuk memohon rizki dari Allah, berdasarkan hadits Nabi : ” Allah berfirman :<br></p>
+<blockquote > <p style="text-align:justify">Wahai anak Adam, jangan sekali-kali engkau malas mengerjakan empat rakaat pada waktu permulaan siang ( Shalat Dhuha ) niscaya pasti akan Aku cukupkan kebutuhanmu pada akhir harinya “ (HR.Hakim dan Thabrani).  </p></blockquote>
+
+  <p >
+    <h3>Cara melaksanakan </h3>
+	<hr>
+
+<p  style="text-align:justify"> Shalat Dhuha minimal dua rakaat dan maksimal duabelas rakaat, dilakukan secara Munfarid (tidak berjamaah), caranya sebagai berikut :</p>
+<span ><b></span>
+<p  style="text-align:justify">Niat shalat dhuha didalam hati berbarengan dengan Takbiratul ihram :</b> <br>
+    
+<p class="arab">اُصَلِّى سُنَّةَ الضَّحَى رَكْعَتَيْنِ ِللهِ تَعَالَى</p>
+<span >
+</span>
+<p >
+<p  style="text-align:justify">“Ushalli Sunnatadh-dhuhaa rak’ataini lillaahi ta’aalaa.”</p>
+<div align="left"><span ><b> Artinya :</b></span></div>
+<p >
+<p  style="text-align:justify">“Aku niat shalat sunat dhuha dua rakaat, karena Allah ta’ala</p>
+<ol >
+  <li>
+    Membaca doa Iftitah
+    <li>
+      Membaca surat al Fatihah
+      <li>
+        Membaca satu surat didalam Alquran. Afdholnya rakaat pertama membaca surat Asy-Syam  dan rakaat kedua surat Al Lail  
+      <li>
+          Ruku’ dan membaca tasbih tiga kali
+      <li>
+            I’tidal dan membaca bacaannya
+      <li>
+              Sujud pertama dan membaca tasbih tiga kali
+      <li>
+                Duduk diantara dua sujud dan membaca bacaanya
+      <li>
+                  Sujud kedua dan membaca tasbih tiga kali
+      <li>
+      Setelah rakaat pertama selesai, lakukan rakaat kedua sebagaimana cara diatas, kemudian Tasyahhud akhir setelah selesai maka membaca salam dua kali. Rakaat-rakaat selanjutnya dilakukan sama seperti contoh diatas.      </li>
+
+</ol>
+<br>
+  <h3>Bacaan doa </h3>
+  <hr>
+  <br>
+<hr>
+<center >
+  <B> ARAB</B>
+</center>
+<hr>
+
+
+  <p class="arab">اَللهُمَّ اِنَّ الضُّحَآءَ ضُحَاءُكَ، وَالْبَهَاءَ بَهَاءُكَ، وَالْجَمَالَ جَمَالُكَ، وَالْقُوَّةَ قُوَّتُكَ، وَالْقُدْرَةَ قُدْرَتُكَ، وَالْعِصْمَةَ عِصْمَتُكَ. اَللهُمَّ اِنْ كَانَ رِزْقَى فِى السَّمَآءِ فَأَنْزِلْهُ وَاِنْ كَانَ فِى اْلاَرْضِ فَأَخْرِجْهُ وَاِنْ كَانَ مُعَسَّرًا فَيَسِّرْهُ وَاِنْ كَانَ حَرَامًا فَطَهِّرْهُ وَاِنْ كَانَ بَعِيْدًا فَقَرِّبْهُ بِحَقِّ ضُحَاءِكَ وَبَهَاءِكَ وَجَمَالِكَ وَقُوَّتِكَ وَقُدْرَتِكَ آتِنِىْ مَآاَتَيْتَ عِبَادَكَ الصَّالِحِيْنَ</div>
+
+
+<hr>
+<center >
+  <b>LATIN</b>
+</center>
+<hr>
+
+<i>Allahumma innadh dhuha-a dhuha-uka, wal bahaa-a bahaa-uka, wal jamaala jamaaluka, wal quwwata quwwatuka, wal qudrata qudratuka, wal ishmata ishmatuka. Allahuma inkaana rizqi fis samma-I fa anzilhu, wa inkaana fil ardhi fa-akhrijhu, wa inkaana mu’asaran fayassirhu, wainkaana haraaman fathahhirhu, wa inkaana ba’idan fa qaribhu, bihaqqiduhaa-ika wa bahaaika, wa jamaalika wa quwwatika wa qudratika, aatini maa ataita ‘ibadikash shalihin.</i>
+
+<hr>
+<center >
+  <b>Artinya: </b>
+</center>
+<hr>
+
+  <p>
+  “Ya Alloh, sesungguhnya waktu dhuha adalah waktu dhuha-Mu, keagungan adalah keagungan-Mu, keindahan adalah keindahan-Mu, kekuatan adalah kekuatan-Mu, penjagaan adalah penjagaan-Mu, Ya Alloh, apabila rezekiku berada di atas langit maka turunkanlah, apabila berada di dalam bumi maka keluarkanlah, apabila sukar mudahkanlah, apabila haram sucikanlah, apabila jauh dekatkanlah dengan kebenaran dhuha-Mu, kekuasaan-Mu (Wahai Tuhanku), datangkanlah padaku apa yang Engkau datangkan kepada hamba-hambaMu yang soleh”.</p>
+
+<br>
+<div>
+<h3>Waktu pelaksanaan</h3>
+<hr>
+
+<div align="center"></div><p  style="text-align:justify">Waktu duha adalah waktu ketika matahari mulai naik kurang lebih 7 hasta sejak terbitnya (kira-kira pukul tujuh pagi) hingga waktu zuhur.</p>
+
+<p  style="text-align:justify">Tapi ada pendapat lain juga yang menyebutkan waktu sholat duha yang baik adalah mulai pukul 09.00 - 11.00. Ini berdasarkan beberapa tanda masuknya waktu shalat Dhuha, sebagaimana dijelaskan oleh hadits-hadits di atas.</p>
+<hr>
+<center >
+  <b>Pertama, </b>
+</center>
+<hr>
+<p >
+<p  style="text-align:justify">ketinggian matahari pagi di sebelah timur diperkirakan sama dengan ketinggian matahari sore di sebelah barat saat masuknya waktu Ashar. </p>
+<span ><br>
+</span>
+<hr>
+<center >
+  <b>Kedua, </b>
+</center>
+<hr>
+<p >
+<p  style="text-align:justify">matahari mulai berangsur panas. Jika permulaan waktu ashar dalam ukuran waktu modern berkisar di antara jam 15.00 sampai 15.30 WIB. sore hari, ketinggian matahari di sore hari pada jam-jam tersebut kira-kira sama dengan ketinggian matahari di pagi hari pada jam 9.00 WIB. Dengan demikian, kita dapat memperkirakan menurut ukuran waktu modern-waktu pelaksanaan shalat Dhuha Rasulullah Saw. sebagaimana yang diungkapkan dalam hadits-hadits di atas.</p>
+</p>
+<span >
+      <b>Waktu haram sholat dhuha </b>
+  </span>
+<p  style="text-align:justify"> Sebagai info tambahan ada juga waktu-waktu haram yang mengapit shalat Dhuha :</p>
+<ol >
+  <li>
+    sesudah Shalat Subuh hingga matahari bersinar, atau kurang lebih sejak jam 06:00 AM hingga 07:45 AM
+    <li>
+      ketika hampir masuk waktu Zuhur hingga tergelincir matahari, atau kurang lebih jam 11:30 AM hingga 12:00 PM      </li>
+  </li>
+</ol>
+<br>
+<p>
+  <h3>Bacaan dzikir </h3>
+  <hr>
+  </p>
+
+<p > Diriwayatkan setelah shalat dhuha Nabi S.A.W membaca</p>
+<span >
+</span>
+<div class="style4">
+  <p class="arab">رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الْغَفُورُ</p>
+</div>
+<span ></font> <br>
+</span>
+<p >Robbigh firly watub ‘alayya innaka antat-tawwaabul Ghofur ( dibaca 100 x )</p>
+<span ><b> Artinya : </b></span>
+<blockquote >
+  <p style="text-align:justify">Ya Robbi, Ampunilah aku dan terimalah taubatku, Sesungguhnya Engkau Maha Penerima taubat dan ampunan</p>
+</blockquote>
+</p>
+<div align="left"><span ><br/>
+      <b>Jumlah rekaat </b></font></span></div>
+<p >
+<p  style="text-align:justify"> Jumlah minimal rakaat Shalat Dhuha adalah dua rakaat, sebagaimana hadits Abu Hurairah di depan. Bisa juga mengerjakan empat rakaat, enam rakaat, delapan rakaat, atau duabelas rakaat, atau tanpa batasan, karena semuanya memiliki pijakan dari sunnah Rasulullah . (Shalatul Mukmin: 1/449, Syarh Riyadhus Shalihin, Al-Utsaimin:</p>
+<p >
+<p  style="text-align:justify">Dalil Shalat Dhuha empat rakaat hingga tanpa batasan  adalah hadits Aisyah s,</p>
+<p >
+<div class="style5">
+  <p class="arab">عَنْ عَائِشَةَ رَضِيَ اللَّهُ عَنْهَا قَالَتْ كَانَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يُصَلِّي الضُّحَى أَرْبَعًا، وَيَزِيدُ مَا شَاءَ اللَّهُ</p>
+</div>
+<div align="left"><span ><b>Artinya ;</b></span></div>
+<blockquote >
+  <p>
+  <p style="text-align:justify">Dari Aisyah s beliau berkata, “Rasulullah n shalat Dhuha empat rakaat dan menambahnya sesuai dengan kehendak Allah.” (HR. Muslim)</ </p>
+  </p>
+  </p>
+</blockquote>
+<hr>
+<p >
+<p  style="text-align:justify"> Sholat dhuha dilakukan dalam satuan dua rakaat satu kali salam. Sementara itu untuk berapa jumlah maksimal sholat dhuha ada pendapat yang berbeda dari para ulama, ada yang mengatakan maksimal 8 rakaat, ada yang maksimal 12 rakaat, dan ada juga yang berbedapat tidak ada batasan.
+  Untuk mengetahui lebih jelas mengenai perbedaan pendapat jumlah rakaat sholat dhuha silahkan simak penjelasan yang kami kutip dari konsultasi syariah di bawah ini
+  Pertama, jumlah rakaat maksimal adalah delapan rakaat. Pendapat ini dipilih oleh Madzhab Maliki, Syafi’i, dan Hambali. Dalil yang digunakan madzhab ini adalah hadis Umi Hani’ radhiallaahu ‘anha, bahwasanya Nabishalallahu ‘alaihi wa sallam memasuki rumahnya ketika fathu Mekah dan Beliau shalat delapan rakaat. (HR. Bukhari, no.1176 dan Muslim, no.719).
+  Kedua, rakaat maksimal adalah 12 rakaat. Ini merupakan pendapat Madzhab Hanafi, salah satu riwayat dari Imam Ahmad, dan pendapat lemah dalam Madzhab Syafi’i. Pendapat ini berdalil dengan hadis Anasradhiallahu’anhu</p>
+<p >
+<div class="style5">
+  <p class="arab">من صلى الضحى ثنتي عشرة ركعة بنى الله له قصرا من ذهب في الجنة</p>
+</div>
+<div align="left"><span ><b>Artinya ;</b></span></div>
+<blockquote >
+  <p>
+  <p style="text-align:justify">“Barangsiapa yang shalat dhuha 12 rakaat, Allah buatkan baginya satu istana di surga.” Namun hadis ini termasuk hadis dhaif. Hadis ini diriwayatkan oleh Tirmidzi, Ibn Majah, dan Al-Mundziri dalam Targhib wat Tarhib. Tirmidzi mengatakan, “Hadis ini gharib (asing), tidak kami ketahui kecuali dari jalur ini.” Hadis ini didhaifkan sejumlah ahli hadis, diantaranya Al-Hafidz Ibn Hajar Al-Asqalani dalam At-Talkhis Al-Khabir (2: 20), dan Syaikh Al-Albani dalam Al-Misykah (1: 293).</p>
+  </p>
+</blockquote>
+<hr>
+<p >
+<p  style="text-align:justify">Ketiga, tidak ada batasan maksimal untuk shalat dhuha. Pendapat ini yang dikuatkan oleh As-Suyuthi dalam Al-Hawi. Dalam kumpulan fatwanya tersebut, Suyuthi mengatakan, “Tidak terdapat hadis yang membatasi shalat dhuha dengan rakaat tertentu, sedangkan pendapat sebagian ulama bahwasanya jumlah maksimal 12 rakaat adalah pendapat yang tidak memiliki sandaran sebagaimana yang diisyaratkan oleh Al-Hafidz Abul Fadl Ibn Hajar dan yang lainnya.”. Beliau juga membawakan perkataan Al-Hafidz Al-’Iraqi dalam Syarh Sunan Tirmidzi, “Saya tidak mengetahui seorangpun sahabat maupun tabi’in yang membatasi shalat dhuha dengan 12 rakaat. Demikian pula, saya tidak mengetahui seorangpun ulama madzhab kami (syafi’iyah) – yang membatasi jumlah rakaat dhuha – yang ada hanyalah pendapat yang disebutkan oleh Ar-Ruyani dan diikuti oleh Ar-Rafi’i dan ulama yang menukil perkataannya.”</p>
+<p >
+<p  style="text-align:justify">Setelah menyebutkan pendapat sebagian ulama Syafi’iyah, As-Suyuthy menyebutkan pendapat sebagian ulama malikiyah, yaitu Imam Al-Baaji Al-Maliky dalam Syarh Al-Muwattha’ Imam Malik. Beliau mengatakan, “Shalat dhuha bukanlah termasuk shalat yang rakaatnya dibatasi dengan bilangan tertentu yang tidak boleh ditambahi atau dikurangi, namun shalat dhuha termasuk shalat sunnah yang boleh dikerjakan semampunya.” (Al-Hawi lil fataawa, 1:66).</p>
+<span ><br>
+</span>
+
+<center >
+  <h3>Kesimpulan dan Tarjih</h3>
+  <hr>
+</center>
+
+<p >
+<p  style="text-align:justify">Jika dilihat dari dalil tentang shalat dhuha yang dilakukan Nabi shalallahu ‘alaihi wa sallam jumlah rakaat maksimal yang pernah beliau lakukan adalah 12 rakaat. Hal ini ditegaskan oleh Al-’Iraqi dalam Syarh Sunan Tirmidzi dan Al-’Aini dalam Umdatul Qori Syarh Shahih Bukhari. Al-Hafidz Al ‘Aini mengatakan, “Tidak adanya dalil –yang menyebutkan jumlah rakaat shalat dhuha– lebih dari 12 rakaat, tidaklah menunjukkan terlarangnya untuk menambahinya.” (Umdatul Qori, 11:423)</p>
+<p >
+<p  style="text-align:justify">Setelah membawakan perselisihan tentang batasan maksimal shalat dhuha, Syaikh Ibnu Utsaimin rahimahullahmengatakan,</p>
+<p >
+<p  style="text-align:justify">“Pendapat yang benar adalah tidak ada batasan maksimal untuk jumlah rakaat shalat dhuha karena:</p>
+<ol >
+  <li>
+    <p style="text-align:justify">Hadis Mu’adzah yang bertanya kepada Aisyah radhiallahu’anha, “Apakah Nabi shalallahu ‘alaihi wa sallam shalat dhuha?” Jawab Aisyah, “Ya, empat rakaat dan beliau tambahi seseuai kehendak Allah.” (HR. Muslim, no. 719). Misalnya ada orang shalat di waktu dhuha 40 rakaat maka semua ini bisa dikatakan termasuk shalat dhuha.
+    <li>
+      <p style="text-align:justify">Adapun pembatasan delapan rakaat sebagaimana disebutkan dalam hadis tentang fathu Mekah dari Umi Hani’, maka dapat dibantah dengan dua alasan: pertama, sebagian besar ulama menganggap shalatnya Nabi shalallahu ‘alaihi wa sallam ketika fathu Mekah bukan shalat dhuha namun shalat sunah karena telah menaklukkan negeri kafir. Dan disunnahkan bagi pemimpin perang, setelah berhasil menaklukkan negri kafir untuk shalat 8 rakaat sebagai bentuk syukur kepada Allah. Kedua, jumlah rakaat yang disebutkan dalam hadis tidaklah menunjukkan tidak disyariatkannya melakukan tambahan, karena kejadian Nabi shalallahu ‘alaihi wa sallam shalat delapan rakaat adalah peristiwa kasuistik –kejadian yang sifatnya kebetulan– (As-Syarhul Mumthi’ ‘alaa Zadil Mustaqni’ 2:54).      </li>
+  </li>
+</ol>
+<div align="left">
+  <legend ><b>Penjelasan hadits </b></font></legend>
+</div>
+<p  style="text-align:justify"> Dalam salah satu hadits Nabi shollallahu ’alaih wa sallam menganggap perbuatan bersedekah untuk setiap ruas tulang badan manusia sebagai setara dengan membaca tasbih (ucapan Subhanallah), tahmid (ucapan Alhamdulillah), tahlil (ucapan Laa ilaha illa Allah), takbir (ucapan Allah Akbar), memerintahkan yang ma’ruf dan mencegah yang mungkar. </p>
+<p >
+<p  style="text-align:justify">Subhanallah…! Nabi shollallahu ’alaih wa sallam menjelaskan kepada ummatnya bahwa untuk bersedekah bagi setiap ruas tulang badan setiap pagi adalah cukup dengan menegakkan sholat sebanyak dua rakaat yang dikenal dengan nama Sholat Dhuha.</p>
+<p >
+<p  style="text-align:justify">Nabi shollallahu ’alaih wa sallam bersabda: “Hendaklah masing-masing kamu bersedekah untuk setiap ruas tulang badanmu pada setiap pagi. Sebab tiap kali bacaan tasbih itu adalah sedekah, setiap tahmid adalah sedekah, setiap tahlil adalah sedekah, setiap takbir adalah sedekah, menyuruh kepada yang ma’ruf adalah sedekah, mencegah yang mungkar adalah sedekah. Dan sebagai ganti dari semua itu, maka cukuplah mengerjakan dua rakaat sholat dhuha.” (HR Muslim 1181)</p>
+<p >
+<p  style="text-align:justify">Mengeluarkan sedekah untuk setiap ruas tulang badan merupakan ungkapan rasa syukur atau terimakasih kepada Allah ta’aala atas tubuh yang manusia miliki. Alangkah tidak berterimakasihnya seorang Muslim bilamana ia selama ini telah memanfaatkan tubuhnya untuk melakukan aneka aktifitas melelahkan namun tidak pernah seharipun menegakkan Sholat Dhuha. </p>
+<p >
+<p  style="text-align:justify">Wahai saudaraku, tegakkanlah Sholat Dhuha. Tunjukkanlah rasa syukur kepada Allah ta’aala atas seluruh ruas tulang tubuh yang selama ini telah kita pakai sampai seringkali menjadi sakit dan perlu perawatan kesehatan karena lelah bekerja…! Ingatlah, bahwa semakin sering kita bersyukur kepada Allah ta’aala, maka semakin banyak kenikmatan yang Allah ta’aala janjikan akan kita terima.</p>
+</p>
+
+<p >
+<br>
+
+<span ><b></span>
+<h3>
+  Hadits Rasulullah SAW terkait Shalat Dhuha</b>
+</h3>
+<hr>
+<ol >
+  <Li>
+    Barang siapa shalat Dhuha 12 rakaat, Allah akan membuatkan untuknya istana disurga” (H.R. Tirmiji dan Abu Majah)
+    <li>
+      “Siapapun yang melaksanakan shalat dhuha dengan langgeng, akan diampuni dosanya oleh Allah, sekalipun dosa itu sebanyak buih di lautan.” (H.R Tirmidzi)
+      <li>
+        “Dari Ummu Hani bahwa Rasulullah SAW shalat dhuha 8 rakaat dan bersalam tiap dua rakaat.” (HR Abu Daud)
+      <li>
+          “Dari Zaid bin Arqam ra. Berkata,”Nabi SAW keluar ke penduduk Quba dan mereka sedang shalat dhuha‘. Beliau bersabda,?Shalat awwabin (duha‘) berakhir hingga panas menyengat (tengah hari).” (HR Ahmad Muslim dan Tirmidzi)
+      <li>
+            “Rasulullah bersabda di dalam Hadits Qudsi, Allah SWT berfirman, “Wahai anak Adam, jangan sekali-kali engkau malas mengerjakan empat rakaat shalat dhuha, karena dengan shalat tersebut, Aku cukupkan kebutuhanmu pada sore harinya.” (HR Hakim & Thabrani)
+      <li>
+      “Barangsiapa yang masih berdiam diri di masjid atau tempat shalatnya setelah shalat shubuh karena melakukan i’tikaf, berzikir, dan melakukan dua rakaat shalat dhuha disertai tidak berkata sesuatu kecuali kebaikan, maka dosa-dosanya akan diampuni meskipun banyaknya melebihi buih di lautan.” (HR Abu Daud)      </li>
+  </li>
+  </li>
+  </li>
+  </li>
+  </Li>
+</ol>
+<span ><br>
+</span>
+<hr>
+<center >
+  <h3>Keutamaan dan Keistimewaan shalat Dhuha</h3>
+</center>
+<hr>
+<p >
+<P  style="text-align:justify">Hadits Rasulullah saw yang menceritakan tentang keutamaan shalat Dhuha, di antaranya:</p>
+<ol >
+  <li>
+    <div align="left">Sedekah bagi seluruh persendian tubuh manusia    </div></li>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Dari Abu Dzar al-Ghifari ra, ia berkata bahwa Nabi Muahammad saw bersabda:</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">"Di setiap sendiri seorang dari kamu terdapat sedekah, setiap tasbih (ucapan subhanallah) adalah sedekah, setiap tahmid (ucapan alhamdulillah) adalah sedekah, setiap tahlil (ucapan lailahaillallah) adalah sedekah, setiap takbir adalah sedekah, menyuruh kepada kebaikan adalah sedekah, mencegah dari kemungkaran adalah sedekah. Dan dua rakaat Dhuha diberi pahala" (HR Muslim).</p>
+  <li>
+    <div align="left">Ghanimah (keuntungan) yang besar    </div></li>
+    <p align="left">Dari Abdullah bin `Amr bin `Ash radhiyallahu `anhuma, ia berkata:</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">"Rasulullah saw mengirim sebuah pasukan perang. Nabi saw berkata: "Perolehlah keuntungan (ghanimah) dan cepatlah kembali!. Mereka akhirnya saling berbicara tentang dekatnya tujuan (tempat) perang dan banyaknya ghanimah (keuntungan) yang akan diperoleh dan cepat kembali (karena dekat jaraknya). Lalu Rasulullah saw berkata; "Maukah kalian aku tunjukkan kepada tujuan paling dekat dari mereka (musuh yang akan diperangi), paling banyak ghanimah (keuntungan) nya dan cepat kembalinya? Mereka menjawab; "Ya! Rasul berkata lagi: "Barangsiapa yang berwudhu', kemudian masuk ke dalam masjid untuk melakukan shalat Dhuha, dia lah yang paling dekat tujuanannya (tempat perangnya), lebih banyak ghanimahnya dan lebih cepat kembalinya." (Shahih al-Targhib: 666)</p>
+  <li>
+    <div align="left">Sebuah rumah di surga    </div></li>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Bagi yang rajin mengerjakan shalat Dhuha, maka ia akan dibangunkan sebuah rumah di dalam surga. Hal ini dijelaskan dalam sebuah hadits Nabi Muahammad saw:</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">"Barangsiapa yang shalat Dhuha sebanyak empat rakaat dan empat rakaat sebelumnya, maka ia akan dibangunkan sebuah rumah di surge." (Shahih al-Jami`: 634)</p>
+  <li>
+    <div align="left">Memeroleh ganjaran di sore hari    </div></li>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Dari Abu Darda' ra, ia berkata bahwa Rasulullah saw berkata:</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">"Allah ta`ala berkata: "Wahai anak Adam, shalatlah untuk-Ku empat rakaat dari awal hari, maka Aku akan mencukupi kebutuhanmu (ganjaran) pada sore harinya" (Shahih al-Jami: 4339).</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Dalam sebuah riwayat juga disebutkan: "Innallaa `azza wa jalla yaqulu: Yabna adama akfnini awwala al-nahar bi'arba`i raka`at ukfika bihinna akhira yaumika" ("Sesungguhnya Allah `Azza Wa Jalla berkata: "Wahai anak Adam, cukuplah bagi-Ku empat rakaat di awal hari, maka aku akan mencukupimu di sore harimu").</p>
+  <li>
+    <div align="left">Pahala Umrah    </div></li>
+    <p align="left">Dari Abu Umamah ra bahwa Rasulullah saw bersabda:</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">"Barangsiapa yang keluar dari rumahnya dalam keadaan bersuci untuk melaksanakan shalat wajib, maka pahalanya seperti seorang yang melaksanakan haji. Barangsiapa yang keluar untuk melaksanakan shalat Dhuha, maka pahalanya seperti orang yang melaksanakan `umrah....(Shahih al-Targhib: 673). Dalam sebuah hadits yang lain disebutkan bahwa Nabi saw bersabda: "Barangsiapa yang mengerjakan shalat fajar (shubuh) berjamaah, kemudian ia (setelah usai) duduk mengingat Allah hingga terbit matahari, lalu ia shalat dua rakaat (Dhuha), ia mendapatkan pahala seperti pahala haji dan umrah; sempurna, sempurna, sempurna" (Shahih al-Jami`: 6346).</p>
+  <li>
+    <div align="left">Ampunan Dosa    </div></li>
+    <p align="left">  
+    <P align="left" style="text-align:justify">"Siapa pun yang melaksanakan shalat dhuha dengan langgeng, akan diampuni dosanya oleh Allah, sekalipun dosa itu sebanyak buih di lautan." (HR Tirmidzi)</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Ada yang mengatakan bahwa shalat dhuha juga disebut shalat awwabin. Akan tetapi ada juga yang mengatakan bahwa keduanya berbeda karena shalat awwabin waktunya adalah antara maghrib dan isya.</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Waktu shalat dhuha dimulai dari matahari yang mulai terangkat naik kira-kira sepenggelah dan berakhir hingga sedikit menjelang masuknya waktu zhuhur meskipun disunnahkan agar dilakukan ketika matahari agak tinggi dan panas agak terik. Adapun diantara keutamaan atau manfaat shalat dhuha ini adalah apa yang diriwayatkan oleh Muslim, Abu Daud dan Ahmad dari Abu Dzar bahwa Rasulullah saw bersabda,”Hendaklah masing-masing kamu bersedekah untuk setiap ruas tulang badanmu pada setiap pagi. Sebab setiap kali bacaan tasbih adalah sedekah, setiap tahmid adalah sedekah, setiap takbir adalah sedekah, setiap tahlil adalah sedekah, setiap takbir adalah sedekah, menyuruh orang lain agar melakukan amal kebaikan adalah sedekah, melarang orang lain agar tidak melakukan keburukan adalah sedekah. Dan sebagai ganti dari semua itu maka cukuplah mengerjakan dua rakaat shalat dhuha.”</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Juga apa yang diriwayatkan oleh Ahmad dan Abu Daud dari Buraidah bahwa Rasulullah saw bersabda,”Dalam tubuh manusia itu ada 360 ruas tulang. Ia harus dikeluarkan sedekahnya untuk tiap ruas tulang tersebut.” Para sahabat bertanya,”Siapakah yang mampu melaksanakan seperti itu, wahai Rasulullah saw?” Beliau saw menjawab,”Dahak yang ada di masjid, lalu pendam ke tanah dan membuang sesuatu gangguan dari tengah jalan, maka itu berarti sebuah sedekah. Akan tetapi jika tidak mampu melakukan itu semua, cukuplah engkau mengerjakan dua rakaat shalat dhuha.”</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Didalam riwayat lain oleh Bukhori dan Muslim dari Abu Hurairoh berkata,”Nabi saw kekasihku telah memberikan tiga wasiat kepadaku, yaitu berpuasa tiga hari dalam setiap bulan, mengerjakan dua rakaat dhuha dan mengerjakan shalat witir terlebih dahulu sebelum tidur.”</p>
+    <p align="left">  
+    <P align="left" style="text-align:justify">Jumhur ulama mengatakan bahwa shalat dhuha adalah sunnah bahkan para ulama Maliki dan Syafi’i menyatakan bahwa ia adalah sunnah muakkadah berdasarkan hadits-hadits diatas. Dan dibolehkan bagi seseorang untuk tidak mengerjakannya.</p>
+  </li>
+  </li>
+  </li>
+  </li>
+  </li>
+  </li>
+</ol>
+
+<p >
+<hr>
+<center>
+  <h3>3 keutamaan shalat Dhuha:</h3>
+</center>
+<hr>
+<ol >
+  <li>
+    <div align="left">Shalat Dhuha 2 rakaat senilai 360 sedekah</div>
+  </li>
+  <p>
+  <div class="style5">
+    <p class="arab">يُصْبِحُ عَلَى كُلِّ سُلاَمَى مِنْ أَحَدِكُمْ صَدَقَةٌ فَكُلُّ تَسْبِيحَةٍ صَدَقَةٌ وَكُلُّ تَحْمِيدَةٍ صَدَقَةٌ وَكُلُّ تَهْلِيلَةٍ صَدَقَةٌ وَكُلُّ تَكْبِيرَةٍ صَدَقَةٌ وَأَمْرٌ بِالْمَعْرُوفِ صَدَقَةٌ وَنَهْىٌ عَنِ الْمُنْكَرِ صَدَقَةٌ وَيُجْزِئُ مِنْ ذَلِكَ رَكْعَتَانِ يَرْكَعُهُمَا مِنَ الضُّحَى</p>
+  </div>
+  <p class="style5">
+  <p style="text-align:justify">“Setiap pagi, setiap ruas anggota badan kalian wajib dikeluarkan shadaqahnya. Setiap tasbih adalah shadaqah, setiap tahmid adalah shadaqah, setiap tahlil adalah shadaqah, setiap takbir adalah shadaqah, menyuruh kepada kebaikan adalah shadaqah, dan melarang berbuat munkar adalah shadaqah. Semua itu dapat diganti dengan shalat dhuha dua rakaat.” (HR. Muslim)</p>
+  <p>
+  <div class="style5">
+    <p class="arab">فِى الإِنْسَانِ ثَلاَثُمِائَةٍ وَسِتُّونَ مَفْصِلاً فَعَلَيْهِ أَنْ يَتَصَدَّقَ عَنْ كُلِّ مَفْصِلٍ مِنْهُ بِصَدَقَةٍ. قَالُوا وَمَنْ يُطِيقُ ذَلِكَ يَا نَبِىَّ اللَّهِ قَالَ النُّخَاعَةُ فِى الْمَسْجِدِ تَدْفِنُهَا وَالشَّىْءُ تُنَحِّيهِ عَنِ الطَّرِيقِ فَإِنْ لَمْ تَجِدْ فَرَكْعَتَا الضُّحَى تُجْزِئُكَ</p>
+  </div>
+  <p>
+  <p style="text-align:justify">“Di dalam tubuh manusia terdapat tiga ratus enam puluh sendi, yang seluruhnya harus dikeluarkan shadaqahnya.” Mereka (para sahabat) bertanya, “Siapakah yang mampu melakukan itu wahai Nabiyullah?” Beliau menjawab, “Engkau membersihkan dahak yang ada di dalam masjid adalah shadaqah, engkau menyingkirkan sesuatu yang mengganggu dari jalan adalah shadaqah. Maka jika engkau tidak menemukannya (shadaqah sebanyak itu), maka dua raka’at Dhuha sudah mencukupimu.” (HR. Abu Dawud)</p>
+  <li>
+    <div align="left">Shalat Dhuha 4 rakaat membawa kecukupan sepanjang hari</div>
+  </li>
+  <p>
+  <div>
+    <p class="arab">يَقُولُ اللَّهُ عَزَّ وَجَلَّ يَا ابْنَ آدَمَ لاَ تُعْجِزْنِى مِنْ أَرْبَعِ رَكَعَاتٍ فِى أَوَّلِ نَهَارِكَ أَكْفِكَ آخِرَه</p>
+  </div>
+  <p>
+  <p style="text-align:justify">Allah ‘Azza wa Jalla berfirman, “Wahai anak Adam, janganlah engkau luput dari empat rakaat di awal harimu, niscaya Aku cukupkan untukmu di sepanjang hari itu.” (HR. Ahmad)</p>
+  <li>
+    <div align="left">Menjaga shalat Dhuha dicatat sebagai awwabiin</div>
+  </li>
+  <p>
+  <div class="style5">
+    <p class="arab">لا يحافظ على صلاة الضحى إلا أواب وهي صلاة الأوابين</p>
+  </div>
+  <p>
+  <p style="text-align:justify">“Tidaklah menjaga shalat sunnah Dhuha melainkan awwab (orang yang kembali taat). Inilah shalat awwabin.” (HR. Ibnu Khuzaimah; hasan)</p>
+</ol>
+</p>
+
+	</div> 
+	</div>
+	</div><!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

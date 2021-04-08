@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,html {
+	font-family: sans-serif, Arial, Helvetica, sans ;
+	font-size: 19px;
+	color: #000000;
+	widht: 100%;
+
+}
+
+   img {
+    display: block;
+  }
+
+a, a:link, a:active, a:visited {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h2 { padding-bottom: 5px;     padding-top: 5px;     font-size: 22px;     margin-bottom: 10px;     text-align: center;  background-color: #C0C0C0;
+ border-style: solid;     border-bottom: double #666;     border-top: double;
+  border-left: 0px;  border-right: 0px;  border-center: 0px;     border-radius: 0px;         font-family: "sans;georgia;arial" }
+
+
+
+#simple {
+    margin: 0;
+    padding: 0;
+
+}
+
+#simple li {
+    background: #FFE4E1;
+    border-bottom: 7px solid #fff;
+    list-style: none;
+    padding: 0.5em;
+    text-align: center;
+
+}
+
+#simple li:hover {
+    background: #808080;
+}
+
+#simple li a {
+    color: black;
+    display: block;
+    text-decoration: none;
+}

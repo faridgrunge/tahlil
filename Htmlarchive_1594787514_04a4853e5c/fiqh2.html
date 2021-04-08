@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+ <h1>Waktu Sholat Fardhu
+    	</h1><hr><br>
+    	<p>Adapun Shalat yang difardlukan itu ada lima (5). Pada sebagian redaksi kitab lain menggunakan kata-kata : Shalat-shalat yang difardlukan ada 5, masing-masing dari lima tersebut harus dikerjakan pada awal waktu (tepat masuk sa'at waktu dimulainya shalat, hal mana keharusan mengerjakannya leluasa hingga sampai pada batas sisa waktu yang masih ada, yang sekira muat untuk mengerjakan shalat (secepat mungkin). maka, sewaktu dalam keadaan demikian, menjadi sempitlah waktu keharusan mengerjakannya (jadi ketika itu, shalatnya harus segera di kerjakan&quot;. (Terjemah Fathul Qorib, Jilid I, Hal : 112).</p>
+  <ol><li><strong>Shalat Dzuhur</strong></li> <p>Imam Nawawi berkata : disebut shalat dzuhur, sebab shalat itu tampak terang (dikerjakan) pada tengah-tengah siang hari (siang bolong). Adapun waktu mulainya shalat dzuhur ialah, sa'at bergesernya, yakni condongnya matahari dari tengah-tengahnya langit, bukan menurut dasar penglihatan mata pada kenyataan perkara yang sebenarnya, tetapi (hanya berdasar) pada apa yang kelihatan tampak bagi (mata) kita saja.<br>
+    Dan Condongnya matahari dari tengah-tengah langit itu bisa diketahui (dengan melihat) pindahnya bayang-bayang ke arah timur, setelah bayang-bayang pendek itu mengecil surut habis, hal mana itu sebagai pertanda atas puncak kenaikannya matahari.<br>
+    Adapun akhir Waktunya shalat dzuhur ialah, ketika bayang-bayang setiap sesuatu telah menjadi sama sepadan dengan seuatu tersebut, hal mana bukan bayang-bayang sewaktu condongnya matahari. (Terjemah Fathul Qorib, Jilid I, Hal : 113-114).</p>
+  <br><li><strong>Shalat Ashar</strong></li> <p> disebut Shalat Ashar sebab ia menyongsong datang waktu terbenamnya matahari.<br>
+    Adapun permulaan waktu Shalat ashar ialah bertambahnya bayang-bayang melebihi diatas bayang-bayang yang sepadan dengan benda (bayang-bayang suatu benda sudah melebihi panjang atau besarnya benda tersebut).<br>
+    Shalat Ashar itu mempunyai 5 (lima) Waktu:<br>
+    <br><strong>Pertama :</strong> yaitu waktu yang utama, yakni mengerjakan shalat tepat pada awal waktu.(Terjemah Fathul Qorib, Jilid I, Hal : 114).</p>
+  <p><strong>Kedua : </strong>yaitu waktu ikhtiar (longgar). Mushannif memberi petunjuk tentang waktu ikhtiar ini dengan ucapan beliau :&quot; Akhir batas waktu ikhtiar dalam shalat Ashar ialah ketika sudah mencapai dua kali besar bayang-bayangsuatu benda.(Terjemah Fathul Qorib, Jilid I, Hal : 115).<br>
+  </p>
+  <p><strong>Ketiga :</strong> Yaitu waktu yang masih dianggap boleh (ditolerir) mengerjakan shalat (waktu jawwaz). Mushannif memberikan petunjuk tentang waktu Jawwaz ini dengan ucapannya: &quot;Waktu Jawwaz ialah, ketika sudah sampai datang waktu terbenam matahari&quot;.(Terjemah Fathul Qorib, Jilid I, Hal : 115).<br>
+  </p>
+  <p><strong>Keempat :</strong> yaitu waktu yang masih dianggap boleh mengerjakan shalat, tanpa ada hukum makruh. yakni waktu semenjak dari menjadinya bayang-bayang, dua kali sepadan daripada bendanya, ingga sampai ke sa'at keluarnya mega kuning.(Terjemah Fathul Qorib, Jilid I, Hal : 115).<br>
+  </p>
+  <p><strong>Kelima :</strong> Yaitu waktu haram mengerjakan shalat. yakni mengakhirkan waktu mengerjakan shalat hingga sampai pada sedikit sisa waktu yang tidak muat untuk digunakan mengerjakan shalat.(Terjemah Fathul Qorib, Jilid I, Hal : 115).</p>
+  <br><li><strong>Shalat Maghrib</strong></li><p> disebut shalat maghrib sebab dikerjakannya shalat maghrib itu adalah sewaktu matahari terbenam.<br>
+    Adapun waktunya shalat maghrib itu cuma satu : yaitu waktu terbenamnya matahari, yakni secara keseluruhan (sampai pada) bundar-bundarnya matahari. Dan tidaklah (terapat konsekwensi hukum) apa-apa, masih berlangsungnya sorot sinar matahari, sesuadah terbenamnya matahari.<br>
+    (andaikan terjadi matahari masih memancarkan sinar, sehabis terbenam, maka tidak mempunyai konsekwensi hukum apa-apa).<br>
+    Dan waktu maghrib itu berlangsung) dengan kadar waktu cukup untuk mengerjakan adzan oleh seseorang.<br>
+    dan dengan kaar seseorang mengerjakan wudlu atau tayamum, menutupi 'aurat, qamat untuk segera shalat dan (sekaligus) mengerjakan shalat sebanyak lima raka'at.(Terjemah Fathul Qorib, Jilid I, Hal : 116).</p>
+  <br><li><strong>Shalat Isya</strong></li> <p> dikasrahkan kata 'ain, pada kata isya adalah sebuah nama bagi permulaan (munculnya) gelap malam. sedang shalat tadi disebut Isya, karena dikerjakannya sewaktu malam sedang gelap.<br>
+    Permulaan awal waktu shalat Isya adalah ketika telah terbenamnya mega merah.<br>
+    Adapun bagi Negara yang tidak mungkin mengalami terjadinya tenggelamnya mega (merah), maka waktu sa'at (dimulainya) shalat Isya bagi hak yang dimiliki oleh penduduk negeri tersebut, adalah sehabis tenggelamnya matahari, sa'at lewat masa, hal mana sedang tenggelam mega merah yang terdapat di negeri terdekat penduduk negeri tersebut diatas tadi. (jadi, sesudah tenggelamnya matahari, penduduk tersebut memperkirakan kira-kira sa'atkapan terjadinya tenggelam mega merah yang ada di negeri tetangga terdekat).<br>
+    Pada shalat Isya terdapat dua waktu :<br>
+    <strong>Pertama :</strong> Waktu ikhtiar (longgar) Mushannif : Akhir waktu shalat isya dalam waktu ikhtiar adalah berlangsung hingga sampai sa'at sepertiganya malam.<br>
+    <strong>Kedua :</strong> waktu Jawwaz : yaitu berlangsung hingga sampai ke sa'at terbitnya fajar Shadiq. yaitu fajar yang tersebar luas cahaya fajarnya dalam keadaan melintang (antara arah selatan dan utara di bagian belahan langit sebelah timur).menuju ke arah atas langit.(Terjemah Fathul Qorib, Jilid I, Hal : 118-119).</p>
+  <br><li><strong>Shalat Shubuh</strong></li> <p>menurut tinjauan bahasa mempunyai arti permulaan siang hari' dan disebutlah shalat itu dengan nama &quot;Shubuh&quot; karena dikerjakannya sewaktu tiba permulaan siang hari.<br>
+    Pada shalat shubuh terdapat juga 5 waktu, sebagaimana yang terdapat pada shalat ashar, sebagai berikut<br>
+    <strong>Pertama :</strong> Waktu yang utama,. yaitu awal masuk waktunya shalat shubuh.<br>
+    <strong>Kedua :</strong> Waktu Ikhtiar. tentang waktu ikhtiar ini, mushannif menerangkan didalam ucapannya :&quot;Permulaan waktunya shalat shubuh itu semenjak munculnya fajar yang kedua (shadiq), sedangakhir waktu shalat shubuh didalam waktu ikhtiar ialah, sampai pada sa'at (hari mulai) terang&quot;.<br>
+    <strong>Ketiga :</strong> Waktu Jawwaz. Mushannif memberi petunjuk tentang waktu jawwaz ini didalam ucapannya :&quot;Akhir waktu shalat shubuh didalam waktu Jawwaz dengan disertai hukum Makruh, ialah hingga sampai mendekati sa'at terbitnya matahari.<br>
+    <strong>Keempat : </strong>Waktu Jawwaz tanpa disertai hukum makruh. yaitu masuknya waktu shubuh hingga sampai pada sa'at munculnya warna merah (dilangit sebelum terbitnya matahari).<br>
+    <strong>Kelima : </strong>Waktu Haram. Yaitu mengakhirkan shalat, hingga sampai pada sisa waktu, yang tidak muat untuk mengerjakan shalat shubuh.</p>
+  <p class="style1" style="text-align:justify"><br>
+</div>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

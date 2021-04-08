@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Talqin (Lengkap)</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللَّهِ الرَّحْمَنِ الَّرَحِيْمِ. كُلُّ شَيْئٍ هَالِكٌ اِلاَّ وَجْهَهُ . لَهُ الْحُكْمُ وَ اِلَيْهِ تُرْجَعُوْنَ . كُلُّ نَفْسٍ ذَائِقَةُ الْمَوْتِ . وَ اِنَّمَا تُوَفَّوْنَ اُجُوْرَكُمْ يَوْمَ الْقِيَامَةِ . فَمَنْ زُحْزِحَ عَنِ النَّارِ وَاُدْخِلَ الْجَنَّةَ فَقَدْ فَازَ. وَمَاالْحَيَاةُ الدُّنْيَا اِلاَّ مَتَاعُ الْغُرُوْرِ. مِنْهَاخَلَقْنَاكُمْ, وَفِيْهَا نُعِيْدُكُمْ, وَمِنْهَا نُخْرِجُكُمْ تَارَةً اُخْرَى.مِنْهَاخَلَقْنَاكُمْ لِلْأَجْرِ وَالثَّوابِ. وَفِيهَا نُعِيدُكُمْ لِلدُّودِ والتُّرَابِ.وَمِنْهَا نُخْرِجُكُمْ لِلْعَرْضِ وَالْحِسَابِ. بِسْمِ اللَّهِ وَبِاللَّهِ وَمِنَ اللَّهِ وَاِلَى اللَّهِ وَعَلَى مِلَّةِ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ. هَذَا مَا وَعَدَ الرَّحْمَنُ وَصَدَقَ الْمُرْسَلُونَ<br><br>
+
+اِنْ كَانَتْ اِلاَّ صَيْحَةً وَاحِدَةً فَاِذَا هُمْ جَمِيعٌ لَدَيْنَا مُحْضَرُونَ<br>
+يَا ......بِنْ / بِنْتِ ....... يَرْحَمُكَ اللَّهُ . ذَهَبَتْ عَنْكَ الدُّنْيَا وَزِيْنَتُهَا . وَصِرْتَ اْلآنَ فِيْ بَرْزَخٍ مِنْ بَرَازِيْخِ اْلآخِرَةِ. فَلاَ تَنْسَ الْعَهْدَ الَّذِيْ فَارَقْتَنَا عَلَيْهِ فِيْ دَارِ الدُّنْيَا وَقَدِمْتَ بِهِ اِلَى دَارِ اْلآخِرَةِ. وَهُوَشَهَادَةُ اَنْ لاَ اِلَهَ اِلاَّ اللَّهُ وَ اَنَّ مُحَمَّدًا رَسُوْلُ اللَّهِ. فَإِذَاجَاءَكَ الْمَلَكَانِ الْمُوَكَّلاَنِ بِكَ وَبِأَمْثَالِكَ مِنْ اُمَّةِ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فَلاَ يُزْعِجَاكَ وَلاَ يُرْعِبَاكَ. وَاعْلَمْ اَنَّهُمَا خَلْقٌ مِنْ خَلْقِ اللَّهِ تَعَالَى كَمَا اَنْتَ خَلْقٌ مِنْ خَلْقِ اللَّهِ. وَاِذَا سَاَلاَكَ مَنْ رَبُّكَ؟ وَمَا دِيْنُكَ؟ وَمَا اعْتِقَادُكَ؟ وَمَاالَّذِيْ مُتَّ عَلَيْهِ؟. فَقُلْ لَهُمَا اَللَّهُ رَبِّيْ. وَاِذَاسَأَلاَكَ الثَّانِيَةَ فَقُلْ لَهُمَا اَللَّهُ رَبِّيْ. وَاِذَا سَأَلاَكَ الثَّالِثَةَ وَهِيَ الْخَاتِمَةُ الْحُسْنَى فَقُلْ لَهُمَا بِلِسَانٍ طَلْقٍ بِلاَ خُوْفٍ وَلاَفَزَعٍ. اَللَّهُ رَبِّيْ وَاْلإِسْلاَمُ دِيْنِيْ وَمُحَمَّدٌ نَبِيِّـيْ وَالْقُرْآنُ اِمَامِيْ وَالْكَعْبَةُ قِبْلَتِيْ وَالصَّلَوَاتُ فَرِيْضَتِيْ وَالْمُسْلِمُوْنَ اِخْوَانِيْ وَاِبْرَاهِيْمُ الْخَلِيْلُ اَبِيْ وَاَنَا عِشْتُ وَمُتُّ عَلَى قَوْلِ لاَ اِلَهَ اِلاَّاللَّهُ مُحَمَّدٌ رَسُوْلُ اللَّهِ <br><br>
+
+ تَمَسَّكْ بِهَذِهِ الْحُجَّةِ يَا ........ بِنْ ........ وَاعْلَمْ اَنَّكَ مُقِيْمٌ بِهَذَا الْبَرْزَخِ اِلَى يَوْمِ يُبْعَثُوْنَ. فَإِذَا قِيْلَ لَكَ مَا تَقُوْلُ فِيْ هَذَا الرُّجُلِ الَّذِيْ بُعِثَفِيْكُمْ وَفِى الْخَلْقِ اَجْمَعِيْنَ. فَقُلْ هُوَ مُحَمَّدٌ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ جَاءَنَا بِالْبَيِّنَاتِ مِنْ رَبِّهِ فَاتَّبَعْنَاهُ وَآمَنَّا بِهِ. فَإِنْ تَوَلَّوْا فَقُلْ حَسْبِيَ اللَّهُ لاَ اِلَهَ اِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيْمِ. وَاعْلَمْ اَنَّ الْمَوْتَ حَقٌّ وَاَنَّ نُزُوْلَ الْقَبْرِ حَقٌّ وَ اَنَّ سُؤَالَ مُنْكَرٍ وَنَكِيْرٍ حَقٌّ وَاَنَّ الْبَعْثَ حَقٌّ وَاَنَّ الْحِسَابَ حَقٌّ وَاَنَّ الْمِيزَانَ حَقٌّ وَاَنَّ الصِّرَاطَ حَقٌّ وَاَنَّ النَّارَ حَقٌّ وَاَنَّ الْجَنَّةَ حَقٌّ وَاَنَّ السَّاعَةَ آتِيَةٌ لاَ رَيْبَ فِيْهَا وَ اَنَّ اللَّهَ يَبْعَثُ مَنْ فِى الْقُبُوْرِ<br><br>
+
+</p><p>Kemudian membaca doa dan diharapkan segenap yang hadir mengamini doa tersebut. Berikut ini teks doanya:<br><br></p><p style="text-align: right;" class="arab">
+
+نَسْتَوْدِعُكَ اللَّهـُمَّ يَا أَنِيْسَ كُلِّ وَحِيْدٍ وَيَا حَاضِرًا لَيْسَ بِغَائِبٍ, آنِسْ وَحْدَتَنَا وَوَحْدَتَهُ وَارْحَمْ غُرْبَتَنَاوَغُرْبَتَهُ وَلَقِّنْهُ حُجَّتَهُ وَلاَ تَفْتِنَّا بَعْدَهُ وَاغْفِرْ لَنَا وَلَهُ يَا رَبَّ العَالَمِيْنَ<br><br>
+
+وَصَلَّى اللَّهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلَّمْ وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِيْنَ. آمِيْنَ<br><br>
+
+</p><p>Atau bisa juga membaca doa Talqin berikut:</p> <br><br><p style="text-align: right;" class="arab">
+
+بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>
+
+كُلُّ نَفْسٍ ذَاۤىِٕقَةُ الْمَوْتِۗ وَاِنَّمَا تُوَفَّوْنَ اُجُوْرَكُمْ يَوْمَ الْقِيٰمَةِ ۗ فَمَنْ زُحْزِحَ عَنِ النَّارِ وَاُدْخِلَ الْجَنَّةَ فَقَدْ فَازَ ۗ وَمَا الْحَيٰوةُ الدُّنْيَآ اِلَّا مَتَاعُ الْغُرُوْرِ<br><br>
+
+يَا عَبْدَ اللّٰهِ بِنْ أَمَةَ اللّٰهِ اُذْكُرِ العَهْدَ الَّذِي خَرَجْتَ عَلَيهِ مِنَ الدُنْيَا شَهَادَةً اَنْ لاَ إِلَهَ إِلاَّ اللّٰهُ وَحْدَهُ لاَ شَرِيكَ لَهُ وَ اَنَّ مُحَمَّدًا عَبدُهُ وَرَسُولُهُ وَأَنَّ الْجَنَّةَ حقٌ وَ أَنَّ النَّارَ حَقٌّ وَأَنَّ البَعْثَ حَقٌّ وَأَنَّ السَّاعَةَ آتِيَةٌ لاَ رَيْبَ فِيْهَا وَ أَنَّ اللّٰهَ يَبْعَثُ مَنْ فِي القُبُوْرِ واَنَّيْ رَضِيْتُ بِاللّٰهِ رَبًّا وبِالْاِسْلَامِ دِيْنًا و بِمُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ نَبِيًّا وَ بِالْقُرآنِ إِمَامًا وبِالكَعْبَةِ قِبْلَةً وبِالمُؤْمِنِيْنَ اِخْوَانًا ، ثَـبّـَتَكَ اللّٰهُ بِالقَوْلِ الثَابِتِ <br>
+(ثلاث مرات)<br><br>
+
+يُثَبِّتُ اللّٰهُ الَّذِيْنَ اٰمَنُوْا بِالْقَوْلِ الثَّابِتِ فِى الْحَيٰوةِ الدُّنْيَا وَفِى الْاٰخِرَةِ<br><br>
+
+يٰٓاَيَّتُهَا النَّفْسُ الْمُطْمَىِٕنَّةُ ارْجِعِيْٓ اِلٰى رَبِّكِ رَاضِيَةً مَّرْضِيَّةً فَادْخُلِيْ فِيْ عِبٰدِيْ وَادْخُلِيْ جَنَّتِيْ</p><br><p><i>Kami menitipkan saudaraku kepada-Mu ya Allah, Ya Tuhan yang memberi kesenangan setiap orang yang mendirikan, Ya Tuhan yang selalu hadir tidak pernah absen berilah kesenangan atas kesendirian saudaraku ini. Kasihanilah pengembaraan kami dan pengembaraan saudara kami ini, peringatkanlah dua dari hujjah yang telah kami ajarkan kepadanya, janganlah Engkau menfitnah kami sesudah dia meninggal dan ampunilah kami dan dia wahai Tuhan seluruh Alam.<br><br>
+
+Dengan nama Allah Yang Maha Pemurah lagi Maha Penyayang.Tiap-tiap yang berjiwa akan merasakan mati. Dan sesungguhnya pada hari kiamat sajalah disempurnakan pahalamu. Barang siapa dijauhkan dari neraka dan dimasukkan ke dalam surga, maka sungguh ia telah beruntung. Kehidupan dunia itu tidak lain hanyalah kesenangan yang memperdayakan. Wahai hamba Allah putera hamba Allah ingatlah wasiat disaat kamu keluar dari dunia yaitu penyaksian bahwa tidak ada Tuhan selain AllahYang Maha Esa dan tiada sekutu bagiNya dan sesungguhnya Muhammad itu hambaNya dan rasulNya. Sesungguhnya surga itu benar, neraka itu benar, hari kebangkitan itu benar, dan hari kiamat itu pasti datang tidak diragukan lagi baginya dan sesungguhnya Allah membangkitkan manusia dari dalam kubur. Sesungguhnya kamu telah ridho menjadikan Allah sebagai Tuhanmu, Islam sebagai agamamu, Muhammad sebagai nabimu, al-Qur’an sebagai imammu, ka’bah sebagai kiblatmu dan orang-orang mukminin sebagai saudara-saudaramu. Allah telah meneguhkan kamu dengan ucapan yang teguh (kalimat tauhid). Allah meneguhkan (iman) orang-orang yang beriman dengan ucapan yang teguh itu dalam kehidupan di dunia dan di akhirt. Hai jiwa yang tenang. Kembalilah kepada Tuhanmu dengan hati yang puas lagi diridai-Nya. Maka masuklah ke dalam jemaah hamba-hamba-Ku, dan masuklah ke dalam surga-Ku.</i></p><br><p></p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+
+
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

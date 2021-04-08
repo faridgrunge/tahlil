@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1><strong>Shalat Maghrib</strong></h1><br>
+
+<P>
+
+    Shalat Maghrib ialah Shalat yg wajib dilakukan oleh umat muslim diseluruh dunia dengan jumlah Raka’at 3 (Tiga) dan dilakukan setiap hari dari terbenamnya matahari hingga waktu masuk Shalat Isya. Adapun untuk Hukum Mengerjakan Shalat Maghrib ini adlh wajib atau harus dikerjakan oleh seluruh umat manusia yg beragama islam, baik pria maupun wanita yg sudah baligh atau cukup umur dan sehat jasmani maupun rohaninya.
+<P>
+    Sedangkan untuk Waktu Shalat Maghrib sendiri bisa dilakukan ketika matahari mulai tenggelam sampai masuk waktu shalat isya dan untuk jaman yg sudah modern seperti sekarang ini pastinya disetiap desa, kota maupun daerah sudah banyak orang – orang yg adzan sehingga bisa di tandai dg Adzan Sholat Maghrib. Tetapi jika anda sedang berada di luar negeri maka bisa di ambil kesimpulan jika sudah mulai tenggelamnya Matahari atau kurang lebih jam 6 Sore berarti itu sudah masuk Sholat Maghrib.
+<P>
+<ol>
+<HR><li>
+<strong>Adalah Membaca Lafast Niat Sholat Maghrib </strong></li>
+
+<HR>
+
+    <img src="pic/fardhu/1.png" height="200" width="100"> <P>
+    <strong>Bacaan niat untuk sholat sendirian</strong><P>
+    
+    <div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+        <ul class="amazingaudioplayer-audios" style="display:none;">
+            <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/niatshalatmaghrib.mp3" data-type="audio/mpeg">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    </center>
+    <div style="font-size: x-large;" class="arab">
+        اُصَلّى فَرْضَ الْمَغْرِبِ ثَلاَثَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً مَأْمُوْمًا ِللهِ تَعَالَى</div><P>
+    <b>Latin :</b><br/>
+
+    USHOLLII FARDHOL MAGHRIBI TSALAATSA RAKA'AATIM MUSTAQBILAL QIBLATI ADAA-AN MA'MUUMAN LILLAAHI TA'AALA.
+    <P>
+        <b>Artinya :</b><br/>
+        Aku berniat shalat fardu Maghrib tiga raka'at menghadap kiblat sebagai ma'mum karena Allah Ta'ala
+    <P>
+        <strong>Untuk bacaan niat sholat menjadi Ma'mum / Imam</strong>
+    <P>
+
+        Latin :<P>
+
+    Ushallii fardhal-maghribi tsalaatsa raka`aatim mus¬taqbilal-qiblati adaa'an (ma'muuman/imaaman) lillaahi ta`aalaa. Allaahu akbar.
+    <P>
+        Artinya :
+    <P>
+        "Aku menyengaja shalat fardhu maghrib tiga rakaat menghadap kiblat (makmumanlimaman) karena Allah Ta`ala. " Allaahu akbar".
+    
+	<P><br>
+    <HR><li><strong>Mengangkat Belah tangan</strong></li><HR>
+
+    
+        <img src="pic/fardhu/2.png" height="200" width="150"><BR>
+        
+            <div id="amazingaudioplayer-2" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                <ul class="amazingaudioplayer-audios" style="display:none;">
+                    <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                        <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/b_takbir.mp3" data-type="audio/mpeg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </center>
+        <div style=" font-size: x-large;" class="arab">الله اكبر</div><BR>
+        (Allaahu akbar) Allah Maha Besar.
+        <P>
+<br>
+        <HR><li>
+        <strong>Setelah Takbir Ihram Lalu Membaca Doa Iftitah dalam Hati</strong></li>
+        <HR>
+        <img src="pic/fardhu/3.png" height="200" width="100"><P>
+        
+        <div id="amazingaudioplayer-3" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                    <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/b_iftitah.mp3" data-type="audio/mpeg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        </center>
+        <div style=" font-size: x-large;" class="arab">
+            إِنِّي وَجَّهْتُ وَجْهِيَ لِلَّذِيْ فَطَرَ السَّمَوَاتِ وَالأَرْضَ حَنِيْفًا مُسْلِمًا وَمَا أَنَا مِنَ المُشْرِكِيْن . إِنَّ صَلاَتِي وَنُسُكِيْ وَمَحْيَايَ وَمَمَاتِي لِلَّهِ رَبِّ العَالَمِيْن لاَ شَرِيْكَ لَهُ وَبِذَلِكَ أُمِرْتُ وَأَنَا مِنَ المُسْلِمِيًن</div><P>
+
+        <b>Latin :</b><br/>
+
+        <i>Innii wajjahtu wajhiya lilladzii fatharas samaawaati wal-ardha, haniifam muslimaw wamaa ana minal musyrikiin. Inna shalaati wanusukii wamahyaaya wamamaatii lillaahi rabbil ‘alaamiina. Laa syariika lahu wabidzaalika umirtu wa ana minal muslimiina.”</i><P>
+        <b>Artinya :</b><br/>
+        Sesungguhnya aku menghadapkan mukaku kepada Dzat yang menciptakan langit dan bumi dengan keadaan lurus dan berserah diri, dan bukannya aku termasuk dalam golongan musyrik. Sesungguhnya sembahyangku, ibadatku, hidupku dan matiku hanya untuk Allah semesta alam. Tiada sekutu bagi-Nya, karena itu aku rela diperintah dan aku ini adalah golongan orang Islam.<P>
+<br>
+        <HR><li>
+        <strong>Setelah Doa Iftitah lalu diteruskan dengan membaca Surat Al-Fatihah </strong></li>
+        <HR><P>
+
+        
+        <div id="amazingaudioplayer-4" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                    <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/b_al_fatihah.mp3" data-type="audio/mpeg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        </center>
+
+        <div style=" font-size: x-large;" class="arab">
+            بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ (١<BR>
+            الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (٢<BR>
+            الرَّحْمَنِ الرَّحِيمِ (٣<BR>
+            مَالِكِ يَوْمِ الدِّينِ (٤<BR>
+            إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (٥<BR>
+            اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (٦<BR>
+            صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلا الضَّالِّينَ</div>
+        <p>
+            <b>Latin :</b><br/><i>
+            1. "Bismillahirrohmanirrohim"<BR>
+            2. Alhamdulillahi robbil 'alamin,<BR>
+            3. Arrohmaanirrahiim<BR>
+            4. Maaliki yaumiddiin,<BR>
+            5. Iyyaka na'budu waiyyaaka nasta'iin,<BR>
+            6. Ihdinasshirratal mustaqim,<BR>
+            7. Syiratalladziina an’amta alaihim, ghairil maghduubi 'alaihim waladdhaaalliin.</i><P>
+
+        <b>Artinya :</b><br/>
+        1. dengan menyebut nama Allah yang Maha Pemurah lagi Maha Penyayang.<BR>
+        2. segala puji bagi Allah, Tuhan semesta alam.<BR>
+        3. Maha Pemurah lagi Maha Penyayang.<BR>
+        4. yang menguasai di hari Pembalasan.<BR>
+        5. hanya Engkaulah yang Kami sembah, dan hanya kepada Engkaulah Kami meminta pertolongan<BR>
+        6. Tunjukilah Kami jalan yang lurus.<BR>
+        7. (yaitu) jalan orang-orang yang telah Engkau beri nikmat kepada mereka; bukan (jalan) mereka yang dimurkai dan bukan (pula jalan) mereka yang sesat.<P><P>
+
+        <strong>Lalu Diteruskan Dengan Surat-surat Pendek yang mudah Dihafal seperti surat Al-Ikhlas</strong><P>
+        <div style=" font-size: x-large;" class="arab">
+            1 قُلْ هُوَ ٱللَّهُ أَحَدٌ<BR>
+            2ٱللَّهُ ٱلصَّمَدُ<BR>
+            3 ْ لَمْ يَلِدْ وَلَم يُولَدْ<BR>
+            4 ْ وَلَم يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ</div><P>
+
+        1. Qul huwa allaahu ahadun,<BR>
+        2. Allaahu shamadu<BR>
+        3. lam yalid walam yuuladu<BR>
+        4. walam yakun lahu kufuwan ahadun.<P>
+
+        Artinya:<P>
+
+        1. Katakanlah: Dia-lah Allah, Yang Maha Esa<BR>
+        2. Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu<BR>
+        3. Dia tiada beranak dan tidak pula diperanakkan<BR>
+        4. Dan tidak ada seorangpun yang setara dengan Dia<p>
+<br>
+        <HR><li><strong>Rukuk</strong></li>
+        <HR><p>
+
+
+        Setelah Membaca Surat Al- Fatihah dan surat pendek, lalu mengangkat ke dua belah tangan setinggi seraya membaca Allahu Akbar terus Badanya membungkuk, kedua tanganya memegang lutut dan ditekankan antara <strong>punggung dan kepala supaya rata</strong>.<p>
+        
+            <img src="pic/fardhu/4.png" height="200" width="150"><P>
+
+
+        Setelah cukup sempurna bacalah tasbih sebagai berikut :
+        <p>
+        
+        <div id="amazingaudioplayer-5" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                    <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_4_doa_rukuk.mp3" data-type="audio/mpeg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        </center>
+        <div style=" font-size: x-large;" class="arab">
+            (3x).سُبْحَانَ رَبِّيَ الْعَظِيْمِ وَبِحَمْدِهِ</div><p>
+        <b>Latin :</b><br/>
+
+        <i>Subhaana rabbiyal 'adzhiimi wabihamdih (3x)</i>
+        <p>
+            <b>Artinya :</b><br/>
+
+            Maha Suci Tuhan (Allah) Yang Maha Besar lagi Maha Terpuji.<P>
+			<br>
+        <HR><li>
+        <strong>I'tidal</strong></li>
+        <HR><P>
+        Setelah rukuk, terus bangkitlah tegak dengan mengangkat kedua belah tangan setentang telinga, seraya membaca sebagai berikut :
+        
+            <img src="pic/fardhu/1a.png" height="200" width="100"><P>
+        
+        <div id="amazingaudioplayer-6" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                    <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_6_bacaan_setelah_itidal.mp3" data-type="audio/mpeg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        </center>
+        <div style=" font-size: x-large;" class="arab">سَمِعَ اللهُ لِمَنْ حَمِدَهُ <br /><br />رَبَّنَا لَكَ الْحَمْدُ مِلْءُ السَّموَاتِ وَمِلْءُ اْلاَرْضِ وَمِلْءُمَاشِئْتَ مِنْ شَيْئٍ بَعْدُ </div><P>
+        <b>Latin :</b><br/>
+
+        <i>SamiAllahulimanhamidah, Rabbana Lakal Hamdu Mil Ussamaawati Wamil Ul Ardi Wamil Umaasikta Min Syai'in Ba'du.</i>
+        <P>
+            <b>Artinya :</b><br/>
+
+            Allah mendengar akan sesiapa yang memuji-Nya. Wahai Tuhan Kami ! Hanya Untuk-Mu lah Segala Puji, Sepenuh Langit Dan Bumi Dan Sepenuh Barang Yang Kau Kehendaki Sesudahnya.
+        <P>
+		<br>
+		<HR><li>
+        <strong>Sujud </strong></li><HR><P>
+        Setelah melakukan i'tidal terus sujud sambil mengucapkan "allahu akbar"( tersungkur ke bumi ) dengan meletakkan dahi ke bumi dan ketika turun dan posisi sempurna lalu membaca sebagai berikut
+
+        
+            <img src="pic/fardhu/5.png" height="150" width="200"><P>
+        
+        <div id="amazingaudioplayer-7" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                    <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_7_doa_sujud.mp3" data-type="audio/mpeg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        </center>
+        <div style=" font-size: x-large;">
+            (3x).سُبْحَانَ رَبِّيَ اْلأَعْلَى وَبِحَمْدِهِ</div><P>
+        <b>Latin :</b><br/>
+
+        <i>Subhaana rabbiyal a'laa wabihamdih (3x)</i> <P>
+
+        <b>Artinya :</b><br/>
+
+        Maha Suci Tuhan Yang Maha Tinggi lagi Maha Terpuji<P>
+        
+		<br>
+		<HR><li>
+        <strong>Duduk antara dua sujud  </strong></li>
+        <HR>   <P>
+        Setelah sujud lalu membaca allahu akbar dan duduk membaca :<P>
+        
+            <img src="pic/fardhu/6.png" height="150" width="200"><P>
+        
+        <div id="amazingaudioplayer-8" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                    <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_8_doa_duduk_antara_2_sujud.mp3" data-type="audio/mpeg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        </center>
+        <div style=" font-size: x-large;" class="arab">
+            رَبِّ اغْفِرْلِيْ وَارْحَمْنِيْ وَاجْبُرْنِيْ وَارْفَعْنِيْ وَارْزُقْنِيْ وَاهْدِنِيْ وَعَافِنِيْ وَاعْفُ عَنِّيْ</div><P>
+        <b>Latin :</b><br/>
+
+        <i>Rabbighfirlii warhamnii wajburnii warfa'nii warzuqnii wahdinii wa 'aafinii wa'fu 'annii</i>
+        <P>
+            <b>Artinya :</b><br/>
+            Ya Allah ! ampunilah dosaku, belas kasihanilah aku, dan angkatlah darjatku dan cukuplah segala kekuranganku dan berilah rezeki kepadaku, dan berilah aku petunjuk dan sejahterakanlah aku dan berilah keampunan padaku.<P>
+        
+		<br>
+		<HR><li>
+        <strong>Sujud Kedua</strong></li><HR><P>
+        Setelah melakukan sambil membaca "allahu akbar" kemudian sujud lalu kembali dan membaca :
+
+        
+            <img src="pic/fardhu/5.png" height="150" width="200"><P>
+        
+        <div id="amazingaudioplayer-9" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+            <ul class="amazingaudioplayer-audios" style="display:none;">
+                <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                    <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_7_doa_sujud.mp3" data-type="audio/mpeg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        </center>
+        <div style=" font-size: x-large;" class="arab">
+            (3x).سُبْحَانَ رَبِّيَ اْلأَعْلَى وَبِحَمْدِهِ</div><P>
+        <b>Latin :</b><br/>
+
+        <i>Subhaana rabbiyal a'laa wabihamdih (3x)</i> <P>
+
+        <b>Artinya :</b><br/>
+
+        Maha Suci Tuhan Yang Maha Tinggi lagi Maha Terpuji<P>
+        <HR><li>
+        <strong>Berdiri kembali sambil mengucapkan "allahu akbar" dan membaca Surat Al-Fateha dan surat-surat pendek </strong></li>
+        <HR>
+        
+            <img src="pic/fardhu/3.png" height="200" width="100"><P>
+            <div style=" font-size: x-large;" class="arab">
+                بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ (١<BR>
+                الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (٢<BR>
+                الرَّحْمَنِ الرَّحِيمِ (٣<BR>
+                مَالِكِ يَوْمِ الدِّينِ (٤<BR>
+                إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (٥<BR>
+                اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (٦<BR>
+                صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلا الضَّالِّينَ (٧ </div><BR>
+
+            Latin ;<P>
+
+            1. "Bismillahirrohmanirrohim"<BR>
+            2. Alhamdulillahi robbil 'alamin<BR>,<BR>
+            3. Arrohmaanirrahiim
+            4. Maaliki yaumiddiin,<BR>
+            5. Iyyaka na'budu waiyyaaka nasta'iin,<BR>
+            6. Ihdinasshirratal mustaqim,<BR>
+            7. Syiratalladziina an’amta alaihim, ghairil maghduubi 'alaihim waladdhaaalliin.<P>
+
+            Artinya:<BR>
+
+            1. dengan menyebut nama Allah yang Maha Pemurah lagi Maha Penyayang.<BR>
+            2. segala puji bagi Allah, Tuhan semesta alam.<BR>
+            3. Maha Pemurah lagi Maha Penyayang.<BR>
+            4. yang menguasai di hari Pembalasan.<BR>
+            5. hanya Engkaulah yang Kami sembah, dan hanya kepada Engkaulah Kami meminta pertolongan<BR>
+            6. Tunjukilah Kami jalan yang lurus.<BR>
+            7. (yaitu) jalan orang-orang yang telah Engkau beri nikmat kepada mereka; bukan (jalan) mereka yang dimurkai dan bukan (pula jalan) mereka yang sesat.<P>
+
+
+            Lalu Diteruskan Dengan Surat-surat Pendek yang mudah Dihafal seperti surat An-nas<BR>
+            <div style=" font-size: x-large;" class="arab">
+                (1).قُلْ أَعُوذُ بِرَبِّ النَّاسِ<BR>
+                (2)مَلِكِ النَّاسِ<BR>
+                (3)إِلَهِ النَّاسِ<BR>
+                (4)مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ<BR>
+                (5)الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ<BR>
+                (6)مِنَ الْجِنَّةِ وَالنَّاسِ</div><P>
+
+            Latin ;<P>
+
+            1. qul a'uudzu birabbi nnaas<BR>
+            2. maliki nnaas<BR>
+            3. ilaahi nnaas<BR>
+            4. min syarri lwaswaasi lkhannaas<BR>
+            5. alladzii yuwaswisu fii shuduuri nnaas<BR>
+            6. mina ljinnati wannaas<P>
+
+            Artinya:<P>
+
+            1. Katakanlah: "Aku berlidung kepada Tuhan (yang memelihara dan menguasai) manusia.<BR>
+            2. raja manusia.<BR>
+            3. sembahan manusia.<BR>
+            4. dari kejahatan (bisikan) syaitan yang biasa bersembunyi,<BR>
+            5. yang membisikkan (kejahatan) ke dalam dada manusia,<BR>
+            6. dari (golongan) jin dan manusia.<P>
+
+            <HR><li><strong>Rukuk Kedua </strong></li><HR><P>
+            Setelah Membaca Surat Al- Fatihah dan surat pendek, lalu mengangkat ke dua belah tangan setinggi seraya membaca Allahu Akbar terus Badanya membungkuk, kedua tanganya memegang lutut dan ditekankan antara <strong>punggung dan kepala supaya rata</strong>. <P>
+            
+                <img src="pic/fardhu/4.png" height="200" width="150"><P>
+
+
+            Setelah cukup sempurna bacalah tasbih sebagai berikut :<P>
+            
+            <div id="amazingaudioplayer-10" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                <ul class="amazingaudioplayer-audios" style="display:none;">
+                    <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                        <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_4_doa_rukuk.mp3" data-type="audio/mpeg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            </center>
+            <div style=" font-size: x-large;" class="arab">
+                (3x).سُبْحَانَ رَبِّيَ الْعَظِيْمِ وَبِحَمْدِهِ</div><p>
+            <b>Latin :</b><br/>
+
+            <i>Subhaana rabbiyal 'adzhiimi wabihamdih (3x)</i>
+            <p>
+                <b>Artinya :</b><br/>
+
+                Maha Suci Tuhan (Allah) Yang Maha Besar lagi Maha Terpuji.<P>
+
+				<br>
+            <HR><li><strong>I'tidal kedua</strong></li> <HR><P>
+            Setelah rukuk, terus bangkitlah tegak dengan mengangkat kedua belah tangan setentang telinga, seraya membaca sebagai berikut :<P>
+            
+                <img src="pic/fardhu/1a.png" height="200" width="100"><P>
+            
+            <div id="amazingaudioplayer-11" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                <ul class="amazingaudioplayer-audios" style="display:none;">
+                    <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                        <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_6_bacaan_setelah_itidal.mp3" data-type="audio/mpeg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            </center>
+            <div style="font-size: x-large;" class="arab">سَمِعَ اللهُ لِمَنْ حَمِدَهُ <br /><br />رَبَّنَا لَكَ الْحَمْدُ مِلْءُ السَّموَاتِ وَمِلْءُ اْلاَرْضِ وَمِلْءُمَاشِئْتَ مِنْ شَيْئٍ بَعْدُ </div><P>
+            <b>Latin :</b><br/>
+
+            <i>SamiAllahulimanhamidah, Rabbana Lakal Hamdu Mil Ussamaawati Wamil Ul Ardi Wamil Umaasikta Min Syai'in Ba'du.</i>
+            <P>
+                <b>Artinya :</b><br/>
+
+                Allah mendengar akan sesiapa yang memuji-Nya. Wahai Tuhan Kami ! Hanya Untuk-Mu lah Segala Puji, Sepenuh Langit Dan Bumi Dan Sepenuh Barang Yang Kau Kehendaki Sesudahnya.
+            <P>
+<br>
+            <HR><li><strong>Sujud ketiga</strong></li><HR><P>
+
+            Setelah melakukan i'tidal terus sujud sambil mengucapkan "allahu akbar"( tersungkur ke bumi ) dengan meletakkan dahi ke bumi dan ketika turun dan posisi sempurna lalu membaca sebagai berikut<P>
+            
+                <img src="pic/fardhu/5.png" height="150" width="200"><P>
+            
+            <div id="amazingaudioplayer-12" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                <ul class="amazingaudioplayer-audios" style="display:none;">
+                    <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                        <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_7_doa_sujud.mp3" data-type="audio/mpeg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            </center>
+            <div style=" font-size: x-large;" class="arab">
+                (3x).سُبْحَانَ رَبِّيَ اْلأَعْلَى وَبِحَمْدِهِ</div><P>
+            <b>Latin :</b><br/>
+
+            <i>Subhaana rabbiyal a'laa wabihamdih (3x)</i> <P>
+
+            <b>Artinya :</b><br/>
+
+            Maha Suci Tuhan Yang Maha Tinggi lagi Maha Terpuji<P>
+
+<br>
+            <HR><li><strong>Duduk antara dua sujud kedua</strong></li><HR><P>
+
+            Setelah sujud lalu membaca allahu akbar dan duduk membaca :
+            
+                <img src="pic/fardhu/6.png" height="150" width="200"><P>   
+            <div id="amazingaudioplayer-13" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                <ul class="amazingaudioplayer-audios" style="display:none;">
+                    <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                        <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_8_doa_duduk_antara_2_sujud.mp3" data-type="audio/mpeg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </center>
+            <div style=" font-size: x-large;" class="arab">
+                رَبِّ اغْفِرْلِيْ وَارْحَمْنِيْ وَاجْبُرْنِيْ وَارْفَعْنِيْ وَارْزُقْنِيْ وَاهْدِنِيْ وَعَافِنِيْ وَاعْفُ عَنِّيْ</div><P>
+            <b>Latin :</b><br/>
+
+            <i>Rabbighfirlii warhamnii wajburnii warfa'nii warzuqnii wahdinii wa 'aafinii wa'fu 'annii</i>
+            <P>
+                <b>Artinya :</b><br/>
+                Ya Allah ! ampunilah dosaku, belas kasihanilah aku, dan angkatlah darjatku dan cukuplah segala kekuranganku dan berilah rezeki kepadaku, dan berilah aku petunjuk dan sejahterakanlah aku dan berilah keampunan padaku.<P>
+
+            <HR><li><strong>Sujud Kedua kempat</strong></li><HR><P>
+
+            Setelah melakukan sambil membaca "allahu akbar" kemudian sujud lalu kembali dan membaca :
+            
+                <img src="pic/fardhu/5.png" height="150" width="200"><P>
+            
+            <div id="amazingaudioplayer-14" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                <ul class="amazingaudioplayer-audios" style="display:none;">
+                    <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                        <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_7_doa_sujud.mp3" data-type="audio/mpeg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            </center>
+            <div style=" font-size: x-large;" class="arab">
+                (3x).سُبْحَانَ رَبِّيَ اْلأَعْلَى وَبِحَمْدِهِ</div><P>
+            <b>Latin :</b><br/>
+
+            <i>Subhaana rabbiyal a'laa wabihamdih (3x)</i> <P>
+
+            <b>Artinya :</b><br/>
+
+            Maha Suci Tuhan Yang Maha Tinggi lagi Maha Terpuji<P>
+
+            <HR><li><strong>Tasyahud (Tahyatul Awal)</strong></li><HR><P>
+
+            Dengan cara duduk kaki kanan tegak dan telapak kaki kiri di duduki
+            
+                <img src="pic/fardhu/7.png" height="150" width="200"><P>
+
+
+            Dan membaca Bacaan tasyahud Awal dan doa.
+            <P> 
+            <div id="amazingaudioplayer-15" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                <ul class="amazingaudioplayer-audios" style="display:none;">
+                    <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                        <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_9_doa_tasyahud_awal.mp3" data-type="audio/mpeg">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </center>
+            <div style=" font-size: x-large;" class="arab">
+                التَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ ِللهِ ، السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللهِ وَبَرَكاَتُهُ السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللهِ الصَّالِحِيْنَ . أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ الله وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ الله. اللَّهُمَّ صَلِّ عَلَى مُحَمَّد</div><P>
+
+            <b>Latin :</b><br/>
+            <i>Attahiyyaatul mubaarakaatush sholawaatuth thayyibatul lillaah, Assalaamu’alaika ayyuhan nabiyyu warahmatullaahi wabarakaatuh, Assalaamu’alainaa wa’alaa ‘ibaadillaahish shaalihiin. Asyhadu allaa ilaaha illallaah, Waasyhadu anna Muhammadar rasuulullaah. Allahhumma sholli ‘alaa Muhammad.</i>
+            <P>
+                <b>Artinya :</b><br/>
+                Segala kehormatan, keberkahan, kebahagiaan dan kebaikan bagi Allah, salam, rahmat, dan berkahNya kupanjatkan kepadamu wahai Nabi (Muhammad). Salam keselamatan semoga tetap untuk kami seluruh hamba yang shaleh-shaleh. Ya Allah aku bersumpah dan berjanji bahwa tiada ada Tuhan yang berhak disembah kecuali Engkau ya Allah, dan aku bersumpah dan berjanji sesungguhnya Nabi Muhammad adalah utusan-Mu Ya Allah. Ya Allah, limpahkan shalawat-Mu kepada Nabi Muhammad.<P>
+
+
+            <HR><li>
+            <strong>Setelah Tasyatul Awal maka beranjak Kembali berdiri </strong></li>
+            <HR>
+            
+                <img src="pic/fardhu/3.png" height="200" width="100"><P>
+                
+                <div id="amazingaudioplayer-16" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/b_al_fatihah.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                </center>
+
+                <div style=" font-size: x-large;" class="arab">
+                    بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ (١<BR>
+                    الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (٢<BR>
+                    الرَّحْمَنِ الرَّحِيمِ (٣<BR>
+                    مَالِكِ يَوْمِ الدِّينِ (٤<BR>
+                    إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (٥<BR>
+                    اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (٦<BR>
+                    صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلا الضَّالِّينَ</div>
+                <p>
+                    <b>Latin :</b><br/><i>
+                    1. "Bismillahirrohmanirrohim"<BR>
+                    2. Alhamdulillahi robbil 'alamin,<BR>
+                    3. Arrohmaanirrahiim<BR>
+                    4. Maaliki yaumiddiin,<BR>
+                    5. Iyyaka na'budu waiyyaaka nasta'iin,<BR>
+                    6. Ihdinasshirratal mustaqim,<BR>
+                    7. Syiratalladziina an’amta alaihim, ghairil maghduubi 'alaihim waladdhaaalliin.</i><P>
+
+                <b>Artinya :</b><br/>
+                1. dengan menyebut nama Allah yang Maha Pemurah lagi Maha Penyayang.<BR>
+                2. segala puji bagi Allah, Tuhan semesta alam.<BR>
+                3. Maha Pemurah lagi Maha Penyayang.<BR>
+                4. yang menguasai di hari Pembalasan.<BR>
+                5. hanya Engkaulah yang Kami sembah, dan hanya kepada Engkaulah Kami meminta pertolongan<BR>
+                6. Tunjukilah Kami jalan yang lurus.<BR>
+                7. (yaitu) jalan orang-orang yang telah Engkau beri nikmat kepada mereka; bukan (jalan) mereka yang dimurkai dan bukan (pula jalan) mereka yang sesat.<P><P>
+
+                <HR><li><strong>Rukuk (ketiga)</strong></li>
+                <HR><p>
+
+
+                Setelah Membaca Surat Al- Fatihah dan surat pendek, lalu mengangkat ke dua belah tangan setinggi seraya membaca Allahu Akbar terus Badanya membungkuk, kedua tanganya memegang lutut dan ditekankan antara <strong>punggung dan kepala supaya rata</strong>.<p>
+                
+                    <img src="pic/fardhu/4.png" height="200" width="150"><P>
+
+
+                Setelah cukup sempurna bacalah tasbih sebagai berikut :
+                <p>
+                
+                <div id="amazingaudioplayer-17" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_4_doa_rukuk.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                </center>
+                <div style=" font-size: x-large;" class="arab">
+                    (3x).سُبْحَانَ رَبِّيَ الْعَظِيْمِ وَبِحَمْدِهِ</div><p>
+                <b>Latin :</b><br/>
+
+                <i>Subhaana rabbiyal 'adzhiimi wabihamdih (3x)</i>
+                <p>
+                    <b>Artinya :</b><br/>
+
+                    Maha Suci Tuhan (Allah) Yang Maha Besar lagi Maha Terpuji.<P>
+                <HR><li>
+                <strong>I'tidal (ketiga)</strong></li>
+                <HR><P>
+                Setelah rukuk, terus bangkitlah tegak dengan mengangkat kedua belah tangan setentang telinga, seraya membaca sebagai berikut :
+                
+                    <img src="pic/fardhu/1a.png" height="200" width="100"><P>
+                
+                <div id="amazingaudioplayer-18" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_6_bacaan_setelah_itidal.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                </center>
+                <div style="font-size: x-large;" class="arab">سَمِعَ اللهُ لِمَنْ حَمِدَهُ <br /><br />رَبَّنَا لَكَ الْحَمْدُ مِلْءُ السَّموَاتِ وَمِلْءُ اْلاَرْضِ وَمِلْءُمَاشِئْتَ مِنْ شَيْئٍ بَعْدُ </div><P>
+                <b>Latin :</b><br/>
+
+                <i>SamiAllahulimanhamidah, Rabbana Lakal Hamdu Mil Ussamaawati Wamil Ul Ardi Wamil Umaasikta Min Syai'in Ba'du.</i>
+                <P>
+                    <b>Artinya :</b><br/>
+
+                    Allah mendengar akan sesiapa yang memuji-Nya. Wahai Tuhan Kami ! Hanya Untuk-Mu lah Segala Puji, Sepenuh Langit Dan Bumi Dan Sepenuh Barang Yang Kau Kehendaki Sesudahnya.
+                <P><li><HR>
+                <strong>Sujud (kelima)</strong></li><HR><P>
+                Setelah melakukan i'tidal terus sujud sambil mengucapkan "allahu akbar"( tersungkur ke bumi ) dengan meletakkan dahi ke bumi dan ketika turun dan posisi sempurna lalu membaca sebagai berikut
+
+                
+                    <img src="pic/fardhu/5.png" height="150" width="200"><P>
+                
+                <div id="amazingaudioplayer-19" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_7_doa_sujud.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                </center>
+                <div style=" font-size: x-large;" class="arab">
+                    (3x).سُبْحَانَ رَبِّيَ اْلأَعْلَى وَبِحَمْدِهِ</div><P>
+                <b>Latin :</b><br/>
+
+                <i>Subhaana rabbiyal a'laa wabihamdih (3x)</i> <P>
+
+                <b>Artinya :</b><br/>
+
+                Maha Suci Tuhan Yang Maha Tinggi lagi Maha Terpuji<P>
+               <HR><li>
+                <strong>Duduk antara dua sujud (ketiga) </strong></li>
+                <HR>   <P>
+                Setelah sujud lalu membaca allahu akbar dan duduk membaca :<P>
+                
+                    <img src="pic/fardhu/6.png" height="150" width="200"><P>
+                
+                <div id="amazingaudioplayer-20" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_8_doa_duduk_antara_2_sujud.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                </center>
+                <div style=" font-size: x-large;" class="arab">
+                    رَبِّ اغْفِرْلِيْ وَارْحَمْنِيْ وَاجْبُرْنِيْ وَارْفَعْنِيْ وَارْزُقْنِيْ وَاهْدِنِيْ وَعَافِنِيْ وَاعْفُ عَنِّيْ</div><P>
+                <b>Latin :</b><br/>
+
+                <i>Rabbighfirlii warhamnii wajburnii warfa'nii warzuqnii wahdinii wa 'aafinii wa'fu 'annii</i>
+                <P>
+                    <b>Artinya :</b><br/>
+                    Ya Allah ! ampunilah dosaku, belas kasihanilah aku, dan angkatlah darjatku dan cukuplah segala kekuranganku dan berilah rezeki kepadaku, dan berilah aku petunjuk dan sejahterakanlah aku dan berilah keampunan padaku.<P>
+                <HR><li>
+                <strong>Sujud Kedua (keenam)</strong></li><HR><P>
+                Setelah melakukan sambil membaca "allahu akbar" kemudian sujud lalu kembali dan membaca :
+
+                
+                    <img src="pic/fardhu/5.png" height="150" width="200"><P>
+                
+                <div id="amazingaudioplayer-21" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_7_doa_sujud.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                </center>
+                <div style=" font-size: x-large;" class="arab">
+                    (3x).سُبْحَانَ رَبِّيَ اْلأَعْلَى وَبِحَمْدِهِ</div><P>
+                <b>Latin :</b><br/>
+
+                <i>Subhaana rabbiyal a'laa wabihamdih (3x)</i> <P>
+
+                <b>Artinya :</b><br/>
+
+                Maha Suci Tuhan Yang Maha Tinggi lagi Maha Terpuji<P>
+                <HR>
+                <HR><li><strong>Tasyahud (Tahyatul Akhir) </strong></li><HR><P>
+
+                Dengan cara duduk kaki kanan tegak dan telapak kaki kiri di duduki
+                
+                    <img src="pic/fardhu/11.png" height="150" width="200"><P>
+                Dan membaca Bacaan tasyahud akhir dan doa.
+                <P>
+                
+                <div id="amazingaudioplayer-22" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/sholat_10_doa_tasyahud_akhir.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                </center>
+                <div style=" font-size: x-large;" class="arab">
+                    اَلتَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ ِللهِ، السَّلاَمُ عَلَيْكَ اَيُّهَا النَّبِيُّ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ، السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِاللهِ الصَّالِحِيْنَ، أَشْهَدُ اَنْ لآ إِلَهَ إِلاَّاللهُ وَاَشْهَدُ أَنَّ مُحَمَّدًا رَسُوْلُ اللهُ، اَللهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى سَيِّدِنَا اِبْرَاهِيْمَ وَعَلَى آلِ سَيِّدِنَا اِبْرَاهِيْمَ وَبَارِكْ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ كَمَا بَرَكْتَ عَلَى سَيِّدِنَا اِبْرَاهِيْمَ وَعَلَى آلِ سَيِّدِنَا اِبْرَاهِيْمَ فِى الْعَالَمِيْنَ إِنَّكَ حَمِيْدٌ مَجِيْد</div>
+                <P>
+                    <b>Latin :</b><br/>
+                    <i>Attahiyyaatul mubaarokaatush sholawaatuth thoyyibaatu lillaah. Assalaamu ‘alaika ayyuhan nabiyyu wa rohmatulloohi wa barokaatuh. Assalaaamu’alainaa wa ‘alaa ‘ibaadillaahish shoolihiin. Asyhadu allaa ilaaha illallooh wa asyhadu anna Muhammadar rosuulullooh. Allahumma Shalli Ala Sayyidina Muhammad Wa Ala Ali Sayyidina Muhammad. Kama Shollaita Ala Sayyidina Ibrahim wa alaa aali sayyidina Ibrahim, wabaarik ala Sayyidina Muhammad Wa Alaa Ali Sayyidina Muhammad, Kama barokta alaa Sayyidina Ibrahim wa alaa ali Sayyidina Ibrahim, Fil aalamiina innaka hamiidummajid.</i>
+                <P>
+                    <b>Artinya :</b><br/>
+                    Segala kehormatan, keberkahan, kebahagiaan dan kebaikan bagi Allah, salam, rahmat, dan berkahNya kupanjatkan kepadamu wahai Nabi (Muhammad). Salam keselamatan semoga tetap untuk kami seluruh hamba yang shaleh-shaleh. Aku bersaksi bahwa tiada Tuhan melainkan Allah. Dan aku bersaksi bahwa Nabi Muhammad adalah utusan Allah. Ya Allah! Limpahkanlah rahmat kepada Nabi Muhammad. “ Sebagimana pernah Engkau beri rahmat kepada Nabi Ibrahim dan keluarganya. Dan limpahilah berkah atas Nabi Muhammad beserta para keluarganya. Sebagaimana Engkau memberi berkah kepada Nabi Ibrahim dan keluarganya. “ Diseluruh alam semesta Engkaulah yang terpuji, dan Maha Mulia.”
+                <P>
+
+                    <strong><HR><li>Salam</li><HR></strong><P>
+                
+                    <img src="pic/fardhu/8.png" height="150" width="200"><P>
+                Sambil mengucapkan :<P>
+                
+                <div id="amazingaudioplayer-23" style="display:block;position:relative;width:100%;height:auto;margin:0px auto 0px;">
+                    <ul class="amazingaudioplayer-audios" style="display:none;">
+                        <li data-artist="" data-title="1-8" data-album="" data-info="" data-image="" data-duration="">
+                            <div class="amazingaudioplayer-source" data-src="file:///android_asset/fardhu/song/b_salam.mp3" data-type="audio/mpeg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                </center>
+                <div style=" font-size: x-large;" class="arab">
+                    اَلسَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ الله</div><P>
+
+                <b>Latin :</b><br/>
+
+                <i>Assalaamu 'alaikum warahmatullaah.</i><P>
+
+                <b>Artinya :</b><br/>
+
+                Keselamatan dan rahmat buat Anda sekalian.<P>
+
+                Waktu membaca salam yang pertama muka kiri menengok ke kanan dan waktu salam yang kedua muka kita menengok ke kiri
+                Dengan salam ini maka berakhirlah sholat kita
+
+</ol>
+</div>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

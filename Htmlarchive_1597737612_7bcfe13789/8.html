@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Hindari maksiat tatkala haji agar meraih haji mabrur</h1>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;" class="arab"></p>
+<p>Jika maksiat dimanapun dan kapanpun dilarang maka apalagi tatkala waktu berhaji di tanah suci Mekah ?!</p>
+<p>Allah berfirman :</p>
+<p style="text-align: right;" class="arab">الْحَجُّ أَشْهُرٌ مَعْلُومَاتٌ فَمَنْ فَرَضَ فِيهِنَّ الْحَجَّ فَلَا رَفَثَ وَلَا فُسُوقَ وَلَا جِدَالَ فِي الْحَجِّ وَمَا تَفْعَلُوا مِنْ خَيْرٍ يَعْلَمْهُ اللَّهُ وَتَزَوَّدُوا فَإِنَّ خَيْرَ الزَّادِ التَّقْوَى وَاتَّقُونِ يَا أُولِي الْأَلْبَابِ (197)</p>
+<p>(Musim) haji adalah beberapa bulan yang dimaklumi, barangsiapa yang menetapkan niatnya dalam bulan itu akan mengerjakan haji, maka tidak boleh rafats,&nbsp;<strong>berbuat fasik</strong>&nbsp;dan berbantah-bantahan di dalam masa mengerjakan haji. Dan apa yang kamu kerjakan berupa kebaikan, niscaya Allah mengetahuinya. Berbekallah, dan sesungguhnya sebaik-baik bekal adalah takwa dan bertakwalah kepada-Ku hai orang-orang yang berakal (QS Al-Baqoroh : 197)</p>
+<p>Yang dimaksud dengan فُسُوقَ (kefasikan) menurut jumhur ahli tafsir adalah seluruh kemaksiatan. Dan inilah yang dipilih oleh Ibnu Katsir rahimahullah. Meskipun kemaksiatan dilarang bukan hanya khusus tatkala haji, dan dilarang sepanjang masa, akan tetapi pelarangannya semakin ditekankan tatkala hajian. Sebagaimana Allah melarang berbuat kedzoliman di bulan-bulan haram, meksipun kedzoliman dilarang sepanjang tahun, hanya saja di bulan-bulan haram semakin ditekankan. Karenanya Allah berfirman :</p>
+<p style="text-align: right;" class="arab">مِنْها أَرْبَعَةٌ حُرُمٌ ذلِكَ الدِّينُ الْقَيِّمُ فَلا تَظْلِمُوا فِيهِنَّ أَنْفُسَكُمْ</p>
+<p>di antaranya empat bulan haram. Itulah (ketetapan) agama yang lurus, maka janganlah kamu menganiaya diri kamu dalam bulan yang empat itu (QS At-Taubah : 36)</p>
+<p>Demikian juga Allah melarang secara khusus untuk berbuat dzolim di kota Mekah, sebagaimana berfirman tentang tanah suci Mekah :</p>
+<p style="text-align: right;" class="arab">وَمَنْ يُرِدْ فِيهِ بِإِلْحادٍ بِظُلْمٍ نُذِقْهُ مِنْ عَذابٍ أَلِيمٍ</p>
+<p>dan siapa yang bermaksud di dalamnya melakukan kejahatan secara zalim, niscaya akan Kami rasakan kepadanya sebahagian siksa yang pedih (QS Al-Hajj : 25)</p>
+<p>Meskipun kezoliman dimana saja dilarang akan tetapi di kota suci Mekah lebih dilarang lagi. (Lihat Tafsir Ibnu Katsir 1/405)</p>
+<p>Para jamaah haji berusaha semaksimal untuk menghindari kemaksiatan apapun, sekecil apapun, seringan apapun selama kegiatan haji agar haji mereka menjadi mabrur. Nabi yang mempersyaratkan hal tersebut dalam sabdanya :</p>
+<p style="text-align: right;" class="arab">&laquo;مَنْ حَجَّ لِلَّهِ فَلَمْ يَرْفُثْ،&nbsp;<strong>وَلَمْ</strong> <strong>يَفْسُقْ</strong>، رَجَعَ كَيَوْمِ وَلَدَتْهُ أُمُّهُ&raquo;</p>
+<p>&ldquo;Barangsiapa yang berhaji karena Allāh dan dia tidak melakukan rafats&nbsp;<strong>dan tidak melakukan kemaksiatan&nbsp;</strong>maka dia akan kembali sebagaimana hari dia dilahirkan dari perut ibunya.&rdquo; (HR Al-Bukhari No. 1521 dan Muslim No. 1350)</p>
+<p>Bahkan sebagian ulama -seperti Ibnu Hazm rahimahullah- berpendapat bahwa maksiat yang dilakukan oleh soerang haji bukan hanya menghilangkan kemabruran haji bahkan membatalkan haji. Beliau berkata :</p>
+<p style="text-align: right;" class="arab">وَكُلُّ مَنْ تَعَمَّدَ مَعْصِيَةً أَيَّ مَعْصِيَةٍ كَانَتْ &ndash; وَهُوَ ذَاكِرٌ لِحَجِّهِ مُذْ يُحْرِمُ إلَى أَنْ يُتِمَّ طَوَافَهُ بِالْبَيْتِ لِلْإِفَاضَةِ وَيَرْمِيَ الْجَمْرَةَ &ndash; فَقَدْ بَطَلَ حَجُّهُ؛</p>
+<p>&ldquo;Siapa saja yang sengaja melakukan kemaksiatan -maksiapat apapupun juga- dan dia dalam kondisi ingat ia sedang berhaji, mulai dari sejak ihram hingga ia menyelesaikan thawaf ifadohnya di ka&rsquo;bah dan melempar jamroh, maka hajinya batal.&rdquo; (Al-Muhalla 5/197)</p>
+<p>Tentu pendapat Ibnu Hazm ini tidaklah tepat, akan tetapi mengingatkan kepada kita bahwa maksiat yang dilakukan oleh orang biasa tidak seperti maksiat yang dilakukan oleh orang yang sedang berhaji.</p>
+<p>Sesungguhnya orang haji yang bermaksiat pada hakikatnya:</p>
+<ul>
+<li>Ia sedang bermaksiat tatkala sedang beribadah yang agung, yaitu haji.</li>
+<li>Ia sedang bermaksiat di tanah haram Mekah (kecuali tatkala sedang di Arofah yang merupakan tanah halal). Dan tentu bermaskiat di tanah haram Mekah tidak sama dengan bermaksiat di tempat-tempat lainnya.</li>
+<li>Ia sedang bermaksiat di bulan-bulan haram (yaitu Dzulqo&rsquo;dah, Dzulhijjah, Muharrom, dan Rojab). Tentunya bermaksiat di bulan-bulan haram tidak sama dengan waktu-waktu yang lain</li>
+<li>Ia merugi karena hilang mabrur hajinya. Ia seperti orang orang yang memanjat pohon dengan letih akan tetapi tidak mendapatkan buah pohon tersebut. Dan buah dari haji adalah diampuni dosa-dosa menjadi bersih sebagaimana dilahirkan dari perut ibu.</li>
+</ul>
+<p>Berikut ini beberapa kemaksiatan yang dilakukan oleh sebagian jama&aacute;h haji yang hendaknya dijauhi :</p>
+<ul>
+<li>Syirik kepada Allah, dan bentuknya sangatlah banyak. Namun diantara yang sering dilakukan oleh sebagian jamaah haji adalah berdoa kepada Nabi shallallahu &aacute;laihi wasallam tatkala ziarah kubuan beliau. Dan ini merupakan syirik akbar yang mengeluarkan seseorang dari Islam. Hajinya gugur dan tidak bernilai sama sekali. Yang berhak untuk kita berdoa kepadanya hanyalah Allah pencipta dan penguasa alam semesta.</li>
+</ul>
+<p>Diantara kesyirikan yang sering tersebar adalah memakai jimat. Di zaman &ldquo;now&rdquo; sekarang ini, masih saja ada orang yang percaya kepada jimat. Jimat adalah semua yang digantungkan atau dipakai untuk menolak bala atau menghilangkan bala. Diantaranya rajah-rajah yang ditulis di kertas lalu dipakai. Terkadang cincin atau gelang dijadikan jimat karena dianggap bisa menolak bala jika dipakai. Bahkan terkadang foto dari kiyai atau Tuan Guru yang dipajang karena dianggap mendatangkan keberkahan dan menolak bala.</p>
+<ul>
+<li>Merokok, padahal rokok itu haram. Nabi shallallahu &lsquo;alaih wasallam bersabda</li>
+</ul>
+<p style="text-align: right;" class="arab">لاَ ضَرَرَ وَلاَ ضِرَارَ</p>
+<p>&ldquo;Tidak boleh memberi kemudorotan kepada diri sendiri dan juga kepada orang lain&rdquo;</p>
+<p>Dan ini benar-benar terdapat pada rokok yang memudorotkan diri sendiri terlebih memudorotkan orang lain. Jika dosa berkaitan dengan diri sendiri masih lebih ringan dibandingkan dosa menzolimi orang lain. Orang yang merokok di tempat umum, sadar-tidak sadar ternyata asap rokoknya itu sangat mengganggu orang yang bukan perokok. Betapa banyak penciuman orang terganggu dengan aroma tidak sedap dari rokok tersebut, dan betapa banyak orang yang terbatuk-batuk akibat menghirup asap sampah rokok tersebut. Karenanya para pecandu rokok tatkala hajian berusaha untuk meniggalkan rokok. Jadikanlah haji sebagai pemicu untuk meninggalkan &ldquo;kecanduan&rdquo; rokok untuk selamanya. Sungguh merupakan pemandangan yang sangat kontradiktif dan sangat menyedihkan tatkala ada seorang haji yang sedang memakai kain ihram namun sambil merokok.</p>
+<ul>
+<li>Mengganggu jamaah haji yang lain. Ini juga merupakan dosa yang berbahaya yang bisa menghilangkan kemabruran haji seseorang. Asy-Syaikh Bin Baaz berkata,</li>
+</ul>
+<p style="text-align: right;" class="arab">كَمَا أَنَّهُ يَحْرِصُ كُلَّ الْحِرْصِ عَلَى الْبُعْدِ عَنْ كُلِّ مَا حَرَّمَ اللهُ مِنْ سَائِرِ الْمَعَاصِي، وَمِنْ جُمْلَةِ ذَلِكَ إِيْذَاءُ الْعِبَادِ، فَإِنَّ ذَلِكَ مِنْ أَكْبَرِ الْمُحَرَّمَاتِ، وَإِذَا كَانَ مَعَ حُجَّاجِ بَيْتِ اللهِ الْحَرَامِ وَمَعَ الْعُمَّارِ صَارَ الظُّلْمُ أَكْثَرَ إِثْمًا، وَأَشَدَّ عُقُوْبَةً، وَأَسْوَأَ عَاقِبَةً</p>
+<p>&ldquo;Sebagaimana dia juga berusaha semaksimal mungkin untuk menjauhkan diri dari semua kemaksiatan yang diharamkan oleh Allah. Diantaranya menganggu orang lain, hal itu termasuk keharaman yang terbesar. Dan jika gangguan tersebut kepada para jamaah haji dan juga jamaah &lsquo;umroh maka kedzolimannya semakin besar dosanya, hukumannya semakin berat, dan akibatnya semakin buruk&rdquo; (Fataawaa Ibnu Baaz 5/139)</p>
+<p>Maka seorang yang sedang berhaji berhati-hati jangan sampai menyakiti jamaah haji yang lain. Tatkala sedang thowaf jangan sampai karena ingin segera selesai maka akhirnya mendorong-dorong jamaah haji yang lain. Demikian juga jangan sampai gara-gara ingin mencium hajar aswad lantas tidak mau ikut ngantri, lalu nyelonong masuk dan merebut antrian orang lain. Jika kita sedang ngantri makanan lalu ada orang lain yang langsung maju ke depan dan tidak ikut antrian tentu kita akan marah. Apalagi jika kita merebut antrian orang-orang yang hendak mencium hajar aswad?. Jangan sampai seseorang ingin mendapatkan pahala sunnah namun dengan cara menempuh cara yang haram yang mengancam hilangnya kemabruran hajinya.</p>
+<p>Para ulama menyebutkan diantara bentuk mengganggu jamaah haji yang lain adalah berdzikir beramai-ramai dengan suara yang keras -apalagi pakai microphone- tatkala thowaf dan sa&iacute;. Sesungguhnya Allah maha mendengar doa dan dzikir para hamba. Seseorang tidaklah mengangkat suaranya tatkala berdzikir kecuali pada kondisi-kondisi yang memang disyari&aacute;tkan untuk mengangkat suara. Seperti tatkala bertalbiyah dan tatkala takbiran. Adapun tatkala thowaf dan sa&iacute; maka tidak disunnahkan untuk mengangkat suara keras-keras yang bisa mengganggu jama&aacute;h haji yang lainnya.</p>
+<ul>
+<li>Berghibah riya (menggunjing dan menceritakan kejelekan orang lain). Ini merupakan dosa yang juga sangat rawan dilakukan oleh jamaah terlebih lagi dengan banyaknya sarana sosial media. Seseorang lebih terpancing untuk membaca tentang kejelekan orang lain, dan juga ikut menyebarkannya. Hati-hati jangan sampai seorang yang sedang haji ikut menyebarkan berita-berita hoax, demikian juga berita yang ia tidak tahu pasti akan kebenarannya. Ghibah merupakan dosa besar, demikian juga dusta atau ikut menyebarkan dusta. Nabi shallallahu &lsquo;alaihi wasallam bersabda :</li>
+</ul>
+<p style="text-align: right;" class="arab">كَفَى بِالْمَرْءِ كَذِبًا أَنْ يُحَدِّثَ بِكُلِّ مَا سَمِعَ</p>
+<p>&ldquo;Cukuplah seseorang berdusta jika ia menyampaikan semua yang ia dengar&rdquo; (HR Muslim)</p>
+<ul>
+<li>Bertabarruj/bersolek bagi jama&aacute;h haji wanita. Hendaknya para wanita yang berhaji untuk tidak bersolek di hadapan para lelaki yang bukan suaminya dan bukan mahromnya. Bersolek dengan memakai make up yang berlebihan di wajah atau bersolek dengan memakai pakaian yang menarik perhatian. Hendaknya mereka tatkala pergi ke masjid dengan pakaian yang tidak menarik perhatian dan tidak berhias, demikian juga tatkala melaksanakan ritual haji. Tujuan mereka adalah untuk mencari ampunan dan keridhoan Allah.</li>
+<li>Bercampur baur dengan lawan jenis di kamar atau di kemah-kemah tatkala di Mina dan di &lsquo;Arofah</li>
+<li>Mengumbar pandangan kepada lawan jenis</li>
+</ul>
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

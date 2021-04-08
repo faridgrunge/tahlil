@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Maulid ad-Diba'i - Bagian 3</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+يُبْعَثُ مِنْ تِهَامَةِ بَيْنَ يَدَيِ الْقِيَامَةِ ۞ فِيْ ظَهْرِهِ عَلَامَةٌ تُظِلُّهُ الْغَمَامَةُ ۞ تُطِيْعُهُ السَّائِبُ ۞ فَجْرِيُّ الْجِبِيْنِ لَيْلِيُّ الذَّوَائِبِ ۞ أَلِفِيُّ الْأَنْفِ مِيْمِيُّ الْفَمِ نُوْنِيُّ الْحَاجِبِ ۞ سَمْعُهُ يَسْمَعُ صَرِيْرَ الْقَلَمِ بَصَرُهُ إِلَى السَّبْعِ الطِّبَاقِ ثَاقِبٌ ۞<br><br>
+
+قَدَمَهُ قَبَّلَهُمَا الْبَعِيْرُ فَأَزَالَا مَا اشْتَكَاهُ مِنَ الْمِحَنِ وَ النَّوَائِبِ ۞ آمَنَ بِهِ الضَّبُّ وَ سَلَّمَتْ عَلَيْهِ الْأَشْجَارُ وَ خَاطَبَتْهُ الْأَحْجَارُ ۞ وَ حَنَّ إِلَيْهِ الْجِذْعُ حَنِيْنَ حَزِيْنٍ نَادِبٍ ۞ يَدَاهُ تَظْهَرُ بَرَكَتُهُمَا فِي الْمَطَاعِمِ وَ الْمَشَارِبِ ۞<br><br>
+
+قَلْبُهُ لَا يَغْفُلُ وَ لَا يَنَامُ وَ لَكِنْ لِلْخِدْمَةِ عَلَى الدَّوَامِ مُرَاقِبٌ ۞ إِنْ أُوْذِيَ يَعْفُ وَ لَا يُعَاقِبُ ۞ وَ إِنْ خُوْصِمَ يَصْمُتْ وَ لَا يُجَاوِبْ ۞ أَرْفَعُهُ إِلَى أَشْرَفِ الْمَرَاتِبِ ۞ فِيْ رَكْبَةٍ لَا تَنْبَغِيْ قَبْلَهُ وَ لَا بَعْدَهُ لِرَاكِبٍ ۞<br><br>
+
+فِيْ مَوْكِبٍ مِنَ الْمَلَائِكَةِ يَفُوْقُ عَلَى سَائِرِ الْمَوَاكِبِ ۞ فَإِذَا ارْتَقَى عَلَى الْكَوْنَيْنِ وَ انْفَصَلَ عَنِ الْعَالَمِيْنَ ۞ وَ وَصَلَ إِلَى قَابِ قَوْسَيْنِ كُنْتُ لَهُ أَنَا النَّدِيْمَ وَ الْمُخَاطِبَ <br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+ثُمَّ أَرُدُّهُ مِنَ الْعَرْشِ ۞ قَبْلَ أَنْ يَبْرُدَ الْفَرْشُ ۞ وَ قَدْ نَالَ جَمِيْعَ الْمَآرِبِ ۞ فَإِذَا شُرِّفَتْ طُرْبَةَ طَيْبَةَ مِنْهُ بِأَشْرَفِ قَالِبٍ ۞ سَعَتْ إِلَيْهِ أَرْوَاحُ الْمُحِبِّيْنَ عَلَى الْأَقْدَامِ وَ النَّجَائِبِ <br><br>
+
+اَللَّهُـمَّ صَلِّ وَ سَلِّمْ وَ بَارِكْ عَلَيْهِ<br><br>
+
+صَلَاةُ اللّٰهِ مَا لَاحَتْ كَوَاكِبْ ۞<br>
+عَلَى أَحْمَدْ خَيْرِ مَنْ رَكِبَ النَّجَائِبْ<br><br>
+
+حَدَى حَادِى السُّرَى بِاسْمِ الْحَبَائِبْ ۞<br>
+فَهَزَّ السُّكْرُ أَعْطَافَ الرَّكَائِبْ<br><br>
+
+أَلَمْ تَرَهَا وَ قَدْ مَدَّتْ حُطَاهَا ۞<br>
+وَ سَالَتْ مِنْ مَدَامِعِهَا سَحَائِبْ<br><br>
+
+وَ مَالَتْ لِلْحِمَى طَرَبًا وَ حَنَّتْ ۞<br>
+إِلَى تِلْكَ الْمَعَالِمِ و الْمَلَاعِبْ<br><br>
+
+فَدَعْ جَذْبَ الزِّمَامِ وَ لَا تَسُقْهَا ۞<br>
+فَقَائِدُ شَوْقِهَا لِلْحَيِّ جَاذِبْ<br><br>
+
+فَهِمْ طَرَبًا كَمَا هَامَتْ وَ إِلَّا ۞<br>
+فَإِنَّكَ فِيْ طَرِيْقِ الْحُبِّ كَاذِبْ<br><br>
+
+أَمَا هَذَا الْعَقِيْقُ بَدَا وَ هذِيْ ۞<br>
+قِبَابُ الْحَيِّ لَاحَتْ وَ الْمَضَارِبْ<br><br>
+
+وَ تِلْكَ الْقُبَّةُ الْخَضْرَا وَ فِيْهَا ۞<br>
+نَبِيٌّ نُوْرُهُ يَجْلُو الْغَيَاهِبْ<br><br>
+
+وَ قَدْ صَحَّ الرَّضَى وَ دَنَا التَّلَاقِيْ ۞<br>
+وَ قَدْ جَاءَ الْهَنَا مِنْ كُلِّ جَانِبْ<br><br>
+
+فَقُلْ لِلنَّفْسِ دُوْنَكَ وَ التَّمَلِّيْ ۞<br>
+فَمَا دُوْنَ الْحَبِيْبِ الْيَوْمَ حَاجِبْ<br><br>
+
+تَمَلَّى بِالْحَبِيْبِ بِكُلِّ قَصْدٍ ۞<br>
+فَقَدْ حَصَلَ الْهَنَا وَ الضِّدُّ غَائِبْ<br><br>
+
+نَبِيُّ اللَّهِ خَيْرُ الْخَلْقِ جَمْعًا ۞<br>
+لَهُ أَعْلَى الْمَنَاصِبِ وَ الْمَرَاتِبْ<br><br>
+
+لَهُ الْجَاهُ الرَّفِيْعُ لَهُ الْمَعَالِيْ ۞<br>
+لَهُ الشَّرَفُ الْمُؤَبَّدُ وَ الْمَنَاقِبْ<br><br>
+
+فَلَوْ أَنَّا سَعَيْنَا كُلَّ يَوْمٍ ۞<br>
+عَلَى الْأَحْدَاقِ لَا فَوْقَ النَّجَائِبْ<br><br>
+
+وَ لَوْ أَنَّا عَمِلْنَا كُلَّ حِيْنٍ ۞<br>
+لِأَحْمَدَ مَوْلِدًا قَدْ كَانَ وَاجِبْ<br><br>
+
+عَلَيْهِ مِنَ الْمُهَيْمِنِ كُلَّ وَقْتٍ ۞<br>
+صَلَاةٌ مَا بَدَا نُوْرُ الْكَوَاكِبْ<br><br>
+
+تَعُمُّ الْآلَ وَ الْأَصْحَابَ طُرًّا ۞<br>
+جَمِيْعَهُمُ وَ عِتْرَتَهُ الْأَطَايِبْ</p><br><br><p><i>Allāhumma shalli wa sallim wa bārik 'alaīh.<br><br>
+
+Yub-'atsu min tihāmati bayna yadayil-qiyāmah.  ۞ Fī zhaharihi 'alāmatun-tuzhilluhul-ghamāmah. ۞ Tuthī-'uhus-sā-ib. ۞ Fajriyyul-jibīni layliyyudz-dzawā-ib. ۞ Alifiyyul-anfi mīmiyyul-fami nūniyyul-ḥājib. ۞ Sam-'uhu yasma-'u sharīral-qalami basharuhu ilas-sab-'ith-thibāqi tsāqib. ۞ Qadamahu qabbalahumal-ba-'īru fa-azālā masytakāhu minal-mihani wan-nawā-ib. ۞ Āmana bihidh-dhabbu wa sallamat 'alayhil-asyjāru wa khāthabat-hul-aḥjār. ۞ Wa ḥanna ilayhil-jidz-'u ḥanīna ḥazīnin-nādib. ۞ Yadāhu tazh-haru barakatuhumā fil-mathā-'imi wal-masyārib. ۞ Qalbuhu lā yaghfulu wa lā yanāmu wa lakil-lilkhidmati 'alad-dawāmi murāqib. ۞ In-ūdziya ya'fu wa lā yu-'āqib. ۞ Wa-in khūshima yashmut wa lā yujāwib. ۞ Arfa-'uhu ilā asyrafil-marātib. ۞ Fī rakbatil-lā tanbaghī qablahu wa lā ba'dahu li-rākib. ۞ Fī mawkibimm-minal-malā-ikati yafūqu 'alā sā-iril-mawākib. ۞ Fa-idzartaqā 'alal-qawnayni wan fashala 'anil-'ālamīn. ۞ Wa washala ilā qābi qawsayni kuntu lahu anan-nadīma wal-mukhāthib. ۞
+<br>Allāhumma shalli wa sallim wa bārik 'alaīh.
+<br>Tsumma arudduhu minal-'arsy. ۞ Qabla ayyabrudal-farsy. ۞ Wa qad nāla jamī-'al-mārib. ۞ Fa-idzā syurrifat thurbata thaybata minhu bi-asyrafi qālib. ۞ Sa-'at ilayhi arwāḥul-muḥibbīna 'alal-aqdāmi wan-najā-ib. ۞
+<br>Allāhumma shalli wa sallim wa bārik 'alaīh.
+<br>Shalātullāhi mā lā ḥat kawākib. ۞ 'Alā Aḥmad khayri man rakiban-najā-ib.
+<br>Ḥadā ḥādis-surā bismil-ḥabā-ib. ۞ Fahazzas-sukru a'thāfar-rakā-ib.
+<br>Alam tarahā wa maddat ḥuthā-hā. ۞ Wa sālat mimm-madā mi-'ihā saḥā-ib.
+<br>Wa mālat lil-ḥimā tharabaw-wa ḥannat. ۞ Ilā tilkal-ma'ālimi wal-malā-'ib.
+<br>Fada' jadzbaz-zimāmi wa lā tasuqhā. ۞ Faqā-idu syawqihā lil-ḥayyi jādzib.
+<br>Fahim tharaban kamā hāmat wa illā. ۞ Fainnaka fī tharīqil-ḥubbi kādzib.
+<br>Amā hadzal-'aqīqu badā wa hadzī. ۞ Qibābul-ḥayyi lāhat wal-madhārib.
+<br>Wa tilkal-qubbatul-khadh-rā wa fīhā. ۞ Nabiyyu nūruhu yajlul-ghayāhib.
+<br>Wa qad shaḥḥar-radhā wa danat-talāqī. ۞ Wa qad jā-al-hanā min kulli jānib.
+<br>Faqul-linnafsi dūnaka qat-tamallī. ۞ Famā dūnal-ḥabībil-yawma ḥājib.
+<br>Tamallā bil-ḥabībi bi-kulli qasdin. ۞ Faqad ḥashalal-hanā qadh-dhiddu ghā-ib.
+<br>Nabiyyullāhi khayrul-khalqi jam-'ā. ۞ Lahu a'lal-manāshibi wal-marātib.
+<br>Lahul-jāhur-rafī-'u lahul-ma-'ālī. ۞ Lahusy-syaraful-mu-abbadu wal-manākib.
+<br>Falaw annā sa-'aynā kulla yaūm. ۞ 'Alal-aḥdāqi lā fawqan-najā-ib.
+<br>Wa law annā 'amilnā kulla ḥīn. ۞ Li-Aḥmada mawlidan qad kāna wājib.
+<br>Alayhi minal-muhaymini kulla waqtin. ۞ Shalātumm-mā badā nūrul-kawākib.
+<br>Ta-'ummul-āla wal-ashḥāba thurrā. ۞ Jamī-'ahumu wa 'it-ratahul-a-thāyib.</i></p><br><br><p>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).<br><br>
+
+Nabi Muḥammad ﷺ diutus (sebagai utusan Allah) dari negeri Tihamah (Makkah) di akhir zaman. ۞ Di punggungnya terdapat suatu tanda kenabian. ۞ Jika berjalan ia dinaungi mendung dan diikuti awan. ۞ Mukanya cerah bagaikan fajar pagi, rambutnya hitam bagaikan gelapnya malam. ۞ Hidungnya mancung bagaikan huruf alif, mulutnya indah bagaikan huruf mīm, alisnya melengkung bagaikan huruf nūn. ۞ Pendengarannya amat peka hingga mampu mendengar goresan pena, penglihatannya sangat tajam mampu menembus langit ke tujuh. ۞ Kedua kakinya diciumi oleh unta, sehingga unta itu pun hilang rasa derita karena musibah yang dikeluhkannya. ۞ Binatangpun mengimani kerasulannya, dan pohon-pohon mengucapkan salam kepadanya, demikian pula bebatuan menyapanya. ۞ Bahkan batang kurmapun sangat menyayang dan merindukannya, bagaikan orang yang sedih dan gelisah menunggu kedatangannya. ۞ Kedua tangannya mengandung berkah pada makanan dan minuman. ۞ Hatinya tak pernah lengah dan tidak pernah tidur, bahkan selalu berkhidmat dan mengingat Allah. ۞ Jika disakiti selalu memaafkan dan tak pernah menyimpan rasa dendam. ۞ Jika diajak bertengkar selalu diam dan tidak mau menjawab. ۞ Dia, Muḥammad ﷺ diangkat oleh Allah ke derajat yang paling mulia dan terhormat. ۞ Yang belum pernah dicapai oleh orang-orang sebelumnya atau sesudahnya. ۞ Ketika berada di tengah-tengah rombongan para malaikat. ۞ Dia melewati dua alam (alam manusia dan alam malaikat) dan terpisah dari kedua alam itu. ۞ Sampai ke tempat yang dekat dengan Sidratul-Muntahā, maka Allah berfirman; “Akulah Penghiburnya dan Yang berbicara kepadanya.” ۞ 
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Kemudian Aku kembalikan dia (Nabi ﷺ) dari ‘Arsy, sebelum dingin tempat tidurnya, dan dia telah memperoleh semua tujuannya, ketika dia telah memijakkan kakinya di muka bumi, berduyun-duyunlah para pecintanya mendatanginya dengan berjalan kaki dan menaiki kendaraan.
+<br>Ya Allah, limpahkanlah rahmat, salam, dan berkah kepadanya (Rasulullah ﷺ).
+<br>Selama bintang-bintang masih bersinar, semoga rahmat Allah tetap tercurahkan.  ۞  Kepada Nabi Muḥammad ﷺ, sebaik-baik orang yang menaiki kendaraan unta.
+<br>Selama pengiring unta menyanyikan lagu menyebut nama kekasih terindu.  ۞  Unta mengangguk-angguk menari gembira oleh irama lagu.
+<br>Tidakkah engkau lihat, semakin cepat langkah unta?  ۞  Bercucuran deras dari matanya air mata bagaikan awan tiba.
+<br>Semakin condong langkah untuk kegembiraan lagi merindukan.  ۞  Menuju kandang gembalaan pengembaraannya.
+<br>Biarkan, jangan kau tarik kendali dan jangan menggiringnya.  ۞  Maka penggembala merasa kesepian merindukan Nabi ﷺ, kemudian ia menariknya.
+<br>Tunjukkanlah rasa cintamu sebagaimana cintanya unta dan jikalau tidak..  ۞  Maka jalan cintamu pada Nabi ﷺ adalah dusta.
+<br>Tidakkah kamu gembira melihat negeri al-‘Aqīq yang telah terlihat.  ۞  Dan inilah kubah-kubah masjid Nabi ﷺ yang bersinar gemerlapan.
+<br>Itulah kubah hijau dan Nabi ﷺ bermakam di dalamnya.  ۞  Seorang nabi yang nur-nya menerangi kegelapan.
+<br>Dan sungguh jelas keridhaan Allah, dan pertemuanpun telah dekat.  ۞  Dan sungguh telah datang kegembiraan dari segala penjuru
+<br>Maka bisikkan ke dalam hati, tiada seorangpun lebih kucondongkan rasa cinta.  ۞  Maka tiada satupun hari ini berjumpa kepada kekasih, yaitu penghalangnya.
+<br>Condongkanlah rasa cita kepada kekasih di segala tujuan.  ۞  Maka sungguh memperoleh kesenangan dan lenyaplah kesedihan.
+<br>Nabi Allah yang sebaik-baik makhluk kesemuanya.  ۞  Baginya keluhuran pangkat dan tinggi martabat.
+<br>Baginya tinggi kedudukan, baginya segala keluhuran.  ۞  Kemuliaannya diabadikan dan menjadi kenangan.
+<br>Alangkah gembiranya, andaikata kita dapat menziarahi Nabi setiap hari.  ۞  Dengan rombongan yang besar, bukan dengan rombongan yang sedikit.
+<br>Dan seandainya kami beramal setiap saat,  ۞  Pada peringatan kelahiran Ahmad ﷺ, maka sungguh hukumnya wajib.
+<br>Setiap waktu kumohonkan untuknya dari Allah.  ۞  Yaitu rahmat selama bintang-bintang masih bersinarkan cahaya.
+<br>Kepada keluarga dan para sahabat semuanya.  ۞  Serta semua keturunannya yang baik-baik lagi mulia.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Doa Menyambut Bulan Ramadhan</h1>
+<ol>
+<li></li>
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اللَّهُـمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْاِيْمَانِ وَالسَّلَامَةِ وَالْاِسْلَامِ وَالْعَافِيَةِ الْمُجَلَّلَةِ وَدِفَاعِ الْأَسْقَامِ وَالْعَوْنِ عَلَى الصَّلَاةِ وَالصِّيَامِ وَتِلَاوَةِ الْقُرْآنِ<br><br>اللَّهُـمَّ سَلِّمْنَا لِرَمَضَانَ، وَسَلَّمَهُ لَنَا، وَسَلَّمَهُ مِنَّا حَتَّى يَخْرُجُ رَمَضَانَ وَقَدْ غَفَرْتَ لَنَا وَرَحْمَتُنَا وَعَفَوْتَ عَنَّا</p><p><i>Allahumma ahillahu ‘alaina bil amni wal imani was salamati wal islami wal ‘afiyatil mujallalati wa difa’il asqomi wal ‘aini ‘alash sholati wash shiyami wa tilawatil qur’ani. <br><br>Allahumma sallimnaa liromadhona, wasallamahu lanaa, wa sallamahu minna hatta yakhruju romadhona wa qad ghofarta lanaa warahmatunaa wa ‘afawta ‘annaa.</i></p><p>Ya Allah, pertemukan bulan ini dengan kami dalam keadaan aman, iman, keselamatan, Islam, sehat yang prima, kebal dari penyakit, dan pertolongan untuk salat, puasa, dan membaca Al-Qur'an. <br><br>Ya Allah, serahkan kami pada Ramadhan ini. Serahkan Ramadhan pada kami. Selamatkan Ramadhan dari kami. Hingga selesai bulan Ramadhan sedang Engkau telah mengampuni kami, Engkau telah merahmati kami, dan Engkau memaafkan kami.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>Al-Hafidz Ibnu Asakir, Tarikh Dimasyqa 51/186
+</strong></p>
+
+<br><br>
+<li></li>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اللَّهُـمَّ سَلِّمْنِي لِرَمَضَانَ وَسَلِّمْ لِي رَمَضَانَ، وَتَسَلَّمْهُ مِنِّي مُتَقَبَّلً</p><p><i>Allahumma sallimni ila ramadhan, wa sallim li ramadhan, wa tasallamhu minni mutaqabbalan.</i></p><p>Ya Allah, sampaikan aku dengan selamat ke Ramadhan, sampaikan Ramadhan kepadaku, dan terimalah amalku di bulan Ramadhan.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Ibnu Rajab Al-Hanbali menyebutkan bahwa sebelum memasuki bulan Ramadhan, Yahya bin Katsir, seorang ulama tabi'in senantiasa memohon kepada Allah dengan doa ini yang bersumber dari sebagian sahabat Rasulullah ﷺ.<br><br>Doa yang serupa  juga dapat ditemukan di kitab Hilyatul Aulia karya  Abu Nuaim Al-Asfahani.</p><p><strong>Lathaif Al-Ma’arif & Hilyatul Aulia
+</strong></p>
+
+<br><br>
+<li></li>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>اَللّٰهُـمَّ هٰذَا شَهْرُ رَمَضَانَ قَدْ حَلَّ بِنَا فَاَدْخِلْهُ عَلَيْنَا بِأَمْنٍ وَاَمَانٍ وَصِحَّةٍ مِنَ السَّقَمِ وَبِالْفَرَاغِ مِنَ الشُّغْلِ وَاَعِنَّا عَلٰى الصِّيَامِ وَالْقِيَامِ وَتِلَاوَةِ الْقُرْآنِ حَتّٰى يَنْقَضِيْ عَنَّا وَغَفَرْتَ لَنَا وَرَضِيْتَ عَنَّا<br><br> اَللّٰهُـمَّ هٰذَا شَهْرُ رَمَضَانَ قَدْ حَصَّ فَسَلِّمْهُ لَنَا وَسَلِّمْنَا لَهُ فِيْ سُرُوْرٍ مِنْكَ وَعَافِيَةٍ <br><br>اَللّٰهُـمَّ ارْزُقْنَا صِيَامَهُ وَقِيَامَهُ وَبِقَبُوْلٍ مِنْكَ وَامْتِثَالِ اَمْرِكَ وَاجْتِنَابِ نَهْيِكَ <br><br> اَللّٰهُـمَّ ارْفَعْ عَنَّا الْكَسَلَ وَالْفَتْرَةَ  وَالسَّئَامَةَ وَارْزُقْنَا فِيْهِ الْخَيْرَ وَالْجَدَّ وَاْلِاجْتِهَادَ وَالْاَجْرَ وَالْقُوَّةَ وَالنَّشَاطَ كَمَا تُحِبُّ وَتَرْضٰى</p><p><i>Bismillahirrahmanirrahim. <br><br>Allahumma hadza syahru ramadhana qad halla bina fa adhilhu ‘alaina biamnin waamanin wasihhatin minas saqami wabil faraghi minas syughli wa’ainna ‘alash shiyam wal qiyam waqiraatil qur’an hatta yanqadhi ‘anna waghafarta lana waradhita ‘anna .<br><br>ِAllahumma  hadza syahru ramadhana qad hashsha fasallimhu lana fi sururin minka wa’afiyatin <br><br>Allahummar zuqna shiyamahu waqiyamahu wabiqabulin minka wamtitsali amrika wajtinabi nahyika <br><br>Allahummarfa’ ‘annal kasala wal fatrata was saamata war zuqna fihil khaira wal jadda wal ijtihada wal ajra wal quwwata wan nasyatha  kama tuhibbu wa tardha.</i></p><p>Dengan menyebut nama Allah yang Maha Pengasih dan Maha Penyayang. Ya Allah,  bulan ini adalah bulan Ramadhan, sungguh ia (ramadhan) telah tiba dalam kehidupan kami, maka masukkanlah ia (Ramadhan) dalam kehidupan kami dengan penuh ketentraman, keamanan, dan kesehatan dari penyakit serta kesempatan yang jauh dari kesibukan. Bantulah kami untuk melakukan puasa dan ibadah di malam harinya, dam membaca Al-Qur’an hingga Ramadhan berlalu dari kehidupan kami, berilah kami ampunan, dan keridhaan.<br><br>Ya Allah, bulan ini adalah bulan Ramadhan,  sungguh ia (Ramadhan) telah tiba waktunya, maka sampaikanlah ia bagi kehidupan kami dan sampaikanlah kami kepada Ramadhan dalam keadaan bahagia dan sehat sentosa.<br><br>Ya Allah, berilah kami rizki berupa kemampuan untuk berpuasa dan beribadah dan pengabulan puasa dari-Mu, melaksanakan perintah-Mu dan menjauhi larangan-Mu.<br><br>Ya Allah, hilangkanlah dari diri kami rasa malas untuk berpuasa, ketidakberdayaan, rasa bosan, berilah kami rizki di bulan Ramadhan berupa kebaikan, kesungguhan, keseriusan, pahala, kekuatan, semangat sebagaimana yang Kau cintai dan Kau ridhai.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>Jawahir Al-Khomsi
+</strong></p>
+
+<br><br>
+<li></li>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اللَّهُـمَّ أَهْلِلْهُ عَلَيْنَا بِالْيُمْنِ وَالإِيمَانِ وَالسَّلاَمَةِ وَالإِسْلاَمِ رَبِّي وَرَبُّكَ اللَّهُ</p><p><i>Allaahumma ahlilhu ‘alainaa bilyumni wal imaani was salaamati wal islaam, rabbii wa rabbukallaah.</i></p><p>Ya Allah, terbitkanlah bulan tersebut kepada kami dengan berkah, iman, keselamatan serta Islam. Tuhanku dan Tuhanmu adalah Allah.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Doa ini bisa diucapkan saat memasuki bulan Ramadhan dan bulan-bulan lainnya.<br><br>Imam Tirmidzi menilai hadis ini hasan gharib.</p><p><strong>Tirmidzi no. 3451 & Ahmad no. 1324
+</strong></p>
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

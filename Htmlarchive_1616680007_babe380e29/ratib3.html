@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Ratib Al-Haddad | Bagian III - Al-Fatihah untuk para awliya dan habaib
+</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَلْفَاتِحَةُ اِلٰى رُوْحِ حَبِيْبِنَا وَشَفِيْعِنَا رَسُوْلِ اللّٰهِ مُحَمَّدِ بْنِ عَبْدِاللّٰهِ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَأَصْحَابِهِ وَذُرِّيَّاتِهِ إِنَّ اللّٰهَ يُعْلِىْ دَرَجَاتِهِمْ فِي الْجَنَّةِ وَيَنْفَعُنَا بِهِمْ وَيُعِيْدُ عَلَيْنَا مِنْ بَرَكَاتِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُوْمِهِمْ وَنَفَحَاتِهِمْ فِى الدِّيْنِ وَالدُّنْيَا وَالْاٰخِرَةِ, وَيَجْعَلُنَا مِنْ حِزْبِهِمْ وَيَرْزُقُنَا مَحَبَّتَهُمْ وَيَتَوَفَّانَا عَلٰى مِلَّتِهِمْ وَيَحْشُرُنَا فِيْ زُمْرَتِهِمْ - اَلْفَاتِحَةْ <br><br>
+
+اَلْفَاتِحَةُ اِلٰى رُوْحِ سَيِّدِنَا الْمُهَاجِرِ اِلَى اللّٰهِ اَحْمَدَ بْنِ عِيْسَى اِلٰى رُوْحِ سَيِّدِنَا الْفَقِيْهِ الْمُقَدَّمِ مُحَمَّدِ بْنِ عَلِيِّ بَاعْلَوِيْ وَأُصُوْلِهِ وَفُرُوْعِهِ وَذَوِى الْحُقُوْقِ عَلَيْهِمْ أَجْمَعِيْنَ, وَجَمِيْعِ سَادَاتِنَا بَنِي عَلَوِيِّ وَأُصُولِهِمْ وَفُرُوعِهِمْ, إِنَّ اللّٰهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمُ وَيُعْلِىْ دَرَجَاتِهِمْ فِى الْجَنَّةِ وَيَنْفَعُنَا بِهِمْ وَيُعِيْدُ عَلَيْنَا مِنْ بَرَكَاتِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُوْمِهِمْ وَنَفَحَاتِهِمْ فِي الدِّيْنِ وَالدُّنْياَ وَالآخِرَةِ - اَلْفَاتِحَةْ<br><br>
+
+اَلْفَاتِحَةُ اِلٰى رُوْحِ سَيِّدِ نَا صَاحِبِ الرَّاتِبِ قُطْبِ الاِرْشَادِ وَغَوْثِ العِبَادْ وَالْبِلَادِ  الْحَبِيْبِ عَبْدِ اللّٰهِ بِنْ عَلَوِي بِنْ مُحَمَّدٍ الْحَدَّادِوَأُصُوْلِهِ وَفُرُوْعِهِمْ وَذَوِى الْحُقُوْقِ عَلَيْهِمْ أَجْمَعِيْنَ إِنَّ اللّٰهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِىْ دَرَجَاتِهِمْ فِى الْجَنَّةِ وَيَنْفَعُنَا بِهِمْ وَيُعِيْدُ عَلَيْنَا مِنْ بَرَكَاتِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُوْمِهِمْ وَنَفَحَاتِهِمْ فِي الدِّيْنِ وَالدُّنْياَ وَالآخِرَةِ - اَلْفَاتِحَةْ <br><br>
+
+ثُمَّ إِلٰى أَرْوَاحِ الْأَوْلِيَاءِ وَالصَّالِحِيْنَ وَالْأَئِمَّةِ الرَّاشِدِيْنَ ثُمَّ إِلٰى أَرْوَاحِ وَالِدِيْنَ وَمَشَايِخِنَا وَمُعَلِّمِيْنَ وَذَوِى الْحُقُوْقِ عَلَيْنَا أَجْمَعِيْنَ<br><br>
+
+ ثُمَّ إِلٰى أَرْوَاحِ أَمْوَاتِ هٰذِهِ الْبَلْدَةِ مِنَ الْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ وَالْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ إِنَّ اللّٰهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِىْ دَرَجَاتِهِمْ فِى الْجَنَّةِ وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُوْمِهِمْ وَنَفَحَاتِهِمْ فِي الدِّيْنِ وَالدُّنْياَ وَالآخِرَةِ - اَلْفَاتِحَةْ<br><br>
+
+اَلْفَاتِحَةُ بِنِيَّةِ الْقَبُوْلِ وَالْوُصُوْلِ وَحُصُوْلِ تَمَامِ كُلِّ سُؤْلٍ وَمَأْمُوْلٍ وَصَلَاحِ الشَّأْنِ ظَاهِرًا وَبَاطِنًا فِى الدِّيْنِ وَالدُّنْيَا وَالْاٰخِرَةِ دَافِعَةً لِكُلِّ شَرٍّ جَالِبَةً لِكُلِّ خَيْرٍ لَنَا وَلِوَالِدِيْنَ وَلِأَوْلَادِنَا وَلِأَحْبَابِنَا وَمَشَايِخِنَا فِى الدِّيْنِ مَعَ اللُّطْفِ وَالْعَافِيَةِ وَعَلٰى نِيَّةِ أَنَّ اللّٰهَ يُنَوِّرُ قُلُوْبَنَا وَقَوَالِبَنَا مَعَ التُّقَى وَالْهُدٰى وَالْعَفَافِ وَالْمَوْتَ عَلَى دِيْنِ الْإِ سْلاَمِ بِلَامِحْنَةٍ وَلَااِمْتِحَانٍ بِجَاهِ سَيِّدِنَا وَلَدِ عَدْنَانَ جَامِعَةً لِكُلِّ نِيَّةٍ صَالِحَةٍ وَزِيَادَةٍ وَمَحَبَّةٍ فِي شَرَفِ الْحَبِيْبِ مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَعَلٰى اٰلِهِ وَصَحْبِهِ وَسَلَّمَ - اَلْفَاتِحَةُ</p><br><br><p><i>Al-Fātiḥah ilā rūḥi ḥabībinā wa syafī-’inā Rasūlillah Muḥammad ibni 'Abdillāh shallallāhu ‘alayhi wa sallama wa ālihi wa ash-ḥābihi wa dzurriyyāatihi innallāha yu’lī darajātihim fil-jannati wa yanfa'unā bihim wa yu-’īdu alaynā barakatihim wa asrārihim wa anwārihim wa ‘ulūmihim wa nafaḥātihim fid-dīni wad-dunyā wal-ākhirah. Wayaj’alunā min ḥizbihim wa yarzuqunā maḥabbatahum wa yatawaffānā ‘alā millatihim wa yaḥsyurunā fī zumratihim. Al-Fātiḥah.<br>
+Al-Fātiḥah rūḥi Sayyidina Al-Muhājir ilāllāhu Ahmad bin Isa wa ilā rūḥi Sayyidina al-Faqih al-Muqaddam Muḥammad ibni 'Ali Ba'lawī, wa ushūlihi wa furū-'ihim wadzawil-huqūqi 'alayhim ajma-’īn. Wa jamī-’il-sādātinā bani ‘Alawy wa ushūlihim wa furū-’ihim. Innallāha yaghfiru lahum wa yarḥamuhum wa yu'lī darajātihim fil-jannati wa yanfa'unā bihim wa yu-’īdu alayna min barakātihim wa asrārihim wa anwārihim wa ‘ulūmihim wa nafaḥātihim fid-dīni wad-dunyā wal-ākhirah. Al-Fātiḥah...
+<br>Al-Fātiḥah ilā rūḥi Sayyidinā shāḥibir-rātib Quthbil-Irsyādi wa Ghautsī-'ibād wal-bilād al-Ḥabīb 'Abdullah bin 'Alwy al-Ḥaddad wa ushūlihi wa furū-’ihim wa dzawil-huqūqi 'alayhim ajma’īn. Innallāha yaghfiru lahum wa yarḥamuhum wa yu’lī darajātihim fil-jannati wa yanfa'unā bihim wa yu-’īdu alayna min barakātihim wa asrārihim wa anwārihim wa ‘ulūmihim fid-dīni wad-dunyā wal-ākhirah. Al-Fātiḥah...
+<br>Tsumma ilā arwāḥil-awliyā wash-shālihīn wal-a-immati war-rāsyidīn, tsumma ilā arwāḥi wālidīna wa masyā-yikhinā wa mu’allimīna wa dzawil-huqūqi `alayhim ajma’īn. Annallāha yaghfiru lahum wa yarḥamuhum wa yu’lī darajātihim fil-jannāti wa yanfa-'unā bi asrārihim wa anwārihim wa ‘ulūmihim fid-dīni wad-dunyā wal-ākhirah. Al-Fātiḥah....
+<br>Al-Fātiḥah bi-niyyatil-qabūl wal-wushūl wa ḥushūli tamāmi kulli su'-lin wa ma'mūlin washalāḥisy-sya'ni zhāhiran wa bāthinan fid-dīni wad-dunyā wal-ākhirati dāfi-'atan li-kulli syarrin jālibatan li-kulli khayrin lanā waliwālidīna wa li awladinā wa li aḥbābinā wa masyā-yi-khinā fid-dīni ma'al-luthfi wal-‘āfiyati wa niyyati annallāha yunawwiru qulūbanā wa qawālibanā ma'at-tuqā wal-hudā wal-'afāfa wal-mawta ‘alā dīnil-Islāmi bilā miḥnatin wa lā imtihānin bi-jāhi Sayyidinā waladi 'Adnān, jāmi’atan li-kulli niyyatin shālihatin wa ziyādatin wa maḥabbatin fī syarafil-ḥabībi Muḥammadin shallallāhu ‘alayhi wa sallama wa ‘alā ālihi wa shaḥbihi wa sallam. Al-Fātiḥah...</i></p><br><br><p>Marilah kita baca surah Al-Fatihah yang di­persembahkan kepada ruh kekasih kita dan pem­beri syafaat kepada kita, Rasulullah Muhammad bin 'Abdillah yang tercurah rahmat Allah kepadanya dan juga kesejahteraan, serta untuk keluarga, sahabat, dan ke­turunannya. Semoga Allah meninggikan derajat semuanya di surga, memberi manfaat dengan rahasia mereka, cahaya, dan ilmu mereka dalam urusan agama, dunia, dan akhirat. Dan semoga Allah menjadikan kita dalam kelompok mereka dan memberi kita kemampuan mencintai mereka serta mematikan kita dalam agama mereka dan mengumpulkan kita di lingkungan mereka di akhirat kelak. Al-Fatihah.
+<br>Marilah kita baca surah Al-Fatihah untuk disampaikan kepada ruh Tuan kita al-Imam al-Mujahir, Ahmad bin Isa, dan kepada Al-Faqih Al-Muqaddam Muhammad bin Ali Ba'lawi dan kepada nenek moyangnya serta keturunan mereka semua, dan orang-orang yang memiliki hak terhadap mereka. Serta seluruh Bani 'Alawy untuk nenek moyangnya serta keturunan mereka semua. Semoga Allah mengampuni mereka dan merahmati mereka, mengangkat derajat mereka di surga, dan memberi manfaat dengan rahasia mereka, cahaya-cahaya, ilmu-ilmu dan pemberian-pemberian mereka di dalam urusan agama, dunia, dan akhirat. Al­-Fatihah...
+<br>Al-Fatihah untuk ruh penyusun ratib ini, Tuan kita Kecintaan kita Wali Tertinggi yang memimpin dakwah, Wali tertinggi yang bisa menjadi wasilah pertolongan, al-Habib Abdullah bin Alwy al-Haddad, nenek moyangnya serta keturunan mereka, dan orang-orang yang memiliki hak terhadap mereka. Semoga Allah mengampuni mereka dan merahmati mereka, mengangkat derajat mereka di surga, dan memberi kita manfaat dari mereka dengan berkah mereka, rahasia-rahasianya, cahaya-cahayanya, ilmu-ilmu mereka, serta pemberian-pemberian mereka di dalam urusan agama, dunia, dan akhirat. Al­-Fatihah...
+<br>Selanjutnya mari kita bacakan juga untuk ruh para wali, orang-orang salih, para imam, para pemberi petunjuk kebenaran, ke­mudian untuk para orang tua kita, guru-guru kita, para pengajar kita, dan orang-orang yang memiliki hak terhadap mereka. Semoga Allah mengampuni mereka dan mengasihi mereka, mengangkat derajat mereka di surga, dan mem­beri manfaat dengan rahasia mereka, cahaya, dan ilmu me­reka di dalam urusan agama, dunia, dan akhirat. Al-Fatihah...
+<br>Mari kita baca surah Al-Fatihah dengan niat berharap dikabulkan semua harapan dan mendapatkan kebaikan lahir-batin dalam agama, dunia, dan akhirat, serta dapat mencegah semua keburukan dan bisa menarik semua kebaikan, bagi kami, orangtua-orangtua kami, anak-anak kami, orang-orang yang kami cintai, dan guru-guru kami dengan kelembutan dan kesejahteraan, dan dengan niat semoga Allah menerangi kalbu dan sanubari kami, dengan cahaya taqwa dan petunjuk. Dan menjauhkan diri dari keinginan-keinginan hina. Semoga kami meninggal dalam agama Islam dan beriman, tanpa disertai bencana dan cobaan. Berkat kemuliaan putra Adnan (Rasulullah) dan dengan semua niat baik kami, kecintaaan kepada kekasih kami Nabi Muhammad yang tercurah rahmat Allah lepadanya dan juga keselamatan, serta para keluarga dan sahabatnya dan kesejahteraan. Al-Fatihah...</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

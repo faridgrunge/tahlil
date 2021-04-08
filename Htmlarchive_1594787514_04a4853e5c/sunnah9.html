@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="t" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content">
+		
+		
+<header>
+
+<h1>Sholat Tarawih</h1><br>
+
+  <p>Shalat Tarawih hukumnya sangat disunnahkan (sunnah muakkadah), lebih utama berjama'ah. Demikian pendapat masyhur yang disampaikann oleh para sahabat dan ulama.</p>
+          <p>Ada beberapa pendapat tentang raka’at shalat Tarawih; ada pendapat yang mengatakan bahwa shalat tarawih ini tidak ada batasan bilangannya, yaitu boleh dikerjakan dengan 20 (dua puluh) raka'at, 8 (delapan), atau 36 (tiga puluh enam) raka'at; ada pula yang mengatakan 8 raka’at; 20 raka’at; dan ada pula yang mengatakan 36 raka’at.</p>
+          <p>Pangkal perbedaan awal dalam masalah jumlah raka’at shalat Tarawih adalah pada sebuah pertanyaan mendasar. Yaitu apakah shalat Tarawih itu sama dengan shalat malam atau keduanya adalah jenis shalat sendiri-sendiri? Mereka yang menganggap keduanya adalah sama, biasanya akan mengatakan bahwa jumlah bilangan shalat Tawarih dan Witir itu 11 raka’at.</p>
+          <p>Dalam wacana mereka, di malam-malam Ramadhan, namanya menjadi Tarawih dan di luar malam-malam Ramadhan namanya menjadi shalat malam / qiyamullail. Dasar mereka adalah hadits Nabi SAW: </p>
+          <div class="style1">
+            <div align="right" class="arab">عَنْ عَائِشَةَ رَضِيَ اللهُ عَنْهَا مَا كَانَ رَسُوْلُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ يَزِيْدُ فِيْ رَمَضَانَ وَلاَغَيْرِهِ عَلَى إِحْدَى عَشْرَةَ رَكْعَةً. رواه النسائي</div>
+          </div>
+          <p>”Dari Aisyah RA bahwa Rasulullah SAW tidak pernah menambah di dalam ramadhan dan di luar Ramadhan dari 11 rakaat”. (HR. Al-Bukhari)</p>
+          <p>Sedangkan mereka yang membedakan antara keduanya (shalat malam dan shalat tarawih), akan cenderung mengatakan bahwa shalat Tarawih itu menjadi 36 raka’at karena mengikuti ijtihad Khalifah Umar bin ’Abdul Aziz yang ingin menyamai pahala shalat Tarawih Ahli Makkah yang menyelingi setiap empat raka’at dengan ibadah Thawaf.</p>
+          <p>Lalu Umar bin ’Abdul Aziz menambah raka’at shalat Tarawih menjadi 36 raka’at bagi orang di luar kota Makkah agar menyamahi pahala Tarawih ahli makkah; Atau shalat Tarawih 20 raka’at dan Witir 3 raka’at menjadi 23 raka’at. Sebab 11 rakaat itu adalah jumlah bilangan rakaat shalat malamnya Rasulullah saw bersama sahabat dan setelah itu Beliau menyempurnakan shalat malam di rumahnya. Sebagaimana Hadits Nabi SAW.:</p>
+          <div>
+            <div align="right" class="arab">أَنَّهُ صلّى الله عليه وسلّم خَرَجَ مِنْ جَوْفِ اللَّيْلِ لَيَالِيْ مِنْ رَمَضَانَ وَهِيَ ثَلاَثُ مُتَفَرِّّقَةٍ: لَيْلَةُ الثَالِثِ, وَالخَامِسِ, وَالسَّابِعِ وَالعِشْرِيْنَ, وَصَلَّى فِيْ المَسْجِدِ, وَصَلَّّى النَّاسُ بِصَلاَتِهِ فِيْهَا, وَكَانَ يُصَلِّّْي بِهِمْ ثَمَانِ رَكَعَاتٍ, وَيُكَمِّلُوْنَ بَاقِيْهَا فِيْ بُيُوْتِهِمْ. رواه الشيخان</div>
+          </div>
+          <p>“Rasulullah SAW keluar untuk shalat malam di bulan Ramadlan sebanyak tiga tahap: malam ketiga, kelima dan kedua puluh tujuh untuk shalat bersama umat di masjid, Rasulullah saw. shalat delapan raka’at, dan kemudian mereka menyempurnakan sisa shalatnya di rumah masing-masing. (HR Bukhari dan Muslim).</p>
+          <p>Sedangkan menurut ulama lain yang mendukung jumlah 20 raka’at, jumlah 11 raka’at yang dilakukan oleh Rasulullah SAW tidak bisa dijadikan dasar tentang jumlah raka’at shalat Tarawih. Karena shalat Tarawih tidak pernah dilakukan oleh Rasulullah saw kecuali hanya 2 atau 3 kali saja. Dan itu pun dilakukan di masjid, bukan di rumah. </p>
+          <p>Bagaimana mungkin Aisyah RA meriwayatkan hadits tentang shalat Tarawih Nabi SAW? Lagi pula, istilah shalat Tarawih juga belum dikenal di masa Nabi SAW. Shalat tarawih bermula pada masa Umar bin Khattab RA karena pada bulan Ramadlan orang berbeda-beda, sebagian ada yang shalat dan ada yang tidak shalat, maka Umar menyuruh agar umat Islam berjamaah di masjid dengan imamnya Ubay bin Ka'b.</p>
+          <p>Itulah yang kemudian populer dengan sebutan shalat tarawih, artinya istirahat, karena mereka melakukan istirahat setiap selesai melakukan shalat 4 raka’at dengan dua salam. Dan Umar RA. berkata: &quot;Inilah sebaik-baik bid’ah&quot;. </p>
+          <p>Bagi para ulama pendukung shalat Tarawih 20 raka’at+witir 3= 23, apa yang disebutkan oleh Aisyah bukanlah jumlah raka’at shalat Tarawih melainkan shalat malam (qiyamullail) yang dilakukan di dalam rumah beliau sendiri. Apalagi dalam riwayat yang lain, hadits itu secara tegas menyebutkan bahwa itu adalah jumlah raka’at shalat malam Nabi SAW., baik di dalam bulan Ramadhan dan juga di luar bulan Ramadhan.</p>
+          <p>Ijtihad Umar bin Khoththab RA tidak mungkin mengada-ada tanpa ada dasar pijakan pendapat dari Rasulullah saw, karena para sahabat semuanya sepakat dan mengerjakan 20 raka’at (ijma’ ash-shahabat as-sukuti).</p>
+          <p>Di samping itu, Rasulullah menegaskan bahwa Posisi Sahabat Nabi SAW sangat agung yang harus diikuti oleh umat Islam sebagaimana dalam Hadits Nabi SAW:</p>
+          <div> 
+            <div align="right" class="style1"><span class="arab">فَعَلَيْكُمْ بِسُنَّّتِيْ, وَسُنَّةِ الخُلَفَآءِ الرَّاشِدِيْنَ مِنْ بَعْدِي</span>ْ</div>
+          </div>
+          <p>&quot;Maka hendaklah kamu berpegang teguh kepada sunnahku dan sunnah al-Khulafa' al-Rasyidun sesudah aku &quot;. (Musnad Ahmad bin Hanbal).</p>
+          <p>Ulama Syafi’ayah, di antaranya Imam Zainuddin bin Abdul ‘Aziz al Malibari dalam kitab Fathul Mu’in menyimpulkan bahwa shalat Tarawhi hukumnya sunnah yang jumlahnya 20 raka’at:</p>
+          <div>
+            <div align="right" class="arab">وَصَلاَةُ التَّرَاوِيْحِ سنة مُؤَكَّدَةٌ  وَهِيَ عِشْرُوْنَ رَكْعَةً بِعَشْرِ تَسْلِيْماَتٍ فِيْ كُلِّ لَيْلَةٍ مِنْ رَمَضَانَ لِخَبَرٍ مَنْ قَامَ رَمَضَانَ إِيْمَاناً وَاحْتِسَاباً غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ   وَيَجِبُ التَّسْلِيْمُ مِنْ كُلِّ رَكْعَتَيْنِ فَلَوْ صَلَّى أَرْبَعًا مِنْهَا بِتَسْلِيْمَةٍ لَمْ تَصِحَّ </div>
+          </div>
+          <p>“Shalat Tarawih hukumnya sunnah, 20- raka’at dan 10 salam pada setiap malam di bulan Ramadlan. Karena ada hadits: Barangsiapa Melaksanakan (shalat Tarawih) di malam Ramadlan dengan iman dan mengharap pahala, maka dosanya yang terdahullu diampuni. Setiap dua raka’at haru salam. Jika shalat Tarawih 4 raka’at dengan satu kali salam maka hukumnya tidak sah……”. (Zainuddin al Malibari, Fathul Mu’in, Bairut: Dar al Fikr, juz I, h. 360). </p>
+          <p>Pada kesimpilannya, bahwa pendapat yang unggul tentang jumlah raka’at shalat tarawih adalah 20 raka’at + raka’at witir jumlahnya 23 raka’at. Akan tetapi jika ada yang melaksanakan shalat tarawih 8 raka’at + 3 withir jumlahnya 11 raka’at tidak berarti menyalahi Islam. Sebab perbedaan ini hanya masalah furu’iyyah bukan masalah aqidah tidak perla dipertentangkan.<br>
+          </p>
+          <h3>30 Fadhilah Shalat Tarawih</h3>
+          Diriwayatkan dari Ali bin Abi Thalib ra. bahwasannya Rasulullah saw pernah ditanya seseorang mengenai fadhilah shalat tarawih di bulan Ramadhan, maka beliau berkata “(fadhilah tarawih) di malam;</p>
+          <p>1. membebaskan seorang mu’min dari dosanya seperti ketika ia baru dilahirkan ibunya.</p>
+          <p>2. diampunkan dosa kedua ibu-bapaknya, jika kedunya beriman.</p>
+          <p>3. berseru malaikat dari bawah ‘arasy “mulailah beramal, Allah telah menghapus dosa-dosa yang terhadulu”.</p>
+          <p>4. baginya pahala seperti membaca semua kitab Allah (taurat, injil, zabur dan alqur’an)</p>
+          <p>5. Allah berikan padanya pahala shalat di Masjidil Haram, Masjid Madinah dan Masjidil aqsha.</p>
+          <p>6. Allah berikan padanya pahala orang yang thawaf di baitul ma’mur seraya memohonkan ampun untuknya segala batu dan lumpur.</p>
+          <p>7. seolah baginya hidup di zaman nabi Musa dan turut berperang melawan Fir’aun dan Hamman.</p>
+          <p>8. Allah berikan kepadanya apa-apa yang diberikan kepada nabi Ibrahim as.</p>
+          <p>9. seolah-olah ia menyembah Allah swt seperti kelasnya ibadah Rasulullah saw.</p>
+          <p>10. Allah berikan rizqi kepadanya berupa kebaikan dunia dan akhirat.</p>
+          <p>11. akan keluar dari dunia (mati) seperti hari ketika dilahirkan ibunya.</p>
+          <p>12. wajahnya seperti bulan tanggal empat belas di hari kiyamat nanti.</p>
+          <p>13. aman dai segala keburukan di hari kiyamat nanti</p>
+          <p>14. dibebaskan dari pemeriksaan di hari kiyamat atas dasar persaksian malaikat atas shalat tarawihnya.</p>
+          <p>15. memintakan ampun untuknya semua malaikat pemikul ‘arasy dan kursi.</p>
+          <p>16. Allah swt menuliskan untuknya keselamatan dari neraka, dan kebebasan memasuki surga.</p>
+          <p>17. diberikan kepadanya pahala Nabi-Nabi.</p>
+          <p>18. berserulah seorang malaikat “wahai hamba, Allah telah ridha kepadamu dan kedua orang tuamu”</p>
+          <p>19. Allah swt mengangkat derajatnya di surga firdaus.</p>
+          <p>20. diberikan kepadanya pahala orang-orang yang mati syahid dan para shalihin.</p>
+          <p>21. Allah swt buatkan rumah di surga dari cahaya.</p>
+          <p>22. terbebaskan dari duka-cita ketika di hari kiyamat nanti.</p>
+          <p>23. Allah swt buatkan kota di dalam surga</p>
+          <p>24. ada 24 doa yang mustajabah baginya.</p>
+          <p>25. Allah swt bebaskan darinya siksa kubur.</p>
+          <p>26. Allah swt angkatkan dosanya selama empat puluh tahun.</p>
+          <p>27. melewati shirath di hari kiyamat nanti secepat kilat.</p>
+          <p>28. Allah swt angkatkan baginya seribu derajat di dalam surga.</p>
+          <p>29. Allah swt berikan padanya pahala seribu haji yang diterima.</p>
+          <p>30. Allah swt berkata padanya “Wahai hambaku makanlah oleh buah-buahan surga, dan mandilah dari air (surga) salsabila, dan minumlah dari air telaga (surga) al-Kautsar, Aku tuhanmu dan Engkau adalah hambaku.</p>
+          <p>Demikianlah sesungguhnya fadhilah yang tersimpan dalam setiap shalat tarawih. Perbedaan fadhilah pada masing-masing malam ini menunjukkan betapa tarawih adalah suatu momentum yang tidak mungkin berulang kembali. Siapa melewatkan satu malam, berarti telah kehilangan satu fadhilah. Dan itu akan di dapatnya kembali pada tahub berikutnya, kalaupun dia masih hidup. Maka hendaklah ini dihayati dengan seksama.</p>
+          <p align="justify">
+          <h3>Lafadz atau Bacaan Niat Shalat Taraweh
+	  </h3>
+	<center>
+	  <p align="justify"><em>Niat Shalat Tarawih sebagai Ma'mum</em></p>
+	  <div>	    
+	    <div align="right" class="arab">اُصَلِّى سُنَّةَ التَّرَاوِيْحِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ مَأْمُوْمًا ِللهِ تَعَالَى</div>
+	  </div>
+	  <p>USHOLLII SUNNATAT-TAROOWIIHI ROK'ATAINI MUSTAQBILAL QIBLATI MA'MUUMAN LILLAAHI TA'ALAA <br>
+	    Artinya :
+	    Saya niat sholat sunnah tarawih dua raka'at menghadap kiblat sebagai makmum karena Allah Ta'ala</p>
+	  <p align="justify"><em>Niat Shalat Tarawih sebagai Imam</em></p>
+	  <div>	    
+	    <div align="right" class="arab">اُصَلِّى سُنَّةَ التَّرَاوِيْح رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ إِمَامًا ِللهِ تَعَالَى</div>
+	  </div>
+	  <p>USHOLLII SUNNATAT-TAROOWIIHI ROK'ATAINI MUSTAQBILAL QIBLATI IMAAMAN LILLAAHI TA'ALAA <br>
+	    Artinya :
+	    Saya niat sholat sunnah tarawih dua raka'at menghadap kiblat sebagai imam karena Allah Ta'ala</p>
+	  <p align="justify"><em>Niat Shalat Sunnah Tarawih Sendirian </em></p>
+	  <div>	    
+	    <div align="right" class="arab">اُصَلِّى سُنَّةَ التَّرَاوِيْحِ رَكْعَتَيْنِ مُسْتَقْبِلَ الْقِبْلَةِ ِللهِ تَعَالَى</div>
+	  </div>
+	  <p>USHOLLII SUNNATAT-TAROOWIIHI ROK'ATAINI MUSTAQBILAL QIBLATI LILLAAHI TA'ALAA <br>
+	    Artinya :
+	    Saya niat sholat sunnah tarawih dua raka'at menghadap kiblat karena Allah Ta'ala</p>
+	  <h3>Sejarah Shalat Tarawih</h3>
+	  <p align="justify">	    Pada suatu malam di bulan Ramadan, Rasulullah Shallallahu ‘Alaihi Wasallam keluar menuju masjid untuk mendirikan shalat malam. Lalu datanglah beberapa sahabat dan bermakmum di belakang beliau. Ketika Shubuh tiba, orang-orang berbincang-bincang mengenai hal tersebut. Pada malam selanjutnya, jumlah jamaah semakin bertambah daripada sebelumnya. Demikianlah seterusnya hingga tiga malam berturut-turut.</p>
+	  <p align="justify">	    Pada malam keempat, masjid menjadi sesak dan tak mampu menampung seluruh jamaah. Namun Rasulullah Shallallahu ‘Alaihi Wasallam tak kunjung keluar dari kamarnya. Hingga fajar menyingsing, Rasulullah Shallallahu ‘Alaihi Wasallam baru keluar untuk menunaikan shalat Shubuh. Selepas itu beliau berkhutbah, “Saya telah mengetahui kejadian semalam. Akan tetapi saya khawatir shalat itu akan diwajibkan atas kalian sehingga kalian tidak mampu melakukannya.”</p>
+	  <p align="justify">	    Akhirnya shalat malam di bulan Ramadhan dilaksanakan secara sendiri-sendiri. Kondisi seperti itu berlanjut hingga Rasulullah Shallallahu ‘Alaihi Wasallam wafat. Demikian pula pada masa kekhalifahan Abu Bakar dan awal kekhalifahan Umar bin Khattab. Baru kemudian pada tahun ke-4 Hijriah, Khalifah Umar berinisiatif untuk menjadikan shalat tersebut berjamaah dengan satu imam di masjid. Beliau menunjuk Ubay bin Kaab dan Tamim Ad-Dariy sebagai imamnya. Khalifah Umar lalu berkata, “Sebaik-baik bid’ah adalah ini.”</p>
+	  <p align="justify">Imam Abu Yusuf pernah bertanya kepada Imam Abu Hanifah tentang shalat tarawih dan apa yang diperbuat oleh Khalifah Umar. Imam Abu Hanifah menjawab, “Tarawih itu sunnah muakkadah (ditekankan). Umar tidak pernah membuat-buat perkara baru dari dirinya sendiri dan beliau bukan seorang pembuat bid’ah. Beliau tak pernah memerintahkan sesuatu kecuali berdasarkan dalil dari dirinya dan sesuai dengan masa Rasulullah Shallallahu ‘Alaihi Wasallam. Umar telah menghidupkan sunnah ini lalu mengumpulkan orang-orang pada Ubay bin Kaab lalu menunaikan shalat itu secara berjamaah, sementara jumlah para sahabat sangat melimpah, baik dari kalangan Muhajirin maupun Anshar, dan tak satu pun yang mengingkari hal itu. Bahkan mereka semua sepakat dan memerintahkan hal yang sama.”</p>
+	  <h3>Hukum Shalat Tarawih</h3>
+      Para ulama berpendapat bahwa shalat tarawih hukumnya adalah sunnah dianjurkan). Bahkan menurut ulama Hanafiyah, Hanabilah, dan Malikiyyah, hukum shalat tarawih adalah sunnah mu’akkad (sangat dianjurkan). Shalat ini dianjurkan bagi laki-laki dan perempuan. Shalat tarawih merupakan salah satu syi’ar Islam.</p>
+	  <p align="justify">Mengerjakan shalat tarawih dengan berjama'ah adalah lebih utama. dahulu Nabi Muhammad mengerjakannya dengan para shahabat di masjid selama beberapa malam. Kemudian beliau tidak melaksanakan shalat tarawih bersama para shahabat lagi di malam-malam setelahnya, karena Nabi khawatir jika Allah Ta'ala akan mengubah hukum shalat tarawih ini menjadi wajib bagi kaum muslimin. Hal ini dikarenakan pada saat Rasulullah masih hidup, masih dimungkinkan adanya perubahan dan penetapan syari'at baru sebab wahyu masih turun. Adapun setelah Nabi wafat, maka semua syari'at agama ini telah tetap dan tidak akan berubah sampai akhir zaman.</p>
+	  <p align="justify">Beliau takut jika kaum muslimin mendapatkan dosa karena tidak mampu mengerjakan shalat tarawih. Seandainya Allah Ta'ala mewajibkannya. Ini merupakan salah satu bentuk kasih sayang Nabi terhadap umatnya.</p>
+	  <p align="justify">Sebagaimana Diriwayatkan dari 'Aisyah -radhiyallahu’anha-, bahwa beliau berkata, &quot;Rasulullah pada suatu malam keluar dan shalat di masjid. Orang-orang  pun  ikut  shalat  bersamanya.  Dan  mereka memperbincangkan shalat tersebut, hingga berkumpul-lah banyak orang. Ketika beliau shalat, mereka-pun ikut shalat bersamanya. Mereka meperbincangkan lagi. Hingga bertambah banyaklah penghuni masjid pada malam ketiga, Rasulullah keluar dan shalat. Ketika malam keempat masjid tidak mampu menampung jama'ah, hingga beliau hanya keluar untuk melakukan shalat Shubuh. Setelah selesai shalat beliau menghadap manusia dan bersyahadat kemudian Nabi bersabda (yang artinya). “Amma ba'du. Sesungguhnya aku mengetahui perbuatan kalian semalam, namun aku khawatir (jika shalat tersebut) diwajibkan atas kalian, sehingga kalian tidak mampu mengamalkannya&quot;. [HR. Bukhari 3/220 dan Muslim 761].</p>
+	  <p align="justify">Sepeninggal Nabi, para shahabat senantiasa mengerjakan shalat tarawih ini, dan umat beliau sampai sekarang menerima sunnah ini dengan sepenuhnya.Diriwayatkan oleh Abu Hurairah, bahwa Nabi bersabda,
+	    “Barangsiapa shalat (tarawih)(di bulan) Ramadhan dalam keadaan beriman dan mengharap balasan (pahala) dari Allah Ta'ala , niscaya akan diampuni dosanya yang telah lewat.” (HR. Bukhari 37 [1/24], Muslim 1776).</p>
+	  
+</div>      
+
+	</div> 
+	</div>
+	</div><!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

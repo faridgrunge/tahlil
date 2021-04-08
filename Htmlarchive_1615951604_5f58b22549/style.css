@@ -1,0 +1,774 @@
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "myFirstFont";
+    src: url("Amiri/Amiri-Regular.woff");
+}
+
+
+.audioPlayer {
+	width: 95%;
+	height: 50px;
+	padding-bottom: 10px;
+	
+	
+}
+
+.dibaca {
+	padding-top: 5px;
+	display: inline-block;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+	text-align: left;
+	line-height: 1;
+	font-size: 18px;
+	background-color: #ac6700;
+	color: #ffffff;
+	border-radius: 0px;
+	margin:0px;
+
+	
+}
+
+
+.judul {
+	position: -webkit-sticky !important; /* Safari */
+	/* position: sticky !important; */
+	top: 0 !important;
+	/* display: inline-block; */
+	padding-top: 0px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	text-align: center;
+	font-family: "myFirstFont";
+	background-size: contain;
+	background-repeat: no-repeat;
+	font-size: 24px;
+	/* background-color: #ffe0b2; */
+	border-radius: 0px;
+	margin:0px;
+	/* background-image: url("images/left.png"),url("images/right.png"); */
+	/* background-position:left center, right center; */
+	/* background-repeat: no-repeat, no-repeat; */
+	
+	
+}
+
+
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: solid;
+    cursor: pointer;
+    padding: 10px 10px;
+    font-size: 17px;
+    width: 33.3333%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #000000;
+    display: none;
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+#English {background-color: #ffe6e6;}
+#Korean {background-color: #e6ffe6;}
+#Roman   {background-color: #fff2e6;}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 50%; /* Full width */
+}
+
+.tabcontent2 {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #000000;
+    display: none;
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+    font-size: 20px;
+    
+}
+
+
+.title {
+
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: black;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    border-style: none;
+    border-width: 0px;
+    background-color: #cccccc;
+    border-radius: 0px;
+    text-shadow: 0 0 1px #FF0000;
+
+}
+
+.floating-menu {
+    font-family: sans-serif;
+    background: none;
+    padding: 2px;
+    z-index: 100;
+    position: fixed;
+    bottom: 5px;
+    left: 0px;
+}
+
+.floating-menu a,
+.floating-menu h3 {
+    font-size: 0.9em;
+    display: block;
+    margin: 0 0.5em;
+    color: white;
+}
+
+input[type=button]{
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 10px 17px 10px 17px; 
+    text-decoration: bold;
+    margin: 0px 0px;
+    cursor: pointer;
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.btn {
+    font: 1rem 'Fira Sans', sans-serif;
+    font-style: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 2px;
+    margin: 2px;
+}
+
+
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
+@font-face {
+    font-family: "myFirstFont";
+    src: url("Amiri/lpmq2.ttf");
+}
+
+
+li:nth-child(odd) { 
+            background: #fffdf1; 
+            /* font-size: 36px;  */
+            /* color:#F8F3E0;  */
+        } 
+        li:nth-child(even) { 
+            background: #ffffff; 
+            /* font-size: 36px;  */
+            /* color:#fffbed;  */
+        } 
+
+.ayat {
+	direction:rtl;
+	padding-top: -2px;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+    font-family: "myFirstFont";
+	text-align: right;
+	line-height: 1.9;
+	font-size: 27px;
+	/* background-color: #F8F3E0; */
+	border-radius: 0px;
+	margin:0px;
+
+	
+}
+
+.arti {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+    font-family: "myFirstFont2";
+	text-align: left;
+	font-size: 18px;
+	margin-top: 10px;
+	line-height: 1.2;
+	/* background-color: #fffbed; */
+	border-radius: 10px;
+	color: #000000;
+	margin: 0;	
+	/* display: none; */
+}
+
+
+
+.bismillah {
+	/* direction:rtl; */
+	padding-top: -2px;
+	/* padding-left: 28px; */
+	padding-bottom: 0px;
+	padding-right: 10px;
+    font-family: "myFirstFont";
+	text-align: center;
+	line-height: normal;
+	font-size: 28px;
+	background-color: #F8F3E0;
+	border-radius: 0px;
+	margin:0px;
+
+	
+}
+
+.bacaan {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+    font-family: "myFirstFont2";
+	text-align: left;
+	font-size: 18px;
+	font-style: italic;
+	text-align: center;
+	background-color: rgba(0, 137, 123, 0.05);
+	margin-top: 10px;
+	line-height: 1.2;
+	/* background-color: #fffbed; */
+	border-radius: 0px;
+	color: #4d675e;
+	margin: 0;
+	/* display: none;	 */
+}
+
+.referensi {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+    font-family: "myFirstFont2";
+	text-align: left;
+	font-size: 18px;
+	font-style: none;
+	margin-top: 10px;
+	line-height: 1.2;
+	/* background-color: #fffbed; */
+	border-radius: 0px;
+	color: #zzzzzz;
+	margin: 0;
+	/* display: none;	 */
+}
+
+
+.grids {
+    border-style: solid;
+    border-width: 5px;
+}
+.grids div {
+    display: table;
+    height: 153px;
+}
+.grids div > p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.ui-icon-arti:after {
+background-image: url("images/arti.png");
+background-size: 18px 18px;
+
+}
+
+
+.ui-icon-bacaan:after {
+background-image: url("images/bacaan.png");
+background-size: 18px 18px;
+
+}
+
+.ui-icon-fontplus:after {
+background-image: url("images/plus.png");
+background-size: 18px 18px;
+
+}
+
+.ui-icon-fontmin:after {
+background-image: url("images/min.png");
+background-size: 18px 18px;
+
+}
+
+
+
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: solid;
+    cursor: pointer;
+    padding: 5px 5px;
+    font-size: 17px;
+    width: 50%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #000000;
+    display: none;
+    padding: 0px 15px 40px 15px;
+    text-align: left;
+    font-size: 20px;
+	 white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    
+}
+
+#Daymode {background-color: #ffffff;}
+#Nightmode {background-color: #000000; color: #ffffff ;
+
+}
+#Roman   {background-color: #fff2e6;}
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+.tabcontent2 {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #fffff !important;
+    display: none;
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+    font-size: 20px;
+
+    
+}
+
+h3 {
+	font-size: 22px;
+	padding-top: 0px;
+    padding-bottom: 0px;
+    /* margin-bottom: 10px; */
+    text-align: center;
+    /* border-style: solid; */
+    border-width: 1px;
+    border-color: #000000;
+    /* background-color: #fffbed; */
+	color: #000000;
+    border-radius: 0px}
+
+.title {
+	display:none;
+    font-size: 18px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    border-style: none;
+    border-width: 0px;
+    background-color: #cccccc;
+    border-radius: 0px;
+
+}
+
+.floating-menu {
+    font-family: sans-serif;
+    background: none;
+    padding: 2px;
+    z-index: 100;
+    position: fixed;
+    bottom: 5px;
+    left: 0px;
+}
+
+.right-floating-menu {
+    font-family: sans-serif;
+    background: none;
+    padding: 2px;
+    z-index: 100;
+    position: fixed;
+    bottom: 5px;
+    right: 0px;
+}
+
+.floating-menu a,
+.floating-menu h3 {
+    font-size: 0.9em;
+    display: block;
+    margin: 0 0.5em;
+    color: white;
+}
+
+input[type=button]{
+    background-color: #555;
+    border: none;
+    color: white;
+    padding: 10px 17px 10px 17px; 
+    text-decoration: bold;
+    margin: 0px 0px;
+    cursor: pointer;
+}
+
+legend {
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.btn {
+    font: 1rem 'Fira Sans', sans-serif;
+    font-style: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 2px;
+    margin: 2px;
+}
+
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 95%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+  color: #808080;
+}
+}
+
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+    }
+	
+	@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	 /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+	padding-top:0;
+}
+
+#nav-b ol{
+	
+	
+}
+
+#nav-a ol,
+#nav-a ul {
+    margin: 0;
+    padding-left: 0;
+	padding-top: 0px;
+}
+
+#nav-a li::before {
+    content: counter(step-counter);
+    height: 40px;
+    text-align: center;
+    display: block;
+	line-height: 2.5;
+	background-image: url(images/box.png);
+	background-repeat: no-repeat;
+	background-size: 35px;
+	background-position: center;
+	/* border: 0px solid #b95752; */
+	vertical-align: middle;
+    margin-top: 0px;
+	border-radius: 0px;
+    width: 40px;
+    font: 12px;
+    /* background: #fffbed; */
+
+	/* tambahan */
+	position:relative;
+	top:5px;
+	left:5px;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	/* width:2em; */
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:0px;
+	padding:0px;
+	/* border-top:0px solid #666; */
+	color:#000;
+	/* background:#666; */
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+	/* vertical-align:middle; */
+}
+ #nav-a li {
+    display: block;
+    margin-top: 0em;
+    padding-bottom: 0em;
+    /* border-top: 1px solid #b95752; */
+	border-bottom: 1px solid #959b8a;
+	/* border-bottom: 1px solid #b95752; */
+    counter-increment: step-counter;
+	border-radius: 0px;
+	
+}
+
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		color: #000000;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+    
+
+.ui-page .ui-header {
+    background: #00897b !important;
+}
+	
+	
+.float{
+	position:fixed;
+	/* width:60px; */
+	/* height:60px; */
+	bottom:45px;
+	right:-30px;
+	/* background-color:#0C9; */
+	/* color:#FFF; */
+	/* border-radius:50%; */
+	text-align:center;
+	/* box-shadow: 2px 2px 3px #999; */
+	
+}
+
+.float2{
+	position:fixed;
+	/* width:60px; */
+	/* height:60px; */
+	bottom:45px;
+	left:0px;
+	background-color:#0C9;
+	color:#FFF;
+	/* border-radius:50px; */
+	text-align:center;
+	/* box-shadow: 2px 2px 3px #999; */
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Melempar Jamarot</h1>
+
+
+<p style="text-align: right;" class="arab"></p>
+<h3>Hikmah melempar jamarot</h3>
+<ol>
+<li><p><em>Pertama</em>&nbsp;: Untuk mengingat Allah</p></li>
+<p>Allah berfirman :</p>
+<p style="text-align: right;" class="arab">وَاذْكُرُواْ اللَّهَ فِي أَيَّامٍ مَّعْدُودَاتٍ</p>
+<p>Dan berdzikirlah (dengan mengingat) Allah dalam beberapa hari yang berbilang. (QS Al-Baqoroh 203)</p>
+<p>Hari-hari berbilang tersebut adalah&nbsp;<em>hari-hari tasyriq</em>&nbsp;(lihat tafsir At-Thobari 3/549-553). Allah memerintahkan untuk berdzikir kepada Allah di hari-hari tersebut. Diantaranya adalah berdzikir kepada Allah dengan melempar jamarot. Karenanya setelah itu berfirman :</p>
+<p style="text-align: right;" class="arab">فَمَنْ تَعَجَّلَ فِي يَوْمَيْنِ فَلَا إِثْمَ عَلَيْهِ وَمَنْ تَأَخَّرَ فَلَا إِثْمَ عَلَيْهِ لِمَنِ اتَّقَى</p>
+<p>&ldquo;Barangsiapa yang ingin cepat berangkat (dari Mina) sesudah dua hari, maka tiada dosa baginya. Dan barangsiapa yang ingin menangguhkan (keberangkatannya dari dua hari itu), maka tidak ada dosa pula baginya, bagi orang yang bertakwa&rdquo; (QS Al-Baqoroh : 203)</p>
+<p>Ini menunjukan bahwa melempar jamarot dalam rangka berdzikir kepada Allah<sup>(</sup><sup>[24]</sup><sup>)</sup>. Didukung oleh hadits yang diriwayatkan dari Nabi shallallahu &aacute;laihi wasallam</p>
+<p style="text-align: right;" class="arab">إِنَّمَا جُعِلَ الطَّوَافُ بِالْبَيْتِ وَبَيْنَ الصَّفَا وَالْمَرْوَةِ وَرَمْيُ الْجِمَارِ لِإِقَامَةِ ذِكْرِ اللَّهِ</p>
+<p>&ldquo;Hanyalah disyari&aacute;tkan thowaf di ka&rsquo;bah dan sa&iacute; antara shofa dan marwah serta melempar kerikil (jamarot) adalah untuk menegakan dzikir kepada Allah&rdquo;<sup>(</sup><sup>[25]</sup><sup>)</sup></p>
+<p>Karenanya tatkala seseorang melempar setiap kerikil disyari&aacute;tkan untuk bertakbir sebagai bentuk pengagungan terhadap Allah.</p>
+<li><p><em>Kedua</em>&nbsp;: Meneladani Ibrahim &aacute;laihis salam dalam memusuhi dan tidak mentaati syaitan</p></li>
+</ol>
+<p>Ibnu &Aacute;bbas meriwayatkan secara marfu&rsquo; :</p>
+<p style="text-align: right;" class="arab">&laquo;لَمَّا أَتَى إِبْرَاهِيمُ خَلِيلُ اللَّهِ الْمَنَاسِكَ عَرَضَ لَهُ الشَّيْطَانُ عِنْدَ جَمْرَةِ الْعَقَبَةِ فَرَمَاهُ بِسَبْعِ حَصَيَاتٍ حَتَّى سَاخَ فِي الْأَرْضِ، ثُمَّ عَرَضَ لَهُ عِنْدَ الْجَمْرَةِ الثَّانِيَةِ فَرَمَاهُ بِسَبْعِ حَصَيَاتٍ حَتَّى سَاخَ فِي الْأَرْضِ، ثُمَّ عَرَضَ لَهُ عِنْدِ الْجَمْرَةِ الثَّالِثَةِ فَرَمَاهُ بِسَبْعِ حَصَيَاتٍ حَتَّى سَاخَ فِي الْأَرْضِ&raquo;</p>
+<p>&ldquo;Ketika Ibrahim kekasih Allah mendatangi manasik maka syaitan muncul menghadanginya/menggodanya di jamrotul &Aacute;qobah, maka Ibrahimpun melemparnya dengan tujuh kerikil hingga syaitan pun tenggelam ke bumi. Lalu syaitan pun menggodanya di jamarot yang kedua maka Ibrahimpun melemparnya dengan tujuh kerikil hingga hilang di telan bumi, lalu syaitan muncul dan menggoda beliau di jamroh yang ketiga, maka Ibrahimpun melemparnya dengan tujuh kerikil hingga menghilang di telan bumi&rdquo;.</p>
+<p>Ibnu &Aacute;bbas berkata الشَّيْطَانَ تَرْجُمُونِ وَمِلَّةَ أَبِيكُمْ تَتَّبِعُونَ &ldquo;Kalian melempar syaitan dan kalian mengikuti agama ayah kalian (Ibrahim)&rdquo;. (HR Al-Hakim no 1713 dan al-Baihaqi dalam as-Sunan al-Kubro 9693 dan dishahihkan oleh Al-Hakim dan Al-Albani dalam Shahih At-Trghiib no 1156)</p>
+<p>Al-Ghozali berkata, &ldquo;Adapun melempar jamarot maka jadikanlah tujuannya adalah untuk tunduk kepada perintah Allah dengan menampakan penghambaan dan membudakan diri kepadaNya, yaitu dengan semangat bangkit menjalankan perintahnya meskipun tidak memahami dan tidak keuntungan bagi jiwa. Lalu niatkan untuk meniru Nabi Ibrahim &aacute;laihis salam dimana beliau digoda oleh Iblis -yang dilaknat oleh Allah- di lokasi tersebut untuk memasukan syubhat kepada beliau atau untuk menjerumuskan beliau dalam kemaksiatan. Maka Allah memerintah beliau untuk melemparnya dengan batu untuk mengusirnya dan memutuskan harapannya.</p>
+<p>Jika terbetik dalam benakmu bahwasanya syaitan memang menggoda Ibrahim dan disaksikan oleh Ibrahim maka Ibrahim pun melemparnya, adapun aku maka syaitan tidak muncul menggodaku, maka ketahuilah bahwa pikiran ini dari syaitan, dialah yang telah melemparkan pemikiran itu kepada hatimu agar engkau jadi malas melempar, dan ia mengkhayalkan kepadamu bahwa melempar jamarot adalah perbuatan yang tidak ada faidahnya dan hanya mirip dengan permainan belaka, maka cueklah darinya dan buanglah pemikiran tersebut dari dirimu dengan serius dan semangat dalam melempar sehingga menjengkelkan syaitan.</p>
+<p>Ketahulilah sesungguhnya engkau meskipun secara dzhohir sedang melempar kerikil ke jamarot namun pada hakikatnya engkau sedang melempar wajah syaitan, dan engkau mematahkan pundaknya. Karena tidaklah menjadikan syaitan jengkel kecuali jika engkau menjalankan perintah Allah sebagai bentuk pengagungan kepada Allah dengan menjalankan perintahNya meskipun tidak ada manfaat bagi jiwa dan tidak bisa dipahami&rdquo; (Ihyaa&rsquo; &Uacute;luum ad-Diin 1/270)</p>
+<p>Asy-Syingqithi berkata, &ldquo;Seakan-akan melempar jamarot merupakan lambing dan isyarat permusuhan kepada syaitan yang Allah telah memerintahkan kita untuk memusuhinya dalam firmanNya إِنَّ الشَّيْطَانَ لَكُمْ عَدُوٌّ فَاتَّخِذُوهُ عَدُوًّا &ldquo;Sesungguhnya syaitan adalah musuh kalian, maka jadikanlah ia sebagai musuh&rdquo; (QS Fathir : 6), dan juga dalam firmanNya -yang mengingkari orang-orang yang berwala kepada syaitan- أَفَتَتَّخِذُونَهُ وَذُرِّيَّتَهُ أَوْلِيَاءَ مِنْ دُونِي وَهُمْ لَكُمْ عَدُوٌّ &ldquo;Patutkah kamu mengambil dia dan turanan-turunannya sebagai pemimpin selain daripada-Ku, sedang mereka adalah musuhmu?&rdquo; (QS al-Kahfi : 50). Dan sebagaimana diketahui bahwasanya melempar dengan batu termasuk bentuk yang paling besar yang menunjukan akan permusuhan&rdquo; (Adwaaul Bayaan 4/479-480)</p>
+<br><h3>Hukum-hukum yang berkaitan dengan melempar jamaroot</h3>
+<ol>
+<li>Jamarot di Mina ada 3 :</li>
+<ul>
+<li>Al-Jamrot As-Sughro, yang teletak paling dekat dengan Mina</li>
+<li>Al-Jamrot al-Wushtho, yang terletak setelah al-Jamrot as-Shugro, yaitu letaknya di pertengahan</li>
+<li>Al-Jamrot al-Kubro (dinamakan juga dengan Jamrot al-&Aacute;qobah), yang terletak paling jauh dari Mina, yang terakhir, yang paling dekat dengan Mekah. Dan lokasi al-Jamroh ini bukan bagian dari Mina<sup>([26])</sup>. (yang tidak termasuk dari Mina ialah areal dibalik fisik Jumrah yg ke arah Makkah, adapun bagian jumrah yg ke arah Mina maka itu termasuk mina).</li>
+</ul>
+<br><li>Tatkala tanggal 10 Dzulhijjah (Hari An-Nahr) maka yang dilempar hanyalah al-Jamroh al-Kubro (Jamrot al-&Aacute;qobah) sebanyak 7 kerikil.</li>
+<br><li>Sunnahnya melempat jamarot al-&Aacute;qobah adalah setelah matahari terbit, sebagaimana yang dilakukan oleh Nabi shallallahu &aacute;laihi wasallam. </li>Akan tetapi boleh bagi orang yang diizinkan keluar dari Muzdalifah lewat tengah malam untuk langsung melempar jamrot al-&Aacute;qobah sebagaimana yang dilakukan oleh para sahabat.</p>
+<br><li>Jika tidak sempat melempar di siang hari maka boleh melempar di malam hari.</li> Dan waktu melempar memanjang hingga sebelum terbit fajar (adzan subuh) esok harinya.<sup>&nbsp;([27])</sup></p>
+<br><li>Diantara syarat melempar :</li>
+<ul>
+<li>Yang digunakan untuk melempar harus berupa batu kerikil. Maka tidak boleh melempar dengan menggunakan tanah, logam, pasir, dan aspal</li>
+<li>Harus 7 kerikil pada setiap sumur lemparan (Jamrah)</li>
+<li>Lemparnya harus satu per satu, tidak boleh 7 kerikil dilemparkan sekaligus</li>
+<li>Kerikilnya harus masuk ke dalam sumur. Adapun tiang/dinding yang dibuat hanyalah sebagai petunjuk, bukan tujuan. Jika lemparan terlalu kuat di pinggiran sumur sehingga kerikilnya mental keluar sumur jamarat maka tidak sah.</li>
+<li>Harus niat melempar. Jika tangan seseorang tersenggol oleh orang lain sehingga kerikilnya terjatuh masuk dalam sumur jamarot maka tidak sah, karena tidak ada niat melempar.</li>
+<li>Kerikilnya harus dilempar, tidak hanya sekedar diletakan.</li>
+</ul>
+<br><li>6- Kerikil yang digunakan untuk melempar ukurannya sedang, tidak terlalu kecil dan tidak juga terlalu besar.<sup>&nbsp;([28])</sup></p></li>
+<p>Ibnu &Aacute;bbas berkata :</p>
+<p style="text-align: right;" class="arab">قَالَ لِي رَسُولُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ غَدَاةَ الْعَقَبَةِ، وَهُوَ وَاقِفٌ عَلَى رَاحِلَتِهِ: &rdquo; هَاتِ الْقُطْ لِي &rdquo; فَلَقَطْتُ لَهُ حَصَيَاتٍ هُنَّ حَصَى الْخَذْفِ، فَوَضَعَهُنَّ فِي يَدِهِ، فَقَالَ: &rdquo; بِأَمْثَالِ هَؤُلَاءِ &rdquo; مَرَّتَيْنِ، وَقَالَ بِيَدِهِ &ndash; فَأَشَارَ يَحْيَى أَنَّهُ رَفَعَهَا &ndash; وَقَالَ: &rdquo; إِيَّاكُمْ وَالْغُلُوَّ؛ فَإِنَّمَا هَلَكَ مَنْ كَانَ قَبْلَكُمْ بِالْغُلُوِّ فِي الدِّينِ</p>
+<p>Rasulullah shallallahu &aacute;laihi wasallam berkata kepadaku di pagi hari melempar jamrot al-&Aacute;qobah, sementara beliau menunggangi onta beliau, &ldquo;Carikan buatku (kerikil)&rdquo;. Maka akupun mengambil untuk beliau kerikil-kerikil yaitu kerikil ukurang untuk mengutik, lalu beliau meletakkan kerikil-kerikil tersebut di tangan beliau lalu beliau berkata sebanyak dua kali, &ldquo;Seperti (ukuran) kerikil-kerikil inilah (kalian melempar)&rdquo;. Dan beliau berkata -dengan mengangkat tangannya-, &ldquo;Waspadalah kalian dari sikap berlebih-lebihan dalam agama. Karena sesungguhnya umat sebelum kalian dibinasakan oleh sikap berlebihan dalam agama&rdquo; (HR Ibnu Majah no 3029 dan Ahmad no 1851 dan 3248)</p>
+<p>Ini menunjukan bahwa sikap berlebih-lebihan dalam ukuran kerikil adalah terlarang.<sup>&nbsp;([29])</sup></p>
+<br><li>Hendaknya melempar dengan tangan kanan disertai takbir setiap kali lemparan kerikil</p></li>
+<br><li>Tidak mengapa kerikil diambil dari manapun, karena tetap saja namanya adalah kerikil<sup>(</sup>[30]<sup>)</sup>.</li> Hanya saja para ulama khilaf dari mana lebih utama untuk diambil, apakah dari Muzdalifah ataukah dari perjalanannya dari Muzdalifah menuju Mina<sup>&nbsp;([31])</sup></p>
+<br><li>Kerikil-kerikil tersebut tidak perlu dicuci terlebih dahulu, karena ketika Nabi memerintahkan Ibnu &Aacute;bbas mencari kerikil posisi beliau sedang berada di atas onta beliau, dan tidak diriwayatkan bahwa beliau mencuci kerikil tersebut.<sup>&nbsp;([32])</sup></p></li>
+<br><li>Jika seseorang tidak mampu untuk melempar jamarot karena sakit atau udzur yang sulit diharapkan hilangnya hingga akhir waktu melempar, maka boleh baginya untuk mewakilkan lemparannya. </li>Yang perlu diperhatikan :</p>
+<ul>
+<li>Wakilnya yang mau melemparkan hendaknya sudah melempar untuk dirinya terlebih dahulu.</li>
+<li>Jika dia hendak mengambil nafar awal, maka janganlah ia keluar dari mina kecuali setelah wakilnya tersebut melempar</li>
+</ul>
+<br><li>Setelah melempar jamrot al-&Aacute;qobah -baik pada tanggal 10 Dzulhijjah maupun tanggal 11,12,dan 13 Dzulhijjah- maka tidak disunnahkan berdoa. </li>
+<br><li>Bagi yang berudzur kuat, maka boleh menggabungkan pelemparan 2 hari dilaksanakan pd satu hari</p></li>Hanyalah disunnahkan berdoa adalah setelah melempar al-Jamrot as-Shugro dan al-Jamrot al-Wushtho pada hari-hari tasyriik (tanggal 11, 12, dan 13 Dzulhijjah).</p>
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

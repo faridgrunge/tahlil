@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>TAFSIR SURAH YASIN AYAT 51 - 54</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+
+<p class="arab">{وَنُفِخَ فِي الصُّورِ فَإِذَا هُمْ مِنَ الأجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ (51) قَالُوا يَا وَيْلَنَا مَنْ بَعَثَنَا مِنْ مَرْقَدِنَا هَذَا مَا وَعَدَ الرَّحْمَنُ وَصَدَقَ الْمُرْسَلُونَ (52) إِنْ كَانَتْ إِلا صَيْحَةً وَاحِدَةً فَإِذَا هُمْ جَمِيعٌ لَدَيْنَا مُحْضَرُونَ (53) فَالْيَوْمَ لَا تُظْلَمُ نَفْسٌ شَيْئًا وَلا تُجْزَوْنَ إِلا مَا كُنْتُمْ تَعْمَلُونَ (54) }</p>
+<p><em>Dan ditiuplah sangkakala, maka tiba-tiba mereka keluar dengan segera dari kuburnya </em>(menuju) <em>kepada Tuhan mereka. Mereka berkata, "Aduhai, celakalah kami! Siapakah yang membangkitkan kami dari tempat tidur kami </em>(kubur)?" <em>Inilah yang dijanjikan </em>(Tuhan) <em>Yang Maha Pemurah dan benarlah rasul-rasul-(Nya). Tidak adalah teriakan itu selain sekali teriakan saja, maka tiba-tiba mereka semua dikumpulkan kepada Kami. Maka pada hari itu seseorang tidak akan dirugikan sedikit pun dan kamu tidak dibalasi kecuali dengan apa yang telah kamu kerjakan.</em></p>
+<p>Inilah yang disebut tiupan yang ketiga, yaitu tiupan kebangkitan di mana semua makhluk dihidupkan lagi dari kuburnya. Karena itulah disebutkan oleh firman-Nya:</p>
+<p class="arab">{فَإِذَا هُمْ مِنَ الأجْدَاثِ إِلَى رَبِّهِمْ يَنْسِلُونَ}</p>
+<p><em>maka tiba-tiba mereka keluar dengan segera dari kuburnya </em>(menuju) <em>kepada Tuhan mereka. </em>(Yasin: 51)</p>
+<p><em>An-naslan </em>artinya berjalan dengan cepat, sebagaimana yang disebutkan dalam ayat lain melalui firman-Nya:</p>
+<p class="arab">{يَوْمَ يَخْرُجُونَ مِنَ الأجْدَاثِ سِرَاعًا كَأَنَّهُمْ إِلَى نُصُبٍ يُوفِضُونَ}</p>
+<p>(yaitu) <em>pada hari mereka keluar dari kubur dengan cepat seakan-akan mereka pergi dengan segera kepada berhala-berhala </em>(sewaktu di dunia). (Al-Ma'arij: 43)</p>
+<p>*********</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{قَالُوا يَا وَيْلَنَا مَنْ بَعَثَنَا مِنْ مَرْقَدِنَا}</p>
+<p><em>Mereka berkata, "Aduhai, celakalah kami! Siapakah yang membangkitkan kami dari tempat tidur kami </em>(kubur)?" (Yasin: 52)</p>
+<p>Yakni dari kubur mereka yang dahulu semasa mereka masih hidup di dunia tidak percaya bahwa mereka akan dibangkitkan hidup kembali dari kubur mereka. Setelah mereka menyaksikan di tempat mereka dikumpulkan itu apa yang dahulunya mereka dustakan, <em>Mereka berkata, "Aduhai, celakalah kami! Siapakah yang membangkitkan kami dari tempat tidur kami </em>(kubur)?" (Yasin: 52)</p>
+<p>Hal ini bukan berarti menafikan siksa kubur bagi mereka yang selama mereka berada di dalam kuburnya, karena siksa kubur itu bila dibandingkan dengan kerasnya azab di alam akhirat sama halnya dengan tidur.</p>
+<p>Ubay ibnu Ka'b r.a., Mujahid, Al-Hasan, dan Qatadah mengatakan, mereka tidur sejenak sebelum dibangkitkan hidup.</p>
+<p>Qatadah mengatakan bahwa hal tersebut terjadi di antara dua tiupan sangkakala, karena itulah mereka mengatakan, "Siapakah yang membangunkan kami dari tempat tidur kami (kubur)?"</p>
+<p>Menurut bukan hanya seorang dari kalangan ulama Salaf, manakala mereka telah mengatakan hal tersebut, maka orang-orang mukmin menjawab:</p>
+<p class="arab">{هَذَا مَا وَعَدَ الرَّحْمَنُ وَصَدَقَ الْمُرْسَلُونَ}</p>
+<p><em>Inilah yang dijanjikan </em>(Tuhan) <em>Yang Maha Pemurah dan benarlah rasul-rasul-(Nya). </em>(Yasin: 52)</p>
+<p>Al-Hasan mengatakan bahwa yang menjawab mereka dengan ucapan itu adalah para malaikat.</p>
+<p>Tidak ada pertentangan jika kedua pendapat bisa digabungkan. Hanya Allah yang lebih mengetahui.</p>
+<p>Abdur Rahman ibnu Zaid mengatakan bahwa semuanya adalah ucapan orang-orang kafir: <em>Aduhai, celakalah kami! Siapakah yang membangkitkan kami dari tempat tidur kami </em>(kubur)? <em>Inilah yang dijanjikan </em>(Tuhan) <em>Yang Maha Pemurah dan benarlah rasul-rasul</em>-(Nya) (Yasin 52)</p>
+<p>Demikianlah menurut apa yang telah dinukil oleh Ibnu Jarir, tetapi dia sendiri memilih pendapat yang pertama karena pendapat itulah yang paling sahih.</p>
+<p>Makna ayat ini sama dengan apa yang disebutkan dalam ayat lain melalui firman-Nya:</p>
+<p class="arab">{وَقَالُوا يَا وَيْلَنَا هَذَا يَوْمُ الدِّينِ هَذَا يَوْمُ الْفَصْلِ الَّذِي كُنْتُمْ بِهِ تُكَذِّبُونَ}</p>
+<p><em>Dan mereka berkata, "Aduhai, celakalah kita!" Inilah hari pembalasan. Inilah hari keputusan yang kamu selalu mendustakannya. </em>(Ash-Shaffat: 20-21)</p>
+<p class="arab">{وَيَوْمَ تَقُومُ السَّاعَةُ يُقْسِمُ الْمُجْرِمُونَ مَا لَبِثُوا غَيْرَ سَاعَةٍ كَذَلِكَ كَانُوا يُؤْفَكُونَ وَقَالَ الَّذِينَ أُوتُوا الْعِلْمَ وَالإيمَانَ لَقَدْ لَبِثْتُمْ فِي كِتَابِ اللَّهِ إِلَى يَوْمِ الْبَعْثِ فَهَذَا يَوْمُ الْبَعْثِ وَلَكِنَّكُمْ كُنْتُمْ لَا تَعْلَمُونَ}</p>
+<p><em>Dan pada hari terjadinya kiamat, bersuimpahlah orang-orang yang berdosa, bahwa mereka tidak berdiam </em>(dalam kubur) <em>melainkan sesaat saja. Seperti demikianlah mereka selalu dipalingkan </em>(dari kebenaran). <em>Dan berkata orang-orang yang diberi ilmu pengetahuan dan keimanan </em>(kepada orang-orang yang kafir).&rdquo;<em>Sesungguhnya kamu telah berdiam </em>(dalam kubur) <em>menurut ketetapan Allah, sampai hari berbangkit; maka inilah hari berbangkit itu, tetapi kamu selalu tidak meyakininya).&rdquo; </em>(Ar-Rum: 55-56)</p>
+<p>********</p>
+<p>Adapun firman Allah Swt.:</p>
+<p class="arab">{إِنْ كَانَتْ إِلا صَيْحَةً وَاحِدَةً فَإِذَا هُمْ جَمِيعٌ لَدَيْنَا مُحْضَرُونَ}</p>
+<p><em>Tidak adalah teriakan itu selain sekali teriakan saja, maka tiba-tiba mereka semua dikumpulkan kepada Kami. </em>(Yasin: 53)</p>
+<p>Semakna dengan firman Allah Swt. dalam ayat lain:</p>
+<p class="arab">{فَإِنَّمَا هِيَ زَجْرَةٌ وَاحِدَةٌ * فَإِذَا هُمْ بِالسَّاهِرَةِ}</p>
+<p><em>Sesungguhnya pengembalian itu hanya dengan satu kali tiupan saja, maka dengan serta merta mereka hidup kembali di permukaan bumi. </em>(An-Nazi'at: 13-14)</p>
+<p class="arab">{وَمَا أَمْرُ السَّاعَةِ إِلا كَلَمْحِ الْبَصَرِ أَوْ هُوَ أَقْرَبُ}</p>
+<p><em>Tidak ada kejadian kiamat itu, melainkan seperti sekejap mata atau lebih cepat </em>(lagi). (An-Nahl: 77)</p>
+<p>Dan firman Allah Swt.:</p>
+<p class="arab">{يَوْمَ يَدْعُوكُمْ فَتَسْتَجِيبُونَ بِحَمْدِهِ وَتَظُنُّونَ إِنْ لَبِثْتُمْ إِلا قَلِيلا}</p>
+<p><em>yaitu pada hari Dia memanggil kamu, lalu kamu mematuhi-Nya sambil memuji-Nya dan kamu mengira bahwa kamu tidak berdiam </em>(di dalam kubur) <em>kecuali sebentar saja. </em>(Al-Isra: 52)</p>
+<p>Yaitu sesungguhnya Kami hanya memerlukan sekali perintah saja, maka dengan serta merta mereka semuanya dihadapkan kepada Kami.'</p>
+<p class="arab">{فَالْيَوْمَ لَا تُظْلَمُ نَفْسٌ شَيْئًا}</p>
+<p><em>Maka pada hari itu seseorang tidak akan dirugikan sedikit pun. </em>(Yasin: 54)</p>
+<p>Yakni dari amal perbuatannya.</p>
+<p class="arab">{وَلا تُجْزَوْنَ إِلا مَا كُنْتُمْ تَعْمَلُونَ}</p>
+<p><em>dan kamu tidak dibatasi, kecuali dengan apa yang telah kamu kerjakan. </em>(Yasin: 54)</p>
+
+
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

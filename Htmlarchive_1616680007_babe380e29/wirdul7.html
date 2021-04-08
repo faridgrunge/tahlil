@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Wirdul Latif - Bagian 7</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَللَّهُـمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَـافِيَةَ، وَالْمُعَافاَةَ الدَّائِمَةَ، فِي دِيْنِيْ وَدُنْياَيَ وَأَهْلِيْ وَماَلِيْ <br><br>
+
+ اَللَّهُـمَّ اسْتُرْ عَوْرَاتِيْ وَآمِنْ رَوْعَاتِيْ<br><br>
+
+اَللَّهُـمَّ احْفَظْنِيْ مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِيْ وَعَنْ يَمِيْنِيْ وَعَنْ شِماَلِيْ وَمِنْ فَوْققِيْ، وَأَعُوْذُ بِعَظَمَتِكَ أَنْ أُغْتاَلَ مِنْ تَحْتِيْ<br><br>
+
+اَللَّهُـمَّ أَنْتَ خَلَقْتَنِـيْ،  وَأَنْتَ تَهْدِيْنِـيْ،  وَأَنْتَ تُطْعِمُنِـيْ وَأَنْتَ تَسْقِيْنِـيْ،  وَأَنْتَ تُمِيْتُنِـي،  وَأَنْتَ تُحْيِيْنِـيْ وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ<br><br>
+
+أَصْبَحْناَ عَلَى فِطْرَةِ اْلإِسْلاَمِ، وَعَلَى كَلِمَةِ اْلإِخْلاَصِ، وَعَلَى دِيْنِ نَبِيِّناَ مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، وَعَلَى مِلَّةِ أَبِيْنَا إِبْراَهِيْمَ حَنِيْفاً مُسْلِماً، وَماَ كاَنَ مِنَ الْمُشْرِكِيْنَ<br><br>
+
+ اَللَّهُـمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا،  وَبِكَ نَحْيَا، وَبِكَ نَمُوْتُ، وَإِلَيْكَ النُّشُوْرُ، أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ اللّٰهِ رَبِّ الْعاَلَمِيْنَ<br><br>
+
+اَللَّهُّـمَ إِنِّي أَسْأَلُكَ خَيْرَ هَذَا الْيَوْمِ فَتْحَهُ وَنَصْرَهُ وَنُوْرَهُ وَبَرَكَتَهُ وَهُداَهُ<br><br>
+
+اَللَّهُـمَّ إِنَّي أَسْأَلُكَ خَيْرَ هَذاَ الْيَوْمِ،  وَخَيْرَ ماَ فِيْهِ،  وَأَعُوْذُ بِكَ مِنْ شَرِّ هَذاَ الْيَوْمِ وَشَرِّ مَا فِيْهِ<br><br>
+
+اَللَّهُـمَّ ماَ أَصْبَحَ بِيْ مِنْ نِعْمَةٍ أَوْ بِأَحَـدٍ مِنْ خَلْقِكَ، فَمِنْكَ  وَحْدَكَ لاَ شَرِيْكَ  لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ عَلَى ذَلِكَ<br><br>
+
+ سُبْحَانَ اللّٰهِ وَبِحَمْدِهِ عَدَدَ خَلْقِـهِ وَرِضَـى نَفْسِهِ وَزِنَةَ عَرْشِهِ  وَمِداَدَ كَلِمَاتِهِ
+(Dibaca 3 kali<br><br>
+
+سُبْحَانَ اللّٰهِ الْعَظِيْمِ وَبِحَمْدِهِ عَدَدَ خَلْقِـهِ وَرِضَـى  نَفْسِـهِ  وَزِنَةَ عَرْشِهِ وَمِداَددَ كَلِمَاتِهِ
+(Dibaca 3 kali)<br><br>
+
+ سُبْحَـانَ اللّٰهِ عَدَدَ مَا خَلَقَ فِي السَّمَـاءِ، سُبْحَـانَ اللّٰهِ عَدَدَ مَا خَلَـقَ فِي الأَرْضِ سُبْحَـانَ اللّٰهِ عَدَدَ مَا بَيْنَ ذَلِكَ، سُبْحَـانَ اللّٰهِ عَدَدَ مَا هُوَ خَـالِقٌ 
+(Dibaca 3 kali)<br><br>
+
+اَلْحَمْدُ لِلّٰهِ عَدَدَ مَـا خَلَـقَ فِي السَّمَـاءِ،اَلْحَمْدُ لِلّٰهِ عَدَدَ مَـا خَلَـقَ فِي الأَرْضِ، اَلْحَمْدُ لِلّٰهِ عَدَدَ مَـا بَيْـنَ ذَلِكَ، اَلْحَمْدُ لِلّٰهِ عَدَدَ مَـا هُوَ خَـالِقٌ
+(Dibaca 3 kali)</p><br><br><p><i>Allahumma innii asalukal ‘afwa wal’afiyah wal mu’afatiddaaimah fii diinii wadunyaa wa ahlii wa maalii.<br><br>
+
+Allahummastur ‘aurootii wa aamin rou’aatii.<br><br>
+
+Allahummahfadznii min baini yadayya wamin kholfii wa’an yamiinii, wa’an syimaalii, wamin fauqii. Wa ‘audzu bi’adzomatika an ughtaala min tahti.<br><br>
+
+Allahumma anta kholaqtanii waanta tahdiinii waanta tuth’imunii waanta tusqiinii waanta tumitunii waanta tuhyiinii waanta ‘ala kulli syaiin qodiir.<br><br>
+
+Ashbahnaa ‘ala fitrotil islaami wa ‘ala kalimatil ikhlaashi wa ‘ala diini nabiyyanaa muhammadin shollallahu ‘alaihi wa alihi wasallam. Wa ‘ala millati abiina ibraahiima haniifan musliimaan wamaa kaana minal musyrikiin.<br><br>
+
+Allahumma bika ashbahnaa wabika amsainaa wabika nahyaa wabika namuutu. Wa’alaika natawakkalu wa ilaikannasyuuru. Ashbahnaa wa ashbahal mulku lillahi walhamdulillahi robbil ‘aalamiin<br><br>
+
+Allahumma innii as aluka khoiro hadzal yaumi fathahu wa nashrohu wa nuurohu wa barakatahu wa hudahu.<br><br>
+
+Alahumma innii as aluka khoiro hadzal yaumi wa khoiro maa fiihi wa Wa’audzubika min syarri hadzal yaumi, wa syarri maa fiihi<br><br>
+
+Allahumma maa ashbaha bii min ni’matin au bi ahadin min kholqika. Faminka wahdaka laa syariikalak, falakal hamdu walakasysyukru ‘ala dzalik.<br><br>
+
+Subhanallahi wabihamdihi ‘adada kholqih, wa ridho nafsihi wa zinata ‘arsyihi, wa midaada kalimaatih.(3x)<br><br>
+
+Subhanallahil ‘adziimi wabihamdihi ‘adada kholqihi waridho nafsihi wazinata ‘arsyihi wamidaada kalimaatih.<br><br>
+
+Subhanallahi ‘adada maa kholaqo fissamaa’, Subhanallahi ‘adada maa kholaqo fil ardhi’, Subhanallahi ‘adada maa baina dzalik, Subhanallahi ‘adada maa huwa khooliq, (3x)<br><br>
+
+Alhamdulillahi ‘adada maa kholaqo fissama’, Alhamdulillahi ‘adada maa kholaqo fil ardh, Alhamdulillahi ‘adada maa baina dzalik, Alhamdulillahi ‘adada maa huwa khooliq. (3x)</i></p><br><br><p>Ya Allah, aku bermohon kepada-Mu pengampunan dan kesejahteraan serta perlindungan yang abadi dalam agamaku, duniaku, keluargaku, dan hartaku.<br><br>
+
+Ya Allah, tutupilah segala ke’aibanku, dan amankanlah ketakutanku. (Sila rujuk Hadith Per: 40)<br><br>
+
+Ya Allah, peliharalah daku dari malapetaka yang datang dari depan dan belakangku, dan dari kanan dan kiriku, dan dari atasku, dan aku berlindung dengan keagungan-Mu agar jangan ditipu dari bawahku (tanpa disedari).<br><br>
+
+Ya Allah, Engkaulah yang menciptakan daku, memberikan petunjuk kepadaku, memberi makanan padaku, memberikan minuman kepadaku, mematikan daku, dan membangkitkan daku semula. Dia Mahakuasa atas segala sesuatu.<br><br>
+
+ Kami berada pada pagi ini dengan fitrah beragama Islam, di atas kalimah ikhlas, dengan agama Nabi kami Muhammad s.a.w dan agama bapa kami Ibrahim a.s. yang lurus dan berserah diri (kepada Allah), dan sekali-kali bukanlah dia dari golongan orang-orang yang mempersekutukan Allah dengan yang lain.<br><br>
+
+Ya Allah! sesungguhnya kami berada di waktu pagi bersama Engkau, demikian pula di waktupetang, dan di kala hidup dan di kala mati, dan hanya kepada-Mu lah tempat kebangkitan, kami berada di waktu pagi sedang kekuasaan tetap berada bagi Allah Tuhan seru sekalian alam.<br>
+Ya Allah, kami memohon kepada-Mu kebaikan hari ini, pembukaannya, kemudahannya, cahayanya, berkatnya dan petunjuknya.<br><br>
+
+Ya Allah aku memohon kepada-Mu kebaikan hari ini, dan kebaikan apa yang ada di dalamnya, dan aku berlindung kepada-Mu daripada keburukan hari ini dan keburukan apa yang terdapat didalamnya.<br><br>
+
+Ya Allah, nikmat yang aku terima di pagi ini, atau yang di terima oleh salah seorang dari hamba-Mu, maka sumbernya hanyalah Engkau semata, tiada sekutu bagi-Mu, bagi-Mu lah pujian dan kepada-Mu kami bersyukur atas semuanya itu.<br><br>
+
+Maha Suci Allah dan puji-pujian untukNya, sebanyak bilangan makhlukNya, sebanyak bilangan keridhaanNya, sebanyak timbangan ‘ArsyNya dan sebanyak tinta untuk menulis kalimatNya.<br><br>
+
+Maha Suci Allah Yang Maha Agung dan puji-pujian untukNya, sebanyak bilangan makhlukNya, sebanyak bilangan keridhaan-Nya, sebanyak timbangan ‘Arsy-Nya dan sebanyak bilangan kalimat-Nya.<br><br>
+
+Maha suci Allah sebanyak bilangan ciptaan-Nya di langit, Maha suci Allah sebanyak bilangan ciptaan-Nya di bumi, Maha suci Allah sebanyak bilangan ciptaan-Nya di antara keduanya dan Maha suci Allah sebanyak bilangan ciptaan-Nya.<br><br>
+
+Segala puji bagi Allah sebanyak bilangan ciptaan-Nya di langit, segala puji bagi Allah sebanyak bilangan ciptaan-Nya di bumi, segala puji bagi Allah sebanyak bilangan ciptaan-Nya di antara keduanya dan segala puji bagi Allah sebanyak bilangan ciptaan-Nya.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

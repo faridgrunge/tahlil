@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Nadhom Asmaul Husna KH. Ali Maksum (Krapyak)</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِـسْمِ اْلإِلَـهِ  وَ بِهِ بَـدَأْنَا  *  وَلَوْ عَبَدْنَا غَيْرُهُ   لَـشَقِـيْنَا
+يَا حَبَّذَا رُبَّا وَحُبَّ دِيْنَا   *   وَحَبـَّـذَا مُحَـمَّدٌ هَـادِيْـنَـا
+لَـوْلَاهُمَـا كُـنَّا وَ لَا بَـقِـيْنَـا
+<br>(2)<br>
+اَللّٰهُ لَوْ لَا أَنْـتَ مَا اهْتَـدَيْنَـا      *     وَ لَا تَصَدَّقْنَـا وَلَا صَلَّـيْنَا
+فَأَنْـزِلَنْ   سَكِــيْنَـةً   عَلَـيْنَا       *       وَ ثَـبِّتِ الْأَقْدَامَ إِنْ لَاقَـيْـنَا
+نَـحْنُ الْأُوْلَى جَاءُوْكَ مُسْلِمِيْنَ
+<br>(3)<br>
+وَالْمُشْرِكُـوْنَ قَدْ بَغَوْا عَلَيْنَا    *    إِذَا   أَرَادُوْا    فِتْـنَـةً     أَبَـيْـنَـا
+وَقَدْ تَدَاعَى جَـمْعُهُـمْ عَلَيْنَـا   *   طِبْـقَ الْأَحَادِيْـثِ الَّتِي رَوَيْنَـا
+فَارْدُدْهُـمُ  اللّٰهُـمَّ خَاسِرِيْنَ
+<br>(4)<br>
+اَللّٰهُ  يَا رَحْـمٰنُ يَا رَحِـيْمُ     *  اَللّٰهُ   يَا حَيُّ    وَ يَا  قَـيُّـوْمُ
+اَللّٰهُ   يَا قَـوِيُّ  يَا قَـدِيْــمُ   *   اَللّٰهُ يَا  عَلِـيُّ  يَا عَـظِـيْـمُ
+لَا يَنْـبَغِيْ لِلْـقَـوْمِ  أَنْ يَعْـلُوْنَا
+<br>(5)<br>
+اَللّٰهُ  يَا  لَـطِـيْـفُ يَا عَلِـيْمُ         *  اَللّٰهُ  يَا   رَءُوْفُ  يَا حَكِـيْمُ
+اَللّٰهُ    يَا تَـوَّابُ    يَا حَـلِـيْمُ        *     اَللّٰهُ  يَا   وَهَّابُ  يَا كَـرِيْـمُ
+هَبْنَا الْعُـلَا وَاجْعَلْ عِدَانَا الدُّوْنَا
+<br>(6)<br>
+اَللّٰهُ    يَا    مَالِـكُ    يَـا مُـنِـيْرُ         *  اَللّٰهُ    يَا    مَلِيْـكُ يَا  قَـدِيْـرُ
+اَللّٰهُ    يَا    مَوْلَى    وَيَا نَصِـيْرُ    *      اَللّٰهُ  أَنْتَ الْمَلِكُ الْـكَبِـيْرُ
+لَيْـسَ عِدَانَا لَكَ مُعْـجِـزِيْنَـا
+<br>(7)<br>
+اَللّٰهُ    يَا    شَاكِـرُ  يَا شَـكُوْرُ   *  اَللّٰهُ    يَا    عَفُـوُّ   يَا غَفُـوْرُ
+اَللّٰهُ    يَا    عَالِـمُ     يَا خَـبِـيْرُ      *    اَللّٰهُ    يَا     فَـتَّاحُ     يَا بَـصِـيْرُ
+لَا تَحْـرِمَنَّ  فَـتْـحَـكَ الْمُبِـيْـنَا
+<br>(8)<br>
+اَللّٰهُ    يَا ظَاهِرُ   يَا جَلِيْـلُ     *  اَللّٰهُ    يَا  بَاطِنُ  يَا وَكِـيْـلُ
+اَللّٰهُ    يَا  صَادِقُ  يَا جَـمِيْلُ   *   اَللّٰهُ    يَا  حَافِـظُ يَا كَـفِـيْلُ
+كُـنْ حَافِـظًا لَنَـا وَكُـنْ مُعِـيْنَـا
+<br>(9)<br>
+اَللّٰهُ  يَـا   غَـنِيُّ   يَـا حَـمِـيْدُ     *  اَللّٰهُ  يَـا   مُغْـنِى  وَ يَا رَشِيْـدُ
+اَللّٰهُ  يَـا   مُبْـدِئُ   يَـا مُـعِـيْدُ     *      اَللّٰهُ  يَـا   عَزِيْــزُ  يَـا مَـجِـيْـدُ
+لِـعِـزِّكَ  التَّـوْحِيْدُ   يَشْكُـو الْـهُوْنَـا
+<br>(10)<br>
+اَللّٰهُ   يَـا     قَادِرُ  يَـا  مُـقْـتَدِرُ    *  اَللّٰهُ   يَـا   قَاهِرُ  يَـا مُـؤَخِّـرُ
+اَللّٰهُ   يَـا   فَاطِـرُ  يَا مُصَـوِّرُ    *     اَللّٰهُ   يَا مُحْـصِي وَ يَا مُدَبِّـرُ
+دَبِّـرْ لَـنَا   وَ دَمِّـرِ الْـعَـادِيْنَـا
+<br>(11)<br>
+اَللّٰهُ  يَـا   دَائِـمُ    لَا يَـمُــوْتُ   *  اَللّٰهُ    يَا قَائِـمُ   لَا   يَـفُـوْتُ
+اَللّٰهُ    يَا   مُحْيِيْ وَيَا مُمِيْتُ   *   اَللّٰهُ    يَا   مُغِـيْثُ يَا مُقِـيْـتُ
+كُنْ غَوْثَـنًا وَ حِصْنَـنَا الْحَصِيْنَـا
+<br>(12)<br>
+اَللّٰهُ    يَا    بَاسِطُ أَنْـتَ الْـوَاسِعُ      *  اَللّٰهُ    يَا    قَابِضُ أَنْـتَ  الْمَانِـعُ
+اَللّٰهُ    يَا    خَالِـقُ  أَنْتَ   الْـجَـامِـعُ     *      اَللّٰهُ    يَا   خَافِضُ  أَنْتَ الرَّافِـعُ
+اِرْفَـعْ  مَعَالِيْنَـا  لِـعِـلِّـيِّـيْـنَـا
+<br>(13)<br>
+اَللّٰهُ    ذُو اْلمَعَـارِجِ   الرَّفِـيْـعُ     *  اَللّٰهُ    يَا   وَافِي وَ يَا سَرِيْـعُ
+اَللّٰهُ    يَا   كَافِـى  وَ يَا سَـمِـيْـعُ   *   يَا نُوْرُ يَا هَادِي وَ يَا بَدِيْـعُ
+أَدَّبْـتَنَـا بِمَا جَـرَى يَكْـفِـيْنَـا
+<br>(14)<br>
+اَللّٰهُ  ذُو الْجَـلَالِ  وَ الْإِكْـرَامِ     *  اَللّٰهُ  ذُو الطَّوْلِ عَلَى الـدَّوَامِ
+اَللّٰهُ    يَا   ذَا الْـفَضْلِ وَ الْإِنْـعَامِ   *      وَالسَّيِّدُ   الْمُطْلَقَ   لِـلْأَ نَامِ
+اِرْحَمْ  عَبِـيْدًا   لَكَ  عَابِدِيْنَـا
+<br>(15)<br>
+اَللّٰهُ    يَا   أَ وَّ لُ    أَنْـتَ الْـوَاحِدُ     *  اَللّٰهُ    يَا    آخِـرُ أَنْتَ الـرَّاشِـدُ
+يَا وِتْـرُ يَا مُتَكَبِّرُ يَا وَاجِدُ    *     يَا بَرُّ يَا مُتَـفَـضِّلُ يَا مَاجِـدُ
+بِـفَـضْلِكَ اقْـبَلْنَـا عَلَى مَا فِـيْـنَـا
+<br>(16)<br>
+اَللّٰهُ    يَا   مُبِـيْنُ     يَـا وَدُوْدُ        *  اَللّٰهُ    يَا   مُحِيْـطُ  يَـا شَهِـيْـدُ
+اَللّٰهُ    يَا   مَتِـيْـنُ  يَا شَدِيْدُ     *    يَا مَنْ هُوَ الْفَعَّـالُ مَا يُرِيْـدُ
+إِنَّا ضِعَـافٌ لَكَ  قَـدْ  لَـجَـأْنَا
+<br>(17)<br>
+اَللّٰهُ    يَا   مُـعِـزُّ    يَا   مُـقَـدِّمُ        *  اَللّٰهُ    يَا   مُـذِلُّ  يَا مُنْـتَـقِـمُ
+اَلْبَادِئُ الْبَاقِي فَلَا يَنْعَدِمُ    *  اَلْمُحْسِنُ الْوَالِى الْحَفِيْظُ الْأَكْرَمُ
+لَيْسَ لَنَـا سِوَاكَ مَنْ يَـحْمِيْـنَـا
+<br>(18)<br>
+اَللّٰهُ    يَا   وَارِثُ   أَنْتَ  الْأَبَـدُ    *  اَللّٰهُ    يَا   بَاعِـثُ  أَنْـتَ الْأَحَـدُ
+يَا مَالِكَ الْمُلْكِ  الْإِلٰـهُ الصَّمَدُ   *   لَا كُـفُـؤٌ  لَا وَالِـدٌ  لَا وَلَــدُ
+كُـفَّ الْـعِـدَا عَنَّـا فَـقَـدْ أُوْذِيْـنَا
+<br>(19)<br>
+اَللّٰهُ    يَا   غَالِـبُ   يَـا قَـهَّـارُ   *  اَللّٰهُ    يَا   نَافِـعُ  أَنْـتَ الضَّارُّ
+اَللّٰهُ    يَا    بَارِئُ      يَا   غَـفَّـارُ  *    يَا رَبِّ  يَا ذَا الْقُـوَّةِ الْجَبَّارُ
+قَـوِّمْ لَنَـا الـدُّنْـيَا وَ قَـوِّ الدِّيْـنَا
+<br>(20)<br>
+اَللّٰهُ    رَبُّ   الْـعِــزَّةِ    الـسَّــلَامُ       * اَلْمُـؤْمِنُ الْمُهَيْـمِنُ  الْـعَـلَّامُ
+ذُوالرَّحْمَةِ الْأَعْلَى الْأَعَزُّ التَّامُّ  *   مَنْ دِيْـنُهُ الْحَـقُّ هُوَ الْإِسْلَامُ
+قَـيِّـضْ لَـهُ     اللّٰـهُـمَّ   نَاصِرِيْنَـا
+<br>(21)<br>
+اَللّٰهُ   أَنْتَ الْمُتَـعَالِى الْحَـكَـمُ   *  اَلْفَرْدُ   ذُوالْعَرْشِ الْوَلِيُّ الْأَحْكَـمُ
+اَلْغَافِرُالْمُعْطِي الْجَوَّادُ  الْمُنْعِمُ *  اَلْعَادِلُ الْـعَدْلُ الصَّبُّوْرُ الْأَرْحَمُ
+مَكِّـنْ لَنَـا فِيْ أَرْضِنَـا تَمْكِـيْـنَـا
+<br>(22)<br>
+اَللّٰهُ    يَا   قُـدُّوْسُ  يَـا بُـرْهَـانُ     * يَـا بَرُّ  يَا حَنَّـانُ  يَـا مَنَّـانُ
+يَا حَـقُّ يَا مُـقْـسِطُ يَا  دَيَّـانُ    *   تَبَارَكَتْ أَسْمَاءُكَ الْحِسَانُ
+بِهَا  قَرَعْنَـا  بَـا بَـكَ  الْمَـصُـوْنَـا
+<br>(23)<br>
+اَللّٰهُ    يَا   خَـلَّاقُ    يَا مُجِــيْــبُ   *  اَللّٰهُ    يَـا   رَزَّاقُ   يَا حَسِـيْـبُ
+اَللّٰهُ     يَا   قَـرِيْبُ    يَـا رَقِــيْـبُ   *  اَلْمُسْتَعَانُ السَّامِعُ الْمُجِيْـبُ
+إِنَّا دَعَوْنَاكَ  اسْـتَـجِـبْ  آمِـيْنَـا</p><p><i>Bismil ilaahi wabihii bada’naa.  Walau ‘abadnaa ghairuhuu lasyaqiinaa<br>
+Yaa habbadzaa rubba wa hubba diinaa.  Wa habbadzaa muhammadun haadiinaa<br>
+Laulaa humaa kunna walaa baqiinaa.<br>
+Alloohu laulaa anta mahtadainaa  *  Walaa tashoddaqnaa walaa shollainaa.<br>
+Fa anzilan sakiinatan ‘alainaa  *  Wa tsabbitil aqdaama in laqainaa<br>
+Nahnul uulaa jaa-uuka muslimiinaa.<br>
+Wal musyrikuuna qod baghou ‘alainaa  *  Idzaa arooduu fitnatan abainaa.<br>
+Wa qod tadaa-‘a jam’uhum ‘alainaa  *  Thibqol ahaaditsillatii rowainaa<br>
+Fardud humulloohumma khoosiriinaa.<br>
+Alloohu yaa rohmaanu yaa rohiimu * Alloohu yaa hayyu wa yaa qoyyuumu.<br>
+Alloohu yaa qowiyyu yaa qodiimu * Alloohu yaa ‘aliyyu yaa ‘azhiimu.<br>
+Laa yambaghii lilqoumi an ya’luunaa.<br>
+Alloohu yaa lathiifu yaa ‘aliimu  *   Alloohu yaa ro-uufu yaa hakiimu<br>
+Alloohu yaa tawwaabu yaa haliimu  *   Alloohu yaa wahhaabu yaa kariimu<br>
+Habnal -‘ulaa waj-‘al ‘idaanad-duunaa. <br>
+Alloohu yaa maaliku yaa muniiru  *  Alloohu yaa maliiku yaa qodiiru.<br>
+Alloohu yaa maulaa wayaa nashiiru  *  Alloohu Antal malikul kabiiru.<br>
+Laisa ‘idaanaa laka mu’jiziinaa.<br>
+Alloohu yaa syaakiru yaa syakuuru  *  Alloohu yaa ‘afuwwu yaa ghofuuru<br>
+Alloohu yaa ‘aalimu yaa khobiiru  *  Alloohu yaa fattaahu yaa bashiiru.<br>
+Laa tahrimanna fat-hakal mubiinaa.<br>
+Alloohu yaa zhoohiru yaa jaliilu  *   Alloohu yaa baathinu yaa wakiilu.<br>
+Alloohu yaa shoodiqu yaa jamiilu  *  Alloohu yaa haafizhu yaa kafiilu.<br>
+Kun haafizhon lanaa wa kun mu-’iinaa<br>
+Alloohu ghoniyyu yaa hamiidu  *  Alloohu yaa mughnii wayaa rosyiidu.<br>
+Alloohu yaa mubdi-u yaa mu-’iidu  *   Alloohu yaa ’aziizu yaa majiidu.<br>
+Li-’izzikat tauhiidu yasykul huunaa.<br>
+Alloohu yaa qoodiru yaa muqtadiru  *   Alloohu yaa qoohiru yaa mu-akhkhiru<br>
+Alloohu yaa faathiru yaa mushowwiru  *   Alloohu yaa muhshii wa yaa mudabbiru<br>
+Dabbir lanaa wa dammiril ‘aadiinaa.<br>
+Alloohu yaa daa-imu laa yamuutu  *   Alloohu yaa qoo-imu laa yafuutu.<br>
+Alloohu yaa muhyii wa yaa mumiitu  *  Alloohu yaa mughiitsu yaa muqiitu<br>
+Kun ghoutsanaan wa hishnanal hashiinaa.<br>
+Alloohu baasithu antal waasi’u  *  Alloohu yaa qoobidhu antal maani’u.<br>
+Alloohu yaa khooliqu antal jaami’u  *  Alloohu yaa khofiidhu antar roofi’u.<br>
+Irfa’ ma’aaliinaa li-’illiyyiinaa.<br>
+Alloohu dzul ma’aarijir rofii-‘u  *  Alloohu yaa waafii wa yaa sari-‘u.<br>
+Alloohu yaa kaafii wa yaa samii-‘u  *  Yaa nuuru yaa haadii wa yaa badii-‘u.<br>
+Addabtanaa bimaa jaroo yakfiinaa.<br>
+Alloohu dzul jalaali wal ikroomi  *  Alloohu dzut thouli ‘alad dawaami.<br>
+Alloohu yaa dzal fadhli wal in-’aami  *  Wassayyidul Muthlaqa lil anaami<br>
+Ir-ham ‘abiidan laka ‘aabidiinaa.<br>
+Alloohu yaa awwaalu antal waahidu  *  Alloohu yaa aakhiru antar roosyidu<br>
+Yaa witru yaa mutakabbiru yaa waajidu  *  Yaa barru yaa mutafadh-dhilu yaa maajidu<br>
+Bifadh-likaqbalnaa ‘alaa maa fiinaa.<br>
+Alloohu yaa mubiinu yaa waduudu  *  Alloohu yaa muhiithu yaa syahiidu.<br>
+Alloohu yaa matiinu yaa syadiidu  *  Yaa man huwal fa’-aalu maa yuriidu.<br>
+Innaa dhi-‘aafun laka qod lajaknaa.<br>
+Alloohu yaa mu’izzu yaa muqoddimu  *   Alloohu yaa mudzillu yaa muntaqimu.<br>
+Albaadi-ul baaqii falaa yan’adimu  *  Almuhsinul waalil hafiizhul akromu.<br>
+Laisa lanaa siwaaka man yahmiina.<br>
+Alloohu yaa waritsu antal abadu  *  Alloohu yaa baa-‘itsu antal ahadu.<br>
+Yaa maalikal mulkil ilaahus shomadu  *  Laa kufu-un laa waalidun laa waladu<br>
+Kuffal ‘idaa ‘annaa faqod uudziinaa.<br>
+Alloohu yaa ghoolibu yaa qohhaaru  *  Alloohu yaa naafi’u antadh-dhoorru.<br>
+Alloohu yaa baari-u yaa ghoffaaru  *  Yaa robbi yaa dzal quwwatil jabbaaru.<br>
+Qowwim lanad dun-yaa wa qowwid-diinaa.<br>
+Alloohu robbul ‘izzatis salaamu  *  Almukminul muhaiminul ‘allaamu.<br>
+Dzurrohmatil a’lal a-‘azzut taammu  *  Man diinuhul haqqu huwal islaamu<br>
+Qoyyidh lahulloohumma naashiriinaa.<br>
+Alloohu antal muta’aalil hakamu  * Alfardu dzul ‘arsyil waliyyul ahkamu.<br>
+Alghoofirul mu’thil jawaadul mun-’imu  *  Al-‘aadilul ‘ad-lus shobuurul arhamu.<br>
+Makkin lanaa fii ardhinaa tamkiinaa.<br>
+Alloohu yaa qudduusu yaa bur-haanu  *  Yaa barru yaa hannaanu yaa mannaanu.<br>
+Ya haqqu yaa muqsithu yaa dayyaanu  *  Tabaarokat asmaa-ukal hisaanu<br>
+Bihaa qoro’naa baabakal mashuunaa.<br>
+Alloohu yaa khollaaqu yaa habiibu.  Alloohu yaa rozzaaqu yaa hasiibu.<br>
+Alloohu yaa qoriibu yaa roqiibu. Almusta’aanus saami’ul mujiibu.<br>
+Innaa da-‘aunaakas tajib aamiinaa.</i></p><p>Dengan menyebut Asma’ Allah, kami memulai (menulis/membaca doa ini). Sekiranya kami  beribadah menyembah kepada selain Dia, tentu kami akan celaka.<br>
+Wahai manusia, sangat tepat kita jadikan Allah sebagai Tuhan, Islam sebagai agama, dan Muhammad sebagai Nabi dan Rasul yang menunjuki kita.<br>
+Kalau-lah tidak ada beliau ﷺ, kami tak pernah ada dan tak eksis (hidup di dunia ini).<br>
+Ya Allah, seandainya tidak ada Engkau, kami tidak akan memperoleh hidayah-Mu, tidak pernah bershodaqah dan tidak akan pernah shalat.<br>
+Karena itu, anugerahi kami ketenangan dan kokohkan telapak kaki kami sewaktu meniti siroth dalam rangka bertemu-menghadap-Mu.<br>
+Kami semua adalah orang yang pertama kali datang menghadap-Mu dalam keadaan muslim (berpasrah diri).<br>
+Sungguh, kaum musyrikin telah berbuat jahat kepada kami. Jika mereka bermaksud menebar fitnah tipu-daya, kami pun siap menolaknya.<br>
+Sungguh, gerombolan mereka benar-benar mengepung kami (dari segala penjuru). Hal ini sesuai dengan keterangan Hadis Nabi ﷺ yang pernah kami riwayatkan.<br>
+Karena itu, tolong, Ya Allah! Tangkis dan gagalkan tipu daya mereka, sampai mereka mengalami kerugian.<br>
+Ya Allah, Ya Rohman (Maha Pengasih), Ya Rohim (Maha Penyayang). Ya Allah, Ya Hayyu (Maha Hidup abadi), Ya Qoyyum (Maha berdiri sendiri)<br>
+Ya Allah, Ya Qowiyyu (Maha Kuat), Ya Qodim (Maha Dahulu). Ya Allah, Ya ‘Aliyyu (Maha Luhur), Ya ‘Azhim (Maha Agung).<br>
+Tidak sepantasnya kaum musuh mengalahkan kami (dalam segala bidang).<br>
+Ya Allah, Ya Lathif (Maha Lemah-lembut), Ya ‘Aliim (Maha Mengetahui). Ya Allah, Ya Ro-uf (Maha Pengasih), Ya Hakim (Maha Bijaksana).<br>
+Ya Allah, Ya Tawwab (Maha Penerima taubat), Ya Halim (Maha Penyantun). Ya Allah, Ya Wahhab (Maha Pemberi karunia), Ya Karim (Maha Mulia, Maha Dermawan).<br>
+Karuniai kami keluhuran dan ketinggian derajat. Dan jadikan musuh-musuh kami hidup terhina.<br>
+Ya Allah, Ya Maalik (Penguasa dan Pemilik seluruh makhluk), Ya Munir (Yang Menerangi). Ya Allah, Ya Maliik (Yang Memiliki Kerajaan), Ya Qodir (Maha Kuasa).<br>
+Ya Allah, Ya Maula (Pelindung), Ya Nashir (Penolong). Ya Allah, Engkau-lah Raja Yang Maha Agung.<br>
+Musuh-musuh kami tidak akan mampu mengalahkan Engkau.<br>
+Ya Allah, Ya Syakir (Yang mensyukuri amal kebaikan hamba-Nya dengan balasan pahala), Ya Syakur (MahaMensyukuri). Ya Allah, Ya ‘Afuwwu (Maha Pemaaf), Ya Ghofur (Maha Pengampun).<br>
+Ya Allah, Ya ‘Alim (Yang Mengetahui), Ya Khobir (Maha Mengenal, Mengetahui). Ya Allah, Ya Fattah (Maha Pemberi Kepu-tusan), Ya Bashir (Maha Melihat).<br>
+Jangan Engkau halangi kami meraih kemenangan yang nyata dari-Mu.<br>
+Ya Allah, Ya Zhohir (Yang Zhahir, Yang Nyata wujud-Nya), Ya Jalil (Maha Agung). Ya Allah, Ya Bathin (Yang tersembunyi), Ya Wakil (Pelindung).<br>
+Ya Allah, Ya Shodiq (Yang Benar firman-Nya), Ya Jamil (Maha Indah lagi sempurna). Ya Allah, Ya Haafizh (Pemelihara), Ya Kafil (Penanggung, yang menyaksikan).<br>
+Ya Allah, Ya Ghoniyyu (Maha Kaya), Ya Hamid (Terpuji). Ya Allah, Ya Mughni (Pem-beri kekayaan), Ya Rosyid (Pemberi petunjuk dan kepandaian).<br>
+Ya Allah, Ya Mubdi’ (Pelopor penciptaan), Ya Mu’id (Yang Mengulangi penciptaan seperti semula).  Ya Allah, Ya ‘Aziz (Yang Gagah Perkasa), Ya Majiid (Maha Agung).<br>
+Oleh karena kemuliaan Engkau, Tauhid (Peng-Esa-an Dirimu) menyebabkan kehinaan (bagi sesuatu selain Engkau).<br>
+Ya Allah, Ya Qodir (Yang Kuasa), Ya Muq-tadir (Maha Berkuasa). Ya Allah, Ya Qohir (Maha Memaksa, Mengalahkan), Ya Mu-akh-khir (Yang Mengakhirkan, menunda).<br>
+Ya Allah, Ya Fathir (Pencipta), Ya Mushow-wir (Pembentuk rupa). Ya Allah, Muh-shi (Yang Menghitung, Mengumpul-kan), Ya Mudabbiru (Yang Mengatur, Mendesain)<br>
+Aturlah kami, Ya Allah, dan gempur para musuh kami.<br>
+Ya Allah, Ya Da-im (Yang Abadi, Langgeng), tidak mengenal mati.Ya Allah, Ya Qo-im (Berdikari dalam mengurusi makhluk), yang tidak kehilangan kesempatan.<br>
+Ya Allah, Ya Muhyi (Yang Menghidupkan), Ya Mumit (Yang Mematikan). Ya Allah, Ya Mughits (Yang Menolong), Ya Muqit (Maha Kuasa, Pemelihara dan Pemberi makan).<br>
+Jadilah Engkau sebagai Penolong kami dan bentengi kami dengan benteng yang kokoh.<br>
+Ya Allah, Ya Basith (Yang Membentangkan rizki). Engkau Maha Luas pemberian-Nya. Ya Allah, Ya Qobidh (Yang Menyempitkan rizki). Engkau-lah yang menolak rizki.<br>
+Ya Allah, Ya Kholiq (Pencipta). Engkau-lah yang mengumpulkan segala sesuatu. Ya Allah, Ya Khofidh (Yang Merendahkan atau menurunkan derajat). Dan Engkau Yang Meninggikan / mengangkat derajat.<br>
+Angkatlah, terimalah amal-amal kami, untuk meraih ‘illiyyin (surga tertinggi).<br>
+Ya Allah, Engkau-lah Pemilik langit dan Maha Tinggi derajat-Nya.Ya Allah, Ya Wafi (Yang Menepati janji). Ya Sari’ (Yang Maha Cepat siksa-Nya).<br>
+Ya Allah, Ya Kafi (Yang Mencukupi), Ya Sami’ (Maha Mendengar). Ya Nur (Sumber Cahaya), Ya Hadi (Pemberi petunjuk), Ya Badi’ (Pencipta).<br>
+Semoga Engkau “Kerso” mendidik kami dengan tatakrama yang mampu mencukupi kami.<br>
+Ya Allah, Engkau-lah Pemilik keagungan dan kemuliaan. Ya Allah, Engkau-lah yang memiliki karunia selama-lamanya.<br>
+Ya Allah, Wahai Engkau yang memiliki karunia dan berbagai kenikmatan. Engkau-lah Tuan secara mutlak bagi seluruh manusia.<br>
+Belaskasihi semua hamba yang telah beribadah hanya kepada Engkau.<br>
+Ya Allah, Ya Awwal (Yang Awal). Engkau Tuhan Yang Esa. Ya Allah, Ya Akhir (Yang Akhir). Engkaulah Yang memberi petunjuk.<br>
+Ya Witru (Yang Ganjil), Ya Mutakabbir (Pemilik Segala Keagungan), Ya Wajid (Yang Kaya). Ya Barru (Yang Melimpahkan kebai-kan), Ya Mutafadh-dhil (Pemberi anugerah), Ya Majid (Yang Agung, Mulia).<br>
+Berkat anugerah-Mu, terimalah (amal kebaikan) apa saja yang kami lakukan.<br>
+Ya Allah, Ya Mubin (Yang menjelaskan menurut hakikatnya), Ya Wadud (Yang Maha Pengasih). Ya Allah, Ya Muhith (Yang Maha Meliputi), Ya Syahid (Maha Menyaksikan).<br>
+Ya Allah, Ya Matin (Maha Kuat, Keras), Ya Syadid (Sangat Keras siksa-Nya). Wahai Yang Terus berbuat sesui kehendak-Nya.<br>
+Sungguh, kami ini lemah, tak mampu. Kami serahkan segala sesuatu kepada-Mu.<br>
+Ya Allah, Ya Mu’izzu (Yang Memuliakan), Ya Muqoddim (Yang Mendahulukan). Ya Allah, Ya Mudzillu (Yang Merendahkan), Ya Munta-qim (Yang Menuntut balas).<br>
+Engkau-lah Al-Badi-ul Baqi (Yang Memu-lai, kekal abadi), sehingga tak akan pernah sirna. Engkau-lah Al-Muhsin (Yang Berbuat Baik), Al-Wali (Penguasa) Al-Hafizh (Peme-lihara), Al-Akram (Maha Mulia).<br>
+Selain Engkau, tiada seorang pun yang  mampu memberikan perlindungan kepada kami.<br>
+Ya Allah, Ya Waarits (Yang Mewarisi). Engkau Tuhan Yang Langgeng. Ya Allah, Ya Baa’its (Yang membangkitkan manusia dari kematian). Engkau Tuhan Yang Esa.<br>
+Ya Malikal Mulk (Pemilik Kerajaan). Engkau Tuhan tempat bergantung seluruh makhluk. Tiada satu pun yang setara dengan-Mu. Engkau Tidak ber-orang tua, dan tidak berputra.<br>
+Ya Allah, cegah dan jauhkan musuh dari kami. Jika tidak, mereka tentu akan menyakiti kami.<br>
+Ya Allah, Ya Gholib (Yang Mengalahkan), Ya Qohhar (Yang Maha Memaksa). Ya Allah, Ya Nafi’ (Pemberi kemanfaatan). Engkau Tuhan Yang menimpakan bahaya.<br>
+Ya Allah, Ya Bari-u (Yang memunculkan dan menciptakan segala sesuatu dari tiada), Ya Ghoffar (Maha Pengampun). Ya Robb, Tuhan kami, Pemilik kekuatan, Yang Maha Perkasa.<br>
+Tegak-kokohkan kehidupan duniawi kami dan perkuat agama Islam kami.<br>
+Ya Allah, Tuhan Pemilik kemulyaan, As-Salam (Sumber keselamatan). Wahai Al-Muk-min (Pemberi keamanan), Al-Muhaimin (Maha Memelihara) dan Al-‘Allam (Maha Mengetahui).<br>
+Wahai Pemilik  rahmat yang agung, mulia lagi sempurna. Wahai Tuhan, Agama Islam yang ditetapkan-Nya merupakan agama yang haqq.<br>
+Ya Allah, takdirkan kami semua sebagai penolong agama Islam.<br>
+
+Ya Allah, Engkau Tuhan Yang Maha Luhur, Pemutus perkara (al-Hakam), Tunggal (al-Fardu), Pemilik ‘Arasy, Penolong (al-Waliyy) lagi Maha Bijaksana.<br>
+Engkau Al-Ghofir (Pengampun), Al-Mu’thi (Pemberi), Al-Jawad (Sangat Dermawan), Al-Mun’im (Pemberi nikmat), Al-‘Adil (adil), Al-‘Adlu (sangat adil), Ash-Shobur (sangat sabar), Al-Arham (Maha Pengasih).<br>
+Kokohkan keberadaan kami di tanah air kami dengan sebenar-benarnya.<br>
+Ya Allah, Ya Quddus (Maha Suci), Ya Burhan (Pemilik bukti kebenaran), Ya Baarru (Yang Bajik, Maha baik), Ya Hannan (Berbelas kasih), Ya Mannan (Pemberi anugerah).<br>
+Ya Haqqu (Benar dan nyata wujud-Nya) Ya Muqsith (Maha adil), Ya Dayyan (Maha Kuasa, Memerintah, mengatur, membuat perhitungan). Asmaul Husna-Mu suci dan mendatangkan keberkahan.<br>
+Dengan perantaraan Asmaul Husna-Mu itu, kami ketuk pintu rahmat-Mu yang terpelihara.<br>
+Ya Allah, Ya Khollaq (Maha Menciptakan), Ya Habib (Yang Mencintai para kekasih-Nya). Ya Allah, Ya Rozzaq (Maha Pemberi rizki), Ya Hasib (Maha mencukupi, Maha membuat perhitungan).<br>
+Ya Allah, Ya Qorib (Maha dekat), Ya Roqib (Maha mengawasi). Engkau-lah tempat memohon pertolongan, Yang mendengar lagi mengijabahi semua permohonan.<br>
+Sungguh, kami memohon kepada-Mu. Karena itu, kabulkan segala permohonan kami. Amin.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Di dalam Al-Qur'an disebutkan, "Dan Allah memiliki Asmaul-husna (nama-nama yang terbaik), maka bermohonlah kepada-Nya dengan menyebutnya Asmaul-husna itu..." (QS. Al-A'raf: 180). 
+
+Nadhom Asmaul Husna versi Krapyak ini adalah karya dari Syeikh Yusuf bin Ismail An-Nabhany seorang ulama besar abad ke-19 asal Mesir. Di Indonesia, Nadhom Asmaul Husna ini dipopulerkan oleh KH. Ali Maksum (Mbah Ali). Beliau mendapatkannya dari ayahanda beliau, KH. Maksum. Mbah Ali rutin mengamalkan Nadhom ini usai shalat wajib. 
+
+Nadhom Asmaul Husna ini bersifat umum. Dan KESAN mendapatkannya dari para alumni PP. Krapyak.</p><p><strong>
+</strong></p>
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

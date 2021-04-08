@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Nadhom Asmaul Husna</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab"><br>بِسْـمِ اللّٰهِ بَدَ ئْـنَا – وَالْحَمْدُ لِـرَ بِّـنَا
+
+<br>وَالصَّلَاةُ وَالسَّلَامُ – لِلنَّبِيْ حَبِـيْبِـنَا
+
+<br>يَا اَللّٰهُ يَارَ بَّــنَـا – اَ نْتَ مَـقْصُـوْدُنَا
+
+<br>رِضَاكَ مَطْـلُوْ بُـنَا – دُنْـيَانَا وَاُخْــرَانَا
+
+<br>يَا رَحْمٰنُ يَارَحِيْـمُ – يَامَلِكُ يَاقُـدُّوْسُ
+
+<br>يَاسَلاَمُ يَامُـؤْمِنُ – يَامُهَيْمِـنُ يَاعَـزِيْزُ
+
+<br>يَاجَـبَّارُ مُـتَكَبِّرُ – يَاخَالِـقُ يَا بَارِئُ
+
+<br>يَامُصَوِّرُ يَاغَـفَّـارُ – يَا قَـهَّـارُ يَاوَهَّابُ
+
+<br> يَارَزَّاقُ يَا فَــتَّاحُ – يَاعَـلِيْمُ يَا قَابـِضُ
+
+<br>يَا بَاسِطُ يَاخَافِـضُ – يَارَافِـعُ يَا مُـعِـزُّ
+
+<br>يَامُـذِلُّ يَاسَامِـعُ – يَابَصِـيْرُ يَا حَكَـمُ
+
+<br>يَاعَدْلُ يَا لَطِـيْفُ – يَا خَبِـيْرُ يَاحَـلِيْمُ
+
+<br>يَاعَـظِيْمُ يَاغَـفُوْرُ – يَا شَكُوْرُ يَا عَلِـيُّ
+
+<br>يَاكَبِيْرُ يَاحَـفِيْظُ – يَامُقِيْتُ يَاحَسِيْبُ
+
+<br>يَاجَلِيْـلُ يَاكَـرِيْمُ – يَارَقِـيْبُ يَامُجِيْبُ
+
+<br>يَاوَاسِعُ يَاحَكِـيْمُ – يَاوَدُوْدُ يَامَجِـيْدُ
+
+<br>يَابَاعِثُ يَاشَهِـيْـدُ – يَاحَـقُّ يَاوَكِـيْلُ
+
+<br>يَاقَـوِيُّ يَامَتِـيْنُ – يَاوَلِيُّ يَاحَـمِـيْدُ
+
+<br>يَامُحْصِى يَامُبْدِئُ – يَامُـعِيْدُ يَامُحْـيِى
+
+<br>يَامُـمِيْتُ يَاحَيُّ – يَاقَـيُّوْمُ يَاوَاجِـدُ
+
+<br>يَامَاجِـدُ يَاوَاحِدُ – يَااَحَـدُ يَاصَمَـدُ
+
+<br>يَاقَـدِيْرُ يَامُقْتَـدِرُ – يَامُـقَدِّمُ يَامُؤَخِّـرُ
+
+<br>يَااَوَّلُ يَاأٰخِـــرُ – يَاظَاهِـرُ يَابَاطِـنُ
+
+<br>ياوَالِيْ يَامُتَـعَالِى – يَا بَرُّ يَا تَوَّابُ
+
+<br>يَامُنْتَـقِمُ يَاعَفُوُّ – يَارَؤُوْفُ يَامَالِكُ
+
+<br>مَلِكَ الْمُـلْكِ – ذَالْجَلَالِ وَالْاِكْرَامِ
+
+<br>يَامُقْسِطُ يَاجَامِـعُ – يَاغَـنِيُّ يَامُـغْـنِي
+
+<br>يَامَانِــعُ يَاضَـﺂرُّ – يَا نَافِعُ يَانُوْرُ
+
+<br>يَاهَادِى يَابَدِيْـعُ – يَا بَاقِــى يَا وَارِثُ
+
+<br>يَارَشِـيْدُ يَاصَبُوْرُ – عَـزَّجَـلَّ ذِكْـرُهُ
+
+</p><br><br>
+DOA ASMAUL HUSNA
+<p style="text-align: right;" class="arab">
+<br>بِاَسْمَـﺂءِكَ الْحُسْنَىْ – اِغْـفِرْلَنَا ذُنُوْ بَـنَا
+
+<br>وَلِوَالِدِيْنَا – وَذُرِّ يَّا تِنَا
+
+<br>كَفِّـِرْعَنْ سَيِّئَاتِنَا – وَاسْـتُرْعَلَى عُيُوْبِنَا
+
+<br>وَاجْبُرْعَلَى نُقْصَانِنَا – وَارْفَـعْ دَرَجَاتِـنَا
+
+<br>وَزِدْ نَا عِلْمًا نَافِـعًا – وَرِزْ قًاوَّاسِعًا
+
+<br>حَـلَالًا طَيِّبًا – وَعَمَلًا صَالِحًا
+
+<br>وَنَـوِّرْ قُلُـوْ بَـنَا – وَيَـسِّرْ اُمُوْرَنَا
+
+<br>وَصَحِّـحْ اَجْسَادَناَ – دَاۤئِـمَ حَـيَاتِــنَا
+
+<br>اِلَى الْخَـيْرِقَرِبْـنَا – عَنِ الشَّـرِّ بَاعِـدْنَا
+
+<br>وَالْقُـرْبٰى رَجَـائُنَا – اَخِـرًا نِلْنَا الْمُـنَى
+
+<br>بَلِّغْ مَـقَاصِـدَنَا – وَاقْـضِ حَوَائِجَـنَا
+
+<br>وَالْحَمْـدُ لِإِ لٰهِـنَا – اَلَّذِيْ هَدَا نَا
+
+<br>صَلِّ وَسَلِّمْ عَلَى – طَهَ خَلِيْلِ الرَّحْمَنْ
+
+<br>وَآلِهِ وَصَحْبِهِ – اِلَى أٰخِرِ الزَّمَانْ</p><p><i>Bismillaahi bada’na – Wal khamdu lirabbina
+
+<br>Wash sholaatu wassalaam – Linnabii khabiibina
+
+<br>Yaa Allah yaa Robbanaa – Anta Maqshuudunaa
+
+<br>Ridhooka math luubunaa – Dun yaana wa uhraanaa
+
+<br>Yaa Rohmaanu ya Rokhiim – Yaa Maliku yaa Qudduus
+
+<br>Yaa Salaamu yaa Mukmin – Yaa Muhaiminu yaa Aziiz
+
+<br>Yaa Jabbar yaa Mutakabbir – Yaa Hooliqu yaa Baarik
+
+<br>Yaa Mushowwiru yaa Ghoffaar – Yaa Qohhaaru yaa Wahhaab
+
+<br>Yaa Rozzaaqu yaa Fattaakh – Yaa Aliimu yaa Qobiidh
+
+<br>Yaa Baasithu yaa Hofiidh – Yaa Roofi’u ya Mu’izz
+
+<br>Yaa Mudzillu yaa Samii’ – Yaa Bashiiru yaa Khakam
+
+<br>Yaa ‘Adlu yaa Lathiif – Yaa Khobiiru yaa Khaliim
+
+<br>Yaa ‘Adhiimu yaa Ghofuur – Yaa Syakuuru yaa ‘Aliyy
+
+<br>Yaa Kabiiru yaa Khafiidh – Yaa Muqiitu yaa Khasiib
+
+<br>Yaa Jaliilu yaa Kariim – Yaa Roqiibu yaa Mujiib
+
+<br>Yaa Waasi’u yaa Khakiim – Yaa Waduudu yaa Majiid
+
+<br>Yaa Baa’itsu yaa Syahiid – Yaa Khaqqu yaa Wakiil
+
+<br>Yaa Qowiyyu yaa Matiin – Yaa Waliyyu yaa Khamiid
+
+<br>Yaa Mukhshii yaa Mubdik – Yaa Mu’iidu yaa Mukhyii
+
+<br>Yaa Mumiitu yaa Khayyu – Yaa Qoyyumu yaa Waajiid
+
+<br>Yaa Maajidu yaa Waakhiid – Yaa Akhadu yaa Shomad
+
+<br>Yaa Qoodir yaa Muqtadir – Yaa Muqoddim yaa Mu-akhir
+
+<br>Yaa Awwalu yaa Aakhir – Yaa dhoohiru yaa Baathin
+
+<br>Yaa Waalii Muta’alii – Yaa Barru yaa Tawwaab
+
+<br>Yaa Muntaqimu yaa ‘Afuww – Yaa Ro-uufu yaa Maalik
+
+<br>Maalikal Mulki – Dhal jalaali wal Ikroom
+
+<br>Yaa Muqsitu yaa Jaami’ – Yaa Ghoniyyu yaa Mughnii
+
+<br>Yaa Maani’u yaa Dhoor – Yaa Naafi’u yaa Nuur
+
+<br>Yaa Hadii yaa Badii’ – Yaa Baaqii yaa Waarits
+
+<br>Yaa Rosyiidu yaa Shobuur – Azza Jalla Dzikruhu
+
+<br><br>
+DOA ASMAUL HUSNA
+
+<br>Bi ‘asmaa ‘ikal khusnaa – Ighfir lanaa dhunuubanaa
+
+<br>Waliwalidiinaa – Wa dhurriyaa tinaa
+
+<br>Kaffir ‘an sayyi’a tinaa – Waastur ‘alaa ‘uyuu binaa
+
+<br>Waajbur ‘alaa nuq shoo ninaa – Waarfa’ darojaa tinaa
+
+<br>Wa zidnaa ‘ilmaannaa fi’aan – Warizqon Waasi’aan
+
+<br>Khalaalan thoyyiban – Wa’amalan sholikhaan
+
+<br>Wanawwir quluu banaa – Wayassir umuu ronaa
+
+<br>Wa shokhi’ ajsaa danaa – Daaa’ima khayaatinaa
+
+<br>Ilal khoiri qoribnaa – ‘Anisy syarri baa’idnaa
+
+<br>Waalqurbaa rojaaa ‘una – Akhiiroon nilnalmunaa
+
+<br>Balligh maqooshidanaa – Waqdhi khawaa ‘ijanaa
+
+<br>Walkhamdu li’ilaahinaa – Alladhii hadaanaa
+
+<br>Sholli wasalim ‘alaa – Thoohaa kholiilir rokhmaan
+
+<br>Wa ‘aa lihii washokhbihii – ’Ilaa aakhirizzamaan</i></p><p>Dengan nama Allah, kami memulai (membaca). Segala puji bagi Tuhan kami.
+
+<br>Shalawat dan salam untuk Nabi Kekasih kami.
+
+<br>Ya Allah ya Tuhan Kami. Engkau Tujuan Kami
+
+<br>RidhaMu yang Kami Cari. Di Dunia dan Akherat Kami
+
+<br>Wahai Yang Maha Pengasih, Wahai Yang Maha Penyayang.
+
+<br>Wahai Yang Maha Sejahtera, Wahai Yang Maha Terpercaya. Wahai Yang Maha Memelihara, Wahai Yang Maha Perkasa.
+
+<br>Wahai Yang Kehendak-Nya Tak Dapat Diingkari, Yang Memiliki Kebesaran. Wahai Yang Maha Menciptakan, Wahai Yang Mengadakan dari Tiada.
+
+<br>Wahai Yang Maha Membentuk, Wahai Yang Maha Pengampun. Wahai Yang Maha Perkasa, Wahai Yang Maha Pemberi.
+
+<br>Wahai Yang Maha Pemberi Rezeki, Wahai Yang Maha Pembuka. Wahai Yang Maha Mengetahui, Wahai Yang Maha Menyempitkan.
+
+<br>Wahai Yang Maha Melapangkan, Wahai Yang Maha Merendahkan. Wahai Yang Maha Meninggikan, Wahai Yang Maha Memuliakan
+
+<br>Wahai Yang Maha Menghinakan, Yang Maha Mendengar. Wahai Yang Maha Melihat, Wahai Yang Memutuskan Hukum.
+
+<br>Wahai Yang Maha Adil, Wahai Yang Maha Lembut. Wahai Yang Maha Mengetahui, Wahai Yang Maha Penyantun
+
+<br>Wahai Yang Maha Agung, Wahai Yang Maha Pengampun. Wahai Yang Maha Menerima Syukur, Wahai Yang Maha Tinggi.
+
+<br>Wahai Yang Maha Besar, Wahai Yang Maha Pemelihara. Wahai Yang Maha Pemberi Kekuatan, Wahai Yang Maha Mencukupi/Maha Pembuat Perhitungan
+
+<br>Wahai Yang Maha Agung, Wahai Yang Maha Mulia. Wahai Yang Maha Mengawasi, Wahai Yang Maha Memperkenankan.
+
+<br>Wahai Yang Maha Luas, Wahai Yang Maha Bijaksana. Wahai Yang Maha Membuat Rasa Kasih Sayang, Wahai Yang Maha Luhur.
+
+<br>Wahai Yang Maha Membangkitkan, Wahai Yang Maha Menyaksikan. Wahai Yang Maha Benar, Wahai Yang Maha Mengurusi.
+
+<br>Wahai Yang Maha Kuat, Wahai Yang Maha Kokoh. Wahai Yang Maha Melindungi, Wahai Yang Maha Terpuji
+
+<br>Wahai Yang Maha Menghitung, Wahai Yang Maha Memulai. Wahai Yang Maha Mengembalikan, Wahai Yang Maha Menghidupkan.
+
+<br>Wahai Yang Maha Mematikan, Wahai Yang Maha Hidup. Wahai Yang Maha Berdiri Sendiri, Wahai Yang Maha Menemukan
+
+<br>Wahai Yang Maha Mermiliki Kemuliaan, Wahai Yang Maha Esa. Wahai Yang Maha Satu, Wahai Yang Maha Dibutuhkan.
+
+<br>Wahai Yang Maha Kuasa, Wahai Yang Maha Menentukan. Wahai Yang Maha Mendahulukan, Wahai Yang Maha Mengakhirkan
+
+<br>Wahai Yang Maha Awal, Wahai Yang Maha Akhir. Wahai Yang Maha Nyata, Wahai Yang Maha Tersembunyi.
+
+<br>Wahai Yang Maha Memerintah, Wahai Yang Maha Tinggi. Wahai Yang Maha Dermawan, Wahai Yang Penerima Tobat
+
+<br>Wahai Yang Maha Pembalas, Wahai Yang Maha Pemaaf. Wahai Yang Maha Pelimpah Kasih, Wahai Pemilik Kerajaan.
+
+<br>Yang Memiliki Kerajaan Pemilik Keagungan dan Kemuliaan.
+
+<br>Wahai Yang Maha Adil, Wahai Yang Maha Penghimpun. Wahai Yang Maha Kaya, Wahai Yang Maha Pemberi Kekayaan.
+
+<br>Wahai Yang Maha Mencegah, Wahai Yang Maha Pemberi Bahaya. Wahai Yang Maha Pemberi Manfaat, Wahai Yang Maha Menjadikan Cahaya
+
+<br>Wahai Yang Maha Pemberi Petunjuk, Wahai Yang Maha Pencipta. Wahai Yang Maha Kekal, Wahai Yang Maha Mewarisi.
+
+<br>Wahai Yang Maha Tepat Tindakan-Nya, Wahai Yang Maha Sabar Yang Maha Perkasa Maha Mulia Sebutannya
+
+<br><br>
+DOA ASMAUL HUSNA
+
+<br>Dengan Asma Ul Khusna – Ampunilah Dosa Kami
+
+<br>Dan Dosa Kedua Orang Tua Kami – Dan Keturunan Kami
+
+<br>Hapuskanlah Kejelekan Kami – Dan Tutuplah Cacat Kami
+
+<br>Tambahlah Kekurangan Kami – Naikkanlah Derajat Kami
+
+<br>Dan Tambahilah Kami Ilmu Yang Bermanfaat – Dan Rezki Yang Luas
+
+<br>Yang Halal dan Bagus – Dan Amalan Yang Sholeh
+
+<br>Dan Terangkanlah Hati Kami – Dan Mudahkanlah Urusan Kami
+
+<br>Dan Sehatkanlah Badan Kami – Selama Hidup Kami
+
+<br>Ke Kebaikan Dekatkanlah Kami – Dari Kejelekan Jauhkanlah Kami
+
+<br>Dan Dekat Pada Allah Harapan Kami – Akhirnya Kami Memperoleh Kenikmatan
+
+<br>Sampaikanlah Maksud-maksud Kami – Dan Penuhilah Hajat-Hajat Kebutuhan Kami
+
+<br>Segala Puji Untuk Tuhan Kami – Yang Telah Menunjukkan Kepada Kami
+
+<br>Semoga Allah Memberikan Rahmat dan Keselamatan – Atas Thoha/Nabi Muhammad menjadi Kekasih
+
+Dan Keluarganya dan Sahabatnya – Sampai Akhir Masa</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Di dalam Al-Qur'an disebutkan, "Dan Allah memiliki Asmaul-husna (nama-nama yang terbaik), maka bermohonlah kepada-Nya dengan menyebutnya Asmaul-husna itu..." (QS. Al-A'raf: 180). 
+
+Nadhom Asmaul Husna di atas ciptaan H. Amdjad Al-Hafizh.</p><p><strong>
+</strong></p>
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Zikir & Doa Setelah Witir</h1>
+<ol>
+<li></li>
+<p>&nbsp;</p><p style="text-align: right;" class="arab">سُبْحَانَ الْمَلِكِ الْقُدُوسِ<br><br> رَبُّ الْمَلَائِكَةِ وَالرُّوحِ<br><br></p>Kemudian boleh ditutup dengan doa ini: <br><p style="text-align: right;" class="arab"><br>اللَّهُـمَّ إِنِّي أَعُوذُ بِرِضَاكَ مِنْ سَخَطِكَ وَبِمُعَافَاتِكَ مِنْ عُقُوبَتِكَ وَأَعُوذُ بِكَ مِنْكَ لاَ أُحْصِي ثَنَاءً عَلَيْكَ أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ</p><p><i>Subḥānal-malikil-quddūs.<br><br>Rabbul-malā-ikati war-rūh.<br><br>Allaahumma innii a'uudzu biridhaaka min sakhathika wa bimu'aafaatik, min 'uquubatik, wa a'uudzu bika minka laa uhshii tsanaa-an 'alaik, anta kamaa atsnaita 'alaa nafsik.</i></p><p>Mahasuci (Engkau Ya Allah), Raja yang Mahasuci.<br><br>Tuhan-nya para malaikat dan malaikat Jibril.<br><br> Ya Allah, aku berlindung dengan keridhaan-Mu dari kemarahan-Mu, dan dengan kesalamatan-Mu dari hukuman-Mu dan aku berlindung kepada-Mu dari siksa-Mu. Aku tidak mampu menghitung pujian dan sanjungan kepada-Mu, Engkau adalah sebagaimana yang Engkau sanjungkan kepada diri-Mu sendiri.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Subḥānal-malikil-quddūs dibaca tiga kali dan pada saat ketiga kalinya, dikeraskan serta dipanjangkan suaranya. Kemudian disambung dengan membaca Rabbul-malā-ikati war-rūh.<br><br>Kemudian, boleh juga diakhiri dengan membaca doa di atas. Rasulullah ﷺ biasa mengakhiri witirnya dengan doa tersebut.</p><p><strong>Nasa'i no. 1733, Abu Dawud no. 1427
+</strong></p>
+
+<br><br>
+<li></li>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَللّٰهُـمَّ إِنَّا نَسْـأَلُكَ اِيْمَانًا دَائِمًا، وَنَسْأَلُكَ قَلْبًا خَاشِعًا، وَنَسْأَلُكَ عِلْمًا نَافِعًا، وَنَسْأَلُكَ يَقِيْنًا صَادِقًا، وَنَسْأَلُكَ عَمَلاً صَالِحًا، وَنَسْأَلُكَ دِيْنًاقَيِّمًا، وَنَسْأَلُكَ خَيْرًا كَثِيْرًا، وَنَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ، وَنَسْأَلُكَ تَمَامَ الْعَافِيَةِ، وَنَسْأَلُكَ الشُّكْرَ عَلَى الْعَافِيَةِ، وَنَسْأَلُكَ الْغِنَاءَ عَنِ النَّاسِ<br><br>اَللّٰهُـمَّ رَبَّنَا تَقَبَّلْ مِنَّا صَلاَتَنَا وَصِيَامَنَا وَقِيَامَنَا وَتَخُشُّعَنَا وَتَضَرُّعَنَا وَتَعَبُّدَنَا وَتَمِّمْ تَقْصِيْرَنَا يَا اللَّهُ يَا اللَّهُ يَا اللَّهُ يَااَرْحَمَ الرَّحِمِيْنَ. وَصَلَّى اللَّهُ عَلَى خَيْرِ خَلْقِهِ مُحَمَّدٍ وَعَلٰى اٰلِهِ وَصَحْبِهِ اَجْمَعِيْنَ، وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ</p><p><i>Allahumma innaa nas'aluka iimaanan daaimaan, wan'asaluka qalban khaasyi'an, wanas'aluka 'ilman naafi'an, wanas'aluka yaqiinan shaadiqon, wanas'aluka 'amalan shaalihan, wanas'aluka diinan qayyiman, wanas'aluka khairan katsiran, wanas'alukal 'afwa wal'aafiyata, wanas'aluka tamaamal 'aafiyati, wanas'alukasyukra 'alal 'aafiyati, anas'alukal ghinaa'a 'aninnaasi.<br><br>Allahumma rabbanaa taqabbal minnaa shalaatanaa washiyaamanaa waqiyaamanaa watakhusy-syu'anaa watadhorru'anaa wata'abbudanaa watammim taqshiiranaa yaa allaahu yaa allaahu yaa allaahu yaa arhamar raahimiin. washallallaahu 'alaa khairi khalqihi muhammadin wa'alaa aalihi washahbihi ajma'iina, walhamdu lillaahi rabbil 'aalamiina.</i></p><p>Ya Allah, ya Tuhan kami, kami memohon kepada-Mu (mohon diberi) iman yang langgeng, dan kami mohon kepada-Mu hati kami yang khusyu’, dan kami mohon kepada-Mu diberi ilmu yang bermanfaat, dan kami mohon ditetapkannya keyakinan yang benar, dan kami mohon (dapat melaksanakan) amal yang shalih dan mohon tetap dalam agama islam, dan kami mohon diberinya kebaikan yang melimpah-limpah, dan kami mohon memperoleh ampunan dan kesehatan, dan kami mohon kesehatan yang sempurna, dan kami mohon mensyukuri atas kesehatan kami, dan kami mohon kecukupan sehingga kami tidak meminta  kepada manusia. <br><br>Ya Allah ya Tuhan kami, terimalah shalat kami, puasa kami, rukuk kami, dan khusyu’ kami, dan pengabdian kami, dan sempurnakanlah apa yang kami lakukan selama shalat, ya Allah, ya Allah, ya Allah Dzat yang Maha Pengasih dan Penyayang, semoga Allah memberi kesejahteraan atas sebaik-baik makhluk-Nya yaitu Nabi Muhammad, atas keluarga dan semua sahabatnya, dan segala puji bagi Allah Tuhan semesta alam.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Doa ini adalah salah satu doa yang sering diucapkan oleh Syekh Abul Hasan Asy-Syadzili.</p><p><strong>Majmu Syarif, Kanzul Ummal
+</strong></p>
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

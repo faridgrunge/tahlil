@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Ratib Al-Kubra - Bagian 5</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَلْفَاتِحَةْ<br><br>
+
+إِلٰى حَضْرَةِ النَّبِيِّ الْمُصْطَفٰى سَيِّدِنَا مُحَمَّدٍ رَسُوْلِ اللّٰهِ صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَاَصْحَابِهِ وَاَزْوَاجِهِ وَذُرِّيَّاتِهِ وَاَهْلِ بَيْتِهِ رَضِيَ اللّٰهُ عَنْهُمْ وَعَلَيْهِمُ السَّلَامُ وَيَنْفَعُنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+إِلٰى حَضْرَةِ النَّبِيِّ الْمُصْطَفٰى سَيِّدِنَامُحَمَّدٍ رَسُوْلِ اللّٰهِ صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَاَصْحَابِهِ وَاَحْبَابِهِ وَاَهْلِ نِظَامِ الصَّلَوَاتِ وَاِلٰى رِجَالِ الْغَيْبِ وَاَصْحَابِ النَّبْوَةِ وَاِلٰى رَئِيْسِهِمْ وَاُصُوْلِهِمْ وَفُرُوْعِهِمْ رَضِيَ اللّٰهُ عَنْهُمْ وَعَلَيْهِمُ السَّلَامُ وَيَنْفَعُنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+إِلٰى حَضْرَةِ النَّبِيِّ الْمُصْطَفٰى سَيِّدِنَا مُحَمَّدٍ رَسُوْلِ اللّٰهِ صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَاَصْحَابِهِ وَسَلَّمَ وَإِلٰى حَضْرَةِ  سَيِّدِنَا المُهَاجِرْ إِلٰى اللّٰهِ اَحْمَدِ بْنِ عِيْسٰى, وَعُبَيْدِ اللّٰهْ بْنِ اَحْمَدِ اَلْمُهَاجِرْ<br><br>
+
+وَإِلٰى حَضْرَةِ سَيِّدِيْ  الشَّيْخِ عَبْدِ الْقَادِرْ اَلْجَيْلَانِيْ, وَسَيِّدِيْ الشَّيْخِ اَحْمَدِ الرِّفَاعِيِّ, وَسَيِّدِيْ  الشَّيْخِ اَحْمَدِالْبَدَوِيِّ, وَسَيِّدِيْ الشَّيْخِ إِبْرَاهِيْمَ الدَّسُوْقِيِّ, وَسَيِّدِيْ  الشَّيْخِ أَبِيْ الْحَسَنِ الشَّاذِلِيِّ, وَسَيِّدِيْ  الشَّيْخِ مُحَمَّدٍ بَهَاءُ الدِّيْنِ النَّقْشَبَنْدِيِّ الحُسَيْنِيِّ, وَسَيِّدِيْ  الشَّيْخِ عَلِيّ خَالِعْ قَسَمْ¸ وَسَيِّدِيْ الشَّيْخِ مُحَمَّدٍ صَاحِبِ مِرْبَاطْ <br><br>
+
+وَاُصُوْلِهِمْ وَفُرُوْعِهِمْ رَضِيَ اللّٰهُ عَنْهُمْ وَعَلَيْهِمُ السَّلَامُ وَيَنْفَعُنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+إِلٰى حَضْرَةِ النَّبِيِّ الْمُصْطَفٰى سَيِّدِنَا مُحَمَّدٍ رَسُوْلِ اللّٰهِ صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَسَلَّمَ, وَسَادَةِ سَادَتِنَا الْحَسَنِ وَالْحُسَيْنِ وَسَادَتِنَا أَبِيْ عَلْوِيْ وَاُصُوْلِهِمْ وَفُرُوْعِهِمْ رَضِيَ اللّٰهُ عَنْهُمْ وَعَلَيْهِمُ السَّلَامُ وَيَنْفَعُنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+إِلٰى حَضْرَةِ النَّبِيِّ الْمُصْطَفٰى  سَيِّدِنَا مُحَمَّدٍ رَسُوْلِ اللّٰهِ صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَسَلَّمَ  وَإِلٰى حَضْرَةِ  سَيِّدِنَا الْاِمَامِ مُحَمَّدٍ الْفَقِيْهِ الْمُقَدَّمِ بْنِ عَلِيِّ بَاعَلْوِيْ, وَ الْاِمَامِ عَلْوِيْ بْنِ الْفَقِيْهِ الْمُقَدَّمِ مُحَمَّدٍ بْنِ عَلِيِّ بَاعَلْوِيْ وَإِخْوَانِهِ, وَالْحَبَابَةِ السَّيِّدَةِ زَيْنَبَ أُمِّ الْفُقَرآءِ بْنِتِ اَحْمَدِ بْنِ مُحَمَّدٍ صَاحِبِ مِرْبَاطْ بْنِ عَلِيٍّ, وَ الْاِمَامِ عَبْدِ اللهِبْنِ عَلْوِيْ بَاعَلْوِيْ, وَ الْاِمَامِ عَلِيِّ بْنِ عَلْوِيْ بْنِ الْفَقِيْهِ الْمُقَدَّمِ بْنِ عَلِيِّ بَاعَلْوِيْ, وَ الْاِمَامِ عَلْوِيْ عَمِّ الْفَقِيْهِ بْنِ مُحَمَّدٍ صَاحِبِ مِرْبَاطْ, وَالْحَبَابَةِ فَاطِمَةَ بْنِتِ وَ الْاِمَامِ عَلْوِيْ عَمِّ الْفَقِيْهِ, وَ الْاِمَامِ اَحْمَدِ مَوْلٰى الدَّوِيْلَةِ, وَ الْاِمَامِ عَبْدِ الرَّحْمٰنِ السَّقَّاقِ, وَ الْاِمَامِ عُمَرَ الْمُحْضَارِ, وَ الْاِمَامِ عَبْدِ اللّٰهِ الْعَيْدَرُوْسِ, وَ الْاِمَامِ أَبِيْ بَكْرِ السَّكْرَانِ, وَ الْاِمَامِ أَبِيْ بَكْرِ الْعَدَنِيِّ وَأَخِيْهِ  الْاِمَامِ شَيْخِ بْنِ عَبْدِ اللّٰهِ الْعَيْدَرُوْسِ, وَ الشَّيْخِ أَبِي بَكْرِ بْنِ سَالِمٍ وَاُصُوْلِهِمْ وَفُرُوْعِهِمْ رَضِيَ اللّٰهُ عَنْهُمْ وَعَلَيْهِمُ السَّلَامُ وَيَنْفَعُنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+إِلٰى حَضْرَةِ النَّبِيِّ الْمُصْطَفٰى  سَيِّدِنَا مُحَمَّدٍ رَسُوْلِ اللّٰهِ صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ<br><br>
+
+وَاٰلِهِ وَاَصْحَابِهِ وَسَلَّمَ وَإِلٰى حَضْرَةِ  سَيِّدِنَا الْاِمَامِ عَلْوِيْ بْنِ عَلْوِيْ النَّاسِكِ بْنِ مُحَمَّدٍ مَوْلٰى الدَّوِيْلَةِ وَإِخْوَانِهِ وَإِلٰى حَضْرَةِ  سَيِّدِنَا الْاِمَامِ عَلِيِّ<br><br>
+
+الْعَنَّازْ بْنِ عَلْوِيْ بْنِ مُحَمَّدٍ مَوْلٰى الدَّوِيْلَةِ وَإِخْوَانِهِ وَ سَيِّدِنَا الْاِمَامِ الْاَحْمَرِ الْوَرِعِ بْنِ  الْاِمَامِ عَلِيِّ العنَّازْ وَ سَيِّدِنَا الْاِمَامِ حُسَيْن مَاحَرْ وَأَخِيْهِ<br><br>
+
+الْاِمَامِ عَبْدِ اللّٰهِ بْنِ  الْاِمَامِ عَلِيِّ العَنَّازْ وَ سَيِّدِنَا الْاِمَامِ مُحَمَّدٍ بْنِ  الْاِمَامِ عَلِيِّ العَنَّازْ  وَ سَيِّدِنَاالْحَبِيْبِ عَبْدِ اللّٰهِ بْنِ شَيْخٍ بْنِ عَبْدِ اللّٰهِ بْنِ شَيْخِ بْنِ عَبْدِ اللّٰهِ الْعَيْدَرُوْسِ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ حُسَيْنِ بْنِ عَبْدِ اللّٰهِ بْنِ  الشَّيْخِ أَبِيْ بَكْرٍ بْنِ سَالِمْ  وَ سَيِّدِنَا الشَّيْخِ عُمَرَ بَامَخْرَمَةَ  وَ سَيِّدِنَا الشَّيْخِ مَعْرُوْفْ بَاجَمَالْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ سَعْدٍ السُّوَيْنِيْ  وَ سَيِّدِنَا الْحَبِيْبِ عُمَرَ بْنِ عَبْدِ الرَّحْمٰنِ الْعَطَّاسِ وَ الشَّيْخِ عَلِيِّ بْنِ عَبْدِ اللّٰهِ بَارَاسْ  وَ سَيِّدِنَاالْحَبِيْبِ اَحْمَدِ بْنِ مُحَمَّدٍ الْحَبْشِيِّ,  وَسَيِّدِنَاالْحَبِيْبِ عَبْدِ الرَّحْمٰنِ مَوْلٰى عَرْشِهِ الْجُفْرِيِّ<br><br>
+
+وَسَيِّدِنَاالْحَبِيْبِ يُوْسُفَ بْنِ عَبِيْدٍ الْحَسَنِيِّ,  وَ سَيِّدِنَاالْحَبِيْبِ عَبْدِ اللّٰهِ بْنِ عَلْوِيْ الْحَدَّادِ, وَأَخِيْهِ  سَيِّدِنَاعُمَرَ بْنِ عَلْوِيْ الْحَدَّادِ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ مُشَيَّخْ بْنِ عَبْدِ اللّٰهِ بَاعَبُوْدْ,  وَ سَيِّدِنَاالْحَبِيْبِ اَحْمَدِ بْنِ زَيْنِ الْحَبْشِيِّ,  وَ سَيِّدِنَاالْحَبِيْبِ مُحَمَّدٍ بَلْفَقِيْهِ, وَ سَيِّدِنَااَحْمَدِ بْنِ عُمَرَ الهِنْدُوَانْ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ طَاهِرِ بْنِ مُحَمَّدٍ بْنِ هَاشِمٍ مَغْفُونْ بَاعَلْوِيْ,  وَ سَيِّدِنَاالْحَبِيْبِ طٰهٰ بْنِ مُحَمَّدٍ بْنِ شَيْخِ بْنِ اَحْمَدِ بْنِ يَحْيٰى صَاحِبِ عِنَاتْ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ عَبْدِ اللّٰهِ بْنِ مُحَمَّدٍ بْنِ عَلْوِيْ بْنِ يَحْيٰى صَاحِبِ الْقَارَةِ,  وَ سَيِّدِنَاالْحَبِيْبِ عَبْدِ الرَّحْمٰنِ حُدَيْلِيْ صَاحِبِ الْقَارَةِ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ اَحْمَدِ بْنِ عُمَرَ بْنِ سُمَيْطٍ,  وَ سَيِّدِنَاالْحَبِيْبِ حَسَنِ بْنِ صَالِحٍ الْبَحْرِ,  وَ سَيِّدِنَاالْحَبِيْبِ حُسَيْنِ بْنِ طَاهِرٍ بَاعَلْوِيْ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ عَلِيِّ بْنِ حَسَنْ الْعَطَّاسِ, صَاحِبِ مَشْهَدْ <br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ عَبْدِ اللّٰهِ بْنِ حُسَيْنِ بْنِ طَاهِرٍ بَاعَلْوِيْ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ عَبْدِ اللّٰهِ بْنِ حُسَيْنِ بِلْفَقِيْهِ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ عَبْدِ اللّٰهِ بْنِ عُمَرَ بْنِ يَحْيٰى<br><br>
+
+وَ سَيِّدِنَا الْحَبِيْبِ عَقِيْلِ بْنِ عُمَرَ بْنِ عَقِيْلِ بْنِ يَحْيٰى بَاعَلْوِيْ<br><br>
+
+وَ سَيِّدِنَاالْحَبِيْبِ عَبْدِ اللّٰهِ بْنِ عَلِيِّ بْنِ شِهَابٍ,  وَ سَيِّدِنَا الْحَبِيْبِ عَبْدِ اللّٰهِ بْنِ أَبِيْ بَكْرٍ بُطَيْحٰى<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ عَبْدِ اللّٰهِ بْنِ اَحْمَدِ بَاسَوْدَانْ,  وَ سَيِّدِنَا الشَّيْخِ عَبْدِ اللّٰهِ بْنِ سَعْدِ بْنِ سُمَيْرٍ الْحَضْرَمِيّ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ عَبْدِ اللّٰهِ يَافِعْ,  وَ سَيِّدِنَا الشَّيْخِ عَبْدِ اللّٰهِ بَاعَبَّادْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ اَحْمَدِ رَحْمَةِ اللّٰهِ صَاحِبِ أَمْفِيلْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ هاشم بْنِ اَحْمَدِ صَاحِبِ دَرَجَاتْ سَدَايُوْ,  وَ سَيِّدِنَا الشَّيْخِ إِبْرَاهِيْمَ بْنِ اَحْمَدْ صَاحِبِ طُوْباَنْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ شَرِيفْ هِدَايَةُ اللّٰه صَاحِبِ جَبَلْ جَاتِيْ,  وَ سَيِّدِنَا الشَّيْخِ مٰلِكْ إِبْرَاهِيْمَ صَاحِبِ كَرْسِيكْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ مُحَمَّدٍ عَيْنِ الْيَقِيْن صَاحِبِ كِيْرِيْ كَرْسِيكْ,  وَ سَيِّدِنَا الشَّيْخِ جَعْفَرْ صَادِقْ بْنِ اَحْمَدِ صَاحِبِ قُدُّوْسْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ عُمَرْسَعِيْد بْنِ عُثْمَانْ صَاحِبِ جَبَلْ مُوْرِيْيَا,  وَ سَيِّدِنَا الشَّيْخِ عَبْدِ الرَّحْمٰنِ شَهِيْدْ صَاحِبِ  كَالِيْ جَاكَا الدَّمَّاكِيْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ سُلْطَانْ عَبْدُ الْفَتَّاحْ الدَّمَّاكِيْ,  وَ سَيِّدِنَا الشَّيْخِ مُحَمَّدٍ عَلِيُّ الدِّيْنِ سُلْطَانْ تَرَغْكُوْنُوْ بْنِ عَبْدُ الْفَتَّاحْ الدَّمَّاكِيْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ ذَاتُ الْكَافِيْ (عَبْدُ الْكَافِيْ) صَاحِبِ جَبَلْ جَاتِي, وَ سَيِّدِنَاعَلِيْ زَيْنَ الْعَابِدِينْ سُوْنَنْ القَاضِي الدَّمَّاكِيْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ اَحْمَدَ بْنِ اَحْمَدْ صَاحِبِ لاَمُوْغَانْ,  وَ سَيِّدِنَا الشَّيْخِ حَسَنُ الدِّيْنِ البَنْتَانِي, وَاُصُوْلِهِمْ وَفُرُوْعِهِمْ رَضِيَ اللّٰهُ عَنْهُمْ وَعَلَيْهِمُ السَّلَامُ وَيَنْفَعُنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+إِلٰىحَضْرَةِ النَّبِيِّ الْمُصْطَفٰى سَيِّدِنَامُحَمَّدٍ رَسُوْلِ اللّٰهِ صَلّٰى اللّٰهُ عَلَيْهِ وَسَلَّمَ وَاٰلِهِ وَاَصْحَابِهِ وَسَلَّمَ وَإِلٰى حَضْرَةِ سَيِّدِنَا  الشَّيْخِ  الْاِمَامِ عَلْوِيْ  بْنِ مُحَمَّدٍ مَوْلَى الدَّوِيْلَةِ وَأَخِيْهِ الْأَكْبَرْ  سَيِّدِنَا  الشَّيْخِ  الْاِمَامِ عَبْدِ الرَّحْمٰنِ السَّقَّافْ بْنِ مُحَمَّدٍ مَوْلَى الدَّوِيْلَةِ,<br><br>
+
+وَ سَيِّدِنَا  الشَّيْخِ  الْاِمَامِ عَلِيْ الْعَنَّازْ بْنِ  الْاِمَامِ عَلْوِيْ بْنِ مُحَمَّدٍ مَوْلَى الدَّوِيْلَةِ,  وَ سَيِّدِنَا الشَّيْخِ  الْاِمَامِ الْقُطْبِ اْلَحِبْيبِ حَسَنِ الأَحْمَرِ الوَرِعِ بْنِ  الْاِمَامِ عَلِيْ الْعَنَّازْ,  وَ سَيِّدِنَا الشَّيْخِ الْقُطْبِ الْغَوْثِ  الْاِمَامِ شَرِيْفُ الدِّيْنِ يَحْيٰى بْنِ  الْاِمَامِ حَسَنِ الأَحْمَرِ الوَرِعِ بْنِ  الْاِمَامِ عَلِيْ الْعَنَّازْ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ  الْاِمَامِ اَحْمَدِ بْنِ  الْاِمَامِ شَرِيْفُ الدِّيْنِ يَحْيٰى, وَسَيِّدِنَا الشَّيْخِ الْقُطْبِ الْقُطْبِ الْغَوْثِ الْاِمَامِ شَيْخِ بْنِ  الْاِمَامِ اَحْمَدِ بْنِ يَحْيٰى<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ  الْاِمَامِ مُحَمَّدٍ بْنِ  الْاِمَامِ شَيْخِ بْنِ  الْاِمَامِ اَحْمَدِ بْنِ  الْاِمَامِ يحيى,  وَ سَيِّدِنَا الشَّيْخِ  الْاِمَامِ طٰهٰ بْنِ  الْاِمَامِ مُحَمَّدٍ بْنِ  الْاِمَامِ شَيْخِ<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ  الْاِمَامِ مُحَمَّدٍ الْقَاضِي بْنِ  الْاِمَامِ طٰهٰ,  وَ سَيِّدِنَا الشَّيْخِ قُطْبِ الْاَقْطَابِ وَالْغَوْثِ الْمُقَرِّبِ  الْاِمَامِ طٰهٰ بْنِ  الْاِمَامِ مُحَمَّدٍ الْقَاضِي<br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ الْقُطْبِ الْغَوْثِ  الْاِمَامِ حسن بْنِ  الْاِمَامِ طٰهٰ <br><br>
+
+وَ سَيِّدِنَا الشَّيْخِ الْقُطْبِ الْمُفْرَدِ  الْاِمَامِ طٰهٰ  بْنِ  الْاِمَامِ حَسَنِ بْنِ طٰهٰ  بْنِ يَحْيٰى بَاعَلْوِيْ, وَاُصُوْلِهِمْ وَفُرُوْعِهِمْ رَضِيَ اللّٰهُ عَنْهُمْ وَعَلَيْهِمُ السَّلَامُ وَيَنْفَعُنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+إلىحَضْرَةِ المُصْطَفَى  سَيِّدِنَا رَسُوْلِ اللّٰهِ مُحَمَّدٍ بْنِ عَبْدِ اللّٰهِ صَلَّى اللّٰهُ عَلَيْهِ وَاٰلِهِ وَسَلَّمَ وَإِلٰى حَضْرَةِ جَمِيْعِ الْمُحِبِّيْنَ بِأَهْلِ بَيْتِ الْمُصْطَفٰى صَلَّى اللّٰهُ عَلَيْهِ وَاٰلِهِ وَسَلَّمَ وَذُرِّيَّتِهِ الْحُسَيْنِ وَالْحَسَنِ وَأَصْحَابِهِ وَأَزْوَاجِهِ وَعَلٰى جَمِيْعِ اْلأَوْلِيآءِ وَالْعُلَمآءِ الصَّالِحِيْنَ وَلِمَنْ اَحْسَنَ اِلَيْهِمْ فِيْكَ وَاُصُوْلِهِمْ وَفُرُوْعِهِمْ رَضِيَ اللّٰهُ عَنْهُمْ وَعَلَيْهِمُ السَّلَامُ <br><br>
+
+وَيَنْفَعُنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+وَاِلٰى حَضْرَةِ شَيْخِنَا وَمُرْشِدِنَا وَمُرَبِّيْ رُوْحِنَا أبي مُحَمَّدٍ بَهآءِ الدِّيْنِ, مُحَمَّدٍ لُطْفِي بْنِ عَلِيِّ بْنِ هَاشِمِ بْنِ يَحْيٰى, وَأَهْلِ بَيْتِهِ وَمُرِيْدِيْهِ وَمُعْتَقِدِيْهِ فِي الدِّيْنِ. أَطَالَ اللّٰهُ عُمْرَهُمْ فِي صِحَّةٍ وَعَافِيَّةٍ, وَشَّرَفَ اللهُ قَدْرَهُمْ وَاَدَامَ اللّٰهُ عِزَّهُمْ وَيُعِيْدُ عَلَيْنَا مِنْ بَرَكَاتِهِمْ وَكَرَمَاتِهِمْ وَنَفَحَاتِهِمْ وَبِعُلُوْمِهِمْ وَأَسْرَارِهِمْ وَأَنْوَارِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالْآخِرَةِ الْفَاتِحَةْ<br><br>
+
+اَللَّهُـمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وعَلٰى اٰل سَيِّدِنَا مُحَمَّدٍ, وَأَسْئَلُكَ اَللَّهُـمَّ إِنَّا نَسْتَوْدِعُكَ أَنْفُسَنَا وَدِيْنَنَا وَإِيْمَانَنَا وَأَهْلَنَا وَأْوَلاَدَنَا وَأَبْنَائَنَا وَجَمِيْعَ مَا أَنْعَمْتَ بِهِ عَلَيْنَا, نَسْتَوْدِعُ اللّٰهَ دِيْنَنَا وَأَمَانَتَنَا وَخَوَاتِمَ أَعْمَالَنَا, وَاَنْ تُنَوِّرَ بِهَا قُلُوْبَنَا وَقَوَالِبَنَا بِنُوْرِ اللّٰهِ وَبِنُوْرِ سَيِّدِنَا مُحَمَّدٍ صَلّٰى اللّٰهُ عَلَيْهِ وَاٰلِهِ وَصَحْبِهِ وَسَلَّمَ<br><br>
+
+اَللّٰهُـمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وعَلٰى اٰل سَيِّدِنَا مُحَمَّدٍ, صَلَاةً اَنْ تَكْفِيَنَا بِهَا شَرًّا مِمَّا نَخَافُ وَنَحْذَرُ, وَاغْفِرْ بِهَا وَالِدِيْنَا وَلِلْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ الْأَحْيَآءِ مِنْهُمْ وَالْأَمْوَاتِ, وَاصْلِحْ بِهَا  الْاِمَامِ وَالْأُمَّةِ وَالرَّاعِيْ وَالرَّاعِيَّةِ, وَأَلِّفْ بِهَا بَيْنَ قُلُوْبِهِمْ, وَادْفَعْ بِهَا شَرّ بَعْضِهمْ عَنْ بَعْضٍ<br><br>
+
+اَللّٰهُـمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلٰى سَيِّدِنَا مُحَمَّدٍ وعَلٰى اٰلِ سَيِّدِنَا مُحَمَّدٍ صَلاَةً تُنْجيْنَا بِهَا وَإِيَّاهُمْ مِنْ جَمِيْعِ الْأَهَوْاَلِ وَالْآفَاتِ وَسُوْءَ الظُّنُوْنِ وَسَلِّمْنَا بِهَا وَاِيَّاهُمْ فِيْ يَوْمِ يُبْعَثُوْنَ يَوْمٌ لاَ يَنْفَعُ مَالٌ وَلَا بَنُوْنٌ اِلَّا مَنْ أَتٰى اللّٰهَ بِقَلْبٍ سَلِيْمٍ أُنْظُرْ إِلَيْنَا بِعَيْنِ رَحْمَتِكَ وَلَا تَنْظُرْ اِلَيْنَا بِعَيْنِ سُخْطِكَ.(يَا اَرْحَمَ الرَّاحِمِيْنَ)</p><br><br><p><i>Al-Fatihah. <br><br>
+
+Ilaa hadrotin Nabiyyil Musthofa Sayyidina Muhammadir Rosuulillahi, shollalloohu ‘alaihi wa sallam, wa aalihi wa ash-haabihii wa azwaajihii wa dzurriyyaatihii wa ahli baytihi, rodliyalloohu ‘anhum wa alaihimus salaam, wa yanfa’unaa min barokaatihim wa karoomaatihim wa nafahaatihim, wa bi’uluumihim wa asroorihim wa anwaarihim, fid diini wad dun-yaa wal aakhiroh, AlFaatihah ... Ilaa hadlrotin Nabiyyil Musthofaa Sayyidinaa Muhammadin Rosuulillaahi shollalloohu ‘alaihi wa sallam, wa aalihii wa ash-haabihii wa ahbaabihi wa ahli nidhoomish sholawaati,  
+
+<br><br>wa ilaa rijaalil ghoibi wa ashhaabin naubati, wa ilaa roiisihim, wa ushuulihim wa furuu’ihim rodliyalloohu ‘anhum wa ‘alaihimus salaam, wa yanfa’unaa min barokaatihim wa karoomaatihim wa nafahaatihim, wa bi’uluumihim wa asroorihim wa anwaarihim, fid diini wad dun-yaa wal aakhiroh, alFaatihah ... Ilaa hadlrotin Nabiyyil Musthofaa Sayyidina Muhamma-din Rosuulillaahi shollalloohu ‘alaihi wa aalihi wa ash-haabihi wa sallam, wa ilaa hadlroti Sayyidina Al-Muhaajir ilallooh, Ahmad Bin ‘Isa, wa ‘Ubaidillah Bin Ahmad Al-Muhaajir,  
+
+<br><br>wa ilaa hadlroti Sayyidis Syaikh ‘Abdil Qodir Al-Jailani, wa Sayyidis Syaikh Ahmad ArRifaa’i, wa Sayyidis Sayikh Ahmad Al-Badawi, wa Sayyidis Syaikh Ibrohim Ad-Dasuuqiy, wa Sayyidis Sayikh Abil Hasan As-Syadzili, wa Sayyidis Syaikh Muhammad Bahaa-uddin AnNaqsabandiy Al-Husaini, wa Sayyidis Syaikh ‘Ali Kholi’ Qosam, wa Sayyidis Syaikh Muham-mad Shohib Mirbath, wa ushuulihim wa furuu’ihim rodliyalloohu ‘anhum wa ‘alaihimus salaam, wa yanfa’u-naa min barokaatihim wa karoomaatihim wa nafahaatihim, wa bi’uluumihim wa asroorihim  
+
+<br><br>wa anwaarihim, fid diini wad dun-yaa wal aakhiroh, Al-Fatihah...
+ 
+<br><br>Ilaa hadlrotin Nabiyyil Musthofaa Sayyidinaa Muhammadin Rosuulillaahi shollalloohu ‘alaihi wa aalihii wa sallam, wa saadati saadatinaa al-Hasan wal Husain, wa saadatinaa Abii ‘Alawi, wa ushuulihim wa furuu’ihim, rodliyalloohu ‘anhum wa ‘alaihimus salaam, wa yan-fa’unaa min barokaatihim wa karoomaatihim wa nafahaatihim, wa bi’uluumihim wa asroorihim wa anwaarihim, fid diini wad dun-yaa wal aakhiroh, Al-Fatihah...
+
+<br><br>Ilaa hadlrotin Nabiyyil Musthofaa Sayyidinaa Muhammadin Rosulillaahi shollalloohu ‘alaihi wa sallam, wa ilaa hadlroti Sayyidina al-Imam Muhammad Al-Faqiihil Muqoddam bin ‘Ali Baa’alawiy, wal Imam ‘Alwi Bin Al-Faqihil Muqoddam Muham-mad bin ‘Ali Baa’alawiy, wa ikhwaanihii, wal Habaa-bah As-Sayyidah Zainab Ummil Fuqoroo’ binti Ahmad bin Muhammad Shohib Mirbaath bin ‘Ali, wal Imam Abdillah bin ‘Alwi Baa’ala-wiy, wal Imam ‘Ali bin ‘Alwi bin AlFaqiihil Muqoddam bin ‘Ali Baa’alawi, wal Imam ‘Alwi ‘Ammil Faqiih bin Muhammad  
+
+<br><br>Shohib Mirbaath, wal Habaabah Faathimah binti al-Imam ‘Alwi ‘Ammil Faqiih, wal Imam Muhammad Maulad Dawiilah, wal Imam ‘Ab-dirrohman As-Saqqoof, wal Imam ‘Umar Al-Muhdhor, wal Imam ‘Abdillah Al‘Aidarus, wal Imam Abii Bakar As-Sakroon, wal Imam Abii Bakar Al-‘Adni, wa Akhiihil Imam Syaikh Bin ‘Abdillah Al‘Aidarus, was Syaikh Abii Bakar Bin Saalim, wa ushuulihim wa furuu’ihim  rodliyalloohu ‘anhum wa ‘alai-himus salaam, wa yanfa’unaa min barokaatihim wa karoo-maatihim wa nafahaatihim, wa bi’uluumihim wa asroorihim wa anwaarihim,  
+
+<br><br>fid diini wad dun-yaa wal aakhiroh, Al-Fatihah ... 
+
+<br><br>Ilaa hadlrotin Nabiyyil Musthofaa Sayyidinaa Muhammadin Rosuulillaahi, shollalloo-hu ‘alaihi wa aalihii wa Ashhaabihii wa Sallam, wa ilaa hadlroti Sayyi-dinal Imam ‘Alwi bin ‘Alwi An-Naasik Bin Muhammad Maulad Dawiilah, wa ikhwaa-nih, wa ilaa hadlroti Sayyidi-nal Imam ‘Ali Al‘Annaaz bin ‘Alwi bin  Muhammad Mau-lad Dawiilah, wa ikhwaanih, wa Sayyidinal Imam Hasan Al-Ahmar Al-Wari’i bin Imam ‘Ali Al-‘Annaaz, wa Sayyidi-nal Imam Husain Maahar,  
+
+<br><br>wa Akhiihil Imam ‘Abdillah bin Imam ‘Ali Al-‘Annaaz, wa Sayyidinal Imam Muhammad Bin Imam ‘Ali Al-‘Annaaz, wa Sayyidinal Habib ‘Abdil-lah bin Syaikh bin ‘Abdillah bin Syaikh bin ‘Abdillah Al-‘Aidarus, wa Sayyidinal Habib Husain bin ‘Abdillah bin Syaikh Abii Bakar bin Saalim, wa Sayyidinasy Syaikh ‘Umar Baa Makhromah, wa Sayyidi-nasy Syaikh Ma’ruf Baa Jamaal, wa Sayyidinasy Syaikh Sa’ad As-Suwaini, wa Sayyidinal Habib ‘Umar bin ‘Abdirrohman Al-‘Atthos, was Syaikh ‘Ali Bin ‘Abdillah Baaroos,
+
+<br><br>wa Sayyidinal Habib Ahmad Bin Muhammad Al-Habsyi, wa Sayyidinal Habib ‘Abdir-rohman Maulaa ‘Arsyih Al-Jufri, wa Sayyidinal Habib Yusuf bin ‘Abid Al-Hasaniy, wa Sayyidinal Habib ‘Abdil-lah bin ’Alwi AlHaddad, wa Akhiihi Sayyidinaa ‘Umar bin ‘Alwi Al-Haddad, wa Sayyi-dinal Habib Musyay-yakh Bin ‘Abdillah Baa’abud, wa Sayyidinal Habib Ahmad Bin Zain Al-Habsyi, wa Sayyidinal Habib Muhammad Bil Faqih, wa Sayyidinaa Ahmad Bin ‘Umar Al-Hinduwaan, wa Sayyidinal Habib Thoohir bin Muhammad bin Hasyim Maghfun Baa’alwiy, 
+ 
+<br><br>wa Sayyidinal Habib Thoohaa bin Muhammad bin Syekh bin Ahmad bin Yahya Shoohibi ‘Inat, wa Sayyidinal Habib ‘Abdillah bin Muhammad bin ‘Alwi bin Yahya Shoohibil Qooroh, wa Sayyidinal Habib ‘Abdirrohman Hudailiy Shoohibil Qooroh, wa Sayyidinal Habib Ahmad bin ‘Umar bin Sumaith, wa Sayyidinal Habib Hasan bin Sholih Al-Bahr, wa Sayyidinal Habib Husain bin Thoohir Baa’alawiy, wa Sayyidinal Habib Thoohir bin Husain bin Thoohir Baa’alawi, wa sayyidinal Habib ‘Ali Bin Hasan Al-’Atthos  Shoohibi Masyhad, 
+ 
+<br><br>wa Sayyidinal Habib ‘Abdillah bin Husain bin Thoohir Baa’alawiy, wa Sayyidinal Habib ‘Abdillah bin Husain Bil Faqih, wa Sayyidinal Habib ‘Abdillah bin ‘Umar bin Yahya, wa Sayyidinal Habib ‘Aqil bin ‘Umar bin ‘Aqil bin Yahya Baa’alawiy, wa Sayyidinal Habib ‘Abdil-lah bin ‘Ali bin Syihab, wa Sayyidinal Habib ‘Abdillah Bin Abii Bakar Buthoiha, wa Sayyidinasy Syaikh ‘Abdillah bin Ahmad Baa Saudan, wa Sayyidinasy Syaikh ‘Abdillah bin Sa’ad bin Sumair Al-Hadhromiy, wa Sayyidinasy Syaikh ‘Abdillah Yaafi’, wa Sayyidinasy Syaikh ‘Abdillah Baa ’Abbad, 
+
+<br><br>wa Sayyidinasy Syaikh Ahmad Rohmatillah Shoohibi Ampel, wa Sayyidinasy Syaikh Hasyim bin Ahmad Shoohibi Drajat Sedayu, wa Sayyidinasy Syaikh Ibrohim bin Ahmad Shoohibi Tuban, wa Sayyidi-nasy Syaikh Syarif Hidaya-tullah Shoohibi Jabal Jati, wa Sayyidinasy Syaikh Malik Ibrohim Shoohibi Gresik, wa Sayyidinasy Syaikh Muhammad ‘Ainul Yaqiin Shoohibi Giri Gresik, wa Sayyidinasy Syaikh Ja’far Shoodiq bin Ahmad Shoohibi Kudus, wa Sayyidinasy Syaikh ‘Umar Sa’id bin ‘Utsman Shoohibi Jabal Muria, wa Sayyidinasy Syaikh ‘Abdirrohman Syahid 
+
+<br><br>Shoohibi Kali Jogo ad-Demaaki, wa Sayyidinasy Syaikh Sulthoon ‘Abdul Fattah ad-Demaaki, wa Sayyidinasy Syaikh Mu-hammad Aliyyuddin Sulthon Trenggono bin ‘Abdul Fattah ad-Demaaki, wa Sayyidinasy Syaikh Dzaatul Kaafii (‘Abdul Kaafii) Shoohibi Jabal Jati, wa Sayyidinaa ‘Ali Zainal ‘Abidin Sunan AlQoodhii ad-Demaaki, wa Sayyidinasy Syaikh Ahmad Bin Ahmad Shoohibi Lamongan, wa Sayyidinasy Syaikh Hasanuddin Al-Bantani, wa ushuulihim wa furuu’ihim, rodliyalloohu ‘anhum wa ‘alaihimus salaam, wa yanfa’unaa min barokaatihim wa karoomaatihim 
+
+<br><br>wa Sayyidinasy Syaikh al-Imaam al-Quthbiil Habiib Hasan AlAhmar al-Wari’ bin Imam ‘Ali al‘Annaaz, wa Sayyidinasy Syaikh al-Quthbil Ghouts al-Imam Syarifuddin Yahya bin al-Imam Hasan al-Ahmar al-War’i bin alImam ‘Ali al-‘Annaaz, wa Sayyidinasy Syaikh al-Imam Ah-mad bin  Imaam Syarifuddin Yahya, wa Sayyidinasy Syaikh Al-Quthbil Ghouts al-Imam Syaikh bin al-Imam Ahmad Bin Yahya, wa Sayyidinasy Syaikh al-Imam Muhammad bin al-Imaam Syaikh bin al-Imam Ahmad bin al-Imam Yahya, wa Sayyidinasy Syaikh al- Imam Thoohaa bin al-Imam Muhammad  
+
+<br><br>bin al-Imam Syaikh, wa Sayyidinasy Syaikh al-Imam Muhammad Al-Qoodlii bin al-Imam Thoo-haa, wa Sayyidinasy Syaikh Quthbil Aqthoob, wal Ghoutsil Muqorrob al-Imam Thoohaa bin al-Imam Muhammad Al-Qoodlii, wa Sayyidinasy Syaikh al-Quthbil Ghouts alImam Hasan bin al-Imam Thoohaa, wa Sayyidinasy Syaikh al-Quthbil Mufrod al-Imam Thoohaa bin al-Imam Hasan bin Thoohaa bin Yahyaa Baa ‘Alawiy, wa ushuulihim wa furuu’ihim, rodliyalloohu ‘anhum wa ‘alaihimus salaam, wa yanfa-’unaa min barokaatihim wa karoomaatihim wa nafahaatihim, wa bi’uluumihim wa asroorihim wa anwaarihim, fid diini wad dun-yaa wal aakhiroh, Al-Fatihah...
+
+<br><br>Ilaa hadlrotin Nabiyyil Musthofaa Sayyidinaa Rosuu-lillaah, Muhammad bin ‘Abdillah, shollalloohu ‘alaihi wa aalihii wa ash-haabihii wa sallam, wa ila hadlroti jamii’il muhibbiin bi ahli baitil Musthofaa, shollalloohu ‘alaihi wa aalihii wa sallam, wa dzurriyyatihii AlHusaini wal Hasan, wa ashhaabihii wa azwaajihii, wa ‘alaa jamii’il auliyaa’ wal ‘ulamaaa-is shoolihiin, wa liman ahsana ilaihim fiik, wa ushuulihim wa furuu’ihim,
+
+<br><br>rodliyalloohu ‘anhum wa ‘alaihimus salaam, wa yanfa’unaa min barokaatihim wa karoomaatihim wa nafahaa-tihim, wa bi’uluumihim wa asroorihim wa anwaarihim, fid diini wad dunyaa wal aakhiroh, Al-Fatihah...
+
+<br><br>wa ilaa hadlroti Syaikhinaa wa Mursyidinaa wa Murobbii ruuhinaa, Abii Muhammad Bahaauddin, Muhammad Luthfi bin ‘Ali bin Hasyim bin Yahyaa, wa ahli baitihii wa muriidiihi wa mu’taqidiihi fid diin, athoolalloohu ‘umrohum fii shihhatin wa ‘aafiyah, wa syarrofalloohu qodrohum, wa adaamalloohu ‘izzahum, wa yu’iidu ‘alainaa min barokaatihim  
+
+<br><br>wa karoomaatihim wa nafahaatihim, wa bi ’uluumi-him wa asroorihim wa anwaa-rihim, fid diini wad dun-yaa wal aakhiroh, Al-Fatihah... 
+
+<br><br>Allahumma sholli wa sallim wa baarik ‘alaa Sayyidinaa Muhammad wa ‘alaa aali sayyidinaa Muhammad, wa asaluka Alloohumma, innaa nastaudi’uka angfusanaa, wa  diinanaa, wa amaanatanaa, wa khowaatima a’maalinaa, wa an tunawwiro bihaa quluubanaa wa qowaalibanaa, binuurillahi wa binuuri sayyidinaa Muhammadin shollalloohu ‘alaihi wa aalihii wa shohbihii wa sallam,  
+
+<br><br>Allahumma sholli wa sallim wa baarik ‘alaa Sayyidinaa Muhammadin, wa ‘alaa aali Sayyidinaa Muhammad, sholaatan an takfiyanaa bihaa syarrom, mimmaa nakhoofu wa nahdar, waghfir bihaa waa-lidiinaa wa lil mu’miniinaa wal mu’minaat, wal musli-miinaa wal muslimaat, alahyaaa-i minhum wal amwaat, wa ashlih bihaal imaama wal ummah, war roo’iya war ro’iyyah, wa allif bihaa baina quluubihim, wadfa’ bihaa syarro ba’dihim ‘an ba’d, Allahum-ma sholli wa sallim wa baarik ‘alaa sayyidinaa Muhammad, wa ‘alaa aali sayyidinaa Muhammad, sholaatan tunjiinaa bihaa  
+
+<br><br>wa iyyaahum min jamii’il ahwaali wal aafaati wa suuuidzunuun, wa sallimnaa bihaa wa iyyaahum fii yaumi yub’atsuun, yauma laa yangfa’u maaluw wa laa banuun, illaa man atallooha bi qolbin saliim, ungdzur ilainaa bi’aini rohmatik, wa laa tangdzur ilainaa bi’aini sukhthik.  
+ 
+(Yaa Arhamar roohimiin 3 X)</i></p><p>-</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

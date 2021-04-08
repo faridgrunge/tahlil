@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Tahlil - Bagian 6</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اللَّهُـمَّ ارْحَمْهُ بِالقُرْآنِ العَظِيْمِ رَحْمَةً وَاسِعَةً، وَاغْفِرْ لَهُ مَغْفِرَةً جَامِعَةً يَا مَالِكَ الدُّنْيَا وَالآخِرَةِ يَا رَبَّ العَالَمِيْنَ <br><br>
+
+اللَّهُـمَّ أَنْزِلْ فِيْ قَبْرِهِ الرَّحْمَةَ وَالضِّيَاءَ وَالنُّوْرَ، وَالبَهْجَةَ وَالرَوْحَ وَالرَيْحَانَ وَالسُّرُوْرَ، مِنْ يَوْمِنَا هَذَا إِلَى يَوْمِ البَعْثِ وَالنُّشُوْرِ، إِنَّكَ مَلِكٌ رَبٌّ غَفُوْرٌ<br><br>
+
+اللَّهُـمَّ اجْعَلِ القُرْآنَ العَظِيْمَ فِي قَبْرِهِ مُؤْنِسًا، وَفِي القِيَامَةِ شَافِعًا، وَفِي الحَشْرِ ضِيَاءً وَظِلًّا وَدَلِيْلًا، وَفِي المِيْزَانِ رَاجِحًا، وَعَلَى الصِّرَاطِ <br><br>
+ نُوْرًا وَقَائِدًا، وَعَنِ النَّارِ سِتْرًا وَحِجَابًا، وَفِي الجَنَّةِ رَفِيْقًا<br>
+
+اللَّهُـمَّ عَبْدُكَ وَابْنَ عَبْدَيْكَ خَرَجَ مِنْ رَّوْحِ الدُّنْيَا وَسَعَتِهَا وَمَحْبُوْبِهِ وَاَحِبَّائِهِ فِيْهَا اِلَى ظـُـلْمَةِ اْلقَبْرِ وَمَا هُوَ لَا قِيْهِ كـَانَ يَشْهَـدُ اَنْ لَا اِلَهَ اِلَّا اَنْتَ وَاَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُوْلـُـكَ وَاَنْتَ اَعْلَمُ بِهِ<br><br>
+
+اللَّهُـمَّ اِنَّهُ نَزَلَ بِكَ وَاَنْتَ خَيْرُ مَنْزُوْلٍ بِهِ وَاَصْبَحَ فـَـقِـيْرًا اِلـَى رَحْمَتِكَ، وَاَنْتَ غَنِيٌّ عَنْ عَذَابِهِ وَقـَـدْ جِئْنَاكَ رَاغِبِيْنَ اِلـَـيْكَ شُفـَـعَاءَ لـَـهُ، اللَّهُـمَّ اِنْ كَانَ مُحْسِنًا فَزِدْ فِيْ اِحْسَانِهِ وَاِنْ كـَانَ مُسِيْئًا فَتَجَاوَزْ عَنْهُ وَلـَـقـِّـهِ بِرَحْمَتِكَ رِضَاكَ وَقِهِ فِتْنَةَ اْلقـَـبْرِ وَعَــَذابَهُ وَافْسَحْ لـَـهُ فِيْ قـَــبْرِهِ وَجَافِ اْلاَرْضَ عَنْ جَنْبَيْهِ وَلـَــقـِّـهِ بِرَحْمَتِكَ اْلاَمْنَ مِنْ عَذَابِكَ حَتَّى تَبْعَثَــهُ آمِنًا اِلـَى جَنَّتِكَ بِرَحْمَتِكَ يَااَرْحَمَ الرَّاحِمِيْنَ<br><br>
+
+اللَّهُـمَّ اغْفِرْ لَهُ وَارْحَمْهُ وَعَافِهِ وَاعْفُ عَنْهُ<br><br>
+
+اللَّهُـمَّ اغْفِرْ لَها وَارْحَمْها وَعَافِها وَاعْفُ عَنْها يَا رَبَّ العَالَمِيْنَ<br><br>
+
+وَاجْعَلِ اللَّهُـمَّ ثَوَابًا مِثْلَ ثَوَابِ ذَالِكَ فِي صَحَائِفِنَا وَفِي صَحَائِفِ وَالِدِيْنَا وَمَشَائِخِنَا وَالسَّادَاتِ الحَاضِرِيْنَ وَوَالِدِيْهِمْ وَمَشَائِخِهِمْ خَاصَّةً وَإِلَى أَمْوَاتِ المُسْلِمِيْنَ عَامَّةً<br><br>
+
+اللَّهُـمَّ ذَكِّرْنَا مِنْهُ مَا نَسِيْنَا وَعَلِّمْنَاهُ مَا جَهِلْنَا وَارْزُقْنَا تِلَاوَتَهُ آنَاءَ اللَّيْلِ وَأَطْرَافَ النَّهَارِ، وَاجْعَلْهُ حُجَّةً لَّنَا وَلَا تَجْعَلْهُ حُجَّةً عَلَيْنَا<br><br>
+
+اللَّهُـمَّ بِفَضْلِكَ عُمَّنَا، وَبِلُطْفِكَ حُفَّنَا، وَعَلَى الإِسْلَامِ وَالإِيْمَانِ جَمْعًا تَوَفَّنَا وَأَنْتَ رَاضٍ عَنَّا، وَاخْتِمْ بِالصَّالِحَاتِ أَعْمَالَنَا<br><br>
+
+رَبَّنَآ اٰتِنَا فِى الدُّنْيَا حَسَنَةً وَّفِى الْاٰخِرَةِ حَسَنَةً وَّقِنَا عَذَابَ النَّارِ<br><br>
+
+  بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِيْنَ، وَالْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ</p><br><br><p><i>Allahummarhamhu bilqur’aanil 'adziimi warohmatan waasi’atan, wagfirlahu magfirotan jaamia’tan Yaa Maalikadunyaa wal aakhiroti Yaa Rabbal’alamiin.<br><br>
+
+Allahumma anjil fii Qobrihir-Rahmata waddiyaa a wannuur, walbahjata warauha waraihaana wassuruura, minyauminaa hadzaa ilaa yaumil ba’tsi wannusyuur, innaka malikun robbun gofuur.<br><br>
+
+Allahummaj’alil qur’aanal adziima fii qabrihi mu nisan, wafiil qiyaamati syaafi’ann, wafiil hassri dhiyaa an wa dzilla wadaliila, wafiil miijaani raajihan, wa ‘alaas siraati nuu ran waqaaidaa, wa ‘aninnaari sitran wahijaaba, wafiljannati rafiiqa.<br><br>
+
+Allahumma ‘abduka wabna ‘abdaika khorja mirruhid-dunyaa wasa ’atiha wamahbuu bihi wawahibaihi fiiha ilaa dzullamatil qabri wamaa Huwa Laa qiihi kaana yasshadu allaa ilaha illaa anta wa anna Muhammadan ‘abduKa warasuuluKa wa Anta a’lamu bihi.<br><br>
+
+Allahumma Innahu ajala bika wa Anta Khoiru manjuulin bihi waasbaha faqiiran ilaa rahmatika, wa Anta Ghaniyyun an ‘adzaa bihi wa qad ji naka raa gibiina ilaika syufa’aa alahu, Allahumma inkaana muhsinan fajid fii ihsaanihi wa inkaana muhsiian fatajaa waj anhu walaqayyihi birahmatika ridhooka waqihi fitnatal qabri wa ‘adzaa bahu wagsah lahu fii qabrihi wajaa fil ardhi anjanbaihi walaqayyihi birahmatikal tamna min ‘adzaa bika hattaa tab’atsahu aamina Ilaaa jannatika birahmatika yaa arhamarar raahimiiin.<br><br>
+
+Allahummagfirlahu warhamhu wa’aafihi wa’fuanhu.<br><br>
+
+Allahummagfirlaha warhamha wa’aafiha wa’fuanha Yaa Rabbal 'Alamin.<br><br>
+
+Waj’ali Allahumma tsawaa ban mitsla tsawaabi dzaalika fii sohaa ifinaa wa fii sohaaifi walidiinaa wamasyaa ikhina wassaadaatil haadiriina wawalidiihim wamasyaa ikhihim khaasota wa Ilaa amwaatil muslimiin ‘aammah.<br><br>
+
+Allahumma dzakkir naa minhu maa nasiina wa 'Aallimnaahu maa jahilnaa warjuqnaa tilaa wa tahu aana allaili wa atraafan nahaar, waj’alhu hujatal lanaa walaa taj’alhu hujjatan ‘alainaa<br><br>
+
+Allahumma bifadlika 'ummanaa, wabilutfika huffanaa, wa 'alal islaami wal-iimaani jam’an tawafana wa anta raadhi‘anna, wakhtim bissoolihati a’maalana. Rabbana aatina fid dunya hasanatan wafil aakhiroti hasanatan waqinaa ‘adzaabannar, birahmatika Yaa Arhamar Raahmiin, walhamdulillahi Rabbil ‘Aalamiin.</i></p><br><br><p>Ya Allah, turunkanlah rahmat yang luas kepadanya (arwah ahli kubur) dengan berkat Alquran yang agung, ampunilah ia dengan ampunan yang luas, wahai Penguasa dunia dan akhirat, Tuhan sekalian alam.<br><br>
+
+Ya Allah, turunkanlah di kuburnya (almarhum fulan) rahmat, sinar, cahaya, kegembiraan, kesenangan, keharuman , dan kebahagiaan sejak hari ini hingga hari kebangunan dan kebangkitan. Sungguh, Kau penguasa, Tuhan yang Maha Pengampun.<br><br>
+
+Ya Allah, jadikanlah Alquan di kuburnya sebagai teman, di Hari Kiamat sebagai pemberi syafaat, di tempat berkumpul (mahsyar) kelak sebagai sinar, naungan, dan petunjuk, di mizan sebagai pemberat timbangan amal baik, di sirat sebagai cahaya dan penuntun, dari api neraka sebagai tabir dan hijab, dan di surga sebagai kawan.<br><br>
+
+Ya Allah, ini hamba-Mu dan anak dari kedua hamba-Mu. Ia keluar dari kebahagiaan dan keluasan dunia, orang yang dicintai, dan para kekasihnya di dunia menuju kegelapan kubur dan apa yang akan ia jumpai di dalamnya. Ia dulu pernah bersaksi bahwa tiada tuhan selain Engkau dan Nabi Muhammad SAW adalah hamba dan utusan-Mu. Kau pun lebih tahu akan hal ini.<br><br>
+
+Ya  Allah, dia kembali kepada-Mu. Engkau adalah sebaik-baik tempat kembali. Ia membutuhkan rahmat-Mu. Sementara Engkau tidak perlu menyiksanya. Kami mendatangi-Mu seraya mengharap kepada-Mu agar dapat memberikan syafa’at baginya. Ya Allah, jika ia orang baik, maka tambahkanlah kebaikannya. Jika ia orang jahat, maka maafkanlah keburukannya. Pertemukan ia dan ridha-Mu berkat rahmat-Mu. Peliharalah ia dari fitnah dan azab kubur. Lapangkanlah kuburnya. Jauhkanlah dinding bumi dari kedua sisi badannya. Pertemukanlah ia dan keamanan berkat rahmat-Mu dari azab-Mu hingga Engkau membangkitkannya dalam keadaan aman menuju surga-Mu berkat rahmat-Mu, wahai Zat Yang Maha Pengasih.<br><br>
+
+Ya Allah, ampunilah dirinya, kasihanilah dirinya, afiatkan dirinya, dan maafkanlah dirinya.<br><br>
+
+Ya Allah, ampunilah dirinya (perempuan), kasihanilah dirinya, afiatkan dirinya, dan maafkanlah dirinya, wahai Tuhan sekalian alam.<br><br>
+
+Ya Allah, jadikanlah pahala ini sebagaimana pahala demikian yang tercatat pada lembaran kami, lembaran orang tua kami, guru kami, para pemuka yang hadir, orang tua mereka, dan guru mereka khususnya, dan arwah umat Islam secara umum.<br><br>
+
+Ya Allah, ingatkan kami ayat-ayat Alquran yang kami terlupa. Beritahukan kami sesuatu yang kami tidak ketahui. Anugerahkan kami kesempatan untuk membacanya sepanjang malam dan di tepi-tepi siang. Jadikanlah Alqun sebagai pembela kami. Jangan jadikan Alquran sebagai penghujat kami kelak.<br><br>
+
+Ya Allah, ratakanlah keutamaan-Mu. Selimuti kami dengan kelembutan-Mu. Atas Islam dan iman sekaligus, matikanlah kami sementara Kau meridhai kami. Akhiri amal kami dengan kesalehan. Tuhan kami, berikanlah kami kebaikan di dunia, dan kebaikan di akhirat. Lindungilah kami dari siksa neraka, dengan rahmat-Mu wahai Tuhan maha penyayang. Segala puji bagi Allah, Tuhan sekalian alam.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p></p><p><strong>
+</strong></p>
+
+
+
+
+
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

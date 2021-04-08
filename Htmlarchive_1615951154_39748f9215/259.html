@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Doa Petang Hari Lengkap</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">1. Membaca Ta'awudz, basmalah, & Pujian (Al-Adzkar An-Nawawiyah): <br><br>أَعُوذُ بِاللَّهِ مِنَ الشَّيْـطَانِ الرَّجِيـمِ<br><br>بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>اَلْحَمْدُ لِلّٰهِ رَبِّ اْلعَالَمِيْنَ حَمْدًا يُوَافِى نِعَمَهُ وَيُكَافِئ ُمَزِيْدَهُ<br><br>2. Membaca Ayat Kursi (Pagi & Sore) 1X:<br><br>اَللّٰهُ لَآ اِلٰهَ اِلَّا هُوَۚ اَلْحَيُّ الْقَيُّوْمُ ەۚ لَا تَأْخُذُهٗ سِنَةٌ وَّلَا نَوْمٌۗ لَهٗ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۗ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهٗٓ اِلَّا بِاِذْنِهٖۗ يَعْلَمُ مَا بَيْنَ اَيْدِيْهِمْ وَمَا خَلْفَهُمْۚ وَلَا يُحِيْطُوْنَ بِشَيْءٍ مِّنْ عِلْمِهٖٓ اِلَّا بِمَا شَاۤءَۚ وَسِعَ كُرْسِيُّهُ السَّمٰوٰتِ وَالْاَرْضَۚ وَلَا يَـُٔوْدُهٗ حِفْظُهُمَاۚ وَهُوَ الْعَلِيُّ الْعَظِيْمُ<br><br>3. Membaca Al-Ikhlas, Al-Falaq, An-Nas (Pagi & Sore) masing-masing 3X<br><br>4. Membaca Sayyidul Istighfar (Pagi & Sore) 1X (HR. Bukhari no. 6306):<br><br>اللَّهُـمَّ أَنْتَ رَبِّي، لاَ إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَىَّ وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي، فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ<br><br>5. Membaca Doa Dunia & Akhirat (Pagi & Sore) 1X (Al-Adab Al-Mufrad no. 1200):  <br><br>اللَّهُـمَّ إِنِّي أَسْأَ لُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ‏<br><br>اللَّهُـمَّ إِنِّي أَسْأَ لُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ، وَأَهْلِي وَمَالِي‏.‏ اللَّهُـمَّ اسْتُرْ عَوْرَاتِي، وَآمِنْ رَوْعَاتِي‏<br><br> اللَّهُـمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي، وَعَنْ يَمِينِي وَعَنْ شِمَالِي، وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ مِنْ أَنْ أُغْتَالَ مِنْ تَحْتِي<br><br>6. Doa Sore 1X (HR. Ibnu Majah no. 3868):<br><br>اَللَّهُـمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا،وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيْرُ<br>	<br>7. Doa Sore 1X (HR. Muslim no. 2723): <br><br>أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ , لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ <br><br>رَبِّ أَسْأَلُكَ خَيْرَ مَا فِي هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهَا، وَأَعُوذُبِكَ مِنْ شَرِّ مَا فِي هَذِهِ اللَّيْلَةِ وَشَرِّ مَا بَعْدَهَا <br><br>رَبِّ أَعُوذُبِكَ مِنَ الْكَسَلِ وَسُوءِ الْكِبَرِ، رَبِّ أَعُوذُبِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ<br><br>8. Doa 1 X(HR. Ibnu Majah no. 925):  <br><br>اللَّهُـمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا طَيِّبًا وَعَمَلاً مُتَقَبَّلاً<br><br>9. Doa Sore 1X (HR. Ahmad no. 14818): <br><br>أَمْسَيْنَا عَلَى فِطْرَةِ الْإِسْلَامِ وَعَلَى كَلِمَةِ الْإِخْلَاصِ وَعَلَى دِينِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَعَلَى مِلَّةِ أَبِينَا إِبْرَاهِيمَ حَنِيفًا مُسْلِمًا وَمَا كَانَ مِنْ الْمُشْرِكِينَ<br><br>10. Doa 3X (HR. Abu Dawud no. 1503):<br><br>سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ<br><br>11. Doa Pagi & Sore 1X  (HR. Tirmidzi no. 3529): <br><br>اللَّهُـمَّ فَاطِرَ السَّمَوَاتِ وَالأَرْضِ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ لاَ إِلَهَ إِلاَّ أَنْتَ رَبَّ كُلِّ شَيْءٍ وَمَلِيكَهُ أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطَانِ وَشَرَكِهِ وَأَنْ أَقْتَرِفَ عَلَى نَفْسِي سُوءًا أَوْ أَجُرَّهُ إِلَى مُسْلِمٍ ‏<br><br>12. Doa Pagi & Sore 1X (HR. Baihaqi no. 892): <br><br>يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ فَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ، وَأَصْلِحْ لِي شَأْنِي كُلَّهُ<br><br>13. Doa Pagi & Sore 3X (HR.  Bukhari no. 93, Ibnu Majah no. 3870, HR. Ahmad no. 18199): <br><br>رَضِيتُ بِاللَّهِ رَبًّا وَبِالإِسْلاَمِ دِينًا وَبِمُحَمَّدٍ صلى الله عليه وسلم نَبِيًّا<br><br>14. Doa Pagi & Sore 3X (HR. Abu Dawud no. 5088): <br><br>بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَىْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ<br><br>15. Doa Pagi & Sore 3X  (HR. Abu Dawud no. 5090):  <br><br>اللَّهُـمَّ عَافِنِي فِي بَدَنِي اللَّهُـمَّ عَافِنِي فِي سَمْعِي اللَّهُـمَّ عَافِنِي فِي بَصَرِي لاَ إِلَهَ إِلاَّ أَنْتَ<br><br>اللَّهُـمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ اللَّهُـمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ لاَ إِلَهَ إِلاَّ أَنْتَ<br><br>16. Doa Pagi & Sore (HR. Bukhari no. 3293 & HR. Muslim no. 2691) dibaca hingga 100 X:<br><br>لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ<br><br>17. Doa Pagi & Sore (HR. Muslim no. 2692) dibaca hingga 100 X:<br><br>سُبْحَانَ اللَّهِ وَبِحَمْدِهِ<br><br>18. Doa Pagi & Sore (HR. Muslim no. 484 & 2702) hingga 100 X:<br><br>أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ<br><br>19. Doa Pagi & Sore 4X (HR. Abu Dawud no. 5069, 5072 & At-Targhib Wat-Tarhib Al-Mundziri no. 236): <br><br>اللَّهُـمَّ إِنِّي أَمْسَيْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ وَمَلاَئِكَتَكَ وَجَمِيعَ خَلْقِكَ أَنَّكَ أَنْتَ اللَّهُ لاَ إِلَهَ إِلاَّ أَنْتَ وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ<br><br>20. Doa Sore 1X (HR. Abu Dawud no. 5073 & HR. Baihaqi no. 4459): <br><br>اللَّهُـمَّ مَا أَمْسَى بِيَ مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ، وَلَكَ الشُّكْرُ<br><br>21. Doa Pagi & Sore 7X (HR. Abu Dawud no. 5081 & HR. Ibnu Sunni no. As-Sunni no. 71):<br><br>حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ<br><br>22. Doa Sore 1X (HR. Abu Dawud no. 5084 &  HR. Thabrani no. 4234) <br><br>أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ اللَّهُـمَّ إِنِّي أَسْأَلُكَ خَيْرَ هَذِهِ اللَّيْلَةِ :فَتْحَهَا، وَنَصْرَهَا، وَنُورَهَا، وَبَرَكَتَها، وَهُدَاهَا، وَأَعُوذُ بِكَ مِنْ شَرِّ مَا فِيها وَشَرِّ مَا بَعْدَهَا<br><br>23. Doa Sore 3X (HR. Ibnu Majah no. 3547 & HR. Tirmidzi no. 3604) dibaca tiga kali <br><br>أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ<br><br>24. Bershalawat Kepada Nabi Muhammad Hingga 10 X (Majma'uz Zawaid no. 3182). Shalawat yang dapat dibaca misalnya:  <br><br>اَللَّــهُمَّ صَلِّ عَـلـٰى سَـيِّـدِنَـا مُحَمَّدٍ عَبْدِكَ وَنَـبِـيِّكَ وَرَسُوْلِكَ نَبِى الْأُمِّـى وَعَــلـٰى أَلِـهِ وَصَحْبِهِ وَسَلَّمَ<br><br>25. Doa Nabi Musa (Mujam Thabarani Awsath no. 1028)<br><br>اللَّهُـمَّ أَنْتَ خَلَقْتَنِي، وَأَنْتَ تَهْدِينِي، وَأَنْتَ تُطْعِمُنِي، وَأَنْتَ تَسْقِينِي، وَأَنْتَ تُمِيتُنِي، وَأَنْتَ تُحْيِينِي<br><br>26. Doa Pagi & Sore (HR. Abu Dawud no. 1555; sahih menurut Imam Suyuthi)<br><br>اللَّهـُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَأَعُوذُ بِكَ مِنَ الْجُبْنِ وَالْبُخْلِ وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ</p><p><i>1.	Audzubillahiminasyaitonirrojim. Bismillahirrahmanirrahim. Alhamdulillahi robbil ‘alamin hamdan yuwafi ni’amahu wa yukafi-u mazidahu.<br><br>2.	Allahu laa ilaaha illa huwal hayyul qayyum, laa takkhuzuhu sinatum wa laa naum. Lahu maa fis samaawaati wa maa fil ardhi, man dzal ladzi yasyfa’u ‘indahu illaa bi izdnih. Ya’ lamu maa baina aidiihim wa maa khalfahum, wa laa yukhiituuna bi syaaiin min ‘ilmihii illa bi ma syaa´. Wasi’a kursiyyuhus samaawaati wal ardhi, wa laa yaudhu hifdzuhuma, wa huwal ‘aliyyul ‘adziim.<br><br>3.	Membaca Al-Ikhlas, Al-Falaq, An-Nas (Pagi & Sore) masing-masing 3X<br><br>4.	Allāhumma anta Rabbī lā Ilāha illā anta, khalaqtanī wa anā ‘abduka, wa anā ‘alā ‘ahdika wa wa’dika mas-tatha’tu. A-’ūdzu bika min-syarri mā shana’tu. Abū-u laka bi-ni’matika ‘alayya wa abū-u bi-dzambī. Fagh-fir lī fainnahu lā yagh-firudz-dzunūba illā anta.<br><br>5.	Allāhumma inni as-alukal 'āfiyati fid-dunyā wal-ākhirah. Allāhumma innī as-alukal-'afwal-'āfiyah, fī dīnī, wad-dunyā-ya, wa ahlī, wa mālī. Allahummastur 'awrātī, wa āmirraw-'ātī. Allāhummaḥfazhnī mimm-bayni yadayya wa min khalfī, wa 'ay-yamīnī, wa an-syimālī, wa min fawqī, wa a-'ūdzubi-'azhamatika min an 'ughtāla min-taḥtī.<br><br>6.	Allāhumma bika amsaynā wa bika ash-baḥnā wa bika naḥyā wa bika namūtu wa ilaykal-mashīr.<br><br>7.	Amsaynā wa amsal-mulkullāhi wal-ḥamdulillāhi lā Ilāha illallāhu waḥdahu lā syarīka lahu, lahul-mulku wa lahul-ḥamdu wa huwa ‘alā kulli syay-in qadīr. Rabbi as-aluka khayra mā fī hadzihil-laylati wa khayra mā ba’dahā, wa a-’ūdzu bika min-syarri mā fī hadzihil-laylati wa syarri mā ba’dahā. Rabbi a-’ūdzubika minal-kasali wa sū-il-kibari. Rabbi a-’ūdzubika min ‘adzābin fin-nāri wa ‘adzābin fil-qabri.<br><br>8.	Allahumma innii as-aluka ‘ilman naafi’a, wa rizqon thoyyibaa, wa ‘amalan mutaqobbalaa.<br><br>9.	Amsayna ‘ala fithrotil islaam wa ‘alaa kalimatil ikhlaash, wa ‘alaa diini nabiyyinaa Muhammadin shallallahu ‘alaihi wa sallam, wa ‘alaa millati abiina Ibraahiima haniifam muslimaaw wa maa kaana minal musyrikin.<br><br>10.	Subhanallah wa bi-hamdih, ‘adada kholqih wa ridhoo nafsih. wa zinata ‘arsyih, wa midaada kalimaatih.<br><br>11.	Allahumma faathiros samaawaati wal ardh ‘aalimal ghoybi wasy syahaadah. Laa illaha illa anta Robba kulli syai-in wa maliikah.A’udzu bika min syarri nafsii wa min syarrisy syaythooni wa syarokihi wa an aqtarifa ‘alaa nafsii suu-an aw ajurrohu ilaa muslim.<br><br>12.	Yaa Hayyu Yaa Qoyyum, bi-rohmatika as-taghiits, falla takilnii ilaa nafsii thorfata ‘ainin, wa ash-lih lii sya’nii kullahu.<br><br>13.	Rodhiitu billaahi robbaa wa bil-islaami diinaa, wa bi-muhammadin shallallaahu ‘alaihi wa sallama nabiyya.<br><br>14.	Bismillahilladzi laa yadhurru ma’asmihi syai-un fil ardhi wa laa fis samaa’ wa huwas samii’ul ‘aliim.<br><br>15.	Allahumma ‘afini fi badani, allahumma ‘afini fi sam’i, allahumma ‘afini fi bashori la ilaha illa anta. Allahumma innii a'uudzu bika minal kufri wal faqri allahumma innii a'uudzu bika min 'adzzbil qabri laa ilaaha illa anta.<br><br>16.	Laa ilaha illallah wahdahu laa syarika lah, lahul mulku walahul hamdu wa huwa ‘ala kulli syai-in qodiir. <br><br>17.	Subhanallah wa bi-hamdih. <br><br>18.	Astagh-firullah wa atuubu ilaih. <br><br>19.	Allahumma inni amsaytu usyhiduka wa usyhidu hamalata arsyika wa malaaikataka wa jamii'a khalqika annaka antaallahu laa ilaaha illa anta wa anna muhammadan abduka wa rasuuluka.<br><br>20.	Allohumma ma amsaa bi min ni’matin aw bi ahadin min kholqika fa minka wahdaka la syarika laka fa lakal hamdu wa lakasy syukru. <br><br>21.	Hasbiyallahu laa ilaaha illaa huwa ‘alaihi tawakaltu wa huwa rabbul ‘arsyil ‘azhiim. <br><br>22.	Amsayna wa amsal mulku lillahi rabbil 'aalamiin allahumma innii as`aluka khaira haadzihil laylati fathaha wa nashraha wa nuuraha wa barakataha wa hudaaha wa a'uudzu bika min syarri maa fiiha wa syarri maa ba'daha. <br><br>23.	A-'ūdzu bi-kalimātillahit-tammāti min syarri mā khalaq.<br><br>24.	Allohumma sholli ‘ala sayyidina muhammadin ‘abdika wa rosulika nabiyyil ummi wa ‘ala alihi wa shohbihi wa sallam.<br><br>25. Allahumma anta khalaqtani, wa anta tahdiini, wa anta tuth’imuni, wa anta tasqiini, wa anta tumiituni, wa anta tuhyiini.<br><br>26.  Allaahumma innii a'uudzu bika minal hammi wal hazani wa a'uudzu bika minal 'ajzi wal kasali, wa a'uudzu bika minal jubni wal bukhli wa a'uudzu bika min ghalabatid daini wa qahrir rijaal.</i></p><p>1.	Aku berlindung kepada Allah dari godaan syaitan yang terkutuk. Dengan nama Allah Yang Maha Pengasih, Maha Penyayang. Segala puji bagi Allah Tuhan semesta alam, pujian yang sebanding dengan nikmat-nikmatNya dan menjamin tambahannya.<br><br>2.	Allah, tidak ada tuhan selain Dia. Yang Mahahidup, Yang terus menerus mengurus (makhluk-Nya), tidak mengantuk dan tidak tidur. Milik-Nya apa yang ada di langit dan apa yang ada di bumi. Tidak ada yang dapat memberi syafaat di sisi-Nya tanpa izin-Nya. Dia mengetahui apa yang di hadapan mereka dan apa yang di belakang mereka, dan mereka tidak mengetahui sesuatu apa pun tentang ilmu-Nya melainkan apa yang Dia kehendaki. Kursi-Nya meliputi langit dan bumi. Dan Dia tidak merasa berat memelihara keduanya, dan Dia Mahatinggi, Mahabesar.<br><br>3.	Membaca Al-Ikhlas, Al-Falaq, An-Nas (Pagi & Sore) masing-masing 3X<br><br>4.	Ya Allah, Engkau adalah Rabb-ku, tidak ada Ilah (Yang berhak disembah) kecuali Engkau, Engkaulah yang menciptakanku. Aku adalah hamba-Mu. Aku akan setia pada perjanjianku pada-Mu (yaitu aku akan mentauhidkan-Mu) semampuku dan aku yakin akan janji-Mu (berupa surga untukku). Aku berlindung kepada-Mu dari keburukan yang kuperbuat. Aku mengakui nikmat-Mu kepadaku dan aku mengakui dosaku. Oleh karena itu, ampunilah aku. Sesungguhnya tiada yang mengampuni dosa kecuali Engkau.<br><br>5.	Ya Allah, sesungguhnya aku memohon ampunan dan kesehatan yang prima di dunia dan akhirat. Ya Allah, sesungguhnya aku memohon ampunan dan kesehatan yang prima dalam urusan agamaku, duniaku, keluargaku dan hartaku. Ya Allah, tutupilah auratku (aib dan kejelekan) dan tenangkanlah aku dari rasa takut. Ya Allah, jagalah aku dari arah depan, belakang, kanan, kiri dan dari atasku, dan aku berlindung dengan kebesaran-Mu, agar aku tidak dihancurkan dari bawahku.<br><br>6.	Ya Allah, dengan rahmat dan pertolongan-Mu kami memasuki waktu petang, dan dengan rahmat dan pertolongan-Mu kami memasuki waktu pagi. Dengan rahmat dan pertolongan-Mu kami hidup dan dengan kehendak-Mu kami mati. Dan hanyalah kepada-Mu tempat kembali (bagi semua makhluk).<br><br>7.	Kami telah memasuki waktu petang dan kerajaan hanya milik Allah, segala puji bagi Allah. Tidak ada Ilah (Yang berhak disembah) kecuali Allah semata, tiada sekutu bagi-Nya. Milik Allah kerajaan dan bagi-Nya pujian. Dia-lah Yang Mahakuasa atas segala sesuatu. Wahai Rabb-ku, aku mohon kepada-Mu kebaikan di malam ini dan kebaikan sesudahnya. Aku berlindung kepada-Mu dari kejahatan malam ini dan kejahatan sesudahnya. Wahai Rabb-ku, aku berlindung kepada-Mu dari kemalasan dan kejelekan di hari tua. Wahai Rabb-ku, aku berlindung kepada-Mu dari siksaan di neraka dan siksaan di kubur.<br><br>8.	Ya Allah, sungguh aku memohon kepada-Mu ilmu yang bermanfaat (bagi diriku dan orang lain), rizki yang halal dan amal yang diterima (di sisi-Mu dan mendapatkan ganjaran yang baik). <br><br>9.	Di waktu sore kami memegang agama Islam, kalimat ikhlas (kalimat syahadat), agama Nabi kami Muhammad shallallahu ‘alaihi wa sallam, dan agama bapak kami Ibrahim, yang berdiri di atas jalan yang lurus, muslim dan tidak tergolong orang-orang musyrik.<br><br>10.	Maha Suci Allah, aku memuji-Nya sebanyak makhluk-Nya, sejauh kerelaan-Nya, seberat timbangan ‘Arsy-Nya dan sebanyak tinta tulisan kalimat-Nya.<br><br>11.	Ya Allah, wahai Rabb pencipta langit dan bumi, Yang Maha Mengetahui yang ghaib dan yang nyata,Rabb segala sesuatu dan yang merajainya. Aku bersaksi bahwa tidak ada ilah yang berhak disembah kecuali Engkau. Aku berlindung kepadaMu dari kejahatan diriku, setan dan balatentaranya (godaan untuk berbuat syirik pada Allah), dan aku (berlindung kepada-Mu) dari berbuat kejelekan terhadap diriku atau menyeretnya kepada seorang muslim. <br><br>12.	Wahai Rabb Yang Maha Hidup, wahai Rabb Yang Berdiri Sendiri tidak butuh segala sesuatu, dengan rahmat-Mu aku minta pertolongan, jangan diserahkan kepadaku sekali pun sekejap mata tanpa mendapat pertolongan-Mu dan perbaikilah segala urusanku selamanya. <br><br>13.	Aku ridha Allah sebagai Rabb, Islam sebagai agama dan Muhammad ﷺ sebagai nabi.<br><br>14.	Dengan nama Allah yang bila disebut tiada sesuatu pun di bumi dan di langit yang bisa menimbulkan bahaya. Dan Dia Maha Mendengar lagi Maha Mengetahui.<br><br>15.	Ya Allah, perbaikilah tubuhku, perbaikilah pendengaranku, perbaikilah penglihatanku, tidak ada Tuhan selain Engkau. Ya Allah, aku berlindung kepada-Mu dari kekafiran dan kemiskinan. Ya Allah, aku berlindung kepada-Mu dari siksa kubur, tidak ada Tuhan yang berhak disembah selain Engkau. <br><br>16.	Tidak ada Tuhan yang berhak disembah selain Allah semata, tidak ada sekutu bagi-Nya. Bagi-Nya kerajaan dan segala pujian. Dia-lah yang berkuasa atas segala sesuatu.<br><br>17.	Maha Suci Allah, dan aku memuji-Nya. <br><br>18.	Aku memohon ampun kepada Allah dan bertobat kepada-Nya. <br><br>19.	Ya Allah, aku berada di waktu sore bersaksi atas-Mu, dan kepada para pembawa Arsy-Mu, kepada semua malaikat, dan kepada semua mahkluk-Mu, bahwa Engkau adalah Allah yang tidak ada Tuhan selain Engkau, dan Muhammad adalah hamba dan Rasul-Mu.<br><br>20.	Ya Allah, nikmat apapun yang ada padaku di waktu sore atau yang ada pada setiap makhluk-Mu, semuanya hanya dari-Mu semata, tiada sekutu bagi-Mu, bagi-Mu segala puji dan bagi-Mu segala syukur.<br><br>21.	Cukuplah Allah bagiku; tidak ada tuhan selain Dia. Hanya kepada-Nya aku bertawakal, dan Dia adalah Tuhan yang memiliki ‘Arsy (singgasana) yang agung. <br><br>22.	Kami masuk sore, sedang kerajaan hanya milik Allah, Tuhan pengusa alam. Ya Allah, sesungguhnya aku memohon kepada-Mu agar memperoleh kebaikan, pembuka (rahmat), pertolongan, cahaya, berkah dan petunjuk di malam ini. Aku berlindung kepada-Mu dari kejelekan apa yang ada di dalamnya dan kejahatan sesudahnya.<br><br>23.	Aku berlindung dengan kalimat-kalimat Allah yang sempurna (yaitu) dari kejahatan makhluk-Nya.<br><br>24.	Ya Allah, limpahkanlah rahmat kepada junjungan kami Nabi Muhammad saw, hamba-Mu, nabi-Mu, dan utusan-Mu yang ummi (tidak bisa membaca dan menulis) serta limpahkan kepada keluarganya dan sahabatnya, juga limpahkan salam atas mereka.<br><br>25. Ya Allah, Engkau yang menciptakanku, membimbingku, memberiku makan, memberiku minum, mematikanku, dan membangkitkanku kembali.<br><br>26. Ya Allah, aku berlindung kepada-Mu dari kegundahan dan kesedihan dan aku berlindung kepada-Mu dari kelemahan dan kemalasan dan aku berlindung kepada-Mu dari sifat penakut dan pelit dan aku berlindung kepada-Mu dari terlilit hutang dan pemaksaan dari orang lain.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Ini adalah kumpulan zikir dan doa petang yang diambil dari berbagai sumber terpercaya. Sehingga dapat dikatakan cukup lengkap. <br><br>Ada juga versi yang lebih ringkasnya di KESAN.</p><p><strong>Berbagai hadis dan sumber
+</strong></p>
+
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

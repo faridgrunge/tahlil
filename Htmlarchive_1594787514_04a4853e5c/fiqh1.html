@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+    <h1>
+      
+        A. Muqoddimah
+      
+    </h1>
+    <hr><br></header>
+    <div align="justify">
+      <p align="left"><strong>Pengertian Shalat</strong> menurut bahasa berarti <em>do'a</em>, sedang menurut istilah adalah <em>suatu bentuk ibadah yang terdiri dari perbuatan dan ucapan yang diawali dengan takbiratul ihram dan diakhiri dengan salam</em>. Dan telah diwajibkan kepada manusia untuk beribadah kepada Allah Swt (QS.2:21), khusus dalam hal ini terhadap ummat islam yaitu wajib menjalankan sholat wajib 5 (lima) waktu sehari-semalam (17 raka'at). Sholat (baik wajib maupun sunnah) sangat besar pengaruhnya bagi kehidupan manusia, yang oleh karenanya Allah Swt mengajarkan bila hendak memohon pertolongan Allah Swt yaitu dengan melalui sholat dan dilakukan dengan penuh kesabaran serta sholat dapat mencegah untuk berbuat keji dan munkar. Di bawah ini akan diuraikan tentang sholat-sholat wajib dan sholat-sholat sunnah berikut dengan jumlah raka'at dan waktu pelaksanaanya.</p>
+      <p align="justify">Seluruh umat Islam tentu saja sudah paham definisi atau<strong> pengertian Shalat</strong> itu. Secara bahasa Shalat mempunyai arti doa atau berdoa. Memang dalam setiap gerakan Shalat pasti ada doanya. Sedangkan menurut istilah atau menurut syariat Shalat adalah ibadah wajib umat Islam yang termasuk dalam rukun Islam yang kedua diawali dengan takbiratul ihram dan diakhiri dengan salam. Dalam Islam, Ibadah Shalat dibedakan menjadi dua, yaitu shalat wajib atau Shalat fardhu dan juga Shalat sunnah. </p>
+      <hr>
+      <div id="div2">
+        <h3>
+          
+             B. Dalil Perintah Sholat
+          
+        </h3>
+        <hr>
+        <br>
+        
+          <ol><li><b>(QS.al-Mu’minun : 9)</b></li>
+        
+        <br>
+        <p align="right"; class="arab">وَالَّذِينَ هُمْ عَلَىٰ صَلَوَاتِهِمْ يُحَافِظُونَ</p></div>
+        <blockquote>
+          <p align="justify">“Orang iman itu  orang-orang yang menjaga sholatnya.” (QS.al-Mu’minun : 9) </p>
+        </blockquote>
+        <hr>
+        <br>
+        
+          <li><b>(QS.al-Mudatsir :42-43)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">مَا سَلَكَكُمْ فِيْ سَقَرَ ، قَالُوْا لَمْ نَكُ مِنَ المُصَلِّينَ</font></div>
+        <blockquote>
+          <p align="justify">“Apakah yang menyebabkan kalian masuk ke dalam neraka saqor, mereka menjawab, kami dahulu tidak termasuk orang-orang yang mengerjakan sholat.” (QS.al-Mudatsir :42-43)</p>
+        </blockquote>
+        <hr>
+        <br>
+        
+          <li><b>(Q:S Albaqarah ayat 43 )</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ وَارْكَعُوا مَعَ الرَّاكِعِينَ</font></div>
+        <blockquote>
+          <p align="justify">“Dan dirikanlah shalat dan bayarlah zakat, dan ruku’lah  bersama-sama orang-orang yang ruku”. (Q:S Albaqarah ayat 43 )</p>
+        </blockquote>
+        <hr>
+        
+          <li><b> (Q:S Albaqarah ayat 238 )</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab"> حَافِظُوا عَلَى الصَّلَوَاتِ وَالصَّلَاةِ الْوُسْطَىٰ وَقُومُوا لِلَّهِ قَانِتِينَ</font></div>
+        <blockquote>
+          <p align="justify">”Peliharalah segala shalat (mu) dan shalat wustha dan berdirilah untuk Allah (dalam shalat) dengan penuh  ketundukan dan kepatuhan&quot; (Q:S Albaqarah ayat 238 )</p>
+        </blockquote>
+        <hr>
+        
+          <li><b> (Q:S Albaqarah ayat 277) </b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">إِنَّ الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَأَقَامُوا الصَّلَاةَ وَآتَوُا الزَّكَاةَ لَهُمْ أَجْرُهُمْ عِنْدَ رَبِّهِمْ وَلَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ</font></div>
+        <blockquote>
+          <div align="justify">"Sesungguhnya orang-orang yang beriman, mengerjakan amal saleh, mendirikan shalat dan menunaikan zakat, mereka mendapat pahala di sisi Tuhannya. Tidak ada kekhawatiran terhadap mereka dan tidak (pula) mereka bersedih hati". (Q:S Albaqarah ayat 277) </div>
+        </blockquote>
+        <hr>
+        
+          <li><b>(Q:S Anisa 103)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">فَإِذَا قَضَيْتُمُ الصَّلَاةَ فَاذْكُرُوا اللَّهَ قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِكُمْ ۚ فَإِذَا اطْمَأْنَنْتُمْ فَأَقِيمُوا الصَّلَاةَ ۚ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا</font></div>
+        <blockquote>
+          <p align="justify">“Maka apabila kamu telah selesai shalat, ingatlah Allah  di waktu berdiri, di waktu duduk, dan di waktu berbaring.  Bila kamu telah merasa aman, dirikanlah shalat  (kembali). Sesungguhnya shalat itu adalah untuk orangorang  beriman, suatu kewajiban yang sudah ditetapkan  waktunya&quot; (Q:S Anisa 103)</p>
+        </blockquote>
+        <hr>
+        
+          <li><b> (Q:S Albaqarah ayat 3)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ</font></div>
+        <blockquote>
+          <p align="justify">“(yaitu) mereka yang beriman kepada yang gaib, yang mendirikan sholat dan menafkahkan sebahagian rezki yang Kami anugerahkan kepada mereka,” (Q:S Albaqarah ayat 3)</p>
+        </blockquote>
+        <hr>
+        
+          <li><b> (QS.al-Maidah ayat 6)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ وَامْسَحُوا بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى الْكَعْبَيْنِ ۚ وَإِنْ كُنْتُمْ جُنُبًا فَاطَّهَّرُوا ۚ وَإِنْ كُنْتُمْ مَرْضَىٰ أَوْ عَلَىٰ سَفَرٍ أَوْ جَاءَ أَحَدٌ مِنْكُمْ مِنَ الْغَائِطِ أَوْ لَامَسْتُمُ النِّسَاءَ فَلَمْ تَجِدُوا مَاءً فَتَيَمَّمُوا صَعِيدًا طَيِّبًا فَامْسَحُوا بِوُجُوهِكُمْ وَأَيْدِيكُمْ مِنْهُ ۚ مَا يُرِيدُ اللَّهُ لِيَجْعَلَ عَلَيْكُمْ مِنْ حَرَجٍ وَلَٰكِنْ يُرِيدُ لِيُطَهِّرَكُمْ وَلِيُتِمَّ نِعْمَتَهُ عَلَيْكُمْ لَعَلَّكُمْ تَشْكُرُون</font>َ</div>
+        <blockquote>
+          <div align="justify">"Wahai orang-orang yang beriman! Apabila kamu hendak melaksanakan shalat, maka basuhlah wajahmu dan tanganmu sampai ke siku, dan sapulah kepalamu dan (basuh) kedua kakimu sampai ke kedua mata kaki. Jika kamu junub maka mandilah. Dan jika kamu sakit atau dalam perjalanan atau kembali dari tempat buang air (kakus) atau menyentuh perempuan, maka jika kamu tidak memperoleh air, bertayammumlah dengan debu yang baik (suci); usaplah wajahmu dan tanganmu dengan debu itu. Allah tidak ingin menyulitkan kamu, tetapi Dia hendak membersihkan kamu dan menyempurnakan nikmat-Nya bagimu, agar kamu bersyukur.</div>
+        </blockquote>
+        <hr>
+        
+          <li><b> (QS. at-Taubah ayat 11)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">فَإِنْ تَابُوا وَأَقَامُوا الصَّلَاةَ وَآتَوُا الزَّكَاةَ فَإِخْوَانُكُمْ فِي الدِّينِ ۗ وَنُفَصِّلُ الْآيَاتِ لِقَوْمٍ يَعْلَمُونَ</font></div>
+        <blockquote>
+          <p align="justify">“Jika mereka bertaubat, mendirikan sholat dan menunaikan zakat, maka (mereka itu) adalah saudara-saudaramu seagama.  Dan Kami menjelaskan ayat-ayat itu bagi kaum yang mengetahui. ” (QS. at-Taubah (9): 11)</p>
+        </blockquote>
+        <hr>
+        
+          <li><b>(QS.at-Taubah(9):54)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">وَمَا مَنَعَهُمْ أَنْ تُقْبَلَ مِنْهُمْ نَفَقَاتُهُمْ إِلَّا أَنَّهُمْ كَفَرُوا بِاللَّهِ وَبِرَسُولِهِ وَلَا يَأْتُونَ الصَّلَاةَ إِلَّا وَهُمْ كُسَالَىٰ وَلَا يُنْفِقُونَ إِلَّا وَهُمْ كَارِهُونَ</font></div>
+        <blockquote>
+          <p align="justify">“Dan tidak ada yang menghalangi mereka untuk diterima dari mereka nafkah-nafkahnya melainkan karena mereka kafir kepada Allah dan Rasul-Nya dan mereka tidak mengerjakan sholat, melainkan dengan malas dan tidak (pula) menafkahkan (harta)mereka, melainkan dengan rasa enggan.” (QS.at-Taubah(9):54)</p>
+        </blockquote>
+        <hr>
+        
+          <li><b>(QS.Maryam(19): 59)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab"> فَخَلَفَ مِنْ بَعْدِهِمْ خَلْفٌ أَضَاعُوا الصَّلَاةَ وَاتَّبَعُوا الشَّهَوَاتِ ۖ فَسَوْفَ يَلْقَوْنَ غَيًّا</font></div>
+        <blockquote>
+          <p align="justify">“Maka datanglah sesudah mereka, pengganti (yang buruk) yang menyia-nyiakan sholat dan memperturut-kan hawa nafsunya, maka mereka kelak akan menemui kerugian.” (QS.Maryam(19): 59)</p>
+        </blockquote>
+        <hr>
+        
+          <li><b> (QS.Thaha(20):14)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">إِنَّنِي أَنَا اللَّهُ لا إِلَهَ إِلا أَنَا فَاعْبُدْنِي وَأَقِمِ الصَّلاةَ لِذِكْرِي</font></div>
+        <blockquote>
+          <p align="justify">“Sesungguhnya Aku ini adalah Allah, tidak ada Tuhan (yang hak) selain Aku, maka sembahlah Aku dan dirikanlah sholat untuk mengingat Aku.” (QS.Thaha(20):14)</p>
+        </blockquote>
+        <hr>
+        
+          <li><b>(QS.al-Hajj(22): 77)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا ارْكَعُوا وَاسْجُدُوا وَاعْبُدُوا رَبَّكُمْ وَافْعَلُوا الْخَيْرَ لَعَلَّكُمْ تُفْلِحُونَ</font></div>
+        <blockquote>
+          <p>“Hai orang-orang yang beriman, ruku’lah kamu, sujud-lah kamu, sembahlah Rabbmu dan perbuatlah kebajikan supaya kamu mendapat kemenangan.” (QS.al-Hajj(22): 77)</p>
+        </blockquote>
+        <hr>
+        
+          <li><b> (QS. al Mu’minun(23):2)</b></li>
+        
+        <br>
+        <div align="right"><font size="+2" class="arab">الَّذِينَ هُمْ فِي صَلَاتِهِمْ خَاشِعُونَ</font></div>
+        <blockquote>
+          <p>“Orang iman (yaitu) orang-orang yang khusyuk dalam sholatnya,” (QS. al Mu’minun(23):2)</p>
+        </blockquote>
+        <hr>
+		<li></li>
+		<br>
+        <div>
+          <div align="right"  class="arab">عَنْ اَبِى هُرَيْرَةَ قَالَ: سَمِعْتُ رَسُوْلَ اللهِ ص يَقُوْلُ: اِنَّ اَوَّلَ مَا يُحَاسَبُ بِهِ اْلعَبْدُ يَوْمَ اْلقِيَامَةِ الصَّلاَةُ اْلمَكْتُوْبَةُ فَاِنْ اَتَمَّهَا وَ اِلاَّ قِيْلَ. اُنْظُرُوْا، هَلْ لَهُ مِنْ تَطَوُّعٍ؟ فَاِنْ كَانَ لَهُ تَطَوُّعٌ اُكْمِلَتِ اْلفَرِيْضَةُ مِنْ تَطَوُّعِهِ، ثُمَّ يُفْعَلُ بِسَائِرِ اْلاَعْمَالِ اْلمَفْرُوْضَةِ مِثْلُ ذلِكَ. الخمسة، فى نيل الاوطار 1: 345</div>
+        </div>
+		
+		<p> Dari Abu Hurairah, ia berkata : Saya mendengar Rasulullah SAW bersabda, “Sesungguhnya pertama-tama perbuatan manusia yang dihisab pada hari qiyamat, adalah shalat wajib. Maka apabila ia telah menyempurnakannya (maka selesailah persoalannya). Tetapi apabila tidak sempurna shalatnya, dikatakan (kepada malaikat), “Lihatlah dulu, apakah ia pernah mengerjakan shalat sunnah ! Jika ia mengerjakan shalat sunnah, maka kekurangan dalam shalat wajib disempurnakan dengan shalat sunnahnya”. Kemudian semua amal-amal yang wajib diperlakukan seperti itu”. [HR. Khamsah, dalam Nailul Authar juz 1, hal. 345]</p>
+
+     
+        <hr>
+		<li> </li>
+        <div 
+          <div align="right" class="arab">مَنْ صَلَّى الْبَرْدَيْنِ دَخَلَ الْجَنَّة </div>
+        </div><blockquote>
+        <p>“Barangsiapa yang mengerjakan shalat bardain (yaitu shalat shubuh dan ashar) maka dia akan masuk surga.” (HR. Bukhari no. 574 dan Muslim no. 635) </p></blockquote>
+        <hr>
+		
+		<li></li>
+        <p>Dari Jabir bin ‘Abdillah, Rasulullah shallallahu ‘alaihi wa sallam bersabda,</p>
+        <div> 
+          <div align="right" class="arab">بَيْنَ الرَّجُلِ وَبَيْنَ الشِّرْكِ وَالْكُفْرِ تَرْكُ الصَّلاَةِ “</div>
+        </div><blockquote>
+        <p>(Pembatas) antara seorang muslim dan kesyirikan serta kekafiran adalah meninggalkan shalat.” (HR. Muslim no. 257) </p></blockquote>
+		
+        <hr>
+		<li></li>
+        <p>Rasulullah shallallahu ‘alaihi wa sallam bersabda,</p>
+        <div > 
+          <div align="right" class="arab">مَنْ صَلَّى صَلَاةَ الصُّبْحِ فَهُوَ فِي ذِمَّةِ اللَّهِ فَلَا يَطْلُبَنَّكُمْ اللَّهُ مِنْ ذِمَّتِهِ بِشَيْءٍ فَإِنَّهُ مَنْ يَطْلُبْهُ مِنْ ذِمَّتِهِ بِشَيْءٍ يُدْرِكْهُ ثُمَّ يَكُبَّهُ عَلَى وَجْهِهِ فِي نَارِ جَهَنَّمَ </div>
+        </div>
+        <p>“Barangsiapa yang shalat subuh maka dia berada dalam jaminan Allah. Oleh karena itu jangan sampai Allah menuntut sesuatu kepada kalian dari jaminan-Nya. Karena siapa yang Allah menuntutnya dengan sesuatu dari jaminan-Nya, maka Allah pasti akan menemukannya, dan akan menelungkupkannya di atas wajahnya dalam neraka jahannam.” (HR. Muslim no. 163)</p>
+        <hr>
+		
+		<li></li>
+        <p>Diriwayatkan dari Mu’adz bin Jabal, Nabi shallallahu ‘alaihi wa sallam bersabda,</p>
+        <div> 
+          <div align="right"  class="arab">رَأْسُ الأَمْرِ الإِسْلاَمُ وَعَمُودُهُ الصَّلاَةُ ”</div>
+        </div>
+        <p>Inti (pokok) segala perkara adalah Islam dan tiangnya (penopangnya) adalah shalat.” (HR. Tirmidzi no. 2825. ) </p>
+        <hr>
+		
+		<li></li>
+        <p>Dalam dua kitab shohih, berbagai kitab sunan dan musnad, dari Abdullah bin ’Umar radhiyallahu ’anhuma. Beliau berkata bahwa Rasulullah shallallahu ’alaihi wa sallam bersabda, </p>
+        <div>
+          <div align="right"; class="arab">بُنِىَ الإِسْلاَمُ عَلَى خَمْسٍ شَهَادَةِ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ وَإِقَامِ الصَّلاَةِ وَإِيتَاءِ الزَّكَاةِ وَحَجِّ الْبَيْتِ وَصَوْمِ رَمَضَانَ ”</div>
+        </div>
+        <p>Islam dibangun atas lima perkara, yaitu : (1) bersaksi bahwa tidak ada sesembahan yang benar untuk diibadahi kecuali Allah dan bersaksi bahwa Muhammad adalah utusan-Nya, (2) mendirikan shalat, (3) menunaikan zakat, (4) naik haji ke Baitullah (bagi yang mampu, pen), (5) berpuasa di bulan Ramadhan.” (Lafadz ini adalah lafadz Muslim no. 122) </p>
+        <hr>
+		</ol>
+		
+		
+        <div id="div3">
+          <h3>
+            
+               C. Hukum Sholat Fardu
+            
+          </h3>
+          <div align="justify">
+            <hr color="#333333">
+            <p align="justify">Hukum melaksanakan shalat lima waktu ini adalah wajib atau fardu `ain, yaitu sesuatu yang diharuskan dan yang mengikat kepada setiap individu seorang muslim yang telah dewasa, berakal sehat, balig (mukallaf). Apabila salat wajib ini ditinggalkan. maka orang yang meninggalkannya mendapat dosa dari Allah SWT. </p>
+            <p align="right" class="arab" dir="rtl">فَإِذَا قَضَيْتُمُ الصَّلَاةَ فَاذْكُرُوا اللَّهَ قِيَامًا وَقُعُودًا وَعَلَىٰ جُنُوبِكُمْ ۚ فَإِذَا اطْمَأْنَنْتُمْ فَأَقِيمُوا الصَّلَاةَ ۚ إِنَّ الصَّلَاةَ كَانَتْ عَلَى الْمُؤْمِنِينَ كِتَابًا مَوْقُوتًا</p>
+            <p align="justify">Maka apabila kamu telah menyelesaikan shalat(mu), ingatlah Allah di waktu berdiri, di waktu duduk dan di waktu berbaring. Kemudian apabila kamu telah merasa aman, maka dirikanlah shalat itu (sebagaimana biasa). Sesungguhnya shalat itu adalah fardhu yang ditentukan waktunya atas orang-orang yang beriman. <span lang="EN-US"><span lang="EN-US">(QS. al-Nisa’: 103).</span></span></p>
+            <!--** isi content ** -->
+            <hr>
+            <div id="div4">
+              <h3>
+                
+                   D. Syarat Wajib Sholat
+                
+              </h3>
+              <div align="justify">
+                <hr color="#333333">
+                <p align="justify">Agama Islam mewajibkan umatnya shalat lima waktu sebagai sarana ibadah kepada Allah SWT. Untuk dapat melaksanakan sholat dengan baik dan benar, tentunya ada aturan-aturan serta syarat-syarat yang harus dipenuhi sebelum melaksanakan shalat.</p>
+                <p align="justify"><strong>Syarat wajib:</strong><br>
+                <Ol>
+                  <li> Islam :</li> 
+                    <p>Adapun orang yang tidak Islam tidak wajib atasnya sholat, berarti tidak dituntut di dunia karena meskipun dikerjakan juga tidak sah.
+                      </p>
+                  <Li>
+                    <p> Suci dari hadas dan najis :</li></p> 
+					<p> yang harus suci diantaranya mulai dari Badannya, Pakaiannya hingga Tempatnya. </p>
+                  <Li>
+                    <p> Baligh : </li> </p>
+                      <p>Baligh atau telah cukup umur. Di Indonesia untuk laki-laki biasanya antara usia 7 hingga 10 tahun. Sedangkan untuk perempuan biasanya ditandai dengan dimulainya siklus mentruasi.</p>
+                  <Li>
+                    <p> Berakal : </li> </p>
+                      <p>Orang yang tidak berakal atau sedang dalam keadaan tidak sadar (tidur) tidak wajib sholat.</p>
+                  <Li>
+                    <p> Telah sampai dakwah Rasulullah SAW kepadanya</p>
+                  </Li>
+                </ol>
+                <hr>
+                <div id="div5">
+                  <h3>
+                    
+                      E. Syarat Sah Sholat
+                    
+                  </h3>
+                  <div align="justify">
+                    <hr color="#333333">
+                    <p align="justify">Agama Islam mewajibkan umatnya shalat lima waktu sebagai sarana ibadah kepada Allah SWT. Untuk dapat melaksanakan sholat dengan baik dan benar, tentunya ada aturan-aturan serta syarat-syarat yang harus dipenuhi sebelum melaksanakan shalat.</p>
+                    <p align="justify"><strong>Syarat Sah :</strong>                    </p>
+                    <ol>
+                      <li><strong> Telah masuk waktu shalat</strong></li>
+                        </p>
+                          <p align="justify">Shalat lima waktu baru sah apabila dilaksanakan pada waktu yang telah ditentukan. Misalnya, shalat dhuhur harus dilaksakan pada waktu dzuhur.</p>
+                      <Li>
+                        <strong> Suci dari hadats besar dan hadats kecil</strong></li>
+                        <p align="justify">Hadats besar adalah haid, nifas dan junub (keluar sperma). Untuk mensucikannya harus dengan mandi junub atau jinabat. </p>
+                        <p align="justify">Hadats kecil adalah keluarnya sesuatu dari dua jalan keluar selain sperma, seperti air kencing, kotoran (buang air besar) dan kentut. Cara mensucikannya adalah dengan berwudhu.</p>
+                        <p align="justify"> Berdasarkan firman Allah SWT :</p>
+                        
+                          <b> (QS.al-Maidah ayat 6)</b>
+                        
+                        <br>
+                        <div align="right" class="arab">يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا قُمْتُمْ إِلَى الصَّلَاةِ فَاغْسِلُوا وُجُوهَكُمْ وَأَيْدِيَكُمْ إِلَى الْمَرَافِقِ وَامْسَحُوا بِرُءُوسِكُمْ وَأَرْجُلَكُمْ إِلَى الْكَعْبَيْنِ ۚ وَإِنْ كُنْتُمْ جُنُبًا فَاطَّهَّرُوا ۚ وَإِنْ كُنْتُمْ مَرْضَىٰ أَوْ عَلَىٰ سَفَرٍ أَوْ جَاءَ أَحَدٌ مِنْكُمْ مِنَ الْغَائِطِ أَوْ لَامَسْتُمُ النِّسَاءَ فَلَمْ تَجِدُوا مَاءً فَتَيَمَّمُوا صَعِيدًا طَيِّبًا فَامْسَحُوا بِوُجُوهِكُمْ وَأَيْدِيكُمْ مِنْهُ ۚ مَا يُرِيدُ اللَّهُ لِيَجْعَلَ عَلَيْكُمْ مِنْ حَرَجٍ وَلَٰكِنْ يُرِيدُ لِيُطَهِّرَكُمْ وَلِيُتِمَّ نِعْمَتَهُ عَلَيْكُمْ لَعَلَّكُمْ تَشْكُرُونَ</div>
+                        <span ><br>
+                        </span>
+                        <div align="justify">"Wahai orang-orang yang beriman! Apabila kamu hendak melaksanakan shalat, maka basuhlah wajahmu dan tanganmu sampai ke siku, dan sapulah kepalamu dan (basuh) kedua kakimu sampai ke kedua mata kaki. Jika kamu junub maka mandilah. Dan jika kamu sakit atau dalam perjalanan atau kembali dari tempat buang air (kakus) atau menyentuh perempuan, maka jika kamu tidak memperoleh air, bertayammumlah dengan debu yang baik (suci); usaplah wajahmu dan tanganmu dengan debu itu. Allah tidak ingin menyulitkan kamu, tetapi Dia hendak membersihkan kamu dan menyempurnakan nikmat-Nya bagimu, agar kamu bersyukur.</div>
+                        <hr>
+                        <br>
+                        <p align="justify"> Juga berdasarkan hadits Ibnu Umar r.a. : 
+                          “Bahwa Nabi Muhammad SAW bersabda : “Allah tiada menerima shalat tanpa bersuci, dan tak hendak menerima sedekah dari harta ranpasan yang belum dibagi.” (HR. Jama’ah kecuali Bukhari).</p>
+                      <li>
+                        <strong> Suci badan, pakaian dan tempat shalat dari najis </strong></li>
+                        <p align="justify"> Perkara najis adalah darah, segala kotoran (tinja) hewan atau manusia, bangkai (binatang yang mati tanpa disembelih secara syariah), anjing dan babi. Cara mensucikannya adalah dengan air. Khusus najis anjing dan babi harus disucikan tujuh kali siraman air dan salah satunya dicampur dengan debu menurut madzhab Syafi'i.</p>
+                        <p align="justify"> Mengenai suci badan, Nabi Muhammad SAW bersabda : 
+                          “Bersucilah kamu dari air seni, karena pada umumnya azab kubur disebabkan oleh karena itu.”</p>
+                      <Li>
+                         <strong> Menutup Aurat :</strong></li>
+                        <p align="justify">Aurat (anggota badan yang harus ditutupi) laki-laki adalah antara pusar sampai lutut. Sedang aurat perempuan adalah seluruh anggota badan kecuali wajah dan telapak tangan.</p>
+                        <p align="justify"> Firman Allah SWT : </p>
+                        <br>
+                        
+                          <b>(Q.S. Al-A’raf : 31).</b>
+                        
+                        <br>
+                        <div align="right"><font size="+2" class="arab">يَا بَنِي آدَمَ خُذُوا زِينَتَكُمْ عِنْدَ كُلِّ مَسْجِدٍ وَكُلُوا وَاشْرَبُوا وَلَا تُسْرِفُوا ۚ إِنَّهُ لَا يُحِبُّ الْمُسْرِفِينَ</font></div>
+                        <br>
+                        <br>
+                        <div align="justify">"Hai anak Adam, pakailah pakaianmu yang indah di setiap (memasuki) mesjid, makan dan minumlah, dan janganlah berlebih-lebihan. Sesungguhnya Allah tidak menyukai orang-orang yang berlebih-lebihan. (Q.S. Al-A’raf : 31)."</div>
+                        <br>
+                        <br>
+                        <p align="justify"> Batas Aurat bagi Laki-laki: Aurat yang wajib ditutupi oleh laki-laki sewaktu shalat ialah kemaluan, pinggul paha pusar dan lutut.</p>
+                        <p align="justify"> Batas Aurat Bagi Wanita : 
+                          Seluruh tubuh perempuan itu merupakan aurat yang wajib bagi mereka menutupinya, kecuali wajah dan telapak tangan.</p>
+                        <p align="justify"><strong> Firman Allah SWT :</strong></p>
+                        <br>
+                        
+                          <b>(Q.S. An-Nur : 31)</b>
+                        
+                        <br>
+                        <div align="right"><font size="+2" class="arab"> وَقُلْ لِلْمُؤْمِنَاتِ يَغْضُضْنَ مِنْ أَبْصَارِهِنَّ وَيَحْفَظْنَ فُرُوجَهُنَّ وَلَا يُبْدِينَ زِينَتَهُنَّ إِلَّا مَا ظَهَرَ مِنْهَا ۖوَلْيَضْرِبْنَ بِخُمُرِهِنَّ عَلَىٰ جُيُوبِهِنَّ ۖوَلَا يُبْدِينَ زِينَتَهُنَّ إِلَّا لِبُعُولَتِهِنَّ أَوْ آبَائِهِنَّ أَوْ آبَاءِ بُعُولَتِهِنَّ أَوْ أَبْنَائِهِنَّ أَوْ أَبْنَاءِ بُعُولَتِهِنَّ أَوْ إِخْوَانِهِنَّ أَوْ بَنِي إِخْوَانِهِنَّ أَوْ بَنِي أَخَوَاتِهِنَّ أَوْ نِسَائِهِنَّ أَوْ مَا مَلَكَتْ أَيْمَانُهُنَّ أَوِ التَّابِعِينَ غَيْرِ أُولِي الْإِرْبَةِ مِنَ الرِّجَالِ أَوِ الطِّفْلِ الَّذِينَ لَمْ يَظْهَرُوا عَلَىٰ عَوْرَاتِ النِّسَاءِ ۖوَلَا يَضْرِبْنَ بِأَرْجُلِهِنَّ لِيُعْلَمَ مَا يُخْفِينَ مِنْ زِينَتِهِنَّ ۚوَتُوبُوا إِلَى اللَّهِ جَمِيعًا أَيُّهَ الْمُؤْمِنُونَ لَعَلَّكُمْ تُفْلِحُونَ</font></div>
+                        <br>
+                        <br>
+                        "Katakanlah kepada wanita yang beriman: "Hendaklah mereka menahan pandangannya, dan memelihara kemaluannya, dan janganlah mereka menampakkan perhiasannya, kecuali yang (biasa) nampak daripadanya. Dan hendaklah mereka menutupkan kain kudung ke dadanya, dan janganlah menampakkan perhiasannya, kecuali kepada suami mereka, atau ayah mereka, atau ayah suami mereka, atau putera-putera mereka, atau putera-putera suami mereka, atau saudara-saudara laki-laki mereka, atau putera-putera saudara laki-laki mereka, atau putera-putera saudara perempuan mereka, atau wanita-wanita Islam, atau budak-budak yang mereka miliki, atau pelayan-pelayan laki-laki yang tidak mempunyai keinginan (terhadap wanita) atau anak-anak yang belum mengerti tentang aurat wanita. Dan janganlah mereka memukulkan kakinya agar diketahui perhiasan yang mereka sembunyikan. Dan bertaubatlah kamu sekalian kepada Allah, hai orang-orang yang beriman supaya kamu beruntung.” (Q.S. An-Nur : 31)."<br>
+                        <br>
+                        Maksud dari ayat tersebut ialah, janganlah mereka memperlihatkan tempat-tempat perhiasan kecuali wajah dan kedua telapak tangan mereka, sebagaimana diterangkan oleh hadits dari Ibnu Abbas, Ibnu Umar, dan Aisyah.
+                        </p>
+                        <p align="justify">Dan dari Aisyah, bahwa Nabi Muhammad SAW. telah bersabda :</p>
+                        <p align="justify"> “Allah tidak menerima shalat perempuan yang telah baligh, kecuali dengan memakai selendang.”</p>
+                      <Li>
+                        <strong> Menghadap Kiblat</strong></li>
+                        <p align="justify"> Para ulama telah sepakat bahwa orang yang mengerjakan shalat itu wajib menghadap ke arah Masjidil Haram, sebagaimana Firman Allah SWT. :</p>
+                        <br>
+                        
+                          <b>(Q.S. Al-Baqarah : 144)</b>
+                        
+                        <br>
+                        <div align="right"><span class="arab">قَدْ نَرَىٰ تَقَلُّبَ وَجْهِكَ فِي السَّمَاءِ ۖ فَلَنُوَلِّيَنَّكَ قِبْلَةً تَرْضَاهَا ۚ فَوَلِّ وَجْهَكَ شَطْرَ الْمَسْجِدِ الْحَرَامِ ۚ وَحَيْثُ مَا كُنْتُمْ فَوَلُّوا وُجُوهَكُمْ شَطْرَهُ ۗ وَإِنَّ الَّذِينَ أُوتُوا الْكِتَابَ لَيَعْلَمُونَ أَنَّهُ الْحَقُّ مِنْ رَبِّهِمْ ۗ وَمَا اللَّهُ بِغَافِلٍ عَمَّا يَعْمَلُونَ</span><br>
+                            <br>
+                            <div align="justify">"Sungguh Kami (sering) melihat mukamu menengadah ke langit, maka sungguh Kami akan memalingkan kamu ke kiblat yang kamu sukai. Palingkanlah mukamu ke arah Masjidil Haram. Dan dimana saja kamu berada, palingkanlah mukamu ke arahnya. Dan sesungguhnya orang-orang (Yahudi dan Nasrani) yang diberi Al Kitab (Taurat dan Injil) memang mengetahui, bahwa berpaling ke Masjidil Haram itu adalah benar dari Tuhannya; dan Allah sekali-kali tidak lengah dari apa yang mereka kerjakan.  (Q.S. Al-Baqarah : 144)."</div>
+                          <p align="justify">&nbsp;</p>
+                        </div>
+                      </Li>
+                    </ol>
+                    <!--** isi content ** -->
+                    <div id="div6">
+                      <h3>
+                       
+                          F. Rukun Sholat
+                        
+                      </h3>
+                      <div align="justify">
+                        <hr color="#333333">
+                        <p align="justify"><strong>Adapun Rukun Shalat adalah sebagai berikut:</strong></p>
+                        <ol>
+                          <Li>
+                             Niat, artinya menyengaja dalam hati untuk melaksanakan shalat.
+                          <Li>
+                             Berdiri bagi yang mampu, yang tidak dapat berdiri boleh dengan duduk, yang tidak dapat berdiri dan duduk boleh dengan berbaring.
+                             
+							<li>Takbiratul ihram.
+                          <Li>
+                             Membaca Surah Al Fatihah.
+                          <Li>
+                             Rukuk: membungkuk hingga punggung sejajar lurus dengan leher dan kedua belah tangan mernegang lutut, tuma`ninah.
+                          <Li>
+                             I’tidal: bangkit dari rukuk dan berdiri tegak lurus, tuma`ninah.
+                          <Li>
+                             Sujud dua kali: meletakkan kedua lutut. kedua tangan, kening dan hidung pada lantai, tuma`ninah.
+                          <Li>
+                             Duduk di antara dua sujud: bangun dari sujud yang pertama untuk duduk sejenak, menanti sujud yang kedua.
+                          <Li>
+                             Duduk akhir (tawarruk) pada rakaat terakhir.
+                          <Li>
+                             Membaca tasyahud akhir.
+                          <Li>
+                             Membaca salawat Nabi.
+                          <Li>
+                             Mengucapkan salam yang pertama (saat menoleh ke kanan). 
+                          <Li>
+                            Tertib (berurutan). 
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                          </Li>
+                        </ol>
+                        <!--** isi content ** -->
+                        <hr>
+						<br>
+						<h3>
+                        <strong>G. Sunnah-sunnah Sholat </strong></h3>
+                            <div>
+                              <div align="left">
+                                <hr>
+                                <p>Sunnah sunnah sholat dibagi menjadi 2 yaitu sunnah hai'at (hai'ah) dan sunnah ab'adh. </p>
+                              </div>
+                              <div><strong>SUNNAH HAI'AT (HAI'AH) </strong></div>
+                            </div>
+                          
+                              
+                                <p>&nbsp;</p>
+                                <p><strong>Sunah haiat</strong> adalah perkara yang disunahkan dalam shalat, dan apabila meninggalkannya tidak disunahkan melakukan sujud sahwi.</p>
+                                <p>Adapun perkara-perkara yang termasuk sunnah hai'at antara lain :</p>
+								<ol>
+                                <li>Mengangkat kedua belah tangan sampai sejajar dengan daun telinga, waktu takbiratul ihram, hendak ruku, bangkit dari ruku dan waktu bangkit dari tasyahud awal.</li>
+                                <li>Berdekap tangan, telapak tangan yang kanan di atas pergelangan tangan kiri 
+                                <li>Membaca do'a iftitah setelah takbiratul ihram
+                                <div>
+                                  <div align="right" class="arab">اَللهُ أَكْبَرُ كَبِيْرًا وَالْحَمْدُ ِللهِ كَثِيْرًا وَسُبْحَانَ اللهِ بُكْرَةً وَأَصِيْلاً. إِنِّىْ وَجَّهْتُ وَجْهِيَ لِلَّذِيْ فَطَرَالسَّمَاوَاتِ وَاْلأَرْضَ حَنِيْفًا مُسْلِمًا وَمَا أَنَا مِنَ الْمُشْرِكِيْنَ. إِنَّ صَلاَتِيْ وَنُسُكِيْ وَمَحْيَايَ وَمَمَاتِيْ لِلهِ رَبِّ الْعَالَمِيْنَ. لاَشَرِيْكَ لَهُ وَبِذلِكَ أُمِرْتُ وَأَنَا مِنَ الْمُسْلِمِيْنَ</div>
+                                </div>
+                                <div><br>
+                                </div>
+                                <div>
+                                  <p>&nbsp;</p>
+                                  <p>Allâhu Akbar kabîra wal hamdu lillâhi katsîra, wa subhânallâhi bukratan wa ashîla. Innî wajjahtu wajhiya lilladzî fatharas samâwâti wal ardha hanîfan muslimaw wa mâ ana minal mushrikîn. Inna shalâtî wa nusukî wa mahyâya wa mamâtî lillâhi Rabbil ‘âlamîn. Lâ syariikalahu wa bidzâlika umirtu wa ana minal muslimîn.</p>
+                                </div>
+                                <div><br>
+                                </div>
+                                <div>
+                                  <p>&nbsp;</p>
+                                  <p>“Allah Maha Besar dengan sebesar-besarnya. Segala puji yang sebanyak-banyaknya bagi Allah. Maha Suci Allah pada pagi dan petang hari. Aku menghadapkan wajahku kepada Tuhan yang telah menciptakan langit dan bumi dengan segenap kepatuhan dan kepasrahan diri, dan aku bukanlah termasuk orang-orang yang menyekutukan-Nya. Sesungguhnya sholatku, ibadahku, hidup dan matiku hanyalah kepunyaan Allah, Tuhan semesta alam, yang tiada satu pun sekutu bagi-Nya. Dengan semua itulah aku diperintahkan dan aku adalah termasuk orang-orang yang berserah diri (muslim).”</p>
+                                </div></li>
+                                <br>
+                                <li>Membaca ta'awudz ketika hendak membaca Al-Fatihah
+                                <div 
+                                  <div align="right" class="arab">أَعُوْذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيمْ</div>
+                                
+                                <div><br>
+                                  
+                                  <p>A`ûdzu biLlâhi minasy syaithânir rajîm</p>
+                                </div>
+                              
+                                
+                                
+                                  <p>"Aku memohon perlindungan kepada Allah dari godaan setan yang terkutuk"</p></li> 
+                                
+                              
+                                <li>Membaca bissmillah ketika hendak membaca Al-Fatihah
+								
+                                  <p>Sabda Nabi Muhammad SAW yang artinya : dari Abi Hurai'rah r.a. ia berkata : Rosulullah SAW telah bersabda : "Jika engkau semua membaca fatehah, bacalah Bismillahhirahmanirahim, karena bismillah adalah salah satu ayat dari Fatehah. (H.R. Daraquthni dan ia membenarkan melihatnya).</p></li> 
+                                <li>Membaca surat-surat Al-qur-an pada dua rakaat permulaan (rakaat pertama dan kedua) setelah membaca Suat Al-Fatihah</li> 
+                                <li>Membaca amin sesudah membaca Al-Fatihah</li> 
+                                <li>Mengeraskan suara bacaan Fatihah dan surat pada rakaat pertama dan kedua pada shalat magrib, isya dan shubuh, kecuali kalau dia menjadi ma'mum</li> 
+                                <li>Membaca takbir "Allahu Akbar" ketika memindah rukun gerakan dari satu rukun ke rukun yang lain.</li> 
+                                <li>Membaca tasbih ruku dan sujud, dibaca 3 x
+                                <p><strong>Tasbih Ruku' </strong></p>
+                                <div
+                                  <div align="right" class="arab">سُبْحَانَ رَبِّيْ الْعَظِيْمِ وَبِحَمْدِهِ  </div>
+                                
+                               
+                                <div>
+                                  <p>&nbsp;</p>
+                                  <p>Subhâna Rabbiyal ‘adzîmi wabihamdih (dibaca tiga kali)</p>
+                                  <p>Maha Suci Tuhanku Yang Maha Agung, dan dengan memuji pada-Nya</p>
+                                </div>
+                                <p>&nbsp; </p>
+                                <p><strong>Tasbih Sujud</strong></p>
+                               
+                                  <div align="right" class="arab">سُبْحَانَ رَبِّيْ الْأَعْلَى وَبِحَمْدِهِ  </div>
+                                
+                                
+                                
+                                  <p>&nbsp;</p>
+                                  <p>Subhâna Rabbiyal a’lâ wabihamdih (dibaca tiga kali)</p>
+                                  <p>Maha Suci Tuhanku Yang Maha Luhur, dan dengan memuji pada-Nya.</p></li> 
+                                
+                             
+                               
+                                <p>&nbsp; </p>
+                                <li>Membaca "sami'allahu liman hamidah" dan membaca do'a ketika i'tidal</p>
+                               
+                                  <div align="right" class="arab">سَمِعَ اللهُ لِمَنْ حَمِدَهُ </div>
+                                
+                                <p>&nbsp;</p>
+                                <p>Samiallahuliman hamidah</p>
+                                <p>Artinya : Allah mendengar orang yang memuji-Nya</p>
+                                <p>dan membaca doa</p>
+                                <p>&nbsp; </p>
+                                <div 
+                                  <div align="right" class="arab">رَبَّنَا لَكَ الْحَمْدُ مِلْءُ السَّموَاتِ وَمِلْءُ اْلاَرْضِ وَمِلْءُمَاشِئْتَ مِنْ شَيْئٍ بَعْدُ<br>
+                                  </div>
+                                
+                                <p>&nbsp;</p>
+                                <p>Rabbanaa lakal hamdu mil'us samaawaati wa mil ul ardhi wa mil 'umaasyi'ta min syai'in ba'du. </p>
+                                <p>Artinya :Wahai Tuhan Kami ! Hanya Untuk-Mu lah Segala Puji, Sepenuh Langit Dan Bumi Dan Sepenuh Barang Yang Kau Kehendaki Sesudahnya.<br>
+                                </p>
+                                <li>Meletakan telapak tangan di atas paha pada waktu duduk tasyahud awal dan akhir, dengan membentangkan jari kiri dan merenggangkan yang kanan, kecuali jari telunjuk.</p>
+                                <li>Duduk iftisary dalam semua duduk shalat</p>
+                                <li>Duduk "tawaruq" (bersimpuh) pada waktu tasyahud akhir</p>
+                                <li>Membaca salam yang kedua. Memalingkan muka ke kanan dan ke kiri, masing-masing pada waktu membaca salam pertama dan kedua.</p>
+                                <div>&nbsp;</div></ol>
+                                <div>&nbsp;
+                                    <div align="center"><strong>SUNNAH AB'ADH </strong></div>
+                                </div>
+                                <div>&nbsp;</div>
+                              </div>
+                          </div>
+                          </ul>
+                        </div>
+<div align="left">
+                          <p><strong>Sunah ab’adh</strong> adalah perkara yang disunahkan dalam shalat, dan apabila meninggalkannya (baik disengaja maupun tidak), sunah melakukan sujud sahwi, untuk mengganti kekurangan tersebut. Dinamakan ab’adh (sebagian), karena apabila meninggalkannya, sangat dianjurkan mengganti dengan sujud sahwi, jadi hampir sama dengan fardhu shalat, apabila senganja ditinggalkan dapat membatalkan shalat, walaupun ketika meninggalkan fardhu shalat tidak wajib diganti dengan sujud sahwi.</p>
+                          <p>Sunah ab’adh ada delapan, yaitu:</p>
+                          <ol>
+                            <li>Tasyahhud Awal.</li>
+                            <li>Duduk pada saat tasyahhud awal.</li>
+                            <li>Kunut yang tetap, seperti kunut shalat Subuh dan kunut shalat witir pada setengan terakhir bulan Ramadhan. Bukan seperti kunut naazilah, karena kunut naazilah tersebut disunahkan apabila ada musibah saja, selain itu tidak disunahkan.</li>
+                            <li>Berdiri pada saat kunut.</li>
+                            <li>Membaca shalawat setelah tasyahhud awal.</li>
+                            <li>Membaca shalawat setelah kunut.</li>
+                            <li>Membaca shalawat kepada keluarga Nabi setelah tasyahhud akhir.</li>
+                            <li>Membaca shalawat kepada keluarga Nabi setelah qunut.</li>
+</ol>
+</div>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

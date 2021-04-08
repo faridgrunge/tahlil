@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Segeralah Memperoleh Predikat “Tamu Allah”</h1>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;" class="arab"></p>
+
+<p><em>
+</em></p>
+<p>Seorang yang memiliki kemampuan untuk melaksanakan ibadah haji maka hendaknya dia segera melaksanakan ibadah haji. Dia berusaha menyempurnakan rukun Islām yang lima.</p>
+<p>Sungguh indah seorang yang bertemu dengan Allāh dan ternyata dia telah menyempurnakan rukun Islām yang lima. Dia sudah bersyahadat, dia sudah shalāt, dia sudah zakat, dia sudah puasa dan dia juga sudah berhaji.</p>
+<p>Nabi shallallāhu &lsquo;alayhi wa sallam bersabda :</p>
+<p style="text-align: right;" class="arab">مَنْ أَرَادَ الْحَجَّ فَلْيَتَعَجَّلْ فَإِنَّهُ قَدْ يَمْرَضُ الْمَرِيْضُ وَتَضِلُّ الضَالَّةُ وَتَعْرِضُ الْحَاجَةُ</p>
+<p>&ldquo;Barangsiapa ingin berhaji maka bersegeralah, karena sesungguhnya bisa jadi seorang itu sakit, bisa jadi tunggangannya yang dia gunakan untuk berhaji ternyata hilang (tidak bisa dia gunakan lagi artinya ada halangan), bisa jadi ada kebutuhan yang datang (sehingga dia tidak bisa berhaji).&rdquo; (HR Ibnu Majah No. 2874 dan dishahihkan oleh Al-Albani namun dilemahkan oleh sebagian ulama)</p>
+<p>Maka, seseorang bila sudah mempunyai uang, segera dia daftar, dia berazam kepada Allāh Subhānahu wa Ta&rsquo;āla. Kalau dia tunda-tunda dia tidak tahu dikemudian hari mungkin dia sakit, mungkin dia meninggal dunia, mungkin dia punya kebutuhan yang lain.</p>
+<p>Bisa jadi tiba-tiba dia dihadapkan dengan kondisi-kondisi yang sulit sehingga akhirnya uangnya harus dia gunakan untuk memenuhi kondisi-kondisi tersebut sehingga tidak bisa berhaji. Seseorang tidak tahu apa yang akan datang dan terjadi di esok hari. Maka jika dia memiliki kemampuan hendaknya dia bersegera berhaji memenuhi panggilan Allāh Subhānahu wa Ta&rsquo;āla, menjadi tamu-tamu Allāh Subhānahu wa Ta&rsquo;āla.</p>
+<p>Terlebih lagi sebagian daerah di negeri kita daftar tunggunya hingga 20 tahun lebih. Bahkan di sebagian negara Islam daftar tunggunya hingga 40 tahun. Bisa jadi seseorang mendaftar untuk haji, tatkala namanya keluar dia telah lebih dahulu dipanggil Allah. Akan tetapi barangsiapa yang sudah mendaftarkan dirinya semoga ia tetap memperoleh pahala haji, karena dia sudah berusaha.</p>
+<p>Memang para ulamā berbeda pendapat tentang apakah kewajiban haji itu kewajiban عَلَى الْفَوْرِ (harus segera dilakukan) ataukah عَلَى التَّرَاخِي (bisa ditunda)?</p>
+<p>Jumhūr ulamā berpendapat bahwasanya kewajiban haji itu harus segera, berbeda dengan pendapat ulamā Syāfi&rsquo;iyah yang mengatakan عَلَى التَّرَاخِي (bisa ditunda) tidak mengapa.</p>
+<p>Pendapat yang kuat adalah pendapat jumhūr ulamā bahwasanya kewajiban haji itu harus segera dilakukan. Artinya jika seseorang mampu untuk berhaji telah memiliki kemampuan fisiknya kuat dan uangnya juga ada.</p>
+<p>Maka hendaknya dia segera melaksanakan ibadah haji dan dia tidak menunda-nundanya. Karena dia tidak tahu apa yang akan dia hadapi dikemudian hari -sebagaimana telah disebutkan dalam hadits di atas-.</p>
+<p>Lagi pula secara logis bahwasanya namanya perintah harusnya segera kita laksanakan. Oleh karenanya, Allāh Subhānahu wa Ta&rsquo;āla memberi hukuman kepada Iblīs tatkala disuruh sujud kepada Ādam dia menolak. Kenapa ?, Karena dia harus segera bersujud kepada Ādam. Tatkala dia menolak untuk segera sujud kepada Adam, maka Allāh tidak memberi kesempatan bagi dia (Iblīs) untuk sujud di lain waktu, maka Allāh menghukum Iblīs yang menolak untuk bersujud kepada Ādam tatkala itu.</p>
+<p>Dalam masalah ini ada khilaf diantara para ulamā dalam pembahasan usul fiqih, apakah hukum asal kewajiban -secara umum- itu harus segera dilakukan (sampai ada dalil yang menunjukan boeh ditunda), ataukah hukum asalnya bisa ditunda (sampai ada dalil yang menyatakan harus segera)?</p>
+<p>Pendapat yang kuat bahwasanya segala perintah Allāh Subhānahu wa Ta&rsquo;āla harus segera dilaksanakan kecuali ada dalīl yang menunjukan bahwasanya perintah tersebut memiliki kelonggaran waktu. Namun kalau tidak ada dalīl yang menunjukan kelonggaran waktu maka kembali kepada hukum asal bahwasanya kewajiban harus segera dilakukan, diantaranya adalah ibadah haji.</p>
+<p>Rasūlullāh shallallāhu &lsquo;alaihi wa sallam tidak pernah berkata, &ldquo;Kalian berhaji kapan saja boleh,&rdquo; tidak ada dalīl seperti itu.&nbsp;<em>Kemudian jika seandainya haji boleh ditunda-tunda, maka tidak ada dalil yang menunjukan sejauh mana boleh ditunda?, apakah 10 tahun?, 20 tahun? 30 tahun?, dan ini mengkonsekuensikan jika seseorang tidak melaksanakan haji karena dia berencana 30 tahun berikutnya baru berhaji dan ternyata 10 tahun kemudian dia keburu meninggal maka dia tidak berdosa.!</em></p>
+<p>Yang benar bahwasanya Rasūlullāh shallallāhu &lsquo;alayhi wa sallam tatkala menyuruh haji dan tatkala Allāh menyuruh haji maka seorang harus segera berhaji.</p>
+<p>Maksudnya apa? Ini adalah dalīl kalau ada seorang telah memiliki kemampuan fisik maupun uang namun dia menunda-nunda pelaksanaan ibadah haji maka dia berdosa dengan penundaannya tersebut. Maka tidak benar perkataan seorang, &ldquo;Saya nanti berhaji bila sudah berumur 50 tahun, nanti saja kalau saya sudah pensiun baru saya berhaji,&rdquo; tidak boleh.</p>
+<p>Kalau dia sudah punya uang, sudah punya kemampuan maka langsung dia wajib untuk mendaftar. Kalau dia tidak mendaftar maka penundaannya itu adalah bentuk berdosa kepada Allāh Subhānahu wa Ta&rsquo;āla.</p>
+<p>Lihatlah semangat seorang sahabat wanita Asmaa&rsquo; binti &lsquo;Umais yang tatkala berhaji ia melahirkan putranya di Dzulhlaifah yang bernama Muhammad bin Abi Bakar As-Shiddiiq. Tentu dia tahu dia akan melahirkan, dan setelah melahirkan dia akan mengalami kondisi yang berat untuk berhaji, apalagi safar dari Madinah ke Mekah kurang lebih 500 km, dan susahnya merawat sang putra, akan tetapi itu semua tidak menjadikannya untuk menunda hajinya hingga tahun depan !!<sup>&nbsp;</sup></p>
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

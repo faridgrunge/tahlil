@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Ratib Al-Haddad | Bagian I - Pembukaan</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَلْفَاتِحَةُ<br><br>
+
+ اِلَى حَضْرَةِ النَّبِيِّ سَيِّدِنَا وَحَبِيْبِنَا مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ - اَلْفَاتِحَةُ <br><br>
+
+أَعُوذُ بِاللّٰهِ مِنَ الشَّيْطٰنِ الرَّجِيْمِ<br><br>
+
+بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ – ١<br>
+اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ - ٢<br>
+الرَّحْمٰنِ الرَّحِيْمِۙ – ٣<br>
+مٰلِكِ يَوْمِ الدِّيْنِۗ – ٤<br>
+اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُۗ – ٥<br>
+اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ ۙ – ٦<br>
+صِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ ەۙ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّاۤلِّيْنَ ࣖ - ٧<br><br>
+
+بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>
+
+الۤمّۤ ۚ – ١<br>
+ذٰلِكَ الْكِتٰبُ لَا رَيْبَ ۛ فِيْهِ ۛ هُدًى لِّلْمُتَّقِيْنَۙ – ٢<br>
+الَّذِيْنَ يُؤْمِنُوْنَ بِالْغَيْبِ وَيُقِيْمُوْنَ الصَّلٰوةَ وَمِمَّا رَزَقْنٰهُمْ يُنْفِقُوْنَ ۙ – ٣<br>
+وَالَّذِيْنَ يُؤْمِنُوْنَ بِمَآ اُنْزِلَ اِلَيْكَ وَمَآ اُنْزِلَ مِنْ قَبْلِكَ ۚ وَبِالْاٰخِرَةِ هُمْ يُوْقِنُوْنَۗ - ٤<br>
+اُولٰۤىِٕكَ عَلٰى هُدًى مِّنْ رَّبِّهِمْ ۙ وَاُولٰۤىِٕكَ هُمُ الْمُفْلِحُوْنَ - ٥<br>
+
+وَاِلٰهُكُمْ اِلٰهٌ وَّاحِدٌۚ لَآاِلٰهَ اِلَّا هُوَ الرَّحْمٰنُ الرَّحِيْمُ<br><br>
+
+اَللّٰهُ لَآ اِلٰهَ اِلَّا هُوَۚ اَلْحَيُّ الْقَيُّوْمُ ەۚ لَا تَأْخُذُهٗ سِنَةٌ وَّلَا نَوْمٌۗ لَهٗ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۗ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهٗٓ اِلَّا بِاِذْنِهٖۗ يَعْلَمُ مَا بَيْنَ اَيْدِيْهِمْ وَمَا خَلْفَهُمْۚ وَلَا يُحِيْطُوْنَ بِشَيْءٍ مِّنْ عِلْمِهٖٓ اِلَّا بِمَا شَاۤءَۚ وَسِعَ كُرْسِيُّهُ السَّمٰوٰتِ وَالْاَرْضَۚ وَلَا يَـُٔوْدُهٗ حِفْظُهُمَاۚ وَهُوَ الْعَلِيُّ الْعَظِيْمُ<br><br>
+
+لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِ ۗ وَاِنْ تُبْدُوْا مَا فِيْٓ اَنْفُسِكُمْ اَوْ تُخْفُوْهُ يُحَاسِبْكُمْ بِهِ اللّٰهُ ۗ فَيَغْفِرُ لِمَنْ يَّشَاۤءُ وَيُعَذِّبُ مَنْ يَّشَاۤءُ ۗ وَاللّٰهُ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ<br><br>
+
+اٰمَنَ الرَّسُوْلُ بِمَآ اُنْزِلَ اِلَيْهِ مِنْ رَّبِّهٖ وَالْمُؤْمِنُوْنَۗ كُلٌّ اٰمَنَ بِاللّٰهِ وَمَلٰۤىِٕكَتِهٖ وَكُتُبِهٖ وَرُسُلِهٖۗ لَا نُفَرِّقُ بَيْنَ اَحَدٍ مِّنْ رُّسُلِهٖ ۗ وَقَالُوْا سَمِعْنَا وَاَطَعْنَا غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَصِيْرُ<br><br>
+
+لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَا ۗ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ ۗ رَبَّنَا لَا تُؤَاخِذْنَآ اِنْ نَّسِيْنَآ اَوْ اَخْطَأْنَا ۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ اِصْرًا كَمَا حَمَلْتَهٗ عَلَى الَّذِيْنَ مِنْ قَبْلِنَا ۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهٖۚ وَاعْفُ عَنَّاۗ وَاغْفِرْ لَنَاۗ وَارْحَمْنَا ۗ اَنْتَ مَوْلٰىنَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكٰفِرِيْنَ<br><br>
+
+لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيْتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ
+ (3x)</p><br><br><p><i>Al-Fātiḥah ilā ḥadhratin-Nabiy Sayyidina wa ḥabībinā Muḥammad shallallāhu 'alayhi wa ālihi wa sallam. Al-Fātiḥah.<br>
+A-'ūdzu billāhi minasy-syaythānir-rajīm. <br>
+Bismillāhir-raḥmānir-raḥīm. ۞ Al-ḥamdu lillāhi rabbil-'ālamīn. ۞ Ar-raḥmānir-raḥīm. ۞ Māliki yaumid-dīn. ۞ Iyyāka na'budu wa iyyāka nasta'īn. ۞ Ihdinash-shirāthal-mustaqīm. ۞ Shirāthalladzīna an'amta 'alayhim gayril-magdhūbi 'alayhim wa ladh-dhāllīn. ۞
+<br>Bismillāhir-raḥmānir-raḥīm. - Alif lām mīm. ۞ Dzālikal-kitābu lā rayba fīh, hudal-lil-muttaqīn. ۞ Alladzīna yu`minūna bil-ghaibi wa yuqīmūnash-shalāta wa mimmā razaqnāhum yunfiqụn. ۞ Walladzīna yu`minūna bimā unzila ilayka wa mā unzila min-qablik, wa bil-ākhirati hum yūqinūn. ۞ Ulā-ika 'alā hudam-mir-rabbihim wa ulā-ika humul-mufliḥūn. ۞
+<br>Wa ilā hukum ilāhuw-wāḥid lā ilāha illā huwar-raḥmānur-raḥīm. ۞
+<br>Allāhu lā ilāha illā huwal hayyul qayyūm, lā ta’khudzuhū sinatuw-walā nawm. Lahū mā fis-samāwāti wa mā fil-ardh, man dzal-ladzī yasyfa-’u ‘indahū illā bi-idznih, ya’lamu mā bayna aydīhim wamā khalfahum wa lā yuhīthūna bisyay-immin ‘ilmihī illā bimā syā’, wasi’a kursiyyuhus-samāwāti wal-ardha walā ya-ūduhū hifzhuhumā wahuwal-‘aliyyul‘azhīm.
+<br>Lillāhi mā fis-samāwāti wa mā fil-ardh, wa in-tubdū mā fī anfusikum aw tukhfūhu yuḥāsibkum bihillāh, fayaghfiru limayyasyā-u wa yu-’adz-dzibu mayyasyā', wallāhu ‘alā kulli syay’in-qadīr.
+<br>āmanar-Rasūlu bimā un-zila ilayhi mir-Rabbihi wal-mu'minūn kullun āmana billāhi wa Malāikatihi wa kutubihi wa Rusulih, lā nufarriqu bayna aḥadin mir-Rusulih, wa qālu sami'nā wa ata'nā ghufrānaka Rabbanā wa Ilaykal-mashīr.
+<br>Lā yukallifullāhu nafsan illā wus-'ahā lahā mā kasabat wa 'alayhā maktasabat, Rabbanā lā tuākhidznā in-nasīnā aw akhtha'nā, Rabbanā wa lā taḥmil 'alaynā ishran kamā ḥamaltahu 'alal-ladzīna min qablinā, Rabbanā wa lā tuḥammilnā mā lā thāqata lanā bih, wa'fu 'annā, wa'ghfir lanā, warḥamnā, Anta Mawlānā Fan-shurnā 'alal-qawmil-kāfirīn.
+<br>Lā ilāha illallāhu wahdahu lā syarīka lah, Lahul mulku wa Lahul ḥamdu yuhyī wa yumītu wa Huwa 'alā kulli syay-in-qadīr. (3x)</i></p><br><br><p>Bacaan Al-Fatihah untuk yang teramat mulia Sang Nabi, penghulu kami, kecintaan kami, Muhammad, yang rahmat Allah senantiasa tercurah kepadanya, keluarganya, serta keselamatan baginya. Al-Fatihah...
+<br><br>Aku berlindung kepada Allah dari setan yang terkutuk.
+
+<br><br>Dengan nama Allah Yang Maha Pengasih, Maha Penyayang.  ۞ Segala puji bagi Allah, Tuhan seluruh alam. ۞ Yang Maha Pengasih, Maha Penyayang. ۞ Penguasa Hari Pembalasan. ۞ Hanya kepada Engkaulah kami menyembah dan hanya kepada Engkaulah kami mohon pertolongan. ۞ Tunjukilah kami jalan yang lurus. ۞ (Yaitu) jalan orang-orang yang telah Engkau beri nikmat kepadanya; bukan (jalan) mereka yang Engkau murkai, dan bukan (pula jalan) mereka yang sesat. ۞
+
+<br><br>Dengan nama Allah Yang Maha Pengasih, Maha Penyayang. - Alif Lam Mim. ۞ Kitab (Alquran) ini tidak ada keraguan padanya, petunjuk bagi mereka yang bertakwa. ۞ (Yaitu) mereka yang beriman kepada yang ghaib, melaksanakan salat, dan menginfakkan sebagian rezeki yang Kami berikan kepada mereka. ۞ Dan mereka yang beriman kepada (Al-Qur'an) yang diturunkan kepadamu (Muhammad) dan (kitab-kitab) yang telah diturunkan sebelum kamu, dan mereka yakin akan adanya akhirat. ۞ Merekalah yang mendapat petunjuk dari Tuhannya, dan mereka itulah orang-orang yang beruntung. ۞
+
+<br><br>Dan Tuhan kamu adalah Tuhan Yang Maha Esa, tidak ada tuhan selain Dia, Yang Maha Pengasih, Maha Penyayang. ۞
+<br>Allah, tidak ada Ilah (Yang berhak disembah) melainkan Dia Yang Hidup kekal lagi terus menerus mengurus (makhluk-Nya); tidak mengantuk dan tidak pula tidur. Kepunyaan-Nya apa yang di langit dan di bumi. Tiada yang dapat memberi syafaat di sisi Allah tanpa izin-Nya. Allah mengetahui apa-apa yang di hadapan mereka dan di belakang mereka, dan mereka tidak mengetahui apa-apa dari ilmu Allah melainkan apa yang dikehendaki-Nya. Kursi Allah (pijakan sebelum 'Arsy) meliputi langit dan bumi. Dan Allah tidak merasa berat memelihara keduanya, dan Allah Mahatinggi lagi Mahabesar.
+
+<br><br>Milik Allah-lah apa yang ada di langit dan apa yang ada di bumi. Jika kamu nyatakan apa yang ada di dalam hatimu atau kamu sembunyikan, niscaya Allah memperhitungkannya (tentang perbuatan itu) bagimu. Dia mengampuni siapa yang Dia kehendaki dan menghukum siapa yang Dia kehendaki. Allah Mahakuasa atas segala sesuatu.
+<br>Rasul telah beriman kepada Alquran yang diturunkan kepadanya dari Tuhannya, demikian pula orang-orang yang beriman. Semuanya beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya dan rasul-rasul-Nya. (Mereka mengatakan,) "Kami tidak membeda-bedakan antara seseorangpun (dengan yang lain) dari rasul-rasul-Nya", dan mereka mengatakan, "Kami dengar dan kami taat". (Mereka berdoa,) "Ampunilah kami wahai Tuhan kami dan kepada Engkaulah tempat kembali."
+
+<br><br>Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya. Ia mendapat pahala (dari kebajikan) yang diusahakannya dan ia mendapat siksa (dari kejahatan) yang dikerjakannya. (Mereka berdoa,) "Ya Tuhan kami, janganlah Engkau hukum kami jika kami lupa atau kami tersalah. Ya Tuhan kami, janganlah Engkau bebankan kepada kami beban yang berat sebagaimana Engkau bebankan kepada orang-orang sebelum kami. Ya Tuhan kami, janganlah Engkau pikulkan kepada kami apa yang tak sanggup kami memikulnya. Beri maaflah kami, ampunilah kami, dan rahmatilah kami. Engkaulah Penolong kami, maka tolonglah kami terhadap kaum yang kafir."
+<br>Tiada Ilah (Yang berhak disembah) melainkan Allah, Yang tunggal dan tiada sekutu bagi-Nya. Bagi-Nya segala kekuasaan, dan bagi-Nya segala pujian. Dialah yang menghidupkan dan yang mematikan, dan Dia teramat berkuasa atas segala sesuatu. (3X)</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Ratib ini adalah karangan Al-Habib 'Abdullah bin 'Alwi Al-Haddad. Beliau merupakan ulama asal Tarim, Hadramaut yang hidup pada masa antara tahun 1634-1720 M. Ia adalah seorang ulama yang nasabnya bersambung langsung kepada Rasulullah ﷺ. Tak heran jika ia memiliki derajat yang tinggi disisi Allah ﷻ dan merupakan seorang wali qutub atau pemimpin para wali di zamannya. Ia jugalah yang memperbarui tariqah 'alawiyyah/ba'lawiyyah. Habib Abdullah Al-Haddad sendiri memiliki 140 guru, dan salah satu gurunya yang utama adalah Al-Habib Umar bin Abdurrahman Al-'Aththas. Karya karyanya sendiri sudah tak terhitung jumlahnya, salah satu yang paling terkenal tentu saja Ratib Al-Haddad yang hingga kini telah dibaca dan diamalkan oleh berbagai umat Islam di seluruh dunia termasuk indonesia.
+
+Salah satu sumber yang digunakan adalah Pustaka Pejaten yang dikelola oleh rahimahullah Tengku Fidriansyah bin Tengku Nurdinsyah dan kawan-kawan, serta telah diizinkan oleh Habib Lutfi bin Yahya.</p><p><strong>
+</strong></p>
+
+
+
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

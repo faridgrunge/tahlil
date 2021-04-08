@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Kaidah Asmaul Husna</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+ <p style="font-style:italic;" >
+Ayat-ayat dalam Al-Qur’an yang diakhiri dengan Asmaul Husna menunjukkan bahwa hukum yang disebutkan dalam ayat-ayat tersebut 
+memiliki keterkaitan dengan nama Allâh Ta’âla tersebut.
+</p> 
+ <p >
+Ini adalah kaidah yang sangat mendalam dan bermanfaat. Bila ditelusuri pada seluruh ayat yang diakhiri dengan nama-nama Allâh Ta’ala (Asmaul Husna), 
+niscaya akan kita dapati adanya kesesuaian yang sangat tepat yang menunjukkan bahwa syariat, perintah dan penciptaan; 
+semua itu muncul dari nama-nama dan sifat-sifat-Nya, sekaligus berkaitan erat dengannya.
+</p>
+ <p >
+Pembahasan tentang sifat-sifat Allâh Ta’ala dan hukum-hukum-Nya termasuk pengetahuan dan ilmu yang paling mulia. 
+Kita dapati ayat-ayat tentang rahmat Allâh Ta’ala, diakhiri dengan nama-nama-Nya yang mengandung sifat Rahmat. 
+Ayat-ayat hukuman dan adzab ditutup dengan nama-nama yang memuat sifat Keperkasaan, Kedigdayaan, Kebijaksanaan, Ilmu dan Kekuasaan.
+</p>
+ <p >
+Berikut ini beberapa contoh untuk menjelaskan kaidah di atas:
+</p>
+<div class="arab" style="direction: rtl;text-align:justify;"><span >
+هُوَ الَّذِي خَلَقَ لَكُمْ مَا فِي الأرْضِ جَمِيعًا ثُمَّ اسْتَوَى إِلَى السَّمَاءِ فَسَوَّاهُنَّ سَبْعَ سَمَاوَاتٍ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ
+</span></div>
+
+<p style="font-weight:bold;">
+“Dia-lah Allah, yang menjadikan segala yang ada di bumi untuk kamu dan Dia berkehendak menuju langit, 
+lalu dijadikan-Nya tujuh langit. Dan Dia Maha Mengetahui segala sesuatu.”
+</p> 
+<p style="font-weight:thin;color:red">
+(QS. Al Baqarah 2:29).
+</p>
+ <p >
+Penjelasan :</br>
+Penyebutan keluasan ilmu-Nya setelah menyebutkan penciptaan bumi dan langit menunjukkan bahwa ilmu-Nya meliputi segala makhluk yang ada di dalamnya. 
+Juga menunjukkan bahwa Dia Maha Bijaksana, karena Allâh Ta’ala menjadikannya (langit dan bumi) untuk para hamba-Nya dan 
+telah memperindah bentuk penciptaannya dalam gambaran yang terbaik dan keteraturan yang sempurna. 
+Demikian pula penciptaan langit dan bumi termasuk bukti keluasan ilmu Allâh Ta’ala.
+</p>
+<div class="arab" style="direction: rtl;text-align:justify;"><span >
+فَتَلَقَّى آدَمُ مِنْ رَبِّهِ كَلِمَاتٍ فَتَابَ عَلَيْهِ إِنَّهُ هُوَ التَّوَّابُ الرَّحِيمُ
+</span></div>
+
+<p style="font-weight:bold;">
+“Kemudian Adam menerima beberapa kalimat dari Tuhannya, maka Allah menerima tobatnya. Sesungguhnya Allah Maha Penerima tobat lagi Maha Penyayang.”
+</p> 
+<p style="font-weight:thin;color:red">
+(QS. Al Baqarah 2:37).
+</p>
+ <p >
+Penjelasan :</br>
+Banyak ayat yang diakhiri dengan dua nama ini (Maha Penerima taubat dan Penyayang) setelah menyebutkan rahmat, maghfirah, taufik, serta kelembutan Allâh Ta’ala. 
+Korelasinya akan tampak sekali bagi setiap orang. Dengan dua nama ini, Allâh Ta’ala memberi perhatian lebih terhadap hati orang-orang yang bertaubat kepada-Nya 
+dan memberikan taufik kepada mereka untuk melakukan perkara-perkara yang menyebabkan Allâh Ta’ala menerima taubat dan merahmati mereka, 
+dan kemudian mengampuni dan mengasihi mereka.
+</p>
+ <p >
+Allâh Ta’ala pertama kali menerima taubat mereka dengan memberikan taufik kepada mereka agar bertaubat dan mengambil langkah-langkah menuju ke sana. 
+Kemudian Allâh Ta’ala menerima taubat mereka kedua kalinya dengan berkenan menerima taubat mereka lagi dan memenuhi permohonan mereka.
+</p>
+ <p >
+Adapun ucapan Nabi Ibrahim ‘Alaihissalâm dan Ismâ’îl ‘alaihissalâm ketika keduanya mengangkat pondasi rumah Allâh Ta’ala (Ka’bah):
+</p>
+<div class="arab" style="direction: rtl;text-align:justify;"><span >
+وَإِذْ يَرْفَعُ إِبْرَاهِيمُ الْقَوَاعِدَ مِنَ الْبَيْتِ وَإِسْمَاعِيلُ رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ
+</span></div>
+<p style="font-weight:bold;">
+“Dan (ingatlah), ketika Ibrahim meninggikan (membina) dasar-dasar Baitullah bersama Ismail (seraya berdoa): 
+"Ya Tuhan kami terimalah daripada kami (amalan kami), sesungguhnya Engkaulah Yang Maha Mendengar lagi Maha Mengetahui".”
+</p> 
+<p style="font-weight:thin;color:red">
+(QS. Al Baqarah 2:127).
+</p>
+ <p >
+Penjelasan :</br>
+Sungguh, Nabi Ibrâhîm ‘Alaihissalâm bertawasul kepada Allâh Ta’ala dengan dua nama ini (as-Samî‘ dan al-Alîm) agar diterima amal mulia yang dilakukannya, 
+dimana Allâh Ta’ala mengetahui niat dan maksud keduanya, mendengar pembicaraan keduanya, serta mengabulkan doa keduanya. 
+Maka sungguh, yang dimaksud dengan as-Samî’ (Yang Maha Mendengar dalam konteks doa -doa ibadah dan doa permohonan-) bermakna Yang Menjawab Permohonan, 
+sebagaimana perkataan Nabi Ibrâhîm ‘alaihissalam dalam ayat yang lain:
+</p>
+<div class="arab" style="direction: rtl;text-align:justify;"><span >
+الْحَمْدُ لِلَّهِ الَّذِي وَهَبَ لِي عَلَى الْكِبَرِ إِسْمَاعِيلَ وَإِسْحَاقَ إِنَّ رَبِّي لَسَمِيعُ الدُّعَاءِ
+</span></div>
+<p style="font-weight:bold;">
+“Segala puji bagi Allah yang telah menganugerahkan kepadaku di hari tua (ku) Ismail dan Ishak. 
+Sesungguhnya Tuhanku, benar-benar Maha Mendengar (memperkenankan) doa.”
+</p> 
+<p style="font-weight:thin;color:red">
+(QS. Ibrahim 14:39).
+</p>
+<p>
+Ketika menyebutkan kisah-kisah para nabi bersama umat-umat mereka dalam surat as-Syu’arâ, Allâh Ta’ala menutup setiap kisah dengan firman-Nya:
+</p> 
+<p style="font-weight:bold;">
+“Dan Sesungguhnya Rabb-mu benar-benar Dialah yang Maha Perkasa lagi Maha Penyayang.”
+</p> 
+<p style="font-weight:thin;color:red">
+(Qs asy-Syu’arâ 26:9,68,104,122,140,159,175,191).
+</p>
+ <p >
+Penjelasan :</br>
+Sungguh, setiap kisah yang mengandung penyelamatan nabi dan para pengikutnya (berkat rahmat dan kasih sayang Allâh Ta’ala) 
+dan pembinasaan orang-orang yang mendustakannya merupakan bentuk kekuasaan-Nya. 
+Sesungguhnya Dia menyelamatkan Rasul dan para pengikutnya dengan kesempurnaan kekuatan, kekuasaan dan kasih sayang-Nya, 
+dan membinasakan orang-orang yang mendustakan dengan kekuasaan dan kebijaksanaan-Nya.
+</p>
+ <p >
+Adapun perkataan Nabi Isâ ‘Alaihissalam:
+</p>
+<div class="arab" style="direction: rtl;text-align:justify;"><span >
+إِنْ تُعَذِّبْهُمْ فَإِنَّهُمْ عِبَادُكَ وَإِنْ تَغْفِرْ لَهُمْ فَإِنَّكَ أَنْتَ الْعَزِيزُ الْحَكِيمُ
+</span></div>
+<p style="font-weight:bold;">
+“Jika Engkau menyiksa mereka, maka sesungguhnya mereka adalah hamba-hamba Engkau, dan jika Engkau mengampuni mereka, 
+maka sesungguhnya Engkaulah Yang Maha Perkasa lagi Maha Bijaksana.”
+</p> 
+<p style="font-weight:thin;color:red">
+(QS. Al Maidah 5:118).
+</p>
+ <p >
+Penjelasan :</br>
+Beliau tidak mengatakan; Engkaulah yang Maha Pengampun lagi Maha Penyayang. Karena tempatnya adalah bukan tempat permintaan belas kasih ataupun rahmat, 
+namun tempat marah dan membalas terhadap orang yang menjadikan tuhan (sesembahan lain) disamping Allâh Ta’ala. Maka, 
+menjadi pas penyebutan keperkasaan dan kebijaksanaan (lebih utama daripada penyebutan rahmat).
+</p>
+ <p >
+Di antara keindahan dari kedudukan sifat raja’ (harapan) adalah Dia menyebutkan sebab-sebab rahmat dan sebab-sebab adzab, 
+kemudian menutupnya dengan sesuatu yang menunjukkan rahmat Allâh Ta’ala, sebagaimana firman-Nya:
+</p>
+<div class="arab" style="direction: rtl;text-align:justify;"><span >
+وَلِلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الأرْضِ يَغْفِرُ لِمَنْ يَشَاءُ وَيُعَذِّبُ مَنْ يَشَاءُ وَاللَّهُ غَفُورٌ رَحِيمٌ
+</span></div>
+<p style="font-weight:bold;">
+“Kepunyaan Allah apa yang ada di langit dan yang ada di bumi. Dia memberi ampun kepada siapa yang Dia kehendaki; 
+Dia menyiksa siapa yang Dia kehendaki; dan Allah Maha Pengampun lagi Maha Penyayang.”
+</p> 
+<p style="font-weight:thin;color:red">
+(QS. Ali Imron 3:129).
+</p>
+ <p >
+dan Firman-NYA :
+</p>
+<div class="arab" style="direction: rtl;text-align:justify;"><span >
+لِيُعَذِّبَ اللَّهُ الْمُنَافِقِينَ وَالْمُنَافِقَاتِ وَالْمُشْرِكِينَ وَالْمُشْرِكَاتِ وَيَتُوبَ اللَّهُ عَلَى الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَكَانَ اللَّهُ غَفُورًا رَحِيمًا
+</span></div>
+<p style="font-weight:bold;">
+“sehingga Allah mengazab orang-orang munafik laki-laki dan perempuan dan orang-orang musyrikin laki-laki dan perempuan; 
+dan sehingga Allah menerima tobat orang-orang mukmin laki-laki dan perempuan. Dan adalah Allah Maha Pengampun lagi Maha Penyayang.”
+</p> 
+<p style="font-weight:thin;color:red">
+(QS. Al Ahzâb 33:73).
+</p>
+ <p >
+Penjelasan :</br>
+Ayat-ayat di atas menunjukkan bahwa rahmat-Nya mendahului murka-Nya. Kepada rahmat-Nya lah berujung setiap orang yang memiliki 
+sebab-sebab rahmat yang paling rendah sekalipun. Oleh karenanya, akan keluar dari neraka orang yang di dalam hatinya masih terdapat 
+keimanan meski seukuran biji sawi.Wallâhu a’lam.
+</p>
+ <p >
+Referensi:</br>
+Diringkas dari Al-Qawâidul Hisân Al-Muta`alliqah bi Tafsîril Qur`ân hlm. 51-57
+</p>
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

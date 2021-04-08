@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Pembatalan Tayamum</h1><br>
+
+<p>Setiap hadats yang membatalkan wudhu, maka itu juga yang menjadi pembatal tayamum. Hal ini tidak ada khilaf (perselisihan) di antara para ulama. (Al Muhalla, 2: 122)</p>
+  <p><strong>Mendapati Air Sebelum Shalat</strong></p>
+  <p>Ibnu ‘Abdil Barr berkata, “Para ulama berijma’ (sepakat) bahwa siapa saja yang bertayamum setelah berusaha mencari air, namun tidak mendapatinya, kemudian ia mendapati air sebelum masuk waktu shalat, tayamumnya ketika itu menjadi batal. Ketika itu, tayamumnya tidak bisa mencukupi untuk shalat. Keadaannya menjadi kembali seperti keadaan sebelum tayamum. Dan para ulama berselisih pendapat jika ia mendapati air setelah masuk waktu shalat.” (Al Istidzkar, 1: 314)</p>
+  <p><strong>Mengetahui Adanya Air di Tengah Shalat</strong></p>
+  <p>Jika seseorang sudah bertayamum karena tidak mungkin menggunakan air, lalu ia shalat, kemudian ada info telah ada air sedangkan ketika itu ia berada dalam shalat, apakah shalatnya mesti diputus atau disempurnakan?</p>
+  <p>Dalam masalah ini ada perselisihan. Pendapat lebih tepat adalah ia tetap melanjutkan atau menyempurnakan shalatnya karena tidak adanya dalil yang mengharuskan shalatnya mesti diputus. Sebagaimana orang yang berpuasa dengan niatan menunaikan kafaroh, lalu ia temukan adanya budak di tengah ia berpuasa, puasanya tidak jadi sia-sia. (Shahih Fiqh Sunnah, 1: 204-205)</p>
+  <p><strong>Menemukan Air di Waktu Shalat Setelah Sebelumnya Shalat dengan Tayamum</strong></p>
+  <p>Dalam kondisi seperti ini, apakah perlu shalat pertama yang dilakukan dengan tayamum diulang?</p>
+  <p>Pendapat yang tepat dalam masalah ini, shalatnya tidak perlu diulang. Dalilnya adalah hadits Abu Sa’id Al Khudri berikut.</p>
+  <div>
+    <div align="right" class="style2">عَنْ أَبِى سَعِيدٍ الْخُدْرِىِّ قَالَ خَرَجَ رَجُلاَنِ فِى سَفَرٍ فَحَضَرَتِ الصَّلاَةُ وَلَيْسَ مَعَهُمَا مَاءٌ فَتَيَمَّمَا صَعِيدًا طَيِّبًا فَصَلَّيَا ثُمَّ وَجَدَا الْمَاءَ فِى الْوَقْتِ فَأَعَادَ أَحَدُهُمَا الصَّلاَةَ وَالْوُضُوءَ وَلَمْ يُعِدِ الآخَرُ ثُمَّ أَتَيَا رَسُولَ اللَّهِ -صلى الله عليه وسلم- فَذَكَرَا ذَلِكَ لَهُ فَقَالَ لِلَّذِى لَمْ يُعِدْ « أَصَبْتَ السُّنَّةَ وَأَجْزَأَتْكَ صَلاَتُكَ ». وَقَالَ لِلَّذِى تَوَضَّأَ وَأَعَادَ « لَكَ الأَجْرُ مَرَّتَيْنِ »</div>
+  </div>
+  <p>Dari Abu Sa’id Al Khudri, ia berkata, “Ada dua orang pria keluar melakukan safar, lalu datang waktu shalat. Ketika itu keduanya tidak mendapati air. Akhirnya mereka bertayamum dengan tanah yang suci, kemudian mereka shalat. Masih di waktu shalat, mereka pun mendapati air. Salah satu dari mereka mengulangi shalat dengan berwudhu. Yang lainnya tidak mengulangi shalatnya. Kemudian mereka mendatangi Rasulullah <em>shallallahu ‘alaihi wa sallam</em> dan menceritakan kejadian mereka pada beliau. Lantas beliau bersabda pada orang yang tidak mengulangi shalatnya, “Engkau telah menjalani sunnah dan shalatmu sah.” Lalu beliau bersabda pula pada orang yang mengulangi shalatnya, “Engkau mendapatkan dua pahala.” (HR. Abu Daud no. 338 dan An Nasai no. 433. Syaikh Al Albani menshahihkan hadits tersebut) (Lihat Shahih Fiqh Sunnah, 1: 205-206)</p>
+  <h3 class="style3">Apa maksud mencari air?    </h3><hr>
+  <p>Seseorang yang ingin bertayammum kerana   ketiadaan air, wajib ia berusaha mencari air terlebih dahulu di kawasan   sekitarnya. Jika air tiada di rumah, hendaklah ia pergi ke masjid   umpamanya atau ke rumah berdekatan moga-moga menemui air. Jangan   semata-mata tiada air di rumah, lalu ia pun bertayammum. Setelah pasti   benar-benar tidak ada air, barulah bertayammum. Mencari air itu wajib   diulangi setiap kali hendak bertayammum.[6] Tidak cukup dengan pencarian   ketika kali pertama bertayammum saja. </p>
+  <h3 class="style3">Bagaimana jika ada air, namun tidak mencukupi untuk bersuci, adakah digunakan air baru tayammum atau terus tayammum?    </h3><hr>
+  <p>Ada dua pandangan ulama bagi masalah ini;<br>
+      <br>
+    Pandangan pertama;<br>
+    wajib digunakan air yang ada itu, kemudian   barulah bertayammum bagi anggota yang tidak dapat dicuci dengan air.   Pandangan ini merupakan mazhab Imam Ahmad dan Imam Syafi’ie (dalam qaul   jadidnya). <br>
+  <br>
+    Pandangan kedua; <br>
+    hendaklah terus bertayammum dan   tinggalkan air itu. Pandanagn ini adalah pandangan jumhur ulamak yang   terdiri dari al-Hasan, az-Zuhri, Hammad, Malik, Imam Abu Hanifah, Imam   Syafi’ie (dalam qaul qadimnya), Ibnu al-Munzir dan al-Muzanie (murid   Imam Syafi’ie). </p>
+  <h3 class="style3">Kalau   seseorang itu lupa bahawa dalam kenderaannya ada air atau ia lupa ada   menyimpan air di satu tempat, lalu ia pun bertayammum dan mengerjakan   solat; bagaimana hukumnya?    </h3><hr>
+  <p>Ada dua pandangan ulamak bagi masalah ini;<br>
+      <br>
+    Pertama;<br>
+    menurut Imam Syafi’ie dan Imam Ahmad; tidak dipakai tayammum itu, yakni   solatnya wajib diulangi semua setelah mengambil wudhuk dengan air   tersebut. Hujjah mereka ialah; thoharah dengan air adalah perintah yang   wajib. Ia tidak gugur semata-mata kerana lupa.<br>
+  <br>
+    Kedua;<br>
+    menurut   Imam Abu Hanifah; dipakai tayammum itu, yakni solatnya sah kerana lupa   adanya air membawa ia kepada tidak dapat menggunakan air, maka halnya   sama seperti orang yang ketiadaan air. </p>
+  <h3 class="style3">Adakah tayammum hanya harus dengan tanah saja? Bolehkah bertayammum dengan selain tanah?    </h3><hr>
+  <p>Ada beberapa pandangan ulamak dalam masalah bahan yang harus digunakan untuk bertayammum;<br>
+      <br>
+    Pertama;   jumhur ulamak (mazhab Imam Syafi’ie, Imam Ahmad, Ishaq, Abu Yusuf dan   Daud az-Dzahiri) mensyaratkan tayammum hendaklah dengan tanah, tidak   harus dengan pasir, batu, kapur dan sebagainya yang tidak dikategorikan   sebagai tanah. Dan disyaratkan tanah itu pula hendaklah berdebu (yakni   dapat melekat pada tangan bila ditepuk) dan bersih.<br>
+    <br>
+    Kedua; Imam   Malik dan Imam Abu Hanifah pula berpendapat; tidak khusus kepada tanah   sahaja. Harus tayammum dengan segala yang ada di atas permukaan bumi;   tidak hanya tanah, tetapi juga pasir, kapur, batu dan seumpamanya. Malah   menurut Imam Malik; harus tayammum dengan salji dan setiap yang   melapisi permukaan bumi. Imam Malik dan Imam Abu Hanifah juga tidak   mensyaratkan bahan-bahan untuk bertayammum itu berdebu. Oleh itu, pada   pandangan mereka; harus bertayammum di atas batu yang tidak ada debu   atau di atas tanah licin yang tidak ada debu yang melekat di tangan   apabila ditepuk di atasnya. </p>
+  <h3 class="style3">Adakah harus   bertayammum dengan menepuk di dinding, di atas permaidani, di pakaian,   di belakang binatang kendaraan atau sebagainya?    </h3><hr>
+  <p>Ada dua pandangan ulama;<br>
+      <br>
+    Pertama; mengikut pandangan mazhab Syafi’ie dan Ahmad; harus jika   di atas tempat-tempat yang ditepuk itu ada terdapat debu yang dapat   melekat di tangan sebagaimana yang disyaratkan tadi. Jika tidak terdapat   debu padanya, tidak harus tayammum.<br>
+    <br>
+    Kedua; mengikut Imam Malik;   tidak harus melakukan tayammum dengan menepuk ke atas debu yang terdapat   di atas pakaian, permaidani dan sebagainya itu. Menurut beliau,   tayammum hendaklah dengan menepuk terus ke atas bumi. </p>
+  <h3><span class="style3">Adakah disyaratkan masuk waktu sahnya tayammum?      </span>    </h3><hr>
+  <p>Ada dua pandangan ulama;<br>
+      <br>
+    Pertama; <br>
+    jumhur   ulamak (terdiri dari mazhab Imam Malik, Syafi’ie, Ahmad dan lain-lain)   berpandangan; tidak sah tayammum melainkan setelah masuk waktu solat   sama ada tayammum kerana keputusan air atau kerana tidak mampu   menggunakan air. Maksud ‘masuk waktu’ ialah tiba waktu yang mengharuskan   suatu solat itu dilakukan. Disyaratkan masuk waktu kerana tayammum   adalah toharah darurat seperti mana toharah wanita yang istihadhah di   mana kedua-duanya tidak menghilangkan hadas, akan tetapi dilakukan hanya   untuk mengharuskan solat sahaja. Maka sebagaimana wanita yang   istihadhah tidak harus mengambil wudhuk melainkan setelah masuk waktu,   begitu juga orang yang ingin melakukan tayammum juga tidak harus   melakukannya melainkan setelah masuk waktu solat.<br>
+    <br>
+    Kedua; <br>
+    Imam   Abu Hanifah berpandangan; tayammum tidak terikat dengan waktu, yakni   harus melakukan tayammum sekalipun belum masuk waktu. Beliau   mengkiaskannya dengan wudhuk dan toharah-toharah yang lain (mandi,   menyapu khuf, menghilangkan najis). Sebagaimana wudhuk harus dilakukan   sebelum masuk waktu solat, maka tayammum juga sedemikian kerana ia   disyariatkan sebagai ganti kepada kedua-duanya.[10] </p>
+  <h3><span class="style3">Apakah syarat tayammum bagi orang sakit atau luka?      </span>    </h3><hr>
+  <p>Tidak semua jenis sakit atau luka   mengharuskan tayammum. Sakit atau luka yang mengharuskan tayammum ialah   sakit atau luka yang penggunaan air ditakuti akan menyebabkan at-talaf   (kematian atau kemusnahan anggota) atau mendatangkan mudarat pada badan.   Ia merangkumi; </p>
+  <ol>
+    <li>
+      <p>Akan menyebabkan kematian atau kerosakan pada aggota (التلف); lumpuh dan sebagainya. </p>
+    </li>
+    <li>
+      <p> Penggunaan air menimbulkan penyakit yang membawa kematian atau kerosakan anggota. </p>
+    </li>
+    <li>
+      <p>Menyebabkan sakit bertambah teruk atau penyakit semakin melarat. </p>
+    </li>
+    <li>
+      <p> Menyebabkan lambat sembuh </p>
+    </li>
+    <li>
+      <p>Menyebabkan kesakitan yang tidak tertanggung. </p>
+    </li>
+    <li>
+      <p> Menimbulkan kecacatan dan kejelikan yang ketara pada badan; seperti kulit menjadi hitam atau sebagainya.</p>
+    </li>
+  </ol>
+  <p>Kesan-kesan yang dibimbangi tersebut dari   penggunaan air hendaklah disahkan oleh pengalaman sendiri atau   berdasarkan makluman dari doktor yang mahir. Menurut mazhab Syafi’ie;   doctor itu hendaklah muslim dan adil (tidak fasiq). Tidak diterima   pengakuan atau pengesahan dari doctor kafir atau fasiq. Namun menurut   mazhab Imam Malik; harus memakai pandangan atau makluman dari doktor   kafir jika tidak ada doktor muslim. </p>
+  <h3><span class="style3">Sejauh manakah ibadah yang harus dilakukan dengan tayammum?      </span>    </h3><hr>
+  <p>Tayammum mengharuskan apa yang diharuskan   dengan wudhuk dan mandi. Seorang yang bertayammum harus mengerjakan   solat fardhu, solat sunat, sujud tilawah, sujud syukur, membawa mushaf,   membaca al-Quran dan beriktikaf. Hukum ini telah disepakati oleh ulamak.<br>
+      <br>
+    Namun   para Fuqahak berikhtilaf dalam menentukan bilangan solat fardhu yang   harus dikerjakan dinisbahkan kepada satu tayammum yang dilakukan. Di   sana ada tiga pandangan;<br>
+    <br>
+    Pandangan pertama; tayammum sama seperti   wudhuk iaitu tidak terikat dengan bilangan solat. Selagi tayammum tidak   batal –iaitu dengan menjumpai air atau dengan berlakunya hadas-, maka   harus untuk melakukan dengan tayammum itu seberapa banyak solat yang   dikehendaki sama ada fardhu atau sunat dan tanpa mengira waktu.   Pandangan ini merupakan pendapat Sa’id bin al-Musayyab, al-Hasan,   az-Zuhri, as-Tsauri, Imam Abu Hanifah, al-Muzani dan ar-Ruyani.<br>
+    <br>
+    Pandangan   kedua; Jumhur ulamak yang terdiri dari Saidina ‘Ali, Ibnu Umar, Ibnu   ‘Abbas, as-Sya’bi, an-Nakha’ie, Qatadah, Yahya al-Ansari, Rabi’ah,   Malik, Syafi’ie, al-Laits, Ishaq dan Imam Ahmad. Mereka berpendapat;   satu tayammum hanya untuk satu solat fardhu atau satu ibadah wajib   sahaja. Oleh demikian, tidak harus menjamakkan dua solat dengan satu   tayammum atau melakukan dua tawaf atau melakukan satu solat fardhu   dengan satu tawaf fardhu, menghimpunkan dua solat nazar atau antara satu   solat fardhu dengan satu solat nazar. Hendaklah diperbaharui tayammum   untuk setiap solat fardhu yang hendak dilakukan setelah dipastikan tidak   air terlebih dahulu. Adapun solat sunat, harus dilakukan seberapa   banyak yang dikehendaki.<br>
+    <br>
+    Pandangan ketiga; Imam Abu Tsur dan   fuqahak mazhab Hanbali. Mereka berpandangan; Tayammum terikat dengan   waktu di mana satu tayammum hanya bagi satu waktu solat fardhu sahaja.   Seorang yang bertayammum boleh melakukan apa sahaja solat yang   dikehendaki sama ada solat fardhu dalam waktu, solat fardhu yang luput,   menjamakkan dua solat dan seberapa banyak solat sunat yang diingini   selama belum masuk waktu lain. Apabila masuk waktu lain, batallah   tayammum dan wajib diulangi semula tayammum bagi mengharuskan solat   kembali. Kedaaannya menyamai seorang wanita istihadhah atau orang-orang   lainnya yang melakukan toharah darurat. </p>
+  <h3 class="style3">Apakah anggota-anggota tayammum?    </h3><hr>
+  <p>Berdasarkan ayat al-Quran tadi dan   hadis-hadis Nabi s.a.w. (sebahagiannya telah kita sebutkan tadi),   anggota tayammum hanya dua sahaja (sama ada tayammum bagi menggantikan   wudhuk atau bagi menggantikan mandi) yaitu; </p>
+  <ol>
+    <li>
+      <div align="left">Muka </div>
+    </li>
+    <li>
+      <div align="left">Dua tangan<br>
+          <br>
+      </div>
+      <p align="left"> </p>
+      <p>Mengenai muka tidak ada khilaf di   kalangan ulamak bahawa keseluruhan kawasan muka yang wajib dibasuh   ketika mengambil wudhuk, maka ketika tayammum kawasan muka tersebut   wajib diratai dengan debu. Adapun tangan, maka para ulamak berbeza   pandangan tentang kawasan yang wajib disapui debu;<br>
+          <br>
+        Pertama; mengikut jumhur atau majoriti ulamak iaitu Saidina ‘Ali, Ibnu   ‘Umar, al-Hasan al-Basri, as-Sya’bi, Salim bin Abdullah, Imam Malik,   al-Laits, Imam Abu Hanifah dan Syafi’ie; kawasan tangan yang wajib   disapui debu adalah sama sebagaimana yang wajib dibasuh ketika mengambil   wudhuk iaitu bermula dari hujung jari hinggalah ke siku.[20] Mereka   berdalilkan –antaranya- sabda Nabi s.a.w.; “Tayammum itu dua kali   tepukan, sekali untuk disapu ke muka dan sekali untuk di sapu ke kedua   tangan hingga ke siku”.[21]<br>
+        <br>
+        Kedua; sekumpulan ulamak yang terdiri dari ‘Atho, Makhul, al-Auza’ie,   Imam Ahmad, Ishaq, Imam Syafi’ie (mengikut qaul qadimnya sebagaimana   diceritakan oleh Abu Tsur)[22] dan disokong oleh Ibnu al-Munzir   berpandangan; kawasan tangan yang wajib disapui debu ketika tayammum   hanyalah sampai ke pergelangan tangan sahaja.[23] Mereka berdalilkan   hadis kisah ‘Ammar (yang telah kita kemukakan tadi) di mana Rasulullah   s.a.w. bersabda kepadanya; “Sesungguhnya memadai kamu menepuk dua tapak   tangan kamu ke tanah, kemudian kamu hembusnya (untuk menipiskan sedikit   debu di tapak tangan itu) dan seterusnya kamu sapukan debu ke muka dan   ke dua tangan kamu (hingga pergelangannya)”.[24] Adapun hadis yang   dijadikan hujjah oleh jumhur tadi ia adalah dhaif. Sebenarnya ia   hanyalah pandangan Ibnu Umar, bukan sabda Nabi s.a.w..<br>
+        <br>
+        Menurut Imam Nawawi; pandangan kedua di atas adalah kuat dari segi dalilnya dan lebih hampir kepada kehendak as-Sunnah.[25]</p>
+    </li>
+  </ol>
+  <h3><span class="style3">Berapakah bilangan tepukan yang wajib semasa melakukan tayammum?      </span>    </h3><hr>
+  <p>Rentetan dari khilaf di atas, berlaku pula   khilaf dalam menentukan berapakah bilangan tepukan ke tanah yang mesti   dilakukan oleh orang yang melakukan tayammum? Mengikut jumhur ulamak   tadi; tayammum wajib dengan sekurang-kurangnya dua kali tepukan ke   tanah; satu tepukan untuk disapu ke muka dan satu tepukan lagi untuk   disapu kepada dua tangan hingga ke siku. Jika dua kali tepukan itu   mencukupi untuk menyapu keseluruhan kawasan muka dan tangan (hingga ke   siku), tidak perlu lagi ditambah. Jika tidak, wajiblah tepukan itu   ditambah hingga debu meratai seluruh kawasan yang wajib disapu itu.[26]<br>
+      <br>
+    Adapun   pandangan kedua di atas (‘Atho, Makhul, al-Auza’ie, Imam Ahmad, Ishaq   dan disokong oleh Ibnu al-Munzir), mereka menegaskan; yang wajib ialah   sekali tepukan sahaja untuk kedua-dua anggota tayammum iaitu muka dan   dua tangan hingga pergelangannya. </p>
+  <h3><span class="style3">Bilakah batalnya tayammum?      </span>    </h3><hr>
+  <ol>
+    <li>
+      <p>Tayammum adalah bersuci gantian bagi   wudhuk. Apabila berlaku kepada orang yang bertayammum perkara-perkara   yang boleh membatalkan wudhuk sebagaimana yang telah kita jelaskan dalam   tajuk yang lalu (contohnya, ia telah terkentut atau tersentuh kemaluan   atau sebagainya), maka batallah tayammumnya. Kesimpulannya,   perkara-perkara yang membatalkan wudhuk juga akan membawa kepada   batalnya tayammum. </p>
+    </li>
+    <li>
+      <p>Bagi orang yang bertayammum   kerana ketiadaan air, tayammumnya batal apabila telah bertemu air.   Sebaik bertemu air, dengan sendiri tayammumnya terbatal. Apabila hendak   solat semula, wajib ia mengambil wudhuk, yakni tidak cukup dengan   tayammumnya tadi sekalipun ia tidak melakukan perkara-perkara yang   membatalkan tayammumnya. Jika ia bertayammum tadi kerana ganti mandi   wajib, hendaklah ia mandi wajib sebelum mengerjakan solat berikutnya. </p>
+    </li>
+    <li>
+      <p> Jika seorang bertayammum,   kemudian belum sempat mengerjakan solat ia telah menemui air, tidak   harus ia menunaikan solat dengan tayammum itu, akan tetapi hendaklah   mengambil wudhuk, kemudian baru tunaikan solat. Ini kerana tayammumnya   dengan sendiri terbatal dengan kerana bertemu air sekalipun belum sempat   mengerjakan solat. Jika air ditemui semasa sedang solat (seperti ada   orang memberitahunya semasa sedang solat itu), jika ia ingin meneruskan   solatnya diharuskan dan solatnya sah. Namun sebaik-baiknya ialah ia   menghentikan solatnya, kemudian mengambil wudhuk dan melakukan semula   solat. Jika air ditemui setelah selesai solat, sah lah solat yang   ditunaikan sebelum bertemu air itu dan tidak perlu diulangi semula   sekalipun waktu masih ada. </p>
+    </li>
+    <li>
+      <p> Jika bertayammum kerana   keuzuran (seperti sakit, sejuk keterlaluan dan sebagainya), tayammum   dikira terbatal sebaik sahaja hilang keuzuran. Contohnya; jika seseorang   bertayammum kerana sakit, maka sebaik ia sembuh dari sakit, batallah   tayammumnya. </p>
+    </li>
+  </ol>
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

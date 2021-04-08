@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Wirid Imam Nawawi</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>
+
+بِسْمِ اللّٰهِ اَللّٰهُ اَكْبَرُ، أقُوْلُ عَلَى نَفْسِيْ وَعَلَى دِيْنِيْ وَعَلَى اَهْـلِيْ وَعَلَى اَوْلاَدِيْ وَعَلَى مَالِيْ  وَعَلَى أَصْحَـابِيْ وَعَـلَى اَدْيَانِهِمْ وَعَلَى اَمْوَالِهِمْ اَلْفَ لاَحَوْلَ وَلاَ قُـوَةَ اِلاَّ بِـا للّٰهِ اْلعَلِيِّ اْلعَظِيْمِ <br><br>
+
+بِسْمِ اللّٰهِ اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ ، اَقُوْلُ عَلَى نَفْسِيْ وَعَلَى دِيْنِيْ وَعَلَى اَهْـلِيْ وعَلَى اَوْلاَدِيْ وَعَلَى مَالِيْ وَعَلَى أَصْحَـابِيْ وَعَـلَى اَدْيَانِهِمْ وَعَلَى اَمْوَالِهِمْ . اَلْفَ اَلْفِ لاَحَوْلَ وَلاَ قُـوَّةَ اِلاَّ بِـا للّٰهِ اْلعَلِيِّ اْلعَظِيْمِ <br><br>
+
+بِسْمِ اللّٰهِ اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ ، اَللّٰهُ اَكْبَرُ ، اَقُوْلُ عَلَى نَفْسِيْ وَعَلَى دِيْنِيْ وَعَلَى اَهْـلِيْ وَعَلَى اَوْلاَدِيْ وَعَلَى مَالِيْ وَعَلَى أَصْحَـابِيْ وَعَـلَى اَدْيَانِهِمْ وَعَلَى اَمْوَالِهِمْ . اَلْفَ اَلْفِ اَلْفِ لاَحَوْلَ وَلاَ قُـوَّةَ اِلاَّ بِـا للّٰهِ اْلعَلِيِّ اْلعَظِيْمِ <br><br>
+
+بِسْمِ اللّٰهِ وَ بِـا للّٰهِ ، وَمِنَ اللّٰهِ ، وَاِلٰى اللّٰهِ ، وَعَلى اللّٰهِ ، وفِي اللّٰهِ ، وَلاَحَوْلَ وَلاَ قُـوَّةَ اِلاَّ بِـا للّٰهِ اْلعَلِيِّ اْلعَظِيْمِ <br><br>
+
+بِسْمِ اللّٰهِ عَلَى دِيْنِيْ وَعَلَى نَفْسِيْ ، بِسْمِ اللّٰهِ عَلَى مَالِيْ وَعَلَى أَهْـلِيْ وَعَلَى اَوْلاَدِيْ وَعَلَى اصْحَـابِيْ، بِسْمِ اللّٰهِ عَلَى كُلِّ شَيْءٍ اَعْطَانِيْهِ رَبِّيْ، بِسْمِ اللّٰهِ رَبِّ السَّمَوَتِ السَّبْعِ، وَرَبِّ اْلاَرَضِيْنَ السَّبْعِ، وَرَبِّ اْلعَرْ شِ اْلعَظِيْمِ <br><br>
+
+</p><p>Dibaca 3X : </p><p style="text-align: right;" class="arab">
+
+بِسْمِ اللّٰهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ
+
+</p><br><br><p>Dibaca 3X : </p><p style="text-align: right;" class="arab">
+
+بِسْمِ اللّٰهِ خَيْرِاْلاَ سْمآءِ، فِى اْلاَرْضِ وَفِى السَّمَآءِ<br>
+بِسْمِ اللّٰهِ اَفْتَتِحُ ، وَبِهِ اَخْتَتِمُ، اَللّٰهُ ، اَللّٰهُ ، اَللّٰهُ ، رَ بِّيْ لاَ اُشْرِكُ بِهِ اَحَداً ، اَللّٰهُ ، اَللّٰهُ ، اَللّٰهُ  َلآاِلَـهَ اِلاَّ هُوَ، اَللّٰهُ ، اَللّٰهُ ، اَللّٰهُ ، أَعَزُّ وَاَجَلُّ وَاَكْبَرُ مِمَّا اَخَافُ وَاَحْذَرُ <br><br>
+
+اَللَّهُـمَّ اِنِّيْ اَعُوْذُ بِكَ مِنْ شَرِّ نَفْسِيْ وَمِنْ شَـِّر غَيْرِيْ وَمِنْ شَرِّ مَا خَلَقَ رَبِّيْ ، بِكَ اللَّهـُمَّ اَحْـتَرِزُ مِنْهُمْ، وَبِكَ اللَّهُـمَّ اَدْرَأُ فِى نُحُوْرِهِمْ،  وَبِكَ اللَّهُـمَّ اَعُوْذُ مِنْ شُرُوْرِهِمْ، ْوَأَسْتَكْفِيْكَ إِيَّاهُمْ، وَاُقَدِّمُ بَيْنَ يَدَيَّ ، وَاَيْدِيْ مَنْ اَحَاطَتْهُ عِنَايَتِيْ وَشَمِلَتْهُ أحَاطَتِيْ <br><br>
+ 
+</p><p>Membaca Al-Ikhlas 3X: </p><br><br><p style="text-align: right;" class="arab">
+
+بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>
+
+قُلْ هُوَ اللّٰهُ اَحَدٌۚ – ١<br><br>
+
+اَللّٰهُ الصَّمَدُۚ – ٢<br><br>
+
+لَمْ يَلِدْ وَلَمْ يُوْلَدْۙ – ٣<br><br>
+
+وَلَمْ يَكُنْ لَّهٗ كُفُوًا اَحَدٌ ࣖ - ٤<br><br>
+
+
+ وَمِثْـلُ ذَلِكَ عَنْ يَمِيْنِيْ وَأَيْمَانِهِمْ، وَمِثْلُ ذَلِكَ عَنْ شِمَالِيْ وَعَنْ شَمَائِلِهِمْ ، وَمِثْلُ ذَلِكَ اَمَامِيْ وَاَمَامِهِمْ ، وَمِثْلُ ذَلِكَ مِنْ خِلْفِيْ وَمِنْ خَلْفِهِمْ ، وَمِثْلُ ذَلِكَ مِنْ فَوْقِيْ وَمِنْ فَوْقِهِمْ ، وَمِثْلُ ذَلِكَ مِنْ تَحْتِيْ وَمِنْ تَحْتِهِمْ وَمِثْلُ ذَلِكَ مَحِيْطٌ بِيْ وَبِهِمْ وَبِمَا اَحَطْنَا بِهِ<br><br>
+
+اَللَّهُـمَّ اِنِّيْ اَسْأَلُكَ لِيْ وَلَهُمْ مِنْ خَيْرِكَ بِخَيْرِكَ اَلَّذِيْ لاَ يَمْلِكُهُ غَيْرُكَ. اَللَّهُـمَّ اجْعَلْنِيْ وَاِيَّاهُمْ فِى حِفْظِكَ، وَعِيَاذِكَ، وَعِبَادِكَ، وَعِيَالِكَ، وَجِوَارِكَ، وَاَمْنِكَ، وَاَمَانَتِكَ، وَحِزْبِكَ، وَحِرْزِكَ، وَكَنَفِكَ، وَسَتْرِكَ، وَلُطْفِكَ، مِنْ كُلِّ شَيْطَانٍ وَسُلْطَانٍ، وَإنْسٍ وَجَـآنٍّ، َوبَاغٍ وَحَاسِدٍ، وَسَبُعٍ وَحَيَّةٍ وَعَقْرَبٍ. وَمِنْ شَرِّ كُلِّ دَآبَّةٍ اَنْتَ اَخِذُ بِنَاصِيَتَهِا اِنَّ رَبِّيْ عَلَى صِرَاطٍ مُسْتَقِيْمٍ<br><br>
+
+حَسْبِيَ الرَّبُّ مِنَ الْمَرْبُوْبِيْنَ، حَسْبِيَ الخَالِقُ مِنَ اْلمَخْلُوْقِيْنَ، حَسْبِيَ الرَّازِقُ مِنَ اْلمَرْزُوْقِيْنَ، حَسْبِيَ السَّاتِرُ مِنَ اْلمَسْتُوْرِيْنَ، حَسْبِيَ النَّاصِـرُ مِنَ اْلمَنْصُوْرِيْنَ، حَسْبِيَ اْلقَاهِرُمِنَ اْلمَقْهُوْرِيْنَ، حَسْبِيَ الَّذِيْ هُوَ حَسْبِيْ، حَسْبِيَ مَنْ لَمْ يَزَلْ حَسْبِيْ، حَسْبِيَ اللّٰهُ وَنِعْمَ الْوَكِيْلُ ، حَسْبِيَ اللّٰهُ مِنْ جَمِيْعِ خَلْقِهِ<br><br>
+
+</p><p>Dibaca 7X:</p> <br><br><p style="text-align: right;" class="arab">
+
+اِنَّ وَلِيِّ َۧ اللّٰهُ الَّذِيْ نَزَّلَ الْكِتٰبَۖ وَهُوَ يَتَوَلَّى الصّٰلِحِيْنَ - ١٩٦<br><br>
+
+وَاِذَا قَرَأْتَ الْقُرْاٰنَ جَعَلْنَا بَيْنَكَ وَبَيْنَ الَّذِيْنَ لَا يُؤْمِنُوْنَ بِالْاٰخِرَةِ حِجَابًا مَّسْتُوْرًاۙ – ٤٥<br><br>
+
+وَّجَعَلْنَا عَلٰى قُلُوْبِهِمْ اَكِنَّةً اَنْ يَّفْقَهُوْهُ وَفِيْٓ اٰذَانِهِمْ وَقْرًاۗ وَاِذَا ذَكَرْتَ رَبَّكَ فِى الْقُرْاٰنِ وَحْدَهٗ وَلَّوْا عَلٰٓى اَدْبَارِهِمْ نُفُوْرًا – ٤٦<br><br>
+
+فَاِنْ تَوَلَّوْا فَقُلْ حَسْبِيَ اللّٰهُ لَآ اِلٰهَ اِلَّا هُوَ ۗ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيْمِ ࣖ - ١٢٩<br><br>
+
+ وَلاَحَوْلَ وَلاَ قُـوَّةَ اِلاَّ بِـا للّٰهِ اْلعَلِيِّ اْلعَظِيْمِ <br><br>
+
+وَصَلَّى للّٰهُ عَلَى سَيِّدنَا مُحَّمَدْ اِلنَّبِيِّ اْلاُمِّيِّ وَعَلَى اَلِهِ وَصَحْبِهِ وَسَلَّمَ <br><br>
+
+</p><p>Kemudian meniup ke kanan, ke kiri, ke depan dan ke belakang masing-masing 3x</p><br><br><p style="text-align: right;" class="arab">
+
+خَبَأْتُ نَفْسِيْ فِى خَزَاِئنِ بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ ، اَقْفَالُهَا ثِقَتِى بِـا للّٰهِ ، مَفَاتِيْحُهَا لاَحَوْلَ وَلاَ قُـوَةَ إِلاَّ بِـا للّٰهِ ، اُدَافِعُ بِكَ اللَّهـُمَّ عَنْ نَفْسِيْ مَـا اُطِيْقُ وَمَا لاَ اُطِيْقُ ، لاَ طَاقَةَ لِمَخْلُوْقٍ مَعَ قُدْرَةِ الْخَالِقِ، حَسْبِيَ اللّٰهُ وَنِعْمَ الْوَكِيْلُ ، بِخَفِيِّ لُطْفِ اللّٰهِ ، بِلَطِيْفِ صُنْعِ اللّٰهِ بِجَمِيْلِ سِتْرِ اللّٰهِ ، دَخَلْتُ فِى كَنَفِ اللّٰهِ ، تَشَفَعْتُ بِسَيِّدِنَا رَسُوْلِ اللّٰهِ ، تَحَصَّنْتَ بِأَسْمَـآءِ اللّٰهِ ، اَمَنْتُ بِا للّٰهِ ، تَوَكَّلْتُ عَلَى للّٰهِ اِدَّخَرْتُ ا للّٰهِ لِكُلِّ شِدَّةٍ <br><br>
+
+اَللَّهـُمَ يَا مَنْ إِسْمُهُ مَحْبُوْبُ، وَوَجْهُهُ مَطْلُوْبُ، اِكْفِنِيْ مَا قَلْبِيْ مِنْهُ مَرْهُوْبُ، اَنْتَ غَالِبٌ غَيْرُ مَغْلُوْبٍ ، وَصَلَّى للّٰهُ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى اَلِـهِ وَصَحْبِهِ وَسَــلَّمَ ، حَسْبِيَ  للّٰهُ وَنِعْمَ اْلوَ كِيْلُ <br><br></p>
+
+<p>Kemudian membaca:<br><br>
+
+Dibaca 70X:</p><br><br><p style="text-align: right;" class="arab">
+
+حَسْبُنَا اللّٰهُ وَنِعْمَ اْلوَ كِيْلُ <br><br>
+
+فِيْ كُلِّ لَحْظَةٍ اَبَدًا, عَدَدَ خَلْقِهِ, وَرِضَى نَفْسِهِ, وَزِنَةَ عَرْشِهِ, وَمِدَادَ كَلِمَاتِهِ<br><br></p>
+
+<p>Dibaca 11X:</p><br><br><p style="text-align: right;" class="arab">
+
+وَاُفَوِّضُ اَمْرِيْٓ اِلَى اللّٰهِ ۗاِنَّ اللّٰهَ بَصِيْرٌ ۢبِالْعِبَادِ - ٤٤ <br><br>
+
+فِيْ كُلِّ لَحْظَةٍ اَبَدًا, عَدَدَ خَلْقِهِ, وَرِضَى نَفْسِهِ, وَزِنَةَ عَرْشِهِ, وَمِدَادَ كَلِمَاتِهِ<br><br></p>
+
+<p>Dibaca 27x: </p><br><br><p style="text-align: right;" class="arab">
+
+أَسْتَغْفِرُ اللّٰهَ  الَّذِيْ لَا اِلٰهَ إِلَّا اللّٰهُ هُوَ الرَّحْمٰنُ الرَّحِيْمُ الْحَيُّ الْقَيُّوْمُ الَّذِيْ لَايَمُوْتُ وَأَتُوْبُ إِلَيْهِ رَبِّ اغْفِرْلِيْ <br><br></p>
+
+<p>Dibaca 27X: <br><br></p><p style="text-align: right;" class="arab">
+
+أَسْتَغْفِرُ اللّٰهَ  لِلْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ</p><p><i>Bismillahirrahmanirrahim. <br><br>
+
+Bismillahi allahu akbar, aqulu 'ala nafsi wa 'ala dini wa 'ala ahli wa 'ala auladi wa 'ala mali wa 'ala ashhabi wa 'ala adyanihim wa 'ala amwalihin alfa la haula wa la quwwata illa billahil 'aliyyil 'azhim. 
+
+<br><br>Bismillahi allahu akbar, allahu akbar, aqulu 'ala nafsi wa 'ala dini wa 'ala ahli wa 'ala auladi wa 'ala mali wa 'ala ashhabi wa 'ala adyanihim wa 'ala amwalihim. Alfa alfi la haula wala quwwata illa billahil 'aliyyil 'azhim.
+
+<br><br>Bismillahi allahu akbar, allahu akbar, allahu akbar, aqulu 'ala nafsi wa 'ala dini wa 'ala ahli wa 'ala auladi wa 'ala mali wa 'ala ashhabi wa 'ala adyanihim wa 'ala amwalihim. Alfa alfi alfi la haula wala quwwata illa billahil 'aliyyil 'azhim. 
+
+<br><br>Bismillah wa billah, wa minallah, wa ilallah, wa 'ala allah, wa fillah, wala haula wala quwwata illa billahil 'aliyyil 'azhim.
+
+<br><br>Bismillahi 'ala dini wa 'ala nafsi, bismillahi 'ala mali wa 'ala ahli wa 'ala auladi wa 'ala ashhabi, bismillahi 'ala kulli syaiin a'thonihi robbiy, bismillahi robbi assamawatis sab'i, wa robbil  arodhinas sab'i, wa robbil arsyil 'adzim
+
+<br><br>Bismillahililladzi la yadhurru ma'asmihi syaiun fil ardhi wala fissamai wahuwas sami'ul 'alim. (3X) 
+
+<br><br>Bismillahi khairil asma’ fil ardhi wafis sama’i.  (3X) 
+
+<br><br>Bismillahi aftatihu, wabihi akhtatimu, allahu, allahu, allahu rabbi la usyrikubihi ahadan, allahu allahu, allahu lailaha illa huwa allah allah allah a’azzu wa ajallu wa akbaru mimma akhafu wa ahdzaru
+
+<br><br>Allahumma inni a’udzu bika min syarri nafsi wa min syarri ghairi wa min syarri ma khalaqa rabbi bika allahumma ahtarizu minhum wa bika allahumma adra’u fi nuhurihim wabika allahumma a’udzu min syururihim wa astakfika iyyahum wa uqaddimu bayna yadayya wa aydi man ahathathu ‘inayati wa syamilathu ahathati
+
+<br><br>Bismillahir rahmanir Rahim. Qul huwallāhu aḥad. Allāhuṣ-ṣamad. Lam yalid wa lam yụlad. Wa lam yakul lahụ kufuwan aḥad.  (3X) 
+
+<br><br>Wamitslu dzalika ‘an yamini waaymanihim, Wamitslu dzalika ‘an syimali wa an syamailihim, Wamitslu dzalika amami wa amamihim, Wamitslu dzalika min khalfi wamin khalfihim, Wamitslu dzalika min fawqi wamin fawqihim, Wamitslu dzalika min tahti wamin tahtihim, Wamitslu dzalika muhithum bi wa bihim wabima ahathna bihi. 
+
+<br><br>Allahumma inni as’aluka li walahum min khairika bikhairikal ladzi la yamlikuhu ghairuka. Allahummaj ‘alni waiyyahum fi hifdhika wa’iyadzika wa ibadika wa’iyalika wajiwarika waamnika waamanatika wahizbika wahirzika wakanafika wasatrika waluthfika min kulli syaithanin wa sulthanin wa insin wajannin wa baghin wa hasidin wasabuin wahayyatin wa ‘aqrabin wamin kulli syarri dabbatin anta akhidu binashiyatiha inna rabbi ala shirathim mustaqim
+
+<br><br>Hasbiyar rabbu minal marbubin, hasbiyal khaliqu minal makhluqin, hasbiyar raziqu minal marzuqina, hasbiyas satire minal masturina, hasbiyan nashiru minal manshurina hasbiyal qahiru minal maqhurin, hasbiyal ladzi huwa hasbi, hasbiya man lam yazal hasbi hasbiyallahu wa ni’mal wakil hasbiyallahu min jami’I khalqihi.
+
+<br><br></p><p>Dibaca 7X: </p>
+
+<br><br>inna waliyyiyallāhullażī nazzalal-kitāba wa huwa yatawallaṣ-ṣāliḥīn. 
+
+<br><br>Wa iżā qara`tal-qur`āna ja'alnā bainaka wa bainallażīna lā yu`minụna bil-ākhirati ḥijābam mastụrā.
+
+<br><br>Wa ja'alnā 'alā qulụbihim akinnatan ay yafqahụhu wa fī āżānihim waqrā, wa iżā żakarta rabbaka fil-qur`āni waḥdahụ wallau 'alā adbārihim nufụrā.
+
+<br><br>Fa in tawallau fa qul ḥasbiyallāhu lā ilāha illā huw, 'alaihi tawakkaltu wa huwa rabbul-'arsyil-'aẓīm. 
+
+<br><br>Wala haula wala quwwata illa billahil ‘aliyyil ‘adhim
+
+<br><br>Wa shallallahu ‘ala sayyidina Muhammad an nabiyyil ummiyyi wa ‘ala alihi wa shahbihi wa sallama
+
+<br><br>Kemudian meniup ke kanan, ke kiri, ke depan dan ke belakang masing-masing 3X: 
+
+<br><br>Khoba'tu nafsi fi khozaini bismillahirrahmanirrahim, aqfaluha tsiqoti billah, mafatihuha lahaula wala quwwata illa billah, udafi'u bika allohumma 'an nafsi ma uthiqu wama laa 'uthiq, laa thoqota limakhluq ma'a qudrotilkholiq, hasbiya allah wa ni'mal wakil, bikhofiyyi luthfillah, bilathifi sun'i allahi bijamili sitrillah, dakholtu fi kanafillah, tasyafa'tu bisayyidina rosulillah, tahashhonta biasmaillah, amantu billah,  tawakkaltu 'ala allah iddakhortu allahi likulli syiddah
+
+<br><br>Allahumma Yaman ismuhu mahbub, wawajhuhu mathlub, ikfini ma qolbi minhu marhub, anta gholibu ghoiru maghlub, wa shollallahu 'ala sayyidina Muhammadin wa 'ala alihi washohbihi wasallam, hasbiya allah wa ni'mal wakil.
+
+<br><br>Hasbunallahu wani’mal wakil  (70X)
+
+<br><br>Fi kulli lahdhatin abada, ‘adada khalqihi wa ridha nafsihi wazinata ‘arsyihi, wamidada kalimatihi
+
+<br><br>Waufawwidhu amri ilallahi innallaha bashirum bil ‘ibad (11X)
+
+<br><br>Fi kulli lahdhatin abada, ‘adada khalqihi wa ridha nafsihi wazinata ‘arsyihi, wamidada kalimatihi
+
+<br><br>Astaghfirullahal ladzi lailahailla huwar rahmanur rahimul hayyul qayyumul ladzi  layamutu wa atubu ilaihi rabbighfirli (27X)
+
+
+<br><br>Astaghfirullaha lil mu’minina wal mu’minati (27X)</i></p><br><br><p>Dengan menyebut nama Allah yang Maha Pengasih dan Maha Penyayang.
+
+<br><br>Dengan menyebut nama Allah Allah adalah Zat yang Maha Besar, aku berkata kepada diriku sendiri dan atas agamaku dan atas keluargaku, dan atas anak-anakku dan atas hartaku dan atas sahabat-sahabatku dan atas agama-agama mereka dan atas harta-harta mereka dengan bacaan seribu kali (la hawla wala quwwata illa billahil aliyyil adhim) tiada daya dan kekuatan kecuali dengan daya dan kekuatan Allah yang Maha Tinggi dan Agung.
+
+<br><br>Dengan menyebut nama Allah, Allah adalah Zat yang Maha Besar, Allah adalah Zat yang Maha Besar, aku berkata kepada diriku sendiri dan atas agamaku dan atas keluargaku, dan atas anak-anakku dan atas hartaku dan atas sahabat-sahabatku dan atas agama-agama mereka dan atas harta-harta mereka dengan bacaan satu juta kali (la hawla wala quwwata illa billahil aliyyil adhim) tiada daya dan kekuatan kecuali dengan daya dan kekuatan Allah yang Maha Tinggi dan Agung. 
+
+<br><br>Dengan menyebut nama Allah, Allah adalah Zat yang Maha besar, Allah adalah Zat yang Maha Besar, Allah adalah Zat yang Maha Besar, aku berkata kepada diriku sendiri dan atas agamaku dan atas keluargaku, dan atas anak-anakku dan atas hartaku dan atas sahabat-sahabatku dan atas agama-agama mereka dan atas harta-harta mereka dengan bacaan satu miliar kali (la hawla wala quwwata illa billahil aliyyil adhim) tiada daya dan kekuatan kecuali dengan daya dan kekuatan Allah yang Maha Tinggi dan Agung. 
+
+<br><br>Dengan menyebut nama Allah dan dengan Allah dan dari Allah dan kepada Allah dan atas Allah dan di dalam Allah dan tiada daya dan kekuatan kecuali dengan daya dan kekuatan Allah yang Maha Tinggi dan Agung.
+
+<br><br>Dengan menyebut nama Allah atas agamaku, atas diriku sendiri,  Dengan menyebut nama Allah atas hartaku, dan atas keluargaku, dan atas anak-anakku dan atas sahabatku dengan menyebut nama Allah terhadap segala sesuatu yang telah diberikan Tuhanku kepadaku, dengan menyebut nama Allah penguasa langit hingga langit ke tujuh dan penguasa bumi hingga lapis ke tujuh dan Penguasa ‘Arsy yang Agung.
+
+<br><br>Dengan menyebut nama Allah Zat yang segala sesuatu di bumi dan di langit tidak akan mampu mendatangkan bahaya bila bersama nama-Nya. Dia adalah Zat yang Maha Mendengar dan Maha Mengetahui.
+
+<br><br>Dengan menyebut nama Allah, sebaik-baiknya nama di bumi dan di langit.
+
+<br><br>Dengan menyebut nama Allah aku memulai melakukan sesuatu. Dengan menyebut nama Allah aku menyelesaikannya Allah Allah Allah adalah penguasaku aku tidak akan menyekutukan-Nya dengan siapa dan apapun. Allah Allah Allah tiada Tuhan kecuali Dia, Allah Allah Allah Zat yang termulia, teragung, terbesar dari apa apa yang aku takutkan dan aku waspadai.
+
+<br><br>Ya Allah sesungguhnya aku berlindung diri kepada-Mu dari keburukan diriku sendiri dan dari keburukan orang lain dan dari keburukan ciptaan Allah (Rabbku). dengan nama-Mu Ya Allah aku berlindung dari mereka. Dengan nama-Mu Ya Allah  aku menghindar diri dari dampak jahat mereka. Dengan nama-Mu Ya Allah aku berlindung dari keburukan mereka. Dan aku mencukupkan diri dengan perlindungan-Mu atas keburukan mereka. Dan aku berani maju kehadapanku dan ke hadapan orang-orang yang aku lindungi dan melindungiku.
+
+<br><br>Dengan menyebut nama Allah yang Maha Pengasih dan Maha Penyayang
+
+Katakanlah (Muhammad), “Dialah Allah, Yang Maha Esa.<br>
+Allah tempat meminta segala sesuatu.<br>
+(Allah) tidak beranak dan tidak pula diperanakkan.<br>
+Dan tidak ada sesuatu yang setara dengan Dia.<br>
+
+<br>Dan semisal hal itu dari arah kananku dan arah kanan mereka. Dan semisal hal itu dari kiriku dan arah kiri mereka. Dan semisal hal itu dari depanku dan arah depan mereka. Dan semisal hal itu dari arah belakang dan arah belakang mereka. Dan semisal hal itu dari arahku atas dan arah atas mereka. Dan semisal hal itu dari arah bawahku dan arah bawah mereka. Dan semisal hal itu arah yang melingkupiku dan mereka dan dengan sesuatu yang kami melingkupinya.
+
+<br><br>Ya Allah sesungguhnya aku memohon kepada-Mu untukku dan untuk mereka akan kebaikan dari-Mu dan dengan kebaikan yang hanya dimiliki-Mu. Ya Allah jadikanlah aku dan mereka berada dalam penjagaan-Mu dan perlindungan-Mu, termasuk para hamba-Mu, keluarga-Mu, Tetangga-Mu, dalam keamanan-Mu, dan titipan-Mu, kelompok-Mu, perlindungan-Mu, pemeliharaan-Mu, tutup-Mu, kelembutan-Mu, dari setiap syaitan yang menguasai dan penguasa yang berhati syaitan. Manusia, Jin dan Jin, orang yang melampaui batas, orang yang iri dengki, binatang buas, ular, kalajengking, dan dari keburukan setiap binatang melata lainnya. Engkaulah yang mampu mengambil ubun-ubunnya sesungguhnya Tuhanku berada di atas jalan yang lurus.
+
+<br><br>Cukuplah aku mengandalkan Tuhanku dari orang orang yang dikuasai, cukuplah aku mengandalkan penciptaku dari orang orang yang diciptakan, cukuplah aku mengandalkan pemberi rizki dari orang orang yang diberi rizki, cukuplah aku mengandalkan penutup aibku dari orang orang yang ditutup aibnya oleh Allah. Cukuplah aku mengandalkan penolongku dari orang orang yang ditolong, cukuplah aku mengandalkan Sang Pemaksa dari orang orang yang dipaksa, cukuplah aku mengandalkan Zat yang memberi kecukupan, cukuplah aku mengandalkan Zat yang senantiasa memberi kecukupan, cukuplah Allah sebaik-baiknya penolong, cukuplah dengan Allah berlindung diri dari semua makhluk. 
+
+<br><br>Sesungguhnya pelindungku ialah Allah yang telah menurunkan Al Kitab (Al Quran) dan Dia melindungi orang-orang yang saleh (QS. Al-a’raf [7]: 196).
+
+<br><br>Dan apabila kamu membaca Al-Qur’an niscaya Kami adakan antara kamu dan orang-orang yang tidak beriman kepada kehidupan akhirat, suatu dinding yang tertutup (QS. Al-Isra [17]: 45).
+
+ <br><br>Dan Kami adakan tutupan di atas hati mereka dan sumbatan di telinga mereka, agar mereka tidak dapat memahaminya. Dan apabila kamu menyebut Tuhanmu saja dalam Al-Qur’an, niscaya mereka berpaling ke belakang karena bencinya (QS. Al-Isra [17]: 46).
+
+<br><br>Maka jika mereka berpaling (dari keimanan), maka katakanlah (Muhammad), Cukuplah Allah bagiku; tidak ada Tuhan selain Dia. Hanya kepada-Nya aku bertawakal, dan Dia adalah Tuhan yang memiliki ‘Arsy (singgasana) yang Agung (QS. At-Taubah [9]: 129)
+
+<br><br>Tiada daya dan kekuatan melainkan daya dan kekuatan Allah yang Maha Tinggi dan Agung.
+
+<br><br>Semoga Allah memberikan rahmat dan ketentraman-Nya kepada pemimpin kami Muhammad, seorang Nabi yang Ummi (lembut perangainya dan besar kasih sayangnya) dan atas keluarganya, sahabatnya.
+
+<br><br>Aku menyembunyikan diri dalam persembunyian bismillahirrahmaniirrahim. Gemboknya adalah kepercayaanku kepada Allah. Kuncinya adalah lahawla wala quwwata illa billahil aliyyil ‘adhim. Aku membela diri dengan nama-Mu ya Allah terhadap hal yang aku mampu dan tidak aku mampui. Tiada kemampuan bagi makhluk dengan kekuasaan Sang Khalik. Cukuplah Allah sebaik baiknya penolong. Dengan samarnya kelembutan Allah dan dengan lembutnya perbuatan Allah dan dengan indahnya tutup Allah aku masuk dalam penjagaan Allah. Aku berharap pertolongan kepada pemimpin kami utusan Allah. Aku berlindung diri dengan nama nama Allah aku beriman kepada Allah aku berpasrah diri kepada Allah. Aku menyembunyikan diri dalam perlindungan Allah dari setiap petaka.
+
+<br><br>Ya Allah Zat yang nama-Nya dicintai dan Zat-Nya dicari,  cukupkanlah dengan apa yang dikhawatirkan oleh hatiku. Engkau adalah menguasai, tidak dikuasai. Semoga Allah memberikan rahmat dan ketentraman kepada pemimpin kami Muhammad dan keluarga serta sahabatnya. Cukuplah Allah sebaik baiknya penolong.
+
+<br><br>Kecukupan kami adalah Allah sebaik baiknya penolong 
+
+<br><br>Disetiap saat selamanya sejumlah makhluk Allah, dan dengan keridhaan Zat Allah, dan seberat timbangan ‘Arsy Allah dan sejumlah kalimat-kalimat Allah 
+
+<br><br>Aku memohon ampunan kepada Allah Zat yang tiada Tuhan selain Dia yang Maha Pengasih dan Penyayang Zat yang Maha Hidup dan Maha Tegar Zat yang tidak akan mati dan aku kembali kepada-NyaTuhanku, ampunilah aku.
+
+
+<br><br>Aku memohon ampunan kepada Allah untuk laki-laki yang beriman dan perempuan yang beriman.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Wirid Imam Nawawi ini bersumber dari kitab Khulasoh Madad Nabawi karya Habib Umar bin Hafiz. Disarankan untuk mengamalkannya setelah shalat Subuh  dan/atau shalat Isya.</p><p><strong>
+</strong></p>
+
+
+
+
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

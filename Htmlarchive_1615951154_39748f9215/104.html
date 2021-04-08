@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Doa Qunut Shalat Subuh, Magrib, dan Witir</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَللَّهُـمَّ اهْدِنِي فِيمَنْ هَدَيْتَ، وَعَافِنِي فِيمَنْ عَافَيْتَ،<br><br>وَتَوَلَّنِي فِيمَنْ تَوَلَّيْتَ، وَبَارِكْ لِي فِيمَا أَعطَيْتَ، وَقِنِي شَرَّ مَا قَضَيْتَ،<br><br>فَإِنَّكَ تَقْضِي وَلَا يُقْضَى عَلَيْكَ، إِنَّهُ لَا يَذِلُّ مَنْ وَالَيْتَ،<br><br>وَلَا يَعِزُّ مَنْ عَادَيْتَ، تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ<br><br>وَصَلَّى اللَّهُ عَلَى النَّبِيِّ مُحَمَّدٍ<br><br>Kemudian bisa juga ditambah doa yang bersumber dari Sayyidina Umar bin Khattab ra.:<br><br>اللَّهُـمَّ إِنَّا نَسْتَعِيْنُكَ وَنَسْتَغْفِرُكَ وَلَا نَكْفُرُكَ, وَنُؤْمِنُ بِكَ وَنَخْلَعُ مَنْ يَفْجُرُكَ . اللَّهُـمَّ إِيَّاكَ نَعْبُدُ, وَلَكَ نُصَلِّيْ وَنَسْجُدُ, وَإِلَيْكَ نَسْعٰى وَنَحْفِدُ, نَرْجُوْ رَحْمَتَكَ وَنَخْشَى عَذَابَكَ. إِنَّ عَذَابَكَ الْجِدَّ بِالْكُفَّارِ مُلْحِقٌ. اللَّهُـمَّ عَذِّبِ الْكَفَرَةَ الَّذِيْنَ يَصُدُّوْنَ عَنْ سَبِيْلِكَ, وَيُكَذِّبُوْنَ رُسُلَكَ, وَيُقَاتِلُوْنَ أَوْلِيَاءَكَ. اللَّهُـمَّ اغْفِرْ لِلْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ, وَاصْلِحْ ذَاتَ بَيْنِهِمْ, وَأَلِّفْ بَيْنَ قُلُوْبِهِمْ , وَاجْعَلْ فِيْ قُلُوْبِهِمُ الْإِيْمَانَ وَالْحِكْمَةَ, وَثَبِّتْهُمْ عَلٰى مِلَّةِ رَسُوْلِ اللَّهِ صَلّٰى اللَّهُ عَلَيْهِ وَسَلَّمَ, وَأَوْزِعْهُمْ اَنْ يُوْفُوْا بِعَهْدِكَ الَّذِيْ عَاهَدْتَهُمْ عَلَيْهِ, وَانْصُرْهُمْ عَلٰى عَدُوِّكَ وَعَدُوِّهِمْ إِلَهَ الْحَقِّ وَاجْعَلْنَا مِنْهُمْ<br><br>Atau: <br><br>اللَّهُـمَّ إِنَّا نَسْتَعِينُكَ، وَنَسْتَغْفِرُكَ، وَنُثْنِي عَلَيْكَ الْخَيْرَ، وَلَا نَكْفُرُكَ، وَنُؤْمِنُ بِكَ، وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ، اللَّهُـمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ، وَإِلَيْكَ نَسْعَى وَنَحْفِدُ، نَرْجُو رَحْمَتَكَ، وَنَخْشَى عَذَابَكَ الْجِدَّ، إِنَّ عَذَابَكَ الْجِدَّ بِالْكُفَّارِ مُلْحَقٌ، اللَّهُـمَّ عَذِّبِ الْكَفَرَةَ وَالْمُشْرِكِينَ، وَأَلْقِ فِي قُلُوبِهِمُ الرُّعْبَ، وَخَالِفْ بَيْنَ كَلِمَتِهِمْ، وَأَنْزِلْ عَلَيْهِمْ رِجْزَكَ وَعَذَابَكَ، اللَّهُـمَّ عَذِّبِ كَفَرَةَ أَهْلِ الْكِتَابِ الَّذِينَ يَصُدُّونَ عَنْ سَبِيلِكَ وَيُكَذِّبُونَ رُسُلَكَ، اللَّهُـمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ، وَالْمُسْلِمِينَ وَالْمُسْلِمَاتِ، اللَّهُـمَّ أَصْلِحْ ذَاتَ بَيْنِهِمْ، وَأَلِّفْ بَيْنَ قُلُوبِهِمْ، وَاجْعَلْ فِي قُلُوبِهِمُ الْإِيمَانَ وَالْحِكْمَةَ، وَأَوْزِعْهُمْ أَنْ يَشْكُرُوا نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيْهِمْ، وَأَنْ يُوَفُّوا بِعَهْدِكَ الَّذِي عَاهَدْتَهُمْ عَلَيْهِ، وَتَوَّفَهُمْ عَلَى مِلَّةِ رَسُولِكَ، وَانْصُرْهُمْ عَلَى عَدُوِّكَ وَعَدُوِّهِمْ إِلَهَ الْحَقِّ وَاجْعَلْنَا مِنْهُمْ</p><p><i>Allāhummahdinī fī-man hadayta, wa 'āfinī fī-man 'āfayta, wa tawallanī fī-man tawallayta, wa bārik lī fī-mā a'thayta, wa qinī syarra mā qadhayta. Fa-innaka taqdī wa lā yuqdhā 'alayka, innahu lā yadzillu man walayta, wa lā ya-'izzu man 'ādayta, tabarakta rabbanā wa ta-'ālayt.<br><br>Allahumma inna nastaii’nuka wanastaghfiruka walaa nakfuruka, wanu minu bika wanakhla’u man yafjuruka. Allahumma iyyaka na’budu, walaka nushalli wanasjudu, wailaika nas’aa wanahfidu, narjuu rahmataka wanakhsyaa ‘adzabaka. Inna ‘adzaabakal jidda bil kuffaari mulhiqqun. Allahumma ‘adzdzibil kafaratal ladziina yashudduuna ‘an sabiilika, wayukadzdzibuuna rusulaka, wayuqaa tiluuna awliyaa aka. Allahummaghfir lil mu’miniina wal mu’minaati wal muslimiina wal muslimaati, washlih dzaata bainihim, waallif baina qulubihim, waj’al fii quluubihimul iimana wal hikmata, watsabbithum ‘alaa millati rasulillahi shallallahu 'alaihi wa sallama, wa awzi’hum an yufu bi’ahdikal ladzi ‘ahadtahum ‘alaihi, wanshurhum ‘ala ‘aduwwika wa’aduwwihim ilahal haqqi waj’alna minhum.<br><br>Allaahumma innaa nasta’iinuka wanastaghfiruka walaa nakfuru, wanu’minu bikaa wanakhla’u man yafjuruka. Allaahumma iyyaaka na’budu, walaka nushalli wanasjuda, wa ilaika nas’a wanahfidu, narjuu rahmataka wa nakhsya ‘adzaabaka, inna ‘adzaabakal jidda bil kuffaari mulhaqun. Allaahumma ‘adzdzibil kafaratalladzii yashudduuna ‘an sabiilika, wayukadzdzibuuna rusulaka, wayuqaatiluuna au liyaa aka. Allaahummaghfir lilmu’miniina walmu’minaati walmuslimiina walmuslimaati, wa ashlih dzaata bainihim, wa allif baina quluu bihim, waj’al fii quluubihimul iimaana walhikmata, wa tsabbithum ‘alaa millati rasuulika shallallaahu ‘alaihi wasallama, wa auzi’hum an yuufuu bi’ahdikalladzii ‘aahad tahum ‘alaihi, wanshur hum ‘alaih, wanshurhum ‘alaa ‘aduwwika wa’aduwwihim ilaahal haqqi waj’alnaa minhum.</i></p><p>Ya Allah, berilah aku petunjuk sebagaimana orang-orang yang Engkau beri petunjuk, berilah aku perlindungan (dari penyakit) sebagaimana orang yang telah engkau lindungi, uruslah aku sebagaimana orang yang telah Engkau urus. Berilah berkah apa yang engkau berikan kepadaku, jauhkan aku dari keburukan apa yang Engkau tetapkan. Sesungguhnya Engkau yang menjatuhkan qadha (ketetapan), dan tidak satupun yang memberikan hukuman kepada-Mu. Sesungguhnya orang yang Engkau cintai tidak akan hina dan orang yang Engkau musuhi tidak akan mulia. Mahasuci Engkau, wahai Tuhan kami dan Engkau Mahatinggi.<br><br>Ya Allah, sesungguhnya kami memohon pertolongan kepada-Mu, memohon ampunan kepada-Mu dan kami tidak kafir (ingkar) terhadap-Mu, dan kami beriman kepada-Mu serta meninggalkan orang yang durhaka kepada-Mu, Ya Allah, hanya kepada Engkaulah kami menyembah dan hanya kepada Engkaulah kami shalat dan sujud dan hanya kepada Engkau kami berlari dan bersegera. Kami mengharapkan rahmat-Mu dan takut terhadap siksaan-Mu. Sesungguhnya siksaan-Mu benar benar akan menimpa orang-orang kafir. Ya Allah, timpakanlah azab-Mu kepada orang-orang kafir yang menghalang halangi jalan-Mu yang mendustakan Rasul-Rasul-Mu dan yang memerangi kekasih-kekasih-Mu. Ya Allah, ampunilah kaum laki-laki dan kaum wanita, orang-orang yang muslim dan orang-orang yang mukmin. Perbaikilah semua urusan diantara mereka, jadikanlah kerukunan di antara hati mereka, Jadikanlah di dalam hati mereka iman dan hikmah, tetapkanlah mereka pada agama Rasul-Mu, ilhamkanlah kepada mereka untuk memenuhi janji-Mu yang telah Engkau janjikan kepada mereka, tolonglah mereka dalam menghadapi musuh-Mu dan musuh mereka, wahai Tuhan agama yang hak, dan jadikanlah diri kami termasuk di antara mereka (Sunan Baihaqi no. 2/211 “Bab Du’aul Qunut”)  <br><br>Ya Allah, sesungguhnya kami memohon pertolongan kepada-Mu, memohon ampunan kepada-Mu dan kami tidak kafir (ingkar) terhadap-Mu. Dan kami beriman kepada-Mu serta meninggalkan orang yang durhaka kepada-Mu. Ya Allah, hanya kepada Engkaulah kami menyembah, dan hanya kepada Engkaulah kami shalat dan sujud, dan hanya kepada Engkaulah kami berlari dan bersegera. Kami mengharapkan rahmat-Mu dan takut terhadap siksaan-Mu. Sesungguhnya siksaan-Mu benar-benar akan menimpa orang-orang kafir. Ya Allah, timpakanlah azab-Mu kepada orang-orang kafir yang menghalang-halangi jalan-Mu, yang mendustakan rasul-rasul-Mu dan yang memerangi kekasih-kekasih-Mu. Ya Allah, ampunilah kaum laki-laki dan kaum wanita, orang-orang yang muslim dan orang-orang yang mukmin. Perbaikilah semua urusan di antara mereka, jadikanlah kerukunan di antara hati kami, jadikanlah di dalam hati mereka iman dan hikmah, tetapkanlah mereka pada agama Rasul-Mu, ilhamkanlah kepada mereka untuk memenuhi janji-Mu yang telah Engkau janjikan kepada mereka, tolonglah mereka dalam menghadapi musuh-Mu dan musuh mereka, wahai Tuhan agama yang hak, dan jadikanlah diri kami termasuk di antara mereka (Mushannaf Abdurrazzaq no. 4982).  </p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Rasulullah ﷺ biasa melakukan qunut selama shalat Subuh, Maghrib, dan witir dan mengucapkan doa ini (doa yang pertama). Rasulullah ﷺ pernah ditanya shalat apa yang paling baik, beliau menjawab "yang paling panjang qunutnya."</p><p><strong>Abu Dawud no. 1425, Muslim no. 678, Ibnu Majah no. 619 &1421, Tirmizi no. 401, Nasa'i no. 1745, Al-Adzkar Imam Nawawi
+</strong></p>
+
+
+
+
+
+
+
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

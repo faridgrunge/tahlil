@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>Jama’ah Haji adalah Tamu-Tamu Allah</h1>
+
+<p>&nbsp;</p>
+
+<p style="text-align: right;" class="arab"></p>
+
+<p><em>
+</em></p>
+
+<p>Setelah Nabi Ibrāhim dan putranya Nabi Ismail&nbsp;<em>&lsquo;alaihimassalām</em>&nbsp;selesai membangun Ka&rsquo;bah, maka Allāh memerintahkan Nabi Ibrāhim untuk menyeru kepada manusia agar mereka datang melaksanakan ibadah haji.</p>
+<p>Kenapa?, karena rumah Allāh, Baitullāh, telah dibangun. Tinggal mereka datang menuju Baitullāh untuk berhaji. Allāh Subhānahu wa Ta&rsquo;āla berfirman:</p>
+<p style="text-align: right;" class="arab">وَأَذِّنْ فِي النَّاسِ بِالْحَجِّ يَأْتُوكَ رِجَالًا وَعَلَىٰ كُلِّ ضَامِرٍ يَأْتِينَ مِنْ كُلِّ فَجٍّ عَمِيقٍ</p>
+<p>&ldquo;Dan berserulah kepada manusia untuk mengerjakan haji, niscaya mereka akan datang kepadamu dengan berjalan kaki dan mengendarai unta, yang datang dari segenap penjuru yang jauh.&rdquo; (Qs. Al Hajj ayat 27)</p>
+<p>Untuk apa mereka datang jauh-jauh berhaji?</p>
+<p>Allāh Subhānahu wa Ta&rsquo;āla berfirman :</p>
+<p style="text-align: right;" class="arab">لِيَشْهَدُوا مَنَافِعَ لَهُمْ وَيَذْكُرُوا اسْمَ اللَّهِ فِي أَيَّامٍ مَعْلُومَاتٍ عَلَىٰ مَا رَزَقَهُمْ مِنْ بَهِيمَةِ الْأَنْعَامِ</p>
+<p>&ldquo;Supaya mereka menyaksikan berbagai manfaat bagi mereka dan supaya mereka menyebut nama Allāh (mengingat&nbsp; Allāh) pada hari yang telah ditentukan atas rejeki yang telah Allāh berikan kepada mereka berupa binatang ternak.&rdquo; (Qs. Al Hajj: 28)</p>
+<p>Haji memiliki banyak manfaat. Orang-orang disuruh berhaji agar mereka bisa menyaksikan manfaat-manfaat tersebut tersebut. Selain diampuni dosa-dosa masih banyak manfaat-manfaat lainnya yang Insyā Allāh akan kita jelaskan pada kesempatan yang lain.</p>
+<p>Al Imām Ibnu Katsīr rahimahullāhu Ta&rsquo;āla menyebutkan tafsir dari kalangan salaf tentang ayat ini, yaitu tatkala Allāh mengatakan:&nbsp; <span style="text-align: right;" class="arab"> وَأَذِّنْ فِي النَّاسِ بِالْحَجِّ </span>&nbsp;&ldquo;Wahai Ibrāhim,) serulah kepada manusia untuk datang melaksanakan ibadah haji.&rdquo;, ketika datang perintah ini kepada Nabi Ibrāhim maka disebutkan Nabi Ibrāhim berkata:</p>
+<p style="text-align: right;" class="arab">يَا رَبِّ كَيْفَ أُبَلِّغُ النَّاسَ وَصَوْتِي لاَ يَنْفُذُهُمْ؟</p>
+<p>&ldquo;Yā Rabbku, bagaimana saya bisa menyampaikan kepada orang-orang, menyuruh kepada mereka untuk berhaji, sementara suaraku tidak akan sampai kepada mereka?&rdquo;</p>
+<p>Yaitu Nabi Ibrāhim berada di Mekkah, bagaimana suaranya akan sampai kepada seluruh manusia?</p>
+<p>Maka Allah berkata :<span style="text-align: right;" class="arab"> نَادِ، وَعَلَيْنَا الْبَلاَغُ </span>&ldquo;Menyerulah engkau, yang akan menyampaikan adalah Kami.&rdquo;</p>
+<p>Maka Nabi Ibrāhim &lsquo;alayhissalāmpun berdiri di tempatnya, ada yang mengatakan beliau berdiri di atas Hijr, ada yang mengatakan di atas bukit Shafa, ada yang mengatakan di atas gunung Abū Qubais, kemudian dia berkata:</p>
+<p style="text-align: right;" class="arab">يَا أَيُّهَا النَّاسُ، إِنْ رَبَّكُمْ قَدِ اتَّخَذَ بَيْتًا فَحُجُّوهُ</p>
+<p>&ldquo;Wahai manusia sekalian, sesungguhnya Rabb kalian telah membangun Baitullāh, maka datanglah, berhajilah kalian menuju Baitullāh tersebut.&rdquo; (Tafsiir Ibnu Katsiir 5/414)</p>
+<p>Demikianlah Nabi Ibrāhim &lsquo;alayhissalām akhirnya menyeru kepada manusia, menyampaikan panggilan dan undangan Allah agar mendatangi rumahNya.&nbsp; Maka semenjak itu orang-orang rindu untuk datang melaksanakan ibadah haji karena Allāh yang telah menyampaikan suara Nabi Ibrāhim yang mengumumkan undagan Allah kepada mereka untuk melaksanakan ibadah haji.</p>
+<p>Karenanya mereka yang datang memenuhi seruan Nabi Ibrahim berarti memenuhi undangan Allah. Sehingga mereka dikenal dengan tamu-tamu Allah. Nabi bersabda :</p>
+<p style="text-align: right;" class="arab">الحُجَّاجُ وَالْعُمَّارُ وَفْدُ اللهِ، دَعَاهُمْ فَأَجَابُوْهُ، سَأَلُوْهُ فَأَعْطَاهُمْ</p>
+<p>&ldquo;Sesungguhnya para jama&rsquo;ah haji dan para jama&rsquo;ah umrah adalah tamu Allāh, Allāh telah panggil mereka dan mereka pun memenuhi panggilan Allāh. Lantas setelah merekapun setelah memenuhi panggilan Allāh (sebagai tamu-tamu Allāh), lantas mereka memohon kepada Allāh, maka Allāh pun mengabulkan permohonan mereka.&rdquo; (HR Ibnu Majah nomor 2884, dihasankan oleh Al-Albani dalam as-Shahihah No. 1820)</p>
+<p>Karenanya syi&rsquo;ar mereka tatkala berihrom adalah :</p>
+<p style="text-align: right;" class="arab">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ</p>
+<p>&ldquo;Ya Allah aku penuhi panggilanmu, aku penuhi undanganmu&rdquo;</p>
+<p>Maka sejak Nabi Ibrāhim mengumandangkan pengumuman tersebut ka&rsquo;bah terus dikunjungi, dan terus berlanjut sampai meskipun telah muncul fitnah-fitnah yang besar di akhir zaman.</p>
+<p>Dalam hadīts yang shahīh Rasūlullāh shallallāhu &lsquo;alayhi wa sallam bersabda :</p>
+<p style="text-align: right;" class="arab">لَيُحَجَّنَّ البَيْتُ وَلَيُعْتَمَرَنَّ بَعْدَ خُرُوجِ يَأْجُوجَ وَمَأْجُوجَ</p>
+<p>&ldquo;Sungguh bahwasanya Ka&rsquo;bah ini, orang akan datang berhaji kepadanya, dan orang-orang akan berumrah kepada Ka&rsquo;bah, meskipun setelah keluarnya Ya&rsquo;juj dan Ma&rsquo;juj.&rdquo; (HR Al-Bukhari No. 1593)</p>
+<p>Jadi setelah muncul kekacauan dan huru hara &nbsp;besar ka&rsquo;bah masih dikunjungi untuk haji. Kita tahu bahwa huru hara yang sangat besar pada hari kiamat kelak adalah keluarnya Ya&rsquo;juj dan Ma&rsquo;juj yang akan melakukan kerusakan di atas muka bumi, membunuh makhluk-makhluk yang ada di atas muka bumi, ternyata setelah mereka keluarpun haji masih terlaksana.</p>
+<p>Kapan haji berhenti?. Kapan ka&rsquo;bah tidak dikunjungi lagi?. Jawabannya adalah tatkala ruh-ruh kaum mu&rsquo;minin di akhir zaman telah dicabut oleh Allāh Subhānahu wa Ta&rsquo;āla dan tidak tersisa di atas muka bumi kecuali orang-orang yang terburuk yang kemudian akan merasakan tibanya hari kiamat dan mereka dalam kondisi hidup. Saat itulah maka hajipun berhenti. Rasūlullāh shallallāhu &lsquo;alayhi wa sallam bersabda :</p>
+<p style="text-align: right;" class="arab">لاَ تَقُومُ السَّاعَةُ حَتَّى لاَ يُحَجَّ البَيْتُ</p>
+<p>&ldquo;Tidak akan tegak hari kiamat kecuali sudah tidak ada orang lagi yang berhaji (tidak ada lagi yang datang menuju Ka&rsquo;bah Allāh Subhānahu wa Ta&rsquo;āla).&rdquo; (HR Al-Bukhari No. 1593)</p>
+<p>Pada saat itulah ka&rsquo;bah sudah tidak diagungkan lagi, maka Allah membiarkan ka&rsquo;bah dihancurkan oleh seorang dari Habasyah. Nabi bersabda :</p>
+<p style="text-align: right;" class="arab">يُخَرِّبُ الكَعْبَةَ ذُو السُّوَيْقَتَيْنِ مِنَ الحَبَشَةِ</p>
+<p>&ldquo;Ka&rsquo;bah akan dihacurkan oleh seseorang dari Habasyah yang kedua betisnya kurus kerempeng&rdquo; (HR Al-Bukhari no 1591 dan Muslim no 2909)</p>
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+ @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+	
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+
+<h1>Burdah Imam Al-Bushiri - Bagian 1</h1>
+
+<p>&nbsp;</p><p style="text-align: right;" class="arab">اَلْفَصْلُ الْأَوَّلُ : فِي الْغَزْلِ وَشَكْوَى الْغَرَامِ
+
+<br>مَوْلَايَ صَلِّ وَسَلِّـمْ دَآئِــماً أَبَـدًا ۞ عَلـــَى حَبِيْبِـكَ خَيْــرِ الْخَلْقِ كُلِّهِمِ
+
+<br>أَمِنْ تَذَكُّرِ جِيْرَانٍ بِذِيْ سَــــلَــمٍ ۞ مَزَجْتَ دَمْعًا جَرَيْ مِنْ مُقْلَةٍ بِـــدَمِ
+
+<br>أَمْ هَبَّتِ الرِّيْحُ مِنْ تِلْقَاءِ كَاظِمَـــةٍ ۞ وَأَوْمَضَ الْبَرْقُ فِيْ الْظَلْمَآءِ مِنْ إِضَـمِ
+
+<br>فَمَا لِعَيْنَيْكَ إِنْ قُلْتَ اكْفُفَا هَمَتَــا ۞ وَمَا لِقَلْبِكَ إِنْ قُلْتَ اسْتَفِقْ يَهِـــــمِ
+
+<br>أَيَحْسَبُ الصَّبُّ أَنَّ الْحُبَّ مُنْكَتِـمٌ ۞ مَا بَيْنَ مُنْسَجِمٍ مِنْهُ  وَمُضْطَــــرِمِ
+
+<br>لَوْلَا الْهَوَى لَمْ تُرِقْ دَمْعاً عَلَي طَـلَلٍ ۞ وَلاَ أَرِقْتَ لِذِكْرِ الْبَانِ وَالْعَلـَـــمِ
+
+<br>فَكَيْفَ تُنْكِرُ حُبًّا بَعْدَ مَا شَــهِدَتْ ۞ بِهِ عَلَيْكَ عُدُوْلُ الدَّمْعِ وَالسَّـــقَمِ
+
+<br>وَأَثْبَتَ الْوَجْدُ خَطَّيْ عَبْرَةٍ وَّضَــنًى ۞ مِثْلَ الْبَهَارِعَلَى خَدَّيْكَ وَالْعَنَــــمِ
+
+<br>نَعَمْ سَرَى طَيْفُ مَنْ أَهْوَى فَأَرَّقَنِي ۞ وَالْحُبُّ يَعْتَرِضُ اللَّذَّاتِ بِاالْأَ لَــــــمِ
+
+<br>يَا لَا ئِمِي فِي الهَوَى العُذْرِيِّ مَعْذِرَةً ۞ مِنّي إِلَيْكَ وَلَوْ أَنْصَفْتَ لَمْ تَلُمِ
+
+<br>عَدَتْكَ حَـــالِـيَ لَاسِرِّيْ بِمُسْتَتِرٍ ۞ عَنِ الْوُشَاةِ وَلاَ دَائِيْ بِمُنْحَسِــمِ
+
+<br>مَحَضْتَنِي النُّصْحَ لٰكِنْ لَّسْتُ أَسْمَعُهُ ۞ إِنَّ الْمُحِبَّ عَنِ العُذَّالِ فِي صَمَمِ
+
+<br>إِنِّى اتَّهَمْتُ نَصِيْحَ الشَّيْبِ فِي عَذَلِي ۞ وَالشَّيْبُ أَبْعَدُ فِي نُصْحٍ عَنِ التُّهَمِ</p><p><i>Al-fashlul-awwal: Fī ghazli wa syakwal-gharāmi.
+
+<br>Mawlāya shallī wa sallim dā iman abadā. ۞ 'Alā Ḥabībika Khayril-khalqi kullihimi.
+
+<br>Amin tadzakkuri jīrānim-bi Dzī Salamin. ۞ Mazajta dam'an-jaray mim-muqlatim-bi dami.
+
+<br>Am habbatir-rīḥu min-tilqā-i Kāzhimatin. ۞ Wa awmadhal-barqu fidh-dhamā-i min Idhami.
+
+<br>Famā li-'aynayka in-qultakfufā hamatā. ۞ Wa mā li-qalbika in qultastafiq yahimi.
+
+<br>Ayahsabush-shabbu annal hubba munkatimun. ۞ Mā bayna munsajimin min-hu wa mudh-tharimi.
+
+<br>Law lal-hawā lam turiq dam'an 'alā thalalin. ۞ Wa lā ariqta li-dzikril-bāni wal 'alami.
+
+<br>Fakayfa tunkiru hubban ba'da mā syahidat. ۞ Bihi 'alayka 'udūlud dam'i wassaqami.
+
+<br>Wa atsbatal wajdu khath-thā 'ab-ratin wa dhanā. ۞ Mitslal bahāri 'alā khaddayka wal 'anami.
+
+<br>Na'am sarā thayfu man ahwā fa arraqanī. ۞ Wal hubbu ya'taridhulladz-dzāti bil alami.
+
+<br>Yā lā-imī fil-hawal-'udzriyyi ma'dziratan. ۞ Minnī ilayka wa law anshafta lam talumi.
+
+<br>'Adatka hāliya lā sirrī bimustatirin. ۞ 'Anil wusyāti wa lā dā-ī bi munḥasimi.
+
+<br>Maḥḥadhtanin-nush ḥa lakil-lastu asma'uhu. ۞ Innal muḥibba 'anil 'udz-dzāli fī shamami.
+
+<br>Innit-tahamtu nashīḥasy-shaybi fī 'adzalī. ۞ Wasy-syaybu ab'adu fī nush-ḥin 'anit-tuhami.</i></p><br><p>Bagian I: Bercumbu dan pengaduan cinta.
+
+<br>Wahai Tuanku, shalawat dan salam sudi Engkau limpahkan selalu. ۞ Kepada kekasih-Mu sebaik-baik makhluk yang Engkau titahkan.
+
+<br>Apakah karena mengingat para kekasih di Dzi Salam (suatu tempat antara Makkah dan Madinah) sana. ۞ Engkau deraikan air mata dengan darah duka.
+
+<br>Ataukah karena hembusan angin terarah lurus berjumpa di Kadhimah (suatu jalan menuju Makkah). ۞ Dan kilatan cahaya gulita malam dari kedalaman jurang Idham (sebuah jurang di Madinah). 
+
+<br>Mengapa kedua air matamu tetap meneteskan airmata? Padahal engkau telah berusaha membendungnya. ۞ Apa yang terjadi dengan hatimu? Padahal engkau telah berusaha menghiburnya.
+
+<br>Apakah diri yang dirundung nestapa karena cinta mengira bahwa api cinta dapat disembunyikan darinya. ۞ Di antara tetesan air mata dan hati yang terbakar membara.
+
+<br>Andaikan tak ada cinta yang menggores kalbu, tak mungkin engkau mencucurkan air matamu. ۞ Meratapi puing-puing kenangan masa lalu berjaga mengenang pohon Ban dan gunung yang kau rindu.
+
+<br>Bagaimana kau dapat mengingkari cinta sedangkan saksi adil telah menyaksikannya. ۞ Berupa deraian air mata dan jatuh sakit amat sengsara.
+
+<br>Duka nestapa telah membentuk dua garisnya isak tangis dan sakit lemah tak berdaya. ۞ Bagai mawar kuning dan merah yang melekat pada kedua pipi.
+
+<br>Memang benar bayangan orang yang kucinta selalu hadir membangunkan tidurku untuk terjaga. ۞  Dan memang cinta sebagai penghalang bagi si empunya antara dirinya dan kelezatan cinta yang berakhir derita.
+
+<br>Wahai pencaci derita cinta kata maaf kusampaikan padamu. ۞ Aku yakin andai kau rasakan derita cinta ini tak mungkin engkau mencaci maki.
+
+<br>Kini kau tahu keadaanku, tiada lagi rahasiaku yang tersimpan darimu. ۞ Dari orang yang suka mengadu domba dan derita cintaku tiada kunjung sirna.
+
+<br>Begitu tulus nasihatmu, tapi aku tak mampu mendengar semua itu. ۞ Karena sesungguhnya orang yang dimabuk cinta tuli dan tak menggubris cacian pencela.
+
+Aku curiga ubanku pun turut mencelaku. ۞ Padahal ubanku pastilah tulus memperingatkanku.</p>
+<br></br>
+<p><strong>Penjelasan</strong></p>
+
+<p>Burdah Al-Bushiri yang juga dikenal sebagai Qasidah Burdah, merupakan karya sastra yang terdiri dari syair-syair berisikan shalawat dan pujian bagi baginda Rasulullah ﷺ, dan juga menyiratkan pesan-pesan moral yang bertujuan untuk mendekatkan akhlak pembacanya kepada akhlak mulia Rasulullah ﷺ. Qasidah Burdah dikarang oleh Syarafuddin Abu Abdillah Muhammad bin Zaid Al-Bushiri, atau sangat dikenal sebagai Imam Muhammad Al-Bushiri. Beliau dilahirkan di Dallas, Maroko, kemudian dibesarkan di Bushir, Mesir yang mana beliau hidup di antara tahun 610-695 Hijriah atau 1213-1296 Masehi. Imam Muhammad Al-Bushiri sempat mengenyam pengajaran dari sufi besar Asy-Syadzili dan penerusnya yaitu Abdul Abbas al-Mursi. Dikisahkan, Qasidah Burdah ini beliau karang setelah mengalami pengalaman batin yang sangat penting baginya. Suatu ketika beliau jatuh sakit lalu lumpuh, dalam kesabaran dan kepasrahannya beliau membuat syair-syair pujian untuk Rasulullah ﷺ dengan maksud memohon kepada Allah ﷻ sekiranya Allah ﷻ ridha dan mengizinkan Rasulullah ﷺ memberi syafaat baginya. Dan akhirnya beliau bermimpi berjumpa dengan Nabi Muhammad ﷺ. Dalam mimpi itu, Rasulullah ﷺ mengusap wajah Imam Al-Bushiri, lalu melepaskan jubah beliau, dan mengenakannya kepada Imam Al-Bushiri. Dan saat terbangun dari mimpinya, Imam Al-Bushiri segera sembuh dari penyakit dan tidak lagi lumpuh. Demikian, seiring berjalannya waktu Qasidah Burdah menyebar di kalangan umat Islam hingga masa sekarang. Wallahu a'lam bishawab.</p><p><strong>
+</strong></p>
+
+
+ 
+ <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #ffffff;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #3fc380;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+
+</style>
+<style>
+    @font-face{;
+        font-family:"me_quran";
+        src:url("css/fonts/me_quran.ttf")
+    }
+    
+    .arab{font-family:me_quran; }
+    </style> 
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+
+<h1>Sholat Rawatib</h1><br>
+
+<p align="justify">Shalat sunnah rawatib adalah shalat sunnah yang mengiringi shalat lima waktu. Shalat sunnah rawatib yang dikerjakan sebelum shalat wajib disebut shalat sunnah qobliyah. Sedangkan sesudah shalat wajib disebut shalat sunnah ba’diyah.</p>
+  <p align="justify">    Di antara tujuan disyari’atkannya shalat sunnah qobliyah adalah agar jiwa memiliki persiapan sebelum melaksanakan shalat wajib. Perlu dipersiapkan seperti ini karena sebelumnya jiwa telah disibukkan dengan berbagai urusan dunia. Agar jiwa tidak lalai dan siap, maka ada shalat sunnah qobliyah lebih dulu.
+    Sedangkan shalat sunnah ba’diyah dilaksanakan untuk menutup beberapa kekurangan dalam shalat wajib yang baru dilakukan. Karena pasti ada kekurangan di sana-sini ketika melakukannya.</p>
+  <p align="justify"><hr>
+  <div>
+    <blockquote><strong>A. Shalat Sunah rawatib mu'akkad</strong></blockquote>
+  </div>
+  <div>Shalat Sunnah rawatib mu'akkad Adalah Shalat sunah rawatib yang sangat di anjurkan, setidaknya ada 10 raka'at dalam shalat rawatib mu'akkad ini.</div>
+  <div>2 Raka'at sebelum Shubuh</div>
+  <div>2 Raka'at sebelum Zhuhur</div>
+  <div>2 Raka'at sesudah Zhuhur</div>
+  <div>2 Raka'at sesudah Maghrib</div>
+  <div>2 Raka'at sesudah Isya</div>
+  <div><br>
+  </div>
+  <div>
+    <blockquote><strong>B. Shalat Sunah rawatib ghairu mu'akkad</strong></blockquote>
+  </div>
+  <div>Shalat rawatib ghairu mu'akkad ini juga di anjurkan untuk di kerjakan, tetapi tidak sepentig shalat rawatib mu'akkad, berikut ini adalah shalat sunnah rawatib ghairu mu'akkad...</div>
+  <div>2 Raka'at sebelum Dzuhur</div>
+  <div>2 Raka'at sesudah Dzuhur</div>
+  <div>2 Raka'at sebelum Ashar boleh juga dilakukan 4 raka'at</div>
+  <div>2 Raka'at sebelum Maghrib</div>
+  <div>2 Rakaat sebelum Isya</div>
+  <div><br>
+  </div>
+  <h3>Cara mengerjakan shalat rawatib</h3><hr>
+  <div>Cara mengerjakan Shalat rawatib sama dengan cara mengerjakan shalat fardu, baik itu dari bacaan dan gerakannya, perbedaannya hanya dari niat, dan berikut niatnya silahkan di simak...</div>
+  <strong><br>
+  </strong> <br>
+  <ol>
+  
+    <li>Niat shalat rawatib sebelum shalat Dzuhur.</strong></blockquote>
+  
+  <div><img src="rawatib/1.png" width="400" height="119">
+    <br>
+    "Ushallii sunnatazh zhuhri rak'<u>a</u>taini Qabliyyatan lillaahita'aalaa."</div>
+  <div>Artinya : "Aku niat shalat sunnah qabliyyah Dzuhur 2 raka'at karena allah ta'ala"</div>
+  <br>
+  
+    <li>Niat Shalat rawatib sesudah shalat Dzuhur.</strong></blockquote>
+        <tr>
+  <img src="rawatib/2.png" width="400" height="119">  
+  <div>"Ushallii sunatazh Dzuhri rak'ataini ba'diyyatan lillaahita'aalaa"</div>
+  <div>Artinya : "Aku niat shalat sunnah ba'diyyah zhuhur 2 raka'at karena allah ta'ala."</div>
+  <strong><br>
+  </strong> <br>
+  
+    <li>Niat Shalat rawatib sebelum shalat ashar.</strong></blockquote>
+    <img src="rawatib/3.png" width="400" height="120"> 
+  <div>"Ushallii sunnatal ashri rak'ataini Qabliyyatan lillaahita'aalaa."</div>
+  <div>Artinya : "Aku niat shalat sunnah Qabliyyah ashar 2 rakaat karena allah ta'ala"</div>
+  <br>
+  
+    <li>Niat shalat rawatib sebelum shalat maghrib.</strong></blockquote>
+    <img src="rawatib/4.png" width="400" height="120">
+  <div>"Ushallii sunnatal maghribi rak ataini Qabliyyatan lillaahi ta'aalaa"</div>
+  <div>Artinya :"Aku niat shalat sunnah Qabliyyah maghrib 2 raka'at karena allah ta'ala."</div>
+  <strong><br>
+  </strong> <br>
+  
+    <li>Niat shalat rawatib sesudah shalat maghrib.</strong></blockquote>
+    <img src="rawatib/5.png" width="400" height="116">
+  <div>"Ushallii sunnatal maghribi rak ataini ba'diyyatan lillaahita'aalaa"</div>
+  <div>Artinya :"Aku niat shalat sunnah ba'diyyah maghrib 2 raka'at karena allah ta'ala"</div>
+  <br>
+  
+    <li>Niat shalat Sunnah rawatib sebelum shalat isya.</strong></blockquote>
+    <img src="rawatib/6.png" width="400" height="114">  
+  <div>"Ushallii Sunnatal isyaa'i rak'ataini Qabliyyatan lillaahita'aalaa"</div>
+  <div>Artinya : "Aku niat shalat sunnah Qabliyyah isya 2 raka'at karena allah ta'ala"</div>
+  <br>
+  
+    <li>Niat shalat rawatib sesudah shalat isya.</strong></blockquote>
+    
+   <img src="rawatib/7.png" width="400" height="116"> 
+  <div>"Ushallii sunnatal isyaa'i rak'ataini ba'diyyatan lillaahita'aalaa"</div>
+  <div>Artinya : "Aku niat shalat sunnah ba'diyyah isya 2 raka'at karena allah ta'ala"</div>
+  <div><br>
+  </div>
+  
+    <li>Niat shalat rawatib sebelum shalat shubuh.</strong></blockquote>
+    <img src="rawatib/8.png" width="400" height="112">
+  <div>"Ushallii sunnatash shubhi rak'ataini Qabliyyatan lillaahita aalaa."</div>
+  <div>Artinya : "aku niat shalat sunat Qabliyyah subuh 2 rakaat karena allah ta'ala."</div></ol>
+  <br><Br>
+  <h3>Keutamaan Shalat Sunnah Rawatib</h3><hr>
+<ol>
+  <li>Pertama: <br>
+Shalat adalah sebaik-baik amalan<br>
+  Nabi shallallahu ‘alaihi wa sallam bersabda,</p>
+  <center>
+    
+      <div align="right" class="arab">وَاعْلَمُوا أَنَّ خَيْرَ أَعْمَالِكُمُ الصَّلاَةُ</div>
+  </center>
+  <br>
+
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Ketahuilah, sebaik-baik amalan bagi kalian adalah shalat.”</blockquote><br>
+    
+  <li> Kedua: <br>
+  Akan meninggikan derajat di surga karena banyaknya shalat tathowwu’ (shalat sunnah) yang dilakukan<br>
+    Tsauban –bekas budak Rasulullah shallallahu ‘alaihi wa sallam– pernah ditanyakan mengenai amalan yang dapat memasukkannya ke dalam surga atau amalan yang paling dicintai oleh Allah. Kemudian Tsauban mengatakan bahwa beliau pernah menanyakan hal tersebut pada Rasulullah shallallahu ‘alaihi wa sallam, lantas beliau menjawab,</p>
+    <center>
+      <font size="+1" class="arab">
+        <div align="right">عَلَيْكَ بِكَثْرَةِ السُّجُودِ لِلَّهِ فَإِنَّكَ لاَ تَسْجُدُ لِلَّهِ سَجْدَةً إِلاَّ رَفَعَكَ اللَّهُ بِهَا دَرَجَةً وَحَطَّ عَنْكَ بِهَا خَطِيئَةً</div>
+      </font>
+    </center>
+    <br>
+
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Hendaklah engkau memperbanyak sujud kepada Allah karena  tidaklah engkau bersujud pada Allah dengan sekali sujud melainkan Allah akan meninggikan satu derajatmu dan menghapuskan satu kesalahanmu.”[2] Ini baru sekali sujud. Lantas bagaimanakah dengan banyak sujud atau banyak shalat yang dilakukan?!</blockquote><Br>
+    
+    
+  <li>Ketiga: <br>
+  
+  Menutup kekurangan dalam shalat wajib<br>
+    Seseorang dalam shalat lima waktunya seringkali mendapatkan kekurangan di sana-sini sebagaimana diisyaratkan oleh Nabi shallallahu ‘alaihi wa sallam,</p>
+  <center>
+    <font size="+1">
+      <div align="right" class="arab">إِنَّ الرَّجُلَ لَيَنْصَرِفُ وَمَا كُتِبَ لَهُ إِلاَّ عُشْرُ صَلاَتِهِ تُسْعُهَا ثُمُنُهَا سُبُعُهَا سُدُسُهَا خُمُسُهَا رُبُعُهَا ثُلُثُهَا نِصْفُهَا</div>
+    </font>
+  </center>
+<br>
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Sesungguhnya seseorang ketika selesai dari shalatnya hanya tercatat baginya sepersepuluh, sepersembilan, seperdelapan, sepertujuh, seperenam, seperlima, seperempat, sepertiga, separuh dari shalatnya.”</blockquote>
+  <p align="justify">    Untuk menutup kekurangan ini, disyari’atkanlah shalat sunnah. Nabi shallallahu ‘alaihi wa sallam bersabda,</p>
+  <center>
+      <span class="style2"><font size="+1">
+      </font></span>
+      <div align="right" class="arab">إِنَّ أَوَّلَ مَا يُحَاسَبُ النَّاسُ بِهِ يَوْمَ الْقِيَامَةِ مِنْ أَعْمَالِهِمُ الصَّلاَةُ قَالَ يَقُولُ رَبُّنَا جَلَّ وَعَزَّ لِمَلاَئِكَتِهِ وَهُوَ أَعْلَمُ انْظُرُوا فِى صَلاَةِ عَبْدِى أَتَمَّهَا أَمْ نَقَصَهَا فَإِنْ كَانَتْ تَامَّةً كُتِبَتْ لَهُ تَامَّةً وَإِنْ كَانَ انْتَقَصَ مِنْهَا شَيْئًا قَالَ انْظُرُوا هَلْ لِعَبْدِى مِنْ تَطَوُّعٍ فَإِنْ كَانَ لَهُ تَطَوُّعٌ قَالَ أَتِمُّوا لِعَبْدِى فَرِيضَتَهُ مِنْ تَطَوُّعِهِ ثُمَّ تُؤْخَذُ الأَعْمَالُ عَلَى ذَاكُمْ</div>
+  </center>
+  <br>
+
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Sesungguhnya amalan yang pertama kali akan diperhitungkan dari manusia pada hari kiamat dari amalan-amalan mereka adalah shalat. Kemudian Allah Ta’ala mengatakan pada malaikatnya dan Dia lebih Mengetahui segala sesuatu, “Lihatlah kalian pada shalat hamba-Ku, apakah sempurna ataukah memiliki kekurangan? Jika shalatnya sempurna, maka akan dicatat baginya pahala yang sempurna. Namun, jika shalatnya terdapat beberapa kekurangan, maka lihatlah kalian apakah hamba-Ku memiliki amalan shalat sunnah? Jika ia memiliki shalat sunnah, maka sempurnakanlah pahala bagi hamba-Ku dikarenakan shalat sunnah yang ia lakukan. Kemudian amalan-amalan lainnya hampir sama seperti itu.”</blockquote><br>
+  <li>Keempat:<br>
+  Rutin mengerjakan shalat rawatib 12 raka’at dalam sehari akan dibangunkan rumah di surga.<br>
+    Dari Ummu Habibah –istri Nabi shallallahu ‘alaihi wa sallam-, Rasulullah shallalahu ‘alaihi wa sallam bersabda,</p>
+  <center>
+    <font size="+1">
+      <div align="right" class="arab">« مَنْ صَلَّى اثْنَتَىْ عَشْرَةَ رَكْعَةً فِى يَوْمٍ وَلَيْلَةٍ بُنِىَ لَهُ بِهِنَّ بَيْتٌ فِى الْجَنَّةِ</div>
+    </font>
+  </center>
+  <br>
+
+<b><I>Artinya ;</I></b><blockquote>
+    “Barangsiapa mengerjakan shalat sunnah dalam sehari-semalam sebanyak 12 raka’at, maka karena sebab amalan tersebut, ia akan dibangun sebuah rumah di surga.”</blockquote>
+  <p align="justify">     Di antara periwayat hadits di atas adalah An Nu’man bin Salim, ‘Amr bin Aws, ‘Ambasah bin Abi Sufyan dan Ummu Habibah –istri Nabi shallallahu ‘alaihi wa sallam– yang mendengar dari Nabi shallallahu ‘alaihi wa sallam secara langsung.</p>
+  <p align="justify">    Ummu Habibah mengatakan,<blockquote> “Aku tidak pernah meninggalkan shalat sunnah dua belas raka’at dalam sehari sejak aku mendengar hadits tersebut langsung dari Rasulullah shallallahu ‘alaihi wa sallam. ”</blockquote>
+    ‘Ambasah mengatakan,<blockquote> “Aku tidak pernah meninggalkan shalat sunnah dua belas raka’at dalam sehari sejak aku mendengar hadits tersebut dari Ummu Habibah.”</blockquote>
+    ‘Amr bin Aws mengatakan, <blockquote>“Aku tidak pernah meninggalkan shalat sunnah dua belas raka’at dalam sehari sejak aku mendengar hadits tersebut dari ‘Ambasah.”</blockquote>
+    An Nu’man bin Salim mengatakan,<blockquote> “Aku tidak pernah meninggalkan shalat sunnah dua belas raka’at dalam sehari sejak aku mendengar hadits tersebut dari ‘Amr bin Aws.”</blockquote>
+  <p align="justify">    Yang dimaksudkan dengan shalat sunnah dua belas raka’at dalam sehari dijelaskan dalam riwayat At Tirmidzi, dari ‘Aisyah. Nabi shallallahu ‘alaihi wa sallam bersabda,</p>
+<div>    
+  <div align="right" class="arab">مَنْ ثَابَرَ عَلَى ثِنْتَىْ عَشْرَةَ رَكْعَةً مِنَ السُّنَّةِ بَنَى اللَّهُ لَهُ بَيْتًا فِى الْجَنَّةِ أَرْبَعِ رَكَعَاتٍ قَبْلَ الظُّهْرِ وَرَكْعَتَيْنِ بَعْدَهَا وَرَكْعَتَيْنِ بَعْدَ الْمَغْرِبِ وَرَكْعَتَيْنِ بَعْدَ الْعِشَاءِ وَرَكْعَتَيْنِ قَبْلَ الْفَجْرِ</div>
+  <div>
+
+<b><I>Artinya ;</I></b><blockquote>
+    “Barangsiapa merutinkan shalat sunnah dua belas raka’at dalam sehari, maka Allah akan membangunkan bagi dia sebuah rumah di surga. Dua belas raka’at tersebut adalah empat raka’at sebelum  zhuhur, dua raka’at sesudah zhuhur, dua raka’at sesudah maghrib, dua raka’at sesudah ‘Isya, dan dua raka’at sebelum shubuh.”</blockquote>
+  <p align="justify">    Hadits di atas menunjukkan dianjurkannya merutinkan shalat sunnah rawatib sebanyak 12 raka’at setiap harinya.<br><Br>
+    Dua belas raka’at rawatib yang dianjurkan untuk dijaga adalah:  <blockquote>empat raka’at sebelum Zhuhur,  dua raka’at sesudah Zhuhur, dua raka’at sesudah Maghrib, [4] dua raka’at sesudah ‘Isya’, [5] dua raka’at sebelum Shubuh.</blockquote><br>
+    </ol>
+    <br>
+    <h3>Shalat Qobliyah Shubuh Jangan Sampai Ditinggalkan</h3><hr>
+    Shalat sunnah qobliyah shubuh atau shalat sunnah fajr memiliki keutamaan sangat luar biasa. Di antaranya disebutkan dalam hadits ‘Aisyah,</p>
+    <center>
+      <font size="+1">
+        <div align="right" class="arab">رَكْعَتَا الْفَجْرِ خَيْرٌ مِنَ الدُّنْيَا وَمَا فِيهَا</div>
+      </font>
+    </center>
+    <br>
+
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Dua raka’at sunnah fajar (qobliyah shubuh) lebih baik daripada dunia dan seisinya.”</blockquote>
+    Nabi shallallahu ‘alaihi wa sallam sangat bersemangat melakukan shalat ini, sampai-sampai ketika safar pun beliau terus merutinkannya.<br>
+    ‘Aisyah mengatakan,</p>
+
+    <center>
+      <font size="+1" class="arab">
+        <div align="right">لَمْ يَكُنِ النَّبِىُّ – صلى الله عليه وسلم – عَلَى شَىْءٍ مِنَ النَّوَافِلِ أَشَدَّ مِنْهُ تَعَاهُدًا عَلَى رَكْعَتَىِ الْفَجْرِ</div>
+      </font>
+    </center>
+    <br>
+
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Nabi shallallahu ‘alaihi wa sallam tidaklah memiliki perhatian yang luar biasa untuk shalat sunnah selain shalat sunnah fajar.”</blockquote>
+  <p align="justify"><br>
+    Ibnul Qayyim mengatakan, <blockquote>“Termasuk di antara petunjuk Nabi shallallahu ‘alaihi wa sallam ketika bersafar adalah mengqoshor shalat fardhu dan beliau tidak mengerjakan shalat sunnah rawatib qobliyah dan ba’diyah. Yang biasa beliau tetap lakukan adalah mengerjakan shalat sunnah witir dan shalat sunnah qabliyah shubuh. </blockquote>
+  <p align="justify">Beliau tidak pernah meninggalkan kedua shalat ini baik ketika bermukim dan ketika bersafar.”<br><br>
+  
+  <h3>Tiga Model untuk Shalat Rawatib Zhuhur</h3><hr>
+    Dalam melakukan shalat sunnah rawatib zhuhur ada tiga model yang bisa dilakukan.<br><br>
+   <ol>
+   <li> Pertama: </I></b><br>Empat raka’at sebelum Zhuhur dan dua raka’at sesudah Zhuhur sebagaimana telah dikemukakan dalam hadits ‘Aisyah di atas.<br><br>
+ <li> Kedua: </I></b><br>
+ <font style="text-align:justify">Empat raka’at sebelum Zhuhur dan empat raka’at sesudah zhuhur. Hal ini sebagaimana terdapat dalam hadits Ummu Habibah. Rasulullah shallallahu ‘alaihi wa sallam bersabda,</p>
+  <center>
+    <font size="+1" class="arab">
+      <div align="right">مَنْ حَافَظَ عَلَى أَرْبَعِ رَكَعَاتٍ قَبْلَ الظُّهْرِ وَأَرْبَعٍ بَعْدَهَا حَرُمَ عَلَى النَّارِ</div>
+      </font>
+  </center>
+  <br>
+
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Barangsiapa merutinkan shalat sunnah empat raka’at sebelum Zhuhur dan empat raka’at sesudah Zhuhur, maka akan diharamkan baginya neraka.”[12]</blockquote> <br>
+    
+    <li>Ketiga: </I></b><br>Dua raka’at sebelum Zhuhur dan dua raka’at sesudah Zhuhur. Dari Ibnu ‘Umar, beliau mengatakan,</p>
+
+    <center>
+      <font size="+1" class="arab">
+        <div align="right">فِظْتُ مِنَ النَّبِىِّ – صلى الله عليه وسلم – عَشْرَ رَكَعَاتٍ رَكْعَتَيْنِ قَبْلَ الظُّهْرِ ، وَرَكْعَتَيْنِ بَعْدَهَا ، وَرَكْعَتَيْنِ بَعْدَ الْمَغْرِبِ فِى بَيْتِهِ ، وَرَكْعَتَيْنِ بَعْدَ الْعِشَاءِ فِى بَيْتِهِ ، وَرَكْعَتَيْنِ قَبْلَ صَلاَةِ الصُّبْحِ</div>
+      </font>
+    </center>
+    <br>
+
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Aku menghafal dari Nabi shallallahu ‘alaihi wa sallam sepuluh raka’at (sunnah rawatib), yaitu dua raka’at sebelum Zhuhur, dua raka’at sesudah Zhuhur, dua raka’at sesudah Maghrib, dua raka’at sesudah ‘Isya, dan dua raka’at sebelum Shubuh</blockquote><br><br>
+    </ol><br>
+  <h3>Lebih Bagus Menjalankan Shalat Sunnah di Rumah</h3>
+    Di antara petunjuk Nabi shallallahu ‘alaihi wa sallam adalah menjalankan setiap shalat sunnah di rumah, kecuali jika memang ada hajat atau faktor lain yang mendorong untuk melakukannya di masjid.
+  Nabi shallallahu ‘alaihi wa sallam bersabda,</p>
+
+  <center>
+    <font size="+1" class="arab">
+      <div align="right">فَإِنَّ أَفْضَلَ الصَّلاَةِ صَلاَةُ الْمَرْءِ فِى بَيْتِهِ إِلاَّ الْمَكْتُوبَةَ</div>
+      </font>
+  </center>
+  <br>
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Sesungguhnya seutama-utama shalat adalah shalat seseorang di rumahnya selain shalat wajib.”</blockquote>
+  <p align="justify">    Di  antara keutamaan lainnya mengerjakan shalat di rumah, apalagi ketika baru datang dari masjid atau akan pergi ke masjid terdapat dalam hadits Abu Hurairah, Nabi shallallahu ‘alaihi wa sallam bersabda,</p>
+  <center>
+    <font size="+1" class="arab">
+      <div align="right">إذا خرجت من منزلك فصل ركعتين يمنعانك من مخرج السوء وإذا دخلت إلى منزلك فصل ركعتين يمنعانك من مدخل السوء</div>
+      </font>
+  </center>
+  <br>
+
+<b><I>Artinya ;</I></b>
+<blockquote>
+    “Jika engkau keluar dari rumahmu, maka lakukanlah shalat dua raka’at yang dengan ini akan menghalangimu dari kejelekan yang ada di luar rumah. Jika engkau memasuki rumahmu, maka lakukanlah shalat dua raka’at yang akan menghalangimu dari kejelekan yang masuk ke dalam rumah.”</blockquote><br><Br>
+  <h3>Kontinu dalam Amalan itu Lebih Baik</h3><hr>
+    Dari ’Aisyah –radhiyallahu ’anha-, beliau mengatakan bahwa Rasulullah shallallahu ’alaihi wa sallam bersabda,</p>
+  <center>
+    <font size="+1" class="arab">
+      <div align="right">أَحَبُّ الأَعْمَالِ إِلَى اللَّهِ تَعَالَى أَدْوَمُهَا وَإِنْ قَلَّ</div>
+      </font>
+  </center>
+
+<br>
+<b><I>Artinya ;</I></b>
+<blockquote>
+    ”Amalan yang paling dicintai oleh Allah Ta’ala adalah amalan yang kontinu walaupun itu sedikit.” </blockquote>’Aisyah pun ketika melakukan suatu amalan selalu berkeinginan keras untuk merutinkannya. 
+  <p align="justify">    An Nawawi rahimahullah mengatakan,<blockquote> ”Ketahuilah bahwa amalan yang sedikit namun konsekuen dilakukan, itu lebih baik dari amalan yang banyak namun cuma sesekali saja dilakukan. Ingatlah bahwa amalan sedikit yang rutin dilakukan akan melanggengkan amalan ketaatan, dzikir, pendekatan diri pada Allah, niat dan keikhlasan dalam beramal, juga akan membuat amalan tersebut diterima oleh Sang Kholiq Subhanahu wa Ta’ala. Amalan sedikit namun konsekuen dilakukan akan memberikan ganjaran yang besar dan berlipat dibandingkan dengan amalan yang sedikit namun sesekali saja dilakukan.”</blockquote><br>
+  
+  
+  <p align="justify">    Ibnu Rajab Al Hambali menjelaskan,<blockquote> ”Amalan yang dilakukan oleh Nabi shallallahu ’alaihi wa sallam adalah amalan yang konsekuen dilakukan (kontinu). Beliau pun melarang memutuskan amalan dan meninggalkannya begitu saja. Sebagaimana beliau pernah melarang melakukan hal ini pada sahabat ’Abdullah bin ’Umar.”</blockquote>
+  
+
+</div>
+
+	</div> <!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

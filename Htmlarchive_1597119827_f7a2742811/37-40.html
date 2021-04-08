@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile.squareui.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/jquery.mobile-1.4.0.min.js"></script>
+
+  
+
+
+  
+  
+</head>
+<style>
+
+#t {
+    text-align: justify;
+    line-height: 1.5;
+    border-style: solid;
+    border-width: 0px;
+    border-color: #000 #000;
+    font-size: 16px;
+    background-color: #ffffff;
+    border-radius: 0px;
+	font-size: 16px;
+    padding: 8px 12px 8px 12px;
+    background-image: "gambar/paper.png"
+	font-family: "Trebuchet MS, Helvetica, sans-serif"
+}
+
+#t h1 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+
+#t h3 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 20px;
+	color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: #E76E66;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "arial"
+	
+}
+
+
+
+#t h2 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+    font-family: "georgia"
+}
+
+#t h4 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: left;
+    border-style: solid;
+    border-bottom: double #666;
+    border-top: double;
+    border-left: 0px;
+    border-right: 0px;
+    background-color: none;
+    border-radius: 0px;
+    line-height: 1;
+}
+
+.arab {
+    font-size: 25px!important;
+    line-height: 46px!important;
+    font-family: "Times New Roman", Tahoma, sans-serif;
+    font-weight: normal;
+    text-align: right;
+    direction: rtl;
+}
+
+.my-wrapper {
+    padding-top: 30px;
+}
+
+.my-wrapper form {
+    position: fixed;
+    top: 0px;
+    left: 15px;
+    min-width: 95%;
+	padding-right: 25px;
+    z-index: 2;
+}
+
+.wrap {
+    white-space: normal !important;
+}
+
+p {
+    text-indent: 0%;
+}
+
+.c {
+    text-align: center;
+}
+
+.effect8 {
+    position: relative;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.effect8:before,
+.effect8:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    -moz-border-radius: 100px / 10px;
+    border-radius: 100px / 10px;
+}
+
+.effect8:after {
+    right: 10px;
+    left: auto;
+    -webkit-transform: skew(8deg) rotate(3deg);
+    -moz-transform: skew(8deg) rotate(3deg);
+    -ms-transform: skew(8deg) rotate(3deg);
+    -o-transform: skew(8deg) rotate(3deg);
+    transform: skew(8deg) rotate(3deg);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+	max-width: 100%;
+	vertical-align: middle;
+	horizontal-align: left;
+	height: auto;
+	
+}
+
+
+.image {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+	position:absolute;
+    top:0;
+    bottom:0;
+	left:5px;
+    margin:auto;
+}
+
+@media screen and (max-width: 640px) {
+    table {
+        overflow-x: auto;
+        display: block;
+	
+    }
+	
+	
+	td, th {
+  border: 1px solid #999;
+  padding: 0.3rem;
+}
+}
+
+
+ol {
+	counter-reset:li; /* Initiate a counter */
+	margin-left:0; /* Remove the default left margin */
+	padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+	position:relative; /* Create a positioning context */
+	margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding:4px 8px; /* Add some spacing around the content */
+	list-style:none; /* Disable the normal item numbering */
+	border-top:2px solid #666;
+	background:#f6f6f6;
+}
+ol > li:before {
+	content:counter(li); /* Use the counter as content */
+	counter-increment:li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-right:8px;
+	padding:4px;
+	border-top:2px solid #666;
+	color:#fff;
+	background:#666;
+	font-weight:bold;
+	font-family:"Helvetica Neue", Arial, sans-serif;
+	text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+.wrap2 {
+    white-space: normal !important;
+	text-align: right;
+}
+
+
+    pre {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        font-size: 95%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+		background: #f6f6f6;
+    }       
+    
+    code {
+        font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+        font-size: 85%;
+        line-height: 140%;
+        white-space: pre;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -o-pre-wrap;
+        background: #faf8f0;
+    }
+    
+    #content code {
+        display: block;
+        padding: 0.5em 1em;
+        border: 1px solid #bebab0;
+    }
+	 @font-face{;
+        font-family:"me_quran";
+        src:url("font/me_quran.ttf")
+    }
+	.arab{font-family:me_quran; 
+	}
+
+</style>
+
+<body>
+
+
+<div data-role="page" id="eps1" data-theme="d">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="c">
+		</div><div data-role="content"><div id="t">
+		
+		
+<header>
+<h1>TAFSIR SURAH YASIN AYAT 37 - 40</h1>
+<p>&nbsp;</p>
+<p><!-- Add your site or application content here --></p>
+
+<p class="arab">{وَآيَةٌ لَهُمُ اللَّيْلُ نَسْلَخُ مِنْهُ النَّهَارَ فَإِذَا هُمْ مُظْلِمُونَ (37) وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَهَا ذَلِكَ تَقْدِيرُ الْعَزِيزِ الْعَلِيمِ (38) وَالْقَمَرَ قَدَّرْنَاهُ مَنَازِلَ حَتَّى عَادَ كَالْعُرْجُونِ الْقَدِيمِ (39) لَا الشَّمْسُ يَنْبَغِي لَهَا أَنْ تُدْرِكَ الْقَمَرَ وَلا اللَّيْلُ سَابِقُ النَّهَارِ وَكُلٌّ فِي فَلَكٍ يَسْبَحُونَ (40) }</p>
+<p><em>Dan suatu tanda </em>(kekuasaan Allah yang besar) <em>bagi mereka adalah malam; Kami tinggalkan siang dari malam itu, maka dengan serta merta mereka berada dalam kegelapan, dan matahari berjalan di tempat peredarannya. Demikianlah ketetapan Yang Mahaperkasa lagi Maha Mengetahui. Dan telah Kami tetapkan bagi bulan manzilah-manzilah, sehingga </em>(setelah dia sampai ke manzilah yang terakhir) <em>kembalilah dia sebagai bentuk tandan yang tua. Tidaklah mungkin bagi matahari mendapatkan bulan, dan malam pun tidak dapat mendahului siang. Dan masing-masing beredar pada garis edarnya.</em></p>
+<p>Allah Swt. berfirman bahwa di antara tanda-tanda yang menunjukkan kekuasaan-Nya yang besar ialah malam dan siang hari yang diciptakan-Nya; malam hari dengan kegelapannya, dan siang hari dengan terangnya. Dia menjadikan keduanya silih berganti; bila yang satu datang maka yang lainnya pergi, demikian pula sebaliknya. Seperti yang disebutkan dalam ayat lainnya:</p>
+<p class="arab">{يُغْشِي اللَّيْلَ النَّهَارَ يَطْلُبُهُ حَثِيثًا}</p>
+<p><em>Dia menutupkan malam kepada siang yang mengikutinya dengan cepat. </em>(Al-A'raf: 54)</p>
+<p>Karena itulah disebutkan dalam surat ini oleh firman-Nya:</p>
+<p class="arab">{وَآيَةٌ لَهُمُ اللَّيْلُ نَسْلَخُ مِنْهُ النَّهَارَ}</p>
+<p><em>Dan suatu tanda </em>(kekuasaan Allah yang besar) <em>bagi mereka adalah malam; Kami tinggalkan siang dari malam itu. </em>(Yasin: 37)</p>
+<p>Yakni Kami sudahi siang dengan malam hari, maka siang hari pergi dan datanglah malam hari. Untuk itulah maka dalam firman selanjutnya disebutkan:</p>
+<p class="arab">{فَإِذَا هُمْ مُظْلِمُونَ}</p>
+<p><em>maka dengan serta merta mereka berada dalam kegelapan. </em>(Yasin: 37)</p>
+<p>Sebagaimana yang disebutkan di dalam suatu hadis yang mengatakan:</p>
+<p class="arab">"إِذَا أَقْبَلَ اللَّيْلُ مِنْ هَاهُنَا، وَأَدْبَرَ النَّهَارُ مِنْ هَاهُنَا، وَغَرَبَتِ الشَّمْسُ، فَقَدْ أَفْطَرَ الصَّائِمُ"</p>
+<p><em>Apabila malam hari tiba dari arah ini dan siang hari pergi dari arah ini, dan mentari terbenam, maka waktu berbuka bagi orang yang berpuasa telah tiba. </em></p>
+<p>Demikianlah makna lahiriah ayat, tetapi Qatadah menduga bahwa ayat ini semakna dengan apa yang disebutkan oleh firman-Nya:</p>
+<p class="arab">{يُولِجُ اللَّيْلَ فِي النَّهَارِ وَيُولِجُ النَّهَارَ فِي اللَّيْلِ}</p>
+<p><em>Allah </em>(kuasa) <em>memasukkan malam ke dalam siang dan memasukkan siang ke dalam malam. </em>(Al-Hajj: 61)</p>
+<p>Ibnu Jarir menilai bahwa pendapat Qatadah ini lemah dalam kasus ayat ini. Lalu Ibnu Jarir mengatakan, sesungguhnya makna <em>ilaj </em>itu ialah mengambil dari salah satunya, lalu diberikan kepada yang lainnya, sedangkan pengertian ini bukanlah makna yang dimaksud dalam ayat ini. Apa yang dikatakan oleh Ibnu Jarir ini benar.</p>
+<p>********</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَهَا ذَلِكَ تَقْدِيرُ الْعَزِيزِ الْعَلِيمِ}</p>
+<p><em>dan matahari berjalan di tempat peredarannya. Demikianlah ketetapan Yang Mahaperkasa lagi Maha Mengetahui. </em>(Yasin: 38)</p>
+<p>Sehubungan dengan makna kalimat <em>'limustaqarril laha', </em>ada dua pendapat.</p>
+<p><em>Pendapat pertama, </em>mengatakan bahwa makna yang dimaksud <em>mustaqarril laha </em>ialah tempat menetapnya matahari, yaitu di bawah 'Arasy yang letaknya berhadapan dengan letak bumi bila dilihat dari arah 'Arasy. Dengan kata lain, di mana pun matahari berada, ia tetap berada di bawah 'Arasy; demikian pula semua makhluk lainnya, mengingat 'Arasy merupakan atap bagi kesemuanya. Bentuk 'Arasy itu bukan bulat, tidak seperti yang disangka oleh para ahli ilmu ukur dan bentuk. Sesungguhnya ia berbentuk seperti kubah yang mempunyai tiang-tiang, dipikul oleh para malaikat; letak 'Arasy berada di atas semesta alam, yakni berada di atas semua manusia. Matahari itu apabila berada di tengah kubah falak di waktu lohor, maka saat itulah mentari berada paling dekat dengan 'Arasy. Dan apabila berputar di garis edarnya hingga letaknya berlawanan dengan kedudukan tersebut, yaitu bila berada di tengah malam, maka mentari berada di tempat yang paling jauh dengan 'Arasy. Pada saat itulah mentari bersujud dan meminta izin untuk terbit lagi, sebagaimana yang disebutkan di dalam banyak hadis.</p>
+<p class="arab">قَالَ الْبُخَارِيُّ: حَدَّثَنَا أَبُو نُعَيْم، حَدَّثَنَا الْأَعْمَشِ، عَنْ إِبْرَاهِيمَ [التَّيْمِيِّ] ، عَنْ أَبِيهِ، عَنْ أَبِي ذَرٍّ، رَضِيَ اللَّهُ عَنْهُ، قَالَ: كُنْتُ مَعَ النَّبِيِّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فِي الْمَسْجِدِ عِنْدَ غُرُوبِ الشَّمْسِ، فَقَالَ: "يَا أَبَا ذَرٍّ، أَتَدْرِي أَيْنَ تغربُ الشَّمْسُ؟ " قُلْتُ: اللَّهُ وَرَسُولُهُ أَعْلَمُ. قَالَ: "فَإِنَّهَا تَذْهَبُ حَتَّى تَسْجُدَ تَحْتَ الْعَرْشِ، فَذَلِكَ قَوْلُهُ: {وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَهَا ذَلِكَ تَقْدِيرُ الْعَزِيزِ الْعَلِيمِ} .</p>
+<p>Imam Bukhari mengatakan, telah menceritakan kepada kami Abu Na'im, telah menceritakan kepada kami Al-A'masy, dari Ibrahim At-Taimi, dari ayahnya, dari Abu Zar r.a. yang mengatakan bahwa ketika ia sedang bersama Nabi Saw. di dalam masjid bertepatan dengan waktu tenggelamnya mentari, maka Nabi Saw. bertanya, "<em>Hai Abu Zar, tahukah kamu ke manakah mentari itu terbenam</em>?" Abu Zar menjawab.&rdquo;Allah dan Rasul-Nya lebih mengetahui." Nabi Saw. bersabda: <em>Sesungguhnya mentari itu pergi hingga sujud di bawah 'Arasy. Yang demikian itu dijelaskan oleh firman-Nya, "Dan matahari berjalan di tempat peredarannya. Demikianlah ketetapan Yang Mahaperkasa lagi Maha Mengetahui.&rdquo; </em>(Yasin: 38)</p>
+<p class="arab">حَدَّثَنَا عَبْدُ اللَّهِ بْنُ الزُّبَيْرِ الحُميديّ، حَدَّثَنَا وَكِيع عَنِ الْأَعْمَشِ، عَنْ إِبْرَاهِيمَ، عَنْ أَبِيهِ، عَنْ أَبِي ذَرٍّ قَالَ: سَأَلَتُ رَسُولَ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَنْ قَوْلِهِ: {وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَهَا} ، قَالَ: "مُسْتَقَرُّهَا تَحْتَ الْعَرْشِ".</p>
+<p>Telah menceritakan pula kepada kami Abdullah ibnuz Zubair Al-Humaidi, telah menceritakan kepada kami Waki', telah menceritakan kepada kami Al-A'masy dari Ibrahim At-Taimi, dari ayahnya, dan Abu Zar r.a. yang menceritakan bahwa ia pernah bertanya kepada Rasulullah Saw. tentang makna firman-Nya: <em>dan matahari berjalan di tempat peredarannya. </em>(Yasin: 38) Maka beliau bersabda: <em>Tempat menetapnya matahari itu di bawah 'Arasy.</em></p>
+<p>Demikianlah menurut apa yang diketengahkan dalam bab ini. Ia pun telah mengetengahkannya di berbagai tempat yang lain. Hadis ini diriwayatkan oleh Jamaah lainnya kecuali Ibnu Majah melalui berbagai jalur dan Al-A'masy dengan lafaz yang sama.</p>
+<p class="arab">قَالَ الْإِمَامُ أَحْمَدُ: حَدَّثَنَا مُحَمَّدُ بْنُ عُبَيْدٍ، حَدَّثَنَا الْأَعْمَشِ، عَنْ إِبْرَاهِيمَ التَّيْمِيِّ، عَنْ أَبِيهِ، عَنْ أَبِي ذَرٍّ قَالَ: كُنْتُ مَعَ رَسُولِ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ فِي الْمَسْجِدِ حِينَ وَجَبَتِ الشَّمْسُ، فَقَالَ: "يَا أَبَا ذَرٍّ، أَتَدْرِي أَيْنَ تَذْهَبُ الشَّمْسُ؟ " قُلْتُ: اللَّهُ وَرَسُولُهُ أَعْلَمُ. قَالَ: "فَإِنَّهَا تذهب حتى تسجد بين يدي رَبِّهَا عَزَّ وَجَلَّ، فَتَسْتَأْذِنُ فِي الرُّجُوعِ فَيُؤْذَنُ لَهَا، وَكَأَنَّهَا قَدْ قِيلَ لَهَا: ارْجِعِي مِنْ حَيْثُ جِئْتِ. فَتَرْجِعُ إِلَى مَطْلَعِهَا، وَذَلِكَ مُسْتَقَرُّهَا، ثُمَّ قَرَأَ: {وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَهَا}</p>
+<p>Imam Ahmad mengatakan, telah menceritakan kepada kami Muhammad ibnu Ubaid, dari Al-A'masy, dari Ibrahim At-Taimi dan ayahnya, dari Abu Zar yang menceritakan bahwa ketika ia sedang bersama Rasulullah Saw. di dalam masjid saat mentari sedang tenggelam, maka beliau Saw. bersabda, "<em>Hai Abu Zar, tahukah kamu ke manakah mentari ini pergi?</em>" Abu Zar menjawab, "Allah dan Rasul-Nya lebih mengetahui." Rasulullah Saw. bersabda: <em>Sesungguhnya mentari itu pergi hingga bersujud di hadapan Tuhannya, lalu meminta izin untuk kembali, maka diberikan izin baginya-dan seakan-akan pasti akan dikatakan kepadanya Kembalilah kamu dari arah kamu datang'- lalu ia kembali ke tempat terbitnya, di tempat ia bersujud itulah tempat tinggalnya. </em>Kemudian Rasulullah Saw. membaca firman-Nya: <em>dan matahari berjalan di tempat peredarannya. </em>(Yasin: 38) (Yakni menuju tempat menetapnya, pent, sesuai dengan makna hadis)</p>
+<p class="arab">قَالَ سُفْيَانُ الثَّوْرِيُّ، عَنِ الْأَعْمَشِ، عَنْ إِبْرَاهِيمَ التَّيْمِيِّ، عَنْ أَبِيهِ، عَنْ أَبِي ذَرٍّ، رَضِيَ اللَّهُ عَنْهُ، قَالَ: قَالَ رَسُولُ اللَّهِ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ لِأَبِي ذَرٍّ حِينَ غَرَبَتِ الشَّمْسُ: "أَتَدْرِي أَيْنَ هَذَا؟ " قُلْتُ: اللَّهُ وَرَسُولُهُ أَعْلَمُ. قَالَ: "فَإِنَّهَا تَذْهَبُ حَتَّى تَسْجُدَ تَحْتَ الْعَرْشِ، فَتَسْتَأْذِنُ فَيُؤْذِنُ لَهَا، وَيُوشِكُ أَنْ تَسْجُدَ فَلَا يُقْبَلُ مِنْهَا، وَتَسْتَأْذِنُ فَلَا يُؤْذَنُ لَهَا، وَيُقَالُ لَهَا: ارْجِعِي مِنْ حَيْثُ جِئْتِ. فَتَطْلُعُ مِنْ مَغْرِبِهَا، فَذَلِكَ قَوْلُهُ: {وَالشَّمْسُ تَجْرِي لِمُسْتَقَرٍّ لَهَا ذَلِكَ تَقْدِيرُ الْعَزِيزِ الْعَلِيمِ}</p>
+<p>Sufyan As-Sauri mengatakan bahwa ia telah meriwayatkan dari Al&shy; Amasy, dari Ibrahim At-Taimi, dari ayahnya, dari Abu Zar ra yang menceritakan bahwa Rasulullah Saw. bersabda kepadanya di saat mentari sedang terbenam, <em>"Hai Abu Zar, tahukah kamu ke manakah mentari ini pergi</em> ? abu Dzar menjawab &ldquo;Allah dan Rasul-Nya lebih mengetahui. Rasulullah bersabda : <em>Sesungguhnya mentari itu pergi hingga sujud di bawah 'Arasy lalu meminta izin dan diberikan izin baginya </em>(untuk terbit lagi), <em>dan sudah dekat waktunya mentari bersujud </em>(untuk meminta izin), <em>lalu tidak diterima; dan mentari minta izin lagi, tetapi tetap tidak diterima. Lalu dikatakan kepadanya, "Kembalilah kamu dari tempat tenggelammu.&rdquo; Maka mentari terbit dari tempat tenggelamnya. Yang demikian itu disebutkan oleh firman-Nya, "Dan matahari berjalan di tempat peredarannya. Demikianlah ketetapan Yang Mahaperkasa lagi Maha Mengetahui.&rdquo; </em>(Yasin: 38)</p>
+<p>Abdur Razzaq mengatakan, telah menceritakan kepada kami Ma'mar, dari Abu Ishaq, dari Wahb ibnu Jabir, dari Abdullah ibnu Amr r.a. yang mengatakan sehubungan dengan makna firman-Nya: <em>dan matahari berjalan di tempat peredarannya. </em>(Yasin: 38) Bahwa sesungguhnya matahari itu terbit, lalu dikembalikan (menjadi terbit kembali setelah tenggelam) oleh dosa-dosa anak Adam; hingga apabila terbenam, maka ia berserah diri, bersujud, dan memohon izin kepada Tuhannya untuk terbit lagi. Dan akan tiba masanya di suatu hari ia tenggelam, lalu berserah diri, bersujud dan meminta izin, tetapi tidak diizinkan baginya untuk terbit. Lalu mentari berkata, "Sesungguhnya perjalanan itu jauh; dan jika aku tidak diberi izin, pasti aku tidak mampu menempuhnya." Lalu ia ditahan selama masa yang dikehendaki oleh Allah untuk menahannya, kemudian dikatakan kepadanya, "Kembalilah kamu ke tempat kamu tenggelam."</p>
+<p>Ibnu Amr r.a. mengatakan bahwa sejak hari itu hingga hari kiamat tidak bermanfaat lagi bagi seseorang imannya bila ia tidak beriman sebelumnya, atau dalam masa imannya dia belum pernah mengusahakan suatu kebaikan pun.</p>
+<p><em>Menurut pendapat lain, </em>yang dimaksud dengan <em>mustaqarril laha </em>ialah titik akhir perjalanannya, puncak perjalanannya yang paling tinggi di langit, yaitu di musim panas; kemudian jarak perjalanannya yang paling bawah, yaitu di musim dingin.</p>
+<p><em>Pendapat yang kedua, </em>mengatakan bahwa yang dimaksud dengan <em>mustaqarril laha </em>ialah batas terakhir perjalanannya, yaitu pada hari kiamat nanti perjalanannya terhenti dan diam tidak bergerak lagi, serta di gulung (dipadamkan), maka alam semesta ini telah mencapai usianya yang paling maksimal. Berdasarkan pengertian ini, berarti yang dimaksud dengan <em>mustaqar </em>ialah berkaitan dengan zaman dan waktu, bukan dengan tempat seperti yang ada pada pendapat pertama.</p>
+<p>Qatadah telah mengatakan sehubungan dengan makna firman-Nya, <em>Limustaqarril laha," </em>artinya sampai batas waktunya yang telah ditentukan baginya dan tidak dapat dilampauinya.</p>
+<p>Menurut pendapat lain. makna yang dimaksud ialah mentari itu terus-menerus berpindah-pindah di tempat terbitnya dalam musim panas sampai batas waktu yang tidak lebih dari panjangnya musim panas, kemudian berpindah-pindah pula di tempat terbitnya dalam musim dingin selama masa musim dingin tidak lebih darinya. Pendapat ini diriwayatkan dari Abdullah ibnu Amr r.a.</p>
+<p>Ibnu Mas&rsquo;ud dan Ibnu Abbas membaca firman berikut, yaitu: <em>dan matahari berjalan di tempat peredarannya. </em>(Yasin: 38) Yakni tidak pernah menetap dan tidak pernah diam. bahkan ia selalu berjalan siang dan malam tanpa henti dan tanpa istirahat. Sebagaimana yang disebutkan oleh Allah Swt. dalam ayat lain melalui firman-Nya: <em>Dan Dia telah menundukkan </em>(pula) <em>bagimu matahari dan bulan yang terus-menerus beredar </em>(dalam orbitnya). (Ibrahim: 33) Yakni tiada henti-hentinya terus bergerak sampai hari kiamat nanti.</p>
+<p>***********</p>
+<p class="arab">{ذَلِكَ تَقْدِيرُ الْعَزِيزِ}</p>
+<p><em>Demikianlah ketetapan Yang Mahaperkasa. </em>(Yasin: 38)</p>
+<p>Yaitu Tuhan Yang tidak dapat ditentang dan tidak dapat dicegah.</p>
+<p class="arab">{الْعَلِيم}</p>
+<p><em>lagi Maha Mengetahui. </em>(Yasin: 38)</p>
+<p>yakni Maha Mengetahui semua gerakan dan semua yang diam. Dia telah menetapkan ukuran bagi hal tersebut dan membatasinya dengan waktu sesuai dengan apa yang telah digariskan&shy;Nya, tidak ada penyimpangan, tidak ada pula benturan. Sebagaimana yang dijelaskan dalam ayat lain melalui firman-Nya:</p>
+<p class="arab">{فَالِقُ الإصْبَاحِ وَجَعَلَ اللَّيْلَ سَكَنًا وَالشَّمْسَ وَالْقَمَرَ حُسْبَانًا ذَلِكَ تَقْدِيرُ الْعَزِيزِ الْعَلِيمِ}</p>
+<p><em>Dia menyingsingkan pagi dan menjadikan malam untuk beristirahat, dan </em>(menjadikan) <em>matahari dan bulan untuk perhitungan. Itulah ketentuan Allah Yang Mahaperkasa lagi Maha Mengetahui. </em>(Al-An'am: 96)</p>
+<p>Hal yang sama disebutkan pula dalam akhir ayat 12 surat Fussilat, yaitu:</p>
+<p class="arab">{ذَلِكَ تَقْدِيرُ الْعَزِيزِ الْعَلِيمِ}</p>
+<p><em>Demikianlah ketentuan Yang Mahaperkasa lagi Maha Mengetahui. </em>(Fussilat: 12)</p>
+<p>*******</p>
+<p>Kemudian Allah Swt. berfirman:</p>
+<p class="arab">{وَالْقَمَرَ قَدَّرْنَاهُ مَنَازِلَ}</p>
+<p><em>Dan telah Kami tetapkan bagi bulan manzilah-manzilah. </em>(Yasin: 39)</p>
+<p>Yakni Kami menjadikannya beredar pada garis edar yang lain, yang melaluinya dapat diketahui berlalunya bulan-bulan, sebagaimana melalui matahari dapat diketahui berlalunya malam dan siang hari. Seperti apa yang disebutkan dalam ayat lain melalui firman-Nya:</p>
+<p class="arab">{يَسْأَلُونَكَ عَنِ الأهِلَّةِ قُلْ هِيَ مَوَاقِيتُ لِلنَّاسِ وَالْحَجِّ}</p>
+<p><em>Mereka bertanya kepadamu tentang bulan sabit. Katakanlah, "Bulan sabit itu adalah tanda-tanda waktu bagi manusia dan </em>(bagi ibadah) <em>haji.&rdquo; </em>(Al-Baqarah: 189)</p>
+<p class="arab">{هُوَ الَّذِي جَعَلَ الشَّمْسَ ضِيَاءً وَالْقَمَرَ نُورًا وَقَدَّرَهُ مَنَازِلَ لِتَعْلَمُوا عَدَدَ السِّنِينَ وَالْحِسَابَ} الْآيَةَ</p>
+<p><em>Dialah Yang Menjadikan matahari bersinar dan bulan bercahaya dan ditetapkan-Nya manzilah-manzilah </em>(tempat-tempat) <em>bagi perjalanan bulan itu, supaya kamu mengetahui bilangan tahun dan perhitungan </em>(waktu). (Yunus: 5), hingga akhir ayat.</p>
+<p>Dan firman Allah Swt.:</p>
+<p class="arab">{وَجَعَلْنَا اللَّيْلَ وَالنَّهَارَ آيَتَيْنِ فَمَحَوْنَا آيَةَ اللَّيْلِ وَجَعَلْنَا آيَةَ النَّهَارِ مُبْصِرَةً لِتَبْتَغُوا فَضْلا مِنْ رَبِّكُمْ وَلِتَعْلَمُوا عَدَدَ السِّنِينَ وَالْحِسَابَ وَكُلَّ شَيْءٍ فَصَّلْنَاهُ تَفْصِيلا}</p>
+<p><em>Dan Kami jadikan malam dan siang sebagai dua tanda, lalu Kami hapuskan tanda malam dan Kami jadikan tanda siang itu terang, agar kamu mencari karunia dari Tuhanmu, dan supaya kamu mengetahui bilangan tahun-tahun dan perhitungan. Dan segala sesuatu telah Kami terangkan dengan jelas. </em>(Al-Isra: 12)</p>
+<p>Maka Allah menjadikan matahari mempunyai sinar yang khusus baginya dan bulan mempunyai cahaya yang khusus baginya, dan Dia membedakan perjalanan antara matahari dan bulan. Matahari terbit setiap hari dan tenggelam di penghujung harinya dengan cahaya yang sama. Akan tetapi, tempat terbit dan tempat tenggelamnya berpindah-pindah dalam musim panas dan musim dinginnya; yang seiring dengan perbedaan musim tersebut, maka siang hari lebih panjang daripada malam hari dalam musim panas, kemudian dalam musim dingin malam lebih panjang ketimbang siang hari. Dan Allah menjadikan kemunculan matahari di siang hari, maka matahari adalah bintang siang hari.</p>
+<p>Adapun bulan, Allah telah menetapkan baginya manzilah-manzilah bagi perjalanannya. Pada permulaan bulan ia muncul dalam bentuk yang kecil lagi cahayanya redup, kemudian cahayanya makin bertambah pada malam yang kedua, dan manzilahnya pun makin tinggi. Setiap kali manzilahnya bertambah tinggi, maka cahayanya pun bertambah terang, sekalipun pada kenyataannya cahaya yang dipancarkannya itu merupakan pantulan dari sinar matahari. Hingga pada akhirnya cahayanya menjadi sempurna di malam yang keempat belas. Sesudah itu ia mulai berkurang hingga akhir bulan dan bentuknya seperti tandan yang tua.</p>
+<p>Ibnu Abbas r.a. mengatakan bahwa <em>'urjunil qadim </em>adalah asal mula ketandan kurma.</p>
+<p>Mujahid mengatakan, <em>'urjunil qadim </em>ialah ketandan yang telah kering.</p>
+<p>Ibnu Abbas r.a. bermaksud bahwa yang dikatakan dengan <em>'urjunil qadim </em>ialah asal mula ketandan buah kurma apabila terbuka dan kering serta melengkung bentuknya. .</p>
+<p>Hal yang sama dikatakan oleh selain keduanya.</p>
+<p>Setelah itu Allah Swt. kembali menampakkannya di permulaan bulan lainnya. Orang-orang Arab menamakan setiap tiga malam dari satu bulan dengan nama yang tersendiri sesuai dengan keadaan bulan. Mereka menamakan ketiga malam pertama dengan istilah <em>gurar, </em>sedangkan ketiga malam berikutnya dinamakan <em>nufal, </em>dan tiga malam berikutnya dinamakan <em>tusa', </em>karena malam yang terakhirnya jatuh pada malam kesembilan yang kemudian disusul oleh malam yang kesepuluh sesudahnya, yang dalam peristilahan mereka dinamakan <em>'usyar </em>(sampai malam ketiga belas). Setelah itu dinamakan malam<em> bid, </em>karena di malam-malam tersebut cahaya rembulan tampak sempurna dan mencapai puncaknya. Lalu berikutnya dinamakan <em>dura&rsquo; </em>bentuk jamak dari <em>dar&rsquo;a, </em>dikatakan demikian karena malam pertamanya gelap disebabkan keterlambatan munculnya rembulan. Oleh karena itulah maka kambing yang bulunya hitam di kepalanya dinamakan <em>dar&rsquo;a. </em>Kemudian tiga malam berikutnya dinamakan <em>zulam, </em>lalu berikutnya lagi dinamakan <em>hanadis, </em>selanjutnya <em>da'da, </em>dan yang terakhir dinamakan <em>mahaq </em>karena lenyapnya bulan di penghujung bulan dan mulai memasuki permulaan bulan berikutnya. Abu Ubaidah r.a. mengingkari adanya <em>tusa</em>' dan <em>'usyar, </em>demikianlah menurut apa yang tertulis di dalam kitab <em>Garibul Musannaf.</em></p>
+<p>********</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{لَا الشَّمْسُ يَنْبَغِي لَهَا أَنْ تُدْرِكَ الْقَمَرَ}</p>
+<p><em>Tidaklah mungkin bagi matahari mendapatkan bulan. </em>(Yasin: 40)</p>
+<p>Mujahid mengatakan bahwa matahari dan bulan masing-masing mempunyai batasan tersendiri yang tidak dapat dilampaui oleh yang lainnya, tidak dapat pula dikurangi oleh yang lainnya. Apabila masa kemunculan yang satu tiba, maka yang lainnya pergi; begitu pula sebaliknya bilamana yang lainnya datang, maka yang satunya pergi.</p>
+<p>Abdur Razzaq mengatakan, telah menceritakan kepada kami Ma'mar, dari Al-Hasan sehubungan dengan makna firman-Nya: <em>Tidaklah mungkin bagi matahari mendapatkan bulan </em>(Yasin: 40) Bahwa hal tersebut terjadi di malam munculnya bulan sabit.</p>
+<p>Ibnu Abu Hatim dalam bab ini telah meriwayatkan dari Abdullah ibnul Mubarak yang mengatakan bahwa sesungguhnya angin itu mempunyai sayap, dan sesungguhnya bulan itu beristirahat di tempat yang ditutupi oleh air.</p>
+<p>As-Sauri telah meriwayatkan dari Ismail ibnu Abu Khalid, dari Abu Saleh, bahwa makna yang dimaksud ialah cahaya yang ini tidak dapat menyusul cahaya yang itu, demikian pula sebaliknya.</p>
+<p>Ikrimah telah mengatakan sehubungan dengan makna firman-Nya: <em>Tidaklah mungkin bagi matahari mendapatkan bulan. </em>(Yasin: 40) Maksudnya, matahari dan bulan mempunyai kekuasaan tersendiri. Karena itu, tidak pantas bagi matahari terbit di malam hari.</p>
+<p>******</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{وَلا اللَّيْلُ سَابِقُ النَّهَارِ}</p>
+<p><em>dan malam pun tidak dapat mendahului siang. </em>(Yasin: 40)</p>
+<p>Yakni tidaklah pantas bila malam hari, lalu berikutnya malam hari lagi, sebelum adanya siang hari di antara keduanya; kekuasaan matahari di siang hari, dan kekuasaan bulan di malam hari. Ad-Dahhak mengatakan bahwa malam hari tidak akan pergi dari arah ini sebelum siang hari datang dari arah itu seraya berisyarat menunjuk ke arah timur.</p>
+<p>Mujahid mengatakan sehubungan dengan makna firman-Nya: <em>dan malam pun tidak dapat mendahului siang. </em>(Yasin: 40) Keduanya saling mengejar yang lainnya dengan waktu yang cepat dan salah satunya muncul dengan kepergian yang lainnya.</p>
+<p>Maka yang dimaksud ialah bahwa tidak ada tenggang waktu antara malam dan siang hari, bahkan masing-masing dari keduanya datang menyusul kepergian yang lainnya tanpa tenggang waktu, karena keduanya telah diperintahkan untuk terus-menerus saling silih berganti dengan cepat.</p>
+<p>********</p>
+<p>Firman Allah Swt.:</p>
+<p class="arab">{وَكُلٌّ فِي فَلَكٍ يَسْبَحُونَ}</p>
+<p><em>Dan masing-masing beredar pada garis edarnya. </em>(Yasin: 40)</p>
+<p>Yakni malam, siang, mentari, dan bulan, semuanya beredar di. cakrawala langit, menurut Ibnu Abbas, Ikrimah, Ad-Dahhak, Al-Hasan, Qatadah, dan Ata Al-Khurrasani.</p>
+<p>Abdur Rahman ibnu Zaid ibnu Aslam mengatakan bahwa tempat peredarannya ialah di antara langit dan bumi; demikianlah menurut apa yang diriwayatkan oleh Ibnu Abu Hatim, tetapi riwayat ini <em>garib </em>sekali, bahkan <em>munkar.</em></p>
+<p>Ibnu Abbas r.a. dan lain-lainnya yang bukan hanya seorang dari kalangan ulama Salaf mengatakan dalam cakrawala seperti berputarnya alat penenun.</p>
+<p>Mujahid mengatakan, yang dimaksud dengan falak ialah perumpamaannya seperti pengengkol alat penggilingan atau seperti pengengkol alat tenun. Alat tenun tidak dapat berputar, melainkan dengan berputarnya alat tersebut. Begitu pula sebaliknya, bila alat tenun berputar, maka ia pun akan ikut berputar.</p>
+
+
+
+
+
+
+<!-- /page -->
+
+	
+  
+<link href="css/pinchzoomer.min.css" rel="stylesheet">
+<link href="css/fullscreen.min.css" rel="stylesheet">
+<script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="js/modernizr.min.js" type="text/javascript"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/jquery.hammer.min.js" type="text/javascript"></script>
+<script src="js/TweenMax.min.js" type="text/javascript"></script>
+<script src="js/fullscreen.min.js" type="text/javascript"></script>
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+	
+	</body>
+</html>

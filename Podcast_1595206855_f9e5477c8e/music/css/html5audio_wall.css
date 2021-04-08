@@ -1,0 +1,543 @@
+body {
+	background:#444;
+}
+
+
+/* dropdown css addition */
+.sbHolder{
+	top:3px;
+	right:0px;
+	margin-right:10px;
+}
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{
+	color: #fff;
+}
+.sbOptions a:hover,
+.sbOptions a:focus,
+.sbOptions a.sbFocus{
+	color: #6cf;
+}
+.sbOptions .sbGroup{
+	color: #fff;
+}
+
+
+
+
+#componentWrapper{
+	position:relative;
+	min-width:300px;
+	max-width:840px;
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:15px;
+}
+
+#componentWrapper .playerHolder{
+	position:relative;
+	margin-right:10px;
+	top:46px;
+}
+
+#componentWrapper .controls_toggle{
+	position:absolute;
+	width:40px;	
+	height:40px;
+	left:0px;
+	background:#333;
+	
+	border-right: 1px solid #555;
+	border-right-color: rgba( 255, 255, 255, .1 );
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+}
+
+#componentWrapper .controls_toggle img{
+	display:block;
+	position:absolute;
+	width:12px;	
+	height:15px;
+	left:50%;
+	top:50%;
+	margin-left:-6px;
+	margin-top:-8px;
+	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+}
+
+#componentWrapper .controls_toggle:hover{
+	background: #222;
+}
+#componentWrapper .controls_toggle.hap_no_hover:hover{
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+}
+
+#componentWrapper .player_mediaTime_current{
+	position:absolute;
+	width:60px;	
+	height:40px;
+	left:40px;
+	color:white;
+	text-align: center;
+	
+	line-height: 40px;
+	
+	border-left: 1px solid #111;
+	border-left: 1px solid rgba( 0, 0, 0, .25 );
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+}
+
+#componentWrapper .player_progress{
+	position:absolute;
+	height:40px;
+	left:100px;
+	right:100px;
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+}
+
+#componentWrapper .progress_bg{
+	position:absolute;
+	height:10px;
+	background:#222;
+	top:15px;
+	left:10px;
+	right:10px;
+	
+	-webkit-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	-moz-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#componentWrapper .load_progress{
+	position:absolute;
+	height:10px;
+	background:#444;
+	top:15px;
+	left:10px;
+	right:10px;
+	width:0px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#componentWrapper .play_progress{
+	position:absolute;
+	height:10px;
+	background:#fff;
+	top:15px;
+	left:10px;
+	right:10px;
+	width:0px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
+}
+
+#componentWrapper .player_progress_tooltip{
+	position:relative;
+	top:-10px;
+	width:72px;
+	background:#333;
+	height:16px;
+	display:none;
+	text-align:center;
+	
+	-moz-box-shadow: 1px 1px 3px #222;
+	-webkit-box-shadow: 1px 1px 3px #222;
+	box-shadow: 1px 1px 3px #222;
+	behavior: url('PIE.htc');
+}
+
+#componentWrapper .player_progress_tooltip p {
+	color:white;
+	font-size:10px;
+	margin:0;
+	line-height:16px;
+}
+
+#componentWrapper .player_mediaTime_total{
+	position:absolute;
+	width:60px;	
+	height:40px;
+	right:40px;
+	color:white;
+	text-align: center;
+	
+	line-height: 40px;
+	
+	border-right: 1px solid #555;
+	border-right: 1px solid rgba( 255, 255, 255, .1 );
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+}
+
+#componentWrapper .player_volume_wrapper{
+	position:absolute;
+	width:40px;	
+	height:40px;
+	/*background:#333;*/
+	right:0px;
+}
+
+#componentWrapper .player_volume{
+	width:40px;	
+	height:40px;
+	
+	border-left: 1px solid #111;
+	border-left-color: rgba( 0, 0, 0, .25 );
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+}
+
+#componentWrapper .player_volume img{
+	display:block;
+	position:absolute;
+	width:18px;	
+	height:16px;
+	left:50%;
+	top:50%;
+	margin-left:-9px;
+	margin-top:-8px;
+	
+	-moz-user-select: none; 
+	-khtml-user-select: none; 
+	-webkit-user-select: none; 
+	-o-user-select: none; 
+}
+
+#componentWrapper .player_volume:hover{
+	background: #222;
+}
+#componentWrapper .player_volume.hap_no_hover:hover{
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+}
+
+#componentWrapper .volume_seekbar{
+	position:absolute;
+	top:0px;
+	left:-80px;
+	width:80px;
+	height:40px;
+	
+	background-image: url('../media/data/player_bg2.png'); 
+	background-repeat: repeat-x; 
+	
+	-moz-box-shadow: 1px 1px 6px #333;
+	-webkit-box-shadow: 1px 1px 6px #333;
+	box-shadow: 1px 1px 6px #333;
+	behavior: url('PIE.htc');
+	
+	display:none;
+}
+
+#componentWrapper .volume_bg{
+	position:absolute;
+	width:60px;
+	height:10px;
+	background:#222;
+	left:10px;
+	top:15px;
+	
+	-webkit-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	-moz-box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	box-shadow: -1px -1px 0 rgba( 0, 0, 0, .5 ), 1px 1px 0 rgba( 255, 255, 255, .1 );
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#componentWrapper .volume_level{
+	position:absolute;
+	width:30px;
+	height:10px;
+	background:#fff;
+	left:10px;
+	top:15px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#componentWrapper .player_volume_tooltip{
+	position:relative;
+	left:2px;
+	top:-10px;
+	width:35px;
+	height:16px;
+	background:#333;
+	display:none;
+	text-align:center;
+	
+	-moz-box-shadow: 1px 1px 3px #222;
+	-webkit-box-shadow: 1px 1px 3px #222;
+	box-shadow: 1px 1px 3px #222;
+	behavior: url('PIE.htc');
+}
+
+#componentWrapper .player_volume_tooltip p {
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	color:#ffffff;
+	margin:0;
+	line-height:18px;
+}
+
+
+@media only screen and (max-width: 350px) {
+	#componentWrapper .player_mediaTime_total, #componentWrapper .player_mediaTime_current{
+		display: none;
+	}
+	#componentWrapper .player_progress{
+		left:40px;
+		right:40px;
+	}
+}
+
+
+
+
+
+
+
+/* playlist holder */	
+#componentWrapper .playlistHolder{
+	position:relative;
+	top:90px;
+	
+}
+
+#componentWrapper .playlist_inner{
+	/*background:blue;*/
+}
+
+
+
+/* playlist items */	
+#componentWrapper .playlistItem{
+	position:relative;
+	
+	top:0px;
+	left:0px;
+	
+	width:200px;
+	height:200px;
+	
+	color:#ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	
+	list-style:none;
+	
+	margin-right:10px;
+	margin-bottom:10px;
+	
+	float:left;
+	
+	overflow:hidden;
+	
+}
+
+
+#componentWrapper .playlistItem:last-child {  
+	margin-bottom:0px;
+}
+
+#componentWrapper .playlistSelected {
+	
+}
+
+#componentWrapper .playlistNonSelected {
+	
+}
+
+#componentWrapper .playlistSelected img{
+	display:block;
+	width:auto;
+	height:100%;
+}
+#componentWrapper .playlistNonSelected img{
+	display:block;
+	width:auto;
+	height:100%;
+}
+
+#componentWrapper .hap_title{
+	position:absolute;
+	top:50%;
+	padding:10px;
+	width:100%;
+	background: rgb(0, 0, 0) transparent;
+	background: rgba(0, 0, 0, 0.5);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+	font-size:15px;
+	color:white;
+};
+
+
+
+/* playlist icons */
+#componentWrapper .dlink {
+	float:right;
+}
+
+#componentWrapper .dlink img{
+	display:block;
+}
+
+#componentWrapper .plink {
+	float:right;
+}
+
+#componentWrapper .plink img{
+	display:block;
+}
+
+#componentWrapper .premove {
+	float:right;
+}
+
+#componentWrapper .premove img{
+	display:block;
+}
+
+
+/* preloader */
+#componentWrapper .preloader{
+	position:absolute;
+	width:36px;
+	height:30px;
+	top:50%;
+	left:50%;
+	margin-left:-16px;
+	margin-top:-15px;
+	background: #111 url('../media/data/loading.gif') no-repeat center center; 
+}
+
+
+ 
+		 
+		 
+		  
+					  
+
+/* public functions */	
+#publicFunctions{
+	position: absolute;
+	height:500px;
+	overflow-y: scroll;
+	padding: 20px;
+	background:#444;
+	left:650px;
+	top:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color:#fff;
+	list-style:circle;
+	/*display:none;*/
+}
+
+#publicFunctions li a{
+	color:#fff;
+}
+
+#publicFunctions li a:hover, #publicFunctions li .current{
+	text-decoration: underline;
+}
+
+
+
+
+
+
+#playlistSelector{
+	position: relative;
+	width:200px;
+	padding:15px 0px 20px 30px;
+	background:#444;
+	left:50%;
+	margin-left:-120px;
+	top:50px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color:#fff;
+	list-style:circle;
+	
+	-moz-box-shadow: 2px 2px 5px #222;
+	-webkit-box-shadow: 2px 2px 5px #222;
+	box-shadow: 2px 2px 5px #222;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#222222')";
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#222222');
+	
+	display:none;
+}
+
+#playlistSelector li a{
+	color:#fff;
+}
+
+#playlistSelector li a:hover, #playlistSelector li .current{
+	text-decoration: underline;
+}
+
+
+
+
+
