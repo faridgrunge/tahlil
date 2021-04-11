@@ -1,0 +1,75 @@
+﻿/* Tab Content - menucool.com */
+
+ul.tabs
+{
+    padding: 7px 0;
+    font-size: 0;
+    margin:0;
+    list-style-type: none;
+    text-align: center; /*set to left, center, or right to align the tabs as desired*/
+}
+        
+ul.tabs li
+{
+    display: inline;
+    margin: 0;
+    margin-right:0px; /*distance between tabs*/
+}
+        
+ul.tabs li a
+{
+    font: normal 12px Verdana;
+    text-decoration: none;
+    position: relative;
+    padding: 7px 5px;
+    border-style: solid;
+	border-color:  #11C6E6;
+	border-width: 0px 0px 0px 0px;
+    color: #0006;
+    background-color:#171717;
+    border-radius: 0px 0px 0px 0px;
+    outline:none;
+    font-weight:bold;
+	
+}
+        
+ul.tabs li a:visited
+{
+    color: #000;
+}
+        
+ul.tabs li a:hover
+{
+    border-style: solid;
+	border-color:  #11C6E6;
+	border-width: 0px 0px 0px 0px;   
+    font-weight:bold;
+    background-color:#171717;
+}
+        
+ul.tabs li.selected a, ul.tabs li.selected a:hover
+{
+    position: relative;
+    bottom: 0px;
+    font-weight:bold;
+	color: #000;
+    background-color:#11C6E6;
+    border-style: solid;
+	border-color:  #11C6E6;
+	border-width: 0px 0px 0px 0px;
+}
+        
+        
+ul.tabs li.selected a:hover
+{
+    text-decoration: none;
+}
+     
+
+div.tabcontents
+{
+    border: 1px solid #B7B7B7; padding: 7px;
+    background-color:#FFF;
+    border-radius: 7px 7px 7px 7px;
+	position: relative;
+}
